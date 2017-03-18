@@ -6,6 +6,6 @@ Rokid开放平台文档大纲
 这个项目是Rokid开放平台文档，方便开发者在github上查看。
 
 # 文档结构
-- Rokid开放平台介绍：Rokid开放平台的整体介绍。
+- [Rokid开放平台介绍](https://github.com/Rokid/docs/blob/master/Rokid%20introduction.md)：Rokid开放平台的整体介绍。
 
 
