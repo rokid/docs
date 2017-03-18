@@ -10,4 +10,6 @@ Rokid开放平台当前正在开发状态，将于4月1日开放内测。
 ## 文档结构
 - [Rokid开放平台介绍](https://github.com/Rokid/docs/blob/master/Rokid%20introduction.md)：Rokid开放平台的整体介绍。
 
+## 支持
+- [Rokid开发者社区](https://developer-forum.rokid.com/)
 
