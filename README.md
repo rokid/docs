@@ -10,8 +10,8 @@ Rokid开放平台当前正在开发状态，将于4月1日开放内测。
 ## 文档结构
 #### 快速开始
 
-- [Rokid开放平台介绍](https://github.com/Rokid/docs/blob/master/1-getstarted/Rokid%20introduction.md)：Rokid开放平台的整体介绍。
-- [Rokid技能开发工具介绍](https://github.com/Rokid/docs/blob/master/1-getstarted/Rokid%20Skills%20Kit.md)：Rokid技能开发工具的简介。
+- [Rokid开放平台介绍](https://github.com/Rokid/docs/blob/master/1-GetStarted/Rokid%20introduction.md)：Rokid开放平台的整体介绍。
+- [Rokid技能开发工具介绍](https://github.com/Rokid/docs/blob/master/1-GetStarted/Rokid%20Skills%20Kit.md)：Rokid技能开发工具的简介。
 - Rokid设备接入介绍：Rokid设备接入的简介。
 
 #### Rokid开发文档
