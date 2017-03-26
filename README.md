@@ -51,6 +51,7 @@ Rokid开放平台当前正在开发状态，将于4月1日开放内测。
 #### Rokid API参考文档
 
 - [Rokid开放平台接口文档](https://github.com/Rokid/rokid-openvoice/blob/master/README.md)：Rokid开放平台的协议和API文档。
+- [Rokid开放平台客户端SDK文档](https://github.com/Rokid/docs/blob/master/sdk.md)：Rokid开放平台客户端sdk文档（简易版）。
 
 ## 支持
 - [Rokid开发者社区](https://developer-forum.rokid.com/)
