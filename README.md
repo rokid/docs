@@ -1,6 +1,6 @@
 Rokid开放平台文档
 ===
-![](http://progressed.io/bar/69?title=completed)
+![](http://progressed.io/bar/85?title=completed)
 
 Rokid开放平台当前正在开发状态，将于4月1日开放内测。
 
