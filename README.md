@@ -36,9 +36,9 @@ Rokid开放平台当前正在开发状态，将于4月1日开放内测。
 
 ##### Rokid语音接入
 
-- [Rokid语音产品设计指南](https://github.com/Rokid/docs/blob/master/2-RokidDocument/2-DeviceAccess/Rokid%20hardware%20design%20guide.md)：使用Rokid方案的语音产品设计指南。
+- [Rokid语音产品设计指南](https://github.com/Rokid/docs/blob/master/2-RokidDocument/2-EnableVoice/Rokid%20hardware%20design%20guide.md)：使用Rokid方案的语音产品设计指南。
 - Rokid硬件交互指南
-- [Rokid Open Voice SDK使用方法](https://github.com/Rokid/docs/blob/master/2-RokidDocument/2-DeviceAccess/Rokid%20openvoice%20tutorial.md)：介绍Rokid开放平台SDK的使用方法。
+- [Rokid Open Voice SDK使用方法](https://github.com/Rokid/docs/blob/master/2-RokidDocument/2-EnableVoice/Rokid%20openvoice%20tutorial.md)：介绍Rokid开放平台SDK的使用方法。
 - Rokid Black Siren接入方法
 - Rokid语音开发板文档-amlogic
 - 如何在Rokid语音接入中为设备注册
