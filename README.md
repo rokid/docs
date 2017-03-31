@@ -33,11 +33,12 @@ Rokid开放平台当前正在开发状态，将于4月1日开放内测。
     - [Rokid NLP正则表达式使用指南](https://github.com/Rokid/docs/blob/master/2-RokidDocument/1-SkillsKit/Rokid%20Regular%20Expression.md)：介绍Rokid NLP正则表达式的用法。
     - Rokid TTS标签使用指南
     - Rokid语音交互指南
+    - [Rokid技能模板](https://github.com/Rokid/rokid-skill-sample)：Rokid技能开发工具的示例代码。
 
 ##### Rokid语音接入
 
 - [Rokid语音产品设计指南](https://github.com/Rokid/docs/blob/master/2-RokidDocument/2-EnableVoice/Rokid%20hardware%20design%20guide.md)：使用Rokid方案的语音产品设计指南。
-- Rokid硬件交互指南
+- [Rokid硬件交互设计指南](https://github.com/Rokid/docs/blob/master/2-RokidDocument/2-EnableVoice/Rokid%20Hardware%20UX%20Design%20Guidelines.md)：Rokid方案的硬件交互设计指南。
 - [Rokid Open Voice SDK使用方法](https://github.com/Rokid/docs/blob/master/2-RokidDocument/2-EnableVoice/Rokid%20openvoice%20tutorial.md)：介绍Rokid开放平台SDK的使用方法。
 - Rokid Black Siren接入方法
 - Rokid语音开发板文档-amlogic
