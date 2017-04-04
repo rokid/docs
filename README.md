@@ -32,7 +32,7 @@ Rokid开放平台当前正在开发状态，将于4月1日开放内测。
     - 系统内建intent和slot的用法
     - [Rokid NLP正则表达式使用指南](https://github.com/Rokid/docs/blob/master/2-RokidDocument/1-SkillsKit/Rokid%20Regular%20Expression.md)：介绍Rokid NLP正则表达式的用法。
     - Rokid TTS标签使用指南
-    - Rokid语音交互指南
+    - [Rokid语音交互指南](https://github.com/Rokid/docs/blob/master/2-RokidDocument/1-SkillsKit/Rokid%20Voice%20Interaction%20Guidelines.md)：帮助你更好的设计语音交互。
     - [Rokid技能模板](https://github.com/Rokid/rokid-skill-sample)：Rokid技能开发工具的示例代码。
 
 ##### Rokid语音接入
