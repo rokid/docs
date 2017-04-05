@@ -10,7 +10,7 @@ Version: 1.0.0-alpha
 	* [Protocol](#21-protocol)
 	* [Session](#22-session)
 	* [Context](#23-context)
-	* [Reqeust](#24-reqeust)
+	* [Request](#24-request)
 * [Response](#3-response)
 	* [Protocol](#31-protocol)
 	* [Action](#32-action)
