@@ -28,7 +28,7 @@ Rokid开放平台当前正在开发状态，将于4月1日开放内测。
 - 技能测试方法
 - 技能发布
 - 其他参考文档
-    - [Rokid Cloud APP协议文档](https://github.com/Rokid/docs/blob/master/2-RokidDocument/1-SkillsKit/Cloud%20App%20Development%20Protocol.md)：Rokid技能的协议文档（英文版），中文版会在近期更新。
+    - [Rokid技能协议文档](https://github.com/Rokid/docs/blob/master/2-RokidDocument/1-SkillsKit/Cloud%20App%20Development%20Protocol_cn.md)：Rokid技能的协议文档。
     - 系统内建intent和slot的用法
     - [Rokid NLP正则表达式使用指南](https://github.com/Rokid/docs/blob/master/2-RokidDocument/1-SkillsKit/Rokid%20Regular%20Expression.md)：介绍Rokid NLP正则表达式的用法。
     - Rokid TTS标签使用指南
