@@ -2,6 +2,8 @@
 ### Rokid Open Platform
 Version: 1.0.0-alpha
 
+Language: English（[查看中文版](./Cloud-App-Development-Protocol_cn.md)
+
 ### Outline
 
 * [Introduction](#1-introduction)
