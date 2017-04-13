@@ -23,7 +23,7 @@ Rokid开放平台当前正在开发状态，将于4月1日开放内测。
 - 理解技能入口词
 - 理解场景化展示
 - 创建技能
-- 定义语音交互
+- [定义语音交互](https://github.com/Rokid/docs/blob/master/2-RokidDocument/1-SkillsKit/Define%20Voice%20Interaction.md)：技能开发工具中的语音交互指南。
 - 技能配置方式
 - 技能测试方法
 - 技能发布
