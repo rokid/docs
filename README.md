@@ -1,59 +1,46 @@
-Rokid开放平台文档
+Rokid开发者社区文档
 ===
-![](http://progressed.io/bar/85?title=completed)
 
-Rokid开放平台当前正在开发状态，将于4月1日开放内测。
+Rokid开发者社区已于4月1号正式开启内测。
 
 ## 说明
-这个项目是Rokid开放平台文档，方便开发者在github上查看。
+这个项目是Rokid开发者社区文档，方便开发者在github上查看。
 
-## 文档结构
-#### 快速开始
+### 开发者社区介绍
 
-- [Rokid开放平台介绍](https://github.com/Rokid/docs/blob/master/1-GetStarted/Rokid%20introduction.md)：Rokid开放平台的整体介绍。
-- [Rokid技能开发工具介绍](https://github.com/Rokid/docs/blob/master/1-GetStarted/Rokid%20Skills%20Kit.md)：Rokid技能开发工具的简介。
-- Rokid语音接入介绍：Rokid语音接入的简介。
+- [Rokid开发者社区介绍](https://github.com/Rokid/docs/blob/master/1-GetStarted/Rokid%20introduction.md)
 
-#### Rokid开发文档
+### 快速开始
 
-持续完善中
+- [开始开发Rokid技能](https://github.com/Rokid/docs/blob/master/1-GetStarted/Rokid%20Skills%20Kit.md)
+- 开始Rokid语音接入
 
-##### Rokid技能开发
 
-- 理解技能入口词
-- 理解场景化展示
-- 创建技能
-- [定义语音交互](https://github.com/Rokid/docs/blob/master/2-RokidDocument/1-SkillsKit/Define%20Voice%20Interaction.md)：技能开发工具中的语音交互指南。
-- 技能配置方式
-- 技能测试方法
-- 技能发布
-- 其他参考文档
-    - [Rokid技能协议文档](https://github.com/Rokid/docs/blob/master/2-RokidDocument/1-SkillsKit/Cloud%20App%20Development%20Protocol_cn.md)：Rokid技能的协议文档。
-    - 系统内建intent和slot的用法
-    - [Rokid NLP正则表达式使用指南](https://github.com/Rokid/docs/blob/master/2-RokidDocument/1-SkillsKit/Rokid%20Regular%20Expression.md)：介绍Rokid NLP正则表达式的用法。
-    - Rokid TTS标签使用指南
-    - [Rokid语音交互指南](https://github.com/Rokid/docs/blob/master/2-RokidDocument/1-SkillsKit/Rokid%20Voice%20Interaction%20Guidelines.md)：帮助你更好的设计语音交互。
-    - [Rokid技能模板](https://github.com/Rokid/rokid-skill-sample)：Rokid技能开发工具的示例代码。
+### 开发Rokid技能
 
-##### Rokid语音接入
+- [定义语音交互](https://github.com/Rokid/docs/blob/master/2-RokidDocument/1-SkillsKit/Define%20Voice%20Interaction.md)
+- [Rokid技能协议文档](https://github.com/Rokid/docs/blob/master/2-RokidDocument/1-SkillsKit/Cloud%20App%20Development%20Protocol_cn.md)
+- [Rokid NLP正则表达式使用指南](https://github.com/Rokid/docs/blob/master/2-RokidDocument/1-SkillsKit/Rokid%20Regular%20Expression.md)
+- [Rokid语音交互指南](https://github.com/Rokid/docs/blob/master/2-RokidDocument/1-SkillsKit/Rokid%20Voice%20Interaction%20Guidelines.md)
+- [Rokid技能模板](https://github.com/Rokid/rokid-skill-sample)
 
-- [Rokid语音产品设计指南](https://github.com/Rokid/docs/blob/master/2-RokidDocument/2-EnableVoice/Rokid%20hardware%20design%20guide.md)：使用Rokid方案的语音产品设计指南。
-- [Rokid硬件交互设计指南](https://github.com/Rokid/docs/blob/master/2-RokidDocument/2-EnableVoice/Rokid%20Hardware%20UX%20Design%20Guidelines.md)：Rokid方案的硬件交互设计指南。
-- [Rokid SDK接入指南](https://github.com/Rokid/docs/blob/master/2-RokidDocument/2-EnableVoice/Rokid%20SDK%20Tutorial.md)：Rokid开放平台SDK的使用方法。
-- Rokid语音开发板文档
-- 如何在Rokid语音接入中为设备注册
+### 接入SDK
+- [Rokid SDK接入指南](https://github.com/Rokid/docs/blob/master/2-RokidDocument/2-EnableVoice/Rokid%20SDK%20Tutorial.md)
+- [Rokid开发者社区客户端SDK文档](https://github.com/Rokid/docs/blob/master/3-ApiReference/sdk.md)
+- [Rokid开发者社区Siren API文档](https://github.com/Rokid/rokid-blacksiren/blob/master/doc/siren%20api.md)
+- [Rokid开发者社区接口文档](https://github.com/Rokid/rokid-openvoice/blob/master/README.md)
 
-##### 协议条款
+### 设计语音产品
+
+- [Rokid语音产品设计指南](https://github.com/Rokid/docs/blob/master/2-RokidDocument/2-EnableVoice/Rokid%20hardware%20design%20guide.md)
+- [Rokid硬件交互设计指南](https://github.com/Rokid/docs/blob/master/2-RokidDocument/2-EnableVoice/Rokid%20Hardware%20UX%20Design%20Guidelines.md)
+
+### 协议条款
 
 - 通用条款
 - 隐私条款
 
-#### Rokid API参考文档
-
-- [Rokid开放平台接口文档](https://github.com/Rokid/rokid-openvoice/blob/master/README.md)：Rokid开放平台的协议和API文档。
-- [Rokid开放平台Siren API文档](https://github.com/Rokid/rokid-blacksiren/blob/master/doc/siren%20api.md)：前端降噪模块API文档。
-- [Rokid开放平台客户端SDK文档](https://github.com/Rokid/docs/blob/master/3-ApiReference/sdk.md)：Rokid开放平台客户端sdk文档（简易版）。
 
 ## 支持
-- [Rokid开发者社区](https://developer-forum.rokid.com/)
+- [Rokid讨论区](https://developer-forum.rokid.com/)
 
