@@ -209,7 +209,7 @@
 * **meida** - 向CloudApp表明当前设备上CloudAppClient中的MediaPlayer的状态信息。
 * **location** - 向CloudApp提供当前设备的地理位置信息。
 
-###### 2.3.2.2 ScreenInfo
+###### 2.3.2.1 BasicInfo
 
 ```
 "basic":{
