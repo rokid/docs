@@ -44,79 +44,79 @@
 
 ```
 {
-    // protocol version
+
     "version": "2.0.0",
-    // session information
+
     "session": {
-        // unique id for each new session
+
         "sessionId": "D75D1C9BECE045E9AC4A87DA86303DD6", 
-        // indicates whether it is a new session
+
         "newSession": true, 
-	// application id which is surposed to handle the request
+
         "applicationId": "application id for requested CloudApp",
-	// attributes set by last request in same session
+
         "attributes": {
-            // session attributes set by CloudApp in Response
+            "key1": "value1",
+	    "key2": "value2"
         }
+	
     },
-    // usefull context information for handling the Request
+
     "context": {
-        // application related information
+
         "application": {
-            "applicationId": "application id for requested CloudApp"
+	    "applicationId": "application id for requested CloudApp"
         },
-        // device status and information
+
         "device": {  
-	    // basic device information
+	    
 	    "basic":{
-	        // vendor id of current device, autofill by system
                 "vendor":"vendor id",
-		// current device type, autofill by system
                 "deviceType":"device type",
-                // current device id sending the request, autofill by system
                 "deviceId": "010116000100",
-		// locale of current device
                 "locale": "zh_cn",
-		// timestamp when sending the request
                 "timestamp": 1478009510909
 	    },
-            // screen info of current device
+
             "screen":{
-                "x":"640",
-                "y":"480"
+		"x":"640",
+		"y":"480"
             },
-            // media status on current device
+
             "media": {
                 "state": "PLAYING / PAUSED"
             },
-            // location config of current device
+
             "location": {
                 "latitude": "30.213322455923485",
                 "longitude": "120.01190010997654"
             }
+	    
         },
-        // user info that binded to current device
+
         "user": {
             "userId": "user id string"
         }
+	
     },
-    // request info
+
     "request": {
-        // distinguish the request type: IntentRequest or EventRequest
+
         "reqType": "intent / event",
-        // unique id for each request
+
         "reqId": "010116000100-ad1f462f4f0946ccb24e9248362c504a",
-        // 
+
         "currentReqId":"",
-        // request content - structure may be different for different reqType. 
-        // Here is an example for IntentRequest
-        "content": {
+
+	"content": {
             "applicationId": "com.rokid.cloud.music",
             "intent": "play_random",
             "slots": {
             }
         }
+	
     }
+    
 }
 ```
 
@@ -190,12 +190,8 @@
 
 ```
 "device": {
-    "deviceId": "010116000100",
-    "deviceType":"device type",
-    "vendor":"vendor id",
+    "basic":{},
     "screen":{},
-    "locale": "zh_cn",
-    "timestamp": 1478009510909,
     "media": {},
     "location": {}
 }
@@ -203,25 +199,43 @@
 
 | 字段               | 类型            | 可能值 |
 |:-----------------:|:---------------:|:---------------|
-| deviceId  | string         | *设备ID*  |
-| deviceType  | string         | *在开放平台注册的设备类型*  |
-| vendor    | string         | *在开放平台注册的厂商代号*   |
+| basic    | BasicInfo object          | *BasicInfo对象*  |
 | screen    | ScreenInfo object          | *ScreenInfo对象*  |
-| locale    | string          | *当前设备的语言和区域信息，例如zh_cn代表中文，中国区*  |
-| timestamp | long         | *请求的时间戳，UNIX标准时间戳格式*  |
 | media     | MeidaStatus object          | *当前设备上CloudAppClient的MediaPlayer状态*  |
 | location  | LocationInfo object          | *当前设备的地理位置信息*  |
 
-* **deviceId** - 表明当前设备的ID。
-* **deviceType** - 表明了当前设备对应在Rokid开放平台上注册的设备类型，CloudApp可以对不同的设备类型有不同的返回。
-* **vendor** - 表明了当前设备对应在Rokid开放平台上注册的厂商代号。
+* **basic** - 展示了当前设备的基础信息，主要包含设备制造信息、时间信息、国家文字信息。
 * **screen** - 展示了当前设备的屏幕信息，主要包含屏幕的分辨率信息。
-* **locale** - 用以告诉CloudApp当前设备的语言和区域信息。CloudApp可以根据此信息选择需要返回的语言是中文还是英文。
-* **timestamp** - 当前请求的UNIX标准时间戳
 * **meida** - 向CloudApp表明当前设备上CloudAppClient中的MediaPlayer的状态信息。
 * **location** - 向CloudApp提供当前设备的地理位置信息。
 
-###### 2.3.2.1 ScreenInfo
+###### 2.3.2.2 ScreenInfo
+
+```
+"basic":{
+    "vendor":"vendor id",
+    "deviceType":"device type",
+    "deviceId": "010116000100",
+    "locale": "zh_cn",
+    "timestamp": 1478009510909
+}
+```
+| 字段               | 类型            | 可能值 |
+|:-----------------:|:---------------:|:---------------|
+| vendor  | string         | *注册生产商ID*  |
+| deviceType    | string         | *该生产商设定的设备型号*  |
+| deviceId    | string         | *该型号下的设备ID*  |
+| locale    | string         | *国家及语言，标准locale格式*  |
+| timestamp    | long         | *当前时间，unix timestamp*  |
+
+
+* **vendor** - 生产商ID，通过在网站注册生产商生成，保证全局唯一
+* **deviceType** - 设备型号ID，通过在网站注册设备型号生成，保证生产商内部唯一
+* **deviceId** - 设备ID，由生产商自行生成，保证设备型号内部唯一
+* **locale** - 国家及语言，采用标准locale格式，language_country
+* **timestamp** - 当前时间，使用设备当前的时间戳，unix timestamp
+
+###### 2.3.2.2 ScreenInfo
 
 当前设备的显示设备信息：
 
@@ -242,7 +256,7 @@
 * **y** - Y 方向上的像素大小
 * 根据给出的屏幕分辨率信息，通常来讲，如果 **x** 比 **y** 大，那么该屏幕会被认为是横屏 **landscape**，反过来则是竖屏 **protrait**.
 
-###### 2.3.2.2 MediaStatus
+###### 2.3.2.3 MediaStatus
 
 当前设备上CloudAppClient中MediaPlayer的状态：
 
@@ -259,7 +273,7 @@
 
 * **state** - 表明当前播放状态. 当前**有且仅有 PLAYING** 和 **PAUSED** 两种状态可用.
 
-###### 2.3.2.3 LocationInfo
+###### 2.3.2.4 LocationInfo
 
 ```
 "location": {
@@ -337,14 +351,17 @@ IntentRequest 是基于 *NLP* 的结果产生的请求，其中包括了 *NLP* �
 ```
 "content": {
     "event": "Media.NEAR_FINISH",
-    "extra": "extra info"
+    "extra": {
+    	"key1": "value1",
+    	"key2": "value2"
+    }
 }
 ```
 
 | 字段               | 类型            | 可能值 |
 |:-------:|:--------------:|:-------------------------------|
 | event  | string         | *事件类型*   |
-| extra  | string map         | *自定义字段，目前暂无定义，作扩展用*   |
+| extra  | string-string map         | *自定义字段，目前暂无定义，作扩展用*   |
 
 * **event** - 表明了是具体的事件类型.
 	* **Voice.STARTED** - 当Voice开始播放时发生
@@ -370,20 +387,19 @@ IntentRequest 是基于 *NLP* 的结果产生的请求，其中包括了 *NLP* �
     "version": "2.0.0",
     "session": {
         "attributes": {
-            // attributes that will be used for session 
-            // which are filled by the app itself
+    	    "key1": "value1",
+    	    "key2": "value2"
         }
     },
     "response": {
         "action": { // for Rokid device
-            // action protocol version
+
             "version":"2.0.0",
-            // action type 
-            // if type is EXIT, the cloud app will exit immediately
-            "type": "NORMAL / EXIT", 
-            // notifies that session should be cleard then action is done
+
+	    "type": "NORMAL / EXIT", 
+            
             "shoudEndSession": true, 
-            // voice section
+            
             "voice": {
                 "needEventCallback": true,
                 "behaviour": "APPEND/REPLACE_ALL/REPLACE_APPEND/CLEAR",
@@ -391,7 +407,7 @@ IntentRequest 是基于 *NLP* 的结果产生的请求，其中包括了 *NLP* �
                     "tts": "tts content"
                 }
             },
-            // media section
+
             "media": {
                 "needEventCallback": true,
                 "action": "PLAY/PAUSE/RESUME",
@@ -403,7 +419,7 @@ IntentRequest 是基于 *NLP* 的结果产生的请求，其中包括了 *NLP* �
                     "offsetInMilliseconds": 0
                 }
             },
-	    // confirm section
+
 	    "confirm": {
 		"confirmIntent": "nlp intent to confirm",
 		"confirmSlot": "nlp slot to confirm",
