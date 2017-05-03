@@ -129,7 +129,6 @@
     "sessionId": "D75D1C9BECE045E9AC4A87DA86303DD6", 
     "newSession": true, 
     "applicationId": "application id for requested CloudApp",
-    "domain": "domain for requested CloudApp",
     "attributes": {}
 }
 ```
@@ -139,13 +138,11 @@
 | sessionId              | string          | *每次会话的唯一ID，由系统填充*  |
 | newSession  | boolean         | *true / false (由系统填充)*   |
 | applicationId          | string          | *当前会话的CloudApp的ID*  |
-| domain       | string    | *所请求的CloudApp的domain*         |
 | attributes             | key-value map          | *一个string-string map*         |
 
 * **sessionId** - 每次会话的唯一ID，由系统填充
 * **newSession** - 向CloudApp表明此次会话是新的会话还是已经存在的会话
 * **applicationId** - 表明当前会话的CloudApp的ID，由开放平台在申请应用时自动生成
-* **domain** - 表明当前会话的CloudApp的*domain*，由开放平台在申请应用时自动生成
 * **attributes** - 为*CloudApp*提供*attributes*字段留保存上下文信息的字段
 
 #### 2.3 Context定义
