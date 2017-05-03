@@ -389,6 +389,8 @@ IntentRequest 是基于 *NLP* 的结果产生的请求，其中包括了 *NLP* �
             "version":"2.0.0",
 
 	    "type": "NORMAL / EXIT", 
+	    
+	    "form": "scene/cut/service",
             
             "shoudEndSession": true, 
             
@@ -438,6 +440,7 @@ Action 目前包括两种类型：`voice` 和 `media`。`voice` 表示了语音�
 "action": {
     "version": "2.0.0",
     "type": "NORMAL/EXIT", 
+    "form": "scene/cut/service",
     "shoudEndSession": true, 
     "voice": {},
     "media": {},
@@ -451,12 +454,14 @@ Action 目前包括两种类型：`voice` 和 `media`。`voice` 表示了语音�
 |:-----------------:|:---------------:|:---------------|
 | version           | string          | *action 协议的版本，当前为 2.0.0*  |
 | type              | string          | *NORMAL / EXIT*  |
+| form              | string          | *scene / cut / service*  |
 | shouldEndSession  | boolean         | *true / false*   |
 | voice       | voice object    | *Voice对象*         |
 | media             | media object          | *Media对象*         |
 
 * **version** - 表明 action 协议版本，当前版本为: 2.0.0.
 * **type** - 当前action的类型：`NORMAL` 或 `EXIT`。 当 `type` 是 `NORMAL` 时，`voice` 和 `media` 会同时执行；当 `type` 是 `EXIT` 时，action会立即退出，并且在这种情况下，`voice` 和 `media` 将会被会被忽略。
+* **form** - 当前action的展现形式：scene、cut、service。scene的action会在被打断后压栈，cut的action会在被打断后直接结束，service会在后台执行，但没有任何界面。
 * **shouldEndSession** - 表明当此次返回的action执行完后 *CloudAppClient* 是否要退出，同时，当 `shouldEndSession` 为 `true` 时，*CloudAppClient* 将会忽略 *EventRequests*，即在action执行过程中不会产生 *EventRequest*。
 
 ##### 3.2.1 Voice
