@@ -74,7 +74,7 @@
                 "vendor":"vendor id",
                 "deviceType":"device type",
                 "deviceId": "010116000100",
-                "locale": "zh_cn",
+                "locale": "zh-cn",
                 "timestamp": 1478009510909
 	    },
 
@@ -216,7 +216,7 @@
     "vendor":"vendor id",
     "deviceType":"device type",
     "deviceId": "010116000100",
-    "locale": "zh_cn",
+    "locale": "zh-cn",
     "timestamp": 1478009510909
 }
 ```
@@ -232,7 +232,7 @@
 * **vendor** - 生产商ID，通过在网站注册生产商生成，保证全局唯一
 * **deviceType** - 设备型号ID，通过在网站注册设备型号生成，保证生产商内部唯一
 * **deviceId** - 设备ID，由生产商自行生成，保证设备型号内部唯一
-* **locale** - 国家及语言，采用标准locale格式，language_country
+* **locale** - 国家及语言，采用标准locale格式，language-country
 * **timestamp** - 当前时间，使用设备当前的时间戳，unix timestamp
 
 ###### 2.3.2.2 ScreenInfo
@@ -326,23 +326,23 @@ UserInfo 展示了与当前设备绑定的用户信息，通常是设备对应�
 
 ##### 2.4.1 IntentRequest
 
-IntentRequest 是基于 *NLP* 的结果产生的请求，其中包括了 *NLP* 的所有信息：**Domain**， **Intent** 和 **Slots**。IntentRequest将会发给对应 *domain* 的 *CloudApp* 根据 *intent* 和 *slots* 进行相应的逻辑处理。
+IntentRequest 是基于 *NLP* 的结果产生的请求，其中包括了 *NLP* 的所有信息：**ApplicationId**， **Intent** 和 **Slots**。IntentRequest将会发给对应的 *CloudApp* 根据 *intent* 和 *slots* 进行相应的逻辑处理。
 
 ```
 "content": {
-    "domain": "com.rokid.cloud.music",
+    "applicationId": "com.rokid.cloud.music",
     "intent": "play_random",
     "slots": {}
 }
 ```
 
 | 字段               | 类型            | 可能值 |
-|:-------:|:--------------:|:-------------------------------|
-| domain  | string         | *CloudApp 对应的 nlp domain*  |
-| intent  | string         | *CloudApp 对应的 nlp intent*  |
-| slots   | string         | *CloudApp 对应的 nlp slots*   |
+|:-------:       |:--------------:|:-------------------------------|
+| applicationId  | string         | *CloudApp 对应的 applicationId*  |
+| intent         | string         | *CloudApp 对应的 nlp intent*     |
+| slots          | string         | *CloudApp 对应的 nlp slots*      |
 
-* **domain**, **intent** 和 **slots** 均为 **NLP** 结果的基本元素。分别表明了一句话所代表的领域，意图和完成这个意图所需要的参数。
+* **applicationId**, **intent** 和 **slots** 均为 **NLP** 结果的基本元素。分别表明了一句话所代表的领域，意图和完成这个意图所需要的参数。
 
 ##### 2.4.2 EventRequest
 
@@ -419,6 +419,10 @@ IntentRequest 是基于 *NLP* 的结果产生的请求，其中包括了 *NLP* �
                     "offsetInMilliseconds": 0
                 }
             },
+	    
+	    "display": {
+	    	// TBD
+	    },
 
 	    "confirm": {
 		"confirmIntent": "nlp intent to confirm",
@@ -436,7 +440,7 @@ IntentRequest 是基于 *NLP* 的结果产生的请求，其中包括了 *NLP* �
 
 #### 3.2 Action
 
-Action 目前包括两种类型：`voice` 和 `media`。`voice` 表示了语音交互的返回，包括 *TTS* 或 *confirm*。`media` 是对媒体播放的返回。
+Action 目前包括两种类型：`voice` 和 `media`。`voice` 表示了语音交互的返回。`media` 是对媒体播放的返回。
 
 ```
 "action": {
@@ -444,7 +448,9 @@ Action 目前包括两种类型：`voice` 和 `media`。`voice` 表示了语音�
     "type": "NORMAL/EXIT", 
     "shoudEndSession": true, 
     "voice": {},
-    "media": {}
+    "media": {},
+    "display": {},
+    "confirm": {}
 }
 ```
 
@@ -463,7 +469,7 @@ Action 目前包括两种类型：`voice` 和 `media`。`voice` 表示了语音�
 
 ##### 3.2.1 Voice
 
-*Voice* 定义了 *CloudApp* 返回的语音交互内容，其中包括两个部分：**TTS** 和 **Confirmation**。具体定义如下：
+*Voice* 定义了 *CloudApp* 返回的语音交互内容。具体定义如下：
 
 ```
 "voice": {
@@ -490,40 +496,19 @@ Action 目前包括两种类型：`voice` 和 `media`。`voice` 表示了语音�
 
 ###### 3.2.1.1 Item
 
-Item定义了voice的具体内容，包括两个部分：**TTS** 和 **Confirm**。
+Item定义了voice的具体内容。
 
 ```
 "item": {
-    "tts": "tts content",
-    "confirm": {},
+    "tts": "tts content"
 }
 ```
 
 | 字段               | 类型            | 可能值 |
 |:-----------------:|:---------------:|:---------------|
 | tts              | string          | *tts 内容*  |
-| confirm          | confirm object          | *confirm对象内容* |
 
 * **tts** - 定义了需要播报的TTS内容。
-* **confirm** - 定义了需要confirm的内容，具体如下：
-
-```
-"confirm": {
-    "tts": "tts content for confirmation",
-    "confirmIntent": "nlp intent to confirm",
-    "confirmSlot": "nlp slot to confirm",
-    "confirmAttributes": {}
-}
-```
-
-| 字段               | 类型            | 可能值 |
-|:-----------------:|:---------------:|:---------------|
-| tts              | string          | *confirm时需要播报的TTS内容*  |
-| confirmIntent         | string          | *期望confirm的nlp intent* |
-| confirmSlot  | string        | *期望confirm的nlp slot，与confirmIntent对应*  |
-| confirmAttributes  | key-value map        | *在confirm的回复中希望带上的信息，key-value格式*  |
-
-**注意**： Item最外层的 `tts` 与 confirm 中的`tts` 是互斥的，即当 `tts` 和 `confirm` 同时出现时，confirm 中的 `tts` 将会比外层的 `tts` 优先级更高，此时外层的 `tts` 将会被忽略。
 
 ##### 3.2.2 Media
 
