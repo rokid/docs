@@ -297,7 +297,7 @@ UserInfo 展示了与当前设备绑定的用户信息，通常是设备对应�
 | userId  | string         | *用户ID*  |
 
 
-#### 2.4 Request
+#### 2.4 Request定义
 
 *Request* 是当前请求的真正内容：
 
@@ -373,7 +373,7 @@ IntentRequest 是基于 *NLP* 的结果产生的请求，其中包括了 *NLP* �
 
 根据之前的描述，Response是 *CloudApp* 向客户端的返回结果。
 
-#### 3.1 Protocol
+#### 3.1 协议概览
 
 整体协议示例如下：
 
@@ -433,7 +433,7 @@ IntentRequest 是基于 *NLP* 的结果产生的请求，其中包括了 *NLP* �
 * **session** - 表示当前应用的session，与Request中的信息一致，*CloudApp* 可以在 *attributes* 里填充自己需要的上下文信息用于后面的请求。
 * **response** - 返回给 *CloudAppClient* 的Response内容。包括了 `card` 和 `action` 两个部分。`card` 会在之后的协议更新中作详细说明。
 
-#### 3.2 Action
+#### 3.2 Action定义
 
 Action 目前包括两种类型：`voice` 和 `media`。`voice` 表示了语音交互的返回。`media` 是对媒体播放的返回。
 
