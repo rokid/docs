@@ -44,87 +44,74 @@
 
 ```
 {
+    // protocol version
     "version": "2.0.0",
-    
     // session information
     "session": {
         // unique id for each new session
         "sessionId": "D75D1C9BECE045E9AC4A87DA86303DD6", 
-        
         // indicates whether it is a new session
         "newSession": true, 
-        
+	// application id which is surposed to handle the request
         "applicationId": "application id for requested CloudApp",
-        
-        "domain": "domain for requested CloudApp",
-        
+	// attributes set by last request in same session
         "attributes": {
             // session attributes set by CloudApp in Response
         }
     },
-    
     // usefull context information for handling the Request
     "context": {
         // application related information
         "application": {
             "applicationId": "application id for requested CloudApp"
         },
-        
         // device status and information
-        "device": {
-            // current device id sending the request, autofill by system
-            "deviceId": "010116000100",
-            
-            // current device type, autofill by system
-            "deviceType":"device type"
-            
-            // vendor id of current device, autofill by system
-            "vendor":"vendor id",
-            
+        "device": {  
+	    // basic device information
+	    "basic":{
+	        // vendor id of current device, autofill by system
+                "vendor":"vendor id",
+		// current device type, autofill by system
+                "deviceType":"device type",
+                // current device id sending the request, autofill by system
+                "deviceId": "010116000100",
+		// locale of current device
+                "locale": "zh_cn",
+		// timestamp when sending the request
+                "timestamp": 1478009510909
+	    },
             // screen info of current device
             "screen":{
                 "x":"640",
                 "y":"480"
             },
-            
-            // locale of current device
-            "locale": "zh_cn",
-            
-            // timestamp when sending the request
-            "timestamp": 1478009510909,
-            
             // media status on current device
             "media": {
                 "state": "PLAYING / PAUSED"
             },
-            
             // location config of current device
             "location": {
                 "latitude": "30.213322455923485",
                 "longitude": "120.01190010997654"
             }
         },
-        
         // user info that binded to current device
         "user": {
             "userId": "user id string"
         }
     },
-    
     // request info
     "request": {
         // distinguish the request type: IntentRequest or EventRequest
         "reqType": "intent / event",
-        
         // unique id for each request
         "reqId": "010116000100-ad1f462f4f0946ccb24e9248362c504a",
-        
+        // 
         "currentReqId":"",
-        
         // request content - structure may be different for different reqType. 
         // Here is an example for IntentRequest
         "content": {
-            "domain": "com.rokid.cloud.music",
+            "applicationId": "com.rokid.cloud.music",
             "intent": "play_random",
             "slots": {
             }
@@ -391,33 +378,19 @@ IntentRequest 是基于 *NLP* 的结果产生的请求，其中包括了 *NLP* �
         "action": { // for Rokid device
             // action protocol version
             "version":"2.0.0",
-        
             // action type 
             // if type is EXIT, the cloud app will exit immediately
             "type": "NORMAL / EXIT", 
-            
             // notifies that session should be cleard then action is done
             "shoudEndSession": true, 
-            
             // voice section
             "voice": {
                 "needEventCallback": true,
                 "behaviour": "APPEND/REPLACE_ALL/REPLACE_APPEND/CLEAR",
                 "item": {
-                    "tts": "tts content",
-                    "confirm": {
-                        "tts": "tts content for confirmation",
-                        "confirmIntent": "nlp intent to confirm",
-                        "confirmSlot": "nlp slot to confirm",
-                        "confirmAttributes": {
-                            // attributes that will used in the confirmation result 
-                            // which are filled by the app
-                            "isConfirm": "true"
-                        }
-                    }
+                    "tts": "tts content"
                 }
             },
-            
             // media section
             "media": {
                 "needEventCallback": true,
@@ -429,7 +402,13 @@ IntentRequest 是基于 *NLP* 的结果产生的请求，其中包括了 *NLP* �
                     "url": "media streaming url",
                     "offsetInMilliseconds": 0
                 }
-            }
+            },
+	    // confirm section
+	    "confirm": {
+		"confirmIntent": "nlp intent to confirm",
+		"confirmSlot": "nlp slot to confirm",
+		"optionWords": ["word1","word2"],
+	    }
         }
     }
 }
