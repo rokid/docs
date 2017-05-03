@@ -106,8 +106,6 @@
 
         "reqId": "010116000100-ad1f462f4f0946ccb24e9248362c504a",
 
-        "currentReqId":"",
-
 	"content": {
             "applicationId": "com.rokid.cloud.music",
             "intent": "play_random",
@@ -307,7 +305,6 @@ UserInfo 展示了与当前设备绑定的用户信息，通常是设备对应�
 "request": {
     "reqType": "INTENT / EVENT",
     "reqId": "010116000100-ad1f462f4f0946ccb24e9248362c504a",
-    "currentReqId":"010116000100-cd1a462f4f0946ccb24e9248362c630b",
     "content": {}
 }
 ```
@@ -316,12 +313,10 @@ UserInfo 展示了与当前设备绑定的用户信息，通常是设备对应�
 |:-----------------:|:---------------:|:---------------|
 | reqType  | string         | *INTENT / EVENT*  |
 | reqId    | string         | *当前请求的唯一ID*  |
-| currentReqId    | string         | *在EventRequest中对应的上一个请求的ID，也是上一次请求返回的ID*  |
 | content  | request content object         | *IntentRequest 或 EventRequest的对象*  |
 
 * **reqType** - 表明请求的类型： **INTENT** 和 **EVENT** 分别对应 *IntentRequest* 和 *EventRequest*。
 * **reqId** - 每次请求都会对应一个唯一ID用以区分每一次的请求。请求ID将会与返回ID一一对应。
-* **currentReqId** - 表明了上一次请求和回复的ID. *只有* 当 *reqType* 是 *EVENT* 时才有效。
 * **content** - **IntentRequest** 和 **EventRequest** 对应的具体内容，下面会具体介绍。
 
 ##### 2.4.1 IntentRequest
