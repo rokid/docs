@@ -399,7 +399,7 @@ The full protocol for cloud app response is as follows:
             "type": "NORMAL / EXIT", 
             
             // notifies that session should be cleard then action is done
-            "shoudEndSession": true, 
+            "shouldEndSession": true, 
             
             // voice section
             "voice": {
@@ -450,7 +450,7 @@ There are three kinds of action, `voice` and `media`. `voice` is for voice inter
 "action": {
     "version": "2.0.0",
     "type": "NORMAL/EXIT", 
-    "shoudEndSession": true, 
+    "shouldEndSession": true, 
     "voice": {},
     "media": {}
 }
