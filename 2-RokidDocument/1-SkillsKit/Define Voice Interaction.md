@@ -148,7 +148,7 @@ Session目前只能作用在同一Domain下，**切换Domain会清空Session**�
 {
  "response": {
   "action": {
-   "shoudEndSession": false,
+   "shouldEndSession": false,
    "type": "NORMAL",
    "version": "2.0.0",
    "voice": {
