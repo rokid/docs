@@ -392,7 +392,7 @@ IntentRequest 是基于 *NLP* 的结果产生的请求，其中包括了 *NLP* �
 	    
 	    "form": "scene/cut/service",
             
-            "shoudEndSession": true, 
+            "shouldEndSession": true, 
             
             "voice": {
                 "needEventCallback": true,
@@ -441,7 +441,7 @@ Action 目前包括两种类型：`voice` 和 `media`。`voice` 表示了语音�
     "version": "2.0.0",
     "type": "NORMAL/EXIT", 
     "form": "scene/cut/service",
-    "shoudEndSession": true, 
+    "shouldEndSession": true, 
     "voice": {},
     "media": {},
     "display": {},
