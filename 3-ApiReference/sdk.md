@@ -1,6 +1,6 @@
-##Tts接口定义
+## Tts接口定义
 
-###调用接口
+### 调用接口
 ```
 bool prepare(const char* config_file);
 
@@ -18,7 +18,7 @@ void stop(int id);
 //                                  pcm
 void config(const char* key, const char* value);
 ```
-###回调接口
+### 回调接口
 ```
 virtual void onStart(int id) = 0;
 
@@ -33,7 +33,7 @@ virtual void onComplete(int id) = 0;
 virtual void onError(int id, int err) = 0;
 ```
 
-###示例
+### 示例
 ```
 class DemoCallback : public TtsCallback {
 public:
@@ -50,6 +50,19 @@ public:
 
 Tts tts;
 DemoCallback cb;
+// 配置服务器地址
+tts.config("server_address", "apigw.open.rokid.com:443");
+// 配置ssl cert文件路径(sdk源码中提供了roots.pem)
+tts.config("ssl_roots_pem", "/system/etc/roots.pem");
+// 配置语音服务认证信息
+// key, secret, device_type_id需要申请
+// device_id即设备序列号，由用户自定，用户可用它区分自己的设备
+tts.config("key", "your_rokid_key");
+tts.config("device_type_id", "your_device_type_id");
+tts.config("secret", "your_secret");
+tts.config("device_id", "your_device_id");
+// api版本号
+tts.config("api_version", "1");
 if (!tts.prepare()) {
 	log("tts prepare failed");
 	return;
@@ -63,7 +76,7 @@ int32_t id = tts.speak("你好", cb);
 tts.release();
 ```
 
-##speech接口定义
+## speech接口定义
 ```
 struct SpeechResult {
 	int32_t id;
@@ -112,6 +125,8 @@ void delete_speech(Speech* speech);
 示例
 ```
 Speech* speech = rokid::speech::new_speech();
+// 配置信息同tts示例，这里不再列出
+// speech->config(......);
 if (!speech->prepare()) {
 	log("speech prepare failed");
 	rokid::speech::delete_speech(speech);
@@ -146,9 +161,9 @@ while (true) {
 }
 ```
 
-##asr接口定义
+## asr接口定义
 
-###调用接口
+### 调用接口
 ```
 bool prepare();
 
@@ -167,7 +182,7 @@ void cancel(int id);
 void config(const char* key, const char* value);
 ```
 
-###回调接口
+### 回调接口
 ```
 virtual void onStart(int id) = 0;
 
@@ -179,12 +194,12 @@ virtual void onComplete(int id) = 0;
 
 virtual void onError(int id, int err) = 0;
 ```
-###示例
+### 示例
 与tts接口用法相似
 
-##nlp接口定义
+## nlp接口定义
 
-###调用接口
+### 调用接口
 ```
 bool prepare();
 
@@ -199,7 +214,7 @@ void cancel(int32_t id);
 void config(const char* key, const char* value);
 ```
 
-###回调接口
+### 回调接口
 ```
 virtual void onNlp(int id, const char* nlp) = 0;
 
@@ -207,5 +222,5 @@ virtual void onStop(int id) = 0;
 
 virtual void onError(int id, int err) = 0;
 ```
-###示例
+### 示例
 与tts接口用法相似
