@@ -4,7 +4,7 @@ Rokid开发文档
 Rokid开发者社区已于4月1号正式开启内测。
 
 ## 说明
-这个项目是Rokid开发者社区文档，方便开发者在github上查看。
+这个项目是Rokid开发者社区文档，方便开发者在GitHub上查看。
 
 ### 开发者社区介绍
 
@@ -26,10 +26,12 @@ Rokid开发者社区已于4月1号正式开启内测。
 - [Rokid示例技能](https://github.com/Rokid/rokid-skill-sample)
 
 ### 语音接入SDK
-- [Rokid SDK接入指南](https://github.com/Rokid/docs/blob/master/2-RokidDocument/2-EnableVoice/Rokid%20SDK%20Tutorial.md)
-- [Rokid开发者社区客户端SDK文档](https://github.com/Rokid/docs/blob/master/3-ApiReference/sdk.md)
-- [Rokid开发者社区Siren API文档](https://github.com/Rokid/rokid-blacksiren/blob/master/doc/siren%20api.md)
-- [Rokid开发者社区接口文档](https://github.com/Rokid/rokid-openvoice/blob/master/README.md)
+
+- [获取认证文件](https://github.com/Rokid/docs/blob/master/2-RokidDocument/2-EnableVoice/get-the-certification-file.md)
+- [Rokid SDK 接入指南](https://github.com/Rokid/docs/blob/master/2-RokidDocument/2-EnableVoice/Rokid%20SDK%20Tutorial.md)
+- [Rokid 客户端SDK 文档](https://github.com/Rokid/docs/blob/master/3-ApiReference/sdk.md)
+- [Rokid Siren API 文档](https://github.com/Rokid/rokid-blacksiren/blob/master/doc/siren%20api.md)
+- [Rokid 接口文档](https://github.com/Rokid/rokid-openvoice/blob/master/README.md)
 
 ### 设计语音产品
 
