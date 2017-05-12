@@ -40,8 +40,8 @@ Rokid开发者社区已于4月1号正式开启内测。
 
 ### 协议条款
 
-- 通用条款
-- 隐私条款
+- [服务协议](https://github.com/Rokid/docs/blob/master/4-TermsAndAgreements/community-service-agreement.md)
+- [免责声明](https://github.com/Rokid/docs/blob/master/4-TermsAndAgreements/community-disclaimer.md)
 
 
 ## 支持
