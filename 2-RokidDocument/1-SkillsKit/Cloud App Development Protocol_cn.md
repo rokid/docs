@@ -2,8 +2,6 @@
 ### Rokid 开放平台
 版本：1.0.0-alpha
 
-语言：简体中文（[Change to English](https://github.com/Rokid/docs/blob/master/2-RokidDocument/1-SkillsKit/Cloud%20App%20Development%20Protocol_en.md)）
-
 ### 大纲
 * [简介](#1-简介)
 	* [一些概念](#11-一些概念)
