@@ -87,14 +87,14 @@ Rokid将会理解用户的请求，并将**播放音乐**这个意图发送给�
 在定义完技能种类、技能名称、技能入口词等关键信息之后，你还需要做以下工作，来完成一个技能的创建。
 
 ### 2.1 设计您的技能
-一个好的技能离不开出色的语音交互，这需要您对自然语言、人类对话的基本原理有简单的理解。请阅读[Rokid语音交互指南](../2-RokidDocument/1-SkillsKit/rokid-voice-interaction-guidelines.md)以了解如何设计出色的语音交互体验。
+一个好的技能离不开出色的语音交互，这需要您对自然语言、人类对话的基本原理有简单的理解。请阅读[Rokid语音交互指南](https://github.com/Rokid/docs/blob/master/2-RokidDocument/1-SkillsKit/Rokid%20Voice%20Interaction%20Guidelines.md)以了解如何设计出色的语音交互体验。
 
-当您创建一个自定义技能时，您需要通过[定义语音交互](../2-RokidDocument/1-SkillsKit/define-voice-interaction.md)将用户请求与您的服务能处理的意图关联起来，并通过定义合理的[用户语句](../2-RokidDocument/1-SkillsKit/define-voice-interaction.md#用户输入的数据)让您的技能能够准确识别用户的各种意图。
+当您创建一个自定义技能时，您需要通过[定义语音交互](https://github.com/Rokid/docs/blob/master/2-RokidDocument/1-SkillsKit/Define%20Voice%20Interaction.md)将用户请求与您的服务能处理的意图关联起来，并通过定义合理的[用户语句](https://github.com/Rokid/docs/blob/master/2-RokidDocument/1-SkillsKit/Define%20Voice%20Interaction.md#用户输入的数据)让您的技能能够准确识别用户的各种意图。
 
 ### 2.2 为您的技能搭建后端服务
 你可以将您的服务部署在自建或其他任何云端服务器中。
 
-当您在为技能编写后端代码时，请参考我们的[技能协议文档](../3-ApiReference/cloud-app-development-protocol_cn.md)。
+当您在为技能编写后端代码时，请参考我们的[技能协议文档](https://github.com/Rokid/docs/blob/master/2-RokidDocument/1-SkillsKit/Cloud%20App%20Development%20Protocol_cn.md)。
 
 在技能的语音交互定义完成、后端服务部署成功之后，你便可以开始对您的技能进行测试了。
 
