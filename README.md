@@ -1,49 +1,70 @@
-Rokid开发文档
+Rokid开放平台介绍
 ===
+Rokid开放平台介绍
 
-Rokid开发者社区已于4月1号正式开启内测。
+## 什么是Rokid开放平台
+**Rokid开放平台**内含一整套语音解决方案，能够让终端设备拥有语音交互能力，使用户直接使用语音就能与你的设备进行交互。同时依托开放平台提供各种技能（Skills，可以理解为手机中的APPs），终端用户仅通过语音命令就能获取音乐、新闻、天气、问答等各种日常服务。目前这套方案用于Rokid Alien、Rokid Pebble两款产品。
 
-## 说明
-这个项目是Rokid开发者社区文档，方便开发者在GitHub上查看。
+Rokid开放平台语音解决方案建立在云端，将会随着用户不断的使用而变得更加聪明。同时也会因为开发者不断新增的各种技能（Skills）而变得更加好用全面。
 
-### 开发者社区介绍
+Rokid开放平台语音服务包含**Rokid技能开发工具**和**Rokid语音接入**。
 
-- [Rokid开发者社区介绍](https://github.com/Rokid/docs/blob/master/1-GetStarted/Rokid%20introduction.md)
+## Rokid技能开发工具
+Rokid技能开发工具帮助开发者为所有搭载Rokid开放服务的设备开发有趣的技能（Skills），实现用户各式各样的语音交互需求。
 
-### 快速开始
+## Rokid语音接入
+Rokid语音接入能够为配有麦克风和扬声器的联网硬件设备开启Rokid开放服务所提供的智能、可扩展的语音能力。用户可以直接使用语音让搭载Rokid语音服务的设备播放音乐、查天气、播报新闻，以及其他技能（Skills）所提供的各种功能。
 
-- [开始开发Rokid技能](https://github.com/Rokid/docs/blob/master/1-GetStarted/rokid-skill-kit-introduction.md)
-- 开始Rokid语音接入
+## Rokid开放服务的优势
+### 从前端降噪到语音合成的一整套解决方案
+Rokid开放平台提供的方案包含从前端硬件的远场拾音、降噪、回升消除等技术，到自然语言识别、语义理解、自然语言合成这一整套的解决方案。
 
+### 经过产品检验的开放方案
 
-### 开发Rokid技能
+使用Rokid方案的两款产品均是体验最佳的语音智能设备代表。
+Rokid方案能够帮助硬件厂商获得相比其他方案更好的拾音、语音交互效果。
 
-- [开始创建第一个技能：我要喝咖啡](https://github.com/Rokid/rokid-skill-sample/tree/master/rokid-skill-sample-java-tastecoffee)
-- [定义语音交互](https://github.com/Rokid/docs/blob/master/2-RokidDocument/1-SkillsKit/Define%20Voice%20Interaction.md)
-- [Rokid NLP正则表达式使用指南](https://github.com/Rokid/docs/blob/master/2-RokidDocument/1-SkillsKit/Rokid%20Regular%20Expression.md)
-- [Rokid技能协议文档](https://github.com/Rokid/docs/blob/master/2-RokidDocument/1-SkillsKit/Cloud%20App%20Development%20Protocol_cn.md)
-- [Rokid语音交互指南](https://github.com/Rokid/docs/blob/master/2-RokidDocument/1-SkillsKit/Rokid%20Voice%20Interaction%20Guidelines.md)
-- [Rokid示例技能](https://github.com/Rokid/rokid-skill-sample)
+![alien-pebble](images/alien-pebble.jpg)
 
-### 语音接入SDK
+> 左侧为Rokid Pebble，右侧为Rokid Alien，分别在CES2017，CES2016获奖。
 
-- [获取认证文件](https://github.com/Rokid/docs/blob/master/2-RokidDocument/2-EnableVoice/get-the-certification-file.md)
-- [Rokid SDK 接入指南](https://github.com/Rokid/docs/blob/master/2-RokidDocument/2-EnableVoice/Rokid%20SDK%20Tutorial.md)
-- [Rokid 客户端SDK 文档](https://github.com/Rokid/docs/blob/master/3-ApiReference/sdk.md)
-- [Rokid Siren API 文档](https://github.com/Rokid/rokid-blacksiren/blob/master/doc/siren%20api.md)
-- [Rokid 接口文档](https://github.com/Rokid/rokid-openvoice/blob/master/README.md)
+### 不断进步的开放生态
 
-### 设计语音产品
+搭载Rokid语音方案的设备可以直接使用经过数次优化的基础语音技能，如天气、新闻等。
 
-- [Rokid语音产品设计指南](https://github.com/Rokid/docs/blob/master/2-RokidDocument/2-EnableVoice/Rokid%20hardware%20design%20guide.md)
-- [Rokid硬件交互设计指南](https://github.com/Rokid/docs/blob/master/2-RokidDocument/2-EnableVoice/Rokid%20Hardware%20UX%20Design%20Guidelines.md)
+另外，在Rokid开放平台中，你可以为自己或全平台的用户开发各类有趣的技能（Skills），来满足用户不断增加的语音需求。
 
-### 协议条款
+同时，其他开发者开发的公共技能（Skills）也将不断更新至搭载Rokid语音方案的设备中。
 
-- [服务协议](https://github.com/Rokid/docs/blob/master/4-TermsAndAgreements/community-service-agreement.md)
-- [免责声明](https://github.com/Rokid/docs/blob/master/4-TermsAndAgreements/community-disclaimer.md)
+### 顶尖的语音智能技术
+
+Rokid自主研发的语音智能技术，能够在麦克风降噪、远场识别、上下文等多个方面提供业内顶尖的方案，以支持用户丰富深入的语音互动体验。
+
+## Rokid开放服务合作方式
+### 免费使用基础语音服务
+
+- 免费提供硬件设计参考方案
+- 免费提供远场激活拾音、降噪、回声消除等硬件技术方案
+- 免费提供基础语音服务
+    - 语音识别（ASR）
+    - 自然语言理解（NLP）
+    - 语音合成播报（TTS）
+- 免费使用Rokid云服务
+- 可以使用平台中的所有公共技能（Skills）
+- 可以自定义3字以上激活词
+
+### 可能产生费用的项目
+- 涉及版权的技能（Skills）内容
+- 需要Rokid提供额外人力支持的部分
+	- 例如自定义激活词的训练
+	- 或自定义的TTS人声训练
+
+## 发布时间
+- 2017年4月1日，开放内测。
+- 2017年6月1日，正式发布。
 
 
 ## 支持
-- [Rokid讨论区](https://developer-forum.rokid.com/)
+- [Rokid开发者社区](https://developer-forum.rokid.com/)
+
 

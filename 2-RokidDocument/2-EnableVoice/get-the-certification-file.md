@@ -45,7 +45,7 @@ void config(String key, String value)
 
 同样的，`device_id`需要开发者自行指定，用以区分每个不同的设备。
 
-具体请查看[Rokid客户端SDK文档中的示例](https://github.com/Rokid/docs/blob/master/3-ApiReference/sdk.md#示例)。
+具体请查看[Rokid客户端SDK文档中的示例](/3-ApiReference/rokid-client-sdk-doc.md)。
 
 ### 2.3 在Android设备上使用TTS、Speech SDK时的配置方法
 
