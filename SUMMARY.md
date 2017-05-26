@@ -13,6 +13,7 @@
 * [开始创建第一个技能：我要喝咖啡](2-RokidDocument/1-SkillsKit/skill-sample-coffee.md)
 * [定义语音交互](2-RokidDocument/1-SkillsKit/define-voice-interaction.md)
 * [Rokid NLP正则表达式使用指南](2-RokidDocument/1-SkillsKit/rokid-regular-expression.md)
+* [Rokid JS Engine 使用指南](2-RokidDocument/1-SkillsKit/rokid-js-engine-tutorial.md)
 * [Rokid语音交互指南](2-RokidDocument/1-SkillsKit/rokid-voice-interaction-guidelines.md)
 * [Rokid示例技能](2-RokidDocument/1-SkillsKit/skill-sample.md)
 
