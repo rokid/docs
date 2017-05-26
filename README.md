@@ -14,22 +14,21 @@ Rokid开发者社区文档，旨在帮助开发者更好的使用社区提供的
 * 开始Rokid语音接入（近期更新）
 
 ### 开发Rokid技能
-* [开始创建第一个技能：我要喝咖啡](https://github.com/Rokid/rokid-skill-sample/tree/master/rokid-skill-sample-java-tastecoffee)
+* [开始创建第一个技能：我要喝咖啡](2-RokidDocument/1-SkillsKit/skill-sample-coffee.md)
 * [定义语音交互](2-RokidDocument/1-SkillsKit/define-voice-interaction.md)
 * [Rokid NLP正则表达式使用指南](2-RokidDocument/1-SkillsKit/rokid-regular-expression.md)
 * [Rokid语音交互指南](2-RokidDocument/1-SkillsKit/rokid-voice-interaction-guidelines.md)
-* [Rokid示例技能](https://github.com/Rokid/rokid-skill-sample)
+* [Rokid示例技能](2-RokidDocument/1-SkillsKit/skill-sample.md)
 
 ### 为设备开启语音交互
 * [获取认证文件](2-RokidDocument/2-EnableVoice/get-the-certification-file.md)
 * [Rokid SDK 接入指南](2-RokidDocument/2-EnableVoice/rokid-sdk-tutorial.md)
-* [Rokid 前端降噪模块 API文档](https://github.com/Rokid/rokid-blacksiren/blob/master/doc/siren%20api.md)
-
 
 ### API REFERENCE
 * [Rokid 技能协议文档](3-ApiReference/cloud-app-development-protocol_cn.md)
+* [Rokid 接口文档](3-ApiReference/openvoice-api.md)
 * [Rokid 客户端 SDK 文档](3-ApiReference/rokid-client-sdk-doc.md)
-* [Rokid 接口文档](https://github.com/Rokid/rokid-openvoice/blob/master/README.md)
+* [Rokid 前端降噪模块 API文档](3-ApiReference/siren-api.md)
 
 ### 设计语音产品
 * [Rokid语音产品设计指南](2-RokidDocument/2-EnableVoice/rokid-hardware-design-guide.md)
