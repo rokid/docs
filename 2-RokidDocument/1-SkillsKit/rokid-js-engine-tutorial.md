@@ -147,7 +147,6 @@ var handlers = {
 - Rokid.handler(event,contxt,callback)：用于调用Rokid-sdk。
 - Rokid.sync_requret(method,url,options)：同步请求，需把返回的数据通过Rokid.resHandler( )进行buffer处理。
 - Rokid.resHandler(content):buffer处理函数，如经过第三方请求返回数据必须通过此函数处理，再提交":tts"。
-- Rokid.request(options,callback):异步请求。
 - Rokid.param:NLP处理结果，可在其中获取intent，slot等信息。
 
 ### Sample
