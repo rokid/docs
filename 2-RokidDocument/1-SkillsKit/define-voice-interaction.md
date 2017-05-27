@@ -175,27 +175,34 @@ $iwant喝$drink
 
 **需要注意：**
 
-- 一个词表内容可以被多个不同的词表名称引用。
-比如在下例中，`LIST_OF_CITIES`可以被不同的词表名称引用多次。
+- 一个词表内容可以被多个不同的词表名称引用，用于把同一类的值输出到不同的应用场景中。比如在下例中，`ROKID.NUMBER_ZH`可以被不同的词表名称引用多次，在用户说出`两小时十五分钟三十六秒`的时候，能够输出`"slots":{"hour":"两","min":"十五","sec":"三十六"}`。
+
 
 ```json
 {
  "intents": [
   {
-   "intent": "bestcoffeebar",
-   "slots": [
-        {
-        "name": "city1",
-        "type": "LIST_OF_CITIES"
-        },
-        {
-        "name": "city2",
-        "type": "LIST_OF_CITIES"
-        },
-   ],
+  		{
+			"intent": "time",
+			"slots": [
+				{
+					"name": "hour",
+					"type": "ROKID.NUMBER_ZH"
+				},
+				{
+					"name": "min",
+					"type": "ROKID.NUMBER_ZH"
+				},
+				{
+					"name": "sec",
+					"type": "ROKID.NUMBER_ZH"
+				}
+			], 
     "user_says":[
-        "..."
-   ]
+       "$hour小时",
+       "$min分钟",
+       "$sec秒",
+        ]
   }
  ]
 }
