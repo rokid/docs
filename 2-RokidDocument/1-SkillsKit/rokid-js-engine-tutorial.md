@@ -1,7 +1,6 @@
 # Rokid JS Engine 使用指南
 
-> 很高兴大家可以通过编辑JS脚本来搭建技能服务
-
+> 欢迎使用Rokid-JS-Engine，很高兴大家可以通过编辑JS脚本来搭建技能服务。
 
 ## 使用JS脚本更快速的开发技能
 
@@ -27,28 +26,61 @@ exports.handler = function(event, context, callback) {
  
 以上三步是必须的。
 
-其中handlers，为大家所要写的意图技能处理函数，比如：
+其中handlers，为大家所要写的意图技能处理函数，在“配置”编写js脚本，比如：
 
 ``` javascript
 var handlers = {
 	'HelloWorldSample':function() {
-		this.emit(':tts',{tts:'Hello World!'});
+		try{
+			this.emit(':tts',{tts:'Hello World!'});
+			//正常完成意图函数时callback
+			this.callback(null);
+		}catch(error){
+			//报错时callback错误
+			this.callback(error);
+		}
 	},
 	'MediaSample': function () {
-        this.emit(':media', { itemType: 'AUDIO', url:'s.rokidcdn.com/temp/rokid-ring.mp3' });
+		try{
+			//正常完成意图函数时callback
+			this.emit(':media', { itemType: 'AUDIO', url:'s.rokidcdn.com/temp/rokid-ring.mp3' });
+		}catch(error){
+			//报错时callback错误
+			this.callback(error)
+		}
     }
 };
 ```
 
-在"配置"编写js脚本
-![Alt text](./images/js.png)
+> 切记：为顺利且快速执行脚本，上述中this.callback是在意图函数运行完成后必须调用的，且注意this的指向，如不调用，则jsEngine将0.5s轮询一次返回结果。
 
 其中"HelloWorldSample"与"MediaSample"对应于"语音交互"中的intent。
-![Alt text](./images/WX20170526-144250.png)
+
+``` javascript
+{
+    "intents": [
+        {
+            "intent": "HelloWorldSample",
+            "slots": [],
+            "user_says": [
+                "你好"
+            ]
+        },
+        {
+			"intent": "MediaSample",
+			"slots": [],
+			"user_says": [
+				"播放"
+			]
+		}
+    ]
+}
+```
 
 "语音交互"的intent，slot等request信息可在Rokid.param（下文有介绍）中获取。
 
-（1）上面的":tts"语法是rokid-sdk用于同步响应对象的"tts"响应方法。注：传入":tts"方法的参数对象中tts属性是必须的！
+- 上面的":tts"语法是rokid-sdk用于同步响应对象的"tts"响应方法。注：传入":tts"方法的参数对象中tts属性是必须的！
+
 其响应方法如下:
 
 ``` javascript
@@ -59,7 +91,7 @@ var handlers = {
         return
       }
       if (typeof options.tts !== 'string') {
-        console.log(`emit(":tts")时"tts"字段必填且为string类型(当前tts值为${options.tts})`);
+        console.log(`emit(":tts")时"tts"字段必填且为string类型(当前tts类型为${typeof options.tts})`);
         return
       }
 
@@ -89,7 +121,7 @@ var handlers = {
 | behaviour | string | APPEND |
 | tts | string | 无（必填）|
 
-（2）上面的":media"语法是rokid-sdk用于同步响应对象的"media"响应方法。注：传入":media"方法的参数对象中"url"和属性"itemType"是必须的！
+- 上面的":media"语法是rokid-sdk用于同步响应对象的"media"响应方法。注：传入":media"方法的参数对象中"url"和属性"itemType"是必须的！
 
 ``` javascript
 ':media': function (options) {
@@ -98,12 +130,12 @@ var handlers = {
       }
 
       if (!options.itemType) {
-        console.log('emit(":media")时"itemType"字段必填(当前媒体类型AUDIO或VIDEO)');
+        console.log('emit(":media")时"itemType"字段必填(媒体类型须为AUDIO或VIDEO)');
         return
       }
 
       if (!options.url) {
-        console.log('emit(":media")时"url"字段必填(为MediaPlayer指明可用的流媒体播放链接)');
+        console.log('emit(":media")时"url"字段必填(当前url类型为${typeof options.url})');
         return
       }
 
@@ -143,11 +175,18 @@ var handlers = {
 具体字段定义可参见：<https://rokid.github.io/docs/3-ApiReference/cloud-app-development-protocol_cn.html#3-response>
 
 ### 在Rokid对象中封装的工具
-
-- Rokid.handler(event,contxt,callback)：用于调用Rokid-sdk。
-- Rokid.sync_requret(method,url,options)：同步请求，需把返回的数据通过Rokid.resHandler( )进行buffer处理。
-- Rokid.resHandler(content):buffer处理函数，如经过第三方请求返回数据必须通过此函数处理，再提交":tts"。
+- Rokid.handler(event,contxt,callback):用于调用Rokid-sdk。
+- Rokid.resHandler(content):buffer处理函数，如通过Rokid.sync_request请求必须通过此函数处理，再提交":tts"或":media"。
+- Rokid.sync_request(method,url,options):同步请求，需把返回的数据通过Rokid.resHandler( )进行buffer处理。
+- Rokid.request(options,callback):异步请求。
 - Rokid.param:NLP处理结果，可在其中获取intent，slot等信息。
+
+
+### 关于日志
+- 在应用脚本中可调用console.log( )输出你想要看的日志。
+- 须保证在“命中语音指令”的情况下才可查看日志。
+- 此日志仅是应用脚本执行的日志，不包括其他链路的日志。
+- 尽量在脚本中采用try-catch中调用callback传回状态，详细参见本文sample。
 
 ### Sample
 
@@ -169,31 +208,65 @@ exports.handler = function(event, context, callback) {
 
 var handlers = {
     'LaunchRequest': function () {
+	    //这里不是意图函数完成的地方，因此不需要callback
         this.emit('GetNewFactIntent');
     },
     'GetNewFactIntent': function () {
-        var factArr = data;
-        var factIndex = Math.floor(Math.random() * factArr.length);
-        var randomFact = factArr[factIndex];
-        var speechOutput = randomFact;
-        this.emit(':tts', {tts:speechOutput})
+	    try{
+			var factArr = data;
+	        var factIndex = Math.floor(Math.random() * factArr.length);
+	        var randomFact = factArr[factIndex];
+	        var speechOutput = randomFact;
+	        this.emit(':tts', {tts:speechOutput})
+	        this.callback(null);
+		}catch(error){
+			this.callback(error);
+		}
     },
-    'NewsRequest': function () {
-        result = Rokid.sync_request('GET', 'https://www.toutiao.com/hot_words/');
-        result = Rokid.resHandler(result); 
-        var resStr = '';
-        result.forEach(function(item){
-            resStr += item + ','
-        })
-        this.emit(':tts', { tts: resStr });
+    'sync_NewsRequest': function () {
+	    //同步请求
+	    try{
+			result = Rokid.sync_request('GET', 'https://www.toutiao.com/hot_words/');
+	        //buffer处理
+	        result = Rokid.resHandler(result); 
+	        var resStr = '';
+	        result.forEach(function(item){
+	            resStr += item + ','
+	        })
+	        this.emit(':tts', { tts: resStr });
+	        this.callback(null);
+		}catch(error){
+			this.callback(error);
+		}
+    },
+    'ansync_NewsRequest': function () {
+	    //异步请求，注意this指向问题
+        var ttsRes = '', self = this;
+        Rokid.request({
+		    method: 'GET',
+		    url: 'https://www.toutiao.com/hot_words/',
+		    headers:{
+		        'User-Agent': 'request'
+		    }
+		}, function (error, response, body) {
+            if (error) {
+                self.callback(error);
+            };
+            JSON.parse(body).forEach(function (item) {
+                ttsRes += item + ','
+            })
+            self.emit(':tts', { tts: ttsRes });
+            self.callback(null);
+        });
     },
     'MediaRequest': function () {
-        this.emit(':media', { itemType: 'AUDIO', url: 's.rokidcdn.com/temp/rokid-ring.mp3' });
+	    try{
+			this.emit(':media', { itemType: 'AUDIO', url: 's.rokidcdn.com/temp/rokid-ring.mp3' });
+			this.callback(null);
+		}catch(error){
+			this.callback(error);
+		}
     }
 };
 ```
-
-## 支持
-
-* [Rokid讨论区](https://developer-forum.rokid.com/)
 
