@@ -60,9 +60,10 @@ Rokid将基于自身打磨多年的历代产品经验，进行总结和归纳，
 
 Rokid开放平台的远距离拾音技术可轻松地移植到支持Android与Linux平台的AP：
 
-- Samsung
 - Amlogic
+- Samsung
 - Qualcomm
+- Rockchip
 - Allwinner
 - Others
 
