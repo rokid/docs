@@ -172,7 +172,7 @@ var handlers = {
 | url | string | 无（必填）|
 | offsetInMilliseconds | number | 0 |
 
-具体字段定义可参见：<https://rokid.github.io/docs/3-ApiReference/cloud-app-development-protocol_cn.html#3-response>
+具体字段定义可参见：[Rokid技能Response协议](/3-ApiReference/cloud-app-development-protocol_cn.md#3-response)
 
 ### 在Rokid对象中封装的工具
 - Rokid.handler(event,contxt,callback):用于调用Rokid-sdk。
