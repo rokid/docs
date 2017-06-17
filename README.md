@@ -37,6 +37,7 @@ Rokid开发者社区文档，旨在帮助开发者更好的使用社区提供的
 * [Rokid硬件交互设计指南](2-RokidDocument/2-EnableVoice/rokid-hardware-ux-design-guidelines.md)
 
 ### 协议条款
+* [技能发布标准](4-TermsAndAgreements/rokid-skill-release-standard.md)
 * [服务协议](4-TermsAndAgreements/community-service-agreement.md)
 * [免责声明](4-TermsAndAgreements/community-disclaimer.md)
 
