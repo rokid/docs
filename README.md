@@ -11,7 +11,7 @@ Rokid开发者社区文档，旨在帮助开发者更好的使用社区提供的
 
 ### 快速开始
 * [开始开发Rokid技能](1-GetStarted/rokid-skill-kit-introduction.md)
-* 开始Rokid语音接入（近期更新）
+* [开始接入Rokid语音](1-GetStarted/enable-rokid-voice.md)
 
 ### 开发Rokid技能
 * [开始创建第一个技能：我要喝咖啡](2-RokidDocument/1-SkillsKit/skill-sample-coffee.md)
@@ -19,8 +19,8 @@ Rokid开发者社区文档，旨在帮助开发者更好的使用社区提供的
 * [Rokid 预定义词表](2-RokidDocument/1-SkillsKit/rokid-bult-in-slots.md)
 * [Rokid NLP正则表达式使用指南](2-RokidDocument/1-SkillsKit/rokid-regular-expression.md)
 * [Rokid JS Engine 使用指南](2-RokidDocument/1-SkillsKit/rokid-js-engine-tutorial.md)
-* [Rokid语音交互指南](2-RokidDocument/1-SkillsKit/rokid-voice-interaction-guidelines.md)
-* [Rokid示例技能](2-RokidDocument/1-SkillsKit/skill-sample.md)
+* [Rokid 语音交互指南](2-RokidDocument/1-SkillsKit/rokid-voice-interaction-guidelines.md)
+* [Rokid 示例技能](2-RokidDocument/1-SkillsKit/skill-sample.md)
 
 ### 为设备开启语音交互
 * [获取认证文件](2-RokidDocument/2-EnableVoice/get-the-certification-file.md)
@@ -34,8 +34,8 @@ Rokid开发者社区文档，旨在帮助开发者更好的使用社区提供的
 * [Rokid 前端降噪模块 API文档](3-ApiReference/siren-api.md)
 
 ### 设计语音产品
-* [Rokid语音产品设计指南](2-RokidDocument/2-EnableVoice/rokid-hardware-design-guide.md)
-* [Rokid硬件交互设计指南](2-RokidDocument/2-EnableVoice/rokid-hardware-ux-design-guidelines.md)
+* [Rokid 语音产品硬件设计指南](2-RokidDocument/2-EnableVoice/rokid-hardware-design-guide.md)
+* [Rokid 硬件交互设计指南](2-RokidDocument/2-EnableVoice/rokid-hardware-ux-design-guidelines.md)
 
 ### 协议条款
 * [技能发布标准](4-TermsAndAgreements/rokid-skill-release-standard.md)
