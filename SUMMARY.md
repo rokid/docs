@@ -24,6 +24,7 @@
 
 ### API REFERENCE
 * [Rokid 技能协议文档](3-ApiReference/cloud-app-development-protocol_cn.md)
+* [拦截器接口文档](3-ApiReference/rokid-interceptor.md)
 * [Rokid 接口文档](3-ApiReference/openvoice-api.md)
 * [Rokid 客户端 SDK 文档](3-ApiReference/rokid-client-sdk-doc.md)
 * [Rokid 前端降噪模块 API文档](3-ApiReference/siren-api.md)
