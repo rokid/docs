@@ -393,17 +393,14 @@ IntentRequest 是基于 *NLP* 的结果产生的请求，其中包括了 *NLP* �
             "shouldEndSession": true, 
             
             "voice": {
-                "needEventCallback": true,
-                "behaviour": "APPEND/REPLACE_ALL/REPLACE_APPEND/CLEAR",
+                "action": "PLAY/PAUSE/RESUME/STOP",
                 "item": {
                     "tts": "tts content"
                 }
             },
 
             "media": {
-                "needEventCallback": true,
-                "action": "PLAY/PAUSE/RESUME",
-                "behaviour": "APPEND/REPLACE_ALL/REPLACE_APPEND/CLEAR",
+                "action": "PLAY/PAUSE/RESUME/STOP",
                 "item": {
                     "token": "xxxx",
                     "type": "AUDIO/VIDEO",
@@ -468,25 +465,17 @@ Action 目前包括两种类型：`voice` 和 `media`。`voice` 表示了语音�
 
 ```
 "voice": {
-    "needEventCallback": true,
-    "behaviour": "APPEND/REPLACE_ALL/REPLACE_APPEND/CLEAR",
+    "action":"PLAY/PAUSE/RESUME/STOP",
     "item": {}
 }
 ```
 
 | 字段               | 类型            | 可能值 |
 |:-----------------:|:---------------:|:---------------|
-| needEventCallback              | boolean          | *true / false*  |
-| behaviour          | string          | *APPEND / REPLACE\_ALL / REPLACE\_APPEND / CLEAR*  |
+| action              | string          | *PLAY / PAUSE / RESUME / STOP*  |
 | item       | item object    | *voice 的 item 对象*         |
 
-* **needEventCallback** - 表示 *CloudAppClient* 是否需要等待所有 *EventRequest* 的返回结果。如果 *needEventCallback* 为 *true*， *CloudAppClient* 在action执行完后不会立即退出，会一直等待 *EventRequest* 的返回；当 *needEventCallback* 为 *false*， *CloudAppClient* 在action执行完后（包括队列中所有的action)，会立即退出，不会等待 *EventRequest* 的返回。 
-* **behaviour** - 表示 `voice` 的队列执行策略。目前有如下四种 `behaviours`。默认情况下，如果 *behaviour* 在返回中没有提供，**REPLACE_ALL** 将会作为默认策略执行。
-	* **APPEND** - 仅将当前voice加入队列，对当前正在执行的voice和队列已有的voice没有任何影响。
-	* **REPLACE_ALL** - 会将当前正在执行的voice停止，将队列中已有的voice清除，再将当前新的voice加入队列并立即执行。
-	* **REPLACE_APPEND** - 会将当前正在执行的voice停止，但不会清除队列中已有的voice，将新的voice加入队列，并执行队列。
-	* **CLEAR** - 会立即停止当前所有的voice任务，此策略等同于退出voice，此时voice中的item内容将会被忽略。
-
+* **action** - 表示对当前voice的操作，可以播放（PLAY)、暂停（PAUSE）、继续播放（RESUME）和停止（STOP）（具体Action行为参照Media的Action行为，但是目前暂未实现，**PAUSE**以及**RESUME**操作）;
 * **item** - 定义了voice的具体内容，将会在 *3.2.1.1* 中详细描述.
 
 ###### 3.2.1.1 Item
@@ -511,23 +500,21 @@ Media 用来播放CloudApp返回的流媒体内容。有 *audio* 和 *video* 两
 
 ```
 "media": {
-    "needEventCallback": true,
-    "action": "PLAY/PAUSE/RESUME",
-    "behaviour": "APPEND/REPLACE_ALL/REPLACE_APPEND/CLEAR",
+    "action": "PLAY/PAUSE/RESUME/STOP",
     "item": {}
 }
 ```
 
 | 字段               | 类型            | 可能值 |
 |:-----------------:|:---------------:|:---------------|
-| needEventCallback              | boolean          | *true / false*  |
-| action              | string          | *PLAY / PAUSE / RESUME*  |
-| behaviour          | string          | *APPEND / REPLACE\_ALL / REPLACE\_APPEND / CLEAR* |
+| action              | string          | *PLAY / PAUSE / RESUME / STOP*  |
 | item  | media item object        | *media的具体内容*  |
 
-* **needEventCallback** - 与 *Voice* 中的定义相同。
-* **action** - 定义了对MediaPlayer的操作，目前只支持 **3** 种操作：**PLAY**， **PAUSE** 和 **RESUME**。
-* **behaviour** -与 *Voice* 中的定义相同。
+* **action** - 定义了对MediaPlayer的操作，目前只支持 **4** 种操作：**PLAY**， **PAUSE** ， **RESUME** 和 **STOP**。其中，只有**PLAY**接受**item**数据。
+    * **PLAY**：如果有**item**数据，则按照最新的**item**从头开始播放，如果没有**item**数据，且原来有在播放的内容，则从原来播放的内容开始播放
+    * **PAUSE**：暂停当前播放的内容，播放的进度等数据不会丢失（可以直接通过**RESUME**指令直接恢复原来的播放状态）
+    * **RESUME**：继续播放（从原来的播放进度播放）
+    * **STOP**：停止播放，并且清空当前的播放进度，但是播放内容不清
 * **item** - 定义了具体的播放内容，如下：
 
 ###### 3.2.2.1 Item
