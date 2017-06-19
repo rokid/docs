@@ -82,9 +82,11 @@
             },
 
             "media": {
-                "state": "PLAYING / PAUSED"
+                "state": "PLAYING / PAUSED / IDLE"
             },
-
+            "voice": {
+                "state": "PLAYING / PAUSED / IDLE"
+            },
             "location": {
                 "latitude": "30.213322455923485",
                 "longitude": "120.01190010997654"
@@ -186,6 +188,7 @@
     "basic":{},
     "screen":{},
     "media": {},
+    "voice": {},
     "location": {}
 }
 ```
@@ -255,18 +258,25 @@
 
 ```
 "media": {
-    "state": "PLAYING / PAUSED"
+    "state": "PLAYING / PAUSED / IDLE"
 }
 ```
 
 | 字段               | 类型            | 可能值 |
 |:-----------------:|:---------------:|:---------------|
-| state  | string         | *PLAYING / PAUSED*  |
+| state  | string         | *PLAYING / PAUSED / IDLE*  |
 
 
-* **state** - 表明当前播放状态. 当前**有且仅有 PLAYING** 和 **PAUSED** 两种状态可用.
+* **state** - 表明当前播放状态. 当前**有 PLAYING** 、**PAUSED** 和 **IDLE** 三种状态可用。
+    * **PLAYING**：代表当前有媒体正在播放；
+    * **PAUSED**：代表当前媒体被暂停，可以执行继续播放（RESUME）操作；
+    * **IDLE**：代表当前媒体播放器为空闲状态，没有任何媒体数据。
 
-###### 2.3.2.4 LocationInfo
+
+###### 2.3.2.4 VoiceStatus
+参见上述[2.3.2.3 MediaStatus](#2323-mediastatus)
+
+###### 2.3.2.5 LocationInfo
 
 ```
 "location": {
