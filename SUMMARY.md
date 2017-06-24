@@ -41,4 +41,6 @@
 
 ### 支持
 * [Rokid讨论区](https://developer-forum.rokid.com/)
+* [Rokid开发者社区官网](https://developer.rokid.com/)
+
 

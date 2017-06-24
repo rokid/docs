@@ -44,4 +44,5 @@ Rokid开发者社区文档，旨在帮助开发者更好的使用社区提供的
 
 ### 支持
 * [Rokid讨论区](https://developer-forum.rokid.com/)
+* [Rokid开发者社区官网](https://developer.rokid.com/)
 
