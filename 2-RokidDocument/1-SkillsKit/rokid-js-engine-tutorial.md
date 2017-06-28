@@ -27,12 +27,11 @@ exports.handler = function(event, context, callback) {
 以上三步是必须的。
 
 其中handlers，为大家所要写的意图技能处理函数，在“配置”编写js脚本，比如：
-
 ``` javascript
 var handlers = {
 	'HelloWorldSample':function() {
 		try{
-			this.emit(':tts',{tts:'Hello World!'});
+			this.emit(':tts',{tts:'Hello World!'},{sessionKey:sessionValue});
 			//正常完成意图函数时callback
 			this.callback(null);
 		}catch(error){
@@ -43,7 +42,7 @@ var handlers = {
 	'MediaSample': function () {
 		try{
 			//正常完成意图函数时callback
-			this.emit(':media', { itemType: 'AUDIO', url:'s.rokidcdn.com/temp/rokid-ring.mp3' });
+			this.emit(':media', { itemType: 'AUDIO', url:'s.rokidcdn.com/temp/rokid-ring.mp3' },{sessionKey:sessionValue});
 		}catch(error){
 			//报错时callback错误
 			this.callback(error)
@@ -51,10 +50,9 @@ var handlers = {
     }
 };
 ```
+> 切记：上述中this.callback是在意图函数运行完成后必须调用的，且注意this的指向。如不调用，则jsEngine将误认为脚本未执行完全导致无法输出结果。
 
-> 切记：为顺利且快速执行脚本，上述中this.callback是在意图函数运行完成后必须调用的，且注意this的指向，如不调用，则jsEngine将0.5s轮询一次返回结果。
-
-其中"HelloWorldSample"与"MediaSample"对应于"语音交互"中的intent。
+其中"HelloWorldSample"与"MediaSample"对应于"语音交互"中的intent如下：
 
 ``` javascript
 {
@@ -78,101 +76,48 @@ var handlers = {
 ```
 
 "语音交互"的intent，slot等request信息可在Rokid.param（下文有介绍）中获取。
-
-- 上面的":tts"语法是rokid-sdk用于同步响应对象的"tts"响应方法。注：传入":tts"方法的参数对象中tts属性是必须的！
-
-其响应方法如下:
-
-``` javascript
-':tts': function (options) {
-
-      if (this.isOverridden()) {
-        //统一在执行emit之前计算监听数
-        return
-      }
-      if (typeof options.tts !== 'string') {
-        console.log(`emit(":tts")时"tts"字段必填且为string类型(当前tts类型为${typeof options.tts})`);
-        return
-      }
-
-      this.handler.response.response.action = buildSpeechletResponse({
-        outType: 'tts',
-        version: this.handler._event.version,
-        //封装res输出
-        type: options.type || 'NORMAL',
-        form: options.form || 'cut',
-        shouldEndSession: options.shouldEndSession || true,
-        needEventCallback: options.needEventCallback || false,
-        behaviour: options.behaviour || 'APPEND',
-        tts: options.tts
-
-      })
-      this.emit(':responseReady')
-}
+```javascript
+this.emit(':tts',{tts:'Hello World!'},{sessionKey:sessionValue})
 ```
-
+- 上述语法是rokid-sdk用于同步响应对象的“tts”响应方法。注：传入":tts"方法的参数对象中tts属性是必须的，且其类型须为string或number！session根据需求选择。
 ### 开发者相关字段（tts）
+ - this.emit(":tts",{},{})第二个参数如下：
 | 字段       |   类型 | 默认值 |
 | :-------- |--------:| :--: |
 | type | string |  NORMAL  |
 | form | string |  cut  |
 | shouldEndSession | boolean | true |
-| needEventCallback | boolean | false |
-| behaviour | string | APPEND |
-| tts | string | 无（必填）|
-
-- 上面的":media"语法是rokid-sdk用于同步响应对象的"media"响应方法。注：传入":media"方法的参数对象中"url"和属性"itemType"是必须的！
-
-``` javascript
-':media': function (options) {
-      if (this.isOverridden()) {
-        return
-      }
-
-      if (!options.itemType) {
-        console.log('emit(":media")时"itemType"字段必填(媒体类型须为AUDIO或VIDEO)');
-        return
-      }
-
-      if (!options.url) {
-        console.log('emit(":media")时"url"字段必填(当前url类型为${typeof options.url})');
-        return
-      }
-
-      this.handler.response.response.action = buildSpeechletResponse({
-        outType: 'media',
-        version: this.handler._event.version,
-
-        type: options.type || 'NORMAL',
-        form: options.form || 'cut',
-        shouldEndSession: options.shouldEndSession || true,
-        needEventCallback: options.needEventCallback || false,
-        action: options.action || 'PLAY',
-        behaviour: options.behaviour || 'APPEND',
-        token: options.token || '',
-        itemType: options.itemType,
-        url: options.url,
-        offsetInMilliseconds: options.offsetInMilliseconds || 0
-      })
-      this.emit(':responseReady')
-}
-```
-
-### 开发者相关字段（media）
-| 字段       |   类型 | 默认值 |
-| :-------- |--------:| :--: |
-| type | string |  NORMAL  |
-| form | string |  cut  |
-| shouldEndSession | boolean | true |
-| needEventCallback | boolean | false |
 | action | string | PLAY |
-| behaviour | string | APPEND |
+| tts | string | 无（必填）|
+ - this.emit(":tts",{},{})第三个参数如下：
+| 字段       |   类型 | 默认值 |
+| :-------- |--------:| :--: |
+| sessionKey | string | 无（自定义选填）|
+| seesionValue | string | 无（自定义选填）|
+
+```javascript
+this.emit(':media', { itemType: 'AUDIO', url:'s.rokidcdn.com/temp/rokid-ring.mp3' },{sessionKey:sessionValue})
+```
+上述 语法是rokid-sdk用于同步响应对象的"media"响应方法。注：传入":media"方法的参数对象中"url"和属性"itemType"是必须的！session根据需求选择。
+### 开发者相关字段（media）
+ - this.emit(":media",{},{})第三个参数如下：
+| 字段       |   类型 | 默认值 |
+| :-------- |--------:| :--: |
+| type | string |  NORMAL  |
+| form | string |  cut  |
+| shouldEndSession | boolean | true |
+| action | string | PLAY |
 | token | string | 无 |
 | itemType(对应文档item里的type) | string | 无（必填）|
 | url | string | 无（必填）|
 | offsetInMilliseconds | number | 0 |
+ - this.emit(":media",{},{})第三个参数如下：
+| 字段       |   类型 | 默认值 |
+| :-------- |--------:| :--: |
+| sessionKey | string | 无（自定义选填）|
+| seesionValue | string | 无（自定义选填）|
 
-具体字段定义可参见：[Rokid技能Response协议](/3-ApiReference/cloud-app-development-protocol_cn.md#3-response)
+具体字段定义可参见：<https://rokid.github.io/docs/3-ApiReference/cloud-app-development-protocol_cn.html#3-response>
 
 ### 在Rokid对象中封装的工具
 - Rokid.handler(event,contxt,callback):用于调用Rokid-sdk。
@@ -180,9 +125,9 @@ var handlers = {
 - Rokid.sync_request(method,url,options):同步请求，需把返回的数据通过Rokid.resHandler( )进行buffer处理。
 - Rokid.request(options,callback):异步请求。
 - Rokid.param:可根据“集成测试”中服务请求的数据结构获取一些数据。如：
-    - slots：Rokid.param.request.content.slots
-    - intent: Rokid.param.request.content.intent
-    - session: Rokid.param.session.attributes
+	- slots：Rokid.param.request.content.slots
+	- intent: Rokid.param.request.content.intent
+	- session: Rokid.param.session.attributes
 
 
 ### 关于日志
@@ -192,7 +137,6 @@ var handlers = {
 - 尽量在脚本中采用try-catch中调用callback传回状态，详细参见本文sample。
 
 ### Sample
-
 ```javascript
 var data = [
     "床前明月光，疑是地上霜，举头望明月，低头思故乡。",
@@ -220,7 +164,7 @@ var handlers = {
 	        var factIndex = Math.floor(Math.random() * factArr.length);
 	        var randomFact = factArr[factIndex];
 	        var speechOutput = randomFact;
-	        this.emit(':tts', {tts:speechOutput})
+	        this.emit(':tts', {tts:speechOutput});
 	        this.callback(null);
 		}catch(error){
 			this.callback(error);
@@ -254,10 +198,10 @@ var handlers = {
 		}, function (error, response, body) {
             if (error) {
                 self.callback(error);
-            };
+            }
             JSON.parse(body).forEach(function (item) {
-                ttsRes += item + ','
-            })
+                ttsRes += item + ',';
+            });
             self.emit(':tts', { tts: ttsRes });
             self.callback(null);
         });
