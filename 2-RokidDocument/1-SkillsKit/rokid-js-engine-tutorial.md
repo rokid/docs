@@ -179,7 +179,10 @@ var handlers = {
 - Rokid.resHandler(content):buffer处理函数，如通过Rokid.sync_request请求必须通过此函数处理，再提交":tts"或":media"。
 - Rokid.sync_request(method,url,options):同步请求，需把返回的数据通过Rokid.resHandler( )进行buffer处理。
 - Rokid.request(options,callback):异步请求。
-- Rokid.param:NLP处理结果，可在其中获取intent，slot等信息。
+- Rokid.param:可根据“集成测试”中服务请求的数据结构获取一些数据。如：
+    - slots：Rokid.param.request.content.slots
+    - intent: Rokid.param.request.content.intent
+    - session: Rokid.param.session.attributes
 
 
 ### 关于日志
@@ -269,4 +272,8 @@ var handlers = {
     }
 };
 ```
+
+### Q&A
+#### Q：为什么我有时候结果输出的会包含[Object,Object]？
+A：需要注意在emit的时候写入{tts:xxx}对象时，xxx必须为string类型，如果object+string就可能出现以上现象。想要输出object的内容须用JSON.stringify()将其转换为string。
 
