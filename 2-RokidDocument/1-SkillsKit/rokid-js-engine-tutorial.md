@@ -27,6 +27,7 @@ exports.handler = function(event, context, callback) {
 以上三步是必须的。
 
 其中handlers，为大家所要写的意图技能处理函数，在“配置”编写js脚本，比如：
+
 ``` javascript
 var handlers = {
 	'HelloWorldSample':function() {
@@ -50,7 +51,8 @@ var handlers = {
     }
 };
 ```
-> 切记：上述中this.callback是在意图函数运行完成后必须调用的，且注意this的指向。如不调用，则jsEngine将误认为脚本未执行完全导致无法输出结果。
+### 关于调用callback
+**上述中this.callback是在意图函数运行完成后必须调用的，且需注意this的指向。如不调用，则jsEngine将会误认为脚本未执行完毕而导致无法输出结果。**
 
 其中"HelloWorldSample"与"MediaSample"对应于"语音交互"中的intent如下：
 
@@ -76,12 +78,18 @@ var handlers = {
 ```
 
 "语音交互"的intent，slot等request信息可在Rokid.param（下文有介绍）中获取。
+
 ```javascript
 this.emit(':tts',{tts:'Hello World!'},{sessionKey:sessionValue})
 ```
+
 - 上述语法是rokid-sdk用于同步响应对象的“tts”响应方法。注：传入":tts"方法的参数对象中tts属性是必须的，且其类型须为string或number！session根据需求选择。
+
+
 ### 开发者相关字段（tts）
  - this.emit(":tts",{},{})第二个参数如下：
+
+ 
 | 字段       |   类型 | 默认值 |
 | :-------- |--------:| :--: |
 | type | string |  NORMAL  |
@@ -89,7 +97,9 @@ this.emit(':tts',{tts:'Hello World!'},{sessionKey:sessionValue})
 | shouldEndSession | boolean | true |
 | action | string | PLAY |
 | tts | string | 无（必填）|
+
  - this.emit(":tts",{},{})第三个参数如下：
+
 | 字段       |   类型 | 默认值 |
 | :-------- |--------:| :--: |
 | sessionKey | string | 无（自定义选填）|
@@ -98,9 +108,12 @@ this.emit(':tts',{tts:'Hello World!'},{sessionKey:sessionValue})
 ```javascript
 this.emit(':media', { itemType: 'AUDIO', url:'s.rokidcdn.com/temp/rokid-ring.mp3' },{sessionKey:sessionValue})
 ```
+
 上述 语法是rokid-sdk用于同步响应对象的"media"响应方法。注：传入":media"方法的参数对象中"url"和属性"itemType"是必须的！session根据需求选择。
+
 ### 开发者相关字段（media）
  - this.emit(":media",{},{})第三个参数如下：
+
 | 字段       |   类型 | 默认值 |
 | :-------- |--------:| :--: |
 | type | string |  NORMAL  |
@@ -111,7 +124,10 @@ this.emit(':media', { itemType: 'AUDIO', url:'s.rokidcdn.com/temp/rokid-ring.mp3
 | itemType(对应文档item里的type) | string | 无（必填）|
 | url | string | 无（必填）|
 | offsetInMilliseconds | number | 0 |
+
  - this.emit(":media",{},{})第三个参数如下：
+
+ 
 | 字段       |   类型 | 默认值 |
 | :-------- |--------:| :--: |
 | sessionKey | string | 无（自定义选填）|
@@ -129,6 +145,13 @@ this.emit(':media', { itemType: 'AUDIO', url:'s.rokidcdn.com/temp/rokid-ring.mp3
 	- intent: Rokid.param.request.content.intent
 	- session: Rokid.param.session.attributes
 
+### 关于调试
+在“配置”页里，目前已支持单点测试，仅测试js应用脚本正确性。
+
+ *  配置测试用例，其中的intent和slot是需要开发者在默认用例基础上对应于“语音交互”中作相应调整。
+ * 调试结果中将测试用例作为request，response和log日志则是根据应用脚本产出的真实结果。
+
+确保js应用脚本的正确性情况下，可在“集成测试”页中进行全链路集成测试。
 
 ### 关于日志
 - 在应用脚本中可调用console.log( )输出你想要看的日志。
@@ -137,6 +160,7 @@ this.emit(':media', { itemType: 'AUDIO', url:'s.rokidcdn.com/temp/rokid-ring.mp3
 - 尽量在脚本中采用try-catch中调用callback传回状态，详细参见本文sample。
 
 ### Sample
+
 ```javascript
 var data = [
     "床前明月光，疑是地上霜，举头望明月，低头思故乡。",
@@ -220,4 +244,8 @@ var handlers = {
 ### Q&A
 #### Q：为什么我有时候结果输出的会包含[Object,Object]？
 A：需要注意在emit的时候写入{tts:xxx}对象时，xxx必须为string类型，如果object+string就可能出现以上现象。想要输出object的内容须用JSON.stringify()将其转换为string。
+#### Q：为什么我的脚本一直超时？
+A：1、脚本允许运行时间为2s，如在2s内未完成则会超时。
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2、需要在emit之后立即调用callback。
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3、在调用emit及callback时请注意“上下文this”的指向。
 
