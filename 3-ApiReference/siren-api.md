@@ -261,21 +261,28 @@ vt_event_t结构体成员如下
 
 ##### 语音事件说明
 
-```SIREN_EVENT_VAD_START```: VAD_START事件，通常可以认为是一个语音帧的开始  
-```SIREN_EVENT_VAD_DATA```: VAD_DATA事件，携带语音信息的语音帧   
-```SIREN_EVENT_VAD_END```: VAD_END事件，语音帧的结束帧   
-```SIREN_EVENT_VAD_CANCLE```: 因为误激活引发的VAD_CANCLE事件
-```SIREN_EVENT_WAKE_VAD_START```:   
-```SIREN_EVENT_WAKE_VAD_DATA```:   
-```SIREN_EVENT_WAKE_VAD_END```:    
-```SIREN_EVENT_WAKE_PRE``` : 疑似激活词的开始，不能作为激活标准，已废弃
-```SIREN_EVENT_WAKE_NOCMD```: 单独激活事件  
-```SIREN_EVENT_WAKE_CMD```: 以激活词开头，以其他语音结尾的混合激活事件，需要通过asr来进一步判断激活情况
-```SIREN_EVENT_WAKE_CANCLE```: 可以本地判断的误激活事件   
-```SIREN_EVENT_SLEEP```: 睡眠激活词
-```SIREN_EVENT_HOTWORD```: wtf???   
-```SIREN_EVENT_VOICE_PRINT```: 声纹事件，包含声纹信息  
-```SIREN_EVENT_DIRTY```: wtf???   
+```SIREN_EVENT_VAD_START```: VAD_START事件，通常可以认为是一个语音帧的开始。
+```SIREN_EVENT_VAD_DATA```: VAD_DATA事件，携带语音信息的语音帧。
+
+```SIREN_EVENT_VAD_END```: VAD_END事件，语音帧的结束帧。
+
+```SIREN_EVENT_VAD_CANCLE```: 因为误激活引发的VAD_CANCLE事件。
+
+```SIREN_EVENT_WAKE_VAD_START``` :   
+```SIREN_EVENT_WAKE_VAD_DATA``` :   
+```SIREN_EVENT_WAKE_VAD_END``` :    
+```SIREN_EVENT_WAKE_PRE``` : 疑似激活词的开始，不能作为激活标准，已废弃。
+
+```SIREN_EVENT_WAKE_NOCMD```: 单独激活事件。
+```SIREN_EVENT_WAKE_CMD```: 以激活词开头，以其他语音结尾的混合激活事件，需要通过asr来进一步判断激活情况。
+
+```SIREN_EVENT_WAKE_CANCLE```: 可以本地判断的误激活事件。
+
+```SIREN_EVENT_SLEEP```: 睡眠激活词。
+
+```SIREN_EVENT_HOTWORD``` :   
+```SIREN_EVENT_VOICE_PRINT```: 声纹事件，包含声纹信息。  
+```SIREN_EVENT_DIRTY``` : 
 
 
 ## Siren接口说明 
