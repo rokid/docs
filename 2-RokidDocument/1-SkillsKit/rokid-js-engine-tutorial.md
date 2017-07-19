@@ -5,10 +5,34 @@
 ## 使用JS脚本更快速的开发技能
 
 > 使用JS脚本，我们的目标是帮助您更快速地构建技能，同时可以让您避免不必要的复杂性。使用JS脚本的方式有以下优势：
-- **无需服务器** ：开发者不需要服务器去提供服务。
-- **无需https服务**：开发者不需要自己搭建复杂的https服务。
+> - **无需服务器** ：开发者不需要服务器去提供服务。
+> - **无需https服务**：开发者不需要自己搭建复杂的https服务。
 
-### JS脚本
+### 目录
+
+*  [1.本期更新（2017.07.11）](#1-本期更新-20170711)
+*  [2.JS脚本基本内容](#2-js脚本基本内容)
+ *  [2.1固定写法部分](#21-固定写法部分)
+ *  [2.2开发者编写基本内容handlers](#22-开发者编写基本内容handlers)
+ *  [2.3关于调用callback](#23-关于调用callback)
+ *  [2.4语音交互中对应配置](#24-语音交互中对应配置)
+* [3.response配置项](#3-response配置项)
+ * [3.1tts相关配置](#31-tts相关配置)
+ * [3.2media相关配置](#32-media相关配置)
+* [4.在Rokid对象中封装的工具](#4-在rokid对象中封装的工具)
+* [5.关于调试](#5-关于调试)
+* [6.关于日志](#6-关于日志)
+* [7.Sample](#7-sample)
+* [8.Q&A](#8-qa) 
+
+### 1. 本期更新-2017.07.11
+向开发者提供了数据存储接口，开发者可在脚本中实现数据存储功能
+
+### 2. JS脚本基本内容
+开发者可以利用编写JS脚本实现各自所需的技能意图函数实现不同的功能。
+
+### 2.1 固定写法部分
+这部分如没有特别需求，所有开发者都可以通用如下代码：
 
 ``` javascript
 exports.handler = function(event, context, callback) {
@@ -25,6 +49,8 @@ exports.handler = function(event, context, callback) {
  - 最后，通过rokid.execute( )触发技能意图。
  
 以上三步是必须的。
+
+#### 2.2 开发者编写基本内容handlers
 
 其中handlers，为大家所要写的意图技能处理函数，在“配置”编写js脚本，比如：
 
@@ -51,10 +77,13 @@ var handlers = {
     }
 };
 ```
-### 关于调用callback
-**上述中this.callback是在意图函数运行完成后必须调用的，且需注意this的指向。如不调用，则jsEngine将会误认为脚本未执行完毕而导致无法输出结果。**
 
-其中"HelloWorldSample"与"MediaSample"对应于"语音交互"中的intent如下：
+#### 2.3 关于调用callback
+
+**上述中this.callback是在意图函数运行完成后必须调用的，且须注意this的指向。如不调用，则jsEngine将会误认为脚本未执行完毕而导致无法输出结果。**
+
+#### 2.4 语音交互中对应配置
+"HelloWorldSample"与"MediaSample"对应于"语音交互"中的intent如下：
 
 ``` javascript
 {
@@ -79,16 +108,20 @@ var handlers = {
 
 "语音交互"的intent，slot等request信息可在Rokid.param（下文有介绍）中获取。
 
+### 3. response配置项
+本节讲述开发者在意图函数中最终需要emit最终结果。
+
+#### 3.1 tts相关配置
+
 ```javascript
 this.emit(':tts',{tts:'Hello World!'},{sessionKey:sessionValue})
 ```
 
-- 上述语法是rokid-sdk用于同步响应对象的“tts”响应方法。注：传入":tts"方法的参数对象中tts属性是必须的，且其类型须为string或number！session根据需求选择。
+上述语法是rokid-sdk用于同步响应对象的“tts”响应方法。注：传入":tts"法的参数对象中tts属性是必须的，且其类型须为string或number！session根据需求选择。
 
+##### 开发者相关字段（tts）
 
-### 开发者相关字段（tts）
- - this.emit(":tts",{},{})第二个参数如下：
-
+ this.emit(":tts",{},{})第二个参数如下（tts相关信息配置项）：
  
 | 字段       |   类型 | 默认值 |
 | :-------- |--------:| :--: |
@@ -98,22 +131,24 @@ this.emit(':tts',{tts:'Hello World!'},{sessionKey:sessionValue})
 | action | string | PLAY |
 | tts | string | 无（必填）|
 
- - this.emit(":tts",{},{})第三个参数如下：
-
+ this.emit(":tts",{},{})第三个参数如下（session配置项）：
+ 
 | 字段       |   类型 | 默认值 |
 | :-------- |--------:| :--: |
 | sessionKey | string | 无（自定义选填）|
 | seesionValue | string | 无（自定义选填）|
 
+#### 3.2 media相关配置
+
 ```javascript
 this.emit(':media', { itemType: 'AUDIO', url:'s.rokidcdn.com/temp/rokid-ring.mp3' },{sessionKey:sessionValue})
 ```
 
-上述 语法是rokid-sdk用于同步响应对象的"media"响应方法。注：传入":media"方法的参数对象中"url"和属性"itemType"是必须的！session根据需求选择。
+上述语法是rokid-sdk用于同步响应对象的"media"响应方法。注：传入":media"方法的参数对象中"url"和属性"itemType"是必须的！session根据需求选择。
 
-### 开发者相关字段（media）
- - this.emit(":media",{},{})第三个参数如下：
-
+##### 开发者相关字段（media）
+this.emit(":media",{},{})第二个参数如下（media相关信息配置项）：
+ 
 | 字段       |   类型 | 默认值 |
 | :-------- |--------:| :--: |
 | type | string |  NORMAL  |
@@ -125,8 +160,7 @@ this.emit(':media', { itemType: 'AUDIO', url:'s.rokidcdn.com/temp/rokid-ring.mp3
 | url | string | 无（必填）|
 | offsetInMilliseconds | number | 0 |
 
- - this.emit(":media",{},{})第三个参数如下：
-
+this.emit(":media",{},{})第三个参数如下（session配置项）：
  
 | 字段       |   类型 | 默认值 |
 | :-------- |--------:| :--: |
@@ -135,31 +169,82 @@ this.emit(':media', { itemType: 'AUDIO', url:'s.rokidcdn.com/temp/rokid-ring.mp3
 
 具体字段定义可参见：<https://rokid.github.io/docs/3-ApiReference/cloud-app-development-protocol_cn.html#3-response>
 
-### 在Rokid对象中封装的工具
+### 4. 在Rokid对象中封装的工具
+
+##### 开发者可直接调用封装在Rokid对象中的所有工具方法，现有如下：
+
 - Rokid.handler(event,contxt,callback):用于调用Rokid-sdk。
+- Rokid.request(options,callback):异步请求，具体使用方法参见<https://www.npmjs.com/package/request>。
+- Rokid.sync_request(method,url,options):同步请求，需把返回的数据通过Rokid.resHandler( )进行buffer处理。具体使用方法参见：<https://www.npmjs.com/package/sync-request>
 - Rokid.resHandler(content):buffer处理函数，如通过Rokid.sync_request请求必须通过此函数处理，再提交":tts"或":media"。
-- Rokid.sync_request(method,url,options):同步请求，需把返回的数据通过Rokid.resHandler( )进行buffer处理。
-- Rokid.request(options,callback):异步请求。
 - Rokid.param:可根据“集成测试”中服务请求的数据结构获取一些数据。如：
 	- slots：Rokid.param.request.content.slots
 	- intent: Rokid.param.request.content.intent
 	- session: Rokid.param.session.attributes
+- Rokid.dbServer:开发者可用此对象中的get，set，delete方法进行数据增删改查。
+	- get:Rokid.dbServer.get(key, callback); key必须为string类型
+	- set:Rokid.dbServer.set(key, value, callback); key,value必须为string类型。key值开发者可自定义（若每个用户都可能存取数据，则推荐使用userId）。
+	- delete:Rokid.dbServer.delete(key,callback); key必须为string类型
 
-### 关于调试
+数据存取基本操作如下：
+
+``` javascript
+var handlers = {
+    'set':function() {
+        var data = JSON.stringify([0,1,2,3,4]);//字符串存入数据库
+        Rokid.dbServer.set('user001',data, (err, res) => {
+            if(err) {
+                this.emit(':tts',{tts: err});
+                this.callback(null);
+            }else{
+                this.emit(':tts',{tts: res});
+                this.callback(null);
+            }
+        });
+    },
+    'get':function() {
+        Rokid.dbServer.get('user001', (err, res) => {
+            if(err) {
+                this.emit(':tts',{tts: err});
+                this.callback(null);
+                return;
+            }else{
+                res = JSON.parse(res);//根据取出的数据进行处理
+                this.emit(':tts',{tts: res[0]});
+                this.callback(null);
+            }
+        });
+    },
+    'delete':function() {
+        Rokid.dbServer.delete('user001', (err, res) => {
+            if(err) {
+                this.emit(':tts',{tts: err});
+                this.callback(null);
+                return;
+            }else{
+                this.emit(':tts',{tts: res});
+                this.callback(null);
+            }
+        });
+    }
+};
+```
+
+### 5. 关于调试
 在“配置”页里，目前已支持单点测试，仅测试js应用脚本正确性。
 
- *  配置测试用例，其中的intent和slot是需要开发者在默认用例基础上对应于“语音交互”中作相应调整。
+ * 配置测试用例，其中的intent和slot是需要开发者在默认用例基础上对应于“语音交互”中作相应调整。
  * 调试结果中将测试用例作为request，response和log日志则是根据应用脚本产出的真实结果。
 
 确保js应用脚本的正确性情况下，可在“集成测试”页中进行全链路集成测试。
 
-### 关于日志
+### 6. 关于日志
 - 在应用脚本中可调用console.log( )输出你想要看的日志。
 - 须保证在“命中语音指令”的情况下才可查看日志。
 - 此日志仅是应用脚本执行的日志，不包括其他链路的日志。
 - 尽量在脚本中采用try-catch中调用callback传回状态，详细参见本文sample。
 
-### Sample
+### 7. Sample
 
 ```javascript
 var data = [
@@ -241,11 +326,16 @@ var handlers = {
 };
 ```
 
-### Q&A
+### 8. Q&A
+
 #### Q：为什么我有时候结果输出的会包含[Object,Object]？
 A：需要注意在emit的时候写入{tts:xxx}对象时，xxx必须为string类型，如果object+string就可能出现以上现象。想要输出object的内容须用JSON.stringify()将其转换为string。
+
 #### Q：为什么我的脚本一直超时？
 A：1、脚本允许运行时间为2s，如在2s内未完成则会超时。
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2、需要在emit之后立即调用callback。
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3、在调用emit及callback时请注意“上下文this”的指向。
+
+#### Q：同步请求处理总是报Unexpected token < in JSON at position 0；
+A：开发者使用的请求地址，其返回体必须是json格式的。比如“http://xx.com/xx.html”这类地址是不可用的。
 
