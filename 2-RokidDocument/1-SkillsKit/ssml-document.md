@@ -56,10 +56,16 @@
 #### 将音频文件转换为Rokid可用的格式
 您需要使用转换工具将需要插入的TTS中的音频转为WAV文件，16 bit，mono 24000HZ。推荐使用开源的命令行工具[FFmpeg](https://www.ffmpeg.org/)。下方的命令可以帮您将`<input-file>`装换为`audio`标签可用的WAV文件。
 
-PCM转WAV：
+**MP3转WAV：**
 
 ```
-ffmpeg -f s16le -ar 24k -ac 1 -i <input-file> <output-file.wav>
+ffmpeg -i <input-file.mp3> -acodec pcm_s16le -ac 1 -ar 24000 <output-file.wav>
+```
+
+**PCM转WAV：**
+
+```
+ffmpeg -f s16le -ar 24k -ac 1 -i <input-file.pcm> <output-file.wav>
 ```
 
 
