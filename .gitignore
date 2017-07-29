@@ -1,2 +1,5 @@
 *~
 _book
+node_modules
+SUMMARY.md
+book.json
