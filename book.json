@@ -1,0 +1,12 @@
+{
+    "plugins" : [
+      "anchors",
+      "anchor-navigation-ex",
+      "github"
+    ],
+    "pluginsConfig" : {
+            "github": {
+                "url": "https://github.com/Rokid"
+            }
+        }
+}
