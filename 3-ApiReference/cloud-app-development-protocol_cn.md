@@ -62,7 +62,7 @@
         "vendor": "vendor id",
         "deviceType": "device type",
         "deviceId": "010116000100",
-        "masterId": "master id String",
+        "masterId": "设备主人ID",
         "locale": "zh-cn",
         "timestamp": 1478009510909
       },
