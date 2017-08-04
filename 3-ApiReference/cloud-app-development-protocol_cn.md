@@ -2,8 +2,6 @@
 ### Rokid 开放平台
 版本：1.0.0-alpha
 
-[TOC]
-
 ### 大纲
 
 
@@ -46,76 +44,57 @@
 
 ```
 {
-
-    "version": "2.0.0",
-
-    "session": {
-
-        "sessionId": "D75D1C9BECE045E9AC4A87DA86303DD6", 
-
-        "newSession": true, 
-
-        "attributes": {
-            "key1": "value1",
-	    "key2": "value2"
-        }
-	
-    },
-
-    "context": {
-
-        "application": {
-	    "applicationId": "application id for requested CloudApp"
-        },
-
-        "device": {  
-	    
-	    "basic":{
-                "vendor":"vendor id",
-                "deviceType":"device type",
-                "deviceId": "010116000100",
-                "locale": "zh-cn",
-                "timestamp": 1478009510909
-	    },
-
-            "screen":{
-		"x":"640",
-		"y":"480"
-            },
-
-            "media": {
-                "state": "PLAYING / PAUSED / IDLE"
-            },
-            "voice": {
-                "state": "PLAYING / PAUSED / IDLE"
-            },
-            "location": {
-                "latitude": "30.213322455923485",
-                "longitude": "120.01190010997654"
-            }
-	    
-        },
-
-        "user": {
-            "userId": "user id string"
-        }
-	
-    },
-
-    "request": {
-
-        "reqType": "intent / event",
-
-        "reqId": "010116000100-ad1f462f4f0946ccb24e9248362c504a",
-
-	   "content": {
-            "intent": "play_random",
-            "slots": {
-            }
-        }
-	
+  "version": "2.0.0",
+  "session": {
+    "sessionId": "D75D1C9BECE045E9AC4A87DA86303DD6",
+    "newSession": true,
+    "attributes": {
+      "key1": "value1",
+      "key2": "value2"
     }
-    
+  },
+  "context": {
+    "application": {
+      "applicationId": "application id for requested CloudApp"
+    },
+    "device": {
+      "basic": {
+        "vendor": "vendor id",
+        "deviceType": "device type",
+        "deviceId": "010116000100",
+        "masterId": "master id String",
+        "locale": "zh-cn",
+        "timestamp": 1478009510909
+      },
+      "screen": {
+        "x": "640",
+        "y": "480"
+      },
+      "media": {
+        "state": "PLAYING / PAUSED / IDLE"
+      },
+      "voice": {
+        "state": "PLAYING / PAUSED / IDLE"
+      },
+      "location": {
+        "latitude": "30.213322455923485",
+        "longitude": "120.01190010997654"
+      }
+    },
+    "user": {
+      "userId": "user id string"
+    }
+  },
+  "request": {
+    "reqType": "intent / event",
+    "reqId": "010116000100-ad1f462f4f0946ccb24e9248362c504a",
+    "content": {
+      "intent": "play_random",
+      "slots": {
+        
+      }
+    }
+  }
 }
 ```
 
