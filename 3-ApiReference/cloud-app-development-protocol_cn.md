@@ -2,7 +2,11 @@
 ### Rokid 开放平台
 版本：1.0.0-alpha
 
+[TOC]
+
 ### 大纲
+
+
 * [简介](#1-简介)
 	* [一些概念](#11-一些概念)
 * [Request](#2-request)
@@ -104,8 +108,7 @@
 
         "reqId": "010116000100-ad1f462f4f0946ccb24e9248362c504a",
 
-	"content": {
-            "applicationId": "com.rokid.cloud.music",
+	   "content": {
             "intent": "play_random",
             "slots": {
             }
@@ -393,52 +396,51 @@ IntentRequest 是基于 *NLP* 的结果产生的请求，其中包括了 *NLP* �
 
 ```
 {
-    "version": "2.0.0",
-    "session": {
-        "attributes": {
-    	    "key1": "value1",
-    	    "key2": "value2"
-        }
-    },
-    "response": {
-        "action": { // for Rokid device
-
-            "version":"2.0.0",
-
-	    "type": "NORMAL / EXIT", 
-	    
-	    "form": "scene/cut/service",
-            
-            "shouldEndSession": true, 
-            
-            "voice": {
-                "action": "PLAY/PAUSE/RESUME/STOP",
-                "item": {
-                    "tts": "tts content"
-                }
-            },
-
-            "media": {
-                "action": "PLAY/PAUSE/RESUME/STOP",
-                "item": {
-                    "token": "xxxx",
-                    "type": "AUDIO/VIDEO",
-                    "url": "media streaming url",
-                    "offsetInMilliseconds": 0
-                }
-            },
-	    
-	    "display": {
-	    	// TBD
-	    },
-
-	    "confirm": {
-		"confirmIntent": "nlp intent to confirm",
-		"confirmSlot": "nlp slot to confirm",
-		"optionWords": ["word1","word2"],
-	    }
-        }
+  "version": "2.0.0",
+  "session": {
+    "attributes": {
+      "key1": "value1",
+      "key2": "value2"
     }
+  },
+  "response": {
+    "action": {
+      "version": "2.0.0",
+      "type": "NORMAL / EXIT",
+      "form": "scene/cut/service",
+      "shouldEndSession": true,
+      "voice": {
+        "action": "PLAY/PAUSE/RESUME/STOP",
+        "item": {
+          "tts": "tts content"
+        }
+      },
+      "media": {
+        "action": "PLAY/PAUSE/RESUME/STOP",
+        "item": {
+          "token": "xxxx",
+          "type": "AUDIO/VIDEO",
+          "url": "media streaming url",
+          "offsetInMilliseconds": 0
+        }
+      },
+      "display": {
+        
+      },
+      "confirm": {
+        "confirmIntent": "nlp intent to confirm",
+        "confirmSlot": "nlp slot to confirm",
+        "optionWords": [
+          "word1",
+          "word2"
+        ]
+      },
+      "pickup": {
+        "enable": true,
+        "durationInMilliseconds": 1000
+      }
+    }
+  }
 }
 ```
 
@@ -459,7 +461,8 @@ Action 目前包括两种类型：`voice` 和 `media`。`voice` 表示了语音�
     "voice": {},
     "media": {},
     "display": {},
-    "confirm": {}
+    "confirm": {},
+    "pickup":{}
 }
 ```
 
@@ -472,6 +475,7 @@ Action 目前包括两种类型：`voice` 和 `media`。`voice` 表示了语音�
 | shouldEndSession  | boolean         | *true / false*   |
 | voice       | voice object    | *Voice对象*         |
 | media             | media object          | *Media对象*         |
+| pickup             | pickup object          | *Pickup对象*         |
 
 * **version** - 表明 action 协议版本，当前版本为: 2.0.0.
 * **type** - 当前action的类型：`NORMAL` 或 `EXIT`。 当 `type` 是 `NORMAL` 时，`voice` 和 `media` 会同时执行；当 `type` 是 `EXIT` 时，action会立即退出，并且在这种情况下，`voice` 和 `media` 将会被会被忽略。
@@ -554,11 +558,32 @@ Media 用来播放CloudApp返回的流媒体内容。有 *audio* 和 *video* 两
 | url  | string        | *可用的流媒体播放链接*  |
 | offsetInMilliseconds  | long        | *毫秒数值，表明从哪里开始播放*  |
 
-* **token** - 用于鉴权的token，由CloudApp填充和判断。
+* **token** - 用于鉴权的token，由CloudApp填充和判断，且该Token的值会在该Media执行的EventRequest的拓展信息中原样带回。
 * **type** - 表明了当前媒体类型：**AUDIO** 或 **VIDEO**，有且只能取其一。
 * **url** - 为MediaPlayer指明可用的流媒体播放链接。
 * **offsetInMilliseconds** - 毫秒数值，告诉MediaPlayer开始播放的位置。有效范围从0到歌曲整体播放时长。
 
+##### 3.2.3 Pickup
+
+Pickup 用来控制拾音状态（可以理解为手机app上的对话框）。当CloudApp没有可执行的内容是，会执行Pickup，如果Pickup为空，则按照Pickup.enable=false执行。
+
+```
+"pickup": {
+        "enable": true,
+        "durationInMilliseconds": 1000
+}
+```
+
+| 字段               | 类型            | 可能值 |
+|:-----------------:|:---------------:|:---------------|
+| enable              | boolean         | *true / false*  |
+| durationInMilliseconds  | int        | *在没有用户说话时拾音状态持续多久，单位毫秒*  |
+
+* **enable** - 定义了对拾音状态的开关操作：**true**，**false** ，其中，只有**true**接受**durationInMilliseconds**数据。
+    * **true**：当CloudApp没有可执行的内容（**Voice播报**，**Media播报**，**EventRequest发送**）时，会把拾音打开。
+    * **false**：不打开
+
+* **durationInMilliseconds** - 当**enable=true**时，在用户不说话的情况下，拾音打开持续时间（建议在10s-15s左右为宜），单位**毫秒**
 ###### Copyright © 2017 Rokid Corporation Ltd. All rights reserved.
 
 
