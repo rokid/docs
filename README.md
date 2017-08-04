@@ -18,6 +18,7 @@ Rokid开发者社区文档，旨在帮助开发者更好的使用社区提供的
 * [定义语音交互](2-RokidDocument/1-SkillsKit/define-voice-interaction.md)
 * [Rokid 预定义词表](2-RokidDocument/1-SkillsKit/rokid-bult-in-slots.md)
 * [Rokid NLP正则表达式使用指南](2-RokidDocument/1-SkillsKit/rokid-regular-expression.md)
+* [Rokid OAuth 指南](2-RokidDocument/1-SkillsKit/rokid-oauth.md)
 * [Rokid JS Engine 使用指南](2-RokidDocument/1-SkillsKit/rokid-js-engine-tutorial.md)
 * [在技能中使用SSML](2-RokidDocument/1-SkillsKit/ssml-document.md)
 * [Rokid 语音交互指南](2-RokidDocument/1-SkillsKit/rokid-voice-interaction-guidelines.md)
