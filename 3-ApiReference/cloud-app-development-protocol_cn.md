@@ -78,7 +78,14 @@
       },
       "location": {
         "latitude": "30.213322455923485",
-        "longitude": "120.01190010997654"
+        "longitude": "120.01190010997654",
+        "country": "国家",
+        "state": "州/省份",
+        "city": "城市",
+        "area": "区县",
+        "district": "地区，行政",
+        "street": "街道",
+        "timeZone": "时区"
       }
     },
     "user": {
@@ -189,6 +196,7 @@
     "vendor":"vendor id",
     "deviceType":"device type",
     "deviceId": "010116000100",
+    "masterId": "设备主人ID",
     "locale": "zh-cn",
     "timestamp": 1478009510909
 }
@@ -198,6 +206,7 @@
 | vendor  | string         | *注册生产商ID*  |
 | deviceType    | string         | *该生产商设定的设备型号*  |
 | deviceId    | string         | *该型号下的设备ID*  |
+| masterId    | string         | *对应设备的主人ID*  |
 | locale    | string         | *国家及语言，标准locale格式*  |
 | timestamp    | long         | *当前时间，unix timestamp*  |
 
@@ -258,11 +267,18 @@
 ```
 "location": {
     "latitude": "30.213322455923485",
-    "longitude": "120.01190010997654"
+    "longitude": "120.01190010997654",
+    "country": "国家",
+    "state": "州/省份",
+    "city": "城市",
+    "area": "区县",
+    "district": "地区，行政",
+    "street": "街道",
+    "timeZone": "时区"
 }
 ```
 
-当当前设备存在地理位置信息时会通过*location*提供给CloudApp。基于地理位置的CloudApp可以根据此信息来处理逻辑。*location* 信息目前包括 ***纬度(latitude)*** 和 ***经度(longtitude)***。
+当当前设备存在地理位置信息时会通过*location*提供给CloudApp。基于地理位置的CloudApp可以根据此信息来处理逻辑。*location* 信息包括 ***纬度(latitude)*** 和 ***经度(longtitude)**等。
 
 ##### 2.3.3 UserInfo
 
@@ -356,6 +372,7 @@ IntentRequest 是基于 *NLP* 的结果产生的请求，其中包括了 *NLP* �
   "event": "Media.PAUSED",
   "extra": {
     "media": {
+      "itemId":"MeidaItem里面的ItemId",
       "token": "MediaItem里面的token",
       "progress": "当前进度",
       "duration": "音频文件的总长度"
@@ -363,7 +380,18 @@ IntentRequest 是基于 *NLP* 的结果产生的请求，其中包括了 *NLP* �
   }
 }
 ```
+* **extra** - 针对voice类型的eventrequest支持如下扩展字段：
 
+```
+"content": {
+  "event": "Voice.STARTED",
+  "extra": {
+    "voice": {
+      "itemId":"voiceItem里面的ItemId"
+    }
+  }
+}
+```
 
 ### 3. Response
 
@@ -390,13 +418,17 @@ IntentRequest 是基于 *NLP* 的结果产生的请求，其中包括了 *NLP* �
       "shouldEndSession": true,
       "voice": {
         "action": "PLAY/PAUSE/RESUME/STOP",
+        "disableEvent":true,
         "item": {
+          "itemId":"string of itemid",
           "tts": "tts content"
         }
       },
       "media": {
         "action": "PLAY/PAUSE/RESUME/STOP",
+        "disableEvent":true,
         "item": {
+          "itemId":"string of itemid",
           "token": "xxxx",
           "type": "AUDIO/VIDEO",
           "url": "media streaming url",
@@ -457,9 +489,9 @@ Action 目前包括两种类型：`voice` 和 `media`。`voice` 表示了语音�
 | pickup             | pickup object          | *Pickup对象*         |
 
 * **version** - 表明 action 协议版本，当前版本为: 2.0.0.
-* **type** - 当前action的类型：`NORMAL` 或 `EXIT`。 当 `type` 是 `NORMAL` 时，`voice` 和 `media` 会同时执行；当 `type` 是 `EXIT` 时，action会立即退出，并且在这种情况下，`voice` 和 `media` 将会被会被忽略。
+* **type** - 当前action的类型：`NORMAL` 或 `EXIT`。 当 `type` 是 `NORMAL` 时，`voice` 和 `media` 会同时执行；当 `type` 是 `EXIT` 时，action会立即退出，**清除系统端的应用session**，并且在这种情况下，`voice` 和 `media` 将会被会被忽略。
 * **form** - 当前action的展现形式：scene、cut、service。scene的action会在被打断后压栈，cut的action会在被打断后直接结束，service会在后台执行，但没有任何界面。该字段在技能创建时被确定，无法由cloud app更改。
-* **shouldEndSession** - 表明当此次返回的action执行完后 *CloudAppClient* 是否要退出，同时，当 `shouldEndSession` 为 `true` 时，*CloudAppClient* 将会忽略 *EventRequests*，即在action执行过程中不会产生 *EventRequest*。
+* **shouldEndSession** - 表明当此次返回的action执行完后 *CloudAppClient* 是否要退出,并且是否需要**清除系统端的应用session**，同时，当 `shouldEndSession` 为 `true` 时，*CloudAppClient* 将会忽略 *EventRequests*，即在action执行过程中不会产生 *EventRequest*。
 
 ##### 3.2.1 Voice
 
@@ -468,6 +500,7 @@ Action 目前包括两种类型：`voice` 和 `media`。`voice` 表示了语音�
 ```
 "voice": {
     "action":"PLAY/PAUSE/RESUME/STOP",
+    "disableEvent":true,
     "item": {}
 }
 ```
@@ -475,9 +508,11 @@ Action 目前包括两种类型：`voice` 和 `media`。`voice` 表示了语音�
 | 字段               | 类型            | 可能值 |
 |:-----------------:|:---------------:|:---------------|
 | action              | string          | *PLAY / PAUSE / RESUME / STOP*  |
+| disableEvent       | boolean    | *是否需要关闭Event事件的接收*        |
 | item       | item object    | *voice 的 item 对象*         |
 
 * **action** - 表示对当前voice的操作，可以播放（PLAY)、暂停（PAUSE）、继续播放（RESUME）和停止（STOP）（具体Action行为参照Media的Action行为，但是目前暂未实现，**PAUSE**以及**RESUME**操作）;
+* **disableEvent**-表示当前这个Voice执行过程中是否需要关闭Event事件，可以不传，默认**false**表示接收Voice的EventRequest
 * **item** - 定义了voice的具体内容，将会在 *3.2.1.1* 中详细描述.
 
 ###### 3.2.1.1 Item
@@ -486,14 +521,17 @@ Item定义了voice的具体内容。
 
 ```
 "item": {
+    "itemId":"string of itemid",
     "tts": "tts content"
 }
 ```
 
 | 字段               | 类型            | 可能值 |
 |:-----------------:|:---------------:|:---------------|
+| itemId           | string          | *tts 内容的ID*  |
 | tts              | string          | *tts 内容*  |
 
+* **itemId** - 定义了播报内容的ID，当disableEvent=false时，VoiceEvent会在拓展字段中带上itemId。
 * **tts** - 定义了需要播报的TTS内容。
 
 ##### 3.2.2 Media
@@ -503,6 +541,7 @@ Media 用来播放CloudApp返回的流媒体内容。有 *audio* 和 *video* 两
 ```
 "media": {
     "action": "PLAY/PAUSE/RESUME/STOP",
+    "disableEvent":true,
     "item": {}
 }
 ```
@@ -510,6 +549,7 @@ Media 用来播放CloudApp返回的流媒体内容。有 *audio* 和 *video* 两
 | 字段               | 类型            | 可能值 |
 |:-----------------:|:---------------:|:---------------|
 | action              | string          | *PLAY / PAUSE / RESUME / STOP*  |
+| disableEvent       | boolean    | *是否需要关闭Event事件的接收*        |
 | item  | media item object        | *media的具体内容*  |
 
 * **action** - 定义了对MediaPlayer的操作，目前只支持 **4** 种操作：**PLAY**， **PAUSE** ， **RESUME** 和 **STOP**。其中，只有**PLAY**接受**item**数据。
@@ -517,12 +557,14 @@ Media 用来播放CloudApp返回的流媒体内容。有 *audio* 和 *video* 两
     * **PAUSE**：暂停当前播放的内容，播放的进度等数据不会丢失（可以直接通过**RESUME**指令直接恢复原来的播放状态）
     * **RESUME**：继续播放（从原来的播放进度播放）
     * **STOP**：停止播放，并且清空当前的播放进度，但是播放内容不清
+* **disableEvent**-表示当前这个Media执行过程中是否需要关闭Event事件，可以不传，默认**false**表示接收Media的EventRequest
 * **item** - 定义了具体的播放内容，如下：
 
 ###### 3.2.2.1 Item
 
 ```
 "item": {
+    "itemId":"string of itemid",
     "token": "xxxx",
     "type": "AUDIO/VIDEO",
     "url": "media streaming url",
@@ -532,12 +574,14 @@ Media 用来播放CloudApp返回的流媒体内容。有 *audio* 和 *video* 两
 
 | 字段               | 类型            | 可能值 |
 |:-----------------:|:---------------:|:---------------|
+| itemId           | string          | *Media 内容的ID*  |
 | token              | string          | *用于鉴权的token，由CloudApp填充和判断*  |
 | type          | string          | *AUDIO / VIDEO* |
 | url  | string        | *可用的流媒体播放链接*  |
 | offsetInMilliseconds  | long        | *毫秒数值，表明从哪里开始播放*  |
 
 * **token** - 用于鉴权的token，由CloudApp填充和判断，且该Token的值会在该Media执行的EventRequest的拓展信息中原样带回。
+* **itemId**定义了播报内容的ID，当disableEvent=false时，MediaEvent会在拓展字段中带上itemId。
 * **type** - 表明了当前媒体类型：**AUDIO** 或 **VIDEO**，有且只能取其一。
 * **url** - 为MediaPlayer指明可用的流媒体播放链接。
 * **offsetInMilliseconds** - 毫秒数值，告诉MediaPlayer开始播放的位置。有效范围从0到歌曲整体播放时长。
