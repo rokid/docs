@@ -1,4 +1,4 @@
-# Rokid Oauth 使用指南
+#Rokid OAuth 使用指南
 
 ##使用场景
 当你开发的技能需要通过用户授权在喜马拉雅等第三方应用上的授权信息来提升技能的个性化体验时，可以按照本指南的流程来一步步实现。
@@ -8,7 +8,7 @@
 
 ##交互流程
 ![Alt text](./images/1501038809064.png)
-**第一步：**用户与设备产生语音交互后，经Rokid Speech、Rokid Dispatch服务处理后，交由相应技能的服务进行进一步处理。当技能服务发现用户需要提供授权信息时，会向Rokid Dispatch推送auth card response，Rokid Dispatch接受到response会向手机app推送登录授权所需要的url。
+**第一步：**用户与设备产生语音交互后，经Rokid Speech、Rokid Dispatch服务处理后，交由相应技能的服务进行进一步处理。当技能服务发现用户需要提供授权信息时，会向Rokid Dispatch推送Auth Card response，Rokid Dispatch接受到response会向Rokid App推送登录授权所需要的url。
 
 **第二步：**若已登录，则获取用户的token信息。若没有授权信息则会向用户推送登录url，用户登录并授权后即可获得用户在第三方应用中的授权信息。
 
@@ -38,7 +38,7 @@
 
 ###二、OAuth相关的服务端开发
 
-1.解析接收到rokid request参数，参数信息例子如下
+1.解析接收到Rokid request参数，参数信息例子如下
 
 ```json
 {
@@ -113,9 +113,10 @@
 	  }
     ```
    **注：** 
-- 返回rokid的response参数中如`card `处设定`type`为“AUTH”，则rokid会给推送一个申请授权的push消息到用户手机的Rokid App上（**推送功能将会在下一个版本的Rokid App实现**），此时用户点击推送消息中的链接，并按照提示的操作完成授权流程。
    
-- 上面rokid request json中的`$.context.user.accountLinkedId`处，不为空时，则用户已登录第三方开放平台
+  - 返回Rokid的response参数中如`card `处设定`type`为“AUTH”，则Rokid会给推送一个申请授权的push消息到用户手机的Rokid App上（**推送功能将会在下一个版本的Rokid App实现**），此时用户点击推送消息中的链接，并按照提示的操作完成授权流程。
+  - 上面Rokid request json中的`$.context.user.accountLinkedId`处，不为空时，则用户已登录第三方开放平台
+  - 使用步骤1中的Rokid request json参数中`$.context.user.accountLinkedId`完成请求第三方开放平台资源操作。
+ 
 
-- 使用步骤1中的rokid request json参数中`$.context.user.accountLinkedId`完成请求第三方开放平台资源操作，demo实现 
 
