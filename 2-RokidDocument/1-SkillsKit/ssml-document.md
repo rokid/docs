@@ -186,7 +186,14 @@ SSML的根元素。
 
 | 参数 | 可选值 |
 | :--- | :--- |
-| name | <ul><li>gezi: 能读出中文+英文。</li><li>ponder: 能读英文。</li><li>crayon: 蜡笔小新的声音。</li></ul>|
+| name | <ul><li>normal: 正常若琪。</li><li>robot: 机器人。</li><li>sweet: 甜美女生。</li><li>crayon: 蜡笔小新。</li></ul>|
+
+```html
+<speak>
+    接下来出场的是蜡笔小新，
+    <voice name="crayon">大家好，我是蜡笔小新</voice>。 
+</speak> 
+```
 
 ### word
 使指定的词组不被拆分以保证不会有停顿。

@@ -36,7 +36,8 @@
 
 *Request* 是*CloudDispatcher*产生的用于向*CloudApp*获取对应返回结果的请求。目前有两种类型的请求：一种是**IntentRequest**，一种是**EventRequest**。**IntentRequest** 是根据语音识别和语义理解（*NLP*）的结果创建的，其中会带有（*NLP*）的信息。**EventRequest**是在当有某种事件发生是产生的，并通过*CloudDispatcher*转发给当前*CloudApp*，比如当某个TTS播放结束的时候会产生一个TTS结束的事件，当前*CloudApp*可以选择处理或者不处理。
 
-#### 2.1 协议概览
+#### 2.1 Request 协议预览
+
 
 *Request* 的整体协议定义如下所示：
 

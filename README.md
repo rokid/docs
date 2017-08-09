@@ -39,12 +39,19 @@ Rokid开发者社区文档，旨在帮助开发者更好的使用社区提供的
 * [Rokid 语音产品硬件设计指南](2-RokidDocument/2-EnableVoice/rokid-hardware-design-guide.md)
 * [Rokid 硬件交互设计指南](2-RokidDocument/2-EnableVoice/rokid-hardware-ux-design-guidelines.md)
 
+
+### 智能家居开发
+* [Rokid 智能家居开发文档](https://rokid.github.io/rokid-homebase-docs/)
+
 ### 协议条款
 * [技能发布标准](4-TermsAndAgreements/rokid-skill-release-standard.md)
 * [服务协议](4-TermsAndAgreements/community-service-agreement.md)
 * [免责声明](4-TermsAndAgreements/community-disclaimer.md)
 
+
 ### 支持
 * [Rokid讨论区](https://developer-forum.rokid.com/)
 * [Rokid开发者社区官网](https://developer.rokid.com/)
+* [Rokid 官网](https://www.rokid.com/)
+* [Rokid 智能家居](https://www.rokid.com/smarthome/)
 

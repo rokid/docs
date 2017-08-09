@@ -8,7 +8,7 @@
 > - **无需服务器** ：开发者不需要服务器去提供服务。
 > - **无需https服务**：开发者不需要自己搭建复杂的https服务。
 
-### 目录
+## 目录
 
 *  [1.本期更新（2017.07.11）](#1-本期更新-20170711)
 *  [2.JS脚本基本内容](#2-js脚本基本内容)
@@ -18,17 +18,20 @@
  *  [2.4语音交互中对应配置](#24-语音交互中对应配置)
 * [3.response配置项](#3-response配置项)
  * [3.1tts相关配置](#31-tts相关配置)
- * [3.2media相关配置](#32-media相关配置)
+ * [3.2ttsWithConfirm相关配置](#32-ttswithconfirm相关配置)
+ * [3.3media相关配置](#33-media相关配置)
 * [4.在Rokid对象中封装的工具](#4-在rokid对象中封装的工具)
 * [5.关于调试](#5-关于调试)
 * [6.关于日志](#6-关于日志)
 * [7.Sample](#7-sample)
 * [8.Q&A](#8-qa) 
 
-### 1. 本期更新-2017.07.11
-向开发者提供了数据存储接口，开发者可在脚本中实现数据存储功能
+## 1. 本期更新-2017.08
+- 新增历史日志查看入口，在“配置”页面有历史运行日志。仅保存最近5天及10万条日志数据。ps：技能上线后想查看线上运行日志须查看技能线上版本。
+- 新增ttsWithConfirm交互方式。详情参见3.2节
+- 新增支持使用语音合成标记语言（Speech Synthesis Markup Language， 简称SSML），可以对TTS进行诸如插入一段音频、改变语速、改变发音人等更加灵活的自定义。<https://rokid.github.io/docs/2-RokidDocument/1-SkillsKit/ssml-document.html>
 
-### 2. JS脚本基本内容
+## 2. JS脚本基本内容
 开发者可以利用编写JS脚本实现各自所需的技能意图函数实现不同的功能。
 
 ### 2.1 固定写法部分
@@ -50,7 +53,7 @@ exports.handler = function(event, context, callback) {
  
 以上三步是必须的。
 
-#### 2.2 开发者编写基本内容handlers
+### 2.2 开发者编写基本内容handlers
 
 其中handlers，为大家所要写的意图技能处理函数，在“配置”编写js脚本，比如：
 
@@ -60,7 +63,17 @@ var handlers = {
 		try{
 			this.emit(':tts',{tts:'Hello World!'},{sessionKey:sessionValue});
 			//正常完成意图函数时callback
-			this.callback(null);
+			this.callback();
+		}catch(error){
+			//报错时callback错误
+			this.callback(error);
+		}
+	},
+	'ConfirmSample':function() {
+		try{
+			this.emit(':ttsWithConfirm',{tts:'Hello World!', confirm: {confirmIntent:'confirmIntent', confirmSlot:'confirmSlot'},{sessionKey:sessionValue});
+			//正常完成意图函数时callback
+			this.callback();
 		}catch(error){
 			//报错时callback错误
 			this.callback(error);
@@ -78,11 +91,11 @@ var handlers = {
 };
 ```
 
-#### 2.3 关于调用callback
+### 2.3 关于调用callback
 
 **上述中this.callback是在意图函数运行完成后必须调用的，且须注意this的指向。如不调用，则jsEngine将会误认为脚本未执行完毕而导致无法输出结果。**
 
-#### 2.4 语音交互中对应配置
+### 2.4 语音交互中对应配置
 "HelloWorldSample"与"MediaSample"对应于"语音交互"中的intent如下：
 
 ``` javascript
@@ -94,24 +107,31 @@ var handlers = {
             "user_says": [
                 "你好"
             ]
-        },
+    		},
+    		{
+				"intent": "confirmSample",
+				"slots": [],
+				"user_says": [
+					"询问"
+				]
+			},
         {
-			"intent": "MediaSample",
-			"slots": [],
-			"user_says": [
-				"播放"
-			]
-		}
+				"intent": "MediaSample",
+				"slots": [],
+				"user_says": [
+					"播放"
+				]
+			}
     ]
 }
 ```
 
 "语音交互"的intent，slot等request信息可在Rokid.param（下文有介绍）中获取。
 
-### 3. response配置项
+## 3. response配置项
 本节讲述开发者在意图函数中最终需要emit最终结果。
 
-#### 3.1 tts相关配置
+### 3.1 tts相关配置
 
 ```javascript
 this.emit(':tts',{tts:'Hello World!'},{sessionKey:sessionValue})
@@ -138,7 +158,37 @@ this.emit(':tts',{tts:'Hello World!'},{sessionKey:sessionValue})
 | sessionKey | string | 无（自定义选填）|
 | seesionValue | string | 无（自定义选填）|
 
-#### 3.2 media相关配置
+### 3.2 ttsWithConfirm相关配置
+
+```javascript
+this.emit(':ttsWithConfirm',{tts:'Hello World!', confirmIntent:'confirmIntent', confirmSlot:'confirmSlot'},{sessionKey:sessionValue})
+```
+
+上述语法是rokid-sdk用于同步响应对象的“ttsWithConfirm”响应方法。注：传入":ttsWithConfirm"法的参数对象中tts(类型string|number)、confirmIntent(string),confirmSlot(string)属性是必须的。session根据需求选择。
+
+##### 开发者相关字段（ttsWithConfirm）
+
+ this.emit(":ttsWithConfirm",{},{})第二个参数如下（tts相关信息配置项）：
+ 
+| 字段       |   类型 | 默认值 |
+| :-------- |--------:| :--: |
+| type | string |  NORMAL  |
+| form | string |  cut  |
+| shouldEndSession | boolean | true |
+| action | string | PLAY |
+| tts | string或number | 无（必填）|
+| confirmIntent | string | 无（必填）|
+| confirmSlot | string | 无（必填）|
+| optionWords | array | 无（选填）|
+
+ this.emit(":ttsWithConfirm",{},{})第三个参数如下（session配置项）：
+ 
+| 字段       |   类型 | 默认值 |
+| :-------- |--------:| :--: |
+| sessionKey | string | 无（自定义选填）|
+| seesionValue | string | 无（自定义选填）|
+
+### 3.3 media相关配置
 
 ```javascript
 this.emit(':media', { itemType: 'AUDIO', url:'s.rokidcdn.com/temp/rokid-ring.mp3' },{sessionKey:sessionValue})
@@ -169,7 +219,7 @@ this.emit(":media",{},{})第三个参数如下（session配置项）：
 
 具体字段定义可参见：<https://rokid.github.io/docs/3-ApiReference/cloud-app-development-protocol_cn.html#3-response>
 
-### 4. 在Rokid对象中封装的工具
+## 4. 在Rokid对象中封装的工具
 
 ##### 开发者可直接调用封装在Rokid对象中的所有工具方法，现有如下：
 
@@ -181,6 +231,7 @@ this.emit(":media",{},{})第三个参数如下（session配置项）：
 	- slots：Rokid.param.request.content.slots
 	- intent: Rokid.param.request.content.intent
 	- session: Rokid.param.session.attributes
+	- userId: Rokid.param.context.user.userId（只有在设备上测试才能获取，集成测试中获取不到）
 - Rokid.dbServer:开发者可用此对象中的get，set，delete方法进行数据增删改查。
 	- get:Rokid.dbServer.get(key, callback); key必须为string类型
 	- set:Rokid.dbServer.set(key, value, callback); key,value必须为string类型。key值开发者可自定义（若每个用户都可能存取数据，则推荐使用userId）。
@@ -192,45 +243,45 @@ this.emit(":media",{},{})第三个参数如下（session配置项）：
 var handlers = {
     'set':function() {
         var data = JSON.stringify([0,1,2,3,4]);//字符串存入数据库
-        Rokid.dbServer.set('user001',data, (err, res) => {
-            if(err) {
-                this.emit(':tts',{tts: err});
-                this.callback(null);
+        Rokid.dbServer.set('user001',data, (error, result) => {
+            if(error) {
+                this.emit(':tts',{tts: error});
+                this.callback();
             }else{
-                this.emit(':tts',{tts: res});
-                this.callback(null);
+                this.emit(':tts',{tts: result});
+                this.callback();
             }
         });
     },
     'get':function() {
-        Rokid.dbServer.get('user001', (err, res) => {
-            if(err) {
-                this.emit(':tts',{tts: err});
-                this.callback(null);
+        Rokid.dbServer.get('user001', (error, result) => {
+            if(error) {
+                this.emit(':tts',{tts: error});
+                this.callback();
                 return;
             }else{
-                res = JSON.parse(res);//根据取出的数据进行处理
-                this.emit(':tts',{tts: res[0]});
-                this.callback(null);
+                result = JSON.parse(result);//根据取出的数据进行处理
+                this.emit(':tts',{tts: result[0]});
+                this.callback();
             }
         });
     },
     'delete':function() {
-        Rokid.dbServer.delete('user001', (err, res) => {
-            if(err) {
-                this.emit(':tts',{tts: err});
-                this.callback(null);
+        Rokid.dbServer.delete('user001', (error, result) => {
+            if(error) {
+                this.emit(':tts',{tts: error});
+                this.callback();
                 return;
             }else{
-                this.emit(':tts',{tts: res});
-                this.callback(null);
+                this.emit(':tts',{tts: result});
+                this.callback();
             }
         });
     }
 };
 ```
 
-### 5. 关于调试
+## 5. 关于调试
 在“配置”页里，目前已支持单点测试，仅测试js应用脚本正确性。
 
  * 配置测试用例，其中的intent和slot是需要开发者在默认用例基础上对应于“语音交互”中作相应调整。
@@ -238,13 +289,13 @@ var handlers = {
 
 确保js应用脚本的正确性情况下，可在“集成测试”页中进行全链路集成测试。
 
-### 6. 关于日志
+## 6. 关于日志
 - 在应用脚本中可调用console.log( )输出你想要看的日志。
 - 须保证在“命中语音指令”的情况下才可查看日志。
 - 此日志仅是应用脚本执行的日志，不包括其他链路的日志。
 - 尽量在脚本中采用try-catch中调用callback传回状态，详细参见本文sample。
 
-### 7. Sample
+## 7. Sample
 
 ```javascript
 var data = [
@@ -252,7 +303,7 @@ var data = [
     "白日依山尽，黄河入海流，欲穷千里目，更上一层楼。",
     "千山鸟飞绝，万径人踪灭，孤舟蓑笠翁，独钓寒江雪。",
     "松下问童子，言师采药去，只在此山中，云深不知处。",
-    "向晚意不适，驱车登古原，夕阳无限好，只是近黄昏"
+    "向晚意不适，驱车登古原，夕阳无限好，只是近黄昏。"
 ];
 
 
@@ -274,7 +325,7 @@ var handlers = {
 	        var randomFact = factArr[factIndex];
 	        var speechOutput = randomFact;
 	        this.emit(':tts', {tts:speechOutput});
-	        this.callback(null);
+	        this.callback();
 		}catch(error){
 			this.callback(error);
 		}
@@ -282,15 +333,16 @@ var handlers = {
     'sync_NewsRequest': function () {
 	    //同步请求
 	    try{
-			result = Rokid.sync_request('GET', 'https://www.toutiao.com/hot_words/');
+			var result = Rokid.sync_request('GET', 'https://www.toutiao.com/hot_words/');
 	        //buffer处理
 	        result = Rokid.resHandler(result); 
 	        var resStr = '';
 	        result.forEach(function(item){
+	        //根据返回结果进行不同处理。在此返回的一个数组，因此forEach处理。
 	            resStr += item + ','
 	        })
 	        this.emit(':tts', { tts: resStr });
-	        this.callback(null);
+	        this.callback();
 		}catch(error){
 			this.callback(error);
 		}
@@ -309,16 +361,17 @@ var handlers = {
                 self.callback(error);
             }
             JSON.parse(body).forEach(function (item) {
+            //根据返回结果进行不同处理。在此返回的一个数组，因此forEach处理。
                 ttsRes += item + ',';
             });
             self.emit(':tts', { tts: ttsRes });
-            self.callback(null);
+            self.callback();
         });
     },
     'MediaRequest': function () {
 	    try{
 			this.emit(':media', { itemType: 'AUDIO', url: 's.rokidcdn.com/temp/rokid-ring.mp3' });
-			this.callback(null);
+			this.callback();
 		}catch(error){
 			this.callback(error);
 		}
@@ -326,7 +379,7 @@ var handlers = {
 };
 ```
 
-### 8. Q&A
+## 8. Q&A
 
 #### Q：为什么我有时候结果输出的会包含[Object,Object]？
 A：需要注意在emit的时候写入{tts:xxx}对象时，xxx必须为string类型，如果object+string就可能出现以上现象。想要输出object的内容须用JSON.stringify()将其转换为string。
