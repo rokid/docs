@@ -26,7 +26,10 @@ Rokid开发者社区文档，旨在帮助开发者更好的使用社区提供的
 
 ### 为设备开启语音交互
 * [获取认证文件](2-RokidDocument/2-EnableVoice/get-the-certification-file.md)
-* [Rokid SDK 接入指南](2-RokidDocument/2-EnableVoice/rokid-sdk-tutorial.md)
+* [Rokid Android SDK 接入指南](2-RokidDocument/2-EnableVoice/rokid-sdk-tutorial.md)
+
+### Linux 设备接入
+* [Linux 设备开发引导](2-RokidDocument/3-LinuxDeviceGuide/linux_openvoice_guide.md)
 
 ### API REFERENCE
 * [Rokid 技能协议文档](3-ApiReference/cloud-app-development-protocol_cn.md)
