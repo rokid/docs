@@ -10,6 +10,10 @@ Amlogic | S905D | rm101 | buildroot | 支持
 Amlogic | S905D | rp102 | buildroot | 可移植
 Amlogic | A113 | nana_m | buildroot | 开发中
 
+## 系统架构图
+![Rokid_Linux_Architecture](images/Rokid_Linux_Architecture.png)
+
+
 ## 系统特性
 
 模块 | 功能介绍 | 代码位置 | 实现语言 | 状态

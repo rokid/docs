@@ -11,7 +11,7 @@
 
 ### 开发Rokid技能
 * [开始创建第一个技能：我要喝咖啡](2-RokidDocument/1-SkillsKit/skill-sample-coffee.md)
-* [定义语音交互](2-RokidDocument/1-SkillsKit/define-voice-interaction.md)
+* [为技能定义语音交互](2-RokidDocument/1-SkillsKit/define-voice-interaction.md)
 * [Rokid 预定义词表](2-RokidDocument/1-SkillsKit/rokid-bult-in-slots.md)
 * [Rokid NLP正则表达式使用指南](2-RokidDocument/1-SkillsKit/rokid-regular-expression.md)
 * [Rokid OAuth 指南](2-RokidDocument/1-SkillsKit/rokid-oauth.md)
