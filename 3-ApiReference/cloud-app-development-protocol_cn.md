@@ -38,6 +38,20 @@
 
 #### 2.1 Request 协议预览
 
+##### 2.1.1 Request Header
+为了保证 Https 链接访问的安全性，在 http 请求的 hearder 中增加了 Singature 来校验请求是否来源于 Rokid。
+
+Http Hearder中相关内容的示例如下：
+
+	Content-Type: application/json;charset=utf-8
+	Signature: DAF1E1062C21E3BB80A55BA32F41D935
+
+您可以在「技能开发的-配置」中，填写您自定义的认证key（支持大小写英文和数字，最长不超过36位）。
+
+**认证key的生成规则为：**
+`Signature = MD5(Secret + MD5(Body))`
+
+##### 2.1.2 Request Body
 
 *Request* 的整体协议定义如下所示：
 
@@ -473,11 +487,16 @@ Action 目前包括两种类型：`voice` 和 `media`。`voice` 表示了语音�
 | shouldEndSession  | boolean         | *true / false*   |
 | voice       | voice object    | *Voice对象*         |
 | media             | media object          | *Media对象*         |
+|confirm|confirm object|Confirm对象|
 
 * **version** - 表明 action 协议版本，当前版本为: 2.0.0.
 * **type** - 当前action的类型：`NORMAL` 或 `EXIT`。 当 `type` 是 `NORMAL` 时，`voice` 和 `media` 会同时执行；当 `type` 是 `EXIT` 时，action会立即退出，并且在这种情况下，`voice` 和 `media` 将会被会被忽略。
 * **form** - 当前action的展现形式：scene、cut、service。scene的action会在被打断后压栈，cut的action会在被打断后直接结束，service会在后台执行，但没有任何界面。该字段在技能创建时被确定，无法由cloud app更改。
 * **shouldEndSession** - 表明当此次返回的action执行完后 *CloudAppClient* 是否要退出，同时，当 `shouldEndSession` 为 `true` 时，*CloudAppClient* 将会忽略 *EventRequests*，即在action执行过程中不会产生 *EventRequest*。
+* **confirm** - 表明此次返回中，是否存在需要confirm的内容。[了解用法指南](/2-RokidDocument/1-SkillsKit/define-voice-interaction.html#confirm用法指南)。
+    * **confirmIntent**：表明此次返回对哪一个intent进行confirm。
+    * **confirmSlot**：表明此次返回对哪一个slot进行confirm。
+    * **optionWords**：可选项。表明此次返回中在confirmSlot之上需要新增的confirm选项，用于需要动态新增confirm内容的场景。
 
 ##### 3.2.1 Voice
 
@@ -531,7 +550,7 @@ Media 用来播放CloudApp返回的流媒体内容。有 *audio* 和 *video* 两
 | item  | media item object        | *media的具体内容*  |
 
 * **action** - 定义了对MediaPlayer的操作，目前只支持 **4** 种操作：**PLAY**， **PAUSE** ， **RESUME** 和 **STOP**。其中，只有**PLAY**接受**item**数据。
-    * **PLAY**：如果有**item**数据，则按照最新的**item**从头开始播放，如果没有**item**数据，且原来有在播放的内容，则从原来播放的内容开始播放
+    * **PLAY：如果有**item**数据，则按照最新的**item**从头开始播放，如果没有**item**数据，且原来有在播放的内容，则从原来播放的内容开始播放
     * **PAUSE**：暂停当前播放的内容，播放的进度等数据不会丢失（可以直接通过**RESUME**指令直接恢复原来的播放状态）
     * **RESUME**：继续播放（从原来的播放进度播放）
     * **STOP**：停止播放，并且清空当前的播放进度，但是播放内容不清
