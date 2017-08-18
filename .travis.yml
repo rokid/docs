@@ -1,4 +1,3 @@
-#No language required so just use ruby to avoid warnings in travis yml linter
 language: node_js
 dist: trusty
 sudo: required
@@ -27,7 +26,7 @@ deploy:
     skip_cleanup: true
     github_token: $GITHUB_TOKEN
     local_dir: _book
-    target_branch: gh-pages-test
+    target_branch: gh-pages-test0
     on:
       branch: master
 
