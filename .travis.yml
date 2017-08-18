@@ -14,14 +14,13 @@ install:
   - npm install -g gitbook-cli
 
 script:
-  - sudo mv ebook-convert /usr/local/bin/
   - gitbook install
   - gitbook build
   - echo "Removing unwanted files"
-  - rm -v _book/.travis.yml
-  - rm -v _book/*.yml
-  - rm -v _book/*.md
-  - rm -v _book/*.sh
+  - rm -vf _book/.travis.yml
+  - rm -vf _book/*.yml
+  - rm -vf _book/*.md
+  - rm -vf _book/*.sh
 
 deploy:
   - provider: pages
