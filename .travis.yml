@@ -26,7 +26,7 @@ deploy:
     skip_cleanup: true
     github_token: $GITHUB_TOKEN
     local_dir: _book
-    target_branch: gh-pages-test0
+    target_branch: gh-pages
     on:
       branch: master
 
