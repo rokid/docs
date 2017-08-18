@@ -1,0 +1,37 @@
+#No language required so just use ruby to avoid warnings in travis yml linter
+language: node_js
+dist: trusty
+sudo: required
+
+node_js:
+  - "stable"
+
+cache:
+  directories:
+    - node_modules # NPM packages
+
+install:
+  - npm install -g gitbook-cli
+
+script:
+  - sudo mv ebook-convert /usr/local/bin/
+  - gitbook install
+  - gitbook build
+  - echo "Removing unwanted files"
+  - rm -v _book/.travis.yml
+  - rm -v _book/*.yml
+  - rm -v _book/*.md
+  - rm -v _book/*.sh
+
+deploy:
+  - provider: pages
+    skip_cleanup: true
+    github_token: $GITHUB_TOKEN
+    local_dir: _book
+    target_branch: gh-pages-test
+    on:
+      branch: master
+
+branches:
+  only:
+    - master
