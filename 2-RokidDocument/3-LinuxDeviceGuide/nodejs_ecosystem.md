@@ -38,7 +38,19 @@ const app = require('@rokid/ams')();
 const tts = require('@rokid/tts');
 const player = require('@rokid/rplay');
 
-app.on('tts', function(data, action, event) {
+app.on('create', function() {
+  // the app is created
+});
+
+app.on('resume', function() {
+  // the app is resume
+});
+
+app.on('pause', function() {
+  // the app is pause
+});
+
+app.on('text', function(data, action, event) {
   tts.say(data.tts);
 });
 
@@ -47,5 +59,33 @@ app.on('media', function(data, action, event) {
 });
 app.start();
 ```
+
+`app`对象支持如下事件：
+
+| 事件名   | 描述                    |
+|---------|-------------------------|
+| create  | 在应用第一次被唤起时调用   |
+| restart | 在应用再次被创建时调用     |
+| resume  | 在应用被置为栈顶恢复时调用 |
+| pause   | 在应用被其他应用占用时调用 |
+| stop    | 在应用被停止时调用        |
+| destroy | 在应用被销毁时调用        |
+
+同时也支持下列 BlackSiren 下发的事件如下：
+
+- `vad_start`
+- `vad_data`
+- `vad_end`
+- `vad_cancel`
+- `wake_vad_start`
+- `wake_vad_data`
+- `wake_vad_end`
+- `wake_pre`
+- `wake_nocmd`
+- `wake_cancel`
+- `sleep`
+- `hotword`
+- `voice_print`
+- `dirty`
 
 更复杂的例子可以参考 `/opt/apps/` 目录下的内置应用。
