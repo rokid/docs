@@ -50,12 +50,8 @@ app.on('pause', function() {
   // the app is pause
 });
 
-app.on('text', function(data, action, event) {
-  tts.say(data.tts);
-});
-
-app.on('media', function(data, action, event) {
-  player.play(data.url);
+app.on('request', function(data, action, event) {
+  // upstream voice data
 });
 app.start();
 ```
