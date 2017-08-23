@@ -16,7 +16,7 @@
 
 ### 1. 简介
 
-本文是对在*[Rokid开放平台][developer_website_link]*上开发CloudApp的协议的详细描述。
+本文是对在*[Rokid开发者社区][developer_website_link]*上开发CloudApp的协议的详细描述。
 
 [developer_website_link]: https://developer.rokid.com
 
@@ -24,10 +24,10 @@
 
 在了解本文所描述协议之前，需要对一下概念作如下说明：
 
-* **CloudApp** - 在*[Rokid开放平台][developer_website_link]*上接入的云端应用，可以理解为遵循本文所描述的协议开发的某种云端服务或小应用。
+* **CloudApp** - 在*[Rokid开发者社区][developer_website_link]*上接入的云端应用，可以理解为遵循本文所描述的协议开发的某种云端服务或小应用。
 * **CloudDispatcher** - 用于向CloudApp传递请求和分发CloudApp返回结果的模块。
 * **CloudAppClient** - 用于处理CloudApp返回结果的设备端的执行容器。
-* **RokidMobileSDK** - 与*[Rokid开放平台][developer_website_link]*向关联的手机端SDK，用于对CloudApp的信息扩展展示或第三方授权。
+* **RokidMobileSDK** - 与*[Rokid开发者社区][developer_website_link]*向关联的手机端SDK，用于对CloudApp的信息扩展展示或第三方授权。
 * **TTS** - **T**ext **T**o **S**peech的缩写，这是机器人的语音表达方式。
 
 ### 2. Request
@@ -487,7 +487,7 @@ Action 目前包括两种类型：`voice` 和 `media`。`voice` 表示了语音�
 | shouldEndSession  | boolean         | *true / false*   |
 | voice       | voice object    | *Voice对象*         |
 | media             | media object          | *Media对象*         |
-|confirm|confirm object|Confirm对象|
+|confirm|confirm object| *Confirm对象* |
 
 * **version** - 表明 action 协议版本，当前版本为: 2.0.0.
 * **type** - 当前action的类型：`NORMAL` 或 `EXIT`。 当 `type` 是 `NORMAL` 时，`voice` 和 `media` 会同时执行；当 `type` 是 `EXIT` 时，action会立即退出，并且在这种情况下，`voice` 和 `media` 将会被会被忽略。
