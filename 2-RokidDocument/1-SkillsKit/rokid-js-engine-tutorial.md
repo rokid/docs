@@ -161,7 +161,7 @@ this.emit(':tts',{tts:'Hello World!'},{sessionKey:sessionValue})
 ### 3.2 ttsWithConfirm相关配置
 
 ```javascript
-this.emit(':ttsWithConfirm',{tts:'Hello World!', confirmIntent:'confirmIntent', confirmSlot:'confirmSlot'},{sessionKey:sessionValue})
+this.emit(':ttsWithConfirm',{tts:'Hello World!', confirm:{confirmIntent:'confirmIntent', confirmSlot:'confirmSlot'}},{sessionKey:sessionValue})
 ```
 
 上述语法是rokid-sdk用于同步响应对象的“ttsWithConfirm”响应方法。注：传入":ttsWithConfirm"法的参数对象中tts(类型string|number)、confirmIntent(string),confirmSlot(string)属性是必须的。session根据需求选择。
