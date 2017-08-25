@@ -177,6 +177,12 @@ this.emit(':ttsWithConfirm',{tts:'Hello World!', confirmIntent:'confirmIntent', 
 | shouldEndSession | boolean | true |
 | action | string | PLAY |
 | tts | string或number | 无（必填）|
+| confirm | object | 无（必填）|
+
+confirm详细：
+
+| 字段       |   类型 | 默认值 |
+| :-------- |--------:| :--: |
 | confirmIntent | string | 无（必填）|
 | confirmSlot | string | 无（必填）|
 | optionWords | array | 无（选填）|
