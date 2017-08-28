@@ -36,7 +36,7 @@ $ npm init
 
 const app = require('@rokid/ams')();
 const tts = require('@rokid/tts');
-const player = require('@rokid/rplay');
+const player = require('@rokid/player');
 
 app.on('create', function() {
   // the app is created
