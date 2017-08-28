@@ -73,16 +73,8 @@ app.start();
 - `vad_data`
 - `vad_end`
 - `vad_cancel`
-- `wake_vad_start`
-- `wake_vad_data`
-- `wake_vad_end`
-- `wake_pre`
-- `wake_nocmd`
-- `wake_cancel`
+- `wake_cmd`
 - `sleep`
-- `hotword`
-- `voice_print`
-- `dirty`
 
 更复杂的例子可以参考 `/opt/apps/` 目录下的内置应用。
 
