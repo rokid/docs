@@ -93,7 +93,7 @@ $ cd /path/to/app/directory
 $ rokid install
 ```
 
-如果你想单独构建出应用包，则使用：`rokid build` 即可。
+如果你想单独构建出应用包，则使用 `rokid build` 即可。
 
 ### 调试应用
 
