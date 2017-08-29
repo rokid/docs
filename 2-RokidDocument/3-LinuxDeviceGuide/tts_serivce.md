@@ -49,16 +49,16 @@ void (*onError)(int id, int err, void* userdata);
 #include <rokid/tts/tts_client.h>
 
 void onStart(int id, void* userdata) {
-	// todo
+  // todo
 }
 void onCancel(int id, void* userdata) {
-	// todo
+  // todo
 }
 void onComplete(int id, void* userdata) {
-	// todo
+  // todo
 }
 void onError(int id, int err, void* userdata) {
-	// todo
+  // todo
 }
 
 int main(int argc, char** argv) {
