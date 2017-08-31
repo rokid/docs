@@ -459,7 +459,10 @@ IntentRequest 是基于 *NLP* 的结果产生的请求，其中包括了 *NLP* �
           "word1",
           "word2"
         ]
-      }
+      },
+       "card": {
+        "type": "ACCOUNT_LINK"
+      },
     }
   }
 }
@@ -468,7 +471,8 @@ IntentRequest 是基于 *NLP* 的结果产生的请求，其中包括了 *NLP* �
 
 * **version** - 表明了Response协议的版本，必须由 *CloudApp* 填充。当前协议版本是 `2.0.0`.
 * **session** - 表示当前应用的session，与Request中的信息一致，*CloudApp* 可以在 *attributes* 里填充自己需要的上下文信息用于后面的请求。
-* **response** - 返回给 *CloudAppClient* 的Response内容。包括了 `card` 和 `action` 两个部分。`card` 会在之后的协议更新中作详细说明。
+* **response** - 返回给 *CloudAppClient* 的Response内容。包括了 `card` 和 `action` 两个部分。
+* **card** - 用于向Rokid App推送push消息。目前仅仅支持用于第三方应用授权的`ACCOUNT_LINK`类型，更多card功能类型将在后续更新。
 
 #### 3.2 Action定义
 
