@@ -2,13 +2,14 @@
 
 ## 支持的开发板
 
-芯片厂商 | 芯片型号 | 开发板 | 编译框架 | 状态
+芯片厂商 | 芯片型号 | 开发板内部代号 | 编译框架 | 状态
 --- | --- | --- | --- | ---
 Amlogic | A112 | nana_l | buildroot | 支持
 Amlogic | S905D | nana_t | buildroot | 支持
+Amlogic | S905D | nana_t2 | buildroot | 支持
 Amlogic | S905D | rm101 | buildroot | 支持
-Amlogic | S905D | rp102 | buildroot | 可移植
-Amlogic | A113 | nana_m | buildroot | 开发中
+Amlogic | S905D | rp102 | buildroot | 支持
+Amlogic | A113 | banban_m | buildroot | 开发中
 
 ## 系统架构图
 ![Rokid_Linux_Architecture](images/Rokid_Linux_Architecture-1.png)
@@ -21,64 +22,89 @@ Amlogic | A113 | nana_m | buildroot | 开发中
 AMS | Application Manager Service Rokid语音应用的生命期调度、事件分发框架 | robot/openvoice/ams | C | 开发中
 Speech SDK | 封装了与Rokid云服务交互协议，包括ASR、NLP、TTS等开发服务 | robot/openvoice/speech | C++ | 支持
 Blacksiren SDK | 输入麦克风数据，经内部拾音算法及云端服务（调用SpeechSDK），输出语音识别结果、各种拾音事件 | robot/openvoice/blacksiren | C++ | 支持
-Runtime Service | 将Blacksiren封装成服务，后续会考虑嵌入到AMS中 | robot/runtime | C++ | 支持
-TTS Service | 提供设备端的语音转文字服务 | robot/services/tts | C++ | 支持
-Lumenflinger | 提供灯光渲染服务 | robot/services/lumenflinger | C++ | 支持
-Bluetooth | 提供蓝牙功能 | | C | 开发中
-OTA | 系统升级 | | C | 开发中
+openvoice_proc Service | 将Blacksiren封装成服务 | robot/openvoice_proc | C++ | 支持
+Linux systemd | Linux Init System -- systemd |  | C/C++ | 支持
+openvoice app Zygote | 由该进程负责启动所有语音应用 | robot/service/zygote  | C/C++ | 支持
 PulseAudio | 提供Audio服务及路由机制 | buildroot原生 | C | 支持
-蓝牙配网服务 | 提供通过蓝牙来配置Wifi网络 |  | C | 开发中
+TTSFlinger Service | 提供设备端的语音转文字服务 | robot/services/ttsflinger | C++ | 支持
+Lumenflinger | 提供灯光渲染服务 | robot/services/lumenflinger | C++ | 支持
+BTFlinger | 提供蓝牙功能 | robot/services/btflinger | C | 支持
+系统电量服务 | 系统电量服务 | | C/C++ | 支持
+应用包管理 | 应用安装升级 | | C/Node.JS | 支持
+OTA | 系统升级 | | C | 支持
+蓝牙配网服务 | 提供通过蓝牙来配置Wifi网络 |  | C | 支持
 热点配网 | 提供通过设备开启热点方式来配置网络 |  | C | 开发中
 CloudClient C版 | 实现Cloud Skill功能／应用支持（如天气、新闻、音乐等），适用小内存系统 | |  C | 开发中
-CloudClient Nodejs版本 | 实现Cloud Skill功能／应用支持（如天气、新闻、音乐等）、适用大内存系统 | | C | 开发中
+CloudClient Nodejs版本 | 实现Cloud Skill功能／应用支持（如天气、新闻、音乐等Cloud应用）、适用大内存系统 | | C/Node.JS | 支持
+系统音量控制 | 提供系统及的音量控制服务 | | C/C++/Node.JS | 支持
+灯光寻向指示 | 提供唤醒、对话时的寻向指示 | | C/C++/Node.JS | 支持
+媒体播放器 | 媒体播放器 | robot/external/librplayer | C/C++ | 支持
+蓝牙音乐应用 | 媒体播放器 | robot/apps/xxx | C/C++ | 支持
+聊天应用 | 提供系统语音聊天服务 | | C/C++/Node.JS | 支持 
 Android ADB | 提供ADB支持，方便开发 | | C++ | 支持
 Android HAL | 提供Android HAL，方便实现Mic Array，Led Array， Sensor等 | | C++ | 支持
 Android Binder | 提供进程间通讯机制 | | C++ | 支持
-Input Manager | 提供按键、触摸、鼠标事件SDK | | C++ | 开发中
-系统音量控制 | 提供系统及的音量控制服务 | | C++ | 开发中
-灯光寻向指示 | 提供唤醒、对话时的寻向指示 | | C++ | 开发中
+Input Manager | 提供按键、触摸、鼠标事件SDK | | C++ | 支持
 
 
 ## 编译
 ### Amlogic芯片
-#### Rokid对厂商代码的修改
-##### U-Boot
+### Rokid对厂商代码的修改
+#### U-Boot
   修改了厂商代码，支持Rokid的板级配置目录
 
-##### Kernel
+#### Kernel
   修改了厂商代码，支持Rokid多型号板子的DST配置目录
 
-##### BuildRoot Package
-###### 扩展的buildroot_external
+#### BuildRoot Package
+##### 扩展的buildroot_external
   rokid_br_external 是Rokid通过BuildRoot的external机制，将Rokid提供的包或第三方库的编译配置放在此处
 
-###### FFWT
+##### FFWT
   需要使用Rokid对该包的配置，核心的语音算法会依赖该动态库
 
-###### NodeJS
+##### NE10
+  需要使用Rokid对该包的配置，核心的语音算法会依赖该动态库
+
+##### NodeJS
   需要使用Rokid对该包的配置，CloudClient NodeJS版会依赖该配置
 
-###### 编译指令
-目前支持64位版本，32位因为任务重，拾音算法的32位库还没编译过，后续会支持
+##### TinyPlay
+  需要使用Rokid对该包的配置，目前Mic Array使用了Tinyplay接口读取数据，而Amlogic源码释放出的Tinyplay
+版本存在超过2个channel时读取音频数据会存在Bug，所以需要使用Rokid目前配置的版本。
+
+##### 编译指令
+目前支持64位版本，32后续会考虑支持。
 
 ```
 source rokid_br_external/build/setenv.sh
 ```
-
 输出
+```
+Environment setting is OK!
+Just type 'lunch' and you will get a list of choices, or you can type 'lunch [choice]' to lunch directly.
+```
 
 ```
-You're building on Linux
-Lunch menu...pick a combo:
+lunch
+```
+
+输出
+```
+You are building on Linux
+echo Lunch menu... pick a combo:
 1. nana_t_s905d_release
 2. nana_l_a112_release
 3. rm101_s905d_release
+4. rp102_s905d_release
+5. banban_m_a113_release
+6. nana_t2_s905d_release
 
 Which would you like? [2]
 ```
 
-###### 目前使用注意事项
-####### 关于刷机
+##### 目前使用注意事项
+##### 关于刷机
   如果你的设备是mini没有接串口，无法在U-Boot下进入刷机模式,请看如下指示：
   刷机镜像是：output/rm101_s905d/images/aml_upgrade_package.img
   先打开PC端的windows版的amlogic刷机工具，Amlogic也提供了linux版本。
