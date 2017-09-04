@@ -24,6 +24,7 @@ Rokid开发者社区文档，旨在帮助开发者更好的使用社区提供的
 * [在技能中使用SSML](2-RokidDocument/1-SkillsKit/ssml-document.md)
 * [Rokid 语音交互指南](2-RokidDocument/1-SkillsKit/rokid-voice-interaction-guidelines.md)
 * [Rokid 示例技能](2-RokidDocument/1-SkillsKit/skill-sample.md)
+* [读取设备日志以测试技能](2-RokidDocument/1-SkillsKit/test-skill-through-device-log.md)
 
 ### 为设备开启语音交互
 * [获取认证文件](2-RokidDocument/2-EnableVoice/get-the-certification-file.md)
