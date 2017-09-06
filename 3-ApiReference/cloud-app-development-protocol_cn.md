@@ -372,7 +372,7 @@ IntentRequest 是基于 *NLP* 的结果产生的请求，其中包括了 *NLP* �
 * **event** - 表明了是具体的事件类型.
 	* **Voice.STARTED** - 当Voice开始播放时发生
 	* **Voice.FINISHED** - 当Voice停止是发生，此处停止可能是被打断，可能是播放完成，也可能是播放失败，但都作为统一的事件抛出。
-	* **Media.START_PLAYING** - 当MediaPlayer开始播放时发生。
+	* **Media.STARTED** - 当MediaPlayer开始播放时发生。
 	* **Media.PAUSED** - 当MediaPlayer中途停止时发生。
 	* **Media.FINISHED** - 当播放内容结束时发生。
 	* *更多的事件会在未来的版本更迭中给出*
