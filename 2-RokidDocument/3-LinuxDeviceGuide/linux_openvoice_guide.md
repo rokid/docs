@@ -14,7 +14,6 @@ Amlogic | A113 | banban_m | buildroot | 开发中
 ## 系统架构图
 ![Rokid_Linux_Architecture](images/Rokid_Linux_Architecture-1.png)
 
-
 ## 系统特性
 
 模块 | 功能介绍 | 代码位置 | 实现语言 | 状态
@@ -48,32 +47,49 @@ Input Manager | 提供按键、触摸、鼠标事件SDK | | C++ | 支持
 
 
 ## 编译
+
+### 环境要求
+
+- Ubuntu 14.04.5 LTS
+- gcc 4.8.4 及以上
+
 ### Amlogic芯片
+
 ### Rokid对厂商代码的修改
+
 #### U-Boot
-  修改了厂商代码，支持Rokid的板级配置目录
+
+修改了厂商代码，支持Rokid的板级配置目录
 
 #### Kernel
-  修改了厂商代码，支持Rokid多型号板子的DST配置目录
+
+修改了厂商代码，支持Rokid多型号板子的DST配置目录
 
 #### BuildRoot Package
+
 ##### 扩展的buildroot_external
-  rokid_br_external 是Rokid通过BuildRoot的external机制，将Rokid提供的包或第三方库的编译配置放在此处
+
+rokid_br_external 是 Rokid 通过 BuildRoot 的 external 机制，将 Rokid 提供的包或第三方库的编译配置放在此处
 
 ##### FFWT
-  需要使用Rokid对该包的配置，核心的语音算法会依赖该动态库
+  
+需要使用Rokid对该包的配置，核心的语音算法会依赖该动态库
 
 ##### NE10
-  需要使用Rokid对该包的配置，核心的语音算法会依赖该动态库
+  
+需要使用Rokid对该包的配置，核心的语音算法会依赖该动态库
 
-##### NodeJS
-  需要使用Rokid对该包的配置，CloudClient NodeJS版会依赖该配置
+##### Node.js
+
+需要使用 Rokid 对该包的配置，CloudappClient-Nodejs 依赖该配置
 
 ##### TinyPlay
-  需要使用Rokid对该包的配置，目前Mic Array使用了Tinyplay接口读取数据，而Amlogic源码释放出的Tinyplay
-版本存在超过2个channel时读取音频数据会存在Bug，所以需要使用Rokid目前配置的版本。
+
+需要使用 Rokid 对该包的配置，目前 Mic Array 使用了 Tinyplay 接口读取数据，而 Amlogic 源码释放出的 Tinyplay
+版本存在超过2个channel时读取音频数据会存在 Bug，所以需要使用 Rokid 目前配置的版本。
 
 ##### 编译指令
+
 目前支持64位版本，32后续会考虑支持。
 
 ```
@@ -104,50 +120,49 @@ Which would you like? [2]
 ```
 
 ##### 目前使用注意事项
-##### 关于刷机
-  如果你的设备是mini没有接串口，无法在U-Boot下进入刷机模式,请看如下指示：
-  刷机镜像是：output/rm101_s905d/images/aml_upgrade_package.img
-  先打开PC端的windows版的amlogic刷机工具，Amlogic也提供了linux版本。
 
-  mini让他进入update模式的指令（无串口，无法进入uboot的情况下）,
-  adb shell登录到设备上，敲如下指令：
-  
-  ```
-  fw_setenv bootcmd "run update"
-  reboot
-  ```
-  
-  之后PC端的刷机程序就会检测到设备进入刷机模式，按软件的刷机提示刷机即可。
+###### 关于刷机
+如果你的设备是mini没有接串口，无法在U-Boot下进入刷机模式,请看如下指示：
+刷机镜像是：output/rm101_s905d/images/aml_upgrade_package.img
+先打开PC端的windows版的amlogic刷机工具，Amlogic也提供了linux版本。
 
-####### 关于配置网络
-  由于目前配网模块还在开发中，需要手动配置：
-  
-  ```
-  vi /etc/wpa_supplicant.conf
-  ```
-  
-  将
-  
-  ```
- 4 network={
- 5   key_mgmt=NONE
- 6 }
-  ```
-  
-  修改为：
-  
-  ```
- network={
-     ssid="你的WiFi网络名"
-     psk="你的密码"
- }
-  ```  
-  
-  然后启动网络
-  
-  ```
-  /etc/init.d/S42wifi stop
-  /etc/init.d/S42wifi start
-  ```
+mini让他进入update模式的指令（无串口，无法进入uboot的情况下）,
+adb shell登录到设备上，敲如下指令：
 
+```
+fw_setenv bootcmd "run update"
+reboot
+```
 
+之后PC端的刷机程序就会检测到设备进入刷机模式，按软件的刷机提示刷机即可。
+
+###### 关于配置网络
+由于目前配网模块还在开发中，需要手动配置：
+
+```
+vi /etc/wpa_supplicant.conf
+```
+
+将
+
+```
+4 network={
+5   key_mgmt=NONE
+6 }
+```
+  
+修改为：
+
+```
+network={
+   ssid="你的WiFi网络名"
+   psk="你的密码"
+}
+```  
+
+然后启动网络
+
+```
+/etc/init.d/S42wifi stop
+/etc/init.d/S42wifi start
+```
