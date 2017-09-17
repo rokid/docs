@@ -95,8 +95,8 @@ var handlers = {
             this.setTts({
                 tts: 'Hello World!'
             });
-            this.setconfirm({
-                confirmItent: 'confirmIntent',
+            this.setConfirm({
+                confirmIntent: 'confirmIntent',
                 confirmSlot: 'confirmSlot'
             });
             //正常完成意图函数时emit(":done")
