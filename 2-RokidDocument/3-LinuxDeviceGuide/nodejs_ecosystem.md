@@ -49,48 +49,43 @@ $ npm init
 
 ```js
 'use strict';
-
-const app = require('@rokid/ams')();
-const tts = require('@rokid/tts');
-const player = require('@rokid/player');
-
-app.on('create', function() {
-  // the app is created
+module.exports = require('@rokid/ams')({
+  created() {
+    // the app is created
+  },
+  resumed() {
+    // the app is resume
+  },
+  paused() {
+    // the app is pause
+  },
+  onrequest(context) {
+    // upstream voice data
+  },
+  beforeDestroy() {
+    // the app is to be destroyed
+  },
+  destroyed() {
+    // the app is destroyed
+  }
 });
-
-app.on('resume', function() {
-  // the app is resume
-});
-
-app.on('pause', function() {
-  // the app is pause
-});
-
-app.on('request', function(data, action, event) {
-  // upstream voice data
-});
-app.start();
 ```
 
-`app`对象支持如下事件：
+`app`对象支持如下生命周期函数：
 
-| 事件名   | 描述                    |
-|---------|-------------------------|
-| create  | 在应用第一次被唤起时调用   |
-| restart | 在应用再次被创建时调用     |
-| resume  | 在应用被置为栈顶恢复时调用 |
-| pause   | 在应用被其他应用占用时调用 |
-| stop    | 在应用被停止时调用        |
-| destroy | 在应用被销毁时调用        |
+| 生命周期        | 描述 |
+|---------------|-------------------------|
+| created       | 在应用第一次被唤起时调用 |
+| resumed       | 在应用被置为栈顶恢复时调用 |
+| paused        | 在应用被其他应用占用时调用 |
+| beforeDestroy | 在应用被停止时调用 |
+| destroyed     | 在应用被销毁时调用 |
 
-同时也支持下列 BlackSiren 下发的事件如下：
+另外，你可以在生命周期函数内调用如下接口：
 
-- `vad_start`
-- `vad_data`
-- `vad_end`
-- `vad_cancel`
-- `wake_cmd`
-- `sleep`
+- `.say(text)` 使用 RokidOS 说出制定的话；
+- `.pickup()` 打开拾音并接受语音指令；
+- `.exit()` 退出当前应用，并且关闭拾音；
 
 更复杂的例子可以参考 `/opt/apps/` 目录下的内置应用。
 
