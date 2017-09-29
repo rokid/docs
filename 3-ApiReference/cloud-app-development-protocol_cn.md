@@ -3,6 +3,8 @@
 版本：1.0.0-alpha
 
 ### 大纲
+
+
 * [简介](#1-简介)
 	* [一些概念](#11-一些概念)
 * [Request](#2-request)
@@ -32,8 +34,6 @@
 
 ### 2. Request
 
-*Request* is used to fetch response from *CloudApps*, which is sent by *CloudDispatcher*. Currently **IntentRequest** and **EventRequest** are available. **IntentRequest** is created according an *NLP* intent. And **EventRequest** is created when an event occurs.
-
 *Request* 是*CloudDispatcher*产生的用于向*CloudApp*获取对应返回结果的请求。目前有两种类型的请求：一种是**IntentRequest**，一种是**EventRequest**。**IntentRequest** 是根据语音识别和语义理解（*NLP*）的结果创建的，其中会带有（*NLP*）的信息。**EventRequest**是在当有某种事件发生是产生的，并通过*CloudDispatcher*转发给当前*CloudApp*，比如当某个TTS播放结束的时候会产生一个TTS结束的事件，当前*CloudApp*可以选择处理或者不处理。
 
 #### 2.1 Request 协议预览
@@ -62,13 +62,23 @@ Http Hearder中相关内容的示例如下：
     "sessionId": "D75D1C9BECE045E9AC4A87DA86303DD6",
     "newSession": true,
     "attributes": {
-      "key1": "value1",
-      "key2": "value2"
+       "key1": {"type":"","value":""}
     }
   },
   "context": {
     "application": {
-      "applicationId": "application id for requested CloudApp"
+      "applicationId": "application id for requested CloudApp",
+      "media": {
+        "state": "IDLE",
+        "itemId": "111",
+        "token": "12345",
+        "progress": "111",
+        "duration": "123"
+        },
+     "voice": {
+        "state": "IDLE",
+        "itemId": "111"
+        }
     },
     "device": {
       "basic": {
@@ -107,11 +117,12 @@ Http Hearder中相关内容的示例如下：
   },
   "request": {
     "reqType": "intent / event",
-    "reqId": "010116000100-ad1f462f4f0946ccb24e9248362c504a",
+    "reqId": "string",
     "content": {
       "intent": "play_random",
       "slots": {
-        
+        "key1":{"type":"","value":""},
+        "key2":{"type":"","value":""}
       }
     }
   }
@@ -126,17 +137,19 @@ Http Hearder中相关内容的示例如下：
 
 ```
 "session": {
-    "sessionId": "D75D1C9BECE045E9AC4A87DA86303DD6", 
-    "newSession": true, 
-    "attributes": {}
-}
+    "sessionId": "D75D1C9BECE045E9AC4A87DA86303DD6",
+    "newSession": true,
+    "attributes": {
+      "key1": {"type":"","value":""}
+    }
+  }
 ```
 
 | 字段               | 类型            | 可能值 |
 |:-----------------:|:---------------:|:---------------|
 | sessionId              | string          | *每次会话的唯一ID，由系统填充*  |
 | newSession  | boolean         | *true / false (由系统填充)*   |
-| attributes             | key-value map          | *一个string-string map*         |
+| attributes             | key-object map          | *一个string-object map*         |
 
 * **sessionId** - 每次会话的唯一ID，由系统填充
 * **newSession** - 向CloudApp表明此次会话是新的会话还是已经存在的会话
@@ -156,25 +169,31 @@ Http Hearder中相关内容的示例如下：
 
 | 字段               | 类型            | 可能值 |
 |:-----------------:|:---------------:|:---------------|
-| application              | ApplicationInfo object          | *ApplicationInfo对象，目前只有应用ID*  |
+| application              | ApplicationInfo object          | *ApplicationInfo对象*  |
 | device  | DeviceInfo object         | *DeviceInfo对象*   |
 | user          | UserInfo object          | *UserInfo对象*  |
 
 ##### 2.3.1 ApplicationInfo
 
-*ApplicationInfo* 包含了当前的应用信息，目前只有**applicationId**可用。
+*ApplicationInfo* 包含了当前的应用信息，目前有**applicationId**、**media**、**voice** 可用。
 
 ```
 "application": {
-    "applicationId": "application id for requested CloudApp"
+    "applicationId": "application id for requested CloudApp",
+    "media": {},
+    "voice": {}
 }
 ```
 
 | 字段               | 类型            | 可能值 |
 |:-----------------:|:---------------:|:---------------|
 | applicationId     | string         | *应用ID字符串*  |
+|media|object|*mediaInfo对象*|
+|voice|object|*voiceInfo对象*|
 
 * **applicationId** - *CloudApp*在*Rokid开放平台*上的唯一ID.
+* **media** - 当前与您Skill相关的media状态。包括当前的播放状态、媒体itemId、媒体token、媒体播放进度、媒体总长度。
+* **voice** - 当前与您Skill相关的voice状态。包括当前的播放状态、音频流itemId。
 
 ##### 2.3.2 DeviceInfo
 
@@ -315,7 +334,7 @@ UserInfo 展示了与当前设备绑定的用户信息，通常是设备对应�
 ```
 "request": {
     "reqType": "INTENT / EVENT",
-    "reqId": "010116000100-ad1f462f4f0946ccb24e9248362c504a",
+    "reqId": "string",
     "content": {}
 }
 ```
@@ -338,7 +357,10 @@ IntentRequest 是基于 *NLP* 的结果产生的请求，其中包括了 *NLP* �
 "content": {
     "applicationId": "com.rokid.cloud.music",
     "intent": "play_random",
-    "slots": {}
+    "slots": {
+        "key1":{"type":"","value":""},
+        "key2":{"type":"","value":""}
+    }
 }
 ```
 
@@ -346,9 +368,18 @@ IntentRequest 是基于 *NLP* 的结果产生的请求，其中包括了 *NLP* �
 |:-------:       |:--------------:|:-------------------------------|
 | applicationId  | string         | *CloudApp 对应的 applicationId*  |
 | intent         | string         | *CloudApp 对应的 nlp intent*     |
-| slots          | string         | *CloudApp 对应的 nlp slots*      |
+| slots          | object         | *CloudApp 对应的 nlp slots 对象*      |
 
 * **applicationId**, **intent** 和 **slots** 均为 **NLP** 结果的基本元素。分别表明了一句话所代表的领域，意图和完成这个意图所需要的参数。
+
+###### 2.4.1.1 slots
+slots是对象类型，含有如下两个字段：
+
+|字段  |类型  | 说明 |
+| :------ | :------ | :-------- |
+| type | String | slot类型    |
+|  value| String | slot值    |
+
 
 ##### 2.4.2 EventRequest
 
@@ -356,7 +387,7 @@ IntentRequest 是基于 *NLP* 的结果产生的请求，其中包括了 *NLP* �
 
 ```
 "content": {
-    "event": "Voice.STARTED",
+    "event": "Media.NEAR_FINISH",
     "extra": {
     	"key1": "value1",
     	"key2": "value2"
@@ -370,11 +401,15 @@ IntentRequest 是基于 *NLP* 的结果产生的请求，其中包括了 *NLP* �
 | extra  | string-string map         | *自定义字段，目前暂无定义，作扩展用*   |
 
 * **event** - 表明了是具体的事件类型.
-	* **Voice.STARTED** - 当Voice开始播放时发生
+	* **Voice.STARTED** - 当Voice开始播放时发生。
 	* **Voice.FINISHED** - 当Voice停止是发生，此处停止可能是被打断，可能是播放完成，也可能是播放失败，但都作为统一的事件抛出。
+	* **Voice.FAILED** - 当Voice播放失败时发生。
 	* **Media.STARTED** - 当MediaPlayer开始播放时发生。
 	* **Media.PAUSED** - 当MediaPlayer中途停止时发生。
 	* **Media.FINISHED** - 当播放内容结束时发生。
+	* **Media.TIMEOUT** - 在媒体播放过程中因为网络慢等原因导致的卡顿持续5s后发生。
+	* **Media.FAILED** - 当播放器加载音频资源失败时发生。
+	* **Session.ENDED** - 当Domain被切换到的时候的事件，可以用于关闭资源。
 	* *更多的事件会在未来的版本更迭中给出*
 
 * **extra** - 针对media类型的eventrequest支持如下扩展字段：
@@ -405,7 +440,6 @@ IntentRequest 是基于 *NLP* 的结果产生的请求，其中包括了 *NLP* �
 }
 ```
 
-
 ### 3. Response
 
 根据之前的描述，Response是 *CloudApp* 向客户端的返回结果。
@@ -419,74 +453,103 @@ IntentRequest 是基于 *NLP* 的结果产生的请求，其中包括了 *NLP* �
   "version": "2.0.0",
   "session": {
     "attributes": {
-      "key1": "value1",
-      "key2": "value2"
+      "key1": {"type":"","value":""}
     }
   },
   "response": {
+    "card": {
+          "type": "ACCOUNT_LINK"
+          },
     "action": {
       "version": "2.0.0",
       "type": "NORMAL / EXIT",
       "form": "scene/cut/service",
       "shouldEndSession": true,
-      "voice": {
-        "action": "PLAY/PAUSE/RESUME/STOP",
-        "disableEvent":true,
-        "item": {
-          "itemId":"string of itemid",
-          "tts": "tts content"
-        }
-      },
-      "media": {
-        "action": "PLAY/PAUSE/RESUME/STOP",
-        "disableEvent":true,
-        "item": {
-          "itemId":"string of itemid",
-          "token": "xxxx",
-          "type": "AUDIO/VIDEO",
-          "url": "media streaming url",
-          "offsetInMilliseconds": 0
-        }
-      },
-      "display": {
-        
-      },
-      "confirm": {
-        "confirmIntent": "nlp intent to confirm",
-        "confirmSlot": "nlp slot to confirm",
-        "optionWords": [
-          "word1",
-          "word2"
-        ]
-      },
-       "card": {
-        "type": "ACCOUNT_LINK"
-      },
+      "directives": [
+          {
+            "type":"voice",
+            "action": "PLAY/PAUSE/RESUME/STOP",
+            "disableEvent":true,
+            "item": {
+              "itemId":"string of itemid",
+              "tts": "tts content"
+            }
+          },
+          {
+            "type":"media",
+            "action": "PLAY/PAUSE/RESUME/STOP",
+            "disableEvent":true,
+            "item": {
+              "itemId":"string of itemid",
+              "token": "xxxx",
+              "type": "AUDIO/VIDEO",
+              "url": "media streaming url",
+              "offsetInMilliseconds": 0
+            }
+          },
+          {
+            "type":"display",
+          },
+          {
+            "type":"confirm",
+            "confirmIntent": "nlp intent to confirm",
+            "confirmSlot": "nlp slot to confirm",
+            "optionWords": [
+                "word1",
+                "word2"
+            ]
+         },
+          {
+            "type":"pickup",
+            "enable": true,
+            "durationInMilliseconds": 1000
+          }
+       ]
     }
   }
 }
 ```
 
-
 * **version** - 表明了Response协议的版本，必须由 *CloudApp* 填充。当前协议版本是 `2.0.0`.
 * **session** - 表示当前应用的session，与Request中的信息一致，*CloudApp* 可以在 *attributes* 里填充自己需要的上下文信息用于后面的请求。
 * **response** - 返回给 *CloudAppClient* 的Response内容。包括了 `card` 和 `action` 两个部分。
-* **card** - 用于向Rokid App推送push消息。目前仅仅支持用于第三方应用授权的`ACCOUNT_LINK`类型，更多card功能类型将在后续更新。
+    * **card** - 用于向Rokid App推送push消息。目前仅仅支持用于第三方应用授权的`ACCOUNT_LINK`类型，更多card功能类型将在后续更新。
 
 #### 3.2 Action定义
 
-Action 目前包括两种类型：`voice` 和 `media`。`voice` 表示了语音交互的返回。`media` 是对媒体播放的返回。
+Action 中最关键的部分是`directives`，其中包含：
+
+- `voice` 表示了语音交互的返回；
+- `media` 是对媒体播放的返回；
+- `confirm` 表示对特定语句进行确认时的返回；
+- `pickup` 表示需要设备继续拾音时的返回。
+
 
 ```
 "action": {
-    "version": "2.0.0",
-    "type": "NORMAL/EXIT", 
-    "form": "scene/cut/service",
-    "shouldEndSession": true, 
-    "voice": {},
-    "media": {},
-    "display": {},
-    "confirm": {}
+      "version": "2.0.0",
+      "type": "NORMAL / EXIT",
+      "form": "scene/cut/service",
+      "shouldEndSession": true,
+      "directives": [
+          {
+            "type":"voice",
+          },
+          {
+            "type":"media",
+          },
+          {
+            "type":"display",
+            //todo
+          },
+          {
+            "type":"confirm",
+          },
+          {
+            "type":"pickup",
+          }
+       ]
+    }
 }
 ```
 
@@ -497,31 +560,30 @@ Action 目前包括两种类型：`voice` 和 `media`。`voice` 表示了语音�
 | type              | string          | *NORMAL / EXIT*  |
 | form              | string          | *scene / cut / service*  |
 | shouldEndSession  | boolean         | *true / false*   |
-| voice       | voice object    | *Voice对象*         |
-| media             | media object          | *Media对象*         |
-|confirm|confirm object| *Confirm对象* |
+|directives|array|*directives对象*|
+
 
 * **version** - 表明 action 协议版本，当前版本为: 2.0.0.
 * **type** - 当前action的类型：`NORMAL` 或 `EXIT`。 当 `type` 是 `NORMAL` 时，`voice` 和 `media` 会同时执行；当 `type` 是 `EXIT` 时，action会立即退出，**清除系统端的应用session**，并且在这种情况下，`voice` 和 `media` 将会被会被忽略。
 * **form** - 当前action的展现形式：scene、cut、service。scene的action会在被打断后压栈，cut的action会在被打断后直接结束，service会在后台执行，但没有任何界面。该字段在技能创建时被确定，无法由cloud app更改。
 * **shouldEndSession** - 表明当此次返回的action执行完后 *CloudAppClient* 是否要退出,并且是否需要**清除系统端的应用session**，同时，当 `shouldEndSession` 为 `true` 时，*CloudAppClient* 将会忽略 *EventRequests*，即在action执行过程中不会产生 *EventRequest*。
-* **confirm** - 表明此次返回中，是否存在需要confirm的内容。[了解用法指南](/2-RokidDocument/1-SkillsKit/define-voice-interaction.html#confirm用法指南)。
-    * **confirmIntent**：表明此次返回对哪一个intent进行confirm。
-    * **confirmSlot**：表明此次返回对哪一个slot进行confirm。
-    * **optionWords**：可选项。表明此次返回中在confirmSlot之上需要新增的confirm选项，用于需要动态新增confirm内容的场景。
+* **directives** - 表明此次返回中需要让设备执行的指令。当前包含`voice`, `media`, `confirm`, `pickup` 四种类型。
+
 
 ##### 3.2.1 Voice
 
 *Voice* 定义了 *CloudApp* 返回的语音交互内容。具体定义如下：
 
 ```
-"voice": {
-    "action":"PLAY/PAUSE/RESUME/STOP",
-    "disableEvent":true,
-    "item": {}
+{
+    "type":"voice",
+    "action": "PLAY/PAUSE/RESUME/STOP",
+    "disableEvent":true,
+    "item": {
+      "itemId":"string of itemid",
+      "tts": "tts content"
 }
 ```
-
 
 | 字段               | 类型            | 可能值 |
 |:-----------------:|:---------------:|:---------------|
@@ -557,10 +619,17 @@ Item定义了voice的具体内容。
 Media 用来播放CloudApp返回的流媒体内容。有 *audio* 和 *video* 两种类型，目前第一版暂时只对 *audio* 作了支持，后续会支持 *video*。
 
 ```
-"media": {
+{
+    "type":"media",
     "action": "PLAY/PAUSE/RESUME/STOP",
     "disableEvent":true,
-    "item": {}
+    "item": {
+      "itemId":"string of itemid",
+      "token": "xxxx",
+      "type": "AUDIO/VIDEO",
+      "url": "media streaming url",
+      "offsetInMilliseconds": 0
+            }
 }
 ```
 
@@ -603,6 +672,56 @@ Media 用来播放CloudApp返回的流媒体内容。有 *audio* 和 *video* 两
 * **type** - 表明了当前媒体类型：**AUDIO** 或 **VIDEO**，有且只能取其一。
 * **url** - 为MediaPlayer指明可用的流媒体播放链接。
 * **offsetInMilliseconds** - 毫秒数值，告诉MediaPlayer开始播放的位置。有效范围从0到歌曲整体播放时长。
+
+##### 3.2.3 Confirm
+表明此次返回中，是否存在需要confirm的内容。[了解用法指南](/2-RokidDocument/1-SkillsKit/define-voice-interaction.html#confirm用法指南)。
+
+```
+{
+    "type":"confirm",
+    "confirmIntent": "nlp intent to confirm",
+    "confirmSlot": "nlp slot to confirm",
+    "optionWords": [
+      "word1",
+      "word2"
+            ]
+}
+```
+
+| 字段               | 类型            | 可能值 |
+|:-----------------:|:---------------:|:---------------|
+| confirmIntent           | string          | *需要进行confirm的intent内容*  |
+| confirmSlot           | string          | *需要进行confirm的slot内容*  |
+| optionWords           | array          | *动态新增的confirm内容*  |
+
+* **confirmIntent**：表明此次返回对哪一个intent进行confirm。
+* **confirmSlot**：表明此次返回对哪一个slot进行confirm。
+* **optionWords**：可选项。表明此次返回中在confirmSlot之上需要新增的confirm选项，用于需要动态新增confirm内容的场景。
+
+
+##### 3.2.4 Pickup
+
+Pickup 用来控制拾音状态（可以理解为手机app上的对话框）。当CloudApp没有可执行的内容是，会执行Pickup，如果Pickup为空，则按照Pickup.enable=false执行。
+
+```
+{
+    "type":"pickup",
+    "enable": true,
+    "durationInMilliseconds": 1000
+}
+```
+
+| 字段               | 类型            | 可能值 |
+|:-----------------:|:---------------:|:---------------|
+| enable              | boolean         | *true / false*  |
+| durationInMilliseconds  | int        | *在没有用户说话时拾音状态持续多久，单位毫秒*  |
+
+* **enable** - 定义了对拾音状态的开关操作：**true**，**false** ，其中，只有**true**接受**durationInMilliseconds**数据。
+    * **true**：当CloudApp没有可执行的内容（**Voice播报**，**Media播报**，**EventRequest发送**）时，会把拾音打开。
+    * **false**：不打开
+
+* **durationInMilliseconds** - 当**enable=true**时，在用户不说话的情况下，拾音打开持续时间（建议在10s-15s左右为宜），单位**毫秒**
+
 
 ###### Copyright © 2017 Rokid Corporation Ltd. All rights reserved.
 
