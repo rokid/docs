@@ -1,8 +1,7 @@
-# Rokid JS Engine V1.0 使用指南
+# Rokid JS Engine 使用指南V1.0
 
 > 欢迎使用Rokid-JS-Engine，很高兴大家可以通过编辑JS脚本来搭建技能服务。
-
-> Tips：这是一份老版本Rokid Js Engine文档，我们不推荐您在此版本上进行新的开发。请[点此查看新的文档](./rokid-js-engine-tutorial.md)。
+> 您现在阅读的是老版本的文档，我们推荐您使用Js-Engine v2.0版本进行开发，（[点此查看文档v2.0文档](./rokid-js-engine-tutorial.md)）
 
 ## 使用JS脚本更快速的开发技能
 
@@ -12,7 +11,7 @@
 
 ## 目录
 
-*  [1.本期更新（2017.08）](#1-本期更新-201708)
+*  [1.本期更新（2017.09）](#1-本期更新-201709)
 *  [2.JS脚本基本内容](#2-js脚本基本内容)
  *  [2.1固定写法部分](#21-固定写法部分)
  *  [2.2开发者编写基本内容handlers](#22-开发者编写基本内容handlers)
@@ -31,10 +30,11 @@
 * [7.Sample](#7-sample)
 * [8.Q&A](#8-qa) 
 
-## 1. 本期更新-2017.08
-协议更新:
-- 新增disableEvent（关闭EVENT_REQUEST字段，EVENT_REQUEST如Voice.STARTED,Voice.FINISHED,Media.PAUSED等）涉及到tts,media,ttsWithConfirm。
-- 新增itemId字段，标记tts或media的ID。 定义了播报内容的ID，当disableEvent=false时，VoiceEvent会在拓展字段中带上itemId。
+## 1. 本期更新-2017.09
+- request（异步请求）原本需要严格按照npm提供的方式，参数放在options.qs里，现兼容请求参数全放在url上如http://xxx.com/xxx?key=xxx&league=xxx。
+- 考虑到sync_request与request的功能重叠，且存在兼容性问题，因此取消了sync_request。
+- session改为key:object类型。
+
 ## 2. JS脚本基本内容
 开发者可以利用编写JS脚本实现各自所需的技能意图函数实现不同的功能。
 
@@ -507,5 +507,5 @@ A：首先确保request的所有参数均正确。其次，可用postman进行�
 
 ### 9. 2.0版本补充说明
 希望开发者自行开发时一句V2.0SDK进行开发。
-SDK-V2.0说明文档：<https://gitlab.rokid-inc.com/open-platform/doc/blob/master/jsEngine-V2.0.md>
+SDK-V2.0说明文档：<https://rokid.github.io/docs/2-RokidDocument/1-SkillsKit/rokid-js-engine-tutorial.html>
 

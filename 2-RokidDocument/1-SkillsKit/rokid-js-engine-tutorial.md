@@ -1,9 +1,7 @@
-# Rokid JS Engine V2.0 使用指南
+# Rokid JS Engine 使用指南V2.0
 
 > 欢迎使用Rokid-JS-Engine，很高兴大家可以通过编辑JS脚本来搭建技能服务。
-
 > Tips：为对老版本(V1.0)技能的过渡性支持，本次Js Engine V1.0 也进行了同步更新（[点此查看文档v1.0文档](./rokid-js-engine-tutorial-v1.0.md)），但在下个版本起V1.0视情况更新，或滞后于V2.0，推荐开发者使用V2.0进行开发。
-
 
 ## 使用JS脚本更快速的开发技能
 
@@ -13,7 +11,7 @@
 
 ### 目录
 
-*  [1.本期更新（2017.08）](#1-本期更新-201708)
+*  [1.本期更新（2017.09）](#1-本期更新-201709)
 *  [2.JS脚本基本内容](#2-js脚本基本内容)
  *  [2.1固定写法部分](#21-固定写法部分)
  *  [2.2开发者编写基本内容handlers](#22-开发者编写基本内容handlers)
@@ -31,11 +29,10 @@
 * [7.Sample](#7-sample)
 * [8.Q&A](#8-qa) 
 
-### 1. 本期更新-2017.08
-- 开发者对response配置方式更新。本次更新向下兼容，以前的技能截至本次更新均可正常使用，之后不再对1.0版本进行迭代。望开发者在这次过度阶段把脚本进行修改为2.0开发模式，谢谢。
-- 协议更新:
-	- 新增disableEvent（关闭EVENT_REQUEST字段，EVENT_REQUEST如Voice.STARTED,Voice.FINISHED,Media.PAUSED等）涉及到tts,media,ttsWithConfirm。
-	- 新增itemId字段，标记tts或media的ID。 定义了播报内容的ID，当disableEvent=false时，VoiceEvent会在拓展字段中带上itemId。
+### 1. 本期更新-2017.09
+- request（异步请求）原本需要严格按照npm提供的方式，参数放在options.qs里，现兼容请求参数全放在url上如http://xxx.com/xxx?key=xxx&league=xxx。
+- 考虑到sync_request与request的功能重叠，且存在兼容性问题，因此取消了sync_request。
+- session改为key:object类型。
 
 ### 2. JS脚本基本内容
 开发者可以利用编写JS脚本实现各自所需的技能意图函数实现不同的功能。
@@ -70,11 +67,11 @@ var handlers = {
             this.setTts({
                 tts: 'Hello World!'
             });
-            //正常完成意图函数时emit(":done")
+            //正常完成意图函数时emit(':done')
             this.emit(':done');
         } catch (error) {
-            //报错时调用emit(":error", error)
-            this.emit(":error", error);
+            //报错时调用emit(':error', error)
+            this.emit(':error', error);
         }
     },
     'mediaSample': function () {
@@ -83,11 +80,11 @@ var handlers = {
                 type: 'AUDIO',
                 url: 's.rokidcdn.com/temp/rokid-ring.mp3'
             });
-            //正常完成意图函数时emit(":done")
+            //正常完成意图函数时emit(':done')
             this.emit(':done');
         } catch (error) {
-            //报错时调用emit(":error", error)
-            this.emit(":error", error);
+            //报错时调用emit(':error', error)
+            this.emit(':error', error);
         }
     },
     'confirmSample': function () {
@@ -99,10 +96,10 @@ var handlers = {
                 confirmIntent: 'confirmIntent',
                 confirmSlot: 'confirmSlot'
             });
-            //正常完成意图函数时emit(":done")
+            //正常完成意图函数时emit(':done')
             this.emit(':done');
         } catch (error) {
-            //报错时调用emit(":error", error)
+            //报错时调用emit(':error', error)
             this.emit(":error", error);
         }
     }
@@ -186,13 +183,15 @@ this.setBaseInfo({
 
 ```javascript
 this.setSession({
-	sessionKey: 'sessionValue'
+	sessionKey: {
+		key: value
+	}
 });
 ```
 
 ##### 开发者相关字段（setSession）
 
-setSession时完全自定义，可根据开发者需求自定义key-value键值对。
+setSession时完全自定义，可根据开发者需求自定义key-object键值对。
 
 #### 3.3 setTts配置tts信息
 
@@ -283,8 +282,6 @@ setCard的参数为string类型，目前仅支持ACCOUNT_LINK。
 ##### 开发者可直接调用封装在Rokid对象中的所有工具方法，现有如下：
 - Rokid.handler(event,contxt,callback):用于调用Rokid-sdk。
 - Rokid.request(options,callback):异步请求，具体使用方法参见<https://www.npmjs.com/package/request>。
-- Rokid.sync_request(method,url,options):同步请求，需把返回的数据通过Rokid.resHandler( )进行buffer处理。具体使用方法参见：<https://www.npmjs.com/package/sync-request>
-- Rokid.resHandler(content):buffer处理函数，如通过Rokid.sync_request请求必须通过此函数处理，再提交":tts"或":media"。
 - Rokid.param:可根据“集成测试”中服务请求的数据结构获取一些数据。如：
 	- slots：Rokid.param.request.content.slots
 	- intent: Rokid.param.request.content.intent
@@ -453,6 +450,6 @@ A：首先确保request的所有参数均正确。其次，可用postman进行�
 
 ### 9. 1.0版本补充说明
 为保证以往技能正常运行，1.0版本将继续维护，但可能会滞后于2.0版本的更新。
-SDK-V1.0说明文档：<https://gitlab.rokid-inc.com/open-platform/doc/blob/master/jsEngine-V2.0.md>
+SDK-V1.0说明文档：<https://rokid.github.io/docs/2-RokidDocument/1-SkillsKit/rokid-js-engine-tutorial-v1.0.html>
 
 
