@@ -720,7 +720,7 @@ Pickup 用来控制拾音状态（可以理解为手机app上的对话框）。�
     * **true**：当CloudApp没有可执行的内容（**Voice播报**，**Media播报**，**EventRequest发送**）时，会把拾音打开。
     * **false**：不打开
 
-* **durationInMilliseconds** - 当**enable=true**时，在用户不说话的情况下，拾音打开持续时间（建议在10s-15s左右为宜），单位**毫秒**
+* **durationInMilliseconds** - 当**enable=true**时，表示在用户不说话的情况下，拾音打开持续时间，单位**毫秒**。最长持续时间为6000ms。
 
 
 ###### Copyright © 2017 Rokid Corporation Ltd. All rights reserved.
