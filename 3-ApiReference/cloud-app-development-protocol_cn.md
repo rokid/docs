@@ -55,7 +55,7 @@ Http Hearder中相关内容的示例如下：
 
 *Request* 的整体协议定义如下所示：
 
-```
+```json
 {
   "version": "2.0.0",
   "session": {
@@ -135,7 +135,7 @@ Http Hearder中相关内容的示例如下：
 
 *Session* 向所请求的*CloudApp*表明了会话的信息，每一次对*CloudApp*的请求都会产生会话信息，会话的信息和状态由开放平台的系统更新。*Session*也提供了*attributes*字段留给*CloudApp*来保存一些上下文信息。具体阐述如下：
 
-```
+```json
 "session": {
     "sessionId": "D75D1C9BECE045E9AC4A87DA86303DD6",
     "newSession": true,
@@ -159,7 +159,7 @@ Http Hearder中相关内容的示例如下：
 
 *Context* 向所请求的CloudApp提供了当前的设备信息，用户信息和应用状态，用以帮助CloudApp更好的去管理逻辑，状态以及对应的返回结果。
 
-```
+```json
 "context": {
     "application": {},
     "device": {},
@@ -177,7 +177,7 @@ Http Hearder中相关内容的示例如下：
 
 *ApplicationInfo* 包含了当前的应用信息，目前有**applicationId**、**media**、**voice** 可用。
 
-```
+```json
 "application": {
     "applicationId": "application id for requested CloudApp",
     "media": {},
@@ -199,7 +199,7 @@ Http Hearder中相关内容的示例如下：
 
 *DeviceInfo* 是对此次请求发生时当前设备信息的描述。
 
-```
+```json
 "device": {
     "basic":{},
     "screen":{},
@@ -223,7 +223,7 @@ Http Hearder中相关内容的示例如下：
 
 ###### 2.3.2.1 BasicInfo
 
-```
+```json
 "basic":{
     "vendor":"vendor id",
     "deviceType":"device type",
@@ -233,6 +233,7 @@ Http Hearder中相关内容的示例如下：
     "timestamp": 1478009510909
 }
 ```
+
 | 字段               | 类型            | 可能值 |
 |:-----------------:|:---------------:|:---------------|
 | vendor  | string         | *注册生产商ID*  |
@@ -253,7 +254,7 @@ Http Hearder中相关内容的示例如下：
 
 当前设备的显示设备信息：
 
-```
+```json
 "screen":{
     "x":"640",
     "y":"480"
@@ -274,7 +275,7 @@ Http Hearder中相关内容的示例如下：
 
 当前设备上CloudAppClient中MediaPlayer的状态：
 
-```
+```json
 "media": {
     "state": "PLAYING / PAUSED / IDLE"
 }
@@ -296,7 +297,7 @@ Http Hearder中相关内容的示例如下：
 
 ###### 2.3.2.5 LocationInfo
 
-```
+```json
 "location": {
     "latitude": "30.213322455923485",
     "longitude": "120.01190010997654",
@@ -316,7 +317,7 @@ Http Hearder中相关内容的示例如下：
 
 UserInfo 展示了与当前设备绑定的用户信息，通常是设备对应手机应用的账号。
 
-```
+```json
 "user": {
     "userId": "user id string"
 }
@@ -331,7 +332,7 @@ UserInfo 展示了与当前设备绑定的用户信息，通常是设备对应�
 
 *Request* 是当前请求的真正内容：
 
-```
+```json
 "request": {
     "reqType": "INTENT / EVENT",
     "reqId": "string",
@@ -353,7 +354,7 @@ UserInfo 展示了与当前设备绑定的用户信息，通常是设备对应�
 
 IntentRequest 是基于 *NLP* 的结果产生的请求，其中包括了 *NLP* 的所有信息：**ApplicationId**， **Intent** 和 **Slots**。IntentRequest将会发给对应的 *CloudApp* 根据 *intent* 和 *slots* 进行相应的逻辑处理。
 
-```
+```json
 "content": {
     "applicationId": "com.rokid.cloud.music",
     "intent": "play_random",
@@ -385,7 +386,7 @@ slots是对象类型，含有如下两个字段：
 
 当CloudAppClient在执行中发生了一个事件，则会产生一个EventRequest。*CloudApp* 可以根据自己的需要选择处理或者不处理当前收到的事件。
 
-```
+```json
 "content": {
     "event": "Media.NEAR_FINISH",
     "extra": {
@@ -414,7 +415,7 @@ slots是对象类型，含有如下两个字段：
 
 * **extra** - 针对media类型的eventrequest支持如下扩展字段：
 
-```
+```json
 "content": {
   "event": "Media.PAUSED",
   "extra": {
@@ -429,7 +430,7 @@ slots是对象类型，含有如下两个字段：
 ```
 * **extra** - 针对voice类型的eventrequest支持如下扩展字段：
 
-```
+```json
 "content": {
   "event": "Voice.STARTED",
   "extra": {
@@ -448,7 +449,7 @@ slots是对象类型，含有如下两个字段：
 
 整体协议示例如下：
 
-```
+```json
 {
   "version": "2.0.0",
   "session": {
@@ -469,7 +470,7 @@ slots是对象类型，含有如下两个字段：
           {
             "type":"voice",
             "action": "PLAY/PAUSE/RESUME/STOP",
-            "disableEvent":true,
+            "disableEvent":false,
             "item": {
               "itemId":"string of itemid",
               "tts": "tts content"
@@ -478,7 +479,7 @@ slots是对象类型，含有如下两个字段：
           {
             "type":"media",
             "action": "PLAY/PAUSE/RESUME/STOP",
-            "disableEvent":true,
+            "disableEvent":false,
             "item": {
               "itemId":"string of itemid",
               "token": "xxxx",
@@ -525,7 +526,7 @@ Action 中最关键的部分是`directives`，其中包含：
 - `pickup` 表示需要设备继续拾音时的返回。
 
 
-```
+```json
 "action": {
       "version": "2.0.0",
       "type": "NORMAL / EXIT",
@@ -574,11 +575,11 @@ Action 中最关键的部分是`directives`，其中包含：
 
 *Voice* 定义了 *CloudApp* 返回的语音交互内容。具体定义如下：
 
-```
+```json
 {
     "type":"voice",
     "action": "PLAY/PAUSE/RESUME/STOP",
-    "disableEvent":true,
+    "disableEvent":false,
     "item": {
       "itemId":"string of itemid",
       "tts": "tts content"
@@ -592,14 +593,14 @@ Action 中最关键的部分是`directives`，其中包含：
 | item       | item object    | *voice 的 item 对象*         |
 
 * **action** - 表示对当前voice的操作，可以播放（PLAY)、暂停（PAUSE）、继续播放（RESUME）和停止（STOP）（具体Action行为参照Media的Action行为，但是目前暂未实现，**PAUSE**以及**RESUME**操作）;
-* **disableEvent**-表示当前这个Voice执行过程中是否需要关闭Event事件，可以不传，默认**false**表示接收Voice的EventRequest
+* **disableEvent**-表示当前这个Voice执行过程中是否需要关闭Event事件，可以不传，默认**false**表示接收Voice的EventRequest；
 * **item** - 定义了voice的具体内容，将会在 *3.2.1.1* 中详细描述。
 
 ###### 3.2.1.1 Item
 
 Item定义了voice的具体内容。
 
-```
+```json
 "item": {
     "itemId":"string of itemid",
     "tts": "tts content"
@@ -618,11 +619,11 @@ Item定义了voice的具体内容。
 
 Media 用来播放CloudApp返回的流媒体内容。有 *audio* 和 *video* 两种类型，目前第一版暂时只对 *audio* 作了支持，后续会支持 *video*。
 
-```
+```json
 {
     "type":"media",
     "action": "PLAY/PAUSE/RESUME/STOP",
-    "disableEvent":true,
+    "disableEvent":false,
     "item": {
       "itemId":"string of itemid",
       "token": "xxxx",
@@ -649,7 +650,7 @@ Media 用来播放CloudApp返回的流媒体内容。有 *audio* 和 *video* 两
 
 ###### 3.2.2.1 Item
 
-```
+```json
 "item": {
     "itemId":"string of itemid",
     "token": "xxxx",
@@ -676,7 +677,7 @@ Media 用来播放CloudApp返回的流媒体内容。有 *audio* 和 *video* 两
 ##### 3.2.3 Confirm
 表明此次返回中，是否存在需要confirm的内容。[了解用法指南](/2-RokidDocument/1-SkillsKit/define-voice-interaction.html#confirm用法指南)。
 
-```
+```json
 {
     "type":"confirm",
     "confirmIntent": "nlp intent to confirm",
@@ -703,7 +704,7 @@ Media 用来播放CloudApp返回的流媒体内容。有 *audio* 和 *video* 两
 
 Pickup 用来控制拾音状态（可以理解为手机app上的对话框）。当CloudApp没有可执行的内容是，会执行Pickup，如果Pickup为空，则按照Pickup.enable=false执行。
 
-```
+```json
 {
     "type":"pickup",
     "enable": true,
