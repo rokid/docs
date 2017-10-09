@@ -177,7 +177,7 @@ this.setBaseInfo({
 | :-------- |--------:| ---:| --: | :--: |
 | type | string | 选填 | NORMAL | NORMAL/EXIT |
 | form | string | 选填 | cut| scene/cut/service |
-| shouldEndSession | boolean | 选填 | true | true/false |
+| shouldEndSession | boolean | 选填 | false | true/false |
 
 #### 3.2 setSession配置session信息
 
