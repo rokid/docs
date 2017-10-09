@@ -173,7 +173,7 @@ this.emit(':tts', {
 | :-------- |--------:| --: | :--: |
 | type | string |  NORMAL  | NORMAL/EXIT |
 | form | string |  cut  | scene/cut/service |
-| shouldEndSession | boolean | true | true/false |
+| shouldEndSession | boolean | false | true/false |
 | disableEvent | boolean | false | true/false |
 | action | string | PLAY | PLAY/PAUSE/RESUME/STOP |
 | itemId | string | 无（选填）| 不限 |
@@ -257,7 +257,7 @@ this.emit(":media",{},{})第二个参数如下（media相关信息配置项）�
 | :-------- |--------:| --: | :--: |
 | type | string |  NORMAL  | NORMAL/EXIT |
 | form | string |  cut  | scene/cut/service |
-| shouldEndSession | boolean | true | true/false |
+| shouldEndSession | boolean | false | true/false |
 | disableEvent | boolean | false | true/false |
 | action | string | PLAY | PLAY/PAUSE/RESUME/STOP |
 | itemId | string | 无（选填）| 不限 |
