@@ -104,4 +104,6 @@
 
 ![](images/14977062150551.jpg)
 
+技能发布上线后，将会在[Rokid技能商店](https://skill.rokid.com/store/#/)中展示给所有Rokid用户使用。
+![](images/15079921294746.jpg)
 
