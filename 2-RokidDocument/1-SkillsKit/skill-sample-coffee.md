@@ -35,7 +35,7 @@
 完成后请点击「下一步」。
 
 ## 3 定义技能的语音交互并进行后端配置
-首先请查看我们的[技能模板：我要喝咖啡](https://github.com/Rokid/rokid-skill-sample/tree/master/rokid-skill-sample-java-tastecoffee)。
+首先请查看我们的[技能模板：我要喝咖啡](https://github.com/Rokid/rokid-skill-sample/tree/master/rokid-skill-sample-js-tastecoffee)。
 
 #### 定义语音交互
 接着在「语音交互」页面中，
