@@ -12,13 +12,16 @@
 ### 开发Rokid技能
 * [开始创建第一个技能：我要喝咖啡](2-RokidDocument/1-SkillsKit/skill-sample-coffee.md)
 * [为技能定义语音交互](2-RokidDocument/1-SkillsKit/define-voice-interaction.md)
+* [如何展示您的技能](2-RokidDocument/1-SkillsKit/show_skill_information.md)
 * [Rokid 预定义词表](2-RokidDocument/1-SkillsKit/rokid-bult-in-slots.md)
 * [Rokid NLP正则表达式使用指南](2-RokidDocument/1-SkillsKit/rokid-regular-expression.md)
 * [Rokid OAuth 指南](2-RokidDocument/1-SkillsKit/rokid-oauth.md)
-* [Rokid JS Engine 使用指南](2-RokidDocument/1-SkillsKit/rokid-js-engine-tutorial.md)
+* [Rokid JS Engine v2.0 使用指南](2-RokidDocument/1-SkillsKit/rokid-js-engine-tutorial.md)
+    * [Rokid JS Engine v1.0 使用指南](2-RokidDocument/1-SkillsKit/rokid-js-engine-tutorial-v1.0.md)
 * [在技能中使用SSML](2-RokidDocument/1-SkillsKit/ssml-document.md)
 * [Rokid 语音交互设计指南](2-RokidDocument/1-SkillsKit/rokid-voice-interaction-guidelines.md)
 * [Rokid 示例技能](2-RokidDocument/1-SkillsKit/skill-sample.md)
+* [读取设备日志以测试技能](2-RokidDocument/1-SkillsKit/test-skill-through-device-log.md)
 
 ### 为设备开启语音交互
 * [获取认证文件](2-RokidDocument/2-EnableVoice/get-the-certification-file.md)
@@ -51,7 +54,6 @@
 * [Rokid 客户端 SDK 文档](3-ApiReference/rokid-client-sdk-doc.md)
 * [Rokid 前端降噪模块 API文档](3-ApiReference/siren-api.md)
 
-
 ### 设计语音产品
 * [Rokid 语音产品硬件设计指南](2-RokidDocument/2-EnableVoice/rokid-hardware-design-guide.md)
 * [Rokid 硬件交互设计指南](2-RokidDocument/2-EnableVoice/rokid-hardware-ux-design-guidelines.md)
@@ -69,5 +71,3 @@
 * [Rokid开发者社区官网](https://developer.rokid.com/)
 * [Rokid 官网](https://www.rokid.com/)
 * [Rokid 智能家居](https://www.rokid.com/smarthome/)
-
-
