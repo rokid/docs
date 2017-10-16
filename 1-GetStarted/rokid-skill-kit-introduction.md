@@ -113,7 +113,7 @@ Rokid将会理解用户的请求，并将**播放音乐**这个意图发送给�
 在技能成功通过审核之后，别忘了到[Rokid讨论区](https://developer-forum.rokid.com/)与大家分享过您的技能。
 
 ## 快速开始
-- [6步创建第一个Rokid技能](https://github.com/Rokid/rokid-skill-sample/tree/master/rokid-skill-sample-java-tastecoffee)
+- [创建第一个技能：我要喝咖啡](../2-RokidDocument/1-SkillsKit/skill-sample-coffee.md)
 
 ## 模板工程
 - [Rokid示例技能](https://github.com/Rokid/rokid-skill-sample)
