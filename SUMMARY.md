@@ -28,23 +28,29 @@
 * [Rokid Android SDK 接入指南](2-RokidDocument/2-EnableVoice/rokid-sdk-tutorial.md)
 
 ### Linux 设备接入
-* [Linux 设备开发引导](2-RokidDocument/3-LinuxDeviceGuide/linux_openvoice_guide.md)
+* [Linux 系统设计](2-RokidDocument/3-LinuxDeviceGuide/linux_arch.md)
+* [Linux 编程指南](2-RokidDocument/3-LinuxDeviceGuide/linux_tutorial.md)
+	* [C/C++](2-RokidDocument/3-LinuxDeviceGuide/linux_cpp_tutorial.md)
+	* [Node.js](2-RokidDocument/3-LinuxDeviceGuide/linux_nodejs_tutorial.md)
+<!-- 	* [TTS服务](2-RokidDocument/3-LinuxDeviceGuide/tts_serivce.md) -->
+<!--	* [语音应用包管理](2-RokidDocument/3-LinuxDeviceGuide/package_manager_serivce.md) -->
+<!-- 	* [Node.js开发者生态](2-RokidDocument/3-LinuxDeviceGuide/nodejs_ecosystem.md) -->
+* [开发板列表](2-RokidDocument/3-LinuxDeviceGuide/board/board_list.md)
+	* [Amlogic/A113](2-RokidDocument/3-LinuxDeviceGuide/board/amlogic/a113.md)
+	* [Amlogic/S905D](2-RokidDocument/3-LinuxDeviceGuide/board/amlogic/s905d.md)
   <!-- * [云端交互SDK(Speech)](2-RokidDocument/3-LinuxDeviceGuide/speech_sdk.md) -->
   <!-- * [设备拾音SDK(BSiren)](2-RokidDocument/3-LinuxDeviceGuide/blacksiren_sdk.md) -->
   <!-- * [设备拾音服务](2-RokidDocument/3-LinuxDeviceGuide/openvoice_proc_service.md) -->
   <!-- * [服务管理](2-RokidDocument/3-LinuxDeviceGuide/service_manager_systemd.md) -->
   <!-- * [语音应用管理](2-RokidDocument/3-LinuxDeviceGuide/application_manager_serivce.md) -->
   <!-- * [音频服务框架](2-RokidDocument/3-LinuxDeviceGuide/audio_framework_pulseaudio.md) -->
-  * [TTS服务](2-RokidDocument/3-LinuxDeviceGuide/tts_serivce.md)
   <!-- * [Led阵列](2-RokidDocument/3-LinuxDeviceGuide/light_serivce.md) -->
   <!-- * [Mic阵列](2-RokidDocument/3-LinuxDeviceGuide/mic_array_hal.md) -->
   <!-- * [按键触控输入](2-RokidDocument/3-LinuxDeviceGuide/input_serivce.md) -->
   <!-- * [蓝牙服务](2-RokidDocument/3-LinuxDeviceGuide/bluetooth_serivce.md) -->
   <!-- * [电量服务](2-RokidDocument/3-LinuxDeviceGuide/battery_serivce.md) -->
-  * [语音应用包管理](2-RokidDocument/3-LinuxDeviceGuide/package_manager_serivce.md)
   <!-- * [媒体播放库](2-RokidDocument/3-LinuxDeviceGuide/media_player.md) -->
   <!-- * [配网服务](2-RokidDocument/3-LinuxDeviceGuide/network_config_service.md) -->
-  * [Node.js开发者生态](2-RokidDocument/3-LinuxDeviceGuide/nodejs_ecosystem.md)
   <!-- * [OTA升级](2-RokidDocument/3-LinuxDeviceGuide/ota.md) -->
 
 ### API REFERENCE
