@@ -45,7 +45,7 @@
     "user_says":[
         "..."
         ]
-  }
+  },
     {
     "intent": "nicedrink"
     }
