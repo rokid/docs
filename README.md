@@ -32,8 +32,16 @@ Rokid开发者社区文档，旨在帮助开发者更好的使用社区提供的
 * [Rokid Android SDK 接入指南](2-RokidDocument/2-EnableVoice/rokid-sdk-tutorial.md)
 
 ### Linux 设备接入
-* [Linux 设备开发引导](2-RokidDocument/3-LinuxDeviceGuide/linux_openvoice_guide.md)
-
+* [Linux 语音系统介绍](2-RokidDocument/3-LinuxDeviceGuide/linux_arch.md)
+        * [如何获取代码](2-RokidDocument/3-LinuxDeviceGuide/how_to_get_code.md)
+        * [C/C++编程指南](2-RokidDocument/3-LinuxDeviceGuide/linux_cpp_tutorial.md)
+                * [PulseAudio音频框架](2-RokidDocument/3-LinuxDeviceGuide/audio_framework_pulseaudio.md)
+                * [TTS服务](2-RokidDocument/3-LinuxDeviceGuide/tts_serivce.md) 
+        * [Node.js编程指南](2-RokidDocument/3-LinuxDeviceGuide/linux_nodejs_tutorial.md)
+* [开发板列表](2-RokidDocument/3-LinuxDeviceGuide/board/board_list.md)
+        * [Amlogic/A113](2-RokidDocument/3-LinuxDeviceGuide/board/amlogic/a113.md)
+        * [Amlogic/S905D](2-RokidDocument/3-LinuxDeviceGuide/board/amlogic/s905d.md)
+ 
 ### API REFERENCE
 * [Rokid 技能协议文档](3-ApiReference/cloud-app-development-protocol_cn.md)
 * [拦截器接口文档](3-ApiReference/rokid-interceptor.md)
