@@ -27,25 +27,8 @@
 * [获取认证文件](2-RokidDocument/2-EnableVoice/get-the-certification-file.md)
 * [Rokid Android SDK 接入指南](2-RokidDocument/2-EnableVoice/rokid-sdk-tutorial.md)
 
-### Linux 设备接入
-* [Linux 设备开发引导](2-RokidDocument/3-LinuxDeviceGuide/linux_openvoice_guide.md)
-  <!-- * [云端交互SDK(Speech)](2-RokidDocument/3-LinuxDeviceGuide/speech_sdk.md) -->
-  <!-- * [设备拾音SDK(BSiren)](2-RokidDocument/3-LinuxDeviceGuide/blacksiren_sdk.md) -->
-  <!-- * [设备拾音服务](2-RokidDocument/3-LinuxDeviceGuide/openvoice_proc_service.md) -->
-  <!-- * [服务管理](2-RokidDocument/3-LinuxDeviceGuide/service_manager_systemd.md) -->
-  <!-- * [语音应用管理](2-RokidDocument/3-LinuxDeviceGuide/application_manager_serivce.md) -->
-  <!-- * [音频服务框架](2-RokidDocument/3-LinuxDeviceGuide/audio_framework_pulseaudio.md) -->
-  * [TTS服务](2-RokidDocument/3-LinuxDeviceGuide/tts_serivce.md)
-  <!-- * [Led阵列](2-RokidDocument/3-LinuxDeviceGuide/light_serivce.md) -->
-  <!-- * [Mic阵列](2-RokidDocument/3-LinuxDeviceGuide/mic_array_hal.md) -->
-  <!-- * [按键触控输入](2-RokidDocument/3-LinuxDeviceGuide/input_serivce.md) -->
-  <!-- * [蓝牙服务](2-RokidDocument/3-LinuxDeviceGuide/bluetooth_serivce.md) -->
-  <!-- * [电量服务](2-RokidDocument/3-LinuxDeviceGuide/battery_serivce.md) -->
-  * [语音应用包管理](2-RokidDocument/3-LinuxDeviceGuide/package_manager_serivce.md)
-  <!-- * [媒体播放库](2-RokidDocument/3-LinuxDeviceGuide/media_player.md) -->
-  <!-- * [配网服务](2-RokidDocument/3-LinuxDeviceGuide/network_config_service.md) -->
-  * [Node.js开发者生态](2-RokidDocument/3-LinuxDeviceGuide/nodejs_ecosystem.md)
-  <!-- * [OTA升级](2-RokidDocument/3-LinuxDeviceGuide/ota.md) -->
+### Linux设备接入
+* [RokidOS 设备开发文档](https://rokid.github.io/rokidos-linux-docs/)
 
 ### API REFERENCE
 * [Rokid 技能协议文档](3-ApiReference/cloud-app-development-protocol_cn.md)
