@@ -86,6 +86,7 @@ Http Hearder中相关内容的示例如下：
         "deviceType": "device type",
         "deviceId": "010116000100",
         "masterId": "设备主人ID",
+        "voicetrigger": "设备当前的激活词",
         "locale": "zh-cn",
         "timestamp": 1478009510909
       },
@@ -229,6 +230,7 @@ Http Hearder中相关内容的示例如下：
     "deviceType":"device type",
     "deviceId": "010116000100",
     "masterId": "设备主人ID",
+    "voicetrigger": "设备当前的激活词",
     "locale": "zh-cn",
     "timestamp": 1478009510909
 }
@@ -240,6 +242,7 @@ Http Hearder中相关内容的示例如下：
 | deviceType    | string         | *该生产商设定的设备型号*  |
 | deviceId    | string         | *该型号下的设备ID*  |
 | masterId    | string         | *对应设备的主人ID*  |
+|voicetrigger|string|*对应设备当前的激活词*|
 | locale    | string         | *国家及语言，标准locale格式*  |
 | timestamp    | long         | *当前时间，unix timestamp*  |
 
@@ -406,7 +409,7 @@ slots是对象类型，含有如下两个字段：
 	* **Voice.FINISHED** - 当Voice停止是发生，此处停止可能是被打断，可能是播放完成，也可能是播放失败，但都作为统一的事件抛出。
 	* **Voice.FAILED** - 当Voice播放失败时发生。
 	* **Media.STARTED** - 当MediaPlayer开始播放时发生。
-	* **Media.PAUSED** - 当MediaPlayer中途停止时发生。
+	* **Media.PAUSED** - 当MediaPlayer暂停时发生。
 	* **Media.FINISHED** - 当播放内容结束时发生。
 	* **Media.TIMEOUT** - 在媒体播放过程中因为网络慢等原因导致的卡顿持续5s后发生。
 	* **Media.FAILED** - 当播放器加载音频资源失败时发生。
@@ -514,9 +517,58 @@ slots是对象类型，含有如下两个字段：
 * **version** - 表明了Response协议的版本，必须由 *CloudApp* 填充。当前协议版本是 `2.0.0`.
 * **session** - 表示当前应用的session，与Request中的信息一致，*CloudApp* 可以在 *attributes* 里填充自己需要的上下文信息用于后面的请求。
 * **response** - 返回给 *CloudAppClient* 的Response内容。包括了 `card` 和 `action` 两个部分。
-    * **card** - 用于向Rokid App推送push消息。目前仅仅支持用于第三方应用授权的`ACCOUNT_LINK`类型，更多card功能类型将在后续更新。
 
-#### 3.2 Action定义
+#### 3.2 Card定义
+Card 用于向 Rokid App 推送 push 消息。目前支持两种卡片类型：
+
+- 用于第三方应用授权的`ACCOUNT_LINK`类型
+- 用于展示若琪向用户发出对话内容的`chat`类型
+
+更多card功能类型将在后续更新。
+
+##### 3.2.1 Account_link
+Account_link 类型将会向 Rokid App 发送一张账户授权的卡片，用于用户使用Rokid账号进行Oauth登录。如下：
+
+```json
+{
+    "response": {
+        "card" : {
+          "type" : "ACCOUNT_LINK",
+        },
+        "action": {···},
+        ···
+    }
+}
+```
+
+| 字段               | 类型            | 可能值 |
+|:-----------------:|:---------------:|:---------------|
+| type           | string          | *ACCOUNT_LINK*  |
+
+
+##### 3.2.2 Chat
+Chat 类型将会向 Rokid App 发送一张无标题的纯文本卡片，用于展示若琪向用户说出的TTS内容。如下：
+
+```json
+{
+    "response": {
+        "card" : {
+          "type" : "chat",
+          "content" : "自定义词汇"
+        },
+        "action": {···},
+        ···
+    }
+}
+```
+
+| 字段               | 类型            | 可能值 |
+|:-----------------:|:---------------:|:---------------|
+| type           | string          | *chat*  |
+| content           | string          | *需要在手机APP收到的卡片中展示的TTS语句*  |
+
+
+#### 3.3 Action定义
 
 Action 中最关键的部分是`directives`，其中包含：
 
@@ -571,7 +623,7 @@ Action 中最关键的部分是`directives`，其中包含：
 * **directives** - 表明此次返回中需要让设备执行的指令。当前包含`voice`, `media`, `confirm`, `pickup` 四种类型。
 
 
-##### 3.2.1 Voice
+##### 3.3.1 Voice
 
 *Voice* 定义了 *CloudApp* 返回的语音交互内容。具体定义如下：
 
@@ -596,7 +648,7 @@ Action 中最关键的部分是`directives`，其中包含：
 * **disableEvent**-表示当前这个Voice执行过程中是否需要关闭Event事件，可以不传，默认**false**表示接收Voice的EventRequest；
 * **item** - 定义了voice的具体内容，将会在 *3.2.1.1* 中详细描述。
 
-###### 3.2.1.1 Item
+###### 3.3.1.1 Item
 
 Item定义了voice的具体内容。
 
@@ -615,7 +667,7 @@ Item定义了voice的具体内容。
 * **itemId** - 定义了播报内容的ID，当disableEvent=false时，VoiceEvent会在拓展字段中带上itemId。
 * **tts** - 定义了需要播报的TTS内容。
 
-##### 3.2.2 Media
+##### 3.3.2 Media
 
 Media 用来播放CloudApp返回的流媒体内容。有 *audio* 和 *video* 两种类型，目前第一版暂时只对 *audio* 作了支持，后续会支持 *video*。
 
@@ -648,7 +700,7 @@ Media 用来播放CloudApp返回的流媒体内容。有 *audio* 和 *video* 两
 * **disableEvent**-表示当前这个Media执行过程中是否需要关闭Event事件，可以不传，默认**false**表示接收Media的EventRequest
 * **item** - 定义了具体的播放内容，如下：
 
-###### 3.2.2.1 Item
+###### 3.3.2.1 Item
 
 ```json
 "item": {
@@ -674,7 +726,7 @@ Media 用来播放CloudApp返回的流媒体内容。有 *audio* 和 *video* 两
 * **url** - 为MediaPlayer指明可用的流媒体播放链接。
 * **offsetInMilliseconds** - 毫秒数值，告诉MediaPlayer开始播放的位置。有效范围从0到歌曲整体播放时长。
 
-##### 3.2.3 Confirm
+##### 3.3.3 Confirm
 表明此次返回中，是否存在需要confirm的内容。[了解用法指南](/2-RokidDocument/1-SkillsKit/define-voice-interaction.html#confirm用法指南)。
 
 ```json
@@ -700,7 +752,7 @@ Media 用来播放CloudApp返回的流媒体内容。有 *audio* 和 *video* 两
 * **optionWords**：可选项。表明此次返回中在confirmSlot之上需要新增的confirm选项，用于需要动态新增confirm内容的场景。
 
 
-##### 3.2.4 Pickup
+##### 3.3.4 Pickup
 
 Pickup 用来控制拾音状态（可以理解为手机app上的对话框）。当CloudApp没有可执行的内容是，会执行Pickup，如果Pickup为空，则按照Pickup.enable=false执行。
 
