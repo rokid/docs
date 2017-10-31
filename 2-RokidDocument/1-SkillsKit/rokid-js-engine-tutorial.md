@@ -23,6 +23,7 @@
  * [3.4setMedia相关配置](#34-setmedia配置media信息)
  * [3.5setConfirm相关配置](#35-setconfirm配置confirm信息)
  * [3.6setCard相关配置](#36-setcard配置card信息)
+ * [3.7setPickup相关配置](#37-setpickup配置pickup信息)
 * [4.在Rokid对象中封装的工具](#4-在rokid对象中封装的工具)
 * [5.关于调试](#5-关于调试)
 * [6.关于日志](#6-关于日志)
@@ -274,6 +275,24 @@ this.setCard('ACCOUNT_LINK');
 ##### 开发者相关字段（setCard）
 
 setCard的参数为string类型，目前仅支持ACCOUNT_LINK。
+
+#### 3.7 setPickup配置pickup信息
+
+```javascript
+this.setCard({
+	enable: true,
+	durationInMilliseconds: 1000
+});
+```
+
+##### 开发者相关字段（setPickup）
+
+setPickup时。
+
+| 字段       |   类型 | 默认值 | 可选值 |
+| :-------- |--------:| --: | :--: | 
+| enable | boolean | 无（必填）| true/false |
+| durationInMilliseconds | number | 6000（选填）| 0至6000 |
 
 具体字段定义可参见：<https://rokid.github.io/docs/3-ApiReference/cloud-app-development-protocol_cn.html#3-response>
 
