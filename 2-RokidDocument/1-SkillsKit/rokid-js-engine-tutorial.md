@@ -299,13 +299,20 @@ setPickup时。
 ### 4. 在Rokid对象中封装的工具
 
 ##### 开发者可直接调用封装在Rokid对象中的所有工具方法，现有如下：
+
+可用参数：
+
+| 获取字段       |   获取方式 | 备注 |
+| :-------- |--------:| :--: |
+| sentence | Rokid.param.request.content.sentence | 用户说的话|
+| intent | Rokid.param.request.content.intent | 用户的意图 |
+| slot | Rokid.param.request.content.slots | 获取到的是slots的value值 |
+| session | Rokid.param.session.attributes | 暂时只支持在设备上测试时获取 |
+| userId | Rokid.param.context.user.userId | 暂时只支持在设备上测试时获取 |
+
+可用函数：
 - Rokid.handler(event,contxt,callback):用于调用Rokid-sdk。
 - Rokid.request(options,callback):异步请求，具体使用方法参见<https://www.npmjs.com/package/request>。
-- Rokid.param:可根据“集成测试”中服务请求的数据结构获取一些数据。如：
-	- slots：Rokid.param.request.content.slots
-	- intent: Rokid.param.request.content.intent
-	- session: Rokid.param.session.attributes
-	- userId: Rokid.param.context.user.userId（只有在设备上测试才能获取，集成测试中获取不到）
 - Rokid.dbServer:开发者可用此对象中的get，set，delete方法进行数据增删改查。
 	- get:Rokid.dbServer.get(key, callback); key必须为string类型
 	- set:Rokid.dbServer.set(key, value, callback); key,value必须为string类型。key值开发者可自定义（若每个用户都可能存取数据，则推荐使用userId）。
