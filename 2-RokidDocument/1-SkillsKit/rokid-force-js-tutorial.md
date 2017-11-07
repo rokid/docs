@@ -297,9 +297,9 @@ setCard目前支持ACCOUNT_LINK(content字段不必填)，CHAT(content字段必�
 #### 3.7 setPickup配置pickup信息
 
 ```javascript
-this.setCard({
+this.setPickup({
 	enable: true,
-	durationInMilliseconds: 1000,
+	durationInMilliseconds: 6000,
 	retryTts: '请重试'
 });
 ```

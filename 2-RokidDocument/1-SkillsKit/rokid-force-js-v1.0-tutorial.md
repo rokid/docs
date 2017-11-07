@@ -268,7 +268,7 @@ this.emit(':ttsWithPickup', {
 	tts:'Hello World!',
 	pickup: {
 		enable: true,
-		durationInMilliseconds: 2000,
+		durationInMilliseconds: 6000,
 		retryTts: '请重试'
 		}
 	}, {
@@ -409,7 +409,7 @@ this.emit(':mediaWithPickup', {
 	url:'s.rokidcdn.com/temp/rokid-ring.mp3',
 	pickup:{
 		enable: true,
-		durationInMilliseconds: 2000，
+		durationInMilliseconds: 6000，
 		retryTts: '请重试'
 			}, {
 		sessionKey: {
@@ -431,7 +431,7 @@ pickup详细：
 | 字段       |   类型 | 默认值 | 可选值 |
 | :-------- |--------:| --: | :--: | 
 | enable | bolean | 无（必填）| true/false |
-| durationInMilliseconds | number | 6000（选填）| 0至10000 |
+| durationInMilliseconds | number | 6000（选填）| 0至6000 |
 | retryTts | string | 无（选填）| 不限 |
 
 
