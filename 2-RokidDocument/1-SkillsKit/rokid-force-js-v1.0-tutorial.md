@@ -1,7 +1,7 @@
-# Rokid JS Engine 使用指南V1.0
+# Rokid-Force-JS 使用指南V1.0
 
-> 欢迎使用Rokid-JS-Engine，很高兴大家可以通过编辑JS脚本来搭建技能服务。
-> 您现在阅读的是老版本的文档，我们推荐您使用Js-Engine v2.0版本进行开发，（[点此查看文档v2.0文档](./rokid-js-engine-tutorial.md)）
+> 欢迎使用Rokid-Force-JS，很高兴大家可以通过编辑JS脚本来搭建技能服务。
+> 您现在阅读的是老版本的文档，我们推荐您使用Rokid-Force-JS v2.0版本进行开发，（[点此查看文档v2.0文档](./rokid-force-js-tutorial.md)）
 
 ## 使用JS脚本更快速的开发技能
 
@@ -11,7 +11,7 @@
 
 ## 目录
 
-*  [1.本期更新（2017.09）](#1-本期更新-201709)
+*  [1.本期更新（2017.11）](#1-本期更新-201711)
 *  [2.JS脚本基本内容](#2-js脚本基本内容)
  *  [2.1固定写法部分](#21-固定写法部分)
  *  [2.2开发者编写基本内容handlers](#22-开发者编写基本内容handlers)
@@ -21,19 +21,20 @@
  * [3.1tts相关配置](#31-tts相关配置)
  * [3.2ttsWithConfirm相关配置](#32-ttswithconfirm相关配置)
  * [3.3ttsWithCard相关配置](#33-ttswithcard相关配置)
- * [3.4media相关配置](#34-media相关配置)
- * [3.5mediaWithConfirm相关配置](#35-mediawithconfirm相关配置)
- * [3.6mediaWithCard相关配置](#36-mediawithcard相关配置)
+ * [3.4ttsWithPickup相关配置](#34-ttswithpickup相关配置)
+ * [3.5media相关配置](#35-media相关配置)
+ * [3.6mediaWithConfirm相关配置](#36-mediawithconfirm相关配置)
+ * [3.7mediaWithCard相关配置](#37-mediawithcard相关配置)
+ * [3.8mediaWithPickup相关配置](#38-mediawithpickup相关配置)
 * [4.在Rokid对象中封装的工具](#4-在rokid对象中封装的工具)
 * [5.关于调试](#5-关于调试)
 * [6.关于日志](#6-关于日志)
 * [7.Sample](#7-sample)
 * [8.Q&A](#8-qa) 
 
-## 1. 本期更新-2017.09
-- request（异步请求）原本需要严格按照npm提供的方式，参数放在options.qs里，现兼容请求参数全放在url上如http://xxx.com/xxx?key=xxx&league=xxx。
-- 考虑到sync_request与request的功能重叠，且存在兼容性问题，因此取消了sync_request。
-- session改为key:object类型。
+## 1. 本期更新-2017.11
+- ttsWithCard为考虑扩展性，参数中card属性调整，从string类型改为object。object属性为type（卡片类型），content（卡片内容）。
+- confirm和pickup的新增retryTts字段，用于在confirm和pickup状态下用户语句未命中的情况下重复播放的tts。
 
 ## 2. JS脚本基本内容
 开发者可以利用编写JS脚本实现各自所需的技能意图函数实现不同的功能。
@@ -68,7 +69,9 @@ var handlers = {
             this.emit(':tts', {
                 tts: 'Hello World!'
             }, {
-                    sessionKey: 'sessionValue'
+                    sessionKey: {
+                    	key: 'xxx'
+                    }
                 });
             //正常完成意图函数时callback
             this.callback();
@@ -84,7 +87,9 @@ var handlers = {
                 itemType: 'AUDIO',
                 url: 's.rokidcdn.com/temp/rokid-ring.mp3'
             }, {
-                    sessionKey: 'sessionValue'
+                    sessionKey: {
+                    	key: 'xxx'
+                    }
                 });
         } catch (error) {
             //报错时callback错误
@@ -100,7 +105,9 @@ var handlers = {
                     confirmSlot: 'confirmSlot'
                 }
             }, {
-                    sessionKey: 'sessionValue'
+                    sessionKey: {
+                    	key: 'xxx'
+                    }
                 });
             //正常完成意图函数时callback
             this.callback();
@@ -159,7 +166,9 @@ var handlers = {
 this.emit(':tts', {
 	tts: 'Hello World!'
 }, {
-	sessionKey: 'sessionValue'
+	sessionKey: {
+			key: 'xxx'
+		}
 })
 ```
 
@@ -193,10 +202,14 @@ this.emit(':ttsWithConfirm', {
 	tts: 'Hello World!',
 	confirm: {
 		confirmIntent: 'confirmIntent',
-		confirmSlot: 'confirmSlot'
+		confirmSlot: 'confirmSlot',
+		optionWords: [],
+		retryTts: '请重试'
 		}
 	}, {
-		sessionKey: 'sessionValue'
+		sessionKey: {
+			key: 'xxx'
+		}
 	})
 ```
 
@@ -206,7 +219,7 @@ this.emit(':ttsWithConfirm', {
  
 | 字段       |   类型 | 默认值 | 可选值 |
 | :-------- |--------:| --: | :--: | 
-| confirm | object | 无（必填）| 不限 |
+| confirm | object | 无（必填）| 无 |
 
 confirm详细：
 
@@ -215,15 +228,20 @@ confirm详细：
 | confirmIntent | string | 无（必填）| 不限 |
 | confirmSlot | string | 无（必填）| 不限 |
 | optionWords | array | 无（选填）| 不限 |
+| retryTts | string | 无（选填）| 不限 |
 
 ### 3.3 ttsWithCard相关配置
 
 ```javascript
 this.emit(':ttsWithCard', {
 	tts:'Hello World!',
-	card:'ACCOUNT_LINK'
+	card: {
+		type: 'ACCOUNT_LINK'
+	}
 	}, {
-	sessionKey: 'sessionValue'
+	sessionKey: {
+			key: 'xxx'
+		}
 	})
 ```
 
@@ -233,18 +251,59 @@ this.emit(':ttsWithCard', {
  
 | 字段       |   类型 | 默认值 | 可选值 |
 | :-------- |--------:| --: | :--: | 
-| card | string | 无（必填）| ACCOUNT_LINK |
+| card | object | 无（必填）| 无 |
 
-目前仅支持ACCOUNT_LINK一种类型card
+card详细：
 
-### 3.4 media相关配置
+| 字段       |   类型 | 默认值 | 可选值 |
+| :-------- |--------:| --: | :--: | 
+| type | string | 无（必填）| ACCOUNT_LINK/CHAT |
+| content | string | 无（CHAT时必填）| 不限 |
+
+
+### 3.4 ttsWithPickup相关配置
+
+```javascript
+this.emit(':ttsWithPickup', {
+	tts:'Hello World!',
+	pickup: {
+		enable: true,
+		durationInMilliseconds: 2000,
+		retryTts: '请重试'
+		}
+	}, {
+	sessionKey: {
+			key: 'xxx'
+		}
+	})
+```
+
+##### 开发者相关字段（ttsWithPickup）
+
+ this.emit(":ttsWithPickup",{},{})第二个参数较tts增加pickup字段即可：
+ 
+| 字段       |   类型 | 默认值 | 可选值 |
+| :-------- |--------:| --: | :--: | 
+| pickup | object | 无（必填）| 无 |
+
+pickup详细：
+
+| 字段       |   类型 | 默认值 | 可选值 |
+| :-------- |--------:| --: | :--: | 
+| enable | boolean | 无（必填）| true/false |
+| durationInMilliseconds | number | 6000（选填）| 0至6000 |
+| retryTts | string | 无（选填）| 不限 |
+
+### 3.5 media相关配置
 
 ```javascript
 this.emit(':media', {
 		itemType: 'AUDIO',
 		url: 's.rokidcdn.com/temp/rokid-ring.mp3'
 	}, {
-		sessionKey: 'sessionValue'
+		sessionKey: {
+			key: 'xxx'
+		}
 	})
 ```
 
@@ -274,7 +333,7 @@ this.emit(":media",{},{})第三个参数如下（session配置项）：
 | sessionKey | string | 无 | 不限 |
 | seesionValue | string | 无 | 不限 |
 
-### 3.5 mediaWithConfirm相关配置
+### 3.6 mediaWithConfirm相关配置
 
 ```javascript
 this.emit(':mediaWithConfirm',{
@@ -282,10 +341,14 @@ this.emit(':mediaWithConfirm',{
 	url: 's.rokidcdn.com/temp/rokid-ring.mp3',
 	confirm: {
 		confirmIntent: 'confirmIntent',
-		confirmSlot: 'confirmSlot'
+		confirmSlot: 'confirmSlot',
+		optionWords: [],
+		retryTts: '请重试'
 		}
 	},{
-		sessionKey: 'sessionValue'
+		sessionKey: {
+			key: 'xxx'
+		}
 	})
 ```
 
@@ -304,16 +367,22 @@ confirm详细：
 | confirmIntent | string | 无（必填）|
 | confirmSlot | string | 无（必填）|
 | optionWords | array | 无（选填）|
+| retryTts | string | 无（选填）| 不限 |
 
-### 3.6 mediaWithCard相关配置
+### 3.7 mediaWithCard相关配置
 
 ```javascript
 this.emit(':mediaWithCard', {
 	itemType: 'AUDIO',
 	url:'s.rokidcdn.com/temp/rokid-ring.mp3',
-	card:'ACCOUNT_LINK'
+	card:{
+		type: 'CHAT',
+		content: 'xxx'
+	}
 	}, {
-		sessionKey:'sessionValue'
+		sessionKey: {
+			key: 'xxx'
+		}
 	})
 ```
 
@@ -323,9 +392,48 @@ this.emit(':mediaWithCard', {
  
 | 字段       |   类型 | 默认值 | 可选值 |
 | :-------- |--------:| --: | :--: | 
-| card | string | 无（必填）| ACCOUNT_LINK |
+| card | object | 无（必填）| 无 |
 
-目前仅支持ACCOUNT_LINK一种类型card
+card详细：
+
+| 字段       |   类型 | 默认值 | 可选值 |
+| :-------- |--------:| --: | :--: | 
+| type | string | 无（必填）| ACCOUNT_LINK/CHAT |
+| content | string | 无（CHAT时必填）| 不限 |
+
+### 3.8 mediaWithPickup相关配置
+
+```javascript
+this.emit(':mediaWithPickup', {
+	itemType: 'AUDIO',
+	url:'s.rokidcdn.com/temp/rokid-ring.mp3',
+	pickup:{
+		enable: true,
+		durationInMilliseconds: 2000，
+		retryTts: '请重试'
+			}, {
+		sessionKey: {
+			key: 'xxx'
+		}
+	})
+```
+
+##### 开发者相关字段（mediaWithPickup）
+
+ this.emit(":mediaWithPickup",{},{})第二个参数较media增加pickup字段即可：
+ 
+| 字段       |   类型 | 默认值 | 可选值 |
+| :-------- |--------:| --: | :--: | 
+| pickup | object | 无（必填）| 无 |
+
+pickup详细：
+
+| 字段       |   类型 | 默认值 | 可选值 |
+| :-------- |--------:| --: | :--: | 
+| enable | bolean | 无（必填）| true/false |
+| durationInMilliseconds | number | 6000（选填）| 0至10000 |
+| retryTts | string | 无（选填）| 不限 |
+
 
 具体字段定义可参见：<https://rokid.github.io/docs/3-ApiReference/cloud-app-development-protocol_cn.html#3-response>
 
@@ -350,6 +458,7 @@ this.emit(':mediaWithCard', {
 	- get:Rokid.dbServer.get(key, callback); key必须为string类型
 	- set:Rokid.dbServer.set(key, value, callback); key,value必须为string类型。key值开发者可自定义（若每个用户都可能存取数据，则推荐使用userId）。
 	- delete:Rokid.dbServer.delete(key,callback); key必须为string类型
+
 
 数据存取基本操作如下：
 
@@ -444,23 +553,6 @@ var handlers = {
    this.callback(error);
   }
     },
-    'sync_NewsRequest': function () {
-     //同步请求
-     try{
-   var result = Rokid.sync_request('GET', 'https://www.toutiao.com/hot_words/');
-         //buffer处理
-         result = Rokid.resHandler(result); 
-         var resStr = '';
-         result.forEach(function(item){
-         //根据返回结果进行不同处理。在此返回的一个数组，因此forEach处理。
-             resStr += item + ','
-         })
-         this.emit(':tts', { tts: resStr });
-         this.callback();
-  }catch(error){
-   this.callback(error);
-  }
-    },
     'ansync_NewsRequest': function () {
      //异步请求，注意this指向问题
         var ttsRes = '', self = this;
@@ -510,6 +602,6 @@ A：开发者使用的请求地址，其返回体必须是json格式的。比如
 A：首先确保request的所有参数均正确。其次，可用postman进行请求模拟，需要严格按照postman提供的nodejs-request的请求。
 
 ### 9. 2.0版本补充说明
-希望开发者自行开发时一句V2.0SDK进行开发。
-SDK-V2.0说明文档：<https://rokid.github.io/docs/2-RokidDocument/1-SkillsKit/rokid-js-engine-tutorial.html>
+希望开发者自行开发时按照V2.0SDK进行开发。
+SDK-V2.0说明文档：<https://developer.rokid.com/docs/2-RokidDocument/1-SkillsKit/rokid-js-engine-tutorial.html>
 

@@ -1,7 +1,7 @@
-# Rokid JS Engine 使用指南V2.0
+# Rokid-Force-JS 使用指南V2.0
 
-> 欢迎使用Rokid-JS-Engine，很高兴大家可以通过编辑JS脚本来搭建技能服务。
-> Tips：为对老版本(V1.0)技能的过渡性支持，本次Js Engine V1.0 也进行了同步更新（[点此查看文档v1.0文档](./rokid-js-engine-tutorial-v1.0.md)），但在下个版本起V1.0视情况更新，或滞后于V2.0，推荐开发者使用V2.0进行开发。
+> 欢迎使用RFS-JS，很高兴大家可以通过编辑JS脚本来搭建技能服务。
+> Tips：为对老版本(V1.0)技能的过渡性支持，本次Rokid-Force-JS V1.0 也进行了同步更新（[点此查看文档v1.0文档](./rokid-force-js-v1.0-tutorial.md)），但在下个版本起V1.0视情况更新，或滞后于V2.0，推荐开发者使用V2.0进行开发。
 
 ## 使用JS脚本更快速的开发技能
 
@@ -11,7 +11,7 @@
 
 ### 目录
 
-*  [1.本期更新（2017.09）](#1-本期更新-201709)
+*  [1.本期更新（2017.11）](#1-本期更新-201711)
 *  [2.JS脚本基本内容](#2-js脚本基本内容)
  *  [2.1固定写法部分](#21-固定写法部分)
  *  [2.2开发者编写基本内容handlers](#22-开发者编写基本内容handlers)
@@ -30,11 +30,17 @@
 * [7.Sample](#7-sample)
 * [8.Q&A](#8-qa) 
 
-### 1. 本期更新-2017.09
-- request（异步请求）原本需要严格按照npm提供的方式，参数放在options.qs里，现兼容请求参数全放在url上如http://xxx.com/xxx?key=xxx&league=xxx。
-- 考虑到sync_request与request的功能重叠，且存在兼容性问题，因此取消了sync_request。
-- session改为key:object类型。
-
+### 1. 本期更新-2017.10
+- 本期更新主要在于新建与修改技能配置（Rokid Force）的方式，将RFS（技能配置系统）解耦出skill。
+	- RFS（Rokid-Force-System）<https://developer-rfs.rokid.com>
+	- 在创建skill过程中只需在“配置”后端服务中选择需要关联的技能配置即可
+	- 可在技能上线后更灵活的切换线上技能配置。
+	- skill的“配置”后端服务中“查看技能历史日志”是查看当前技能的历史日志。
+	- RFS中“更多操作”中“查看技能历史日志”是查看当前技能配置的历史日志。
+- 协议调整
+	- setCard配置card信息新增CHAT类型。
+	- setCard参数变更，从string变为object{type(card类型)，content(card内容)}
+	- confirm和pickup的新增retryTts字段，用于在confirm和pickup状态下用户语句未命中的情况下重复播放的tts。
 ### 2. JS脚本基本内容
 开发者可以利用编写JS脚本实现各自所需的技能意图函数实现不同的功能。
 
@@ -95,7 +101,8 @@ var handlers = {
             });
             this.setConfirm({
                 confirmIntent: 'confirmIntent',
-                confirmSlot: 'confirmSlot'
+                confirmSlot: 'confirmSlot',
+                retryTts: '请重试'
             });
             //正常完成意图函数时emit(':done')
             this.emit(':done');
@@ -250,7 +257,8 @@ setMedia时"type"和"url"均必填且为string类型。
 this.setConfirm({
 	confirmIntent: 'xxx',
 	confirmSlot:'xxx',
-	optionWords: []
+	optionWords: ['xxx', 'xxx'],
+	retryTts: '请重试'
 });
 ```
 
@@ -264,26 +272,38 @@ setConfirm时"confirmIntent"和"confirmSlot"均必填且为string类型。
 | confirmIntent | string | 必填 | 无 | 对应于相关语音交互 |
 | confirmSlot | string | 必填 | 无 | 对应于相关语音交互 |
 | optionWords | array | 选填 | 无 | 不限 |
+| retryTts | string | 无（选填）| 不限 |
 
 #### 3.6 setCard配置card信息
 
 ```javascript
-this.setCard('ACCOUNT_LINK');
+this.setCard({
+	type: 'CHAT',
+	content: 'xxx'
+});
 ```
 
 
 ##### 开发者相关字段（setCard）
 
-setCard的参数为string类型，目前仅支持ACCOUNT_LINK。
+setCard目前支持ACCOUNT_LINK(content字段不必填)，CHAT(content字段必填)。
+
+| 字段       |   类型 | 必要性 | 默认值 | 可选值 |
+| :-------- |--------:| ---:| --: | :--: |
+| type | string | 必填 | 无 | ACCOUNT_LINK/CHAT |
+| content | string | CHAT时必填 | 无 | 不限 |
+
 
 #### 3.7 setPickup配置pickup信息
 
 ```javascript
 this.setCard({
 	enable: true,
-	durationInMilliseconds: 1000
+	durationInMilliseconds: 1000,
+	retryTts: '请重试'
 });
 ```
+
 
 ##### 开发者相关字段（setPickup）
 
@@ -293,6 +313,8 @@ setPickup时。
 | :-------- |--------:| --: | :--: | 
 | enable | boolean | 无（必填）| true/false |
 | durationInMilliseconds | number | 6000（选填）| 0至6000 |
+| retryTts | string | 无（选填）| 不限 |
+
 
 具体字段定义可参见：<https://rokid.github.io/docs/3-ApiReference/cloud-app-development-protocol_cn.html#3-response>
 
@@ -317,6 +339,7 @@ setPickup时。
 	- get:Rokid.dbServer.get(key, callback); key必须为string类型
 	- set:Rokid.dbServer.set(key, value, callback); key,value必须为string类型。key值开发者可自定义（若每个用户都可能存取数据，则推荐使用userId）。
 	- delete:Rokid.dbServer.delete(key,callback); key必须为string类型
+
 
 数据存取基本操作如下：
 
@@ -445,7 +468,8 @@ var handlers = {
             this.setConfirm({
                 confirmIntent: 'question_one',
                 confirmSlot: 'question_one_slot',
-                optionWords: ['xxx', 'xxx']
+                optionWords: ['xxx', 'xxx'],
+                retryTts: '请重试'
             })
             this.emit(':done');
         } catch (error) {

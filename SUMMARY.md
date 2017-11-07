@@ -16,8 +16,9 @@
 * [Rokid 预定义词表](2-RokidDocument/1-SkillsKit/rokid-bult-in-slots.md)
 * [Rokid NLP正则表达式使用指南](2-RokidDocument/1-SkillsKit/rokid-regular-expression.md)
 * [Rokid OAuth 指南](2-RokidDocument/1-SkillsKit/rokid-oauth.md)
-* [Rokid JS Engine v2.0 使用指南](2-RokidDocument/1-SkillsKit/rokid-js-engine-tutorial.md)
-    * [Rokid JS Engine v1.0 使用指南](2-RokidDocument/1-SkillsKit/rokid-js-engine-tutorial-v1.0.md)
+* [Rokid Force System 使用指南](2-RokidDocument/1-SkillsKit/rokid-force-system-tutorial.md)
+    * [Rokid Force - JS v2.0 使用指南](2-RokidDocument/1-SkillsKit/rokid-force-js-tutorial.md)
+    * [Rokid Force - JS v1.0 使用指南](2-RokidDocument/1-SkillsKit/rokid-force-js-v1.0-tutorial.md)
 * [在技能中使用SSML](2-RokidDocument/1-SkillsKit/ssml-document.md)
 * [Rokid 语音交互设计指南](2-RokidDocument/1-SkillsKit/rokid-voice-interaction-guidelines.md)
 * [Rokid 示例技能](2-RokidDocument/1-SkillsKit/skill-sample.md)
@@ -54,3 +55,5 @@
 * [Rokid开发者社区官网](https://developer.rokid.com/)
 * [Rokid 官网](https://www.rokid.com/)
 * [Rokid 智能家居](https://www.rokid.com/smarthome/)
+
+
