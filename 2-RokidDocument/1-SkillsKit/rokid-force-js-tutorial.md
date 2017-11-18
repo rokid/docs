@@ -218,7 +218,7 @@ setTts时"tts"属性必填且为string或number类型,可为空字符串。
 
 | 字段       |   类型 | 必要性 | 默认值 | 可选值 |
 | :-------- |--------:| ---:| --: | :--: |
-| action | string | 选填 | PLAY | PLAY/PAUSE/RESUME/STOP |
+| action | string | 选填 | PLAY | PLAY/STOP |
 | disableEvent | boolean | 选填 | false| true/false |
 | itemId | string | 选填 | 无 | 不限 |
 | tts | string/number | 必填 | 无 | 不限(值可为空字符串) |
@@ -232,8 +232,7 @@ this.setMedia({
 	itemId: 'xxx',
 	token: 'xxx',
 	type: 'AUDIO',
-	url: 'media streaming url',
-	offsetInMilliseconds: 0
+	url: 'media streaming url'
 });
 ```
 
@@ -247,9 +246,8 @@ setMedia时"type"和"url"均必填且为string类型。
 | disableEvent | boolean | 选填 | false| true/false |
 | itemId | string | 选填 | 无 | 不限 |
 | token | string | 选填 | 无 | 不限 |
-| type | string | 必填 | 无 | AUDIO/VIDEO |
+| type | string | 必填 | 无 | AUDIO |
 | url | string | 必填 | 无 | 不限 |
-| offsetInMilliseconds | number | 0 | 毫秒数值 |
 
 #### 3.5 setConfirm配置confirm信息
 
@@ -272,7 +270,7 @@ setConfirm时"confirmIntent"和"confirmSlot"均必填且为string类型。
 | confirmIntent | string | 必填 | 无 | 对应于相关语音交互 |
 | confirmSlot | string | 必填 | 无 | 对应于相关语音交互 |
 | optionWords | array | 选填 | 无 | 不限 |
-| retryTts | string | 无（选填）| 不限 |
+| retryTts | string | 选填 | 无 | 不限 |
 
 #### 3.6 setCard配置card信息
 
@@ -309,11 +307,11 @@ this.setPickup({
 
 setPickup时。
 
-| 字段       |   类型 | 默认值 | 可选值 |
-| :-------- |--------:| --: | :--: | 
-| enable | boolean | 无（必填）| true/false |
-| durationInMilliseconds | number | 6000（选填）| 0至6000 |
-| retryTts | string | 无（选填）| 不限 |
+| 字段       |   类型 | 必要性 | 默认值 | 可选值 |
+| :-------- |--------:| --:| --: | :--: | 
+| enable | boolean | 选填| false | true/false |
+| durationInMilliseconds | number | 选填| 6000 | 0至6000 |
+| retryTts | string | 选填| 不限 | 不限 |
 
 
 具体字段定义可参见：<https://rokid.github.io/docs/3-ApiReference/cloud-app-development-protocol_cn.html#3-response>
@@ -328,8 +326,8 @@ setPickup时。
 | :-------- |--------:| :--: |
 | sentence | Rokid.param.request.content.sentence | 用户说的话|
 | intent | Rokid.param.request.content.intent | 用户的意图 |
-| slot | Rokid.param.request.content.slots | 获取到的是slots的value值 |
-| session | Rokid.param.session.attributes | 暂时只支持在设备上测试时获取 |
+| slot | Rokid.param.request.content.slots.xxx | 获取到的是slot(xxx)的value值 |
+| session | Rokid.param.session.attributes.xxx | 暂时只支持在设备上测试时获取 |
 | userId | Rokid.param.context.user.userId | 暂时只支持在设备上测试时获取 |
 
 可用函数：
