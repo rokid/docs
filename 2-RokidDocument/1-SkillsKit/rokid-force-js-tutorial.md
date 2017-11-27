@@ -30,7 +30,7 @@
 * [7.Sample](#7-sample)
 * [8.Q&A](#8-qa) 
 
-### 1. 本期更新-2017.10
+### 1. 本期更新-2017.11
 - 本期更新主要在于新建与修改技能配置（Rokid Force）的方式，将RFS（技能配置系统）解耦出skill。
 	- RFS（Rokid-Force-System）<https://developer-rfs.rokid.com>
 	- 在创建skill过程中只需在“配置”后端服务中选择需要关联的技能配置即可
