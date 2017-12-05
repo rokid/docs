@@ -28,9 +28,6 @@
 * [获取认证文件](2-RokidDocument/2-EnableVoice/get-the-certification-file.md)
 * [Rokid Android SDK 接入指南](2-RokidDocument/2-EnableVoice/rokid-sdk-tutorial.md)
 
-### [Linux设备接入](https://rokid.github.io/rokidos-linux-docs/)
-* [RokidOS 设备开发文档](https://rokid.github.io/rokidos-linux-docs/)
-
 ### API REFERENCE
 * [Rokid 技能协议文档](3-ApiReference/cloud-app-development-protocol_cn.md)
 * [拦截器接口文档](3-ApiReference/rokid-interceptor.md)
@@ -41,6 +38,9 @@
 ### 设计语音产品
 * [Rokid 语音产品硬件设计指南](2-RokidDocument/2-EnableVoice/rokid-hardware-design-guide.md)
 * [Rokid 硬件交互设计指南](2-RokidDocument/2-EnableVoice/rokid-hardware-ux-design-guidelines.md)
+
+### [Linux设备接入](https://rokid.github.io/rokidos-linux-docs/)
+* [RokidOS 设备开发文档](https://rokid.github.io/rokidos-linux-docs/)
 
 ### 智能家居开发
 * [Rokid 智能家居开发文档](https://rokid.github.io/rokid-homebase-docs/)
