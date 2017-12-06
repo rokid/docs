@@ -1,6 +1,15 @@
 ## Cloud App 开发协议
 ### Rokid 开放平台
-版本：1.0.0-alpha
+版本：1.0.1-alpha
+
+### 更新内容
+* 细化了attributes字段的描述以及说明
+* 增加了开发者接收到未知Event事件时的建议处理
+* 增加了系统级Intent的描述
+* 增加了IntentRequst中的sentence字段
+* 增加了MasterId和UserId的区别
+* 补充了Slot字段的描述
+* 增加了~~Skill.EXIT~~事件的说明
 
 ### 大纲
 
@@ -67,24 +76,24 @@ Http Hearder中相关内容的示例如下：
   },
   "context": {
     "application": {
-      "applicationId": "application id for requested CloudApp",
+      "applicationId": "skill本身的Id",
       "media": {
-        "state": "IDLE",
-        "itemId": "111",
-        "token": "12345",
-        "progress": "111",
-        "duration": "123"
+        "state": "PLAYING/PAUSED/IDLE",
+        "itemId": "Skill响应的MediaId",
+        "token": "Skill响应的MediaToken",
+        "progress": "当前的播放进度单位毫秒",
+        "duration": "当前Meida的总长度"
         },
      "voice": {
-        "state": "IDLE",
-        "itemId": "111"
+        "state": "PLAYING/PAUSED/IDLE",
+        "itemId": "Skill响应的VoiceId"
         }
     },
     "device": {
       "basic": {
-        "vendor": "vendor id",
-        "deviceType": "device type",
-        "deviceId": "010116000100",
+        "vendor": "注册生产商ID",
+        "deviceType": "该生产商设定的设备型号",
+        "deviceId": "该型号下的设备ID",
         "masterId": "设备主人ID",
         "voicetrigger": "设备当前的激活词",
         "locale": "zh-cn",
@@ -113,12 +122,12 @@ Http Hearder中相关内容的示例如下：
       }
     },
     "user": {
-      "userId": "user id string"
+      "userId": "当前用户的ID"
     }
   },
   "request": {
-    "reqType": "intent / event",
-    "reqId": "string",
+    "reqType": "INTENT / EVENT",
+    "reqId": "当前请求的Id",
     "content": {
       "intent": "play_random",
       "slots": {
@@ -153,8 +162,8 @@ Http Hearder中相关内容的示例如下：
 | attributes             | key-object map          | *一个string-object map*         |
 
 * **sessionId** - 每次会话的唯一ID，由系统填充
-* **newSession** - 向CloudApp表明此次会话是新的会话还是已经存在的会话
-* **attributes** - 为*CloudApp*提供*attributes*字段留保存上下文信息的字段
+* **newSession** - 向CloudApp表明此次会话是新的会话还是已经存在的会话，true为新会话，false为老会话
+* **attributes** - 为*CloudApp*提供*attributes*字段留保存上下文信息的字段，开发者目前只能通过INTENT类型的Request拿到attributes信息，EVENT类型的Reuqest还不能拿到，后续我们会做检修改，attributes是一个key-object map 类型数据开发者可以自定义传key和object，上述json只是一个样例，并不代表完全限制智能传递type和value。
 
 #### 2.3 Context定义
 
@@ -318,7 +327,7 @@ Http Hearder中相关内容的示例如下：
 
 ##### 2.3.3 UserInfo
 
-UserInfo 展示了与当前设备绑定的用户信息，通常是设备对应手机应用的账号。
+UserInfo 展示了与当前的用户信息，通常是设备对应手机应用的账号。
 
 ```json
 "user": {
@@ -330,6 +339,7 @@ UserInfo 展示了与当前设备绑定的用户信息，通常是设备对应�
 |:-----------------:|:---------------:|:---------------|
 | userId  | string         | *用户ID*  |
 
+*注意：该用户id和MasterId的区别在于，用户Id为当前使用者的Id,MasterId为机器主人的ID，机器主人不一定是当前使用的用户，目前UserId和MasterId是一致的，但后期上了声纹以后该两者会不一致*
 
 #### 2.4 Request定义
 
@@ -350,7 +360,7 @@ UserInfo 展示了与当前设备绑定的用户信息，通常是设备对应�
 | content  | request content object         | *IntentRequest 或 EventRequest的对象*  |
 
 * **reqType** - 表明请求的类型： **INTENT** 和 **EVENT** 分别对应 *IntentRequest* 和 *EventRequest*。
-* **reqId** - 每次请求都会对应一个唯一ID用以区分每一次的请求。请求ID将会与返回ID一一对应。
+* **reqId** - 每次请求都会对应一个唯一ID用以区分每一次的请求。
 * **content** - **IntentRequest** 和 **EventRequest** 对应的具体内容，下面会具体介绍。
 
 ##### 2.4.1 IntentRequest
@@ -370,11 +380,74 @@ IntentRequest 是基于 *NLP* 的结果产生的请求，其中包括了 *NLP* �
 
 | 字段               | 类型            | 可能值 |
 |:-------:       |:--------------:|:-------------------------------|
-| applicationId  | string         | *CloudApp 对应的 applicationId*  |
 | intent         | string         | *CloudApp 对应的 nlp intent*     |
 | slots          | object         | *CloudApp 对应的 nlp slots 对象*      |
+| sentence         | string         | *CloudApp 对应的 用户说的话*     |
 
-* **applicationId**, **intent** 和 **slots** 均为 **NLP** 结果的基本元素。分别表明了一句话所代表的领域，意图和完成这个意图所需要的参数。
+* **intent** 和 **slots** 均为 **NLP** 结果的基本元素。分别表明了一句话所代表意图和完成这个意图所需要的参数。
+
+**intent** - 表明了当前具体的意图，目前我们有三个系统级的Intent请求具体如下.
+
+* **ROKID.INTENT.WELCOME** - 当用户通过入口词打开该Skill时，会发送该Intent请求，请求内容如下：
+
+```json
+	"content": {
+      "slots": {
+        "domain": {
+          "type": "app",
+          "value": "domainid"
+        },
+        "openaction": {
+          "type": "openaction",
+          "value": "打开"
+        }
+      },
+      "intent": "ROKID.INTENT.WELCOME",
+      "sentence": "打开XXX"
+    }
+```
+**开发者可以在这个Intent中给用户做欢迎引导语句也可以执行对应的操作**
+
+* **ROKID.INTENT.EXIT** - 当用户需要退出该Skill时，会发送该Intent请求，请求内容如下：
+
+```json
+	"content": {
+      "intent": "ROKID.INTENT.EXIT",
+      "sentence": "退出XXX",
+      "slots": {
+        "closeaction": {
+          "type": "closeaction",
+          "value": "退出"
+        },
+        "domain": {
+          "type": "app",
+          "value": "domainid"
+        }
+      }
+    }
+```
+**开发者不能退该Request做响应，但是开发者可以通过该Request记录服务的业务日志**
+	
+* **ROKID.INTENT.UNKNOWN** - 当Skill发起Confirm或者Pickup时，用户说了三次都没有名字该Skill需要的内容，这时候会发送该Intent请求，请求内容如下：
+
+```json
+	"content": {
+      "intent": "ROKID.INTENT.UNKNOWN",
+      "sentence": "用户说的话",
+      "slots": {
+        "asrvalue": {
+          "type": "asrvalue",
+          "value": "用户说的话"
+        },
+        "unknowtype": {
+          "type": "unkonwtype",
+          "value": "pickup"
+        }
+      }
+    }
+```
+**开发者可以在该Request请求时响应自定义的响应内容，比如游戏类的技能，可以换一个题目等操作，然后开发者也可以直接退出该技能，unknowtype有两种一个事pickup一个是confirm**	
+	
 
 ###### 2.4.1.1 slots
 slots是对象类型，含有如下两个字段：
@@ -383,6 +456,16 @@ slots是对象类型，含有如下两个字段：
 | :------ | :------ | :-------- |
 | type | String | slot类型    |
 |  value| String | slot值    |
+
+*注意：Slots对象其实对应的是一个HashMap<String,Slot>,其实Slot目前有type和value两个字段。其中HashMap的key是当前NLP那边配置的slot名称，Slot里面的Type值分为两种情况1、有引用系统词表，则该type为系统词表的名称；2、如果没有应用系统词表，则和key一致为用户自定义名称.Slot里面的value为用户真正需要的业务值，该值是一个String类型，但是需要注意的是该String有可能是一个Json的String，开发者需要根据Type去进行数据的解析。如下number这个slot的定义响应*
+
+```json
+"slots": {
+  "number": {
+    "type": "ROKID.NUMBER_ZH",
+    "value": "{\"number\":\"3.000000\",\"text\":\"三\"}"
+  }
+```
 
 
 ##### 2.4.2 EventRequest
@@ -413,8 +496,28 @@ slots是对象类型，含有如下两个字段：
 	* **Media.FINISHED** - 当播放内容结束时发生。
 	* **Media.TIMEOUT** - 在媒体播放过程中因为网络慢等原因导致的卡顿持续5s后发生。
 	* **Media.FAILED** - 当播放器加载音频资源失败时发生。
-	* **Session.ENDED** - 当Domain被切换到的时候的事件，可以用于关闭资源。
+	* **Session.ENDED** - 当Domain被切换到的时候的事件，可以用于关闭资源，不能进行任何响应。
+	* ~~**Skill.EXIT**~~ - 该事件是当Skill没有资源执行或者按了home按键后抛出的事件，该事件当前定义有歧义，这边正在整改，建议开发者先忽略该事件。
 	* *更多的事件会在未来的版本更迭中给出*
+	
+	**特别注意：***为防止开发者在我们后续增加Event事件的时候出现服务异常，建议开发者对于不在自己Skill范围之内的Event做忽略处理，忽略响应的内容如下：*
+
+```json
+{
+  "version": "2.0.0",
+  "session": {
+  },
+  "response": {
+    "action": {
+      "version": "2.0.0",
+      "type": "NORMAL",
+      "shouldEndSession": false,
+      "directives": [
+       ]
+    }
+  }
+}
+```
 
 * **extra** - 针对media类型的eventrequest支持如下扩展字段：
 
@@ -443,6 +546,7 @@ slots是对象类型，含有如下两个字段：
   }
 }
 ```
+
 
 ### 3. Response
 
@@ -737,7 +841,7 @@ Media 用来播放CloudApp返回的流媒体内容。有 *audio* 和 *video* 两
     "optionWords": [
       "word1",
       "word2"
-            ]
+    ]
 }
 ```
 
