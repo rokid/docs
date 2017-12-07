@@ -143,7 +143,7 @@ out/target/product/p230/
 
    具体安装步骤，请参阅[Amlogic官方刷机工具使用说明9](https://rokid.github.io/rokidos-linux-docs/files/amlogic/AmlUSBBurning.pdf)。
 
-2. 参考镜像\(20171028\)地址: ftp://ftp-customer.rokid-inc.com:9921/images/nanat2/20171028/aml\_upgrade\_package.img
+2. 参考镜像\(20171028\)地址: ftp://ftp-customer.rokid-inc.com:9921/images/nanat2/20171028/aml_upgrade_package.img
 
 
 
