@@ -2,7 +2,7 @@
 
 ## 设置 android 编译环境
 
-###  64-bit\_Ubuntu 系统
+### 64-bit\_Ubuntu 系统
 
 1. 安装 Ubuntu \(14.04\) 64位系统。
 
@@ -143,7 +143,11 @@ out/target/product/p230/
 
    具体安装步骤，请参阅[Amlogic官方刷机工具使用说明9](https://rokid.github.io/rokidos-linux-docs/files/amlogic/AmlUSBBurning.pdf)。
 
-2. 进入刷机模式
+2. 参考镜像\(20171028\)地址: ftp://ftp-customer.rokid-inc.com:9921/images/nanat2/20171028/aml\_upgrade\_package.img
+
+
+
+1. 进入刷机模式
 
    首先：开发板核心板**TypeC**接口与**PC**已连接。
 
@@ -161,7 +165,7 @@ out/target/product/p230/
    **Android**  
    系统，  
    `adb shell reboot update`  
-   ，您将看到刷机界面出现已连接，表示开发板已经进入刷机模式。   
+   ，您将看到刷机界面出现已连接，表示开发板已经进入刷机模式。  
    [![](https://developer-forum.rokid.com/uploads/default/optimized/1X/8607325738dc10c909d03eb12eca21a2dda2df39_1_690x482.jpg)15092646227923.jpg1302x910 170 KB](https://developer-forum.rokid.com/uploads/default/original/1X/8607325738dc10c909d03eb12eca21a2dda2df39.jpg)
 
 1. 刷机工具刷机。点击刷机工具中的"**开始**"按钮，开始刷机，并等待刷机完成，请按照刷机工具中的提示操作。图中对应的刷机工具版本是usb buring tool v2.1.2。
