@@ -4,7 +4,8 @@
 
 ### 64-bit\_Ubuntu 系统
 
-1. 安装 Ubuntu \(14.04\) 64位系统。
+1. 安装 Ubuntu (14.04) 64位系统。
+        如有需要，可以下载VMWARE的虚拟机镜像：ftp://ftp-customer:9921/images/vmware/ubuntu_14.04.5_64.zip
 
 2. 安装编译必须的软件包：
 
