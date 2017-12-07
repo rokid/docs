@@ -45,7 +45,7 @@
 | ROKID.ANIMALYEAR_ZH | 生肖年  |   中文 |
 | ROKID.ERAYEAR_ZH | 干支年  |   中文 |
 | ROKID.ZONE_ZH | 描述早上、晚上等某个时间段的词汇   |   中文 |
-| ROKID.MOVIE_ZH | 电影   |   中文 |
+| ROKID.MOVIE | 电影   |   中文 |
 
 
 
