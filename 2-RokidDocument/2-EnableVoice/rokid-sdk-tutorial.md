@@ -2,7 +2,7 @@
 
 ## 简介
 
-Rokid开放平台SDK包含Siren、NLP、ASR、TTS几大模块。要使用Rokid开放平台的SDK，首先需要有一套 [Android](https://mirrors.tuna.tsinghua.edu.cn/help/AOSP/) 源码，然后下载以下SDK模块：
+Rokid开放平台SDK包含Siren、NLP、ASR、TTS几大模块。要使用Rokid开放平台的SDK，首先需要**有一套能够在自己硬件上跑起来的Android系统**，然后下载以下SDK模块：
 
 - [rokid-blacksiren](https://github.com/Rokid/rokid-blacksiren.git) 前端拾音降噪，寻向，音墙
 - [rokid-openvoice-sdk](https://github.com/Rokid/rokid-openvoice-sdk.git) 包含NLP语音识别，语义理解；ASR语音识别；TTS语音合成
