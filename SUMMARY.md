@@ -27,6 +27,7 @@
 ### 为设备开启语音交互
 * [获取认证文件](2-RokidDocument/2-EnableVoice/get-the-certification-file.md)
 * [Rokid Android SDK 接入指南](2-RokidDocument/2-EnableVoice/rokid-sdk-tutorial.md)
+* [Rokid Android 905D 开发板环境搭建，编译，刷机，镜像下载文档](2-RokidDocument/2-EnableVoice/Rokid-Devkit-905D-Android-Doc.md)
 
 ### API REFERENCE
 * [Rokid 技能协议文档](3-ApiReference/cloud-app-development-protocol_cn.md)
