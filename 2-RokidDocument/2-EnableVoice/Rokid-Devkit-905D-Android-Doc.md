@@ -4,7 +4,7 @@
 
 ### 64-bit\_Ubuntu 系统
 
-1. 安装 Ubuntu \(14.04\) 64位系统。  
+1. 安装 Ubuntu \(14.04或者 16.04\) 64位系统。  
         如有需要，可以下载VMWARE的虚拟机镜像：ftp://ftp-customer:9921/images/vmware/ubuntu\_14.04.5\_64.zip
 
 2. 安装编译必须的软件包：
@@ -85,16 +85,69 @@ repo sync
 ```
 
 * 编译代码树
+  ```
+  source
+   build/envsetup.sh
+    
+      lunch nanat2-userdebug-32
+    
+  # 或 lunch 对应的id号 
 
-```
-source build/envsetup.sh
+      lunch 69
+      make update-api
+      make -j40
 
-    lunch nanat2-userdebug-32
-    # 或 lunch 对应的id号 
-    lunch 69
-    make update-api
-    make -j40
-```
+  ```
+
+  > 如果用ubuntu16.04的版本，可能出现以下报错：  
+  > out/host/linux-x86/obj32/SHARED\_LIBRARIES/libart\_intermediates/arch/x86/quick\_entrypoints\_x86.o:function art\_quick\_set16\_instance: error: unsupported reloc 43  
+  > out/host/linux-x86/obj32/SHARED\_LIBRARIES/libart\_intermediates/arch/x86/quick\_entrypoints\_x86.o:function art\_quick\_set16\_instance: error: unsupported reloc 43  
+  > out/host/linux-x86/obj32/SHARED\_LIBRARIES/libart\_intermediates/arch/x86/quick\_entrypoints\_x86.o:function art\_quick\_set32\_instance: error: unsupported reloc 43  
+  > out/host/linux-x86/obj32/SHARED\_LIBRARIES/libart\_intermediates/arch/x86/quick\_entrypoints\_x86.o:function art\_quick\_set32\_instance: error: unsupported reloc 43  
+  > out/host/linux-x86/obj32/SHARED\_LIBRARIES/libart\_intermediates/arch/x86/quick\_entrypoints\_x86.o:function art\_quick\_set\_obj\_instance: error: unsupported reloc 43  
+  > out/host/linux-x86/obj32/SHARED\_LIBRARIES/libart\_intermediates/arch/x86/quick\_entrypoints\_x86.o:function art\_quick\_set\_obj\_instance: error: unsupported reloc 43  
+  > out/host/linux-x86/obj32/SHARED\_LIBRARIES/libart\_intermediates/arch/x86/quick\_entrypoints\_x86.o:function art\_quick\_set64\_instance: error: unsupported reloc 43  
+  > out/host/linux-x86/obj32/SHARED\_LIBRARIES/libart\_intermediates/arch/x86/quick\_entrypoints\_x86.o:function art\_quick\_set64\_instance: error: unsupported reloc 43  
+  > out/host/linux-x86/obj32/SHARED\_LIBRARIES/libart\_intermediates/arch/x86/quick\_entrypoints\_x86.o:function art\_quick\_set64\_static: error: unsupported reloc 43  
+  > out/host/linux-x86/obj32/SHARED\_LIBRARIES/libart\_intermediates/arch/x86/quick\_entrypoints\_x86.o:function art\_quick\_set64\_static: error: unsupported reloc 43  
+  > out/host/linux-x86/obj32/SHARED\_LIBRARIES/libart\_intermediates/arch/x86/quick\_entrypoints\_x86.o:function art\_quick\_proxy\_invoke\_handler: error: unsupported reloc 43  
+  > out/host/linux-x86/obj32/SHARED\_LIBRARIES/libart\_intermediates/arch/x86/quick\_entrypoints\_x86.o:function art\_quick\_resolution\_trampoline: error: unsupported reloc 43  
+  > out/host/linux-x86/obj32/SHARED\_LIBRARIES/libart\_intermediates/arch/x86/quick\_entrypoints\_x86.o:function art\_quick\_resolution\_trampoline: error: unsupported reloc 43  
+  > out/host/linux-x86/obj32/SHARED\_LIBRARIES/libart\_intermediates/arch/x86/quick\_entrypoints\_x86.o:function art\_quick\_generic\_jni\_trampoline: error: unsupported reloc 43  
+  > out/host/linux-x86/obj32/SHARED\_LIBRARIES/libart\_intermediates/arch/x86/quick\_entrypoints\_x86.o:function art\_quick\_to\_interpreter\_bridge: error: unsupported reloc 43  
+  > out/host/linux-x86/obj32/SHARED\_LIBRARIES/libart\_intermediates/arch/x86/quick\_entrypoints\_x86.o:function art\_quick\_to\_interpreter\_bridge: error: unsupported reloc 43  
+  > out/host/linux-x86/obj32/SHARED\_LIBRARIES/libart\_intermediates/arch/x86/quick\_entrypoints\_x86.o:function art\_quick\_instrumentation\_entry: error: unsupported reloc 43  
+  > out/host/linux-x86/obj32/SHARED\_LIBRARIES/libart\_intermediates/arch/x86/quick\_entrypoints\_x86.o:function art\_quick\_instrumentation\_entry: error: unsupported reloc 43  
+  > out/host/linux-x86/obj32/SHARED\_LIBRARIES/libart\_intermediates/arch/x86/quick\_entrypoints\_x86.o:function art\_quick\_instrumentation\_exit: error: unsupported reloc 43  
+  > out/host/linux-x86/obj32/SHARED\_LIBRARIES/libart\_intermediates/arch/x86/quick\_entrypoints\_x86.o:function art\_quick\_deoptimize: error: unsupported reloc 43  
+  > host C++: libinput &lt;= frameworks/native/libs/input/KeyLayoutMap.cpp  
+  > clang: error: linker command failed with exit code 1 \(use -v to see invocation\)  
+  > build/core/host\_shared\_library\_internal.mk:51: recipe for target ‘out/host/linux-x86/obj32/lib/libart.so’ failed  
+  > make: \*\*\* \[out/host/linux-x86/obj32/lib/libart.so\] Error 1  
+  > make: \*\*\* Waiting for unfinished jobs…  
+  > Install: out/host/linux-x86/bin/apicheck  
+  > \`\`\`
+
+  需要做以下修改：
+
+  ```
+  It works to me:
+  in file /art/build/Android.common_build.mk, find out:
+  # Host.
+  ART_HOST_CLANG := false
+  ifneq ($(WITHOUT_HOST_CLANG),true)
+  # By default, host builds use clang for better warnings.
+  ART_HOST_CLANG := true
+  endif
+  change to :
+  # Host.
+  ART_HOST_CLANG := false
+  ifeq ($(WITHOUT_HOST_CLANG),false)
+  # By default, host builds use clang for better warnings.
+  ART_HOST_CLANG := true
+  endif
+  endif
+  ```
 
 ## 结构
 
