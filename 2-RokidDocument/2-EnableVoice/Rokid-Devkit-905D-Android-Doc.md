@@ -106,17 +106,17 @@ source build/envsetup.sh
 4. CPU\_MIC连接排线
 5. CPU\_DEBUG连接排线
 
-[![](https://developer-forum.rokid.com/uploads/default/optimized/1X/df46ea76dffd58093fdc833cc3722ef373a894d9_1_690x220.jpg)](https://developer-forum.rokid.com/uploads/default/original/1X/df46ea76dffd58093fdc833cc3722ef373a894d9.jpg)
+[![](/2-RokidDocument/2-EnableVoice/images/structure.jpg)](https://developer-forum.rokid.com/uploads/default/original/1X/df46ea76dffd58093fdc833cc3722ef373a894d9.jpg)
 
 ### 连接方法
 
 所有连接线对应的金手指均为向下扣。效果如图所示：
 
-[![](https://developer-forum.rokid.com/uploads/default/optimized/1X/b1e3a9d34be9d85e3fbc4b378cca9f9b7f3b6ae4_1_515x500.jpg)15096244781904.jpg1358x1318 586 KB](https://developer-forum.rokid.com/uploads/default/original/1X/b1e3a9d34be9d85e3fbc4b378cca9f9b7f3b6ae4.jpg)
+[![](/2-RokidDocument/2-EnableVoice/images/connect.jpg)](https://developer-forum.rokid.com/uploads/default/original/1X/b1e3a9d34be9d85e3fbc4b378cca9f9b7f3b6ae4.jpg)
 
 > 注意：对于拿到我们测试机（对应下图）的开发者，请千万注意CPU\_DEBUG连接排线再CPU测是朝向上扣下，如下图红框，其余三端也是朝下扣。
 
-[![](https://developer-forum.rokid.com/uploads/default/optimized/1X/6c40b3713f0f5ac24bb93fb4c1e2919e86f74271_1_648x500.jpg)15092688430228.jpg862x665 170 KB](https://developer-forum.rokid.com/uploads/default/original/1X/6c40b3713f0f5ac24bb93fb4c1e2919e86f74271.jpg)
+[![](/2-RokidDocument/2-EnableVoice/images/connect1.jpg)](https://developer-forum.rokid.com/uploads/default/original/1X/6c40b3713f0f5ac24bb93fb4c1e2919e86f74271.jpg)
 
 ## 固件烧写
 
@@ -166,12 +166,12 @@ out/target/product/p230/
 
 方法三：如果您没有debug板或者debug已损坏，可以通过主板上面的测试点短接，主板上面reset对应debug的reset按键，u对应debug上面的update按键。具体位置如下图，具体操作跟方法二一样：
 
-[![](https://developer-forum.rokid.com/uploads/default/optimized/1X/f9778b5ccb0bbdc057d94ad078d86cb198276ebb_1_508x500.jpg)15092649727067.jpg896x881 188 KB](https://developer-forum.rokid.com/uploads/default/original/1X/f9778b5ccb0bbdc057d94ad078d86cb198276ebb.jpg)
+[![](/2-RokidDocument/2-EnableVoice/images/HW reset.jpg)](https://developer-forum.rokid.com/uploads/default/original/1X/f9778b5ccb0bbdc057d94ad078d86cb198276ebb.jpg)
 
 方法四：如果您的开发板系统是**Android**系统\(支持ADB\)，  
    `adb shell reboot update`  
    ，您将看到刷机界面出现已连接，表示开发板已经进入刷机模式。  
-   [![](https://developer-forum.rokid.com/uploads/default/optimized/1X/8607325738dc10c909d03eb12eca21a2dda2df39_1_690x482.jpg)15092646227923.jpg1302x910 170 KB](https://developer-forum.rokid.com/uploads/default/original/1X/8607325738dc10c909d03eb12eca21a2dda2df39.jpg)
+   [![](/2-RokidDocument/2-EnableVoice/images/fuse.jpg)](https://developer-forum.rokid.com/uploads/default/original/1X/8607325738dc10c909d03eb12eca21a2dda2df39.jpg)
 
 1. 刷机工具刷机。点击刷机工具中的"**开始**"按钮，开始刷机，并等待刷机完成，请按照刷机工具中的提示操作。图中对应的刷机工具版本是usb buring tool v2.1.2。
 
