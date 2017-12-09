@@ -106,7 +106,7 @@ source build/envsetup.sh
 4. CPU\_MIC连接排线
 5. CPU\_DEBUG连接排线
 
-[![](https://developer-forum.rokid.com/uploads/default/optimized/1X/df46ea76dffd58093fdc833cc3722ef373a894d9_1_690x220.jpg)WX20171102-201728@2x.jpg2236x714 503 KB](https://developer-forum.rokid.com/uploads/default/original/1X/df46ea76dffd58093fdc833cc3722ef373a894d9.jpg)
+[![](https://developer-forum.rokid.com/uploads/default/optimized/1X/df46ea76dffd58093fdc833cc3722ef373a894d9_1_690x220.jpg)](https://developer-forum.rokid.com/uploads/default/original/1X/df46ea76dffd58093fdc833cc3722ef373a894d9.jpg)
 
 ### 连接方法
 
