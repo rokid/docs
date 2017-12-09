@@ -21,17 +21,20 @@ Rokid语音接入能够为配有麦克风和扬声器的联网硬件设备开启
 #### 认证文件
 您需要为您的设备创建一个认证文件，以获取接入若琪的权限。具体方法请查看[获取认证文件](/2-RokidDocument/2-EnableVoice/get-the-certification-file.md)。
 
-### 2. 为您的产品接入Rokid SDK
+### 2. 为您的产品接入Rokid语音能力
 
-#### SDK简介
+#### ① 给您的Rokid ALL in ONE 全栈开发套件刷写代码
+
+- 请参见 [ALL in ONE 开发板 AMLOGIC 905D android代码编译烧写教程](/2-RokidDocument/2-EnableVoice/Rokid-Devkit-905D-Android-Doc.md)
+
+#### ② 在您的产品中接入Rokid SDK
 Rokid开发者社区SDK包含Siren、Speech、NLP、ASR、TTS几大模块。
 
 - Siren：拾音模块，接收HAL的音频数据，算法处理，滤波；
 - TTS：文字转语音；
 - Speech和ASR：都是语音转文字，不同的是Speech专门处理Siren的语音事件。
 
-#### 九步部署SDK
-通过[Rokid SDK 接入指南](/2-RokidDocument/2-EnableVoice/rokid-sdk-tutorial.md)，了解如何快速接入Rokid SDK。
+通过[Rokid SDK 接入指南](/2-RokidDocument/2-EnableVoice/rokid-sdk-tutorial.md)，了解如何快速在您的产品中接入Rokid SDK。
 
 #### 和您的设备做一次互动
 您可以创建一个[开始创建第一个技能：我要喝咖啡](/2-RokidDocument/1-SkillsKit/skill-sample-coffee.md)，并将您的设备添加到此技能的测试设备列表中，就可以与设备进行互动啦。
