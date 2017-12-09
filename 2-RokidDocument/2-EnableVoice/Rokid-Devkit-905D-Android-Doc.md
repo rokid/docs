@@ -179,110 +179,63 @@ out/target/product/p230/
 
 #### fastboot烧录
 
-1. 进入 fastboot 模式  
-  
+1. 进入 fastboot 模式
+
    首先：开发板核心板**TypeC**接口与**PC**已连接。  
-   方法一：通过 Debug 板上的**TypeC**连接串口线，进入u-boot，输入`fastboot`，开发板会进入fastboot模式。  
-   方法二：如果您的开发板系统是**Android**系统，`adb shell reboot fastboot`，开发板会进入fastboot模式。  
+   方法一：通过 Debug 板上的**TypeC**连接串口线，进入u-boot，输入`fastboot`，开发板会进入fastboot模式。\(备注：有时需要sudo fastboot）  
+   方法二：如果您的开发板系统是**Android**系统，`adb shell reboot fastboot`，开发板会进入fastboot模式。
 
-2. 刷机指令  
+2. 刷机指令
 
+* 镜像文件与设备分区的对应关系
 
-   * 镜像文件与设备分区的对应关系  
-  
-     Amlogic芯片的开发板，您可以通过查看\*\* aml\_upgrade\_package.conf \*\*文件内容，如`cat aml_upgrade_package.conf`，来找到一些线索。
+  Amlogic芯片的开发板，您可以通过查看\*\* aml\_upgrade\_package.conf \*\*文件内容，如`cat aml_upgrade_package.conf`，来找到一些线索。
 
-     ```
-     #This file define how pack aml_upgrade_package image
+  ```
+  #This file define how pack aml_upgrade_package image
 
-     [LIST_NORMAL]
-     #partition images, don't need verfiy
-     file="u-boot.bin.usb.bl2"   main_type= "USB"            sub_type="DDR"
-     file="u-boot.bin.usb.tpl"   main_type= "USB"            sub_type="UBOOT"
-     file="u-boot.bin.sd.bin"    main_type="UBOOT"           sub_type="aml_sdc_burn"
-     file="platform.conf"        main_type= "conf"           sub_type="platform"
-     file="aml_sdc_burn.ini"     main_type="ini"             sub_type="aml_sdc_burn"
-     file="dtb.img"              main_type="dtb"             sub_type="meson1"
+  [LIST_NORMAL]
+  #partition images, don't need verfiy
+  file="u-boot.bin.usb.bl2"   main_type= "USB"            sub_type="DDR"
+  file="u-boot.bin.usb.tpl"   main_type= "USB"            sub_type="UBOOT"
+  file="u-boot.bin.sd.bin"    main_type="UBOOT"           sub_type="aml_sdc_burn"
+  file="platform.conf"        main_type= "conf"           sub_type="platform"
+  file="aml_sdc_burn.ini"     main_type="ini"             sub_type="aml_sdc_burn"
+  file="dtb.img"              main_type="dtb"             sub_type="meson1"
 
-     [LIST_VERIFY]
-     #partition images with verify
-     file="boot.img"             main_type="PARTITION"       sub_type="boot"
-     file="recovery.img"         main_type="PARTITION"       sub_type="recovery"
-     file="rootfs.ubifs"         main_type="PARTITION"       sub_type="system"    file_type="ubifs"
-     file="u-boot.bin"           main_type="PARTITION"       sub_type="bootloader"
-     file="dtb.img"              main_type="PARTITION"       sub_type="_aml_dtb"
-     ```
+  [LIST_VERIFY]
+  #partition images with verify
+  file="boot.img"             main_type="PARTITION"       sub_type="boot"
+  file="recovery.img"         main_type="PARTITION"       sub_type="recovery"
+  file="rootfs.ubifs"         main_type="PARTITION"       sub_type="system"    file_type="ubifs"
+  file="u-boot.bin"           main_type="PARTITION"       sub_type="bootloader"
+  file="dtb.img"              main_type="PARTITION"       sub_type="_aml_dtb"
+  ```
 
-   * 开发板是 Linux 系统  
-  
-     在PC端执行如下指令：
+* 开发板是 Linux 系统
 
-     ```
-     fastboot
-     flash
-     bootloader
-     u-boot
-     .bin
-     fastboot
-     flash
-     dtb
-     <
-     开发板型号
-     >
-     .dtb
-     fastboot
-     flash
-     boot
-     boot
-     .img
-     fastboot
-     flash
-     system
-     rootfs
-     .ubifs
-     fastboot
-     flash
-     recovery
-     recovery
-     .img
-     ```
+  在PC端执行如下指令：
 
-   * 开发板是 Android 系统  
-  
-     在PC端执行如下指令：
+  ```
+  fastboot flash bootloader u-boot.bin
+  fastboot flash dtb <开发板型号>.dtb
+  fastboot flash boot boot.img
+  fastboot flash system rootfs.ubifs
+  fastboot flash recovery recovery.img
+  ```
 
-     ```
-     fastboot
-     flash
-     bootloader
-     u-boot
-     .bin
-     fastboot
-     flash
-     dtb
-     dtb
-     .img
-     fastboot
-     flash
-     boot
-     boot
-     .img
-     fastboot
-     flash
-     system
-     system
-     .img
-     fastboot
-     flash
-     recovery
-     recovery
-     .img
-     fastboot
-     flash
-     data
-     userdata
-     .img
-     ```
+* 开发板是 Android 系统
+
+  在PC端执行如下指令：
+
+  ```
+  fastboot flash bootloader u-boot.bin
+  fastboot flash dtb dtb.img
+  fastboot flash boot boot.img
+  fastboot flash system system.img
+  fastboot flash recovery recovery.img
+  fastboot flash data userdata.img
+  ```
 
 
 
