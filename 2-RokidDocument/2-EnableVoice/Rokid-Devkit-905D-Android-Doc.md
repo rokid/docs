@@ -5,7 +5,11 @@
 ### 64-bit\_Ubuntu 系统
 
 1. 安装 Ubuntu \(14.04或者 16.04\) 64位系统。  
-        如有需要，可以下载VMWARE的虚拟机镜像：ftp://ftp-customer:9921/images/vmware/ubuntu\_14.04.5\_64.zip
+        如有需要，可以下载VMWARE的虚拟机镜像：
+
+            14.04镜像：ftp://ftp-customer:9921/images/vmware/ubuntu\_14.04.5\_64.zip
+
+            16.04镜像：ftp://ftp-customer:9921/images/vmware/ubuntu\_16.04.3\_64.zip
 
 2. 安装编译必须的软件包：
 
@@ -14,18 +18,18 @@
      python language-pack-en texinfo zlib1g-dev  x11proto-core-dev  libx11-dev\
      build-essential g++ git bison flex unzip gcc-multilib g++-multilib libgl1-mesa-dev \
      libssl-dev libxml-simple-perl libxml-sax-perl libxml2-dev libxml2-utils xsltproc \
-     wget bc ccache curl libc6-dev-i386 lib32ncurses5-dev lib32z-dev
+     wget bc ccache curl libc6-dev-i386 lib32ncurses5-dev lib32z-dev3
 ```
 
-1. 安装java环境并配置java环境变量；保证java -version 有以下结果：
+3. 安装java环境并配置java环境变量；保证java -version 有以下结果：
 
-   ```
-   java -version
-   java version "1.7.0_121"
+```
+java -version
+java version "1.7.0_121"
 
-   OpenJDK Runtime Environment (IcedTea 2.6.8) (7u121-2.6.8-1ubuntu0.14.04.3)
-   OpenJDK 64-Bit Server VM (build 24.121-b00, mixed mode)
-   ```
+OpenJDK Runtime Environment (IcedTea 2.6.8) (7u121-2.6.8-1ubuntu0.14.04.3)
+OpenJDK 64-Bit Server VM (build 24.121-b00, mixed mode)
+```
 
 ## 安装repo 工具
 
@@ -36,25 +40,25 @@ $ mkdir ~/bin
 $ PATH=~/bin:$PATH
 ```
 
-1. 根据您的办公网络情况，获取 repo 工具。
+2. 根据您的办公网络情况，获取 repo 工具。
 
-   * 可以翻墙
+* 可以翻墙
 
-     如果您的办公环境可以翻墙访问 Google 网站，您可以使用Google 官方发行的 repo 工具。
+  如果您的办公环境可以翻墙访问 Google 网站，您可以使用Google 官方发行的 repo 工具。
 
-     ```
-     $ curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
-     $ chmod a+x ~/bin/repo
-     ```
+  ```
+  $ curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+  $ chmod a+x ~/bin/repo
+  ```
 
-   * 不能翻墙
+* 不能翻墙
 
-     如果您的办公环境可以不能访问 Google 网站，您可以使用Rokid 修正版的 repo 工具。
+  如果您的办公环境可以不能访问 Google 网站，您可以使用Rokid 修正版的 repo 工具。
 
-     ```
-     $ wget https://scm-deps-library.rokid-inc.com/linux/buildroot_dl_aml/repo > ~/bin/repo
-     $ chmod a+x ~/bin/repo
-     ```
+  ```
+  $ wget https://scm-deps-library.rokid-inc.com/linux/buildroot_dl_aml/repo > ~/bin/repo
+  $ chmod a+x ~/bin/repo
+  ```
 
 ## 初始化 repo 客户端
 
@@ -85,18 +89,18 @@ repo sync
 ```
 
 * 编译代码树
+
   ```
   source
    build/envsetup.sh
-    
+
       lunch nanat2-userdebug-32
-    
+
   # 或 lunch 对应的id号 
 
       lunch 69
       make update-api
       make -j40
-
   ```
 
   > 如果用ubuntu16.04的版本，可能出现以下报错：  
