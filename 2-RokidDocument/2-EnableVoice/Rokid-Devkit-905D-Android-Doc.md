@@ -4,8 +4,8 @@
 
 ### 64-bit\_Ubuntu 系统
 
-1. 安装 Ubuntu (14.04) 64位系统。
-        如有需要，可以下载VMWARE的虚拟机镜像：ftp://ftp-customer:9921/images/vmware/ubuntu_14.04.5_64.zip
+1. 安装 Ubuntu \(14.04\) 64位系统。  
+        如有需要，可以下载VMWARE的虚拟机镜像：ftp://ftp-customer:9921/images/vmware/ubuntu\_14.04.5\_64.zip
 
 2. 安装编译必须的软件包：
 
@@ -142,29 +142,31 @@ out/target/product/p230/
 
 1. 安装[Amlogic官方刷机工具11](https://scm-deps-library.rokid-inc.com/linux/buildroot_dl_aml/tools/aml_burn_img_tool_v2.1.2.exe)
 
-   具体安装步骤，请参阅[Amlogic官方刷机工具使用说明9](https://rokid.github.io/rokidos-linux-docs/files/amlogic/AmlUSBBurning.pdf)。
+   具体安装步骤，请参阅[Amlogic官方刷机工具使用说明9](https://rokid.github.io/rokidos-linux-docs/files/amlogic/AmlUSBBurning.pdf)。\(需要说明的是：最新工具其他品牌HUB也可以使用，或者无HUB直连也可以烧写）。
 
-2. 参考镜像\(20171028\)地址: ftp://ftp-customer.rokid-inc.com:9921/images/nanat2/20171028/aml_upgrade_package.img
+2. 参考镜像\(20171028\)地址: ftp://ftp-customer.rokid-inc.com:9921/images/nanat2/20171028/aml\_upgrade\_package.img
 
+3. 进入刷机模式
 
+首先：开发板核心板**TypeC**接口与**PC**已连接。
 
-1. 进入刷机模式
+方法一：接上开发板配套的Debug 板 ，先按住Debug上的 &lt;**upgrade**&gt; 键不能松开，再按 &lt;**reset**&gt; 键，刷机工具界面出现已连接，请马上松开按键，即表示开发板已经进入刷机模式。
 
-   首先：开发板核心板**TypeC**接口与**PC**已连接。
+ 备注：如果用虚拟机，其中涉及到虚拟机usb口设备的选择，需要勾选
 
-   方法一：接上开发板配套的Debug 板 ，先按住Debug上的 &lt;**upgrade**&gt; 键不能松开，再按 &lt;**reset**&gt; 键，刷机工具界面出现已连接，请马上松开按键，即表示开发板已经进入刷机模式。
+             Devices-USB-Amlogic GX Chip
 
-   方法二：通过 Debug 板上的 TypeC 连接串口线，开机后狂按enter或者space，进入u-boot，输入update，您将看到刷机工具界面出现已连接，表示开发板已经进入刷机模式。
+             Devices-USB-Amlogic,Inc
 
-   `shell Hit Enter or space or Ctrl+C key to stop autoboot -- : 0 nana_t2# nana_t2# nana_t2# nana_t2#`
+方法二：通过 Debug 板上的 TypeC 连接串口线，开机后迅速按enter或者space，进入u-boot，输入update，您将看到刷机工具界面出现已连接，表示开发板已经进入刷机模式。
 
-   方法三：如果您没有debug板或者debug已损坏，可以通过主板上面的测试点短接，主板上面reset对应debug的reset按键，u对应debug上面的update按键。具体位置如下图，具体操作跟方法二一样：
+`shell Hit Enter or space or Ctrl+C key to stop autoboot -- : 0 nana_t2# nana_t2# nana_t2# nana_t2#`
+
+方法三：如果您没有debug板或者debug已损坏，可以通过主板上面的测试点短接，主板上面reset对应debug的reset按键，u对应debug上面的update按键。具体位置如下图，具体操作跟方法二一样：
 
 [![](https://developer-forum.rokid.com/uploads/default/optimized/1X/f9778b5ccb0bbdc057d94ad078d86cb198276ebb_1_508x500.jpg)15092649727067.jpg896x881 188 KB](https://developer-forum.rokid.com/uploads/default/original/1X/f9778b5ccb0bbdc057d94ad078d86cb198276ebb.jpg)
 
-方法四：如果您的开发板系统是  
-   **Android**  
-   系统，  
+方法四：如果您的开发板系统是**Android**系统\(支持ADB\)，  
    `adb shell reboot update`  
    ，您将看到刷机界面出现已连接，表示开发板已经进入刷机模式。  
    [![](https://developer-forum.rokid.com/uploads/default/optimized/1X/8607325738dc10c909d03eb12eca21a2dda2df39_1_690x482.jpg)15092646227923.jpg1302x910 170 KB](https://developer-forum.rokid.com/uploads/default/original/1X/8607325738dc10c909d03eb12eca21a2dda2df39.jpg)
@@ -181,45 +183,47 @@ out/target/product/p230/
    方法一：通过 Debug 板上的**TypeC**连接串口线，进入u-boot，输入`fastboot`，开发板会进入fastboot模式。  
    方法二：如果您的开发板系统是**Android**系统，`adb shell reboot fastboot`，开发板会进入fastboot模式。
 
-2. 刷机指令
+        备注：有时候会需要sudo fastboot
 
-   * 镜像文件与设备分区的对应关系
+1. 刷机指令
 
-     Amlogic芯片的开发板，您可以通过查看\*\* aml\_upgrade\_package.conf \*\*文件内容，如`cat aml_upgrade_package.conf`，来找到一些线索。
+* 镜像文件与设备分区的对应关系
 
-     ```
-     #This file define how pack aml_upgrade_package image
+  Amlogic芯片的开发板，您可以通过查看\*\* aml\_upgrade\_package.conf \*\*文件内容，如`cat aml_upgrade_package.conf`，来找到一些线索。
 
-     [LIST_NORMAL]
-     #partition images, don't need verfiy
-     file="u-boot.bin.usb.bl2"   main_type= "USB"            sub_type="DDR"
-     file="u-boot.bin.usb.tpl"   main_type= "USB"            sub_type="UBOOT"
-     file="u-boot.bin.sd.bin"    main_type="UBOOT"           sub_type="aml_sdc_burn"
-     file="platform.conf"        main_type= "conf"           sub_type="platform"
-     file="aml_sdc_burn.ini"     main_type="ini"             sub_type="aml_sdc_burn"
-     file="dtb.img"              main_type="dtb"             sub_type="meson1"
+  ```
+  #This file define how pack aml_upgrade_package image
 
-     [LIST_VERIFY]
-     #partition images with verify
-     file="boot.img"             main_type="PARTITION"       sub_type="boot"
-     file="recovery.img"         main_type="PARTITION"       sub_type="recovery"
-     file="rootfs.ubifs"         main_type="PARTITION"       sub_type="system"    file_type="ubifs"
-     file="u-boot.bin"           main_type="PARTITION"       sub_type="bootloader"
-     file="dtb.img"              main_type="PARTITION"       sub_type="_aml_dtb"
-     ```
+  [LIST_NORMAL]
+  #partition images, don't need verfiy
+  file="u-boot.bin.usb.bl2"   main_type= "USB"            sub_type="DDR"
+  file="u-boot.bin.usb.tpl"   main_type= "USB"            sub_type="UBOOT"
+  file="u-boot.bin.sd.bin"    main_type="UBOOT"           sub_type="aml_sdc_burn"
+  file="platform.conf"        main_type= "conf"           sub_type="platform"
+  file="aml_sdc_burn.ini"     main_type="ini"             sub_type="aml_sdc_burn"
+  file="dtb.img"              main_type="dtb"             sub_type="meson1"
 
-   * 开发板是 Android 系统
+  [LIST_VERIFY]
+  #partition images with verify
+  file="boot.img"             main_type="PARTITION"       sub_type="boot"
+  file="recovery.img"         main_type="PARTITION"       sub_type="recovery"
+  file="rootfs.ubifs"         main_type="PARTITION"       sub_type="system"    file_type="ubifs"
+  file="u-boot.bin"           main_type="PARTITION"       sub_type="bootloader"
+  file="dtb.img"              main_type="PARTITION"       sub_type="_aml_dtb"
+  ```
 
-     在PC端执行如下指令：
+* 开发板是 Android 系统
 
-     ```
-     fastboot flash bootloader u-boot.bin
-     fastboot flash dtb dtb.img
-     fastboot flash boot boot.img
-     fastboot flash system system.img
-     fastboot flash recovery recovery.img
-     fastboot flash data userdata.img
-     ```
+  在PC端执行如下指令：
+
+  ```
+  fastboot flash bootloader u-boot.bin
+  fastboot flash dtb dtb.img
+  fastboot flash boot boot.img
+  fastboot flash system system.img
+  fastboot flash recovery recovery.img
+  fastboot flash data userdata.img
+  ```
 
 
 
