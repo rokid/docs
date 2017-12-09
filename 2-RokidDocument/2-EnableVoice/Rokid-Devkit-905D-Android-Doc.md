@@ -8,30 +8,32 @@
         如有需要，可以下载VMWARE的虚拟机镜像：
 
    ```
-        14.04镜像：ftp://ftp-customer:9921/images/vmware/ubuntu\_14.04.5\_64.zip
+        14.04镜像：ftp://ftp-customer:9921/images/vmware/ubuntu_14.04.5_64.zip
 
-        16.04镜像：ftp://ftp-customer:9921/images/vmware/ubuntu\_16.04.3\_64.zip
+        16.04镜像：ftp://ftp-customer:9921/images/vmware/ubuntu_16.04.3_64.zip
    ```
 
-2. 安装编译必须的软件包：
+2. 安装编译必须的软件包：  
 
-```
-    sudo apt-get install git-core gnupg gperf zip cscope ctags libz-dev libexpat-dev \
-     python language-pack-en texinfo zlib1g-dev  x11proto-core-dev  libx11-dev\
-     build-essential g++ git bison flex unzip gcc-multilib g++-multilib libgl1-mesa-dev \
-     libssl-dev libxml-simple-perl libxml-sax-perl libxml2-dev libxml2-utils xsltproc \
-     wget bc ccache curl libc6-dev-i386 lib32ncurses5-dev lib32z-dev33.
-```
 
-     3.安装java环境并配置java环境变量；保证java -version 有以下结果：
+   1. ```
+        sudo apt-get install git-core gnupg gperf zip cscope ctags libz-dev libexpat-dev \
+        python language-pack-en texinfo zlib1g-dev  x11proto-core-dev  libx11-dev\
+        build-essential g++ git bison flex unzip gcc-multilib g++-multilib libgl1-mesa-dev \
+        libssl-dev libxml-simple-perl libxml-sax-perl libxml2-dev libxml2-utils xsltproc \
+        wget bc ccache curl libc6-dev-i386 lib32ncurses5-dev lib32z-dev
 
-```
-java -version
-java version "1.7.0_121"
+      ```
 
-OpenJDK Runtime Environment (IcedTea 2.6.8) (7u121-2.6.8-1ubuntu0.14.04.3)
-OpenJDK 64-Bit Server VM (build 24.121-b00, mixed mode)
-```
+   3.安装java环境并配置java环境变量；保证java -version 有以下结果：
+
+   ```
+   java -version
+   java version "1.7.0_121"
+
+   OpenJDK Runtime Environment (IcedTea 2.6.8) (7u121-2.6.8-1ubuntu0.14.04.3)
+   OpenJDK 64-Bit Server VM (build 24.121-b00, mixed mode)
+   ```
 
 ## 安装repo 工具
 
