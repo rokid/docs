@@ -11,7 +11,7 @@ cache:
 
 install:
   - npm install -g gitbook-cli
-  - npm install -g gitbook-pdf
+  - npm install -g rokid-gitbook-pdf
 
 script:
   - gitbook install
