@@ -23,7 +23,7 @@ script:
   - rm -vf _book/*.yml
   - rm -vf _book/*.md
   - rm -vf _book/*.sh
-  - echo "Generating PDF for downloading'
+  - echo "Generating PDF for downloading"
   - gitbook pdf
 
 deploy:
