@@ -10,7 +10,7 @@ cache:
     - node_modules # NPM packages
 
 before_install:
-  - sudo apt-get install -y calibre
+  - sudo apt-get install -y xvfb calibre
 
 install:
   - npm install -g gitbook-cli
