@@ -11,6 +11,7 @@ cache:
 
 install:
   - npm install -g gitbook-cli
+  - npm install -g rokid-gitbook-pdf
 
 script:
   - gitbook install
@@ -20,6 +21,8 @@ script:
   - rm -vf _book/*.yml
   - rm -vf _book/*.md
   - rm -vf _book/*.sh
+  - echo "Generating PDF for downloading"
+  - gitbook pdf .
 
 deploy:
   - provider: pages
@@ -28,6 +31,14 @@ deploy:
     local_dir: _book
     target_branch: gh-pages
     on:
+      branch: master
+  - provider: releases
+    github_token: $GITHUB_TOKEN 
+    file_glob: true
+    file: $BUILD_NAME.*
+    skip_cleanup: true
+    on:
+      tags: false
       branch: master
 
 branches:
