@@ -4,8 +4,8 @@
 
 ### 64-bit\_Ubuntu 系统
 
-1. 安装 Ubuntu \(14.04或者 16.04\) 64位系统。  
-        如有需要，可以下载VMWARE的虚拟机镜像：
+1. 安装 Ubuntu \(14.04或者 16.04\) 64位系统。内存至少8G， CPU核数至少4个，单个可用分区至少60G。  
+        如有需要，可以下载VMWARE的虚拟机镜像，我们提供的ubuntu镜像密码是Rokid123：
 
    ```
         14.04镜像：ftp://ftp-customer:9921/images/vmware/ubuntu_14.04.5_64.zip
@@ -14,9 +14,7 @@
    ```
 
 2. 安装编译必须的软件包：  
-
-
-   1. ```
+   ```
         sudo apt-get install git-core gnupg gperf zip cscope ctags libz-dev libexpat-dev \
         python language-pack-en texinfo zlib1g-dev  x11proto-core-dev  libx11-dev\
         build-essential g++ git bison flex unzip gcc-multilib g++-multilib libgl1-mesa-dev \
@@ -25,8 +23,14 @@
 
       ```
 
-   3.安装java环境并配置java环境变量；保证java -version 有以下结果：
-
+3. 安装java环境并配置java环境变量；安装命令如下：
+   ``` shell
+   sudo add-apt-repository ppa:openjdk-r/ppa
+   sudo apt-get update
+   sudo apt-get install openjdk-7-jdk 
+   ```
+   
+   保证java -version 有以下结果：
    ```
    java -version
    java version "1.7.0_121"
@@ -51,7 +55,7 @@ $ PATH=~/bin:$PATH
    如果您的办公环境可以翻墙访问 Google 网站，您可以使用Google 官方发行的 repo 工具。
 
    ```
-   $ curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+   $ curl -Ls -o ~/bin/repo https://storage.googleapis.com/git-repo-downloads/repo 
    $ chmod a+x ~/bin/repo
    ```
 
@@ -60,7 +64,7 @@ $ PATH=~/bin:$PATH
    如果您的办公环境可以不能访问 Google 网站，您可以使用Rokid 修正版的 repo 工具。
 
    ```
-   $ wget https://scm-deps-library.rokid-inc.com/linux/buildroot_dl_aml/repo > ~/bin/repo
+   $ curl -Ls -o ~/bin/repo  http://scm-deps-library.rokid-inc.com/linux/buildroot_dl_aml/tools/repo
    $ chmod a+x ~/bin/repo
    ```
 
