@@ -1,16 +1,19 @@
 {
-    "plugins" : [
-      "anchor-navigation-ex",
-      "github"
-    ],
-    "pluginsConfig" : {
-      "anchor-navigation-ex": {
-        "showLevel": false,
-        "multipleH1": false
- },
-            "github": {
-                "url": "https://github.com/Rokid"
-            }
-
-        }
+  "plugins" : [
+    "anchor-navigation-ex",
+    "github",
+    "vistors-github"
+  ],
+  "pluginsConfig" : {
+    "anchor-navigation-ex": {
+      "showLevel": false,
+      "multipleH1": false
+    },
+    "github": {
+      "url": "https://github.com/Rokid"
+    },
+    "vistors-github": {
+      "repo": "Rokid/docs"
+    }
+  }
 }
