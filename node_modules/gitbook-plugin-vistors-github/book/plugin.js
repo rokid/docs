@@ -10,9 +10,9 @@ require(["gitbook"], function(gitbook) {
   });
   gitbook.events.bind("page.change", function(e) {
     var img = document.createElement('img');
+    var pathname = gitbook.page.getState().filepath;
     img.style.display = 'none';
-    img.src = 'https://github.com/' + config.repo + '/blob/' + config.branch
-      + location.pathname.replace(/\.html$/, '.md');
+    img.src = 'https://github.com/' + config.repo + '/blob/' + config.branch + '/' + pathname;
     document.body.appendChild(img);
   });
 });
