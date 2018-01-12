@@ -76,7 +76,11 @@ PCM格式为 RIFF (little-endian) data, WAVE audio, Microsoft PCM, 16 bit, mono 
 
 ### SpeechRequest
 
-请求响应
+说明：
+1. 语音长度限制在 10s 以内。
+2. vad_timeout 为 ms 级，一般设为 500ms 。
+3. no_intermediate_asr 默认为 false，即是会实时返回 asr 识别结果，如果只需要最终结果，则设为 true 即可。
+
 
 | 参数     | 类型        | 描述                   | 默认值  |
 | ------ | --------- | -------------------- | ---- |
