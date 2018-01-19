@@ -64,6 +64,7 @@
 
 ## 支持
 
+* [联系我们](contact-us.md)
 * [Rokid讨论区](https://developer-forum.rokid.com/)
 * [Rokid开发者社区官网](https://developer.rokid.com/)
 * [Rokid 官网](https://www.rokid.com/)

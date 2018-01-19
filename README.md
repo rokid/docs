@@ -64,8 +64,9 @@ Rokid开发者社区文档，旨在帮助开发者更好的使用社区提供的
 * [服务协议](4-TermsAndAgreements/community-service-agreement.md)
 * [免责声明](4-TermsAndAgreements/community-disclaimer.md)
 
-### 支持
+## 支持
 
+* [联系我们](contact-us.md)
 * [Rokid讨论区](https://developer-forum.rokid.com/)
 * [Rokid开发者社区官网](https://developer.rokid.com/)
 * [Rokid 官网](https://www.rokid.com/)
