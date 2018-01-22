@@ -40,7 +40,7 @@
 #### 定义语音交互
 接着在「语音交互」页面中，
 
-- 将模板工程 > voice-interaction中的`intent.json`文件内容，复制进「意图定义」编辑框。
+- 将模板工程 > voice-interaction中的[`intent.json`][]文件内容，复制进「意图定义」编辑框。
 
 ![](images/15126314520809.jpg)
 
@@ -57,7 +57,7 @@
 
 1. 选中「Rokid Force」，
 2. 点击配置服务
-3. 将模板工程 > sample-js中的`rokid-force.js`文件内容复制到新出现的编辑框中。
+3. 将模板工程 > sample-js中的[`rokid-force.js`][]文件内容复制到新出现的编辑框中。
 4. 完善「服务名称」和「服务描述」，并点击保存。
 
 ![](images/15126315483107.jpg)
@@ -112,3 +112,5 @@
 技能发布上线后，将会在[Rokid技能商店](https://skill.rokid.com/store/#/)中展示给所有Rokid用户使用。
 ![](images/15079921294746.jpg)
 
+[`intent.json`]: https://github.com/Rokid/rokid-skill-sample/blob/master/rokid-skill-sample-js-tastecoffee/tastecoffee-js/voice-interaction/intent.json
+[`rokid-force.js`]: https://github.com/Rokid/rokid-skill-sample/blob/master/rokid-skill-sample-js-tastecoffee/tastecoffee-js/sample-js/rokid-force.js
