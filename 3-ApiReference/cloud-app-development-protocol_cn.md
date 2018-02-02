@@ -489,7 +489,7 @@ slots是对象类型，含有如下两个字段：
 
 * **event** - 表明了是具体的事件类型.
 	* **Voice.STARTED** - 当Voice开始播放时发生。
-	* **Voice.FINISHED** - 当Voice停止是发生，此处停止可能是被打断，可能是播放完成，也可能是播放失败，但都作为统一的事件抛出。
+	* **Voice.FINISHED** - 当Voice停止时发生，此处停止可能是被打断，可能是播放完成，也可能是播放失败，但都作为统一的事件抛出。
 	* **Voice.FAILED** - 当Voice播放失败时发生。
 	* **Media.STARTED** - 当MediaPlayer开始播放时发生。
 	* **Media.PAUSED** - 当MediaPlayer暂停时发生。
