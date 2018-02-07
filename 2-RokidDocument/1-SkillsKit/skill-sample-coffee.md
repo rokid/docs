@@ -55,7 +55,7 @@
 #### 完成服务配置
 接着在「配置」页面中，
 
-1. 选中「Rokid Force」，
+1. 选中「Rokid Force」（可点击[使用指南](./rokid-force-system-tutorial.md)查看Rokid Force详细介绍）
 2. 点击配置服务
 3. 将模板工程 > sample-js中的[`rokid-force.js`][]文件内容复制到新出现的编辑框中。
 4. 完善「服务名称」和「服务描述」，并点击保存。
