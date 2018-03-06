@@ -29,7 +29,6 @@
         * [Rokid Oauth 使用指南](2-RokidDocument/1-SkillsKit/rokid-oauth.md)
         * [获取 SSL 证书指南](2-RokidDocument/1-SkillsKit/get-SSL-certificate-tutorial.md)
         * [技能开发 Java 版指南](https://github.com/Rokid/rokid-skill-sample/tree/master/rokid-skill-sample-java)
-    * 智能家居
         * [介绍 HomeBase Stack](rokid-homebase-docs/README.md)
         * [接入方式](rokid-homebase-docs/connect/README.md)
             * [HTTP RemoteDriver](rokid-homebase-docs/connect/http-remote-driver.md)
