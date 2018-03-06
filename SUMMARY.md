@@ -34,7 +34,7 @@
         * [接入方式](rokid-homebase-docs/connect/README.md)
             * [HTTP RemoteDriver](rokid-homebase-docs/connect/http-remote-driver.md)
             * [Homebase OAuth 授权](rokid-homebase-docs/connect/oauth.md)
-            * [Homebase OAuth2.0 授权](rokid-homebase-docs/connect/oauth2.0.md)
+            * [Homebase OAuth2.0 授权](rokid-homebase-docs/connect/OAuth2.0.md)
             * [符合 RFC6749 的 OAuth2.0 授权](rokid-homebase-docs/connect/rfc6749.md)
             * [SSDP Auto Discovery](rokid-homebase-docs/connect/ssdp-auto-discovery.md)
             * [JSON-RPC over TCP](rokid-homebase-docs/connect/json-rpc-over-tcp.md)
