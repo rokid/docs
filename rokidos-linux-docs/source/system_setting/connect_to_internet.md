@@ -15,7 +15,7 @@
 
 	<img src="images/开发套件配网02.jpg" width = "400" height = "650" alt="wechat-contact" align=center />
 
-4. 确保手机蓝牙打开，选择需连接的设备。可根据开发套件CPU上的SN号来区别设备。若设备为搜索不到蓝牙，可对设备说“若琪若琪”。当设备为905D时，可在第3步选择「Pebble」来操作配网。
+4. 确保手机蓝牙打开，选择需连接的设备。可根据开发套件CPU上的SN号来区别设备。若设备为搜索不到蓝牙，可对设备说“若琪若琪”。
 
 	<img src="images/开发套件配网03.jpg" width = "400" height = "650" alt="wechat-contact" align=center />
 

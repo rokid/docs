@@ -59,7 +59,7 @@
     * [读取语音交互日志](2-RokidDocument/1-SkillsKit/test-skill-through-device-log.md)
 
 * 智能设备语音接入平台
-    * [智能设备语音接入平台简介](/2-RokidDocument/2-EnableVoice/introduction.md)
+    * [智能设备语音接入平台简介](2-RokidDocument/2-EnableVoice/introduction.md)
     * 新手入门
         * [获取认证文件](2-RokidDocument/2-EnableVoice/get-the-certification-file.md)
         * [认证文件的使用方法](2-RokidDocument/2-EnableVoice/usage.md)
