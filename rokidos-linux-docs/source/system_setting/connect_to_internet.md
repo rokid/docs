@@ -11,11 +11,11 @@
 
 	<img src="images/开发套件配网01.jpg" width = "400" height = "650" alt="wechat-contact" align=center />	
 
-3. 待灯光陆续亮起后（约两分钟），开发套件将自动进入蓝牙配网模式。点击「已出现紫色灯光闪烁」进入下一步。
+3. 待灯光陆续亮起后（约两分钟），开发套件将自动进入蓝牙配网模式。点击「已出现紫色灯光闪烁」进入下一步。
 
 	<img src="images/开发套件配网02.jpg" width = "400" height = "650" alt="wechat-contact" align=center />
 
-4. 确保手机蓝牙打开，选择需连接的设备。可根据开发套件CPU上的SN号来区别设备。若设备为搜索不到蓝牙，可对设备说“若琪若琪”。
+4. 确保手机蓝牙打开，选择需连接的设备。可根据开发套件CPU上的SN号来区别设备。若设备为搜索不到蓝牙，可对设备说“若琪若琪”。
 
 	<img src="images/开发套件配网03.jpg" width = "400" height = "650" alt="wechat-contact" align=center />
 

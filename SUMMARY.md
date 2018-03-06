@@ -28,7 +28,7 @@
         * [SSML 使用指南](2-RokidDocument/1-SkillsKit/ssml-document.md)
         * [Rokid Oauth 使用指南](2-RokidDocument/1-SkillsKit/rokid-oauth.md)
         * [获取 SSL 证书指南](2-RokidDocument/1-SkillsKit/get-SSL-certificate-tutorial.md)
-        * [技能开发Java版指南](https://github.com/Rokid/rokid-skill-sample/tree/master/rokid-skill-sample-java)
+        * [技能开发 Java 版指南](https://github.com/Rokid/rokid-skill-sample/tree/master/rokid-skill-sample-java)
     * 智能家居
         * [介绍 HomeBase Stack](rokid-homebase-docs/README.md)
         * [接入方式](rokid-homebase-docs/connect/README.md)
@@ -58,7 +58,7 @@
         * [技能审核规范](4-TermsAndAgreements/rokid-skill-examine-and-verify-standard.md)
     * [读取语音交互日志](2-RokidDocument/1-SkillsKit/test-skill-through-device-log.md)
 
-* 智能设备语音接入平台
+* 智能设备语音接入平台
     * [智能设备语音接入平台简介](2-RokidDocument/2-EnableVoice/introduction.md)
     * 新手入门
         * [获取认证文件](2-RokidDocument/2-EnableVoice/get-the-certification-file.md)
@@ -75,7 +75,7 @@
         * [Rokid Mobile SDK iOS 接入指南](https://github.com/Rokid/RokidMobileSDKiOSDemo)
     * [前端降噪API文档](3-ApiReference/siren-api.md)
 
-* Rokid 智能开发套件
+* Rokid 智能开发套件
     * [智能开发套件简介](rokidos-linux-docs/README.md)
     * 开发套件使用手册
         * [开发套件基本参数](rokidos-linux-docs/reference/dev_board/board_list.md)
