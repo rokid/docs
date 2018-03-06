@@ -6,6 +6,7 @@
 - [我要喝咖啡-JS](https://github.com/Rokid/rokid-skill-sample/tree/master/rokid-skill-sample-js-tastecoffee)：一个简单的示例技能，实现最简单的问答。
 - [猜数字-Java](https://github.com/Rokid/rokid-skill-sample/tree/master/rokid-skill-sample-java-guessnumber)：一款猜数字的游戏。
 - [头条热词-Python](https://github.com/Rokid/rokid-skill-sample/tree/master/rokid-skill-sample-python-toutiao)：一个简单的Https的请求范例。
+- [media和tts的技能模板](https://github.com/lukeup/rokid-skill-template):可以依据模板进行自定义的修改。
 
 ## 基本功能示例代码
 

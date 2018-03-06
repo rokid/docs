@@ -1,76 +1,66 @@
-# Rokid 开发者社区文档
+## 什么是 Rokid 开放平台
+**Rokid 开放平台**内含一整套语音解决方案，能够让终端设备拥有语音交互能力，使用户直接使用语音就能与你的设备进行交互。同时依托开放平台提供各种技能（Skill，可以理解为手机中的 APP），终端用户可以通过语音命令简单快速获取音乐、新闻、天气、问答等各种日常服务。目前这套方案用于多款智能设备， 可以在Rokid Alien、Rokid Pebble等产品上体验。
 
-Rokid开发者社区文档，旨在帮助开发者更好的使用社区提供的各种能力。
+Rokid 开放平台语音解决方案建立在云端，将会随着用户不断的使用而变得更加聪明。同时也会因为开发者不断新增的各种技能（Skill）而变得更加好用全面。
 
-文档发布在 [https://developer.rokid.com/docs/](https://developer.rokid.com/docs/)
+Rokid 开放平台语音服务包含**Rokid 技能开发工具**和**Rokid 语音接入**。
 
-以下是文档整体结构。
+## Rokid 技能开发平台
+Rokid 技能开发平台帮助开发者为所有搭载 Rokid 开放服务的设备开发有趣的技能（Skill），实现用户各式各样的语音交互需求。
 
-### 开发者社区介绍
+## Rokid 智能语音接入平台
+Rokid智能语音接入平台基于多年的端到端产品打磨，可为配有麦克风和扬声器的联网硬件设备添加语音交互体验。基于 Rokid 语音服务，灵活定制产品服务，重新定义 AI 制造。
 
-* [Rokid开发者社区介绍](rokid-community-introduction.md)
+## Rokid 开放平台的优势
+### 从前端降噪到语音合成的一整套解决方案
+Rokid 开放平台提供的方案包含从前端硬件的远场拾音、降噪、回升消除等技术，到自然语言识别、语义理解、自然语言合成这一整套的解决方案。
 
-### 快速开始
+### 经过产品检验的开放方案
 
-* [开始开发Rokid技能](1-GetStarted/rokid-skill-kit-introduction.md)
-* [开始接入Rokid语音](1-GetStarted/enable-rokid-voice.md)
+使用 Rokid 方案的两款产品均是体验最佳的语音智能设备代表。
+Rokid方案能够帮助硬件厂商获得相比其他方案更好的拾音、语音交互效果。
 
-### 开发Rokid技能
+![alien-pebble](images/alien-pebble.jpg)
 
-* [开始创建第一个技能：我要喝咖啡](2-RokidDocument/1-SkillsKit/skill-sample-coffee.md)
-* [为技能定义语音交互](2-RokidDocument/1-SkillsKit/define-voice-interaction.md)
-* [如何展示您的技能](2-RokidDocument/1-SkillsKit/show_skill_information.md)
-* [Rokid 预定义词表](2-RokidDocument/1-SkillsKit/rokid-bult-in-slots.md)
-* [Rokid NLP正则表达式使用指南](2-RokidDocument/1-SkillsKit/rokid-regular-expression.md)
-* [Rokid OAuth 指南](2-RokidDocument/1-SkillsKit/rokid-oauth.md)
-* [Rokid Force System 使用指南](2-RokidDocument/1-SkillsKit/rokid-force-system-tutorial.md)
-  * [Rokid Force - JS v2.0 使用指南](2-RokidDocument/1-SkillsKit/rokid-force-js-tutorial.md)
-  * [Rokid Force - JS v1.0 使用指南](2-RokidDocument/1-SkillsKit/rokid-force-js-v1.0-tutorial.md)
-* [在技能中使用SSML](2-RokidDocument/1-SkillsKit/ssml-document.md)
-* [Rokid 语音交互指南](2-RokidDocument/1-SkillsKit/rokid-voice-interaction-guidelines.md)
-* [Rokid 示例技能](2-RokidDocument/1-SkillsKit/skill-sample.md)
-* [读取设备日志以测试技能](2-RokidDocument/1-SkillsKit/test-skill-through-device-log.md)
+> 左侧为 Rokid Pebble，右侧为Rokid Alien，分别在CES2017，CES2016获奖。
 
-### 为设备开启语音交互
+### 不断进步的开放生态
 
-* [获取认证文件](2-RokidDocument/2-EnableVoice/get-the-certification-file.md)
-* [Rokid Android SDK 接入指南](2-RokidDocument/2-EnableVoice/rokid-sdk-tutorial.md)
-* [Rokid Android 905D 开发板环境搭建，编译，刷机，镜像下载文档](2-RokidDocument/2-EnableVoice/Rokid-Devkit-905D-Android-Doc.md)
+搭载 Rokid 语音方案的设备可以直接使用经过数次优化的基础语音技能，如天气、新闻等。
 
-### API REFERENCE
+另外，在 Rokid 开放平台中，你可以为自己或全平台的用户开发各类有趣的技能（Skill），来满足用户不断增加的语音需求。
 
-* [Rokid 技能协议文档](3-ApiReference/cloud-app-development-protocol_cn.md)
-* [拦截器接口文档](3-ApiReference/rokid-interceptor.md)
-* [Rokid 接口文档](3-ApiReference/openvoice-api.md)
-* [Rokid 客户端 SDK 文档](3-ApiReference/rokid-client-sdk-doc.md)
-* [Rokid 前端降噪模块 API文档](3-ApiReference/siren-api.md)
+同时，其他开发者开发的公共技能（Skill）也将不断更新至搭载Rokid语音方案的设备中。
 
-### 设计语音产品
+### 顶尖的语音智能技术
 
-* [Rokid 语音产品硬件设计指南](2-RokidDocument/2-EnableVoice/rokid-hardware-design-guide.md)
-* [Rokid 硬件交互设计指南](2-RokidDocument/2-EnableVoice/rokid-hardware-ux-design-guidelines.md)
+Rokid 自主研发的语音智能技术，能够在麦克风降噪、远场识别、上下文等多个方面提供业内顶尖的方案，以支持用户丰富深入的语音互动体验。
 
-### [Linux设备接入](https://rokid.github.io/rokidos-linux-docs/)
+## Rokid 开放服务合作方式
+### 免费使用基础语音服务
 
-* [RokidOS 设备开发文档](https://rokid.github.io/rokidos-linux-docs/)
+- 免费提供硬件设计参考方案
+- 免费提供远场激活拾音、降噪、回声消除等硬件技术方案
+- 免费提供基础语音服务
+    - 语音识别（ASR）
+    - 自然语言理解（NLP）
+    - 语音合成播报（TTS）
+- 免费使用Rokid云服务
+- 可以使用平台中的所有公共技能（Skill）
+- 可以自定义3字以上激活词
 
-### 智能家居开发
+### 可能产生费用的项目
+- 涉及版权的技能（Skills）内容
+- 需要 Rokid 提供额外人力支持的部分
+	- 例如自定义激活词的训练
+	- 或自定义的TTS人声训练
 
-* [Rokid 智能家居开发文档](https://rokid.github.io/rokid-homebase-docs/)
+## 发布时间
+- 2017年4月1日，开放内测。
+- 2017年6月1日，正式发布。
 
-### 协议条款
-
-* [技能发布标准](4-TermsAndAgreements/rokid-skill-release-standard.md)
-* [服务协议](4-TermsAndAgreements/community-service-agreement.md)
-* [免责声明](4-TermsAndAgreements/community-disclaimer.md)
 
 ## 支持
-
-* [联系我们](contact-us.md)
-* [Rokid讨论区](https://developer-forum.rokid.com/)
-* [Rokid开发者社区官网](https://developer.rokid.com/)
-* [Rokid 官网](https://www.rokid.com/)
-* [Rokid 智能家居](https://www.rokid.com/smarthome/)
-
-
+- [Rokid开发者论坛](https://developer-forum.rokid.com/)
+- [联系我们](contact-us.md)
 

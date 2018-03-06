@@ -11,35 +11,30 @@
 
 ## 目录
 
-*  [1.本期更新（2017.11）](#1-本期更新-201711)
-*  [2.JS脚本基本内容](#2-js脚本基本内容)
- *  [2.1固定写法部分](#21-固定写法部分)
- *  [2.2开发者编写基本内容handlers](#22-开发者编写基本内容handlers)
- *  [2.3关于调用callback](#23-关于调用callback)
- *  [2.4语音交互中对应配置](#24-语音交互中对应配置)
-* [3.response配置项](#3-response配置项)
- * [3.1tts相关配置](#31-tts相关配置)
- * [3.2ttsWithConfirm相关配置](#32-ttswithconfirm相关配置)
- * [3.3ttsWithCard相关配置](#33-ttswithcard相关配置)
- * [3.4ttsWithPickup相关配置](#34-ttswithpickup相关配置)
- * [3.5media相关配置](#35-media相关配置)
- * [3.6mediaWithConfirm相关配置](#36-mediawithconfirm相关配置)
- * [3.7mediaWithCard相关配置](#37-mediawithcard相关配置)
- * [3.8mediaWithPickup相关配置](#38-mediawithpickup相关配置)
-* [4.在Rokid对象中封装的工具](#4-在rokid对象中封装的工具)
-* [5.关于调试](#5-关于调试)
-* [6.关于日志](#6-关于日志)
-* [7.Sample](#7-sample)
-* [8.Q&A](#8-qa) 
+*  [1.JS脚本基本内容](#2-js脚本基本内容)
+ *  [1.1固定写法部分](#21-固定写法部分)
+ *  [1.2开发者编写基本内容handlers](#22-开发者编写基本内容handlers)
+ *  [1.3关于调用callback](#23-关于调用callback)
+ *  [1.4语音交互中对应配置](#24-语音交互中对应配置)
+* [2.response配置项](#3-response配置项)
+ * [2.1tts相关配置](#31-tts相关配置)
+ * [2.2ttsWithConfirm相关配置](#32-ttswithconfirm相关配置)
+ * [2.3ttsWithCard相关配置](#33-ttswithcard相关配置)
+ * [2.4ttsWithPickup相关配置](#34-ttswithpickup相关配置)
+ * [2.5media相关配置](#35-media相关配置)
+ * [2.6mediaWithConfirm相关配置](#36-mediawithconfirm相关配置)
+ * [2.7mediaWithCard相关配置](#37-mediawithcard相关配置)
+ * [2.8mediaWithPickup相关配置](#38-mediawithpickup相关配置)
+* [3.在Rokid对象中封装的工具](#4-在rokid对象中封装的工具)
+* [4.关于调试](#5-关于调试)
+* [5.关于日志](#6-关于日志)
+* [6.Sample](#7-sample)
+* [7.Q&A](#8-qa) 
 
-## 1. 本期更新-2017.11
-- ttsWithCard为考虑扩展性，参数中card属性调整，从string类型改为object。object属性为type（卡片类型），content（卡片内容）。
-- confirm和pickup的新增retryTts字段，用于在confirm和pickup状态下用户语句未命中的情况下重复播放的tts。
-
-## 2. JS脚本基本内容
+## 1. JS脚本基本内容
 开发者可以利用编写JS脚本实现各自所需的技能意图函数实现不同的功能。
 
-### 2.1 固定写法部分
+### 1.1 固定写法部分
 这部分如没有特别需求，所有开发者都可以通用如下代码：
 
 ``` javascript
@@ -58,7 +53,7 @@ exports.handler = function(event, context, callback) {
  
 以上三步是必须的。
 
-### 2.2 开发者编写基本内容handlers
+### 1.2 开发者编写基本内容handlers
 
 其中handlers，为大家所要写的意图技能处理函数，在“配置”编写js脚本，比如：
 
@@ -119,7 +114,7 @@ var handlers = {
 }
 ```
 
-### 2.3 关于调用callback
+### 1.3 关于调用callback
 
 **上述中this.callback是在意图函数运行完成后必须调用的，且须注意this的指向。如不调用，则jsEngine将会误认为脚本未执行完毕而导致无法输出结果。**
 
@@ -157,10 +152,10 @@ var handlers = {
 
 "语音交互"的intent，slot等request信息可在Rokid.param（下文有介绍）中获取。
 
-## 3. response配置项
+## 2. response配置项
 本节讲述开发者在意图函数中最终需要emit最终结果。
 
-### 3.1 tts相关配置
+### 2.1 tts相关配置
 
 ```javascript
 this.emit(':tts', {
@@ -195,7 +190,7 @@ this.emit(':tts', {
 | sessionKey | string | 无 | 不限 |
 | seesionValue | string | 无 | 不限 |
 
-### 3.2 ttsWithConfirm相关配置
+### 2.2 ttsWithConfirm相关配置
 
 ```javascript
 this.emit(':ttsWithConfirm', {
@@ -230,7 +225,7 @@ confirm详细：
 | optionWords | array | 无（选填）| 不限 |
 | retryTts | string | 无（选填）| 不限 |
 
-### 3.3 ttsWithCard相关配置
+### 2.3 ttsWithCard相关配置
 
 ```javascript
 this.emit(':ttsWithCard', {
@@ -261,7 +256,7 @@ card详细：
 | content | string | 无（CHAT时必填）| 不限 |
 
 
-### 3.4 ttsWithPickup相关配置
+### 2.4 ttsWithPickup相关配置
 
 ```javascript
 this.emit(':ttsWithPickup', {
@@ -294,7 +289,7 @@ pickup详细：
 | durationInMilliseconds | number | 6000（选填）| 0至6000 |
 | retryTts | string | 无（选填）| 不限 |
 
-### 3.5 media相关配置
+### 2.5 media相关配置
 
 ```javascript
 this.emit(':media', {
@@ -333,7 +328,7 @@ this.emit(":media",{},{})第三个参数如下（session配置项）：
 | sessionKey | string | 无 | 不限 |
 | seesionValue | string | 无 | 不限 |
 
-### 3.6 mediaWithConfirm相关配置
+### 2.6 mediaWithConfirm相关配置
 
 ```javascript
 this.emit(':mediaWithConfirm',{
@@ -369,7 +364,7 @@ confirm详细：
 | optionWords | array | 无（选填）|
 | retryTts | string | 无（选填）| 不限 |
 
-### 3.7 mediaWithCard相关配置
+### 2.7 mediaWithCard相关配置
 
 ```javascript
 this.emit(':mediaWithCard', {
@@ -401,7 +396,7 @@ card详细：
 | type | string | 无（必填）| ACCOUNT_LINK/CHAT |
 | content | string | 无（CHAT时必填）| 不限 |
 
-### 3.8 mediaWithPickup相关配置
+### 2.8 mediaWithPickup相关配置
 
 ```javascript
 this.emit(':mediaWithPickup', {
@@ -437,7 +432,7 @@ pickup详细：
 
 具体字段定义可参见：<https://rokid.github.io/docs/3-ApiReference/cloud-app-development-protocol_cn.html#3-response>
 
-## 4. 在Rokid对象中封装的工具
+## 3. 在Rokid对象中封装的工具
 
 ##### 开发者可直接调用封装在Rokid对象中的所有工具方法，现有如下：
 
@@ -504,7 +499,7 @@ var handlers = {
 };
 ```
 
-## 5. 关于调试
+## 4. 关于调试
 在“配置”页里，目前已支持单点测试，仅测试js应用脚本正确性。
 
  * 配置测试用例，其中的intent和slot是需要开发者在默认用例基础上对应于“语音交互”中作相应调整。
@@ -512,13 +507,13 @@ var handlers = {
 
 确保js应用脚本的正确性情况下，可在“集成测试”页中进行全链路集成测试。
 
-## 6. 关于日志
+## 5. 关于日志
 - 在应用脚本中可调用console.log( )输出你想要看的日志。
 - 须保证在“命中语音指令”的情况下才可查看日志。
 - 此日志仅是应用脚本执行的日志，不包括其他链路的日志。
 - 尽量在脚本中采用try-catch中调用callback传回状态，详细参见本文sample。
 
-## 7. Sample
+## 6. Sample
 
 ```javascript
 var data = [
@@ -585,7 +580,7 @@ var handlers = {
 };
 ```
 
-## 8. Q&A
+## 7. Q&A
 
 #### Q：为什么我有时候结果输出的会包含[Object,Object]？
 A：需要注意在emit的时候写入{tts:xxx}对象时，xxx必须为string类型，如果object+string就可能出现以上现象。想要输出object的内容须用JSON.stringify()将其转换为string。
@@ -601,7 +596,7 @@ A：开发者使用的请求地址，其返回体必须是json格式的。比如
 #### Q：为什么request请求总是不成功？
 A：首先确保request的所有参数均正确。其次，可用postman进行请求模拟，需要严格按照postman提供的nodejs-request的请求。
 
-### 9. 2.0版本补充说明
+### 8. 2.0版本补充说明
 希望开发者自行开发时按照V2.0SDK进行开发。
 SDK-V2.0说明文档：<https://developer.rokid.com/docs/2-RokidDocument/1-SkillsKit/rokid-js-engine-tutorial.html>
 
