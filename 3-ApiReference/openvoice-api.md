@@ -114,5 +114,4 @@ PCM格式为 RIFF (little-endian) data, WAVE audio, Microsoft PCM, 16 bit, mono 
 | action | string | cloud app处理的结果 |
 | extra | string | 目前有：{"activation": "fake(误激活)|reject(仲裁失败)|accept(激活确认)|none(无激活词时)"} |
 
-action：json字符串，结构详见 [action定义](https://github.com/Rokid/docs/blob/master/2-RokidDocument/1-SkillsKit/Cloud%20App%20Development%20Protocol_cn.md#32-action%E5%AE%9A%E4%B9%89)
-
+action：json字符串

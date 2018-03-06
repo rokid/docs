@@ -16,7 +16,7 @@
 
 #### ① 给您的Rokid ALL in ONE 全栈开发套件刷写代码
 
-- 请参见 [ALL in ONE 开发板 AMLOGIC 905D android代码编译烧写教程](./Rokid-Devkit-905D-Android-Doc.md)
+- 请参见 [ALL in ONE 开发板 AMLOGIC 905D android代码编译烧写教程](https://developer-forum.rokid.com/t/topic/991)
 
 #### ② 在您的产品中接入Rokid SDK
 Rokid开发者社区SDK包含Siren、Speech、NLP、ASR、TTS几大模块。
@@ -25,7 +25,7 @@ Rokid开发者社区SDK包含Siren、Speech、NLP、ASR、TTS几大模块。
 - TTS：文字转语音；
 - Speech和ASR：都是语音转文字，不同的是Speech专门处理Siren的语音事件。
 
-通过[Rokid SDK 接入指南](./rokid-sdk-tutorial.md)，了解如何快速在您的产品中接入Rokid SDK。
+通过[Rokid SDK 接入指南](https://developer-forum.rokid.com/t/topic/991)，了解如何快速在您的产品中接入Rokid SDK。
 
 #### 和您的设备做一次互动
 您可以创建一个[开始创建第一个技能：讲个笑话](/2-RokidDocument/1-SkillsKit/getting-started/create-skill.md)，并将您的设备添加到此技能的测试设备列表中，就可以与设备进行互动啦。

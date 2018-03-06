@@ -28,6 +28,7 @@
         * [SSML 使用指南](2-RokidDocument/1-SkillsKit/ssml-document.md)
         * [Rokid Oauth 使用指南](2-RokidDocument/1-SkillsKit/rokid-oauth.md)
         * [获取 SSL 证书指南](2-RokidDocument/1-SkillsKit/get-SSL-certificate-tutorial.md)
+        * [技能开发Java版指南](https://github.com/Rokid/rokid-skill-sample/tree/master/rokid-skill-sample-java)
     * 智能家居
         * [介绍 HomeBase Stack](rokid-homebase-docs/README.md)
         * [接入方式](rokid-homebase-docs/connect/README.md)
@@ -45,18 +46,17 @@
             * [设备能力与状态](rokid-homebase-docs/device/actions-and-state.md)
             * [设备房间](rokid-homebase-docs/device/room-name.md)
         * 调试工具
-            * [简介](rokid-homebase-docs/tools/README.md)
             * [命令行接口校验工具](rokid-homebase-docs/tools/rhome.md)
             * [开发者驱动](rokid-homebase-docs/tools/developer-driver.md)
             * [如何测试 OAuth|OAuth2.0 接口](rokid-homebase-docs/tools/oauth-test.md)
         * [添加驱动到 Rokid](rokid-homebase-docs/add-to-rokid.md)
         * [Webhook](rokid-homebase-docs/webhook/index.md)
 
-    * 规范与协议    
-        * [技能审核规范](4-TermsAndAgreements/rokid-skill-examine-and-verify-standard.md)
-        * [技能发布标准](4-TermsAndAgreements/rokid-skill-release-standard.md)
+    * 规范与协议
         * [Rokid 技能协议](3-ApiReference/cloud-app-development-protocol_cn.md)
-    * [读取设备日志](2-RokidDocument/1-SkillsKit/test-skill-through-device-log.md)
+        * [技能发布标准](4-TermsAndAgreements/rokid-skill-release-standard.md)
+        * [技能审核规范](4-TermsAndAgreements/rokid-skill-examine-and-verify-standard.md)
+    * [读取语音交互日志](2-RokidDocument/1-SkillsKit/test-skill-through-device-log.md)
 
 * 智能设备语音接入平台
     * [智能设备语音接入平台简介](/2-RokidDocument/2-EnableVoice/introduction.md)

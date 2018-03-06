@@ -2,15 +2,6 @@
 ### Rokid 开放平台
 版本：1.0.1-alpha
 
-### 更新内容
-* 细化了attributes字段的描述以及说明
-* 增加了开发者接收到未知Event事件时的建议处理
-* 增加了系统级Intent的描述
-* 增加了IntentRequst中的sentence字段
-* 增加了MasterId和UserId的区别
-* 补充了Slot字段的描述
-* 增加了~~Skill.EXIT~~事件的说明
-
 ### 大纲
 
 

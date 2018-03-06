@@ -15,3 +15,4 @@
 
 ![](images/00-开始创建.jpg)
 
+[下一步](skill-information.md)

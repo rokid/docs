@@ -27,7 +27,7 @@
 2.在喜马拉雅创建应用成功后可以获得该应用的clientId和clientSecret，如下图所示：
 ![Alt text](./images/1501830262189.png)
 
-3.在[Rokid开发者社区](https://developer.rokid.com/#/)新建一个技能
+3.在[Rokid 开放平台](https://developer.rokid.com/#/)新建一个技能
 
 4.填写技能基本信息及语音交互信息
 
@@ -38,7 +38,7 @@
 
 ### 二、OAuth相关的服务端开发
 
-1.解析接收到Rokid request参数，参数信息例子如下
+1.解析接收到 Rokid request参数，参数信息例子如下
 
 ```json
 {
@@ -114,7 +114,7 @@
     ```
    **注：** 
    
-  - 返回Rokid的response参数中如`card `处设定`type`为“AUTH”，则Rokid会给推送一个申请授权的push消息到用户手机的Rokid App上（**推送功能将会在下一个版本的Rokid App实现**），此时用户点击推送消息中的链接，并按照提示的操作完成授权流程。
+  - 返回Rokid的response参数中如`card `处设定`type`为“AUTH”，则Rokid会给推送一个申请授权的push消息到用户手机的Rokid App上，此时用户点击推送消息中的链接，并按照提示的操作完成授权流程。
   - 上面Rokid request json中的`$.context.user.accountLinkedId`处，不为空时，则用户已登录第三方开放平台
   - 使用步骤1中的Rokid request json参数中`$.context.user.accountLinkedId`完成请求第三方开放平台资源操作。
  

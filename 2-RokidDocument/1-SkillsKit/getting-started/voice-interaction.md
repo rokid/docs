@@ -29,4 +29,5 @@
 ![](images/02-语言交互with测试.jpg)
 
 
+[下一步](configuration.md)
 
