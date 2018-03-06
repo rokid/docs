@@ -1,0 +1,670 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Homebase OAuth2.0 授权 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="rfc6749.html" />
+    
+    
+    <link rel="prev" href="oauth.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://www.rokid.com" target="_blank" class="custom-link">Rokid</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    介绍 HomeBase Stack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    接入方式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="http-remote-driver.html">
+            
+                <a href="http-remote-driver.html">
+            
+                    
+                    HTTP RemoteDriver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="oauth.html">
+            
+                <a href="oauth.html">
+            
+                    
+                    Homebase OAuth 授权
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.3" data-path="oauth2.0.html">
+            
+                <a href="oauth2.0.html">
+            
+                    
+                    Homebase OAuth2.0 授权
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="rfc6749.html">
+            
+                <a href="rfc6749.html">
+            
+                    
+                    符合 RFC6749 的 OAuth2.0 授权
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="ssdp-auto-discovery.html">
+            
+                <a href="ssdp-auto-discovery.html">
+            
+                    
+                    SSDP Auto Discovery
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="json-rpc-over-tcp.html">
+            
+                <a href="json-rpc-over-tcp.html">
+            
+                    
+                    JSON-RPC over TCP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="android-native-driver.html">
+            
+                <a href="android-native-driver.html">
+            
+                    
+                    Android Native Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="errors.html">
+            
+                <a href="errors.html">
+            
+                    
+                    标准错误
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../device/">
+            
+                <a href="../device/">
+            
+                    
+                    设备描述
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../device/device.html">
+            
+                <a href="../device/device.html">
+            
+                    
+                    设备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../device/type.html">
+            
+                <a href="../device/type.html">
+            
+                    
+                    设备类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../device/actions-and-state.html">
+            
+                <a href="../device/actions-and-state.html">
+            
+                    
+                    设备能力与状态
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../device/room-name.html">
+            
+                <a href="../device/room-name.html">
+            
+                    
+                    设备房间
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../tools/README.md">
+            
+                <span>
+            
+                    
+                    调试工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../tools/rhome.html">
+            
+                <a href="../tools/rhome.html">
+            
+                    
+                    命令行接口校验工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../tools/developer-driver.html">
+            
+                <a href="../tools/developer-driver.html">
+            
+                    
+                    开发者驱动
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../tools/oauth-test.html">
+            
+                <a href="../tools/oauth-test.html">
+            
+                    
+                    如何测试 OAuth|OAuth2.0 接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../add-to-rokid.html">
+            
+                <a href="../add-to-rokid.html">
+            
+                    
+                    添加驱动到 Rokid
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../webhook/">
+            
+                <a href="../webhook/">
+            
+                    
+                    Webhook
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Homebase OAuth2.0 授权</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="http-&#x8FDC;&#x7A0B;&#x9A71;&#x52A8;-oauth-20-&#x63A5;&#x5165;">HTTP &#x8FDC;&#x7A0B;&#x9A71;&#x52A8; OAuth 2.0 &#x63A5;&#x5165;</h1>
+<p>&#x57FA;&#x672C;&#x6D41;&#x7A0B;&#x4E0E; <a href="oauth.html">OAuth</a> &#x7C7B;&#x8BD5;;</p>
+<p>OAuth 2.0 &#x9700;&#x8981;&#x5B9E;&#x73B0; 3 &#x4E2A; command &#x63A5;&#x53E3;</p>
+<h2 id="&#x63A5;&#x53E3;1-oauth">&#x63A5;&#x53E3;1. <code>OAuth</code></h2>
+<p>&#x8F93;&#x5165;&#x53C2;&#x6570;</p>
+<ul>
+<li>command {String} &#x65B9;&#x6CD5;&#x540D;, <code>OAuth</code></li>
+<li>params {Object}</li>
+<li>params.callbackURL {String} &#x6388;&#x6743;&#x56DE;&#x8C03; URL</li>
+</ul>
+<p>&#x8F93;&#x51FA;</p>
+<ul>
+<li>status {Number} 0 &#x8868;&#x793A;&#x6210;&#x529F;</li>
+<li>data {String} &#x6388;&#x6743;&#x8DF3;&#x8F6C; URL</li>
+</ul>
+<p>Sample</p>
+<pre><code>{
+  &quot;command&quot;: &quot;OAuth&quot;,
+  &quot;params&quot;: {
+    &quot;callbackURL&quot;: &quot;http://s.rokidcdn.com/xxxxxx&quot;
+  }
+}
+</code></pre><p>&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#xFF0C;JSON&#x683C;&#x5F0F;</p>
+<pre><code>{
+  &quot;status&quot;: 0,
+  &quot;data&quot;: &quot;http://my.driver.com/xxx?callbackurl=http%3A%2F%2Fs.rokidcdn.com%2Fxxxxxx&quot;
+}
+</code></pre><h2 id="&#x63A5;&#x53E3;2-oauthgettoken">&#x63A5;&#x53E3;2: <code>OAuthGetToken</code></h2>
+<p>&#x8F93;&#x5165;</p>
+<ul>
+<li>command {String} &#x65B9;&#x6CD5;&#x540D; expiredTime</li>
+<li>params {Object}</li>
+<li>params.code {String}</li>
+</ul>
+<p>&#x8F93;&#x51FA;</p>
+<ul>
+<li>status {Number} &#x63A5;&#x53E3;&#x72B6;&#x6001;</li>
+<li>data {Object}</li>
+<li>data.userId &#x6388;&#x6743;&#x7528;&#x6237;ID</li>
+<li>data.userToken &#x6388;&#x6743;token</li>
+<li>data.refreshToken &#x5237;&#x65B0;&#x7528;&#x7684;token</li>
+<li>expiredTime {Number} &#x65F6;&#x95F4;&#x6233;&#xFF0C;&#x5355;&#x4F4D;&#x79D2;, &#x4E0E; expiresIn &#x4E8C;&#x9009;&#x4E00;</li>
+<li>expiresIn {Number} &#x65F6;&#x95F4;&#x6233;&#xFF0C;&#x5355;&#x4F4D;&#x79D2;, &#x4E0E; expiredTime &#x4E8C;&#x9009;&#x4E00;</li>
+<li>data.ext1 {String} &#x6269;&#x5C55;&#x5B57;&#x6BB5;</li>
+<li>data.ext2 {String} &#x6269;&#x5C55;&#x5B57;&#x6BB5;</li>
+<li>data.ext3 {String} &#x6269;&#x5C55;&#x5B57;&#x6BB5;</li>
+<li>data.ext4 {String} &#x6269;&#x5C55;&#x5B57;&#x6BB5;</li>
+<li>data.ext5 {String} &#x6269;&#x5C55;&#x5B57;&#x6BB5;</li>
+</ul>
+<p>Sample</p>
+<pre><code>{
+  &quot;command&quot;: &quot;OAuthGetToken&quot;,
+  &quot;params&quot;: {
+    &quot;code&quot;: &quot;XXXXXXXXXX&quot;
+  }
+}
+</code></pre><p>&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#xFF0C;JSON&#x683C;&#x5F0F;</p>
+<ul>
+<li>data { JSON }</li>
+</ul>
+<pre><code>{
+  &quot;status&quot;: 0,
+  &quot;data&quot;: {
+    &quot;userId&quot;: &quot;XXXXXXXXXX&quot;,
+    &quot;userToken&quot;: &quot;XXXXXXXXXX&quot;,
+    &quot;refreshToken&quot;: &quot;XXXXXXXXXX&quot;,
+    &quot;expiresIn: 7200
+  }
+}
+</code></pre><h2 id="&#x63A5;&#x53E3;3-oauthrefresh">&#x63A5;&#x53E3;3: <code>OAuthRefresh</code></h2>
+<p>&#x8F93;&#x5165; userAuth</p>
+<ul>
+<li>params.code {String} &#x6388;&#x6743; code</li>
+<li>data {Object}</li>
+<li>userId &#x6388;&#x6743;&#x7528;&#x6237;ID</li>
+<li>userToken &#x6388;&#x6743;token</li>
+<li>refreshToken &#x5237;&#x65B0;&#x7528;&#x7684;token</li>
+<li>expiredTime {Number} &#x65F6;&#x95F4;&#x6233;&#xFF0C;&#x5355;&#x4F4D;&#x79D2;, &#x4E0E; expiresIn &#x4E8C;&#x9009;&#x4E00;</li>
+<li>expiresIn {Number} &#x65F6;&#x95F4;&#x6233;&#xFF0C;&#x5355;&#x4F4D;&#x79D2;, &#x4E0E; expiredTime &#x4E8C;&#x9009;&#x4E00;</li>
+<li>ext1 {String} &#x6269;&#x5C55;&#x5B57;&#x6BB5;</li>
+<li>ext2 {String} &#x6269;&#x5C55;&#x5B57;&#x6BB5;</li>
+<li>ext3 {String} &#x6269;&#x5C55;&#x5B57;&#x6BB5;</li>
+<li>ext4 {String} &#x6269;&#x5C55;&#x5B57;&#x6BB5;</li>
+<li>ext5 {String} &#x6269;&#x5C55;&#x5B57;&#x6BB5;</li>
+</ul>
+<p>&#x8F93;&#x51FA; userAuth</p>
+<ul>
+<li><ul>
+<li>status {Number} &#x63A5;&#x53E3;&#x72B6;&#x6001;</li>
+</ul>
+</li>
+<li><ul>
+<li>data {Object}</li>
+</ul>
+</li>
+<li><ul>
+<li>data.userId &#x6388;&#x6743;&#x7528;&#x6237;ID</li>
+</ul>
+</li>
+<li><ul>
+<li>data.userToken &#x6388;&#x6743;token</li>
+</ul>
+</li>
+<li><ul>
+<li>data.refreshToken &#x5237;&#x65B0;&#x7528;&#x7684;token</li>
+</ul>
+</li>
+<li><ul>
+<li>data.expiredTime {Number} &#x65F6;&#x95F4;&#x6233;&#xFF0C;&#x5355;&#x4F4D;&#x79D2;</li>
+</ul>
+</li>
+<li><ul>
+<li>data.ext1 {String} &#x6269;&#x5C55;&#x5B57;&#x6BB5;</li>
+</ul>
+</li>
+<li><ul>
+<li>data.ext2 {String} &#x6269;&#x5C55;&#x5B57;&#x6BB5;</li>
+</ul>
+</li>
+<li><ul>
+<li>data.ext3 {String} &#x6269;&#x5C55;&#x5B57;&#x6BB5;</li>
+</ul>
+</li>
+<li><ul>
+<li>data.ext4 {String} &#x6269;&#x5C55;&#x5B57;&#x6BB5;</li>
+</ul>
+</li>
+<li><ul>
+<li>data.ext5 {String} &#x6269;&#x5C55;&#x5B57;&#x6BB5;</li>
+</ul>
+</li>
+</ul>
+<p>&#x4F20;&#x5165;&#x53C2;&#x6570;</p>
+<pre><code>{
+  &quot;command&quot;: &quot;OAuthRefresh&quot;,
+  &quot;params&quot;: {
+    &quot;userId&quot;: &quot;XXXXXXXXXX&quot;,
+    &quot;userToken&quot;: &quot;XXXXXXXXXX&quot;,
+    &quot;refreshToken&quot;: &quot;XXXXXXXXXX&quot;
+  }
+}
+</code></pre><p>&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#xFF0C;JSON&#x683C;&#x5F0F;</p>
+<ul>
+<li>data { JSON }</li>
+</ul>
+<pre><code>{
+  &quot;status&quot;: 0,
+  &quot;data&quot;: {
+    &quot;userId&quot;: &quot;XXXXXXXXXX&quot;,
+    &quot;userToken&quot;: &quot;XXXXXXXXXX&quot;,
+    &quot;refreshToken&quot;: &quot;XXXXXXXXXX&quot;,
+    &quot;expiresIn: 7200
+  }
+}
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="oauth.html" class="navigation navigation-prev " aria-label="Previous page: Homebase OAuth 授权">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="rfc6749.html" class="navigation navigation-next " aria-label="Next page: 符合 RFC6749 的 OAuth2.0 授权">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Homebase OAuth2.0 授权","level":"1.2.3","depth":2,"next":{"title":"符合 RFC6749 的 OAuth2.0 授权","level":"1.2.4","depth":2,"path":"connect/rfc6749.md","ref":"connect/rfc6749.md","articles":[]},"previous":{"title":"Homebase OAuth 授权","level":"1.2.2","depth":2,"path":"connect/oauth.md","ref":"connect/oauth.md","articles":[]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sidebar":{"Rokid":"https://www.rokid.com"},"sharing":{"google":null,"facebook":null,"twitter":null,"weibo":null,"all":null}},"gitbook":"*"},"file":{"path":"connect/oauth2.0.md","mtime":"2017-12-28T06:01:04.035Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-01-26T03:03:54.630Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

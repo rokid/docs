@@ -1,7 +1,6 @@
 # Rokid-Force-JS 使用指南V2.0
 
 > 欢迎使用RFS-JS，很高兴大家可以通过编辑JS脚本来搭建技能服务。
-> Tips：为对老版本(V1.0)技能的过渡性支持，本次Rokid-Force-JS V1.0 也进行了同步更新（[点此查看文档v1.0文档](./rokid-force-js-v1.0-tutorial.md)），但在下个版本起V1.0视情况更新，或滞后于V2.0，推荐开发者使用V2.0进行开发。
 
 ## 使用JS脚本更快速的开发技能
 
@@ -11,40 +10,30 @@
 
 ### 目录
 
-*  [1.本期更新（2017.11）](#1-本期更新-201711)
-*  [2.JS脚本基本内容](#2-js脚本基本内容)
- *  [2.1固定写法部分](#21-固定写法部分)
- *  [2.2开发者编写基本内容handlers](#22-开发者编写基本内容handlers)
- *  [2.3语音交互中对应配置](#23-语音交互中对应配置)
-* [3.response配置项](#3-response配置项)
- * [3.1setBaseInfo相关配置](#31-setbaseinfo配置基础信息)
- * [3.2setSession相关配置](#32-setsession配置session信息)
- * [3.3setTts相关配置](#33-settts配置tts信息)
- * [3.4setMedia相关配置](#34-setmedia配置media信息)
- * [3.5setConfirm相关配置](#35-setconfirm配置confirm信息)
- * [3.6setCard相关配置](#36-setcard配置card信息)
- * [3.7setPickup相关配置](#37-setpickup配置pickup信息)
-* [4.在Rokid对象中封装的工具](#4-在rokid对象中封装的工具)
-* [5.关于调试](#5-关于调试)
-* [6.关于日志](#6-关于日志)
-* [7.Sample](#7-sample)
-* [8.Q&A](#8-qa) 
 
-### 1. 本期更新-2017.11
-- 本期更新主要在于新建与修改技能配置（Rokid Force）的方式，将RFS（技能配置系统）解耦出skill。
-	- RFS（Rokid-Force-System）<https://developer-rfs.rokid.com>
-	- 在创建skill过程中只需在“配置”后端服务中选择需要关联的技能配置即可
-	- 可在技能上线后更灵活的切换线上技能配置。
-	- skill的“配置”后端服务中“查看技能历史日志”是查看当前技能的历史日志。
-	- RFS中“更多操作”中“查看技能历史日志”是查看当前技能配置的历史日志。
-- 协议调整
-	- setCard配置card信息新增CHAT类型。
-	- setCard参数变更，从string变为object{type(card类型)，content(card内容)}
-	- confirm和pickup的新增retryTts字段，用于在confirm和pickup状态下用户语句未命中的情况下重复播放的tts。
-### 2. JS脚本基本内容
+*  [1.JS脚本基本内容](#1-js脚本基本内容)
+ *  [1.1固定写法部分](#11-固定写法部分)
+ *  [1.2开发者编写基本内容handlers](#12-开发者编写基本内容handlers)
+ *  [1.3语音交互中对应配置](#13-语音交互中对应配置)
+* [2.response配置项](#2-response配置项)
+ * [2.1setBaseInfo相关配置](#21-setbaseinfo配置基础信息)
+ * [2.2setSession相关配置](#22-setsession配置session信息)
+ * [2.3setTts相关配置](#23-settts配置tts信息)
+ * [2.4setMedia相关配置](#24-setmedia配置media信息)
+ * [2.5setConfirm相关配置](#25-setconfirm配置confirm信息)
+ * [2.6setCard相关配置](#26-setcard配置card信息)
+ * [2.7setPickup相关配置](#27-setpickup配置pickup信息)
+* [3.在Rokid对象中封装的工具](#3-在rokid对象中封装的工具)
+* [4.关于调试](#4-关于调试)
+* [5.关于日志](#5-关于日志)
+* [6.Sample](#6-sample)
+* [7.Q&A](#7-qa) 
+
+
+### 1. JS脚本基本内容
 开发者可以利用编写JS脚本实现各自所需的技能意图函数实现不同的功能。
 
-### 2.1 固定写法部分
+#### 1.1 固定写法部分
 这部分如没有特别需求，所有开发者都可以通用如下代码：
 
 ``` javascript
@@ -63,7 +52,7 @@ exports.handler = function(event, context, callback) {
  
 以上三步是必须的。
 
-#### 2.2 开发者编写基本内容handlers
+#### 1.2 开发者编写基本内容handlers
 
 其中handlers，为大家所要写的意图技能处理函数，在“配置”编写js脚本，最基本写法比如：
 
@@ -119,7 +108,7 @@ this.emit(':error', error):表示程序中出错，返回错误信息。
 与1.0版本中的callback左右相似，拆分为更容易理解的以上两种结束语句。
 **依然要着重注意this的指向问题。**
 
-#### 2.3 语音交互中对应配置
+#### 1.3 语音交互中对应配置
 "ttsSample"与"mediaSample"对应于"语音交互"中的intent如下：
 
 ``` javascript
@@ -153,7 +142,7 @@ this.emit(':error', error):表示程序中出错，返回错误信息。
 
 "语音交互"的intent，slot等request信息可在Rokid.param（下文有介绍）中获取。
 
-### 3. response配置项
+### 2. response配置项
 2.0.0版本
 开发者response配置方式更新，可根据需求分步骤set。
 目前支持：setBaseInfo, setSession, setTts, setMedia, setConfirm, setCard, setPickup
@@ -167,7 +156,7 @@ this.emit(':error', error):表示程序中出错，返回错误信息。
 | setConfirm | 配置询问，多轮交互的相关信息（confirm） |
 | setCard | 配置授权相关信息（card） |
 
-#### 3.1 setBaseInfo配置基础信息
+#### 2.1 setBaseInfo配置基础信息
 
 ```javascript
 this.setBaseInfo({
@@ -187,7 +176,7 @@ this.setBaseInfo({
 | form | string | 选填 | cut| scene/cut/service |
 | shouldEndSession | boolean | 选填 | false | true/false |
 
-#### 3.2 setSession配置session信息
+#### 2.2 setSession配置session信息
 
 ```javascript
 this.setSession({
@@ -201,7 +190,7 @@ this.setSession({
 
 setSession时完全自定义，可根据开发者需求自定义key-object键值对。
 
-#### 3.3 setTts配置tts信息
+#### 2.3 setTts配置tts信息
 
 ```javascript
 this.setTts({
@@ -223,7 +212,7 @@ setTts时"tts"属性必填且为string或number类型,可为空字符串。
 | itemId | string | 选填 | 无 | 不限 |
 | tts | string/number | 必填 | 无 | 不限(值可为空字符串) |
 
-#### 3.4 setMedia配置media信息
+#### 2.4 setMedia配置media信息
 
 ```javascript
 this.setMedia({
@@ -249,7 +238,7 @@ setMedia时"type"和"url"均必填且为string类型。
 | type | string | 必填 | 无 | AUDIO |
 | url | string | 必填 | 无 | 不限 |
 
-#### 3.5 setConfirm配置confirm信息
+#### 2.5 setConfirm配置confirm信息
 
 ```javascript
 this.setConfirm({
@@ -272,7 +261,7 @@ setConfirm时"confirmIntent"和"confirmSlot"均必填且为string类型。
 | optionWords | array | 选填 | 无 | 不限 |
 | retryTts | string | 选填 | 无 | 不限 |
 
-#### 3.6 setCard配置card信息
+#### 2.6 setCard配置card信息
 
 ```javascript
 this.setCard({
@@ -292,7 +281,7 @@ setCard目前支持ACCOUNT_LINK(content字段不必填)，CHAT(content字段必�
 | content | string | CHAT时必填 | 无 | 不限 |
 
 
-#### 3.7 setPickup配置pickup信息
+#### 2.7 setPickup配置pickup信息
 
 ```javascript
 this.setPickup({
@@ -316,9 +305,9 @@ setPickup时。
 
 具体字段定义可参见：<https://rokid.github.io/docs/3-ApiReference/cloud-app-development-protocol_cn.html#3-response>
 
-### 4. 在Rokid对象中封装的工具
+### 3. 在Rokid对象中封装的工具
 
-##### 开发者可直接调用封装在Rokid对象中的所有工具方法，现有如下：
+#### 开发者可直接调用封装在Rokid对象中的所有工具方法，现有如下：
 
 可用参数：
 
@@ -381,7 +370,7 @@ var handlers = {
 };
 ```
 
-### 5. 关于调试
+### 4. 关于调试
 在“配置”页里，目前已支持单点测试，仅测试js应用脚本正确性。
 
  * 配置测试用例，其中的intent和slot是需要开发者在默认用例基础上对应于“语音交互”中作相应调整。
@@ -390,13 +379,13 @@ var handlers = {
 确保js应用脚本的正确性情况下，可在“集成测试”页中进行全链路集成测试。
 脚本需要第三方请求时，可先通过Postman进行请求模拟，严格按照Postman的nodejs-request的code进行请求。
 
-### 6. 关于日志
+### 5. 关于日志
 - 在应用脚本中可调用console.log()输出你想要看的日志。
 - 须保证在“命中语音指令”的情况下才可查看日志。
 - 此日志仅是应用脚本执行的日志，不包括其他链路的日志。
 - 尽量在脚本中采用try-catch中调用callback传回状态，详细参见本文sample。
 
-### 7. Sample
+### 6. Sample
 
 ```javascript
 var data = [
@@ -477,7 +466,7 @@ var handlers = {
 };
 ```
 
-### 8. Q&A
+### 7. Q&A
 
 #### Q：为什么我有时候结果输出的会包含[Object,Object]？
 A：需要注意在emit的时候写入{tts:xxx}对象时，xxx必须为string类型，如果object+string就可能出现以上现象。想要输出object的内容须用JSON.stringify()将其转换为string。
@@ -496,7 +485,7 @@ A：由于上下文this会在一定情况下改变指向，不再指向window对
 #### Q：为什么request请求总是不成功？
 A：首先确保request的所有参数均正确。其次，可用postman进行请求模拟，需要严格按照postman提供的nodejs-request的请求。
 
-### 9. 1.0版本补充说明
+### 8. 1.0版本补充说明
 为保证以往技能正常运行，1.0版本将继续维护，但可能会滞后于2.0版本的更新。
 SDK-V1.0说明文档：<https://rokid.github.io/docs/2-RokidDocument/1-SkillsKit/rokid-js-engine-tutorial-v1.0.html>
 

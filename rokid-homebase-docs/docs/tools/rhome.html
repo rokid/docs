@@ -1,0 +1,598 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>命令行接口校验工具 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="developer-driver.html" />
+    
+    
+    <link rel="prev" href="README.md" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://www.rokid.com" target="_blank" class="custom-link">Rokid</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    介绍 HomeBase Stack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../connect/">
+            
+                <a href="../connect/">
+            
+                    
+                    接入方式
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../connect/http-remote-driver.html">
+            
+                <a href="../connect/http-remote-driver.html">
+            
+                    
+                    HTTP RemoteDriver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../connect/oauth.html">
+            
+                <a href="../connect/oauth.html">
+            
+                    
+                    Homebase OAuth 授权
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../connect/oauth2.0.html">
+            
+                <a href="../connect/oauth2.0.html">
+            
+                    
+                    Homebase OAuth2.0 授权
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../connect/rfc6749.html">
+            
+                <a href="../connect/rfc6749.html">
+            
+                    
+                    符合 RFC6749 的 OAuth2.0 授权
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../connect/ssdp-auto-discovery.html">
+            
+                <a href="../connect/ssdp-auto-discovery.html">
+            
+                    
+                    SSDP Auto Discovery
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../connect/json-rpc-over-tcp.html">
+            
+                <a href="../connect/json-rpc-over-tcp.html">
+            
+                    
+                    JSON-RPC over TCP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../connect/android-native-driver.html">
+            
+                <a href="../connect/android-native-driver.html">
+            
+                    
+                    Android Native Driver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../connect/errors.html">
+            
+                <a href="../connect/errors.html">
+            
+                    
+                    标准错误
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../device/">
+            
+                <a href="../device/">
+            
+                    
+                    设备描述
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../device/device.html">
+            
+                <a href="../device/device.html">
+            
+                    
+                    设备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../device/type.html">
+            
+                <a href="../device/type.html">
+            
+                    
+                    设备类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../device/actions-and-state.html">
+            
+                <a href="../device/actions-and-state.html">
+            
+                    
+                    设备能力与状态
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../device/room-name.html">
+            
+                <a href="../device/room-name.html">
+            
+                    
+                    设备房间
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="README.md">
+            
+                <span>
+            
+                    
+                    调试工具
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.4.1" data-path="rhome.html">
+            
+                <a href="rhome.html">
+            
+                    
+                    命令行接口校验工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="developer-driver.html">
+            
+                <a href="developer-driver.html">
+            
+                    
+                    开发者驱动
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="oauth-test.html">
+            
+                <a href="oauth-test.html">
+            
+                    
+                    如何测试 OAuth|OAuth2.0 接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../add-to-rokid.html">
+            
+                <a href="../add-to-rokid.html">
+            
+                    
+                    添加驱动到 Rokid
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../webhook/">
+            
+                <a href="../webhook/">
+            
+                    
+                    Webhook
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >命令行接口校验工具</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="rhome">rhome</h1>
+<p>&#x547D;&#x4EE4;&#x884C;&#x63A5;&#x53E3;&#x68C0;&#x9A8C;&#x5DE5;&#x5177;</p>
+<h2 id="&#x529F;&#x80FD;">&#x529F;&#x80FD;</h2>
+<ul>
+<li><p>&#x8C03;&#x7528; list|get|execute &#x63A5;&#x53E3;&#x3002;</p>
+</li>
+<li><p>&#x4F7F;&#x7528; jsonshema &#x5BF9;&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x636E;&#x683C;&#x5F0F;&#x8FDB;&#x884C;&#x6821;&#x9A8C;&#xFF0C;&#x5E76;&#x6307;&#x51FA;&#x5177;&#x4F53;&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#x3002;</p>
+</li>
+</ul>
+<h2 id="&#x5B89;&#x88C5;">&#x5B89;&#x88C5;</h2>
+<pre><code class="lang-bash">$ npm install -g rokid-homebase-cli
+</code></pre>
+<h2 id="&#x4F7F;&#x7528;">&#x4F7F;&#x7528;</h2>
+<pre><code>$ rhome -h
+
+Usage: rhome [options] [command]
+
+
+  Commands:
+
+    serve &lt;path&gt; [port]            transform local driver to server with default port 3000
+    add                            add a remote driver&apos;s session
+    del &lt;name&gt;                     delete a remote driver&apos;s session
+    sessions                       list all added sessions
+    use &lt;name&gt;                     user an added session
+    list                           list a driver&apos;s all devices
+    get &lt;id&gt;                       get one device&apos;s current state
+    exec &lt;id&gt; &lt;prop&gt; &lt;name&gt; [val]  execute the device&lt;id&gt; with target action(e.g color num 256)
+    *                              [object Object]
+    help [cmd]                     display help for [cmd]
+
+  show help
+
+  Options:
+
+    -h, --help     output usage information
+    -V, --version  output the version number
+    -b, --body     show response body of list/get/execute
+    -l, --local    list local devices
+</code></pre><ul>
+<li><code>rhome</code> &#x8FD0;&#x884C;&#x540E;&#xFF0C;&#x5C06;&#x5728;&#x7528;&#x6237;&#x76EE;&#x5F55;&#x4E0B;&#x65B0;&#x5EFA; <strong>rhome.json</strong> &#x6587;&#x4EF6;&#xFF0C;&#x4FDD;&#x5B58; sessions&#x3001;devices&#x3001;currentSession &#x4FE1;&#x606F;&#x3002;&#x5982;&#x6709;&#x5FC5;&#x8981;&#xFF0C;&#x5F00;&#x53D1;&#x8005;&#x53EF;&#x4EE5;&#x8FDB;&#x884C;&#x4FEE;&#x6539;&#x3002;  </li>
+<li><code>add</code> &#x662F;&#x4EA4;&#x4E92;&#x5F0F;&#x547D;&#x4EE4;&#x3002; name &#x5FC5;&#x987B;&#x7531; <strong>&#x5B57;&#x6BCD;</strong>&#x3001;<strong>&#x6570;&#x5B57;</strong> &#x548C; <strong>&#x4E0B;&#x5212;&#x7EBF;</strong> &#x7EC4;&#x6210;&#x3002;&#x4F8B;&#x5982;: demo_1&#x3002; &#x5176;&#x4F59;&#x4E3A;&#x547D;&#x4EE4;&#x884C;&#x6A21;&#x5F0F;&#x3002;</li>
+<li><code>sessions</code> &#x547D;&#x4EE4;&#x663E;&#x793A;&#x5DF2;&#x6DFB;&#x52A0;&#x7684;&#x6240;&#x6709; session&#xFF0C;&#x548C;&#x663E;&#x793A;&#x5F53;&#x524D;&#x4F7F;&#x7528;&#x7684; session&#x3002;&#x9ED8;&#x8BA4;&#x4F7F;&#x7528;&#x7B2C;&#x4E00;&#x4E2A; session&#xFF0C;&#x6216;&#x901A;&#x8FC7; <code>use</code> &#x6307;&#x5B9A;&#x3002;</li>
+<li><code>-b</code> &#x663E;&#x793A; list | get | execute &#x7684;&#x539F;&#x59CB;&#x8FD4;&#x56DE;&#x3002;</li>
+<li><code>-l</code> &#x663E;&#x793A; <strong>rhome.json</strong> &#x6587;&#x4EF6;&#x4E2D;&#x7684;&#x5F53;&#x524D; session &#x4E0B;&#x7684;&#x6240;&#x6709;&#x8BBE;&#x5907;&#x3002;</li>
+</ul>
+<p>rhome demo:</p>
+<pre><code>$ rhome add
+
+? remote driver&apos;s name demo
+? remote driver&apos;s endpoint http://127.0.0.1:3000
+? userId in userAuth. If null, skip
+? userToken in userAuth. If null, skip
+{
+  &quot;name&quot;: &quot;demo&quot;,
+  &quot;endpoint&quot;: &quot;http://127.0.0.1:3000&quot;,
+  &quot;userId&quot;: &quot;&quot;,
+  &quot;userToken&quot;: &quot;&quot;
+}
+</code></pre><h2 id="&#x6570;&#x636E;&#x6821;&#x9A8C;">&#x6570;&#x636E;&#x6821;&#x9A8C;</h2>
+<p><code>rhome</code> &#x5C06;&#x5BF9;&#x8FD4;&#x56DE;&#x6570;&#x636E;&#x8FDB;&#x884C;&#x6821;&#x9A8C;&#xFF0C;&#x5E76;&#x663E;&#x793A;&#x5177;&#x4F53;&#x7684;&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#x3002;</p>
+<ul>
+<li>&#x6570;&#x636E;&#x683C;&#x5F0F;&#x6B63;&#x786E;</li>
+</ul>
+<pre><code>$ rhome list
+
+id: 0
+sessionName: demo
+deviceId: &quot;e12e2735-5e64-44d3-8ee2-46471f03d182&quot;
+name: light1
+type: light
+offline: false
+</code></pre><ul>
+<li>&#x6570;&#x636E;&#x683C;&#x5F0F;&#x9519;&#x8BEF;</li>
+</ul>
+<p>&#x5982;&#x6709;&#x9519;&#x8BEF;&#xFF0C;&#x5C06;&#x4F1A;&#x663E;&#x793A;&#x5177;&#x4F53;&#x7684;&#x9519;&#x8BEF;&#x4FE1;&#x606F;&#xFF0C;&#x4EE5;&#x4F9B;&#x53C2;&#x8003;&#x3002;</p>
+<pre><code>$ rhome list
+
+body checked by json schema:
+instance does not match allOf schema [subschema 1] with 2 error[s]:
+instance.data[0].actions.color[1] is not one of enum values: random,num
+instance.data[0] requires property &quot;type&quot;
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="README.md" class="navigation navigation-prev " aria-label="Previous page: 调试工具">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="developer-driver.html" class="navigation navigation-next " aria-label="Next page: 开发者驱动">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"命令行接口校验工具","level":"1.4.1","depth":2,"next":{"title":"开发者驱动","level":"1.4.2","depth":2,"path":"tools/developer-driver.md","ref":"tools/developer-driver.md","articles":[]},"previous":{"title":"调试工具","level":"1.4","depth":1,"path":"tools/README.md","ref":"tools/README.md","articles":[{"title":"命令行接口校验工具","level":"1.4.1","depth":2,"path":"tools/rhome.md","ref":"tools/rhome.md","articles":[]},{"title":"开发者驱动","level":"1.4.2","depth":2,"path":"tools/developer-driver.md","ref":"tools/developer-driver.md","articles":[]},{"title":"如何测试 OAuth|OAuth2.0 接口","level":"1.4.3","depth":2,"path":"tools/oauth-test.md","ref":"tools/oauth-test.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"links":{"sidebar":{"Rokid":"https://www.rokid.com"},"sharing":{"google":null,"facebook":null,"twitter":null,"weibo":null,"all":null}},"gitbook":"*"},"file":{"path":"tools/rhome.md","mtime":"2017-12-28T06:01:04.105Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-01-26T03:03:54.630Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

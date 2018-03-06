@@ -1,0 +1,23 @@
+{
+  "name": "homebase-book",
+  "version": "1.0.0",
+  "description": "developer docs for homebase",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {
+    "gitbook": "^3.2.3",
+    "gitbook-cli": "^2.3.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "build": "gitbook build . docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.rokid-inc.com:homebase/homebase-book.git"
+  },
+  "author": "",
+  "license": "ISC"
+}

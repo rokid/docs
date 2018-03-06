@@ -1,72 +1,124 @@
 # Summary
 
-## Rokid
+* [Rokid 开放平台](README.md)
+* Rokid 技能开放平台
+    * [技能开放平台简介](2-RokidDocument/1-SkillsKit/platform-introduction.md)
+    * 新手入门
+        * [准备工作](2-RokidDocument/1-SkillsKit/getting-started/prepare.md)
+        * [创建技能](2-RokidDocument/1-SkillsKit/getting-started/create-skill.md)
+        * [技能信息](2-RokidDocument/1-SkillsKit/getting-started/skill-information.md)
+        * [语音交互](2-RokidDocument/1-SkillsKit/getting-started/voice-interaction.md)
+        * [配置](2-RokidDocument/1-SkillsKit/getting-started/configuration.md)
+        * [集成测试](2-RokidDocument/1-SkillsKit/getting-started/test.md)
+        * [发布](2-RokidDocument/1-SkillsKit/getting-started/publish.md)
+        * [隐私与合规](2-RokidDocument/1-SkillsKit/getting-started/private-and-compliance.md)
+        * [技能展示](2-RokidDocument/1-SkillsKit/getting-started/skill-store.md)
+        * [技能示例代码](2-RokidDocument/1-SkillsKit/skill-sample.md)
+    * 重要概念 
+        * [意图](2-RokidDocument/1-SkillsKit/important-concept/intend.md)
+        * [词表](2-RokidDocument/1-SkillsKit/important-concept/word-list.md)
+        * [用户语句](2-RokidDocument/1-SkillsKit/important-concept/usersays.md)
+        * [confirm](2-RokidDocument/1-SkillsKit/important-concept/confirm.md)
+        * [session](2-RokidDocument/1-SkillsKit/important-concept/session.md)
+        * [NLP 正则表达式](2-RokidDocument/1-SkillsKit/important-concept/regular-expression.md)
+    * 相关指南
+        * [Rokid 语音交互设计指南](2-RokidDocument/1-SkillsKit/rokid-voice-interaction-guidelines.md)
+        * [Rokid Force System 使用指南](2-RokidDocument/1-SkillsKit/rokid-force-system-tutorial.md)
+        * [Rokid Force - JS v2.0 使用指南](2-RokidDocument/1-SkillsKit/rokid-force-js-tutorial.md)
+        * [SSML 使用指南](2-RokidDocument/1-SkillsKit/ssml-document.md)
+        * [Rokid Oauth 使用指南](2-RokidDocument/1-SkillsKit/rokid-oauth.md)
+        * [获取 SSL 证书指南](2-RokidDocument/1-SkillsKit/get-SSL-certificate-tutorial.md)
+        * [技能开发Java版指南](https://github.com/Rokid/rokid-skill-sample/tree/master/rokid-skill-sample-java)
+    * 智能家居
+        * [介绍 HomeBase Stack](rokid-homebase-docs/README.md)
+        * [接入方式](rokid-homebase-docs/connect/README.md)
+            * [HTTP RemoteDriver](rokid-homebase-docs/connect/http-remote-driver.md)
+            * [Homebase OAuth 授权](rokid-homebase-docs/connect/oauth.md)
+            * [Homebase OAuth2.0 授权](rokid-homebase-docs/connect/oauth2.0.md)
+            * [符合 RFC6749 的 OAuth2.0 授权](rokid-homebase-docs/connect/rfc6749.md)
+            * [SSDP Auto Discovery](rokid-homebase-docs/connect/ssdp-auto-discovery.md)
+            * [JSON-RPC over TCP](rokid-homebase-docs/connect/json-rpc-over-tcp.md)
+            * [Android Native Driver](rokid-homebase-docs/connect/android-native-driver.md)
+        * [标准错误](rokid-homebase-docs/connect/errors.md)
+        * [设备描述](rokid-homebase-docs/device/README.md)
+            * [设备](rokid-homebase-docs/device/device.md)
+            * [设备类型](rokid-homebase-docs/device/type.md)
+            * [设备能力与状态](rokid-homebase-docs/device/actions-and-state.md)
+            * [设备房间](rokid-homebase-docs/device/room-name.md)
+        * 调试工具
+            * [命令行接口校验工具](rokid-homebase-docs/tools/rhome.md)
+            * [开发者驱动](rokid-homebase-docs/tools/developer-driver.md)
+            * [如何测试 OAuth|OAuth2.0 接口](rokid-homebase-docs/tools/oauth-test.md)
+        * [添加驱动到 Rokid](rokid-homebase-docs/add-to-rokid.md)
+        * [Webhook](rokid-homebase-docs/webhook/index.md)
 
-* [Rokid 开发者社区文档](README.md)
+    * 规范与协议
+        * [Rokid 技能协议](3-ApiReference/cloud-app-development-protocol_cn.md)
+        * [技能发布标准](4-TermsAndAgreements/rokid-skill-release-standard.md)
+        * [技能审核规范](4-TermsAndAgreements/rokid-skill-examine-and-verify-standard.md)
+    * [读取语音交互日志](2-RokidDocument/1-SkillsKit/test-skill-through-device-log.md)
 
-## 开发者社区介绍
+* 智能设备语音接入平台
+    * [智能设备语音接入平台简介](2-RokidDocument/2-EnableVoice/introduction.md)
+    * 新手入门
+        * [获取认证文件](2-RokidDocument/2-EnableVoice/get-the-certification-file.md)
+        * [认证文件的使用方法](2-RokidDocument/2-EnableVoice/usage.md)
+    * [重要概念](2-RokidDocument/2-EnableVoice/important-concept.md)
+    * 接口文档
+        * [语音接口文档](3-ApiReference/openvoice-api.md)
+        * [拦截器接口文档](3-ApiReference/rokid-interceptor.md)
+    * SDK 接入指南   
+        * [Rokid 客户端 SDK 接入指南](3-ApiReference/rokid-client-sdk-doc.md)
+        * [Rokid Android SDK 接入指南](2-RokidDocument/2-EnableVoice/android-sdk-tutorial.md) 
+        * [Rokid Speech SDK 接入指南](https://github.com/Rokid/rokid-openvoice-sdk)
+        * [Rokid Mobile SDK Android 接入指南](https://github.com/Rokid/RokidMobileSDKAndroidDemo/tree/master/RokidSDK)
+        * [Rokid Mobile SDK iOS 接入指南](https://github.com/Rokid/RokidMobileSDKiOSDemo)
+    * [前端降噪API文档](3-ApiReference/siren-api.md)
 
-* [Rokid开发者社区介绍](rokid-community-introduction.md)
-
-## 快速开始
-
-* [开始开发Rokid技能](1-GetStarted/rokid-skill-kit-introduction.md)
-* [开始接入Rokid语音](1-GetStarted/enable-rokid-voice.md)
-
-## 开发Rokid技能
-
-* [开始创建第一个技能：我要喝咖啡](2-RokidDocument/1-SkillsKit/skill-sample-coffee.md)
-* [为技能定义语音交互](2-RokidDocument/1-SkillsKit/define-voice-interaction.md)
-* [如何展示您的技能](2-RokidDocument/1-SkillsKit/show_skill_information.md)
-* [Rokid 预定义词表](2-RokidDocument/1-SkillsKit/rokid-bult-in-slots.md)
-* [Rokid NLP正则表达式使用指南](2-RokidDocument/1-SkillsKit/rokid-regular-expression.md)
-* [Rokid OAuth 指南](2-RokidDocument/1-SkillsKit/rokid-oauth.md)
-* [Rokid Force System 使用指南](2-RokidDocument/1-SkillsKit/rokid-force-system-tutorial.md)
-  * [Rokid Force - JS v2.0 使用指南](2-RokidDocument/1-SkillsKit/rokid-force-js-tutorial.md)
-  * [Rokid Force - JS v1.0 使用指南](2-RokidDocument/1-SkillsKit/rokid-force-js-v1.0-tutorial.md)
-* [在技能中使用SSML](2-RokidDocument/1-SkillsKit/ssml-document.md)
-* [Rokid 语音交互设计指南](2-RokidDocument/1-SkillsKit/rokid-voice-interaction-guidelines.md)
-* [Rokid 示例技能](2-RokidDocument/1-SkillsKit/skill-sample.md)
-* [读取设备日志以测试技能](2-RokidDocument/1-SkillsKit/test-skill-through-device-log.md)
-
-## 为设备开启语音交互
-
-* [获取认证文件](2-RokidDocument/2-EnableVoice/get-the-certification-file.md)
-* [Rokid Android SDK 接入指南](2-RokidDocument/2-EnableVoice/rokid-sdk-tutorial.md)
-* [Rokid Android 905D 开发板环境搭建，编译，刷机，镜像下载文档](2-RokidDocument/2-EnableVoice/Rokid-Devkit-905D-Android-Doc.md)
-
-## API REFERENCE
-
-* [Rokid 技能协议文档](3-ApiReference/cloud-app-development-protocol_cn.md)
-* [拦截器接口文档](3-ApiReference/rokid-interceptor.md)
-* [Rokid 接口文档](3-ApiReference/openvoice-api.md)
-* [Rokid 客户端 SDK 文档](3-ApiReference/rokid-client-sdk-doc.md)
-* [Rokid 前端降噪模块 API文档](3-ApiReference/siren-api.md)
-
-## 设计语音产品
-
-* [Rokid 语音产品硬件设计指南](2-RokidDocument/2-EnableVoice/rokid-hardware-design-guide.md)
-* [Rokid 硬件交互设计指南](2-RokidDocument/2-EnableVoice/rokid-hardware-ux-design-guidelines.md)
-
-## Linux设备接入
-
-* [RokidOS 设备开发文档](https://rokid.github.io/rokidos-linux-docs/)
-
-## 智能家居开发
-
-* [Rokid 智能家居开发文档](https://rokid.github.io/rokid-homebase-docs/)
-
-## 协议条款
-
-* [技能发布标准](4-TermsAndAgreements/rokid-skill-release-standard.md)
+* Rokid 智能开发套件
+    * [智能开发套件简介](rokidos-linux-docs/README.md)
+    * 开发套件使用手册
+        * [开发套件基本参数](rokidos-linux-docs/reference/dev_board/board_list.md)
+        * [开发套件联网教程](rokidos-linux-docs/source/system_setting/connect_to_internet.md)
+        * 编译指南
+            * [Amlogic/A113 编译指南](rokidos-linux-docs/reference/dev_board/amlogic/usermanual_a113.md)
+            * [Amlogic/S905D 编译指南](rokidos-linux-docs/reference/dev_board/amlogic/usermanual_s905d.md)
+        * [刷机教程](rokidos-linux-docs/source/downloading_building/burn_image.md)
+        * [自定义激活词配置](rokidos-linux-docs/source/system_setting/custom_activation.md)
+    * [RokidOS](rokidos-linux-docs/source/getting_started/overview.md)
+        * 下载和构建
+            * [概览](rokidos-linux-docs/source/downloading_building/requirements.md)
+            * [搭建编译环境](rokidos-linux-docs/source/downloading_building/build_env.md)
+            * [下载源代码](rokidos-linux-docs/source/downloading_building/downloading_codes.md)
+            * [准备构建](rokidos-linux-docs/source/downloading_building/building.md)
+        * [设备使用](rokidos-linux-docs/source/system_setting/overview.md)
+            * [语音接入配置](rokidos-linux-docs/source/system_setting/openvoice_access_config.md)
+        * [设备调试](rokidos-linux-docs/source/develop_debugging/debugging.md)
+        * [系统移植](rokidos-linux-docs/porting/overview.md)
+            * 音频
+                * [概览](rokidos-linux-docs/porting/audio/overview.md)
+                * [术语](rokidos-linux-docs/porting/audio/terminology.md)
+            * [开机动画](rokidos-linux-docs/porting/bootanim/bootanim.md)
+            * [WiFi](rokidos-linux-docs/porting/wifi/wifi.md)
+            * [系统升级](rokidos-linux-docs/porting/upgrade/upgrade.md)
+            * [蓝牙服务](rokidos-linux-docs/porting/bluetooth/bluetooth.md)
+        * [应用开发](rokidos-linux-docs/development/overview.md)
+            * [Node.js](rokidos-linux-docs/development/tutorial-nodejs.md)
+            * [C/C++](development/tutorial-cplusplus.md)
+                * [语音合成](rokidos-linux-docs/development/cplusplus/tts.md)
+                * [音量控制](rokidos-linux-docs/development/cplusplus/volume_ctrl.md)
+                * [多媒体播放](rokidos-linux-docs/development/cplusplus/mediaplayer.md)
+                * [灯光效果](rokidos-linux-docs/development/cplusplus/lumenflinger.md)
+                * [WiFi控制](rokidos-linux-docs/development/cplusplus/wpa_ctrl.md)
+                * [输入服务](rokidos-linux-docs/development/cplusplus/inputflinger.md)
+                * [电量查询](rokidos-linux-docs/development/cplusplus/power_ctrl.md)
+                * [系统升级](rokidos-linux-docs/development/cplusplus/upgrade.md)
+                * [蓝牙](rokidos-linux-docs/development/cplusplus/btflinger.md)
+* 硬件设计参考方案
+    * [Rokid 语音产品硬件设计指南](2-RokidDocument/2-EnableVoice/rokid-hardware-design-guide.md)
+    * [Rokid 硬件交互设计指南](2-RokidDocument/2-EnableVoice/rokid-hardware-ux-design-guidelines.md)    
 * [服务协议](4-TermsAndAgreements/community-service-agreement.md)
 * [免责声明](4-TermsAndAgreements/community-disclaimer.md)
-
-## 支持
-
 * [联系我们](contact-us.md)
-* [Rokid讨论区](https://developer-forum.rokid.com/)
-* [Rokid开发者社区官网](https://developer.rokid.com/)
-* [Rokid 官网](https://www.rokid.com/)
-* [Rokid 智能家居](https://www.rokid.com/smarthome/)
-
+* [Rokid 讨论区](https://developer-forum.rokid.com)   
+    
