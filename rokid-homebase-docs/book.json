@@ -1,0 +1,16 @@
+{
+  "output": "docs",
+  "links": {
+        "sidebar": {
+            "Rokid": "https://www.rokid.com"
+        },
+
+        "sharing": {
+            "google": null,
+            "facebook": null,
+            "twitter": null,
+            "weibo": null,
+            "all": null
+        }
+    }
+}
