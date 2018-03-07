@@ -1,4 +1,4 @@
-# 配置
+## 配置
 
 1. 后端服务可选择Rokid Force(无需后台服务器,详情请见[Rokid Force System使用指南](../rokid-force-system-tutorial.md))或者HTTPS([Java开发后端服务示例](https://github.com/Rokid/rokid-skill-sample/tree/master/rokid-skill-sample-java))，为快速编写后端服务，优先选择Rokid Force为示例。 
 ![](images/03-配置-RokidForce.jpg)

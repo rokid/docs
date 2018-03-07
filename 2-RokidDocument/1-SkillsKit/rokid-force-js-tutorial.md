@@ -1,4 +1,4 @@
-# Rokid-Force-JS 使用指南V2.0
+## Rokid-Force-JS 使用指南V2.0
 
 > 欢迎使用RFS-JS，很高兴大家可以通过编辑JS脚本来搭建技能服务。
 

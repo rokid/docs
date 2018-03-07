@@ -1,8 +1,8 @@
-# Amlogic/A113
+## Amlogic/A113
 
 **注意 Amlogic/A113 开发手册目前只面向 Rokid 开发者提供。如未注册成为Rokid 开发者，请先至 Rokid 官网注册成为开发者。**
 
-## 硬件设计参考资料
+### 硬件设计参考资料
 
 温馨提示：以下链接里的内容需登陆[Rokid讨论区](https://developer-forum.rokid.com)后才能下载
 
@@ -13,18 +13,18 @@
 * **Debug 板原理图**<br>
 [radk_palm_debug_board_sch_v1.1.pdf](https://developer-forum.rokid.com/uploads/default/original/1X/6ea48d5c21b57802f5f73c0a29b3362241558bb0.pdf)
 
-## CPU 功能板介绍
+### CPU 功能板介绍
 ![Rokid AI Dev Kit CPU Board Top Side](../../../files/amlogic/devkit_a113/cpu_board_top_side.jpg)
 ![Rokid AI Dev Kit CPU Board Bottom Side](../../../files/amlogic/devkit_a113/cpu_board_bottom_side.jpg)
 
-## 软件设计参考资料
+### 软件设计参考资料
 * **A113 软件用户向导**<br>
 [A113X_QRM V0.9 20170810-amlogic](https://developer-forum.rokid.com/uploads/default/original/1X/470d93655b73f35d354430086b59219c2e620b1f.pdf)
 
 * **A113 GPIO 用户向导**<br>
 [Amlogic A113 GPIO Pinctrl User Manual V0.3-amlogic](https://developer-forum.rokid.com/uploads/default/original/1X/470d93655b73f35d354430086b59219c2e620b1f.pdf)
 
-## 代码获取
+### 代码获取
 
 * repo 是Google官方版本
 
@@ -43,7 +43,7 @@ repo init -u ssh://your-account@openai.rokid.com:29418/amlogic_a113_audio/manife
 repo sync
 ``` 
 	
-## Rokid对上游代码的修改目录
+### Rokid对上游代码的修改目录
 ```
 .
 ├── bootloader
@@ -173,7 +173,7 @@ repo sync
 
 修改了厂商代码，支持Rokid多型号板子的DST配置目录
 
-## 编译指令
+### 编译指令
 
 目前仅支持64位版本。
 
@@ -214,7 +214,7 @@ banban_m2_a113_release: 为 A113 4mic 麦克风板
 banban_m3_a113_release: 为 A113 6mic v1.1 麦克风板, 版本号 v1.1 在麦克风板正中央丝印上
 ```
 **请根据开发板型号选择相应软件版本**
-## 编译代码
+### 编译代码
 ```
 make
 ```

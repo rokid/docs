@@ -1,4 +1,4 @@
-# Rokid Force System 使用指南
+## Rokid Force System 使用指南
 
 > -  欢迎使用Rokid-Force-System来搭建skill后端服务。
 > - 为开发者能更灵活地配置skill服务，将原JS Engine服务解耦出skill配置，独立成为一个系统。

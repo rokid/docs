@@ -1,4 +1,4 @@
-## Homebase TCP 通讯协议 [草稿]
+# Homebase TCP 通讯协议 [草稿]
 
 通讯基于 JSON-RPC 2.0，使用 TCP 短连接
 
