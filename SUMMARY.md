@@ -66,6 +66,7 @@
     * 接口文档
         * [语音接口文档](3-ApiReference/openvoice-api.md)
         * [拦截器接口文档](3-ApiReference/rokid-interceptor.md)
+        * [设备接口文档](3-ApiReference/open-device-manager.md)
     * SDK 接入指南   
         * [Rokid 客户端 SDK 接入指南](3-ApiReference/rokid-client-sdk-doc.md)
         * [Rokid Android SDK 接入指南](2-RokidDocument/2-EnableVoice/android-sdk-tutorial.md) 
