@@ -1,4 +1,4 @@
-# 蓝牙相关代码目录：
+## 蓝牙相关代码目录：
 
 buildroot/package/aml\_brcm\_bsa:博通模组厂商提供的代码包，主要是mk file和config.in文件
 
@@ -23,13 +23,13 @@ robot/services/btflinger：以上代码包实际所包含的代码所在
     └── bluetooth_test.c
 ```
 
-# 更新代码后如果发生编译通不过或者运行时错误的情况：
+## 更新代码后如果发生编译通不过或者运行时错误的情况：
 
 * 删掉 output/banban\_m\_a113/build/aml\_brcm\_bsa-0107\_00.26.00/
 * 删掉 output/banban\_m\_a113/build/btflinger/
 * 再重新make
 
-# 如果模组相同，只是迁移平台：
+## 如果模组相同，只是迁移平台：
 
 将相关代码目录直接覆盖过去即可：
 

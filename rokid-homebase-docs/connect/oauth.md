@@ -1,4 +1,4 @@
-## 智能家居 OAuth 授权
+# 智能家居 OAuth 授权
 
 ![](https://s.rokidcdn.com/homebase/upload/rJsJRvPCl.jpg)
 

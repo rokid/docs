@@ -1,6 +1,6 @@
-# Rokid Open Voice SDK快速集成指南
+## Rokid Open Voice SDK快速集成指南
 
-## 简介
+### 简介
 
 Rokid开放平台SDK包含Siren、NLP、ASR、TTS几大模块。要使用Rokid开放平台的SDK，首先需要**有一套能够在自己硬件上跑起来的Android系统**，然后下载以下SDK模块：
 
@@ -26,14 +26,14 @@ git clone https://github.com/Rokid/rokid-openvoice-sdk-deps-protobuf -b android2
 - [5 编译](#5-编译)
 - [6 调试](#6-调试)
 
-## 1 目录结构
+### 1 目录结构
 ![](images/menu.png)
 
 **命名建议与上图一致**
 
  rokid-openvoice-sample-android 与整个的业务逻辑相关，其中包含一个C进程和一个Java进程，以及MIC HAL。C进程用于为Siren提供pcm流，然后传递由Siren滤波降噪过的纯净语音给NLP或ASR，NLP或ASR经过云端处理返回结果，还有一个最重要的点就是维持Siren与NLP或ASR之间的状态。Java进程用于解析NLP或ASR返回结果，处理应用层逻辑。
 
-## 2 配置
+### 2 配置
 
 > 1、进入[Rokid开放平台](https://developer.rokid.com/)申请Rokid账号，已经有Rokid账号的同学可直接登录（但需进行部分信息补全）。
 
@@ -73,7 +73,7 @@ secret、key
 
     include openvoice/rokid-openvoice-sample-android/build/core/definitions.mk
 
-## 3 处理权限问题
+### 3 处理权限问题
 
 Android 基于Linux引入了selinux，这是专门为Linux设计的一套安全机制。它有三种工作模式，Android4.2 以前一直处于Permission模式，之后便工作在enforcing模式，这就需要我们根据selinux的规范添加相应的.te文件，建议在开发阶段设回Permission，省掉一大堆权限问题。
 
@@ -85,7 +85,7 @@ Android 基于Linux引入了selinux，这是专门为Linux设计的一套安全�
     	selinux_enforcing_status status = SELINUX_PERMISSIVE;
     }  
 
-## 4 添加系统启动项
+### 4 添加系统启动项
 
 进入到 `/device/xxxx/common/products/mbox/init.xxxx.rc`加入如下内容，每个人的目录是不一样的。因为rokid-openvoice-sample-android中的C进程编译出来为runtime，所以我们加在这里，让init进程帮我们启动。
 
@@ -94,7 +94,7 @@ Android 基于Linux引入了selinux，这是专门为Linux设计的一套安全�
         user root
         group root root 
 
-## 5 编译
+### 5 编译
 
 如果你的开发板使用的是USB MIC，你需要定义宏 **USB_AUDIO_DEVICE**，具体操作如下：
 
@@ -128,7 +128,7 @@ git clone https://github.com/Rokid/rokid-openvoice-sdk-deps-fastjson.git
     make -j8
 
 
-## 6 调试
+### 6 调试
 
 以上是一套完整的集成流程，到目前为止已经完成了50%的工作。调试主要围绕MIC这块，拾音以及语音识别准确度都围绕在这里，建议大家分两步：
 

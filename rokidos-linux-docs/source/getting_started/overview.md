@@ -1,11 +1,11 @@
-# RokidOS 源代码 #
+## RokidOS 源代码 ##
 
 RokidOS 是一个针对多种不同设备类型打造的开放源代码以语音交互为特色的软件堆栈。RokidOS 主要目的是为运营商、设备制造商、DesignHouse 和开发者创造一个开放的软件平台，使他们能够将创新理念变为现实，并推出能够卓有成效地改善用户体验的真实产品。
 
-## 系统架构图
+### 系统架构图
 ![Rokid_Linux_Architecture](../../files/RokidOS_Architecture-1.png)
 
-## 语音数据流示意图
+### 语音数据流示意图
 ![Rokid_Sdk_Architecture](../../files/Rokid_Sdk_Architecture.png)
 
 
@@ -29,7 +29,7 @@ RokidOS 是一个针对多种不同设备类型打造的开放源代码以语音
     
     语音交互应用框架，通过上层自然语言处理结果，将不同的语音指令解析到特定应用中，并完成一次语音交互过程。框架支持本地应用、轻应用以及云端应用三种运行形态，开发者根据不同的需求，可以在三种形态中自由切换。
 
-## 系统特性
+### 系统特性
 * **Linux Native Services**
 	* **systemd** Linux Init System - systemd 管理各种服务进程
 	* **PulseAudio** 提供 Audio 服务及路由机制

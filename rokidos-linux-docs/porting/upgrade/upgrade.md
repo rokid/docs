@@ -1,8 +1,8 @@
-# 系统升级
+## 系统升级
 
 RokidOS 为第三方厂商提供了 OTA 相关方案。
 
-## 系统分区
+### 系统分区
 
 由于文件系统的问题，线刷的固件包为**aml_upgrade_package.img**，而 OTA 所使用的固件包为**rokid_upgrade_package.img**，二者打包格式不同在于 system 分区的不同。
 
@@ -28,7 +28,7 @@ kernel/aml-4.9/arch/arm64/boot/dts/rokid/banban_m_a113.dts
 board/amlogic/axg_s420_v1/axg_s420_v1.c
 ```
 
-## 升级流程
+### 升级流程
 流程图如下：
 
 ![upgrade-ota](../../files/upgrade-ota.png)

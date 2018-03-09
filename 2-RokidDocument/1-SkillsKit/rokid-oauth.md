@@ -1,12 +1,12 @@
-# Rokid OAuth 使用指南
+## Rokid OAuth 使用指南
 
-## 使用场景
+### 使用场景
 当你开发的技能需要通过用户授权在喜马拉雅等第三方应用上的授权信息来提升技能的个性化体验时，可以按照本指南的流程来一步步实现。
 
 本文档适用于第三方对接Rokid OAuth2标准授权服务。Rokid开放平台标准授权登录流程采用OAuth2标准授权码（authorization code）模式。
 
 
-## 交互流程
+### 交互流程
 ![Alt text](./images/1501038809064.png)
 **第一步：**用户与设备产生语音交互后，经Rokid Speech、Rokid Dispatch服务处理后，交由相应技能的服务进行进一步处理。当技能服务发现用户需要提供授权信息时，会向Rokid Dispatch推送Auth Card response，Rokid Dispatch接受到response会向Rokid App推送登录授权所需要的url。
 
@@ -16,8 +16,8 @@
 
 
 
-## 创建一个需要授权的技能
-### 一、准备工作
+### 创建一个需要授权的技能
+#### 一、准备工作
 以喜马拉雅为例创建一个需要授权的技能。
 
 1.在喜马拉雅开放平台创建一个技能，并且把oauth2授权回调地址填写到如下图所示位置处。回调地址为：https://account.rokid.com/skills/callback.do
@@ -36,7 +36,7 @@
 
 
 
-### 二、OAuth相关的服务端开发
+#### 二、OAuth相关的服务端开发
 
 1.解析接收到 Rokid request参数，参数信息例子如下
 

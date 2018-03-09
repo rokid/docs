@@ -1,4 +1,4 @@
-# 创建技能
+## 创建技能
 
 ### 1. 注册Rokid开发者账号
 在[Rokid开放平台](https://developer.rokid.com/)免费注册一个Rokid开发者账号。

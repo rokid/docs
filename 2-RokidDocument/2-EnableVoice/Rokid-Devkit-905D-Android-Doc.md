@@ -1,6 +1,6 @@
-# ALL in ONE 开发板 AMLOGIC 905D android代码编译烧写教程
+## ALL in ONE 开发板 AMLOGIC 905D android代码编译烧写教程
 
-## 设置 android 编译环境
+### 设置 android 编译环境
 
 ### 64-bit\_Ubuntu 系统
 
@@ -39,7 +39,7 @@
    OpenJDK 64-Bit Server VM (build 24.121-b00, mixed mode)
    ```
 
-## 安装repo 工具
+### 安装repo 工具
 
 1. 确保主目录下有一个 bin/ 目录，并且该目录包含在路径中：
 
@@ -68,7 +68,7 @@ $ PATH=~/bin:$PATH
    $ chmod a+x ~/bin/repo
    ```
 
-## 初始化 repo 客户端
+### 初始化 repo 客户端
 
 需要根据您的开发板的芯片厂商来选择具体的代码下载库。我们最近在外网代码仓库中加入了权限管理，各位可以参考[配置代码权限](https://developer-forum.rokid.com/t/topic/1145)，申请账号，并配置权限。之后再执行以下命令，同步代码：
 
@@ -161,7 +161,7 @@ repo sync
   endif
   ```
 
-## 结构
+### 结构
 
 对于AMLOGIC开发板一共包含5个部分。
 
@@ -183,9 +183,9 @@ repo sync
 
 [![](/2-RokidDocument/2-EnableVoice/images/connect1.jpg)](https://developer-forum.rokid.com/uploads/default/original/1X/6c40b3713f0f5ac24bb93fb4c1e2919e86f74271.jpg)
 
-## 固件烧写
+### 固件烧写
 
-### 固件位置
+#### 固件位置
 
 AMLOGIC 905D Android镜像具体位置及相关介绍如下：
 
@@ -199,7 +199,7 @@ out/target/product/p230/
     ├── u-boot.bin                          #<< 可 fastboot 刷机镜像，bootloader 分区
 ```
 
-### 固件烧录方式
+#### 固件烧录方式
 
 固件烧录可以有以下两种方式：
 
@@ -242,7 +242,7 @@ out/target/product/p230/
 
 > 注意：**右上角如果勾选擦除flash**，则会擦除整个flash或者emmc，如果不勾选只会烧写。则只会擦除aml\_upgrade\_package.conf对应的分区。所以如果需要保存data分区开发者，请注意此选项。
 
-#### fastboot烧录
+### fastboot烧录
 
 1. 进入 fastboot 模式
 

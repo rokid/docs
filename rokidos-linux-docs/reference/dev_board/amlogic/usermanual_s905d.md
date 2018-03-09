@@ -1,8 +1,8 @@
-# Amlogic/S905D
+## Amlogic/S905D
 
 **注意 Amlogic/S905D 开发手册目前只面向 Rokid 开发者提供。如未注册成为Rokid 开发者，请先至 Rokid 官网注册成为开发者。**
 
-## 硬件设计参考资料
+### 硬件设计参考资料
 
 温馨提示：以下链接里的内容需登陆[Rokid讨论区](https://developer-forum.rokid.com)后才能下载
 
@@ -13,18 +13,18 @@
 * **Debug 板原理图**<br>
 [radk_palm_debug_board_sch_v1.1.pdf](https://developer-forum.rokid.com/uploads/default/original/1X/6ea48d5c21b57802f5f73c0a29b3362241558bb0.pdf)
 
-## CPU 功能板介绍
+### CPU 功能板介绍
 ![Rokid AI Dev Kit CPU Board Top Side](../../../files/amlogic/devkit_s905d/cpu_board_top_side.png)
 ![Rokid AI Dev Kit CPU Board Bottom Side](../../../files/amlogic/devkit_s905d/cpu_board_bottom_side.png)
 
-## 软件设计参考资料
+### 软件设计参考资料
 * **S905D 软件用户向导**<br>
 [S905D_QRM V0.8 20170628-amlogic](https://developer-forum.rokid.com/uploads/default/original/1X/e154b6baff977acd71109a7ad8dc13c9f7c7c0cb.pdf)
 
 * **S905D GPIO 用户向导**<br>
 [Amlogic S905D GPIO User Guide V0.2-amlogic](https://developer-forum.rokid.com/uploads/default/original/1X/9de6cef0bd79d572022c3fbfc97f94f2e4f731e5.pdf)
 
-## 代码获取
+### 代码获取
 
 * repo 是Google官方版本
 
@@ -43,7 +43,7 @@ repo init -u ssh://your-account@openai.rokid.com:29418/amlogic_a1xx_linux/manife
 repo sync
 ``` 
 	
-## Rokid对上游代码的修改目录
+### Rokid对上游代码的修改目录
 ```
 .
 ├── bootloader
@@ -175,7 +175,7 @@ repo sync
 
 修改了厂商代码，支持Rokid多型号板子的DST配置目录
 
-## 编译指令
+### 编译指令
 
 目前仅支持64位版本。
 编译S905D请选择'nana_t2_s905d_release'
@@ -216,7 +216,7 @@ koalajs_s905d_release: 为使用 Koalajs 特性的905d 4 mic 开发板
 ```
 **请根据开发板型号选择相应软件版本**
 
-## 编译代码
+### 编译代码
 ```
 make
 ```
