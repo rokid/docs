@@ -13,23 +13,23 @@
 
 第三步：在图中椭圆红圈处, 点击5次，进入开发板蓝牙配网界面，即可开始配网。
 
-<img src="images/开发套件配网01.jpg" width = "400" height = "650" alt="wechat-contact" align=center />	
+<img src="images/开发套件配网01.jpg" style="height:90vh" alt="wechat-contact" align=center />	
 
 第四步：待灯光陆续亮起后（约两分钟），开发套件将自动进入蓝牙配网模式。点击「已出现紫色灯光闪烁」进入下一步。
 
-<img src="images/开发套件配网02.jpg" width = "400" height = "650" alt="wechat-contact" align=center />
+<img src="images/开发套件配网02.jpg" style="height:90vh" alt="wechat-contact" align=center />
 
 第五步：确保手机蓝牙打开，选择需连接的设备。可根据开发套件CPU上的SN号来区别设备。若设备为搜索不到蓝牙，可对设备说“若琪若琪”。
 
-<img src="images/开发套件配网03.jpg" width = "400" height = "650" alt="wechat-contact" align=center />
+<img src="images/开发套件配网03.jpg" style="height:90vh" alt="wechat-contact" align=center />
 
 第六步：输入无线网络的账户和密码，点击「连接WIFI」。
 
-<img src="images/开发套件配置04.jpg" width = "400" height = "650" alt="wechat-contact" align=center />
+<img src="images/开发套件配置04.jpg" style="height:90vh" alt="wechat-contact" align=center />
 	
 第七步：配网成功如下图所示：
 
-<img src="images/开发套件配网05.jpg" width = "400" height = "650" alt="wechat-contact" align=center />
+<img src="images/开发套件配网05.jpg" style="height:90vh" alt="wechat-contact" align=center />
 
 
 
