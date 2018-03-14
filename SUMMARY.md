@@ -52,7 +52,7 @@
         * [Webhook](rokid-homebase-docs/webhook/index.md)
 
     * 规范与协议
-        * [Rokid 技能协议](3-ApiReference/cloud-app-development-protocol_cn.md)
+        * [Rokid 技能通信协议](3-ApiReference/cloud-app-development-protocol_cn.md)
         * [技能发布标准](4-TermsAndAgreements/rokid-skill-release-standard.md)
         * [技能审核规范](4-TermsAndAgreements/rokid-skill-examine-and-verify-standard.md)
     * [读取语音交互日志](2-RokidDocument/1-SkillsKit/test-skill-through-device-log.md)
@@ -78,11 +78,11 @@
 * Rokid 智能开发套件
     * [智能开发套件简介](rokidos-linux-docs/README.md)
     * 开发套件使用手册
-        * [开发套件基本参数](rokidos-linux-docs/reference/dev_board/board_list.md)
-        * [开发套件联网教程](rokidos-linux-docs/source/system_setting/connect_to_internet.md)
+        * [基本参数](rokidos-linux-docs/reference/dev_board/board_list.md)
+        * [联网教程](rokidos-linux-docs/source/system_setting/connect_to_internet.md)
         * 编译指南
-            * [Amlogic/A113 编译指南](rokidos-linux-docs/reference/dev_board/amlogic/usermanual_a113.md)
-            * [Amlogic/S905D 编译指南](rokidos-linux-docs/reference/dev_board/amlogic/usermanual_s905d.md)
+            * [A113 编译指南](rokidos-linux-docs/reference/dev_board/amlogic/usermanual_a113.md)
+            * [S905D 编译指南](rokidos-linux-docs/reference/dev_board/amlogic/usermanual_s905d.md)
         * [刷机教程](rokidos-linux-docs/source/downloading_building/burn_image.md)
         * [自定义激活词配置](rokidos-linux-docs/source/system_setting/custom_activation.md)
     * [RokidOS](rokidos-linux-docs/source/getting_started/overview.md)
