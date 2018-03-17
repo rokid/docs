@@ -82,8 +82,8 @@
         * [开发套件基本参数](rokidos-linux-docs/reference/dev_board/board_list.md)
         * [开发套件联网教程](rokidos-linux-docs/source/system_setting/connect_to_internet.md)
         * 编译指南
-            * [Amlogic/A113 编译指南](rokidos-linux-docs/reference/dev_board/amlogic/usermanual_a113.md)
-            * [Amlogic/S905D 编译指南](rokidos-linux-docs/reference/dev_board/amlogic/usermanual_s905d.md)
+            * [A113 ](rokidos-linux-docs/reference/dev_board/amlogic/usermanual_a113.md)
+            * [S905D ](rokidos-linux-docs/reference/dev_board/amlogic/usermanual_s905d.md)
         * [刷机教程](rokidos-linux-docs/source/downloading_building/burn_image.md)
         * [自定义激活词配置](rokidos-linux-docs/source/system_setting/custom_activation.md)
     * [RokidOS](rokidos-linux-docs/source/getting_started/overview.md)
