@@ -486,5 +486,3 @@ A：由于上下文this会在一定情况下改变指向，不再指向window对
 A：首先确保request的所有参数均正确。其次，可用postman进行请求模拟，需要严格按照postman提供的nodejs-request的请求。
 
 
-
-
