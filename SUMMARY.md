@@ -29,7 +29,8 @@
         * [Rokid Oauth 使用指南](2-RokidDocument/1-SkillsKit/rokid-oauth.md)
         * [获取 SSL 证书指南](2-RokidDocument/1-SkillsKit/get-SSL-certificate-tutorial.md)
         * [技能开发 Java 版指南](https://github.com/Rokid/rokid-skill-sample/tree/master/rokid-skill-sample-java)
-        * [介绍 HomeBase Stack](rokid-homebase-docs/README.md)
+    * 智能家居
+        * [智能家居简介](rokid-homebase-docs/README.md)
         * [接入方式](rokid-homebase-docs/connect/README.md)
             * [HTTP RemoteDriver](rokid-homebase-docs/connect/http-remote-driver.md)
             * [Homebase OAuth 授权](rokid-homebase-docs/connect/oauth.md)
@@ -52,7 +53,7 @@
         * [Webhook](rokid-homebase-docs/webhook/index.md)
 
     * 规范与协议
-        * [Rokid 技能通信协议](3-ApiReference/cloud-app-development-protocol_cn.md)
+        * [Rokid 云端技能协议](3-ApiReference/cloud-app-development-protocol_cn.md)
         * [技能发布标准](4-TermsAndAgreements/rokid-skill-release-standard.md)
         * [技能审核规范](4-TermsAndAgreements/rokid-skill-examine-and-verify-standard.md)
     * [读取语音交互日志](2-RokidDocument/1-SkillsKit/test-skill-through-device-log.md)
@@ -81,8 +82,8 @@
         * [基本参数](rokidos-linux-docs/reference/dev_board/board_list.md)
         * [联网教程](rokidos-linux-docs/source/system_setting/connect_to_internet.md)
         * 编译指南
-            * [A113 编译指南](rokidos-linux-docs/reference/dev_board/amlogic/usermanual_a113.md)
-            * [S905D 编译指南](rokidos-linux-docs/reference/dev_board/amlogic/usermanual_s905d.md)
+            * [A113](rokidos-linux-docs/reference/dev_board/amlogic/usermanual_a113.md)
+            * [S905D](rokidos-linux-docs/reference/dev_board/amlogic/usermanual_s905d.md)
         * [刷机教程](rokidos-linux-docs/source/downloading_building/burn_image.md)
         * [自定义激活词配置](rokidos-linux-docs/source/system_setting/custom_activation.md)
     * [RokidOS](rokidos-linux-docs/source/getting_started/overview.md)

@@ -11,7 +11,7 @@
 第二步：下载 [Rokid 官方手机App](http://s.rokidcdn.com/app/m_index.html)，安装后，打开 App，点击左上角，找到“若琪设置”==>“添加新设备”，如下图：
 下载 Rokid APP，安装后，打开 APP 并登录后，若当前账号无绑定的设备则直接跳转到添加新设备页面。
 
-第三步：在图中椭圆红圈处, 点击5次，进入开发板蓝牙配网界面，即可开始配网。
+第三步：在图中红框处, 点击5次，进入开发板蓝牙配网界面，即可开始配网。
 
 <img src="images/开发套件配网01.jpg" style="height:90vh" alt="wechat-contact" align=center />	
 
