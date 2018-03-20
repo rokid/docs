@@ -116,6 +116,8 @@ RokidOS 会读取 `/data/system/device.json` 中的信息来初始化一些系�
 - `triggerWord` {Object} 自定义激活词配置：
   - `text` {String} 激活词的汉字。
   - `pinyin` {String} 激活词拼音字符，如："ruo4qi2"。
+- `triggerAction` 可选值：disable 或 default，前者用于禁用系统默认的唤醒动作（压低音量）
+- `skill` 可选值：disable 或 default，前者用于禁用开发板的技能系统，用于提供给第三方直接使用我们 ASR/NLP 的用户
 
 ## 插件
 
