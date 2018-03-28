@@ -111,7 +111,5 @@ PCM格式为 RIFF (little-endian) data, WAVE audio, Microsoft PCM, 16 bit, mono 
 | type  | RespType | 结果类型INTERMEDIATE/ASR_FINISH/FINISH |
 | asr    | string | asr实时识别的结果     |
 | nlp    | string | nlp识别的结果: {"appId": "技能id", "appName": "技能名称", "asr": "asr识别结果", "cloud": "是否为云端技能: true / fasle", "intent": "意图", "pattern": "设定的用户语句","slots": { "槽名称": { "type": "槽类型", "value": "槽的值" }}}|
-| action | string | cloud app处理的结果 |
-| extra | string | 目前有：{"activation": "fake(误激活)|reject(仲裁失败)|accept(激活确认)|none(无激活词时)"} |
-
-action：json字符串
+| action | string | cloud app处理的结果, json字符串 |
+| extra | string | 目前有：{"activation": "fake(误激活), reject(仲裁失败), accept(激活确认) none(无激活词时)"} |
