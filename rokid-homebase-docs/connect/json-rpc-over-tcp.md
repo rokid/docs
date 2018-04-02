@@ -34,7 +34,27 @@
 
 ```
 --> {"jsonrpc": "2.0", "method": "list", "params": {"userAuth":{ "userId": "hello1234" }}, "id": 1}
-<-- {"jsonrpc": "2.0", "result": [{"deviceId": "1", }], "id": 1}
+<-- {  
+   "jsonrpc":"2.0",
+   "result":[  
+      {  
+         "deviceId":"test-id",
+         "name":"测试设备",
+         "type":"light",
+         "actions":{  
+            "switch":[  
+               "on",
+               "off"
+            ]
+         },
+         "state":{  
+            "switch":"on"
+         },
+         "offline":false
+      }
+   ],
+   "id":1
+}
 ```
 
 ### method: `get`
