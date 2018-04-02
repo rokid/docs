@@ -1,4 +1,4 @@
-# Webhook 新功能简介
+# Webhook 功能简介
 
 目前若琪通过该接口开放了tts播报、播放音乐流媒体的能力。
 开发者可以将新增的Webhook接口地址复制并添加至智能家居第三方平台，（如Abox，homeassistant...）
@@ -7,9 +7,7 @@
 
 `请开发者注意：最大调用限制：每分钟20次，每24小时1000次。`
 
-
-
-# Webhook使用详述
+# Webhook 使用详述
 
 Webhook 是一个通过 HTTP 调用控制用户授权设备的服务，当某一个事件发生时，通过发起一个 HTTP Post 请求并使用期望的参数至指定的 Webhook URL 接口即可直接控制家庭里的设备。
 
@@ -53,58 +51,30 @@ curl -X "POST" "https://homebase.rokid.com/trigger/with/{your_very_awesome_token
 
 ## 触发 Body
 
-```yaml
----
-type: object
-properties:
-  type:
-    type: string
-    enum:
-      - tts
-      - audio
-  devices:
-    type: object
-    properties:
-      sn:
-        type: string
-        description: 若琪序列号
-      roomName:
-        type: string
-        description: 若琪所处的房间
-      tag:
-        type: string
-        description: 设备标签
-      isAll:
-        type: boolean
-        default: false
-        description: 选择所有设备
-  data:
-    type: object
-```
+字段名 | 类型 | 必需 | 描述
+--- | --- | --- | ---
+type | `enum`: `tts`, `audio` | 必需 | 触发类型，只能是 `tts` 或者 `audio` 的其中一个
+devices | `DeviceQuery` | 必需 | 设备筛选，详细格式见下面的 DeviceQuery
+data | `object` | 必需 | 触发数据，根据触发类型见下方的文档
+
+DeviceQuery 字段名 | 类型 | 必需 | 描述
+--- | --- | --- | ---
+sn | `string` | 非必需 | 若琪序列号
+roomName | `string` | 非必需 | 若琪所处的房间
+tag | `string` | 非必需 | 设备标签
+isAll | `boolean` | 非必需 | 选择所有设备，默认 `false`
 
 ### Data of Type: `tts`
 
-```yaml
----
-type: object
-properties:
-  text:
-    type: string
-    description: 播报内容
-```
+字段名 | 类型 | 必需 | 描述
+--- | --- | --- | ---
+text | `string` | 必需 | 播报内容
 
 ### Data of Type: `audio`
 
-```yaml
----
-type: object
-properties:
-  url:
-    type: string
-    description: 音频地址
-    format: uri
-    pattern: ^https?://
-```
+字段名 | 类型 | 必需 | 描述
+--- | --- | --- | ---
+url | `string` | 必需 | 音频地址，必须符合 `^https?://` 的格式
 
 ### 筛选设备
 
@@ -143,4 +113,3 @@ properties:
 2. HTTP 状态码 429
   在一定时间内 Webhook 接口被访问了过多次数，如果认为不是被授权的操作访问的话，需要用户在 Rokid 应用中重新生成 Webhook Token 并更新访问的 url。
 3. 如遇任何问题，均可发邮件至 homebase@rokid.com 向我们反馈。
-
