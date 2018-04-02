@@ -70,7 +70,7 @@
         * [Rokid 客户端 SDK 接入指南](3-ApiReference/rokid-client-sdk-doc.md)
         * [Rokid Android SDK 接入指南](2-RokidDocument/2-EnableVoice/android-sdk-tutorial.md) 
         * [Rokid Speech SDK 接入指南](https://github.com/Rokid/rokid-openvoice-sdk)
-        * [Rokid Mobile SDK Android 接入指南](https://github.com/Rokid/RokidMobileSDKAndroidDemo/tree/master/RokidSDK)
+        * [Rokid Mobile SDK Android 接入指南](https://github.com/Rokid/RokidMobileSDKAndroidDemo)
         * [Rokid Mobile SDK iOS 接入指南](https://github.com/Rokid/RokidMobileSDKiOSDemo)
     * [前端降噪API文档](3-ApiReference/siren-api.md)
 
