@@ -51,11 +51,15 @@ curl -X "POST" "https://homebase.rokid.com/trigger/with/{your_very_awesome_token
 
 ## 触发 Body
 
+Webhook 请求体的数据结构如下表所示，是一个 JSON 格式的 `object` 类型
+
 字段名 | 类型 | 必需 | 描述
 --- | --- | --- | ---
-type | `enum`: `tts`, `audio` | 必需 | 触发类型，只能是 `tts` 或者 `audio` 的其中一个
+type | `string` | 必需 | 触发类型，只能是 `tts` 或者 `audio` 的其中一个
 devices | `DeviceQuery` | 必需 | 设备筛选，详细格式见下面的 DeviceQuery
 data | `object` | 必需 | 触发数据，根据触发类型见下方的文档
+
+DeviceQuery 是筛选设备的 `object` 类型描述符，支持的筛选属性如下表所示，属性之间为“与”关系，具体筛选例子请看下方的“筛选设备”小节
 
 DeviceQuery 字段名 | 类型 | 必需 | 描述
 --- | --- | --- | ---
@@ -64,13 +68,17 @@ roomName | `string` | 非必需 | 若琪所处的房间
 tag | `string` | 非必需 | 设备标签
 isAll | `boolean` | 非必需 | 选择所有设备，默认 `false`
 
-### Data of Type: `tts`
+### 当 `type` 为 `tts` 时
+
+`data` 字段为包含以下字段的 `object`
 
 字段名 | 类型 | 必需 | 描述
 --- | --- | --- | ---
 text | `string` | 必需 | 播报内容
 
-### Data of Type: `audio`
+### 当 `type` 为 `audio` 时
+
+`data` 字段为包含以下字段的 `object`
 
 字段名 | 类型 | 必需 | 描述
 --- | --- | --- | ---
