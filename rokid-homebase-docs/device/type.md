@@ -28,5 +28,6 @@
 - `gasStove`: 煤气灶
 - `heatingFurnace`: 采暖炉
 - `wineCabinet`: 酒柜
+- `speaker`: 媒体播放器
 
 > 如果上面类型无法满足需求， 需要添加新的设备类型， 请向我们 [提交 Issues](https://github.com/Rokid/rokid-homebase-docs/issues)

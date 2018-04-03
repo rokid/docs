@@ -33,7 +33,7 @@ NT: homebase:device
 NTS: ssdp:alive
 USN: uuid:f40c2981-7329-40b7-8b04-27f187aecfb8
 LOCATION: http://10.0.0.107:10293
-CACHE-CONTROL: max-age=30
+CACHE-CONTROL: max-age=1800
 DEVICE_TYPE: bridge
 ```
 
@@ -46,7 +46,7 @@ NT: homebase:device
 NTS: ssdp:alive
 USN: uuid:f40c2981-7329-40b7-8b04-27f187aecfb8
 LOCATION: http://10.0.0.107:10293
-CACHE-CONTROL: max-age=30
+CACHE-CONTROL: max-age=1800
 DEVICE_TYPE: bridge
 SERVER: UPnP/1.1 homebase-ssdp/1.0.0
 ```
@@ -59,7 +59,7 @@ HOST: 239.255.255.250:1900
 NT: uuid:f40c2981-7329-40b7-8b04-27f187aecfb8
 NTS: ssdp:bye
 USN: uuid:f40c2981-7329-40b7-8b04-27f187aecfb8
-CACHE-CONTROL: max-age=30
+CACHE-CONTROL: max-age=1800
 SERVER: UPnP/1.1 homebase-ssdp/1.0.0
 ```
 

@@ -10,9 +10,9 @@
 
 ## 安装
 
-```bash
-$ npm install -g rokid-homebase-cli
-```
+从 [Release](https://github.com/Rokid/rokid-homebase-cli/releases) 页面下载最新的适合你的操作系统的已打包的程序。
+
+> 在项目 [GitHub](https://github.com/Rokid/rokid-homebase-cli) 页面了解更多
 
 ## 使用
 
@@ -45,7 +45,7 @@ Usage: rhome [options] [command]
     -l, --local    list local devices
 ```
 
-* `rhome` 运行后，将在用户目录下新建 **rhome.json** 文件，保存 sessions、devices、currentSession 信息。如有必要，开发者可以进行修改。  
+* `rhome` 运行后，将在用户目录下新建 **rhome.json** 文件，保存 sessions、devices、currentSession 信息。如有必要，开发者可以进行修改。
 * `add` 是交互式命令。 name 必须由 **字母**、**数字** 和 **下划线** 组成。例如: demo_1。 其余为命令行模式。
 * `sessions` 命令显示已添加的所有 session，和显示当前使用的 session。默认使用第一个 session，或通过 `use` 指定。
 * `-b` 显示 list | get | execute 的原始返回。

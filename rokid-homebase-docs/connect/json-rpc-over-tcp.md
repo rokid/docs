@@ -68,20 +68,20 @@
 
 ```json
 --> {"jsonrpc": "2.0", "method": "list", "params": {"userAuth":{ "userId": "hello1234" }}, "id": 1}
-<-- {  
+<-- {
    "jsonrpc":"2.0",
-   "result":[  
-      {  
+   "result":[
+      {
          "deviceId":"test-id",
          "name":"测试设备",
          "type":"light",
-         "actions":{  
-            "switch":[  
+         "actions":{
+            "switch":[
                "on",
                "off"
             ]
          },
-         "state":{  
+         "state":{
             "switch":"on"
          },
          "offline":false
@@ -150,7 +150,7 @@
 
 
 // 返回 null 会触发一次 get 请求来更新最新设备状态
-<-- { "jsonrpc": "2.0", "result": null, "id": "1"}  
+<-- { "jsonrpc": "2.0", "result": null, "id": "1"}
 
 // 返回设备最新 state, 可以更新设备状态
 <-- { "jsonrpc": "2.0", "result": {"switch": "on"}, "id": "1"}
