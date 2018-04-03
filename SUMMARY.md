@@ -35,7 +35,7 @@
         * [技能审核规范](4-TermsAndAgreements/rokid-skill-examine-and-verify-standard.md)
     * [读取语音交互日志](2-RokidDocument/1-SkillsKit/test-skill-through-device-log.md)
 
-* 智能家居接入平台
+* Rokid 智能家居技能接入
     * [智能家居简介](rokid-homebase-docs/README.md)
     * [接入方式](rokid-homebase-docs/connect/README.md)
         * [HTTP RemoteDriver](rokid-homebase-docs/connect/http-remote-driver.md)
