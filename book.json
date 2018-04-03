@@ -1,8 +1,8 @@
 {
   "plugins" : [
+    "anchor-navigation-ex",
     "expandable-chapters-interactive",
-    "vistors-github",
-    "anchor-navigation-ex"
+    "vistors-github"
   ],
   "pluginsConfig" : {
     "vistors-github": {
