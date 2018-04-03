@@ -22,7 +22,7 @@
 - `error.code` {int} 错误代码
 - `error.data` {string} 错误名称
 
-错误代码和错误名称需使用指定值，具体请参考 [标准错误](https://developer.rokid.com/docs/rokid-homebase-docs/connect/errors.html)
+错误代码和错误名称需使用指定值，具体请参考 [标准错误](../v1/errors.md)
 
 ```json
 {
@@ -68,20 +68,20 @@
 
 ```json
 --> {"jsonrpc": "2.0", "method": "list", "params": {"userAuth":{ "userId": "hello1234" }}, "id": 1}
-<-- {  
+<-- {
    "jsonrpc":"2.0",
-   "result":[  
-      {  
+   "result":[
+      {
          "deviceId":"test-id",
          "name":"测试设备",
          "type":"light",
-         "actions":{  
-            "switch":[  
+         "actions":{
+            "switch":[
                "on",
                "off"
             ]
          },
-         "state":{  
+         "state":{
             "switch":"on"
          },
          "offline":false
@@ -150,7 +150,7 @@
 
 
 // 返回 null 会触发一次 get 请求来更新最新设备状态
-<-- { "jsonrpc": "2.0", "result": null, "id": "1"}  
+<-- { "jsonrpc": "2.0", "result": null, "id": "1"}
 
 // 返回设备最新 state, 可以更新设备状态
 <-- { "jsonrpc": "2.0", "result": {"switch": "on"}, "id": "1"}
@@ -163,4 +163,4 @@
   - params {Object}
 
 
-[device]: ../device/device.md
+[device]: ../v1/device/device.md

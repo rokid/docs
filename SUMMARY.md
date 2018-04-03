@@ -14,7 +14,7 @@
         * [隐私与合规](2-RokidDocument/1-SkillsKit/getting-started/private-and-compliance.md)
         * [技能展示](2-RokidDocument/1-SkillsKit/getting-started/skill-store.md)
         * [技能示例代码](2-RokidDocument/1-SkillsKit/skill-sample.md)
-    * 重要概念 
+    * 重要概念
         * [意图](2-RokidDocument/1-SkillsKit/important-concept/intend.md)
         * [词表](2-RokidDocument/1-SkillsKit/important-concept/word-list.md)
         * [用户语句](2-RokidDocument/1-SkillsKit/important-concept/usersays.md)
@@ -36,25 +36,31 @@
     * [读取语音交互日志](2-RokidDocument/1-SkillsKit/test-skill-through-device-log.md)
 
 * Rokid 智能家居技能接入
-    * [智能家居简介](rokid-homebase-docs/README.md)
-    * [接入方式](rokid-homebase-docs/connect/README.md)
-        * [HTTP RemoteDriver](rokid-homebase-docs/connect/http-remote-driver.md)
-        * [Homebase OAuth 授权](rokid-homebase-docs/connect/oauth.md)
-        * [Homebase OAuth2.0 授权](rokid-homebase-docs/connect/OAuth2.0.md)
-        * [符合 RFC6749 的 OAuth2.0 授权](rokid-homebase-docs/connect/rfc6749.md)
-        * [SSDP Auto Discovery](rokid-homebase-docs/connect/ssdp-auto-discovery.md)
-        * [JSON-RPC over TCP](rokid-homebase-docs/connect/json-rpc-over-tcp.md)
-        * [Android Native Driver](rokid-homebase-docs/connect/android-native-driver.md)
-    * [标准错误](rokid-homebase-docs/connect/errors.md)
-    * [设备描述](rokid-homebase-docs/device/README.md)
-        * [设备](rokid-homebase-docs/device/device.md)
-        * [设备类型](rokid-homebase-docs/device/type.md)
-        * [设备能力与状态](rokid-homebase-docs/device/actions-and-state.md)
-        * [设备房间](rokid-homebase-docs/device/room-name.md)
-    * 调试工具
-        * [命令行接口校验工具](rokid-homebase-docs/tools/rhome.md)
-        * [开发者驱动](rokid-homebase-docs/tools/developer-driver.md)
-    * [Webhook](rokid-homebase-docs/webhook/index.md)
+  * [什么是智能家居 Skill](rokid-homebase-docs/README.md)
+  * 如何接入
+    * [通过公网提供服务](rokid-homebase-docs/connect/cloud-to-cloud.md)
+    * [通过局域网 SSDP 自动发现](rokid-homebase-docs/connect/via-lan.md)
+  * 智能家居协议
+    * [技能授权](rokid-homebase-docs/connect/rfc6749.md)
+    * Skill 对接方式
+      * [HTTP 远程驱动](rokid-homebase-docs/connect/http-remote-driver.md)
+      * [TCP 远程驱动](rokid-homebase-docs/connect/json-rpc-over-tcp.md)
+      * [局域网自动发现](rokid-homebase-docs/connect/ssdp-auto-discovery.md)
+    * 设备描述
+      * [设备](rokid-homebase-docs/v1/device/device.md)
+      * [设备类型](rokid-homebase-docs/v1/device/type.md)
+      * [设备能力与状态](rokid-homebase-docs/v1/device/actions-and-state.md)
+      * [设备房间](rokid-homebase-docs/v1/device/room-name.md)
+      * [标准错误](rokid-homebase-docs/v1/errors.md)
+  * 如何调试
+    * [命令行接口校验工具](rokid-homebase-docs/tools/rhome.md)
+    * [测试 Command 接口](rokid-homebase-docs/tools/oauth-test.md)
+    * [开发者驱动](rokid-homebase-docs/tools/developer-driver.md)
+  * [Webhook](rokid-homebase-docs/webhook/index.md)
+  * 更多文档
+    * 其他授权方式
+        * [Homebase OAuth 授权](rokid-homebase-docs/v1/oauth.md)
+        * [Homebase OAuth2.0 授权](rokid-homebase-docs/v1/oauth2.0.md)
 
 * 智能设备语音接入平台
     * [智能设备语音接入平台简介](2-RokidDocument/2-EnableVoice/introduction.md)
@@ -66,9 +72,9 @@
         * [语音接口文档](3-ApiReference/openvoice-api.md)
         * [拦截器接口文档](3-ApiReference/rokid-interceptor.md)
         * [设备接口文档](3-ApiReference/open-device-manager.md)
-    * SDK 接入指南   
-        * [Rokid 客户端 SDK 接入指南](3-ApiReference/rokid-client-sdk-doc.md)
-        * [Rokid Android SDK 接入指南](2-RokidDocument/2-EnableVoice/android-sdk-tutorial.md) 
+    * SDK 接入指南
+        * [Rokid 客户端 SDK 接入指南](3-ApiReference/rokid-client-sdk-doc.md)
+        * [Rokid Android SDK 接入指南](2-RokidDocument/2-EnableVoice/android-sdk-tutorial.md)
         * [Rokid Speech SDK 接入指南](https://github.com/Rokid/rokid-openvoice-sdk)
         * [Rokid Mobile SDK Android 接入指南](https://github.com/Rokid/RokidMobileSDKAndroidDemo)
         * [Rokid Mobile SDK iOS 接入指南](https://github.com/Rokid/RokidMobileSDKiOSDemo)
@@ -116,9 +122,8 @@
 
 * 硬件设计参考方案
     * [Rokid 语音产品硬件设计指南](2-RokidDocument/2-EnableVoice/rokid-hardware-design-guide.md)
-    * [Rokid 硬件交互设计指南](2-RokidDocument/2-EnableVoice/rokid-hardware-ux-design-guidelines.md)    
+    * [Rokid 硬件交互设计指南](2-RokidDocument/2-EnableVoice/rokid-hardware-ux-design-guidelines.md)
 * [服务协议](4-TermsAndAgreements/community-service-agreement.md)
 * [免责声明](4-TermsAndAgreements/community-disclaimer.md)
 * [联系我们](contact-us.md)
-* [Rokid 讨论区](https://developer-forum.rokid.com)   
-    
+* [Rokid 讨论区](https://developer-forum.rokid.com)
