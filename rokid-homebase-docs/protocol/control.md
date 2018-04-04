@@ -21,7 +21,7 @@
       "additionalInfo": {
         "key": "value"
       },
-      "state": [
+      "states": [
         {
           "interface": "Color",
           "value": 12345
@@ -46,7 +46,7 @@
   "endpoints": [
     {
       "endpointId": "device:an-id-unique-to-user",
-      "state": [
+      "states": [
         {
           "interface": "Color",
           "value": 12344

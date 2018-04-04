@@ -29,7 +29,7 @@ HTTP 状态码 |	场景
   "endpoints": [
     {
       "endpointId": "device:an-id-unique-to-user",
-      "state": [
+      "states": [
         {
           "interface": "Switch",
           "value": "On",

@@ -76,7 +76,7 @@ token | `string` | 从若琪获取的 Token 或者若琪从 Skill 方获取的 T
       "additionalInfo": {
         "key1": "value1"
       },
-      "state": [
+      "states": [
         {
           "interface": "Color",
           "value": 12345,
@@ -104,7 +104,7 @@ token | `string` | 从若琪获取的 Token 或者若琪从 Skill 方获取的 T
   "endpoints": [
     {
       "endpointId": "unique-id-for-user",
-      "state": [
+      "states": [
         {
           "interface": "Color",
           "value": 12345,

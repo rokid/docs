@@ -56,7 +56,7 @@
           "retrievable": true
         }
       ],
-      "state": [
+      "states": [
         {
           "interface": "Switch",
           "value": "On",
