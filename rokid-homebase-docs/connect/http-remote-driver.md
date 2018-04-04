@@ -40,7 +40,8 @@ HTTP 远程驱动使用 JSON 作为数据交换格式， 执行成功会返回�
 {
   "status": 1,
   "message": "time out",
-  "errorName": null
+  "code": 10001,
+  "errorName": "E_DRIVER_ERROR"
 }
 ```
 
