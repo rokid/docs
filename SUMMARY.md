@@ -41,6 +41,7 @@
         * [云云对接](rokid-homebase-docs/connect/cloud-to-cloud.md)
         * [局域网对接](rokid-homebase-docs/connect/via-lan.md)
     * 智能家居技能接入协议 V2
+        * [技能授权](rokid-homebase-docs/connect/rfc6749.md)
         * [消息格式参考](rokid-homebase-docs/protocol/message-reference.md)
         * [当发生了错误](rokid-homebase-docs/protocol/error-response.md)
         * [终端](rokid-homebase-docs/protocol/endpoint.md)
