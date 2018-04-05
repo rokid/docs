@@ -1,0 +1,12 @@
+{
+  "name": "docs",
+  "version": "1.0.0",
+  "license": "UNLICENSED",
+  "scripts": {
+    "postinstall": "gitbook install",
+    "build": "gitbook build"
+  },
+  "dependencies": {
+    "gitbook-cli": "^2.3.2"
+  }
+}
