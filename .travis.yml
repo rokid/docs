@@ -10,11 +10,10 @@ cache:
     - node_modules # NPM packages
 
 install:
-  - npm install -g gitbook-cli
+  - npm install
 
 script:
-  - gitbook install
-  - gitbook build
+  - npm run build
   - echo "Removing unwanted files"
   - rm -vf _book/.travis.yml
   - rm -vf _book/*.yml
