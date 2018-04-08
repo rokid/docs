@@ -1,10 +1,12 @@
-## developer driver
+## 远程调试驱动
 
-http remote driver 开发者工具
+使用远程调试驱动可以很方便的调试开发中的远程驱动， 目前支持 HTTP 远程驱动， TCP 远程驱动的调试
 
 ### 开发者使用说明
 
-- 首先成为 智能家居开发者， 可以发邮件到 [Smart Home Connect](mailto:smarthomeconnect@rokid.com) 或者加入QQ群 657149188 申请成为 智能家居开发者。
-- 点击添加设备， 选择 **远程调试驱动** ,然后 **开始配置**
-- 输入 http remote driver 的 `URL` ， 如果需要 Auth 参数，则输入 `userId` 和 `userToken` ，否则可以为空。
-- 配置成功后，就可以通过语音与 **月石** 进行搜索智能设备，控制设备等调试。
+![develoer tools](https://s.rokidcdn.com/homebase/upload/rke-e3_bvM.jpg)
+
+1. 启动远程驱动， 比如 你的驱动的地址是 `http://192.168.0.1`
+2. 在Rokid App中，点击添加设备， 选择 **远程调试驱动** ,然后点击 **绑定**
+3. 点击绑定后， 在接下来的界面中输入 **http remote driver** 的地址 ，如果需要 Auth 参数，则输入 `userId` 和 `userToken` ，否则可以为空。点击设置， 这个时候， 若琪就会调用设备列表接口。 如果一切正常， 若琪会进入配置成功界面。 如果失败， 请检查驱动是否正常启动, 以及接口是否按协议约定输出。
+4. 配置成功后, 对若琪说搜索智能设备， 就可以远程拉取你设备列表了。

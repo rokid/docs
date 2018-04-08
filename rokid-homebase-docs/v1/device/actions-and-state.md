@@ -42,7 +42,7 @@ state:
 - 湿度 [humidity](#humidity)
 - 温度 [temperature](#temperature)
 - 色温 [color_temperature](#color_temperature)
-- 媒体播放控制 [playback](#playback) 未上线
+- 媒体播放控制 [media_control](#media_control)
 - Ping [ping](#ping)
 
 ### <span id = "switch">开关 switch</span>
@@ -351,19 +351,102 @@ Example:
   - 为空，不需要提供state
 
 
-### <span id = "playback">playback</span> 媒体播放控制， 草稿未上线
+### 媒体播放控制 <span id = "media_control">media_control</span>
 
-- actions
- - play
- - pause
- - stop
- - next
- - previous
+- actions接受值[ "play_media",  "pause",  "play",  "stop",  "playmode",  "previous",  "next", "get_meta" ]
+
+  - play_media 播放媒体，接受值 [ "media_tag", "singer", "song" ]
+
+    - media_tag 媒体源，可选，接受值{ "type": "favlist"}
+    - singer 歌手，可选
+    - song 歌曲，可选
+
+    Example 1：若琪，我要听歌
+
+    ```json
+    { "property": "media_control", "name": "play_media", "value": { } }
+    ```
+
+    在没有提供艺术家、曲目、媒体源的情况下，设备可以随机播放媒体或者根据用户平时喜好提供具体内容
+
+    ​
+
+    Example 2：若琪，我要听王菲的歌
+
+    ```json
+    { 
+        "property": "media_control",
+        "name": "play_media",
+        "value": {
+            "signer": "王菲"
+        }
+    }
+    ```
+    在只提供艺术家的情况下设备可以播放某个艺术家的Top歌曲
+
+    ​
+
+    Example 3：若琪，我要听收藏夹中周杰伦的歌
+
+    ```json
+    {
+        "property": "media_control",
+        "name":"play_media",
+        "value": {
+            "media_tag": {
+                "type" : "favlist"
+            },
+            "singer": "周杰伦"
+        }
+    }
+    ```
+    在提供了媒体源的情况下代表用户希望播放某一个媒体源下的曲目，设备可以从用户的媒体源中选择艺术家和曲目进行播放，媒体源暂时只支持『收藏夹』
+
+  - pause 暂停播放
+
+  - play 继续播放
+
+  - stop 停止播放
+
+  - playmode 设置播放模式，接受值[ "repeatOne", "repeat", "shuffle" ]
+
+    - repeatOne 单曲循环
+    - repeat 循环列表
+    - shuffle 随机播放
+
+    Example: 若琪，打开单曲循环
+
+    ```json
+    { "property": "media_control", "name":"playmode", "value": "repeatOne"}
+    ```
+
+  - previous 下一首
+
+  - next 上一首
+
+  - get_meta 获取当前播放媒体信息
+
+    Example: 若琪，现在放的什么歌
+
+    ```json
+    { "property": "media_control", "name":"get_meta", "value": { } }
+    ```
+    在处理无误的情况下请返回以下格式的内容来进行TTS播报
+    ```json
+    {
+        "status": 0,
+        "artist": {
+            "name": "艺术家名字"
+        },
+        "name": "曲目名称"
+    }
+    ```
 
 Example:
 
 ```JSON
-{ "property": "playback", "name":"play"}
+{ "property": "media_control", "name":"play"}
 ```
 
 - state 值
+  - get_meta 需要提供指定格式的内容，其他的返回状态码即可
