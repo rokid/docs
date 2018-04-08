@@ -49,11 +49,11 @@ authentication | Authentication Object |
 type | `string` | 通常为 BearerToken
 token | `string` | 从若琪获取的 Token 或者若琪从 Skill 方获取的 Token
 
-### Endpoints Array
-本次消息的目标终端数组描述信息如 id 和 additionalInfo
+### Endpoint Object
+本次消息的目标终端描述信息如 id 和 additionalInfo
 
 ### Payload Object
-根据消息类型决定内容，像控制请求的期望值等，但不应该有 Endpoints 的信息
+根据消息类型决定内容，像控制请求的期望值等，但不应该有终端的信息
 
 # 示例
 
@@ -70,21 +70,19 @@ token | `string` | 从若琪获取的 Token 或者若琪从 Skill 方获取的 T
       "token": "a-token-from-skill"
     }
   },
-  "endpoints": [
-    {
-      "endpointId": "unique-id-for-user",
-      "additionalInfo": {
-        "key1": "value1"
-      },
-      "states": [
-        {
-          "interface": "Color",
-          "value": 12345,
-          "timeOfSample": "20180320T00:00:00.000Z"
-        }
-      ]
-    }
-  ],
+  "endpoint": {
+    "endpointId": "unique-id-for-user",
+    "additionalInfo": {
+      "key1": "value1"
+    },
+    "states": [
+      {
+        "interface": "Color",
+        "value": 12345,
+        "timeOfSample": "20180320T00:00:00.000Z"
+      }
+    ]
+  },
   "payload": {
     "color": 65280
   }
@@ -101,18 +99,16 @@ token | `string` | 从若琪获取的 Token 或者若琪从 Skill 方获取的 T
     "name": "Response",
     "payloadVersion": "1",
   },
-  "endpoints": [
-    {
-      "endpointId": "unique-id-for-user",
-      "states": [
-        {
-          "interface": "Color",
-          "value": 12345,
-          "timeOfSample": "20180320T00:00:00.000Z"
-        }
-      ]
-    }
-  ],
+  "endpoint": {
+    "endpointId": "unique-id-for-user",
+    "states": [
+      {
+        "interface": "Color",
+        "value": 12345,
+        "timeOfSample": "20180320T00:00:00.000Z"
+      }
+    ]
+  },
   "payload": {}
 }
 ```

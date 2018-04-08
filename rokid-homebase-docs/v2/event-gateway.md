@@ -26,23 +26,21 @@ HTTP 状态码 |	场景
       "token": "a-token-from-rokid"
     }
   },
-  "endpoints": [
-    {
-      "endpointId": "device:an-id-unique-to-user",
-      "states": [
-        {
-          "interface": "Switch",
-          "value": "On",
-          "timeOfSample": "20180315T18:00:00.000Z"
-        },
-        {
-          "interface": "Color",
-          "value": 12345,
-          "timeOfSample": "20180315T18:00:00.000Z"
-        }
-      ]
-    }
-  ],
+  "endpoint": {
+    "endpointId": "device:an-id-unique-to-user",
+    "states": [
+      {
+        "interface": "Switch",
+        "value": "On",
+        "timeOfSample": "20180315T18:00:00.000Z"
+      },
+      {
+        "interface": "Color",
+        "value": 12345,
+        "timeOfSample": "20180315T18:00:00.000Z"
+      }
+    ]
+  },
   "payload": {
     "change": {
       "cause": "PHYSICAL_INTERACTION"

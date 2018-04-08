@@ -30,46 +30,47 @@
     "name": "DiscoveryResponse",
     "payloadVersion": "1"
   },
-  "endpoints": [
-    {
-      "endpointId": "device:an-id-unique-to-user",
-      "displayName": "大米台灯",
-      "description": "一盏台灯",
-      "manufacturerName": "特许贸易公司",
-      "modelName": "FA♂︎Q",
-      "displayType": "light",
-      "recommendRoomName": "厨房",
-      "additionalInfo": {
-        "key1": "value"
-      },
-      "capabilities": [
-        {
-          "interface": "Switch",
-          "supportedOperations": [ "On", "Off" ],
-          "proactivelyReported": true,
-          "retrievable": true
+  "payload": {
+    "endpoints": [
+      {
+        "endpointId": "device:an-id-unique-to-user",
+        "displayName": "大米台灯",
+        "description": "一盏台灯",
+        "manufacturerName": "特许贸易公司",
+        "modelName": "FA♂︎Q",
+        "displayType": "light",
+        "recommendRoomName": "厨房",
+        "additionalInfo": {
+          "key1": "value"
         },
-        {
-          "interface": "Color",
-          "supportedOperations": [ "Set" ],
-          "proactivelyReported": true,
-          "retrievable": true
-        }
-      ],
-      "states": [
-        {
-          "interface": "Switch",
-          "value": "On",
-          "timeOfSample": "20180315T18:00:00.000Z"
-        },
-        {
-          "interface": "Color",
-          "value": 12345,
-          "timeOfSample": "20180315T18:00:00.000Z"
-        }
-      ]
-    }
-  ],
-  "payload": {}
+        "capabilities": [
+          {
+            "interface": "Switch",
+            "supportedOperations": [ "On", "Off" ],
+            "proactivelyReported": true,
+            "retrievable": true
+          },
+          {
+            "interface": "Color",
+            "supportedOperations": [ "Set" ],
+            "proactivelyReported": true,
+            "retrievable": true
+          }
+        ],
+        "states": [
+          {
+            "interface": "Switch",
+            "value": "On",
+            "timeOfSample": "20180315T18:00:00.000Z"
+          },
+          {
+            "interface": "Color",
+            "value": 12345,
+            "timeOfSample": "20180315T18:00:00.000Z"
+          }
+        ]
+      }
+    ],
+  }
 }
 ```

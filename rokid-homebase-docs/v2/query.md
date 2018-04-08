@@ -14,14 +14,12 @@
       "token": "a-token-from-skill"
     }
   },
-  "endpoints": [
-    {
-      "endpointId": "device:an-id-unique-to-user",
-      "additionalInfo": {
-        "key": "value"
-      }
+  "endpoint": {
+    "endpointId": "device:an-id-unique-to-user",
+    "additionalInfo": {
+      "key": "value"
     }
-  ],
+  },
   "payload": {}
 }
 ```
@@ -35,23 +33,21 @@
     "name": "Response",
     "payloadVersion": "1"
   },
-  "endpoints": [
-    {
-      "endpointId": "device:an-id-unique-to-user",
-      "states": [
-        {
-          "interface": "Switch",
-          "value": "On",
-          "timeOfSample": "20180315T18:00:00.000Z"
-        },
-        {
-          "interface": "Color",
-          "value": 12345,
-          "timeOfSample": "20180315T18:00:00.000Z"
-        }
-      ]
-    }
-  ],
+  "endpoint": {
+    "endpointId": "device:an-id-unique-to-user",
+    "states": [
+      {
+        "interface": "Switch",
+        "value": "On",
+        "timeOfSample": "20180315T18:00:00.000Z"
+      },
+      {
+        "interface": "Color",
+        "value": 12345,
+        "timeOfSample": "20180315T18:00:00.000Z"
+      }
+    ]
+  },
   "payload": {}
 }
 ```
