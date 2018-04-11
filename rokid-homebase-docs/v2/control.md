@@ -2,6 +2,20 @@
 
 执行指定的操作，并返回终端最新状态
 
+### Endpint Object
+
+
+字段名 | 类型 | 描述
+--- | --- | ---
+endpointId | `string` | Skill 提供的终端 Id
+additionalInfo | key-value pairs | Skill 提供的终端附加信息
+states | `InterfaceState[]` | 终端能力状态，具体信息请参考 [终端描述](./endpoint.md)
+
+
+### Request Payload
+
+根据各个控制命令，Payload 会有所变化，具体信息请参考 [终端能力](./rokid-interface.md)
+
 #### Example Request
 ```json
 {

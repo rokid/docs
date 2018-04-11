@@ -46,7 +46,6 @@
     * 提供接口
         * [搜索发现 Discovery](rokid-homebase-docs/v2/discovery.md)
         * [终端控制 Control](rokid-homebase-docs/v2/control.md)
-        * [终端查询 Query](rokid-homebase-docs/v2/query.md)
     * 终端描述
       * [终端](rokid-homebase-docs/v2/endpoint.md)
       * [终端类型](rokid-homebase-docs/v2/endpoint-type.md)
@@ -59,15 +58,14 @@
     * [命令行接口校验工具](rokid-homebase-docs/tools/rhome.md)
     * [开发者驱动](rokid-homebase-docs/tools/developer-driver.md)
   * [Webhook](rokid-homebase-docs/webhook/index.md)
-  * 更多文档
-    * 旧版协议
-      * [HTTP 远程驱动](rokid-homebase-docs/connect/http-remote-driver.md)
-      * 设备描述
-        * [设备](rokid-homebase-docs/v1/device/device.md)
-        * [设备类型](rokid-homebase-docs/v1/device/type.md)
-        * [设备能力与状态](rokid-homebase-docs/v1/device/actions-and-state.md)
-        * [设备房间](rokid-homebase-docs/v1/device/room-name.md)
-        * [标准错误](rokid-homebase-docs/v1/errors.md)
+  * 旧版协议
+    * [HTTP 远程驱动](rokid-homebase-docs/connect/http-remote-driver.md)
+    * 设备描述
+      * [设备](rokid-homebase-docs/v1/device/device.md)
+      * [设备类型](rokid-homebase-docs/v1/device/type.md)
+      * [设备能力与状态](rokid-homebase-docs/v1/device/actions-and-state.md)
+      * [设备房间](rokid-homebase-docs/v1/device/room-name.md)
+      * [标准错误](rokid-homebase-docs/v1/errors.md)
     * 如何调试
       * [测试 Command 接口](rokid-homebase-docs/tools/oauth-test.md)
     * 其他授权方式

@@ -4,6 +4,12 @@
 
 搜索用户账号下的所有终端，如真实的设备、虚拟设备、子设备等
 
+### Response Payload
+
+字段名 | 类型 | 描述
+--- | --- | ---
+endpoints | `Endpoint[]` | 一组终端描述符，具体终端描述请参考 [终端描述](./endpoint.md)
+
 #### Example Request
 ```json
 {
