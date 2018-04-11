@@ -119,7 +119,7 @@ Http Hearder中相关内容的示例如下：
   "request": {
     "reqType": "INTENT / EVENT",
     "reqId": "当前请求的Id",
-     "content": {
+    "content": {
       "intent": "play_random",
       "sentence": "用户语句",
       "slots": {
