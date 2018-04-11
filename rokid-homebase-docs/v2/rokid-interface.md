@@ -11,6 +11,9 @@
 - Enum 类型接口: 具体的 Enum 值即为命令（相当于 Set 但是枚举了所有值）
 - 描述符类型接口: 是值的说法无法枚举、也不是 Number 类型的类型, 如歌曲、电视频道, 具有 Set 控制命令
 
+> Beta 版尚不支持向若琪问询终端状态
+>
+
 ## Switch 开关状态
 
 类型: Enum
@@ -303,55 +306,6 @@ music.artist | `string` |
 music.album | `string` |
 music.genre | `string` |
 music.source | `string` |
-
-
-## Media.Movie 电影控制
-类型: movie descriptor
-
-可对应说法: 若琪, 想看 COCO
-
-命令 | 描述
---- | ---
-Media.Movie.Stop |
-Media.Movie.Set |
-
-Movie 描述符
-
-字段名 | 类型 | 描述
---- | --- | ---
-movie.name | `string` |
-movie.subtitleLanguages | `string[]` |
-movie.director | `string` |
-movie.releaseYear | `number` |
-movie.genre | `string` |
-movie.source | `enum` |
-
-## Media.TVShow 电视节目控制
-类型: tv show descriptor
-
-可对应说法: 若琪, 播放半沢直樹第一季第二集
-
-
-命令 | 描述
---- | ---
-Media.TVShow.Next |
-Media.TVShow.Previous |
-Media.TVShow.Stop |
-Media.TVShow.Set |
-
-
-TVShow 描述符
-
-字段名 | 类型 | 描述
---- | --- | ---
-tvShow.name | `string` |
-tvShow.subtitleLanguages | `string[]` |
-tvShow.episodes | `number` |
-tvShow.seasons | `number` |
-tvShow.currentEpisode | `number` |
-tvShow.currentSeason | `number` |
-tvShow.genre | `string` |
-tvShow.source | `enum` |
 
 ## PlaybackControl 媒体播放状态
 类型: enum

@@ -43,9 +43,7 @@
   * 智能家居协议(Beta)
     * [技能授权](rokid-homebase-docs/connect/rfc6749.md)
     * [消息格式参考](rokid-homebase-docs/v2/message-reference.md)
-    * [主动推送终端状态](rokid-homebase-docs/v2/event-gateway.md)
     * 提供接口
-        * [推送授权 Authorization](rokid-homebase-docs/v2/authorization.md)
         * [搜索发现 Discovery](rokid-homebase-docs/v2/discovery.md)
         * [终端控制 Control](rokid-homebase-docs/v2/control.md)
         * [终端查询 Query](rokid-homebase-docs/v2/query.md)

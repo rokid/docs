@@ -11,11 +11,17 @@
 - Rokid.Query: 终端状态查询，如“现在家里门锁了吗“
  Skill 对于若琪命令的回复需要使用 Responses 所定义的消息类型，否则若琪会认为本次消息发送失败；
 
+> Beta 版尚不支持向若琪问询终端状态
+>
+
 ### 事件 Events
 由 Skill 主动向若琪发起的请求，只能通过 Rokid EventGateway 开放的 HTTP 服务使用
 
 - Rokid.AsyncResponse: 当 Skill 认为终端控制、终端发现可能需要超过 3 秒的时间来完成时，可以推迟回复
 - Rokid.ChangeReport: 终端状态变更，如灯被手动打开了
+
+> Beta 版尚不支持事件推送
+>
 
 ## 回复消息类型
 
@@ -50,10 +56,10 @@ type | `string` | 通常为 BearerToken
 token | `string` | 从若琪获取的 Token 或者若琪从 Skill 方获取的 Token
 
 ### Endpoint Object
-本次消息的目标终端描述信息如 id 和 additionalInfo
+本次消息的目标终端描述信息如 endpointId 和 additionalInfo
 
 ### Payload Object
-根据消息类型决定内容，像控制请求的期望值等，但不应该有终端的信息
+根据消息类型决定内容，像控制请求的期望值等
 
 # 示例
 
@@ -84,7 +90,7 @@ token | `string` | 从若琪获取的 Token 或者若琪从 Skill 方获取的 T
     ]
   },
   "payload": {
-    "color": 65280
+    "value": 65280
   }
 }
 ```
@@ -127,7 +133,7 @@ token | `string` | 从若琪获取的 Token 或者若琪从 Skill 方获取的 T
     "payloadVersion": "1",
   },
   "payload": {
-    "code": "E_DRIVER_ERROR",
+    "name": "E_DRIVER_ERROR",
     "message": "发生了一些不可告人的错误"
   }
 }
