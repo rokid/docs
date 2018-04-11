@@ -122,15 +122,15 @@ delta | `number` | 相对值
 
 命令 | 描述
 --- | ---
-Mode.Auto 自动模式 |
-Mode.Manual 手动模式 |
-Mode.Cool 制冷模式 |
-Mode.Heat 制热模式 |
-Mode.Dry 除湿模式 |
-Mode.Fan 送风模式 |
-Mode.Silent 静音模式 |
-Mode.Energy 省电模式 |
-Mode.Sleep 睡眠模式 |
+Mode.Auto | 自动模式
+Mode.Manual | 手动模式
+Mode.Cool | 制冷模式
+Mode.Heat | 制热模式
+Mode.Dry | 除湿模式
+Mode.Fan | 送风模式
+Mode.Silent | 静音模式
+Mode.Energy | 省电模式
+Mode.Sleep | 睡眠模式
 
 ## SwingMode 转向状态
 类型: enum

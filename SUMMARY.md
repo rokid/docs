@@ -40,24 +40,38 @@
   * 如何接入
     * [通过公网提供服务](rokid-homebase-docs/connect/cloud-to-cloud.md)
     * [通过局域网 SSDP 自动发现](rokid-homebase-docs/connect/via-lan.md)
-  * 智能家居协议
+  * 智能家居协议(Beta)
     * [技能授权](rokid-homebase-docs/connect/rfc6749.md)
-    * Skill 对接方式
-      * [HTTP 远程驱动](rokid-homebase-docs/connect/http-remote-driver.md)
-      * [TCP 远程驱动](rokid-homebase-docs/connect/json-rpc-over-tcp.md)
-      * [局域网自动发现](rokid-homebase-docs/connect/ssdp-auto-discovery.md)
-    * 设备描述
-      * [设备](rokid-homebase-docs/v1/device/device.md)
-      * [设备类型](rokid-homebase-docs/v1/device/type.md)
-      * [设备能力与状态](rokid-homebase-docs/v1/device/actions-and-state.md)
-      * [设备房间](rokid-homebase-docs/v1/device/room-name.md)
-      * [标准错误](rokid-homebase-docs/v1/errors.md)
+    * [消息格式参考](rokid-homebase-docs/v2/message-reference.md)
+    * [主动推送终端状态](rokid-homebase-docs/v2/event-gateway.md)
+    * 提供接口
+        * [推送授权 Authorization](rokid-homebase-docs/v2/authorization.md)
+        * [搜索发现 Discovery](rokid-homebase-docs/v2/discovery.md)
+        * [终端控制 Control](rokid-homebase-docs/v2/control.md)
+        * [终端查询 Query](rokid-homebase-docs/v2/query.md)
+    * 终端描述
+      * [终端](rokid-homebase-docs/v2/endpoint.md)
+      * [终端类型](rokid-homebase-docs/v2/endpoint-type.md)
+      * [终端能力与状态](rokid-homebase-docs/v2/rokid-interface.md)
+    * [当发生了错误](rokid-homebase-docs/v2/error-response.md)
+  * 智能家居 JSON RPC 协议
+    * [局域网自动发现](rokid-homebase-docs/connect/ssdp-auto-discovery.md)
+    * [JSON RPC 控制协议](rokid-homebase-docs/connect/json-rpc-over-tcp.md)
   * 如何调试
     * [命令行接口校验工具](rokid-homebase-docs/tools/rhome.md)
-    * [测试 Command 接口](rokid-homebase-docs/tools/oauth-test.md)
     * [开发者驱动](rokid-homebase-docs/tools/developer-driver.md)
   * [Webhook](rokid-homebase-docs/webhook/index.md)
   * 更多文档
+    * 旧版协议
+      * [HTTP 远程驱动](rokid-homebase-docs/connect/http-remote-driver.md)
+      * 设备描述
+        * [设备](rokid-homebase-docs/v1/device/device.md)
+        * [设备类型](rokid-homebase-docs/v1/device/type.md)
+        * [设备能力与状态](rokid-homebase-docs/v1/device/actions-and-state.md)
+        * [设备房间](rokid-homebase-docs/v1/device/room-name.md)
+        * [标准错误](rokid-homebase-docs/v1/errors.md)
+    * 如何调试
+      * [测试 Command 接口](rokid-homebase-docs/tools/oauth-test.md)
     * 其他授权方式
         * [Homebase OAuth 授权](rokid-homebase-docs/v1/oauth.md)
         * [Homebase OAuth2.0 授权](rokid-homebase-docs/v1/oauth2.0.md)
