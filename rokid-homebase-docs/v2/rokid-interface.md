@@ -25,6 +25,19 @@
 Switch.On | 打开终端
 Switch.Off | 关闭终端
 
+## MotionSwitch 行为状态
+
+类型: Enum
+
+可对应说法: 若琪, 开灯；若琪, 关灯
+
+可以与 Switch 组合成：若琪，开窗；*(窗户正在打开，3秒后)* 若琪，停下
+
+命令 | 描述
+--- | ---
+MotionSwitch.On | 终端开始运动
+MotionSwitch.Off | 终端停止运动
+
 ## Position 位置百分比状态
 
 类型: percentage

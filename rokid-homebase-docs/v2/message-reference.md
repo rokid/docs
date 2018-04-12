@@ -9,7 +9,8 @@
 - Rokid.Discovery: 搜索终端
 - Rokid.Control: 终端控制，如“帮我打开客厅灯”
 - Rokid.Query: 终端状态查询，如“现在家里门锁了吗“
- Skill 对于若琪命令的回复需要使用 Responses 所定义的消息类型，否则若琪会认为本次消息发送失败；
+
+Skill 对于若琪命令的回复需要使用 Responses 所定义的消息类型，否则若琪会认为本次消息发送失败；
 
 > Beta 版尚不支持向若琪问询终端状态
 >
