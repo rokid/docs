@@ -20,7 +20,7 @@ HTTP 状态码 |	场景
     "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
     "namespace": "Rokid",
     "name": "ChangeReport",
-    "payloadVersion": "1",
+    "payloadVersion": "v1",
     "authorization": {
       "type": "BearerToken",
       "token": "a-token-from-rokid"

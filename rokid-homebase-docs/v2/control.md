@@ -23,7 +23,7 @@ states | `InterfaceState[]` | 终端能力状态，具体信息请参考 [终端
     "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
     "namespace": "Rokid.Control",
     "name": "Color.Adjust",
-    "payloadVersion": "1",
+    "payloadVersion": "v1",
     "authentication": {
       "type": "BearerToken",
       "token": "a-token-from-skill"
@@ -53,7 +53,7 @@ states | `InterfaceState[]` | 终端能力状态，具体信息请参考 [终端
     "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
     "namespace": "Rokid",
     "name": "Response",
-    "payloadVersion": "1"
+    "payloadVersion": "v1"
   },
   "endpoint": {
     "endpointId": "device:an-id-unique-to-user",

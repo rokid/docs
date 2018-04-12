@@ -34,7 +34,7 @@ states | `InterfaceState[]` | 一组终端能力接口状态描述符
 字段名 | 类型 | 描述
 --- | --- | ---
 interface | `enum` | 终端能力类型
-version | `enum` |
+version | `enum` | 终端能力定义版本，当前只支持 `v1`
 supportedOperations | `string[]` | 相应接口类型中支持的能力操作
 isProactivelyReported | `bool`，默认 `false` | 是否支持由产商推送终端新状态，如果支持即可作为自动化的触发器
 isRetrievable | `bool`，默认 `false` | 是否支持若琪发起状态查询请求，如果支持即可向若琪问询终端状态
