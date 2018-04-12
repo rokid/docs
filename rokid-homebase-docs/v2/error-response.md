@@ -8,7 +8,7 @@
     "messageId": "789-123",
     "namespace": "Rokid",
     "name": "ErrorResponse",
-    "payloadVersion": "1",
+    "payloadVersion": "v1",
   },
   "payload": {
     "name": "E_INTERNAL_ERROR",

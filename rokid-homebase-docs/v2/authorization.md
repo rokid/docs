@@ -22,7 +22,7 @@ grant.token | `string` | Token
     "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
     "namespace": "Rokid.Authorization",
     "name": "AcceptGrant",
-    "payloadVersion": "1",
+    "payloadVersion": "v1",
     "authentication": {
       "type": "Bearer",
       "token": "a-token-from-skill"
@@ -43,7 +43,7 @@ grant.token | `string` | Token
     "messageId": "123-456",
     "namespace": "Rokid",
     "name": "Response",
-    "payloadVersion": "1"
+    "payloadVersion": "v1"
   },
   "payload": {}
 }

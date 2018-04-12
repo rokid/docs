@@ -17,7 +17,7 @@ endpoints | `Endpoint[]` | 一组终端描述符，具体终端描述请参考 [
     "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
     "namespace": "Rokid.Discovery",
     "name": "Discover",
-    "payloadVersion": "1",
+    "payloadVersion": "v1",
     "authentication": {
       "type": "BearerToken",
       "token": "a-token-from-skill"
@@ -34,7 +34,7 @@ endpoints | `Endpoint[]` | 一组终端描述符，具体终端描述请参考 [
     "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
     "namespace": "Rokid",
     "name": "DiscoveryResponse",
-    "payloadVersion": "1"
+    "payloadVersion": "v1"
   },
   "payload": {
     "endpoints": [

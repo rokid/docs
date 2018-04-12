@@ -46,8 +46,8 @@ Skill 对于若琪命令的回复需要使用 Responses 所定义的消息类型
 messageId | `string` | 若琪或 Skill 如果认为之前的消息发送失败了，可以尝试使用相同的 messageId 再次发送
 namespace | `string` | 本消息的命名空间，如 Rokid.Discovery，Rokid.Control，Rokid.Query
 name | `string` | 本次消息的名称，如在 Rokid.Control 的命名空间下 Switch.On，Rokid.Discovery 命名空间下的 Discover，Rokid.Query 命名空间下的 ReportState
-payloadVersion | `string` |
-authentication | Authentication Object |
+payloadVersion | `enum` | 本消息的 Payload 定义版本，当前只支持 `v1`
+authentication | Authentication Object | 本消息的认证信息，只有请求消息才需要这个字段，回复消息不需要
 
 #### Authentication Object
 
@@ -71,7 +71,7 @@ token | `string` | 从若琪获取的 Token 或者若琪从 Skill 方获取的 T
     "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
     "namespace": "Rokid.Control",
     "name": "Color.Set",
-    "payloadVersion": "1",
+    "payloadVersion": "v1",
     "authentication": {
       "type": "BearerToken",
       "token": "a-token-from-skill"
@@ -104,7 +104,7 @@ token | `string` | 从若琪获取的 Token 或者若琪从 Skill 方获取的 T
     "messageId": "123-456",
     "namespace": "Rokid",
     "name": "Response",
-    "payloadVersion": "1",
+    "payloadVersion": "v1",
   },
   "endpoint": {
     "endpointId": "unique-id-for-user",
@@ -131,7 +131,7 @@ token | `string` | 从若琪获取的 Token 或者若琪从 Skill 方获取的 T
     "messageId": "789-123",
     "namespace": "Rokid",
     "name": "ErrorResponse",
-    "payloadVersion": "1",
+    "payloadVersion": "v1",
   },
   "payload": {
     "name": "E_DRIVER_ERROR",
@@ -139,3 +139,5 @@ token | `string` | 从若琪获取的 Token 或者若琪从 Skill 方获取的 T
   }
 }
 ```
+
+关于错误的更多信息请查阅 [当发生了错误](./error-response.md)。
