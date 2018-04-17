@@ -70,7 +70,7 @@
       * [测试 Command 接口](rokid-homebase-docs/tools/oauth-test.md)
     * 其他授权方式
         * [Homebase OAuth 授权](rokid-homebase-docs/v1/oauth.md)
-        * [Homebase OAuth2.0 授权](rokid-homebase-docs/v1/oauth2.0.md)
+        * [Homebase OAuth2.0 授权](rokid-homebase-docs/v1/OAuth2.0.md)
 
 * 智能设备语音接入平台
     * [智能设备语音接入平台简介](2-RokidDocument/2-EnableVoice/introduction.md)

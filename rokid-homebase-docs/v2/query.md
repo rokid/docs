@@ -39,12 +39,12 @@
       {
         "interface": "Switch",
         "value": "On",
-        "timeOfSample": "20180315T18:00:00.000Z"
+        "timeOfSample": "2018-03-15T18:00:00.000Z"
       },
       {
         "interface": "Color",
         "value": 12345,
-        "timeOfSample": "20180315T18:00:00.000Z"
+        "timeOfSample": "2018-03-15T18:00:00.000Z"
       }
     ]
   },
