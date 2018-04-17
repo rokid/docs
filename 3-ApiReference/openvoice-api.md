@@ -59,7 +59,7 @@ PCM格式为 RIFF (little-endian) data, WAVE audio, Microsoft PCM, 16 bit, mono 
 | ------ | --------- | -------------------- | ---- |
 | id        | int32  | 唯一标识，用于跟踪一个完整的请求，处理及响应事件。   | 0    |
 | text   | string    | 需要转换的text文本          | 无    |
-| declaimer | string | 发音者，如"zh","zhangsan","rose" | "zh" |
+| declaimer | string | 发音者，目前支持 中文成人"zh" 与 中文儿童"c1" 两种 | 无 |
 | codec     | string | 语音流的编码，目前支持PCM，OPU，OPU2。    | 无  |
 
 ### TtsResponse
