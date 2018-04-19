@@ -7,7 +7,7 @@
 endpointId | `string`, 必需 | 终端 Id，只需要对于某一个用户来说是唯一的
 displayType | `enum`，必需 |终端的显示类型，可能会和实际类型不太类似
 displayName | `string`，必需 | 若琪客户端显示的终端名称
-modelId | `string` | 在若琪开发者平台预注册的终端型号 Id，只允许 [A-Za-z0-9] 和符号 `-_`
+modelId | `string` | 在若琪开发者平台预注册的终端型号 Id，只允许大小写字母 A-Z，a-z，数字 0-9 和符号 `-_`
 recommendRoomName | `string` | 推荐若琪将这个终端划入与这个房间名相同的房间，便于用户命令
 offline | `bool` | Skill 能否成功连接到设备，如果不能则为 `true`
 additionalInfo | key-value pairs | 一组和终端关联的键值对，若琪每次会把这些键值对和终端 Id 一起发送给 Skill
