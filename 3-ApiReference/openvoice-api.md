@@ -14,6 +14,10 @@ Rokid openvoice开放服务(websocket版)包含以下功能，
 
 ## Speech 接口
 
+### 服务地址
+
+wss://apigwws.open.rokid.com/api
+
 ### protobuf 定义
 详见[protobuf](https://github.com/Rokid/rokid-openvoice-websocket/tree/master/protobuf)
 
