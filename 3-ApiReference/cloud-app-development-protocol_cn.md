@@ -132,7 +132,7 @@ Http Hearder中相关内容的示例如下：
 ```
 
 * **request** - 协议中真正代表此次*Request*的实体，会明确给出请求的类型**RequestType**和请求的内容**RequestContent**。
-
+* **request** - 注意获取用户语句时候，不要获取**sentence**,建议使用**slot**
 #### 2.2 Session定义
 
 *Session* 向所请求的*CloudApp*表明了会话的信息，每一次对*CloudApp*的请求都会产生会话信息，会话的信息和状态由开放平台的系统更新。*Session*也提供了*attributes*字段留给*CloudApp*来保存一些上下文信息。具体阐述如下：
@@ -418,9 +418,9 @@ IntentRequest 是基于 *NLP* 的结果产生的请求，其中包括了 *NLP* �
       }
     }
 ```
-**开发者不能退该Request做响应，但是开发者可以通过该Request记录服务的业务日志**
+**开发者不能对该Request做响应，但是开发者可以通过该Request记录服务的业务日志**
 	
-* **ROKID.INTENT.UNKNOWN** - 当Skill发起Confirm或者Pickup时，用户说了三次都没有名字该Skill需要的内容，这时候会发送该Intent请求，请求内容如下：
+* **ROKID.INTENT.UNKNOWN** - 当Skill发起Confirm或者Pickup时，用户说了三次都没有命中该Skill需要的内容，这时候会发送该Intent请求，请求内容如下：
 
 ```json
 	"content": {

@@ -119,7 +119,7 @@
             * [蓝牙服务](rokidos-linux-docs/porting/bluetooth/bluetooth.md)
         * [应用开发](rokidos-linux-docs/development/overview.md)
             * [Node.js](rokidos-linux-docs/development/tutorial-nodejs.md)
-            * [C/C++](development/tutorial-cplusplus.md)
+            * [C/C++](docs/rokidos-linux-docs/development/tutorial-cplusplus.md)
                 * [语音合成](rokidos-linux-docs/development/cplusplus/tts.md)
                 * [音量控制](rokidos-linux-docs/development/cplusplus/volume_ctrl.md)
                 * [多媒体播放](rokidos-linux-docs/development/cplusplus/mediaplayer.md)
