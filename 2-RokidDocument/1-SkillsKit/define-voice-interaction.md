@@ -181,31 +181,26 @@ $iwant喝$drink
 
 ```json
 {
- "intents": [
-  {
-  		{
-			"intent": "time",
-			"slots": [
-				{
-					"name": "hour",
-					"type": "ROKID.NUMBER_ZH"
-				},
-				{
-					"name": "min",
-					"type": "ROKID.NUMBER_ZH"
-				},
-				{
-					"name": "sec",
-					"type": "ROKID.NUMBER_ZH"
-				}
-			], 
-    "user_says":[
-       "$hour小时",
-       "$min分钟",
-       "$sec秒",
-        ]
-  }
- ]
+  "intents": [
+    {
+      "intent": "time",
+      "slots": [
+        {
+          "name": "hour",
+          "type": "ROKID.NUMBER_ZH"
+        },
+        {
+          "name": "min",
+          "type": "ROKID.NUMBER_ZH"
+        },
+        {
+          "name": "sec",
+          "type": "ROKID.NUMBER_ZH"
+        }
+      ],
+      "user_says": ["$hour小时", "$min分钟", "$sec秒"]
+    }
+  ]
 }
 ```
 

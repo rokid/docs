@@ -51,7 +51,7 @@
 注意：
 
 - 单条response中最多只能插入5个音频文件
-- 单挑response中的所有音频长度加总不能超过90秒。
+- 单条response中的所有音频长度加总不能超过90秒。
 
 #### 将音频文件转换为Rokid可用的格式
 您需要使用转换工具将需要插入的TTS中的音频转为WAV文件，16 bit，mono 24000HZ。推荐使用开源的命令行工具[FFmpeg](https://www.ffmpeg.org/)。下方的命令可以帮您将`<input-file>`装换为`audio`标签可用的WAV文件。
