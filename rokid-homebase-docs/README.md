@@ -9,7 +9,6 @@ Rokid Homebase， 是面向智能家居的设备接入框架， 通过协议接�
 
 ![Homebase](https://s.rokidcdn.com/homebase/upload/S1mEU8c6e.jpg)
 
-Rokid App 家庭 界面
 
 接下来， 您可以通过 [云端对接](connect/cloud-to-cloud.md) 或者 [本地对接方式](connect/via-lan.md) 来接入Rokid控制体系。
 

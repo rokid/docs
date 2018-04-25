@@ -71,7 +71,7 @@ USN 是一个服务的 Unique Number， 你可以用 UUID 为你的设备生成�
 
 ### DEVICE_TYPE
 
-设备在广播和单播的时候都需要包含 DEVICE_TYPE 头， DEVICE_TYPE 头标识了设备的类型， 有两种设备类型，
+设备在广播和单播的时候都需要包含 DEVICE_TYPE 头， DEVICE_TYPE 头标识了设备的类型， 有两种设备类型：
 
 - BRIDGE： 设备桥， 可以返回并控制多个设备
 - SINGLE： 单一设备， 具体设备类型由具体状态接口返回

@@ -4,7 +4,7 @@
 
 ### 硬件设计参考资料
 
-温馨提示：以下链接里的内容需登陆[Rokid讨论区](https://developer-forum.rokid.com)后才能下载
+温馨提示：以下链接里的内容需登录[Rokid讨论区](https://developer-forum.rokid.com)后才能下载
 
 * **CPU 板原理图**<br>
 [radk_palm_s905d_cpu_board_sch_v1.1.pdf](https://developer-forum.rokid.com/uploads/default/original/1X/a53d1faf49d0f4b55b6847a1572a5f7ae7a954df.pdf)
