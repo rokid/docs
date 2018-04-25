@@ -2,7 +2,7 @@
 
 - QQ：657149188
 - 客服电话：400-113-0099
-- Rokid 微信服务号：Rokidservice
+- Rokid 微信服务号：**Rokidservice**
 
     <img src="images/服务号二维码.jpg" width = "200" height = "200" alt="服务号二维码" align=center />
 

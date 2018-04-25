@@ -47,7 +47,7 @@ aplay xxx.wav
 ```
 
 2. 录音
-由于服务 openvoice_proc 独占了录音接口，需要录音输入如下两条命令来：<br>
+由于服务 openvoice_proc 独占了录音接口，需要录音输入如下两条命令：<br>
 ```
 systemctl stop openvoice_proc
 arecord -r48000 -f S32_LE -c 8 /data/1.wav

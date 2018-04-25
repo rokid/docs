@@ -24,7 +24,7 @@
 
 #### 1.1 一些概念
 
-在了解本文所描述协议之前，需要对一下概念作如下说明：
+在了解本文所描述协议之前，需要对以下概念作如下说明：
 
 * **CloudApp** - 在*[Rokid开发者社区][developer_website_link]*上接入的云端应用，可以理解为遵循本文所描述的协议开发的某种云端服务或小应用。
 * **CloudDispatcher** - 用于向CloudApp传递请求和分发CloudApp返回结果的模块。
@@ -256,7 +256,7 @@ Http Hearder中相关内容的示例如下：
 
 ###### 2.3.2.2 ScreenInfo
 
-当前设备的显示设备信息：
+当前设备显示的设备信息：
 
 ```json
 "screen":{
@@ -290,7 +290,7 @@ Http Hearder中相关内容的示例如下：
 | state  | string         | *PLAYING / PAUSED / IDLE*  |
 
 
-* **state** - 表明当前播放状态. 当前**有 PLAYING** 、**PAUSED** 和 **IDLE** 三种状态可用。
+* **state** - 表明当前播放状态. 当前有 **PLAYING** 、**PAUSED** 和 **IDLE** 三种状态可用。
     * **PLAYING**：代表当前有媒体正在播放；
     * **PAUSED**：代表当前媒体被暂停，可以执行继续播放（RESUME）操作；
     * **IDLE**：代表当前媒体播放器为空闲状态，没有任何媒体数据。
@@ -331,7 +331,7 @@ UserInfo 展示了与当前的用户信息，通常是设备对应手机应用�
 |:-----------------:|:---------------:|:---------------|
 | userId  | string         | *用户ID*  |
 
-*注意：该用户id和MasterId的区别在于，用户Id为当前使用者的Id,MasterId为机器主人的ID，机器主人不一定是当前使用的用户，目前UserId和MasterId是一致的，但后期上了声纹以后该两者会不一致*
+*注意：该用户id和MasterId的区别在于，用户Id为当前使用者的Id,MasterId为机器主人的ID，机器主人不一定是当前使用的用户，目前UserId和MasterId是一致的，但后期上了声纹以后该两者会不一致。*
 
 #### 2.4 Request定义
 
@@ -378,7 +378,7 @@ IntentRequest 是基于 *NLP* 的结果产生的请求，其中包括了 *NLP* �
 
 * **intent** 和 **slots** 均为 **NLP** 结果的基本元素。分别表明了一句话所代表意图和完成这个意图所需要的参数。
 
-**intent** - 表明了当前具体的意图，目前我们有三个系统级的Intent请求具体如下.
+**intent** - 表明了当前具体的意图，目前我们有三个系统级的Intent请求具体如下。
 
 * **ROKID.INTENT.WELCOME** - 当用户通过入口词打开该Skill时，会发送该Intent请求，请求内容如下：
 
@@ -449,7 +449,9 @@ slots是对象类型，含有如下两个字段：
 | type | String | slot类型    |
 |  value| String | slot值    |
 
-*注意：Slots对象其实对应的是一个HashMap<String,Slot>,其实Slot目前有type和value两个字段。其中HashMap的key是当前NLP那边配置的slot名称，Slot里面的Type值分为两种情况1、有引用系统词表，则该type为系统词表的名称；2、如果没有应用系统词表，则和key一致为用户自定义名称.Slot里面的value为用户真正需要的业务值，该值是一个String类型，但是需要注意的是该String有可能是一个Json的String，开发者需要根据Type去进行数据的解析。如下number这个slot的定义响应*
+*注意：Slots对象其实对应的是一个HashMap<String,Slot>,其实Slot目前有type和value两个字段。其中HashMap的key是当前NLP那边配置的slot名称，Slot里面的Type值分为两种情况：
+1、有引用系统词表，则该type为系统词表的名称；
+2、如果没有应用系统词表，则和key一致为用户自定义名称，Slot里面的value为用户真正需要的业务值，该值是一个String类型，但是需要注意的是该String有可能是一个Json的String，开发者需要根据Type去进行数据的解析。如下number这个slot的定义响应*
 
 ```json
 "slots": {
@@ -488,7 +490,7 @@ slots是对象类型，含有如下两个字段：
 	* **Media.FINISHED** - 当播放内容结束时发生。
 	* **Media.TIMEOUT** - 在媒体播放过程中因为网络慢等原因导致的卡顿持续5s后发生。
 	* **Media.FAILED** - 当播放器加载音频资源失败时发生。
-	* **Session.ENDED** - 当Domain被切换到的时候的事件，可以用于关闭资源，不能进行任何响应。
+	* **Session.ENDED** - 当Domain被切换到的时候，可以用于关闭资源，不能进行任何响应。
 	* ~~**Skill.EXIT**~~ - 该事件是当Skill没有资源执行或者按了home按键后抛出的事件，该事件当前定义有歧义，这边正在整改，建议开发者先忽略该事件。
 	* *更多的事件会在未来的版本更迭中给出*
 	
@@ -850,7 +852,7 @@ Media 用来播放CloudApp返回的流媒体内容。有 *audio* 和 *video* 两
 
 ##### 3.3.4 Pickup
 
-Pickup 用来控制拾音状态（可以理解为手机app上的对话框）。当CloudApp没有可执行的内容是，会执行Pickup，如果Pickup为空，则按照Pickup.enable=false执行。
+Pickup 用来控制拾音状态（可以理解为手机app上的对话框）。当CloudApp没有可执行的内容时，会执行Pickup，如果Pickup为空，则按照Pickup.enable=false执行。
 
 ```json
 {

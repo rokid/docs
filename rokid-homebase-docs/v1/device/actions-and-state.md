@@ -72,7 +72,7 @@ Example:
 - actions 接受值 [ "random", "num" ]
   - "random": 颜色随机值
   - "num": 指定颜色RGB值，例如蓝色RGB值为 0x00FF00
-  - 当设备同时支持调颜色和调亮度是，则亮度值将会整合在RGB中，因此RGB设备的调亮度能力不需要添加 brightness 的能力，只需添加 color 即可。如，RGB灯。
+  - 当设备同时支持调颜色和调亮度，则亮度值将会整合在RGB中，因此RGB设备的调亮度能力不需要添加 brightness 的能力，只需添加 color 即可。如，RGB灯。
 
 Example:
 ```JSON
@@ -420,9 +420,9 @@ Example:
     { "property": "media_control", "name":"playmode", "value": "repeatOne"}
     ```
 
-  - previous 下一首
+  - previous 上一首
 
-  - next 上一首
+  - next 下一首
 
   - get_meta 获取当前播放媒体信息
 

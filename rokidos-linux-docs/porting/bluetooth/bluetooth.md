@@ -6,7 +6,7 @@ vendor/broadcom/brcm-bsa：以上代码包实际所包含的代码所在
 
 rokid\_br\_external/package/btflinger：蓝牙的service的代码包，主要是mk file和config.in文件，相关启动脚本
 
-robot/services/btflinger：以上代码包实际所包含的代码所在
+robot/services/btflinger：以下代码包实际所包含的代码所在
 
 ```shell
 ├── api                              接口文件
@@ -47,7 +47,7 @@ robot/services/btflinger
 
 ![](/files/bluetooth/fw.png)
 
-将红框处的路径修改成新的模组的固件的路径即可
+将红框处的路径修改成新的模组固件的路径即可
 
 注意：目前只支持在博通的模组间切换，如果是非博通的模组目前暂时不支持。
 

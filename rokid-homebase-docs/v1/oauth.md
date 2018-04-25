@@ -5,7 +5,7 @@
 ## 交互过程
 
 - 用户添加驱动， 发起授权过程
-- Homebase 向驱动调用 OAuth Command 接口， 参数为登陆回调页面地址
+- Homebase 向驱动调用 OAuth Command 接口， 参数为登录回调页面地址
 - HTTP 驱动 OAuth Command 返回 Oauth 登陆地址 `OAuth URL`
 - Homebase 打开浏览器， 跳转到转到 `OAuth URL`
 - 用户输入用户名和密码， 点击授权

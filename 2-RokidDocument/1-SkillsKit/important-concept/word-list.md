@@ -11,15 +11,15 @@
 | 自定义词表类型  | 简介           | 支持语言 |
 | ------------- | :-------------:| :-----:|
 | ROKID.NUMBER | 阿拉伯数字及汉语数字 |   中文 |
-| ROKID.DATETIME_ZH | 描述某年某月某一天      |   中文 |
-| ROKID.RECENT_ZH | 描述「近期」的时间词汇    |   中文 |
-| ROKID.YEAR_ZH | 描述以「年」为单位的时间词汇 |  中文 |
+| ROKID.DATETIME_ZH | 某年某月某一天      |   中文 |
+| ROKID.RECENT_ZH | 「近期」的时间词汇    |   中文 |
+| ROKID.YEAR_ZH | 以「年」为单位的时间词汇 |  中文 |
 | ROKID.MONTH_ZH | 以「月」为单位的时间词汇 |  中文 |
 | ROKID.DAY_ZH | 以「日」为单位的时间词汇|   中文 |
-| ROKID.HOUR_ZH | 描述以「小时」为单位的时间词汇 |  中文 |
+| ROKID.HOUR_ZH | 以「小时」为单位的时间词汇 |  中文 |
 | ROKID.MINUTE_ZH | 以「分钟」为单位的时间词汇  |   中文 |
 | ROKID.SECOND_ZH | 以「秒」为单位的时间词汇    |   中文 |
-| ROKID.TIME_ZH | 描述具体的时间或时间段    |   中文 |
+| ROKID.TIME_ZH | 具体的时间或时间段    |   中文 |
 
 
 
@@ -35,7 +35,7 @@
 | ROKID.CN_ARE_ZH | 中国县／区 |   中文 |
 | ROKID.ANIMALYEAR_ZH | 生肖年  |   中文 |
 | ROKID.ERAYEAR_ZH | 干支年  |   中文 |
-| ROKID.ZONE_ZH | 描述早上、晚上等某个时间段的词汇   |   中文 |
+| ROKID.ZONE_ZH | 早上、晚上等某个时间段的词汇   |   中文 |
 | ROKID.MOVIE | 电影   |   中文 |
 
 
