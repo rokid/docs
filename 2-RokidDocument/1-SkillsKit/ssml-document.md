@@ -157,7 +157,7 @@ sox -r 24000 -e signed -b 16 -c 1 old.wav new.wav
 
 | 参数 | 可选值 |
 | :--- | :--- |
-| interpret-as | <ul><li>cardinal, number: 按数值发音。比如“316”，将读作“三百一十六”。</li><li>digits: 按数字串发音。比如“666”，将读作“六六六”。</li><li>address: 将地址缩写读作改地址的全称（暂时仅支持英文）。</li></ul>|
+| interpret-as | <ul><li>cardinal, number: 按数值发音。比如“316”，将读作“三百一十六”。</li><li>digits: 按数字串发音。比如“666”，将读作“六六六”。</li><li>address: 将地址缩写读作该地址的全称（暂时仅支持英文）。</li></ul>|
 
 ```html
 <speak>
