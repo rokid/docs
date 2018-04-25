@@ -29,12 +29,12 @@
 * **CloudApp** - 在*[Rokid开发者社区][developer_website_link]*上接入的云端应用，可以理解为遵循本文所描述的协议开发的某种云端服务或小应用。
 * **CloudDispatcher** - 用于向CloudApp传递请求和分发CloudApp返回结果的模块。
 * **CloudAppClient** - 用于处理CloudApp返回结果的设备端的执行容器。
-* **RokidMobileSDK** - 与*[Rokid开发者社区][developer_website_link]*向关联的手机端SDK，用于对CloudApp的信息扩展展示或第三方授权。
+* **RokidMobileSDK** - 与*[Rokid开发者社区][developer_website_link]*相关联的手机端SDK，用于对CloudApp的信息扩展展示或第三方授权。
 * **TTS** - **T**ext **T**o **S**peech的缩写，这是机器人的语音表达方式。
 
 ### 2. Request
 
-*Request* 是*CloudDispatcher*产生的用于向*CloudApp*获取对应返回结果的请求。目前有两种类型的请求：一种是**IntentRequest**，一种是**EventRequest**。**IntentRequest** 是根据语音识别和语义理解（*NLP*）的结果创建的，其中会带有（*NLP*）的信息。**EventRequest**是在当有某种事件发生是产生的，并通过*CloudDispatcher*转发给当前*CloudApp*，比如当某个TTS播放结束的时候会产生一个TTS结束的事件，当前*CloudApp*可以选择处理或者不处理。
+*Request* 是*CloudDispatcher*产生的用于向*CloudApp*获取对应返回结果的请求。目前有两种类型的请求：一种是**IntentRequest**，一种是**EventRequest**。**IntentRequest** 是根据语音识别和语义理解（*NLP*）的结果创建的，其中会带有（*NLP*）的信息。**EventRequest**是在当有某种事件发生时产生的，并通过*CloudDispatcher*转发给当前*CloudApp*，比如当某个TTS播放结束的时候会产生一个TTS结束的事件，当前*CloudApp*可以选择处理或者不处理。
 
 #### 2.1 Request 协议预览
 
@@ -132,7 +132,8 @@ Http Hearder中相关内容的示例如下：
 ```
 
 * **request** - 协议中真正代表此次*Request*的实体，会明确给出请求的类型**RequestType**和请求的内容**RequestContent**。
-* **request** - 注意获取用户语句时候，不要获取**sentence**,建议使用**slot**
+* **request** - 注意获取用户语句时候，不要获取**sentence**，建议使用**slot**
+
 #### 2.2 Session定义
 
 *Session* 向所请求的*CloudApp*表明了会话的信息，每一次对*CloudApp*的请求都会产生会话信息，会话的信息和状态由开放平台的系统更新。*Session*也提供了*attributes*字段留给*CloudApp*来保存一些上下文信息。具体阐述如下：
@@ -155,11 +156,11 @@ Http Hearder中相关内容的示例如下：
 
 * **sessionId** - 每次会话的唯一ID，由系统填充
 * **newSession** - 向CloudApp表明此次会话是新的会话还是已经存在的会话，true为新会话，false为老会话
-* **attributes** - 为*CloudApp*提供*attributes*字段留保存上下文信息的字段，开发者目前只能通过INTENT类型的Request拿到attributes信息，EVENT类型的Reuqest还不能拿到，后续我们会做检修改，attributes是一个key-object map 类型数据开发者可以自定义传key和object，上述json只是一个样例，并不代表完全限制智能传递type和value。
+* **attributes** - 为*CloudApp*提供*attributes*字段留保存上下文信息的字段，开发者目前只能通过INTENT类型的Request拿到attributes信息，EVENT类型的Reuqest还不能拿到，后续我们会做修改，attributes是一个key-object map 类型数据开发者可以自定义传key和object，上述json只是一个样例，并不代表完全限制只能传递type和value。
 
 #### 2.3 Context定义
 
-*Context* 向所请求的CloudApp提供了当前的设备信息，用户信息和应用状态，用以帮助CloudApp更好的去管理逻辑，状态以及对应的返回结果。
+*Context* 向所请求的CloudApp提供了当前的设备信息，用户信息和应用状态，用以帮助CloudApp更好的去管理逻辑状态以及对应的返回结果。
 
 ```json
 "context": {
@@ -315,7 +316,7 @@ Http Hearder中相关内容的示例如下：
 }
 ```
 
-当当前设备存在地理位置信息时会通过*location*提供给CloudApp。基于地理位置的CloudApp可以根据此信息来处理逻辑。*location* 信息包括 ***纬度(latitude)*** 和 ***经度(longtitude)**等。
+当当前设备存在地理位置信息时会通过*location*提供给CloudApp。基于地理位置的CloudApp可以根据此信息来处理逻辑。*location* 信息包括 **纬度(latitude)** 和 **经度(longtitude)**等。
 
 ##### 2.3.3 UserInfo
 
@@ -331,7 +332,7 @@ UserInfo 展示了与当前的用户信息，通常是设备对应手机应用�
 |:-----------------:|:---------------:|:---------------|
 | userId  | string         | *用户ID*  |
 
-*注意：该用户id和MasterId的区别在于，用户Id为当前使用者的Id,MasterId为机器主人的ID，机器主人不一定是当前使用的用户，目前UserId和MasterId是一致的，但后期上了声纹以后该两者会不一致。*
+*注意：该用户id和MasterId的区别在于，用户Id为当前使用者的Id，MasterId为机器主人的ID，机器主人不一定是当前使用的用户，目前UserId和MasterId是一致的，但后期上了声纹以后该两者会不一致。*
 
 #### 2.4 Request定义
 
@@ -438,7 +439,7 @@ IntentRequest 是基于 *NLP* 的结果产生的请求，其中包括了 *NLP* �
       }
     }
 ```
-**开发者可以在该Request请求时响应自定义的响应内容，比如游戏类的技能，可以换一个题目等操作，然后开发者也可以直接退出该技能，unknowtype有两种一个事pickup一个是confirm**	
+**开发者可以在该Request请求时响应自定义的响应内容，比如游戏类的技能，可以换一个题目等操作，然后开发者也可以直接退出该技能，unknowtype有两种一个是pickup，一个是confirm**	
 	
 
 ###### 2.4.1.1 slots
@@ -451,7 +452,7 @@ slots是对象类型，含有如下两个字段：
 
 *注意：Slots对象其实对应的是一个HashMap<String,Slot>,其实Slot目前有type和value两个字段。其中HashMap的key是当前NLP那边配置的slot名称，Slot里面的Type值分为两种情况：
 1、有引用系统词表，则该type为系统词表的名称；
-2、如果没有应用系统词表，则和key一致为用户自定义名称，Slot里面的value为用户真正需要的业务值，该值是一个String类型，但是需要注意的是该String有可能是一个Json的String，开发者需要根据Type去进行数据的解析。如下number这个slot的定义响应*
+2、如果没有引用系统词表，则和key一致为用户自定义名称，Slot里面的value为用户真正需要的业务值，该值是一个String类型，但是需要注意的是该String有可能是一个Json的String，开发者需要根据Type去进行数据的解析。如下number这个slot的定义响应*
 
 ```json
 "slots": {
@@ -491,8 +492,6 @@ slots是对象类型，含有如下两个字段：
 	* **Media.TIMEOUT** - 在媒体播放过程中因为网络慢等原因导致的卡顿持续5s后发生。
 	* **Media.FAILED** - 当播放器加载音频资源失败时发生。
 	* **Session.ENDED** - 当Domain被切换到的时候，可以用于关闭资源，不能进行任何响应。
-	* ~~**Skill.EXIT**~~ - 该事件是当Skill没有资源执行或者按了home按键后抛出的事件，该事件当前定义有歧义，这边正在整改，建议开发者先忽略该事件。
-	* *更多的事件会在未来的版本更迭中给出*
 	
 	**特别注意：***为防止开发者在我们后续增加Event事件的时候出现服务异常，建议开发者对于不在自己Skill范围之内的Event做忽略处理，忽略响应的内容如下：*
 
@@ -715,7 +714,7 @@ Action 中最关键的部分是`directives`，其中包含：
 
 
 * **version** - 表明 action 协议版本，当前版本为: 2.0.0.
-* **type** - 当前action的类型：`NORMAL` 或 `EXIT`。 当 `type` 是 `NORMAL` 时，`voice` 和 `media` 会同时执行；当 `type` 是 `EXIT` 时，action会立即退出，**清除系统端的应用session**，并且在这种情况下，`voice` 和 `media` 将会被会被忽略。
+* **type** - 当前action的类型：`NORMAL` 或 `EXIT`。 当 `type` 是 `NORMAL` 时，`voice` 和 `media` 会同时执行；当 `type` 是 `EXIT` 时，action会立即退出，**清除系统端的应用session**，并且在这种情况下，`voice` 和 `media` 将会被忽略。
 * **form** - 当前action的展现形式：scene、cut、service。scene的action会在被打断后压栈，cut的action会在被打断后直接结束，service会在后台执行，但没有任何界面。该字段在技能创建时被确定，无法由cloud app更改。
 * **shouldEndSession** - 表明当此次返回的action执行完后 *CloudAppClient* 是否要退出,并且是否需要**清除系统端的应用session**，同时，当 `shouldEndSession` 为 `true` 时，*CloudAppClient* 将会忽略 *EventRequests*，即在action执行过程中不会产生 *EventRequest*。
 * **directives** - 表明此次返回中需要让设备执行的指令。当前包含`voice`, `media`, `confirm`, `pickup` 四种类型。
@@ -825,7 +824,7 @@ Media 用来播放CloudApp返回的流媒体内容。有 *audio* 和 *video* 两
 * **offsetInMilliseconds** - 毫秒数值，告诉MediaPlayer开始播放的位置。有效范围从0到歌曲整体播放时长。
 
 ##### 3.3.3 Confirm
-表明此次返回中，是否存在需要confirm的内容。[了解用法指南](/2-RokidDocument/1-SkillsKit/define-voice-interaction.html#confirm用法指南)。
+表明此次返回中，是否存在需要confirm的内容。[了解用法指南](/2-RokidDocument/1-SkillsKit/important-concept/confirm)。
 
 ```json
 {
