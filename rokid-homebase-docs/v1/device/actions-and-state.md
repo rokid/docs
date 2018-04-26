@@ -70,9 +70,9 @@ Example:
 ### <span id = "color">颜色 color</span>
 
 - actions 接受值 [ "random", "num" ]
-  - "random": 颜色随机值
+  - "random": 颜色随机RGB值
   - "num": 指定颜色RGB值，例如蓝色RGB值为 0x00FF00
-  - 当设备同时支持调颜色和调亮度，则亮度值将会整合在RGB中，因此RGB设备的调亮度能力不需要添加 brightness 的能力，只需添加 color 即可。如，RGB灯。
+  - 当设备同时支持调颜色和调亮度时，则亮度值将会整合在RGB中，因此RGB设备的调亮度能力不需要添加 brightness 的能力，只需添加 color 即可。如，RGB灯。
 
 Example:
 ```JSON
