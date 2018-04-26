@@ -1,6 +1,6 @@
 ## Session
 
-Session 向所表明了会话的信息，每一次对云端技能发起请求都会产生会话信息，会话的信息和状态由开放平台的系统更新。Session也提供了attributes字段留给云端技能来保存一些上下文信息。具体阐述如下：
+Session 为会话的信息，每一次对云端技能发起请求都会产生会话信息，会话的信息和状态由开放平台的系统更新。Session也提供了attributes字段留给云端技能来保存一些上下文信息。具体阐述如下：
 ```
 "session": {
     "sessionId": "D75D1C9BECE045E9AC4A87DA86303DD6",
@@ -18,7 +18,7 @@ Session 向所表明了会话的信息，每一次对云端技能发起请求都
 
 - sessionId - 每次会话的唯一ID，由系统填充
 - newSession - 向CloudApp表明此次会话是新的会话还是已经存在的会话，true为新会话，false为老会话
-- attributes - 为CloudApp提供attributes字段留保存上下文信息的字段，开发者目前只能通过INTENT类型的Request拿到attributes信息，EVENT类型的Reuqest还不能拿到，后续我们会做检修改，attributes是一个key-object map 类型数据开发者可以自定义传key和object，上述json只是一个样例，并不代表完全限制智能传递type和value。
+- attributes - 为CloudApp提供attributes字段留保存上下文信息的字段，开发者目前只能通过INTENT类型的Request拿到attributes信息，EVENT类型的Reuqest还不能拿到，后续我们会做修改，attributes是一个key-object map 类型数据，开发者可以自定义传key和object，上述json只是一个样例，并不代表完全限制只能传递type和value。
 
 
 Session目前只能作用在同一Domain下，**切换Domain会清空Session**。此时`newsession` = `true`。`attributes`也会被清空。

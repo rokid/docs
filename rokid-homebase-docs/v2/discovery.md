@@ -18,7 +18,7 @@ endpoints | `Endpoint[]` | 一组终端描述符，具体终端描述请参考 [
     "namespace": "Rokid.Discovery",
     "name": "Discover",
     "payloadVersion": "v1",
-    "authentication": {
+    "authorization": {
       "type": "BearerToken",
       "token": "a-token-from-skill"
     }

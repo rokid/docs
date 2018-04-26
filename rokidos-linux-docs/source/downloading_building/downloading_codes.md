@@ -44,7 +44,7 @@ $ PATH=~/bin:$PATH
 	
 ## 初始化 repo 客户端
 
-需要根据您的开发板的芯片厂商来选择具体的代码下载库，各类支持 RokidOS 的开发板，请到[开发板用户手册](](../../reference/dev_board/board_list.html)章节查询参考。
+需要根据您的开发板的芯片厂商来选择具体的代码下载库，各类支持 RokidOS 的开发板，请到[开发板用户手册](../../reference/dev_board/board_list.html)章节查询参考。
 
 **以下示例同步的代码仅保证支持Amlogic-A113开发板。**
 

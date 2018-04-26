@@ -1,10 +1,10 @@
 ## Rokid-Force-JS 使用指南V2.0
 
-> 欢迎使用RFS-JS，很高兴大家可以通过编辑JS脚本来搭建技能服务。
+> 欢迎使用RFS-JS，很高兴大家通过编辑JS脚本来搭建技能服务。
 
-## 使用JS脚本更快速的开发技能
+## 使用JS脚本更快速地开发技能
 
-> 使用JS脚本，我们的目标是帮助您更快速地构建技能，同时可以让您避免不必要的复杂性。使用JS脚本的方式有以下优势：
+> 使用JS脚本，我们的目标是帮助您更快速地构建技能。使用JS脚本的方式有以下优势：
 > - **无需服务器** ：开发者不需要服务器去提供服务。
 > - **无需https服务**：开发者不需要自己搭建复杂的https服务。
 
@@ -47,7 +47,7 @@ exports.handler = function(event, context, callback) {
 我们通过Rokid对象封装了一些工具供大家使用。
 
  - 首先，通过Rokid.handler(event, context, callback)来使用Rokid-sdk。
- - 接下来，我们需要处理我们技能意图（intent），通过rokid.registerHandlers()以简单来注册您所需的技能意图。
+ - 接下来，我们需要处理我们技能意图（intent），通过 rokid.registerHandlers 来注册您所需的技能意图。
  - 最后，通过rokid.execute()触发技能意图。
  
 以上三步是必须的。

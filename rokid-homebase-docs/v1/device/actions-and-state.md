@@ -420,9 +420,9 @@ Example:
     { "property": "media_control", "name":"playmode", "value": "repeatOne"}
     ```
 
-  - previous 下一首
+  - previous 上一首
 
-  - next 上一首
+  - next 下一首
 
   - get_meta 获取当前播放媒体信息
 

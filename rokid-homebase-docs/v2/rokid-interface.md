@@ -2,7 +2,7 @@
 
 终端能力 Interface 代表终端具备的变化状态值。
 
-当这个能力可以问询时（`isRetrievable`）, 除了可以通过若琪控制:
+当这个能力可以问询时（`isRetrievable`）, 除了可以通过向若琪控制:
 “帮我把<span title="终端" style="background-color: rgb(212, 233, 214);">灯</span>调为<span title="颜色" style="background-color: rgb(255, 240, 207);">红色</span>”,
 将 `Color` 设置为红色, 还可以通向若琪问询:
 “这个<span title="终端" style="background-color: rgb(212, 233, 214);">灯</span>现在是什么<span title="颜色" style="background-color: rgb(255, 240, 207);">颜色</span>”,

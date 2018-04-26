@@ -4,7 +4,6 @@
 
 ### Endpint Object
 
-
 字段名 | 类型 | 描述
 --- | --- | ---
 endpointId | `string` | Skill 提供的终端 Id
@@ -24,7 +23,7 @@ states | `InterfaceState[]` | 终端能力状态，具体信息请参考 [终端
     "namespace": "Rokid.Control",
     "name": "Color.Adjust",
     "payloadVersion": "v1",
-    "authentication": {
+    "authorization": {
       "type": "BearerToken",
       "token": "a-token-from-skill"
     }

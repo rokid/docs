@@ -54,7 +54,7 @@
 - 单条response中的所有音频长度加总不能超过90秒。
 
 #### 将音频文件转换为Rokid可用的格式
-您需要使用转换工具将需要插入的TTS中的音频转为WAV文件，16 bit，mono 24000HZ。推荐使用开源的命令行工具[FFmpeg](https://www.ffmpeg.org/)。下方的命令可以帮您将`<input-file>`装换为`audio`标签可用的WAV文件。
+您需要使用转换工具将需要插入的TTS中的音频转为WAV文件，16 bit，mono 24000HZ。推荐使用开源的命令行工具[FFmpeg](https://www.ffmpeg.org/)。下方的命令可以帮您将`<input-file>`转换为`audio`标签可用的WAV文件。
 
 **MP3转WAV：**
 
@@ -157,7 +157,7 @@ sox -r 24000 -e signed -b 16 -c 1 old.wav new.wav
 
 | 参数 | 可选值 |
 | :--- | :--- |
-| interpret-as | <ul><li>cardinal, number: 按数值发音。比如“316”，将读作“三百一十六”。</li><li>digits: 按数字串发音。比如“666”，将读作“六六六”。</li><li>address: 将地址缩写读作改地址的全称（暂时仅支持英文）。</li></ul>|
+| interpret-as | <ul><li>cardinal, number: 按数值发音。比如“316”，将读作“三百一十六”。</li><li>digits: 按数字串发音。比如“666”，将读作“六六六”。</li><li>address: 将地址缩写读作该地址的全称（暂时仅支持英文）。</li></ul>|
 
 ```html
 <speak>

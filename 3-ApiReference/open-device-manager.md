@@ -48,7 +48,7 @@ key={key}&device_type_id={device_type_id}&device_id={device_id}&service={servic
 | secret         | 密钥，从开发者平台获取                                            |
 
 ## 3. 接口
-#### 0.3.1.1. 地址
+#### 3.1.1. 地址
 ```
 https://apigwrest.open.rokid.com
 ```

@@ -23,8 +23,8 @@ grant.token | `string` | Token
     "namespace": "Rokid.Authorization",
     "name": "AcceptGrant",
     "payloadVersion": "v1",
-    "authentication": {
-      "type": "Bearer",
+    "authorization": {
+      "type": "BearerToken",
       "token": "a-token-from-skill"
     }
   },
