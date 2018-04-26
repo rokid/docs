@@ -46,9 +46,9 @@ messageId | `string` | 若琪或 Skill 如果认为之前的消息发送失败�
 namespace | `string` | 本消息的命名空间，如 Rokid.Discovery，Rokid.Control，Rokid.Query
 name | `string` | 本次消息的名称，如在 Rokid.Control 的命名空间下 Switch.On，Rokid.Discovery 命名空间下的 Discover，Rokid.Query 命名空间下的 ReportState
 payloadVersion | `enum` | 本消息的 Payload 定义版本，当前只支持 `v1`
-authentication | Authentication Object | 本消息的认证信息，只有请求消息才需要这个字段，回复消息不需要
+authorization | Authorization Object | 本消息的认证信息，只有请求消息才需要这个字段，回复消息不需要
 
-#### Authentication Object
+#### Authorization Object
 
 字段名 | 类型 | 描述
 --- | --- | ---
@@ -71,7 +71,7 @@ token | `string` | 从若琪获取的 Token 或者若琪从 Skill 方获取的 T
     "namespace": "Rokid.Control",
     "name": "Color.Set",
     "payloadVersion": "v1",
-    "authentication": {
+    "authorization": {
       "type": "BearerToken",
       "token": "a-token-from-skill"
     }

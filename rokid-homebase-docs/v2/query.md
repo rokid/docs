@@ -9,7 +9,7 @@
     "namespace": "Rokid.Query",
     "name": "ReportState",
     "payloadVersion": "v1",
-    "authentication": {
+    "authorization": {
       "type": "BearerToken",
       "token": "a-token-from-skill"
     }
