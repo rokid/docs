@@ -24,7 +24,7 @@ grant.token | `string` | Token
     "name": "AcceptGrant",
     "payloadVersion": "v1",
     "authorization": {
-      "type": "Bearer",
+      "type": "BearerToken",
       "token": "a-token-from-skill"
     }
   },
