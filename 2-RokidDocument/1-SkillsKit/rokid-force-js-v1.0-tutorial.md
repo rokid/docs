@@ -1,4 +1,4 @@
-## Rokid-Force-JS 使用指南V1.0
+## Rokid Force JS 使用指南V1.0
 
 > 欢迎使用Rokid-Force-JS，很高兴大家可以通过编辑JS脚本来搭建技能服务。
 > 您现在阅读的是老版本的文档，我们推荐您使用Rokid-Force-JS v2.0版本进行开发，（[点此查看文档v2.0文档](./rokid-force-js-tutorial.md)）

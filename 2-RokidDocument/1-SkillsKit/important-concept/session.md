@@ -79,7 +79,7 @@ Session目前只能作用在同一Domain下，**切换Domain会清空Session**�
 ```
 
 之后，用户继续向天气技能询问：“明天呢？”。
-此时Rokid开发者社区会把`attributes`中的city属性带到这次的Request中：
+此时 Rokid 开发平台会把`attributes`中的city属性带到这次的Request中：
 
 ```json
 {
