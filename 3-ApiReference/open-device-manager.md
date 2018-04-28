@@ -28,10 +28,10 @@ version={version};time={time};sign={sign};key={key};device_type_id={device_type_
 ```
 
 #### 2.1.2. Signature
-Authorization中的sign字段是签名串，是对下列组合的字符串（UTF-8编码）做MD5计算
+Authorization中的sign字段是签名串，是对下列组合的字符串（UTF-8编码）做MD5计算
 
 ```
-key={key}&device_type_id={device_type_id}&device_id={device_id}&service={service}&version={version}&time={time}&secret={secret}
+key={key}&device_type_id={device_type_id}&device_id={device_id}&service={service}&version={version}&time={time}&secret={secret}
 ```
 
 #### 2.1.3. 字段说明
