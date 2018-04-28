@@ -2,18 +2,11 @@
 
 终端能力 Interface 代表终端具备的变化状态值。
 
-当这个能力可以问询时（`isRetrievable`）, 除了可以通过向若琪控制:
-“帮我把<span title="终端" style="background-color: rgb(212, 233, 214);">灯</span>调为<span title="颜色" style="background-color: rgb(255, 240, 207);">红色</span>”,
-将 `Color` 设置为红色, 还可以通向若琪问询:
-“这个<span title="终端" style="background-color: rgb(212, 233, 214);">灯</span>现在是什么<span title="颜色" style="background-color: rgb(255, 240, 207);">颜色</span>”,
-播报“这个<span title="终端" style="background-color: rgb(212, 233, 214);">灯</span>现在是<span title="颜色" style="background-color: rgb(255, 240, 207);">红色</span>”。
-
+当这个能力可以问询时（`isRetrievable`）, 除了可以通过向若琪控制:“帮我把灯调为红色”,将 `Color` 设置为红色, 还可以通向若琪问询:“这个现在是什么颜色”,若琪播报“这个灯现在是红色”。
 当这个能力会主动推送状态时（`isProactivelyReported`）, 那么就可以将这个终端状态作为一个自动化操作的触发器,
-如一个自动化操作是 “当在早上<span title="终端" style="background-color: rgb(212, 233, 214);">家门</span><span title="开关状态" style="background-color: rgb(255, 240, 207);">关闭</span>时, <span title="开关状态" style="background-color: rgb(255, 240, 207);">关闭</span>家里所有<span title="终端" style="background-color: rgb(212, 233, 214);">灯</span>”,
-那么就需要有一个“<span title="终端" style="background-color: rgb(212, 233, 214);">家门</span>”的 `Switch` 为 `isProactivelyReported`, 当在早上它的值设为 <span title="开关状态" style="background-color: rgb(255, 240, 207);">Switch.Off</span> 时, 该自动化操作就会被触发。
-
-类似的，如果我们有一个<span title="终端" style="background-color: rgb(212, 233, 214);">温度传感器</span>，而且他的 `Temperature` 能力是 `isProactivelyReported`, 我们就可以设置一个自动化场景:
-“当室内高于<span title="温度" style="background-color: rgb(255, 240, 207);"> 25 摄氏度</span>时，开启<span title="终端" style="background-color: rgb(212, 233, 214);">电风扇</span>”。
+如一个自动化操作是 “当在早上家门关闭时, 关闭家里所有灯”,那么就需要有一个家门的开关（ `Switch` ）可以主动推送状态（ `isProactivelyReported`）, 当在早上它的值设为`Switch.Off`时, 该自动化操作就会被触发。
+类似的，如果我们有一个温度传感器，而且他的温度（ `Temperature` ）能够主动推送（ `isProactivelyReported`）我们就可以设置一个自动化场景:
+“当室内高于25摄氏度时，开启电风扇”。
 
 终端能力的状态值可以是 number 与 enum 或者特殊描述符类型；
 - Number 类型接口: 可以具有 Set 和 Adjust 控制命令；Set 为设为绝对期望值, Adjust 为 delta 如 +1, -1 等相对值
@@ -46,7 +39,7 @@ Switch.Off | 关闭终端
 
 命令 | 描述
 --- | ---
-MotionSwitch.On | 终端开始运动
+MotionSwitch.On | 终端开始运动
 MotionSwitch.Off | 终端停止运动
 
 ## Position 位置百分比状态

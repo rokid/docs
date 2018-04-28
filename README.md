@@ -3,7 +3,7 @@
 
 Rokid 开放平台语音解决方案建立在云端，将会随着用户不断的使用而变得更加聪明。同时也会因为开发者不断新增的各种技能（Skill）而变得更加好用全面。
 
-Rokid 开放平台语音服务包含**Rokid 技能开放平台**和**Rokid 智能设备语音接入平台**。
+Rokid 开放平台语音服务包含 **Rokid 技能开放平台**和 **Rokid 智能设备语音接入平台**。
 
 ## Rokid 技能开放平台
 Rokid 技能开发平台帮助开发者为所有搭载 Rokid 开放服务的设备开发有趣的技能（Skill），实现用户各式各样的语音交互需求。
@@ -23,7 +23,7 @@ Rokid方案能够帮助硬件厂商获得相比其他方案更好的拾音、语
 
 ![alien-pebble](images/alien-pebble.jpg)
 
-> 左侧为 Rokid Pebble，右侧为Rokid Alien，分别在CES2017，CES2016获奖。
+> 左侧为 Rokid Pebble，右侧为 Rokid Alien，分别在 CES2017，CES2016获奖。
 
 ### 不断进步的开放生态
 

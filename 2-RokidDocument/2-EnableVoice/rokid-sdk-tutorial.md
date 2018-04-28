@@ -1,4 +1,4 @@
-## Rokid Open Voice SDK快速集成指南
+## Rokid Android SDK 接入指南
 
 ### 简介
 

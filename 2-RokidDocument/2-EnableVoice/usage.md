@@ -3,7 +3,7 @@
 直接通过API调用Rokid语音服务时，按照[Rokid开发者社区接口文档](/3-ApiReference/openvoice-api.md)中的要求，填入相应的参数即可。
 其中提到的`key` `secret` `account_id` `device_type_id`均通过上一步中的创建认证文件获得。
 
-但需要注意，`device_id`**需要由开发者自行指定**，由6~15位的字母和数字组成，不能含有空格和特殊符号。此ID每个设备唯一。
+但需要注意，`device_id`需要由开发者自行指定，由6~15位的字母和数字组成，不能含有空格和特殊符号。此ID每个设备唯一，推荐使用 device_id。
 
 ### 1.2 使用C++ SDK时的配置方法
 通过调用SDK中的config方法来配置认证信息：

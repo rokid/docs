@@ -70,7 +70,7 @@ https://apigwrest.open.rokid.com
     "message": "success"
 }
 ```
-#### 0.3.1.3. 解绑接口 （POST）
+#### 3.1.3. 解绑接口 （POST）
 ```
 /v1/device/deviceManager/unBindMaster
 ```

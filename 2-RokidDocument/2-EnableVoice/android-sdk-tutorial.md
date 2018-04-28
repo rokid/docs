@@ -1,6 +1,6 @@
 #### ROKID 前端语音快速集成指南
  
-完整的[下载地址](https://github.com/Rokid/rokid-openvoice-process-android-ndk.git) ，其包含了：前端激活，降噪，VAD，寻向，音墙，仲裁；NLP语音识别，语义理解；ASR语音识别；TTS语音合成等等。支持 Android 4.4 及以上版本。
+完整的[下载地址](https://github.com/Rokid/openvoice-android-ndk/tree/deprecated) ，其包含了：前端激活，降噪，VAD，寻向，音墙，仲裁；NLP语音识别，语义理解；ASR语音识别；TTS语音合成等等。支持 Android 4.4 及以上版本。
 ```
 git clone https://github.com/Rokid/rokid-openvoice-process-android-ndk.git -b deprecated
 ```

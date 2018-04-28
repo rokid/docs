@@ -743,7 +743,7 @@ Action 中最关键的部分是`directives`，其中包含：
 
 * **action** - 表示对当前voice的操作，可以播放（PLAY)、暂停（PAUSE）、继续播放（RESUME）和停止（STOP）（具体Action行为参照Media的Action行为，但是目前暂未实现，**PAUSE**以及**RESUME**操作）;
 * **disableEvent**-表示当前这个Voice执行过程中是否需要关闭Event事件，可以不传，默认**false**表示接收Voice的EventRequest；
-* **item** - 定义了voice的具体内容，将会在 *3.2.1.1* 中详细描述。
+* **item** - 定义了voice的具体内容，将会在 *3.3.1.1* 中详细描述。
 
 ###### 3.3.1.1 Item
 
@@ -875,7 +875,6 @@ Pickup 用来控制拾音状态（可以理解为手机app上的对话框）。�
 * **durationInMilliseconds** - 当**enable=true**时，表示在用户不说话的情况下，拾音打开持续时间，单位**毫秒**。最长持续时间为6000ms。
 
 
-###### Copyright © 2017 Rokid Corporation Ltd. All rights reserved.
 
 
 

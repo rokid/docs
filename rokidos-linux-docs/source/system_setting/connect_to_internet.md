@@ -36,7 +36,7 @@
 
 
 ### 手动配网
-通过执行以下五个命令进行配网，然后 ifconfig 查看是否获得 ip 地址。
+通过执行以下五个步骤进行配网，然后 ifconfig 查看是否获得 ip 地址。
 1. adb shell 登录 RokidOS
 2. vi /data/system/wpa_supplicant.conf
 ```
