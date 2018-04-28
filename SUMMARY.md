@@ -24,7 +24,7 @@
     * 开发指南
         * [Rokid 语音交互设计指南](2-RokidDocument/1-SkillsKit/rokid-voice-interaction-guidelines.md)
         * [Rokid Force System 使用指南](2-RokidDocument/1-SkillsKit/rokid-force-system-tutorial.md)
-        * [Rokid Force - JS v2.0 使用指南](2-RokidDocument/1-SkillsKit/rokid-force-js-tutorial.md)
+        * [Rokid Force JS 使用指南](2-RokidDocument/1-SkillsKit/rokid-force-js-tutorial.md)
         * [SSML 使用指南](2-RokidDocument/1-SkillsKit/ssml-document.md)
         * [Rokid Oauth 使用指南](2-RokidDocument/1-SkillsKit/rokid-oauth.md)
         * [获取 SSL 证书指南](2-RokidDocument/1-SkillsKit/get-SSL-certificate-tutorial.md)

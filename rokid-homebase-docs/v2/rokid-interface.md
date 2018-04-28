@@ -39,7 +39,7 @@ Switch.Off | 关闭终端
 
 命令 | 描述
 --- | ---
-MotionSwitch.On | 终端开始运动
+MotionSwitch.On | 终端开始运动
 MotionSwitch.Off | 终端停止运动
 
 ## Position 位置百分比状态

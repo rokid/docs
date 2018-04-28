@@ -18,7 +18,7 @@
 4. 点击下一步，就可以获得你的设备文件的信息 key secret account_iddevice_id 。 
 ![](images/语音接入06.jpg)
 
-5. 点击下一步进入服务接入页面，用户可以在此处选择需开启的技能，添加设备热词，进行拦截器设置。用户可以在此处选择公有技能进行添加。启用/禁用：为当前设备启用或禁用被授权的私有技能。取消授权：取消指定私有技能对您设备的授权。
+5. 点击下一步进入服务接入页面，用户可以在此处选择需开启的技能，添加[设备热词](https://developer.rokid.com/docs/2-RokidDocument/2-EnableVoice/important-concept.html)，进行[拦截器](https://developer.rokid.com/docs/3-ApiReference/rokid-interceptor.html)设置。用户可以在此处选择公有技能进行添加。启用/禁用：为当前设备启用或禁用被授权的私有技能。取消授权：取消指定私有技能对您设备的授权。
 ![](images/语言接入07.jpg)
 ![](images/语音接入08.jpg)
 
