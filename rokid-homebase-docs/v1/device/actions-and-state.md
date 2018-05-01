@@ -44,6 +44,7 @@ state:
 - 色温 [color_temperature](#color_temperature)
 - 媒体播放控制 [media_control](#media_control)
 - Ping [ping](#ping)
+- 通用档位 [level](#level)
 
 ### <span id = "switch">开关 switch</span>
 
@@ -465,3 +466,17 @@ Example:
 
 - state 值
   - get_meta 需要提供指定格式的内容，其他的返回状态码即可
+
+### 通用档位 <span id = "level">level</span> 开发中
+
+- actions 接受值 `["num"， "prev"， "next"]`
+  - `num` 档位数值
+  - `prev` 上一个档位
+  - `next` 下一个档位
+- state 值 {number} 非负整数，表示当前档位
+
+Example:
+
+```json
+{ "property": "level", "name":"num", "value": 4 }
+```
