@@ -44,6 +44,7 @@ state:
 - 色温 [color_temperature](#color_temperature)
 - 媒体播放控制 [media_control](#media_control)
 - Ping [ping](#ping)
+- 通用档位 [level](#level)
 
 ### <span id = "switch">开关 switch</span>
 
@@ -117,7 +118,7 @@ Example:
 
 ### <span id = "mode">模式 mode</span>
 
-- actions 接受值 [ "auto", "manual", "cool", "heat", "dry", "fan", "silent", "energy", "sleep" ]
+- actions 接受值 [ "auto", "manual", "cool", "heat", "dry", "fan", "silent", "energy", "sleep", "modeName"]
   - "auto": 自动模式
   - "manual": 手动模式
   - "cool": 制冷模式
@@ -127,10 +128,20 @@ Example:
   - "silent": 静音模式
   - "energy": 省电模式
   - "sleep": 睡眠模式
+  - "modeName": 自定义模式，支持其它自定义的名称 （还在开发中）
 
 Example:
+
+自动模式
 ```JSON
-{ "mode": ["auto", "cool", "heat", "fan"] }
+{ "property": "mode", "name":"auto" }
+```
+
+自定义模式名
+
+电饭煲打开香甜饭模式
+```JSON
+{ "property": "mode", "name":"modeName", value: "香甜饭" }
 ```
 
 - state 值
@@ -244,14 +255,19 @@ Example:
 ### <span id = "channel">频道 channel</span>
 
 - actions 接受值 [ "next", "prev", "random", "num" ]
-  - "next": 上一个频道
-  - "prev": 下一个频道
+  - "prev": 上一个频道
+  - "next": 下一个频道
   - "random": 随机频道
   - "num": 指定频道
+  - "channelName": 通过频道名调台 `开发中`
 
 Example:
 ```JSON
-{ "channel": ["num"] }
+{ "property": "channel", "name":"num", "value": 10}
+```
+
+```JSON
+{ "property": "channel", "name":"channelName", "value": "CCTV-1"}
 ```
 
 - state 值
@@ -450,3 +466,17 @@ Example:
 
 - state 值
   - get_meta 需要提供指定格式的内容，其他的返回状态码即可
+
+### 通用档位 <span id = "level">level</span> 开发中
+
+- actions 接受值 `["num"， "prev"， "next"]`
+  - `num` 档位数值
+  - `prev` 上一个档位
+  - `next` 下一个档位
+- state 值 {number} 非负整数，表示当前档位
+
+Example:
+
+```json
+{ "property": "level", "name":"num", "value": 4 }
+```
