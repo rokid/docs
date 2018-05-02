@@ -37,11 +37,17 @@
         * [技能审核规范](4-TermsAndAgreements/rokid-skill-examine-and-verify-standard.md)
     * [读取语音交互日志](2-RokidDocument/1-SkillsKit/test-skill-through-device-log.md)
 
-* Rokid 智能家居技能接入
-  * [什么是智能家居 Skill](rokid-homebase-docs/README.md)
-  * 如何接入
-    * [通过公网提供服务](rokid-homebase-docs/connect/cloud-to-cloud.md)
-    * [通过局域网 SSDP 自动发现](rokid-homebase-docs/connect/via-lan.md)
+* Rokid 智能家居设备接入平台
+  * 平台介绍
+    * [平台简介](rokid-homebase-docs/README.md)
+    * [智能家居设备接入流程](rokid-homebase-docs/intro/flow.md)
+    * [名词解释](rokid-homebase-docs/intro/glossary.md)
+  * 开发指南
+    * [云云对接](rokid-homebase-docs/connect/cloud-to-cloud.md)
+    * [局域网对接](rokid-homebase-docs/connect/via-lan.md)
+  * 调试
+    * [命令行接口校验工具](rokid-homebase-docs/tools/rhome.md)
+    * [远程调试驱动](rokid-homebase-docs/tools/developer-driver.md)
   * 智能家居协议(Beta)
     * [技能授权](rokid-homebase-docs/connect/rfc6749.md)
     * [消息格式参考](rokid-homebase-docs/v2/message-reference.md)
@@ -56,10 +62,6 @@
   * 智能家居 JSON RPC 协议
     * [局域网自动发现](rokid-homebase-docs/connect/ssdp-auto-discovery.md)
     * [JSON RPC 控制协议](rokid-homebase-docs/connect/json-rpc-over-tcp.md)
-  * 如何调试
-    * [命令行接口校验工具](rokid-homebase-docs/tools/rhome.md)
-    * [开发者驱动](rokid-homebase-docs/tools/developer-driver.md)
-  * [Webhook](rokid-homebase-docs/webhook/index.md)
   * 旧版协议
     * [HTTP 远程驱动](rokid-homebase-docs/connect/http-remote-driver.md)
     * 设备描述
@@ -73,6 +75,8 @@
     * 其他授权方式
         * [Homebase OAuth 授权](rokid-homebase-docs/v1/oauth.md)
         * [Homebase OAuth2.0 授权](rokid-homebase-docs/v1/OAuth2.0.md)
+  * 高级功能
+    * [Webhook](rokid-homebase-docs/webhook/index.md)
 
 * 智能设备语音接入平台
     * [智能设备语音接入平台简介](2-RokidDocument/2-EnableVoice/introduction.md)

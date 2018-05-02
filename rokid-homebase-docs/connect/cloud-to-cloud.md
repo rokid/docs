@@ -1,35 +1,37 @@
-##Homebase 云云对接##
+## 云云对接
 
-# 简介
+云云对接，即厂商自建设备云服务与 Homebase 云服务的对接，厂商智能家居设备连接自建云服务后，遵循 Homebase 协议进行接口适配，实现与 Homebase 云服务的接驳。
+
+### 简介
 
 ![云云对接示意图](https://s.rokidcdn.com/homebase/upload/BygMjQZwM.jpg)
 
-智能家居 Skill 对接基于 [智能家居协议](../v2/message-reference.md)
+智能家居设备云云对接遵循 [智能家居协议](../v2/message-reference.md)
 
 对接步骤：
 
-1. 完成用户授权，授权用户
-2. 开发智能家居 Skill, 提供设备列表接口和设备控制接口
-3. 完成测试
-4. 提交 Skill 信息给 Rokid
+1. 完成用户授权，授权用户；
+2. 开发智能家居 Skill, 提供设备列表接口和设备控制接口；
+3. 完成测试；
+4. 提交 Skill 信息给我们；
 
-# 完成用户授权，授权用户
+### 完成用户授权，授权用户
 
-使用标准 OAuth 2.0 协议接入用户授权
+使用标准 OAuth 2.0 协议接入用户授权。
 
 - [标准 OAuth2.0 接入](rfc6749.md)
 
-# 开发智能家居 Skill, 提供设备发现接口和设备控制接口
+### 开发智能家居 Skill, 提供设备发现接口和设备控制接口
 
 智能家居 Skill 开发参考 [智能家居协议](../v2/message-reference.md) 来开发, 调试可以使用 [rhome 命令行工具](../tools/rhome.md)
 
-# 测试
+### 测试
 
 填写如下测试用例表格：
 
 [测试用例下载](https://s.rokidcdn.com/homebase/upload/HkOw4tzcf.xlsx)
 
-# 上线
+### 上线
 
 提交智能家居 Skill 给 Rokid （可以通过邮箱： smarthomeconnect@rokid.com ），申请上线到 Rokid 智能品牌列表
 
