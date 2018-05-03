@@ -75,10 +75,10 @@
     * 安装配置说明
 * 测试报告
 
-可以将以上信息通过邮箱：`smarthomeconnect@rokid.com` 发给我们。
+可以将以上信息通过邮箱：[smarthomeconnect@rokid.com](mailto:smarthomeconnect@rokid.com) 发给我们。
 
 ### 获得帮助
 
 想要获得更多帮助，可以发邮件到如下商务邮箱：
 
-`smarthomeconnect@rokid.com`
+[smarthomeconnect@rokid.com](mailto:smarthomeconnect@rokid.com)
