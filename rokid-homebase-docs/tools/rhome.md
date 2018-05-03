@@ -1,20 +1,20 @@
-# rhome
+## 命令行接口检验工具 - rhome
 
-命令行接口检验工具
+使用 rhome 工具通过 json schema 来验证 discover|control|report-state 接口的返回值来验证接入 Rokid Homebase 协议。
 
-## 功能
+### 功能
 
 - 调用 list|get|execute 接口。
 
 - 使用 jsonshema 对返回的数据格式进行校验，并指出具体错误信息。
 
-## 安装
+### 安装
 
 从 [Release](https://github.com/Rokid/rokid-homebase-cli/releases) 页面下载最新的适合你的操作系统的已打包的程序。
 
 > 在项目 [GitHub](https://github.com/Rokid/rokid-homebase-cli) 页面了解更多
 
-## 使用
+### 使用
 
 ```
 $ rhome -h
@@ -68,7 +68,7 @@ $ rhome add
 }
 ```
 
-## 数据校验
+### 数据校验
 
 `rhome` 将对返回数据进行校验，并显示具体的错误信息。
 

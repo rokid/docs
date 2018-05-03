@@ -27,13 +27,13 @@ states | `InterfaceState[]` | 一组终端能力接口状态描述符
   - Percentage: 取值 0 到 100，Adjust 默认步长为 10
   - RGB: 取值 0 到 0xFFFFFF
 - Enum 类型接口：具体的 Enum 值即为命令（相当于 Set 但是枚举了所有值）
-- 描述符类型接口：是值的说法无法枚举、也不是 Number 类型的类型，如歌曲、电视频道，具有 Set 控制命令
+- 描述符类型接口：具体的取值无法枚举，如歌曲、电视频道，具有 Set 控制命令
 
 字段名 | 类型 | 描述
 --- | --- | ---
 interface | `enum` | 终端能力类型
 version | `enum` | 终端能力定义版本，当前只支持 `v1`
-supportedOperations | `string[]` | 相应接口类型中支持的能力操作
+supportedOperations | `string[]` | 相应能力接口类型中支持的能力操作，如 `On`，`Off` 之类
 isProactivelyReported | `bool`，默认 `false` | 是否支持由产商推送终端新状态，如果支持即可作为自动化的触发器
 isRetrievable | `bool`，默认 `false` | 是否支持若琪发起状态查询请求，如果支持即可向若琪问询终端状态
 

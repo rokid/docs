@@ -1,23 +1,25 @@
-# 局域网接入
+## 局域网对接
 
-局域网对接是接入 Rokid Homebase 最简单的方式：
+局域网对接，即通过简单服务发现协议（SSDP），实现同一局域网内智能家居网桥设备和 Rokid 设备的对接。
 
-## 基本组成
+### 基本组成
+
 ![](https://s.rokidcdn.com/homebase/upload/r1H-Qt-wM.jpg)
 
-1. 自动发现：自动发现主机
-2. 远程驱动：HTTP 或 TCP 协议接口， 提供设备列表， 和设备控制接口
+对接步骤：
 
-## 相关文档
+1. 自动发现：基于 SSDP 协议实现自动发现服务；
+2. 远程驱动：基于 HTTP 或 TCP 协议实现服务，提供设备列表和设备控制接口；
 
-自动发现基于SSDP：[SSDP Auto Discovery](./ssdp-auto-discovery.md)
+### 相关文档
 
-通过自动发现， 我们可以发现网桥和网桥提供的接口。 接口通过（HTTP 或 TCP) 两种协议给出。
+- 自动发现基于 SSDP 协议：[SSDP Auto Discovery](./ssdp-auto-discovery.md)
 
-HTTP 协议地址：[HTTP Remote Driver](./http-remote-driver.md)
+通过自动发现，我们可以发现网桥和网桥提供的接口。接口通过（HTTP 或 TCP) 两种协议给出。
 
-TCP 协议地址：[JSON RPC over TCP](./json-rpc-over-tcp.md)
+- HTTP 协议地址：[HTTP Remote Driver](./http-remote-driver.md)
+- TCP 协议地址：[JSON RPC over TCP](./json-rpc-over-tcp.md)
 
-## 可以参考我们的示例程序
+### 可以参考我们的示例程序
 
 https://github.com/Rokid/homebase-ssdp-tcp-driver-sample
