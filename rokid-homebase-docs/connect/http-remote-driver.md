@@ -101,7 +101,7 @@ HTTP 远程驱动使用 JSON 作为数据交换格式， 执行成功会返回�
 - device.deviceId  `{String}`, 厂商设备ID， 可以包含不可变数据， 与厂商ID一起，可以唯一确认一台设备
 - device.state  `{Object}`, 获取设备当前状态
 - device.userAuth `{Object}`, 用户授权信息
-- action `{Object}` 需要执行的操作， 参考文档 [actions and state][../device/actions-and-state.md]
+- action `{Object}` 需要执行的操作， 参考文档 [actions and state](../v1/device/actions-and-state.md)
 
 
 request
