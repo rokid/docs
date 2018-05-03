@@ -2,7 +2,7 @@
 
 - 设备能力 `actions`: 指的是智能设备具备的能力，比如智能灯泡具有开关、调颜色、调亮度的能力。
 - 设备状态 `state`: 指的是设备当前的状态，与定义的设备能力对应。
-- 设备能力接受值与状态值详见 [设备能力](#actions)
+- 设备能力接受值与状态值详见 [设备能力](#设备能力-actions)
 
 Example:
 
@@ -30,19 +30,19 @@ state:
 
 ## <span id = "actions">设备能力 actions</span>
 
-- 开关 [switch](#switch)
-- 颜色 [color](#color)
-- 亮度 [brightness](#brightness)
-- 模式 [mode](#mode)
-- 位置量 [position](#position)
-- 风速 [fanspeed](#fanspeed)
-- 转向模式 [swing_mode](#swing_mode)
-- 音量 [volume](#volume)
-- 频道 [channel](#channel)
-- 湿度 [humidity](#humidity)
-- 温度 [temperature](#temperature)
-- 色温 [color_temperature](#color_temperature)
-- 媒体播放控制 [media_control](#media_control)
+- 开关 [switch](#开关-switch)
+- 颜色 [color](#颜色-color)
+- 亮度 [brightness](#亮度-brightness)
+- 模式 [mode](#模式-mode)
+- 位置量 [position](#位置量-position)
+- 风速 [fanspeed](#风速-fanspeed)
+- 转向模式 [swing_mode](#转向模式-swing_mode)
+- 音量 [volume](#音量-volume)
+- 频道 [channel](#频道-channel)
+- 湿度 [humidity](#湿度-humidity)
+- 温度 [temperature](#温度-temperature)
+- 色温 [color_temperature](#色温-color_temperature)
+- 媒体播放控制 [media_control](#媒体播放控制-media_control)
 - Ping [ping](#ping)
 
 ### <span id = "switch">开关 switch</span>
