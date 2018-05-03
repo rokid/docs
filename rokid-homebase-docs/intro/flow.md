@@ -15,6 +15,11 @@
 
 有些厂商希望在自有 APP 中进行设备管理，并希望通过自有 APP 账号登录来自动绑定 Rokid 账号，这种情况您需要联系我们申请 appId，并在自有 APP 中集成 Rokid SDK。
 
+您可以参考以下文档集成 Rokid SDK：
+
+- [Rokid Mobile SDK IOS 开发指南](../mobile-sdk-android-docs)
+- [Rokid Mobile SDK Android 开发指南](../mobile-sdk-ios-docs)
+
 ### Step 2：开发
 
 不管是云云对接，还是局域网对接，您都需要遵循[智能家居协议](v2/message-reference.html)，提供设备列表查询接口、设备控制接口、设备状态查询接口（可选）。
@@ -23,7 +28,7 @@
 
 对于云云对接，我们遵循 OAuth 2.0 协议接入三方用户授权。因此，设备云服务端还需要实现一套标准的 OAuth 2.0 授权机制。
 
-您可以参考以下文档完成对接：
+您可以参考以下文档完成云云对接：
 
 - [OAuth2.0 协议](connect/rfc6749.html)
 - [云云对接](connect/cloud-to-cloud.md)
@@ -32,7 +37,7 @@
 
 对于局域网对接，我们遵循 SSDP 协议实现局域网内的设备自动发现。
 
-您可以参考以下文档完成对接：
+您可以参考以下文档完成局域网对接：
 
 - [局域网自动发现](connect/ssdp-auto-discovery.html)
 - [局域网对接](connect/via-lan.md)
@@ -45,13 +50,13 @@
 
 使用 rhome 工具通过 json schema 来验证 discover|control|report-state 接口的返回值来验证接入 Rokid Homebase 协议。
 
+您可以参考 [命令行接口检验工具](tools/rhome.html) 文档完成调试。
+
 **(b) 远程调试驱动**
 
 使用远程调试驱动可以很方便的调试开发中的远程驱动，目前支持 HTTP 远程驱动，TCP 远程驱动的调试。
 
-您可以参考 [远程调试驱动](tools/developer-driver.html) 文档来完成调试。
-
-您可以参考 [命令行接口检验工具](tools/rhome.html) 文档来完成调试。
+您可以参考 [远程调试驱动](tools/developer-driver.html) 文档完成调试。
 
 **注意：**
 
