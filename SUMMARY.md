@@ -37,7 +37,7 @@
         * [技能审核规范](4-TermsAndAgreements/rokid-skill-examine-and-verify-standard.md)
     * [读取语音交互日志](2-RokidDocument/1-SkillsKit/test-skill-through-device-log.md)
 
-* Rokid 智能家居技能接入
+* Rokid 智能家居设备接入平台
   * [什么是智能家居 Skill](rokid-homebase-docs/README.md)
   * 如何接入
     * [通过公网提供服务](rokid-homebase-docs/connect/cloud-to-cloud.md)
@@ -74,7 +74,7 @@
         * [Homebase OAuth 授权](rokid-homebase-docs/v1/oauth.md)
         * [Homebase OAuth2.0 授权](rokid-homebase-docs/v1/OAuth2.0.md)
 
-* 智能设备语音接入平台
+* Rokid 语音接入平台
     * [智能设备语音接入平台简介](2-RokidDocument/2-EnableVoice/introduction.md)
     * 新手入门
         * [获取认证文件](2-RokidDocument/2-EnableVoice/get-the-certification-file.md)
