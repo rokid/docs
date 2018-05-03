@@ -36,13 +36,13 @@ state:
 - 模式 [mode](#模式-mode)
 - 位置量 [position](#位置量-position)
 - 风速 [fanspeed](#风速-fanspeed)
-- 转向模式 [swing_mode](#转向模式-swing_mode)
+- 转向模式 [swing_mode](#转向模式-swingmode)
 - 音量 [volume](#音量-volume)
 - 频道 [channel](#频道-channel)
 - 湿度 [humidity](#湿度-humidity)
 - 温度 [temperature](#温度-temperature)
-- 色温 [color_temperature](#色温-color_temperature)
-- 媒体播放控制 [media_control](#媒体播放控制-media_control)
+- 色温 [color_temperature](#色温-colortemperature)
+- 媒体播放控制 [media_control](#媒体播放控制-mediacontrol)
 - Ping [ping](#ping)
 
 ### <span id = "switch">开关 switch</span>
