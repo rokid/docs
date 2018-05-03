@@ -17,8 +17,8 @@
 
 您可以参考以下文档集成 Rokid SDK：
 
-- [Rokid Mobile SDK IOS 开发指南](../mobile-sdk-android-docs)
-- [Rokid Mobile SDK Android 开发指南](../mobile-sdk-ios-docs)
+- [Rokid Mobile SDK IOS 开发指南](https://rokid.github.io/mobile-sdk-ios-docs)
+- [Rokid Mobile SDK Android 开发指南](https://rokid.github.io/mobile-sdk-android-docs)
 
 ### Step 2：开发
 
@@ -30,7 +30,7 @@
 
 您可以参考以下文档完成云云对接：
 
-- [OAuth2.0 协议](connect/rfc6749.html)
+- [OAuth 2.0 协议](connect/rfc6749.html)
 - [云云对接](connect/cloud-to-cloud.md)
 
 **(b) 局域网对接**
