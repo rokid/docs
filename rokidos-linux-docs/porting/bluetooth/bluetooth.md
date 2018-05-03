@@ -78,9 +78,9 @@ Exa\(测试BLE是否正常\)：
 
 * 2. ble rsp
 
-* 手机上用BLEdebuger软件搜，能搜到my bt ble test device这个设备，点进去，会看见3个服务。选择第3个服务，点进去，选择write， 填入字符
+* 3. 手机上用BLEdebuger软件搜，能搜到my bt ble test device这个设备，点进去，会看见3个服务。选择第3个服务，点进去，选择write， 填入字符
 
-* bluetooth\_test界面会打印出收到的字符。如果和填入的字符匹配，就证明BLE服务层没有问题。
+* 4. bluetooth\_test界面会打印出收到的字符。如果和填入的字符匹配，就证明BLE服务层没有问题。
 
 
 

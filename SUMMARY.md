@@ -78,7 +78,7 @@
   * 高级功能
     * [Webhook](rokid-homebase-docs/webhook/index.md)
 
-* 智能设备语音接入平台
+* Rokid 语音接入平台
     * [智能设备语音接入平台简介](2-RokidDocument/2-EnableVoice/introduction.md)
     * 新手入门
         * [获取认证文件](2-RokidDocument/2-EnableVoice/get-the-certification-file.md)
