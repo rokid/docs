@@ -289,3 +289,7 @@ returns result <Object>
 
 [device]: ../v1/device/device.md
 [rhome]: ../tools/rhome.md
+
+### 可以参考我们的示例程序
+
+[Rokid/homebase-nodejs-http-remote-driver-sample](https://github.com/Rokid/homebase-nodejs-http-remote-driver-sample)
