@@ -292,4 +292,4 @@ returns result <Object>
 
 ### 可以参考我们的示例程序
 
-https://github.com/Rokid/homebase-nodejs-http-remote-driver-sample
+[Rokid/homebase-nodejs-http-remote-driver-sample](https://github.com/Rokid/homebase-nodejs-http-remote-driver-sample)
