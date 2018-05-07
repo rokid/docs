@@ -42,7 +42,7 @@ key={key}&device_type_id={device_type_id}&device_id={device_id}&service={service
 
 其中{xxx}由xxx的值替代
 
-key及secret由开发方通过管理平台获取，并保管。
+key及secret可通过[开放平台语音接入](https://developer.rokid.com/docs/2-RokidDocument/2-EnableVoice/get-the-certification-file.html)处获取。
 
 此处version可有1.0或2.0，分别对应protobuf中v1或v2目录。
 
