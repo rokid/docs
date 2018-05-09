@@ -88,10 +88,11 @@
         * [语音接口文档](3-ApiReference/openvoice-api.md)
         * [拦截器接口文档](3-ApiReference/rokid-interceptor.md)
         * [设备接口文档](3-ApiReference/open-device-manager.md)
-    * SDK 接入指南
+    * 语音 SDK 接入指南
         * [Rokid 客户端 SDK 接入指南](3-ApiReference/rokid-client-sdk-doc.md)
         * [Rokid Android SDK 接入指南](2-RokidDocument/2-EnableVoice/android-sdk-tutorial.md)
         * [Rokid Speech SDK 接入指南](https://github.com/Rokid/rokid-openvoice-sdk)
+    * Mobile SDK 接入指南
         * [Rokid Mobile SDK Android 接入指南](https://github.com/Rokid/RokidMobileSDKAndroidDemo)
         * [Rokid Mobile SDK iOS 接入指南](https://github.com/Rokid/RokidMobileSDKiOSDemo)
     * [前端降噪API文档](3-ApiReference/siren-api.md)

@@ -4,7 +4,7 @@
 
 ### Android 系统
 
-如果您的开发板是 Android 系统，请参考 Android 开发文档来了解 Android 系统生成的系统镜像的位置。
+如果您的开发板是 Android 系统，请参考[Android 刷机文档](https://developer-forum.rokid.com/t/topic/983)来了解 Android 系统生成的系统镜像的位置。
 
 ### Linux 系统
 

@@ -21,7 +21,7 @@
     
 
 ## 如何在您技能的Response中使用SSML
-直接在返回的TTS中加入SSML格式，完整Voice Response协议请查看[Rokid 技能协议文档Voice部分](3-ApiReference/cloud-app-development-protocol_cn.md#321-voice)。
+直接在返回的TTS中加入SSML格式，完整Voice Response协议请查看[Rokid 技能协议文档Voice部分](3-ApiReference/cloud-app-development-protocol_cn.md)。
 
 ```json
 "item": {
@@ -36,7 +36,7 @@
 
 | 参数 | 可选值 |
 | :--- | :--- |
-| src | 背景音仅支持通过URL提供的`.wav`文件，并且需要满足以下要求。<ul><li>WAV文件必须被放在一个可靠的HTTPS终端中，且HTTPS域名需要有合法的SSL证书。</li><li>WAV文件不能够含有个性化定制的内容以及敏感内容。</li><li>音频文件的长度需限制在90秒内。</li><li>比特率为16 bit，单声道 mono，采样率为24000 HZ。</li><li>WAV文件头的长度暂时只支持44字节，如果超出，则会出现爆音。</li></ul> 您需要使用[下方推荐的转换工具](#将音频文件转换为Rokid可用的格式)将音频文件转换为符合上述要求的WAV文件。 |
+| src | 背景音仅支持通过URL提供的`.wav`文件，并且需要满足以下要求。<ul><li>WAV文件必须被放在一个可靠的HTTPS终端中，且HTTPS域名需要有合法的SSL证书。</li><li>WAV文件不能够含有个性化定制的内容以及敏感内容。</li><li>音频文件的长度需限制在90秒内。</li><li>比特率为16 bit，单声道 mono，采样率为24000 HZ。</li><li>WAV文件头的长度暂时只支持44字节，如果超出，则会出现爆音。</li></ul> 您需要使用[下方推荐的转换工具](https://www.ffmpeg.org/)将音频文件转换为符合上述要求的WAV文件。 |
 
 像如下例子中一样，在TTS回复中用`speak`标签包裹`audio`标签后，您的回复将带有背景音。
 

@@ -73,7 +73,7 @@ Http Hearder中相关内容的示例如下：
         "itemId": "Skill响应的MediaId",
         "token": "Skill响应的MediaToken",
         "progress": "当前的播放进度单位毫秒",
-        "duration": "当前Meida的总长度"
+        "duration": "当前Meida的总长度单位毫秒"
         },
      "voice": {
         "state": "PLAYING/PAUSED/IDLE",
