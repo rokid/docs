@@ -73,7 +73,7 @@ Http Hearder中相关内容的示例如下：
         "itemId": "Skill响应的MediaId",
         "token": "Skill响应的MediaToken",
         "progress": "当前的播放进度单位毫秒",
-        "duration": "当前Meida的总长度单位毫秒"
+        "duration": "当前Media的总长度单位毫秒"
         },
      "voice": {
         "state": "PLAYING/PAUSED/IDLE",
@@ -216,12 +216,12 @@ Http Hearder中相关内容的示例如下：
 |:-----------------:|:---------------:|:---------------|
 | basic    | BasicInfo object          | *BasicInfo对象*  |
 | screen    | ScreenInfo object          | *ScreenInfo对象*  |
-| media     | MeidaStatus object          | *当前设备上CloudAppClient的MediaPlayer状态*  |
+| media     | MediaStatus object          | *当前设备上CloudAppClient的MediaPlayer状态*  |
 | location  | LocationInfo object          | *当前设备的地理位置信息*  |
 
 * **basic** - 展示了当前设备的基础信息，主要包含设备制造信息、时间信息、国家文字信息。
 * **screen** - 展示了当前设备的屏幕信息，主要包含屏幕的分辨率信息。
-* **meida** - 向CloudApp表明当前设备上CloudAppClient中的MediaPlayer的状态信息。
+* **media** - 向CloudApp表明当前设备上CloudAppClient中的MediaPlayer的状态信息。
 * **location** - 向CloudApp提供当前设备的地理位置信息。
 
 ###### 2.3.2.1 BasicInfo
@@ -519,7 +519,7 @@ slots是对象类型，含有如下两个字段：
   "event": "Media.PAUSED",
   "extra": {
     "media": {
-      "itemId":"MeidaItem里面的ItemId",
+      "itemId":"MediaItem里面的ItemId",
       "token": "MediaItem里面的token",
       "progress": "当前进度",
       "duration": "音频文件的总长度"
