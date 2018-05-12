@@ -35,6 +35,7 @@ E_NOT_SUPPORTED_DIRECTIVE | Skill 不支持当前命令请求
 E_VALUE_OUT_OF_RANGE | 命令的值超出了阈值
 E_ENDPOINT_BUSY | 终端正在处理请求（不一定是来自若琪的命令请求），无法处理当前命令请求
 E_ENDPOINT_UNREACHABLE | 无法访问到终端
+E_CHANNEL_NOT_FOUND | 没有对应的频道
 E_INTERNAL_ERROR | 通用错误，当错误不是上述任一错误时，使用该错误码
 
 MediaErrorCode | 描述
