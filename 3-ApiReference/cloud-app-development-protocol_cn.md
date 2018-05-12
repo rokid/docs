@@ -9,16 +9,16 @@
 	* [一些概念](#11-一些概念)
 * [Request](#2-request)
 	* [协议概览](#21-协议概览)
-	* [Session定义](#22-session定义)
-	* [Context定义](#23-context定义)
-	* [Request定义](#24-request定义)
+	* [Session 定义](#22-session定义)
+	* [Context 定义](#23-context定义)
+	* [Request 定义](#24-request定义)
 * [Response](#3-response)
 	* [协议概览](#31-协议概览)
-	* [Action定义](#32-action定义)
+	* [Action 定义](#32-action定义)
 
 ### 1. 简介
 
-本文是对在*[Rokid开发者社区][developer_website_link]*上开发CloudApp的协议的详细描述。
+本文是对在 *[Rokid 开发者社区][developer_website_link]* 上开发 CloudApp 的协议的详细描述。
 
 [developer_website_link]: https://developer.rokid.com
 
@@ -26,29 +26,29 @@
 
 在了解本文所描述协议之前，需要对以下概念作如下说明：
 
-* **CloudApp** - 在*[Rokid开发者社区][developer_website_link]*上接入的云端应用，可以理解为遵循本文所描述的协议开发的某种云端服务或小应用。
-* **CloudDispatcher** - 用于向CloudApp传递请求和分发CloudApp返回结果的模块。
-* **CloudAppClient** - 用于处理CloudApp返回结果的设备端的执行容器。
-* **RokidMobileSDK** - 与*[Rokid开发者社区][developer_website_link]*相关联的手机端SDK，用于对CloudApp的信息扩展展示或第三方授权。
-* **TTS** - **T**ext **T**o **S**peech的缩写，这是机器人的语音表达方式。
+* **CloudApp** - 在 *[Rokid 开发者社区][developer_website_link]* 上接入的云端应用，可以理解为遵循本文所描述的协议开发的某种云端服务或小应用。
+* **CloudDispatcher** - 用于向 CloudApp 传递请求和分发 CloudApp 返回结果的模块。
+* **CloudAppClient** - 用于处理 CloudApp 返回结果的设备端的执行容器。
+* **RokidMobileSDK** - 与 *[Rokid 开发者社区][developer_website_link]* 相关联的手机端 SDK，用于对 CloudApp 的信息扩展展示或第三方授权。
+* **TTS** - **T**ext **T**o **S**peech 的缩写，这是机器人的语音表达方式。
 
 ### 2. Request
 
-*Request* 是*CloudDispatcher*产生的用于向*CloudApp*获取对应返回结果的请求。目前有两种类型的请求：一种是**IntentRequest**，一种是**EventRequest**。**IntentRequest** 是根据语音识别和语义理解（*NLP*）的结果创建的，其中会带有（*NLP*）的信息。**EventRequest**是在当有某种事件发生时产生的，并通过*CloudDispatcher*转发给当前*CloudApp*，比如当某个TTS播放结束的时候会产生一个TTS结束的事件，当前*CloudApp*可以选择处理或者不处理。
+*Request* 是 *CloudDispatcher* 产生的用于向 *CloudApp* 获取对应返回结果的请求。目前有两种类型的请求：一种是 **IntentRequest**，一种是 **EventRequest**。**IntentRequest** 是根据语音识别和语义理解（*NLP*）的结果创建的，其中会带有（*NLP*）的信息。**EventRequest** 是在当有某种事件发生时产生的，并通过 *CloudDispatcher* 转发给当前 *CloudApp*，比如当某个TTS播放结束的时候会产生一个 TTS 结束的事件，当前 *CloudApp* 可以选择处理或者不处理。
 
 #### 2.1 Request 协议预览
 
 ##### 2.1.1 Request Header
 为了保证 Https 链接访问的安全性，在 http 请求的 hearder 中增加了 Singature 来校验请求是否来源于 Rokid。
 
-Http Hearder中相关内容的示例如下：
+Http Hearder 中相关内容的示例如下：
 
 	Content-Type: application/json;charset=utf-8
 	Signature: DAF1E1062C21E3BB80A55BA32F41D935
 
-您可以在「技能开发的-配置」中，填写您自定义的认证key（支持大小写英文和数字，最长不超过36位）。
+您可以在「技能开发的-配置」中，填写您自定义的认证 key（支持大小写英文和数字，最长不超过36位）。
 
-**认证key的生成规则为：**
+**认证 key 的生成规则为：**
 `Signature = MD5(Secret + MD5(Body))`
 
 ##### 2.1.2 Request Body
@@ -67,26 +67,26 @@ Http Hearder中相关内容的示例如下：
   },
   "context": {
     "application": {
-      "applicationId": "skill本身的Id",
+      "applicationId": "skill 本身的 Id",
       "media": {
         "state": "PLAYING/PAUSED/IDLE",
-        "itemId": "Skill响应的MediaId",
-        "token": "Skill响应的MediaToken",
+        "itemId": "Skill 响应的 MediaId",
+        "token": "Skill 响应的 MediaToken",
         "progress": "当前的播放进度单位毫秒",
-        "duration": "当前Media的总长度单位毫秒"
+        "duration": "当前 Media 的总长度单位毫秒"
         },
      "voice": {
         "state": "PLAYING/PAUSED/IDLE",
-        "itemId": "Skill响应的VoiceId"
+        "itemId": "Skill 响应的 VoiceId"
         }
     },
     "device": {
       "basic": {
-        "vendor": "注册生产商ID",
+        "vendor": "注册生产商 ID",
         "deviceType": "该生产商设定的设备型号",
-        "deviceId": "该型号下的设备ID",
-        "masterId": "设备主人ID",
-        "voicetrigger": "设备当前的激活词",
+        "deviceId": "该型号下的设备 ID",
+        "masterId": "设备主人 ID",
+        "voicetrigger": "设备当前的激活词",
         "locale": "zh-cn",
         "timestamp": 1478009510909
       },
@@ -118,7 +118,7 @@ Http Hearder中相关内容的示例如下：
   },
   "request": {
     "reqType": "INTENT / EVENT",
-    "reqId": "当前请求的Id",
+    "reqId": "当前请求的 Id",
     "content": {
       "intent": "play_random",
       "sentence": "用户语句",
@@ -131,12 +131,12 @@ Http Hearder中相关内容的示例如下：
 }
 ```
 
-* **request** - 协议中真正代表此次*Request*的实体，会明确给出请求的类型**RequestType**和请求的内容**RequestContent**。
-* **request** - 注意获取用户语句时候，不要获取**sentence**，建议使用**slot**
+* **request** - 协议中真正代表此次 *Request* 的实体，会明确给出请求的类型 **RequestType** 和请求的内容 **RequestContent**。
+* **request** - 注意获取用户语句时候，不要获取 **sentence**，建议使用 **slot**
 
 #### 2.2 Session定义
 
-*Session* 向所请求的*CloudApp*表明了会话的信息，每一次对*CloudApp*的请求都会产生会话信息，会话的信息和状态由开放平台的系统更新。*Session*也提供了*attributes*字段留给*CloudApp*来保存一些上下文信息。具体阐述如下：
+*Session* 向所请求的 *CloudApp* 表明了会话的信息，每一次对 *CloudApp* 的请求都会产生会话信息，会话的信息和状态由开放平台的系统更新。*Session* 也提供了 *attributes* 字段留给 *CloudApp* 来保存一些上下文信息。具体阐述如下：
 
 ```json
 "session": {
@@ -154,13 +154,13 @@ Http Hearder中相关内容的示例如下：
 | newSession  | boolean         | *true / false (由系统填充)*   |
 | attributes             | key-object map          | *一个string-object map*         |
 
-* **sessionId** - 每次会话的唯一ID，由系统填充
-* **newSession** - 向CloudApp表明此次会话是新的会话还是已经存在的会话，true为新会话，false为老会话
-* **attributes** - 为*CloudApp*提供*attributes*字段留保存上下文信息的字段，开发者目前只能通过INTENT类型的Request拿到attributes信息，EVENT类型的Reuqest还不能拿到，后续我们会做修改，attributes是一个key-object map 类型数据开发者可以自定义传key和object，上述json只是一个样例，并不代表完全限制只能传递type和value。
+* **sessionId** - 每次会话的唯一 ID，由系统填充
+* **newSession** - 向 CloudApp 表明此次会话是新的会话还是已经存在的会话，true 为新会话，false 为老会话
+* **attributes** - 为 *CloudApp* 提供 *attributes* 字段留保存上下文信息的字段，开发者目前只能通过 INTENT 类型的 Request 拿到 attributes 信息，EVENT 类型的 Reuqest 还不能拿到，后续我们会做修改，attributes 是一个 key-object map 类型数据开发者可以自定义传 key 和 object，上述 json 只是一个样例，并不代表完全限制只能传递 type 和 value。
 
 #### 2.3 Context定义
 
-*Context* 向所请求的CloudApp提供了当前的设备信息，用户信息和应用状态，用以帮助CloudApp更好的去管理逻辑状态以及对应的返回结果。
+*Context* 向所请求的 CloudApp 提供了当前的设备信息，用户信息和应用状态，用以帮助 CloudApp 更好的去管理逻辑状态以及对应的返回结果。
 
 ```json
 "context": {
@@ -172,13 +172,13 @@ Http Hearder中相关内容的示例如下：
 
 | 字段               | 类型            | 可能值 |
 |:-----------------:|:---------------:|:---------------|
-| application              | ApplicationInfo object          | *ApplicationInfo对象*  |
-| device  | DeviceInfo object         | *DeviceInfo对象*   |
-| user          | UserInfo object          | *UserInfo对象*  |
+| application              | ApplicationInfo object          | *ApplicationInfo 对象*  |
+| device  | DeviceInfo object         | *DeviceInfo 对象*   |
+| user          | UserInfo object          | *UserInfo 对象*  |
 
 ##### 2.3.1 ApplicationInfo
 
-*ApplicationInfo* 包含了当前的应用信息，目前有**applicationId**、**media**、**voice** 可用。
+*ApplicationInfo* 包含了当前的应用信息，目前有 **applicationId**、**media**、**voice** 可用。
 
 ```json
 "application": {
@@ -190,13 +190,13 @@ Http Hearder中相关内容的示例如下：
 
 | 字段               | 类型            | 可能值 |
 |:-----------------:|:---------------:|:---------------|
-| applicationId     | string         | *应用ID字符串*  |
-|media|object|*mediaInfo对象*|
-|voice|object|*voiceInfo对象*|
+| applicationId     | string         | *应用 ID 字符串*  |
+|media|object|*mediaInfo 对象*|
+|voice|object|*voiceInfo 对象*|
 
-* **applicationId** - *CloudApp*在*Rokid开放平台*上的唯一ID.
-* **media** - 当前与您Skill相关的media状态。包括当前的播放状态、媒体itemId、媒体token、媒体播放进度、媒体总长度。
-* **voice** - 当前与您Skill相关的voice状态。包括当前的播放状态、音频流itemId。
+* **applicationId** - *CloudApp* 在 *Rokid 开放平台* 上的唯一ID.
+* **media** - 当前与您 Skill 相关的 media 状态。包括当前的播放状态、媒体 itemId、媒体 token、媒体播放进度、媒体总长度。
+* **voice** - 当前与您 Skill 相关的 voice 状态。包括当前的播放状态、音频流 itemId。
 
 ##### 2.3.2 DeviceInfo
 
@@ -214,15 +214,15 @@ Http Hearder中相关内容的示例如下：
 
 | 字段               | 类型            | 可能值 |
 |:-----------------:|:---------------:|:---------------|
-| basic    | BasicInfo object          | *BasicInfo对象*  |
-| screen    | ScreenInfo object          | *ScreenInfo对象*  |
-| media     | MediaStatus object          | *当前设备上CloudAppClient的MediaPlayer状态*  |
+| basic    | BasicInfo object          | *BasicInfo 对象*  |
+| screen    | ScreenInfo object          | *ScreenInfo 对象*  |
+| media     | MediaStatus object          | *当前设备上 CloudAppClient 的 MediaPlayer 状态*  |
 | location  | LocationInfo object          | *当前设备的地理位置信息*  |
 
 * **basic** - 展示了当前设备的基础信息，主要包含设备制造信息、时间信息、国家文字信息。
 * **screen** - 展示了当前设备的屏幕信息，主要包含屏幕的分辨率信息。
-* **media** - 向CloudApp表明当前设备上CloudAppClient中的MediaPlayer的状态信息。
-* **location** - 向CloudApp提供当前设备的地理位置信息。
+* **media** - 向 CloudApp 表明当前设备上 CloudAppClient 中的 MediaPlayer 的状态信息。
+* **location** - 向 CloudApp 提供当前设备的地理位置信息。
 
 ###### 2.3.2.1 BasicInfo
 
@@ -240,19 +240,19 @@ Http Hearder中相关内容的示例如下：
 
 | 字段               | 类型            | 可能值 |
 |:-----------------:|:---------------:|:---------------|
-| vendor  | string         | *注册生产商ID*  |
+| vendor  | string         | *注册生产商 ID*  |
 | deviceType    | string         | *该生产商设定的设备型号*  |
-| deviceId    | string         | *该型号下的设备ID*  |
-| masterId    | string         | *对应设备的主人ID*  |
+| deviceId    | string         | *该型号下的设备 ID*  |
+| masterId    | string         | *对应设备的主人 ID*  |
 |voicetrigger|string|*对应设备当前的激活词*|
-| locale    | string         | *国家及语言，标准locale格式*  |
+| locale    | string         | *国家及语言，标准 locale 格式*  |
 | timestamp    | long         | *当前时间，unix timestamp*  |
 
 
-* **vendor** - 生产商ID，通过在网站注册生产商生成，保证全局唯一
-* **deviceType** - 设备型号ID，通过在网站注册设备型号生成，保证生产商内部唯一
+* **vendor** - 生产商 ID，通过在网站注册生产商生成，保证全局唯一
+* **deviceType** - 设备型号 ID，通过在网站注册设备型号生成，保证生产商内部唯一
 * **deviceId** - 设备ID，由生产商自行生成，保证设备型号内部唯一
-* **locale** - 国家及语言，采用标准locale格式，language-country
+* **locale** - 国家及语言，采用标准 locale 格式，language-country
 * **timestamp** - 当前时间，使用设备当前的时间戳，unix timestamp
 
 ###### 2.3.2.2 ScreenInfo
@@ -278,7 +278,7 @@ Http Hearder中相关内容的示例如下：
 
 ###### 2.3.2.3 MediaStatus
 
-当前设备上CloudAppClient中MediaPlayer的状态：
+当前设备上 CloudAppClient 中 MediaPlayer 的状态：
 
 ```json
 "media": {
@@ -316,7 +316,7 @@ Http Hearder中相关内容的示例如下：
 }
 ```
 
-当当前设备存在地理位置信息时会通过*location*提供给CloudApp。基于地理位置的CloudApp可以根据此信息来处理逻辑。*location* 信息包括 **纬度(latitude)** 和 **经度(longtitude)**等。
+当当前设备存在地理位置信息时会通过 *location* 提供给 CloudApp。基于地理位置的 CloudApp 可以根据此信息来处理逻辑。*location* 信息包括 **纬度(latitude)** 和 **经度(longtitude)** 等。
 
 ##### 2.3.3 UserInfo
 
@@ -330,9 +330,9 @@ UserInfo 展示了与当前的用户信息，通常是设备对应手机应用�
 
 | 字段               | 类型            | 可能值 |
 |:-----------------:|:---------------:|:---------------|
-| userId  | string         | *用户ID*  |
+| userId  | string         | *用户 ID*  |
 
-*注意：该用户id和MasterId的区别在于，用户Id为当前使用者的Id，MasterId为机器主人的ID，机器主人不一定是当前使用的用户，目前UserId和MasterId是一致的，但后期上了声纹以后该两者会不一致。*
+*注意：该用户 id 和 MasterId 的区别在于，用户 Id 为当前使用者的 Id，MasterId 为机器主人的 ID，机器主人不一定是当前使用的用户，目前 UserId 和 MasterId 是一致的，但后期上了声纹以后该两者会不一致。*
 
 #### 2.4 Request定义
 
@@ -349,8 +349,8 @@ UserInfo 展示了与当前的用户信息，通常是设备对应手机应用�
 | 字段               | 类型            | 可能值 |
 |:-----------------:|:---------------:|:---------------|
 | reqType  | string         | *INTENT / EVENT*  |
-| reqId    | string         | *当前请求的唯一ID*  |
-| content  | request content object         | *IntentRequest 或 EventRequest的对象*  |
+| reqId    | string         | *当前请求的唯一 ID*  |
+| content  | request content object         | *IntentRequest 或 EventRequest 的对象*  |
 
 * **reqType** - 表明请求的类型： **INTENT** 和 **EVENT** 分别对应 *IntentRequest* 和 *EventRequest*。
 * **reqId** - 每次请求都会对应一个唯一ID用以区分每一次的请求。
@@ -358,7 +358,7 @@ UserInfo 展示了与当前的用户信息，通常是设备对应手机应用�
 
 ##### 2.4.1 IntentRequest
 
-IntentRequest 是基于 *NLP* 的结果产生的请求，其中包括了 *NLP* 的所有信息：**ApplicationId**， **Intent** 和 **Slots**。IntentRequest将会发给对应的 *CloudApp* 根据 *intent* 和 *slots* 进行相应的逻辑处理。
+IntentRequest 是基于 *NLP* 的结果产生的请求，其中包括了 *NLP* 的所有信息：**ApplicationId**， **Intent** 和 **Slots**。IntentRequest 将会发给对应的 *CloudApp* 根据 *intent* 和 *slots* 进行相应的逻辑处理。
 
 ```json
 "content": {
@@ -379,9 +379,9 @@ IntentRequest 是基于 *NLP* 的结果产生的请求，其中包括了 *NLP* �
 
 * **intent** 和 **slots** 均为 **NLP** 结果的基本元素。分别表明了一句话所代表意图和完成这个意图所需要的参数。
 
-**intent** - 表明了当前具体的意图，目前我们有三个系统级的Intent请求具体如下。
+**intent** - 表明了当前具体的意图，目前我们有三个系统级的 Intent 请求具体如下。
 
-* **ROKID.INTENT.WELCOME** - 当用户通过入口词打开该Skill时，会发送该Intent请求，请求内容如下：
+* **ROKID.INTENT.WELCOME** - 当用户通过入口词打开该 Skill 时，会发送该 Intent 请求，请求内容如下：
 
 ```json
 	"content": {
@@ -399,9 +399,9 @@ IntentRequest 是基于 *NLP* 的结果产生的请求，其中包括了 *NLP* �
       "sentence": "打开XXX"
     }
 ```
-**开发者可以在这个Intent中给用户做欢迎引导语句也可以执行对应的操作**
+**开发者可以在这个 Intent 中给用户做欢迎引导语句也可以执行对应的操作**
 
-* **ROKID.INTENT.EXIT** - 当用户需要退出该Skill时，会发送该Intent请求，请求内容如下：
+* **ROKID.INTENT.EXIT** - 当用户需要退出该 Skill 时，会发送该 Intent 请求，请求内容如下：
 
 ```json
 	"content": {
@@ -419,9 +419,9 @@ IntentRequest 是基于 *NLP* 的结果产生的请求，其中包括了 *NLP* �
       }
     }
 ```
-**开发者不能对该Request做响应，但是开发者可以通过该Request记录服务的业务日志**
-	
-* **ROKID.INTENT.UNKNOWN** - 当Skill发起Confirm或者Pickup时，用户说了三次都没有命中该Skill需要的内容，这时候会发送该Intent请求，请求内容如下：
+**开发者不能对该 Request 做响应，但是开发者可以通过该 Request 记录服务的业务日志**
+
+* **ROKID.INTENT.UNKNOWN** - 当 Skill 发起 Confirm 或者 Pickup 时，用户说了三次都没有命中该 Skill 需要的内容，这时候会发送该 Intent 请求，请求内容如下：
 
 ```json
 	"content": {
@@ -439,20 +439,19 @@ IntentRequest 是基于 *NLP* 的结果产生的请求，其中包括了 *NLP* �
       }
     }
 ```
-**开发者可以在该Request请求时响应自定义的响应内容，比如游戏类的技能，可以换一个题目等操作，然后开发者也可以直接退出该技能，unknowtype有两种一个是pickup，一个是confirm**	
-	
+**开发者可以在该 Request 请求时响应自定义的响应内容，比如游戏类的技能，可以换一个题目等操作，然后开发者也可以直接退出该技能，unknowtype 有两种一个是 pickup，一个是 confirm**
 
 ###### 2.4.1.1 slots
-slots是对象类型，含有如下两个字段：
+slots 是对象类型，含有如下两个字段：
 
 |字段  |类型  | 说明 |
 | :------ | :------ | :-------- |
 | type | String | slot类型    |
 |  value| String | slot值    |
 
-*注意：Slots对象其实对应的是一个HashMap<String,Slot>,其实Slot目前有type和value两个字段。其中HashMap的key是当前NLP那边配置的slot名称，Slot里面的Type值分为两种情况：
-1、有引用系统词表，则该type为系统词表的名称；
-2、如果没有引用系统词表，则和key一致为用户自定义名称，Slot里面的value为用户真正需要的业务值，该值是一个String类型，但是需要注意的是该String有可能是一个Json的String，开发者需要根据Type去进行数据的解析。如下number这个slot的定义响应*
+*注意：Slots 对象其实对应的是一个 HashMap<String,Slot>,其实 Slot 目前有 type 和 value 两个字段。其中 HashMap的key 是当前 NLP 那边配置的 slot 名称，Slot 里面的 Type 值分为两种情况：
+1、有引用系统词表，则该 type 为系统词表的名称；
+2、如果没有引用系统词表，则和 key 一致为用户自定义名称，Slot 里面的 value 为用户真正需要的业务值，该值是一个 String 类型，但是需要注意的是该 String 有可能是一个 Json 的 String，开发者需要根据 Type 去进行数据的解析。如下 number 这个 slot 的定义响应*
 
 ```json
 "slots": {
@@ -465,7 +464,7 @@ slots是对象类型，含有如下两个字段：
 
 ##### 2.4.2 EventRequest
 
-当CloudAppClient在执行中发生了一个事件，则会产生一个EventRequest。*CloudApp* 可以根据自己的需要选择处理或者不处理当前收到的事件。
+当 CloudAppClient 在执行中发生了一个事件，则会产生一 个 EventRequest。*CloudApp* 可以根据自己的需要选择处理或者不处理当前收到的事件。
 
 ```json
 "content": {
@@ -483,17 +482,17 @@ slots是对象类型，含有如下两个字段：
 | extra  | string-string map         | *自定义字段，目前暂无定义，作扩展用*   |
 
 * **event** - 表明了是具体的事件类型.
-	* **Voice.STARTED** - 当Voice开始播放时发生。
-	* **Voice.FINISHED** - 当Voice停止时发生，此处停止可能是被打断，可能是播放完成，也可能是播放失败，但都作为统一的事件抛出。
-	* **Voice.FAILED** - 当Voice播放失败时发生。
-	* **Media.STARTED** - 当MediaPlayer开始播放时发生。
-	* **Media.PAUSED** - 当MediaPlayer暂停时发生。
+	* **Voice.STARTED** - 当 Voice 开始播放时发生。
+	* **Voice.FINISHED** - 当 Voice 停止时发生，此处停止可能是被打断，可能是播放完成，也可能是播放失败，但都作为统一的事件抛出。
+	* **Voice.FAILED** - 当 Voice 播放失败时发生。
+	* **Media.STARTED** - 当 MediaPlayer 开始播放时发生。
+	* **Media.PAUSED** - 当 MediaPlayer 暂停时发生。
 	* **Media.FINISHED** - 当播放内容结束时发生。
 	* **Media.TIMEOUT** - 在媒体播放过程中因为网络慢等原因导致的卡顿持续5s后发生。
 	* **Media.FAILED** - 当播放器加载音频资源失败时发生。
-	* **Session.ENDED** - 当切换Domain时候，可以用于关闭资源，不能进行任何响应。
+	* **Session.ENDED** - 当切换 Domain 时候，可以用于关闭资源，不能进行任何响应。
 	
-	**特别注意：***为防止开发者在我们后续增加Event事件的时候出现服务异常，建议开发者对于不在自己Skill范围之内的Event做忽略处理，忽略响应的内容如下：*
+	**特别注意：***为防止开发者在我们后续增加 Event 事件的时候出现服务异常，建议开发者对于不在自己 Skill 范围之内的 Event 做忽略处理，忽略响应的内容如下：*
 
 ```json
 {
@@ -512,29 +511,29 @@ slots是对象类型，含有如下两个字段：
 }
 ```
 
-* **extra** - 针对media类型的eventrequest支持如下扩展字段：
+* **extra** - 针对 media 类型的 eventrequest 支持如下扩展字段：
 
 ```json
 "content": {
   "event": "Media.PAUSED",
   "extra": {
     "media": {
-      "itemId":"MediaItem里面的ItemId",
-      "token": "MediaItem里面的token",
+      "itemId":"MediaItem 里面的 ItemId",
+      "token": "MediaItem 里面的 token",
       "progress": "当前进度",
       "duration": "音频文件的总长度"
     }
   }
 }
 ```
-* **extra** - 针对voice类型的eventrequest支持如下扩展字段：
+* **extra** - 针对 voice 类型的 eventrequest 支持如下扩展字段：
 
 ```json
 "content": {
   "event": "Voice.STARTED",
   "extra": {
     "voice": {
-      "itemId":"voiceItem里面的ItemId"
+      "itemId":"voiceItem 里面的 ItemId"
     }
   }
 }
@@ -543,7 +542,7 @@ slots是对象类型，含有如下两个字段：
 
 ### 3. Response
 
-根据之前的描述，Response是 *CloudApp* 向客户端的返回结果。
+根据之前的描述，Response 是 *CloudApp* 向客户端的返回结果。
 
 #### 3.1 协议概览
 
@@ -611,20 +610,20 @@ slots是对象类型，含有如下两个字段：
 }
 ```
 
-* **version** - 表明了Response协议的版本，必须由 *CloudApp* 填充。当前协议版本是 `2.0.0`.
-* **session** - 表示当前应用的session，与Request中的信息一致，*CloudApp* 可以在 *attributes* 里填充自己需要的上下文信息用于后面的请求。
-* **response** - 返回给 *CloudAppClient* 的Response内容。包括了 `card` 和 `action` 两个部分。
+* **version** - 表明了 Response 协议的版本，必须由 *CloudApp* 填充。当前协议版本是 `2.0.0`.
+* **session** - 表示当前应用的 session，与 Request 中的信息一致，*CloudApp* 可以在 *attributes* 里填充自己需要的上下文信息用于后面的请求。
+* **response** - 返回给 *CloudAppClient* 的 Response 内容。包括了 `card` 和 `action` 两个部分。
 
 #### 3.2 Card定义
 Card 用于向 Rokid App 推送 push 消息。目前支持两种卡片类型：
 
-- 用于第三方应用授权的`ACCOUNT_LINK`类型
-- 用于展示若琪向用户发出对话内容的`chat`类型
+- 用于第三方应用授权的 `ACCOUNT_LINK` 类型
+- 用于展示若琪向用户发出对话内容的 `chat` 类型
 
 更多card功能类型将在后续更新。
 
 ##### 3.2.1 Account_link
-Account_link 类型将会向 Rokid App 发送一张账户授权的卡片，用于用户使用Rokid账号进行Oauth登录。如下：
+Account_link 类型将会向 Rokid App 发送一张账户授权的卡片，用于用户使用 Rokid 账号进行 Oauth 登录。如下：
 
 ```json
 {
@@ -644,7 +643,7 @@ Account_link 类型将会向 Rokid App 发送一张账户授权的卡片，用�
 
 
 ##### 3.2.2 Chat
-Chat 类型将会向 Rokid App 发送一张无标题的纯文本卡片，用于展示若琪向用户说出的TTS内容。如下：
+Chat 类型将会向 Rokid App 发送一张无标题的纯文本卡片，用于展示若琪向用户说出的 TTS 内容。如下：
 
 ```json
 {
@@ -662,12 +661,12 @@ Chat 类型将会向 Rokid App 发送一张无标题的纯文本卡片，用于�
 | 字段               | 类型            | 可能值 |
 |:-----------------:|:---------------:|:---------------|
 | type           | string          | *chat*  |
-| content           | string          | *需要在手机APP收到的卡片中展示的TTS语句*  |
+| content           | string          | *需要在手机 APP 收到的卡片中展示的 TTS 语句*  |
 
 
 #### 3.3 Action定义
 
-Action 中最关键的部分是`directives`，其中包含：
+Action 中最关键的部分是 `directives`，其中包含：
 
 - `voice` 表示了语音交互的返回；
 - `media` 是对媒体播放的返回；
@@ -710,14 +709,14 @@ Action 中最关键的部分是`directives`，其中包含：
 | type              | string          | *NORMAL / EXIT*  |
 | form              | string          | *scene / cut / service*  |
 | shouldEndSession  | boolean         | *true / false*   |
-|directives|array|*directives对象*|
+|directives|array|*directives 对象*|
 
 
 * **version** - 表明 action 协议版本，当前版本为: 2.0.0.
-* **type** - 当前action的类型：`NORMAL` 或 `EXIT`。 当 `type` 是 `NORMAL` 时，`voice` 和 `media` 会同时执行；当 `type` 是 `EXIT` 时，action会立即退出，**清除系统端的应用session**，并且在这种情况下，`voice` 和 `media` 将会被忽略。
-* **form** - 当前action的展现形式：scene、cut、service。scene的action会在被打断后压栈，cut的action会在被打断后直接结束，service会在后台执行，但没有任何界面。该字段在技能创建时被确定，无法由cloud app更改。
-* **shouldEndSession** - 表明当此次返回的action执行完后 *CloudAppClient* 是否要退出,并且是否需要**清除系统端的应用session**，同时，当 `shouldEndSession` 为 `true` 时，*CloudAppClient* 将会忽略 *EventRequests*，即在action执行过程中不会产生 *EventRequest*。
-* **directives** - 表明此次返回中需要让设备执行的指令。当前包含`voice`, `media`, `confirm`, `pickup` 四种类型。
+* **type** - 当前action的类型：`NORMAL` 或 `EXIT`。 当 `type` 是 `NORMAL` 时，`voice` 和 `media` 会同时执行；当 `type` 是 `EXIT` 时，action 会立即退出，**清除系统端的应用 session**，并且在这种情况下，`voice` 和 `media` 将会被忽略。
+* **form** - 当前 action 的展现形式：scene、cut、service。scene 的 action 会在被打断后压栈，cut 的 action 会在被打断后直接结束，service 会在后台执行，但没有任何界面。该字段在技能创建时被确定，无法由 cloud app 更改。
+* **shouldEndSession** - 表明当此次返回的 action 执行完后 *CloudAppClient* 是否要退出,并且是否需要 **清除系统端的应用 session**，同时，当 `shouldEndSession` 为 `true` 时，*CloudAppClient* 将会忽略 *EventRequests*，即在 action 执行过程中不会产生 *EventRequest*。
+* **directives** - 表明此次返回中需要让设备执行的指令。当前包含 `voice`, `media`, `confirm`, `pickup` 四种类型。
 
 
 ##### 3.3.1 Voice
@@ -738,16 +737,16 @@ Action 中最关键的部分是`directives`，其中包含：
 | 字段               | 类型            | 可能值 |
 |:-----------------:|:---------------:|:---------------|
 | action              | string          | *PLAY / PAUSE / RESUME / STOP*  |
-| disableEvent       | boolean    | *是否需要关闭Event事件的接收*        |
+| disableEvent       | boolean    | *是否需要关闭 Event 事件的接收*        |
 | item       | item object    | *voice 的 item 对象*         |
 
-* **action** - 表示对当前voice的操作，可以播放（PLAY)、暂停（PAUSE）、继续播放（RESUME）和停止（STOP）（具体Action行为参照Media的Action行为，但是目前暂未实现，**PAUSE**以及**RESUME**操作）;
-* **disableEvent**-表示当前这个Voice执行过程中是否需要关闭Event事件，可以不传，默认**false**表示接收Voice的EventRequest；
-* **item** - 定义了voice的具体内容，将会在 *3.3.1.1* 中详细描述。
+* **action** - 表示对当前 voice 的操作，可以播放（PLAY)、暂停（PAUSE）、继续播放（RESUME）和停止（STOP）（具体 Action 行为参照 Media 的 Action 行为，但是目前暂未实现，**PAUSE** 以及 **RESUME** 操作）;
+* **disableEvent**-表示当前这个 Voice 执行过程中是否需要关闭 Event 事件，可以不传，默认 **false** 表示接收 Voice 的 EventRequest；
+* **item** - 定义了 voice 的具体内容，将会在 *3.3.1.1* 中详细描述。
 
 ###### 3.3.1.1 Item
 
-Item定义了voice的具体内容。
+Item 定义了 voice 的具体内容。
 
 ```json
 "item": {
@@ -758,15 +757,15 @@ Item定义了voice的具体内容。
 
 | 字段               | 类型            | 可能值 |
 |:-----------------:|:---------------:|:---------------|
-| itemId           | string          | *tts 内容的ID*  |
+| itemId           | string          | *tts 内容的 ID*  |
 | tts              | string          | *tts 内容*  |
 
-* **itemId** - 定义了播报内容的ID，当disableEvent=false时，VoiceEvent会在拓展字段中带上itemId。
-* **tts** - 定义了需要播报的TTS内容。
+* **itemId** - 定义了播报内容的 ID，当 disableEvent=false 时，VoiceEvent 会在拓展字段中带上 itemId。
+* **tts** - 定义了需要播报的 TTS 内容。
 
 ##### 3.3.2 Media
 
-Media 用来播放CloudApp返回的流媒体内容。有 *audio* 和 *video* 两种类型，目前第一版暂时只对 *audio* 作了支持，后续会支持 *video*。
+Media 用来播放 CloudApp 返回的流媒体内容。有 *audio* 和 *video* 两种类型，目前第一版暂时只对 *audio* 作了支持，后续会支持 *video*。
 
 ```json
 {
@@ -786,15 +785,15 @@ Media 用来播放CloudApp返回的流媒体内容。有 *audio* 和 *video* 两
 | 字段               | 类型            | 可能值 |
 |:-----------------:|:---------------:|:---------------|
 | action              | string          | *PLAY / PAUSE / RESUME / STOP*  |
-| disableEvent       | boolean    | *是否需要关闭Event事件的接收*        |
-| item  | media item object        | *media的具体内容*  |
+| disableEvent       | boolean    | *是否需要关闭 Event 事件的接收*        |
+| item  | media item object        | *media 的具体内容*  |
 
-* **action** - 定义了对MediaPlayer的操作，目前只支持 **4** 种操作：**PLAY**， **PAUSE** ， **RESUME** 和 **STOP**。其中，只有**PLAY**接受**item**数据。
-    * **PLAY**：如果有**item**数据，则按照最新的**item**从头开始播放，如果没有**item**数据，且原来有在播放的内容，则从原来播放的内容开始播放
-    * **PAUSE**：暂停当前播放的内容，播放的进度等数据不会丢失（可以直接通过**RESUME**指令直接恢复原来的播放状态）
+* **action** - 定义了对 MediaPlayer 的操作，目前只支持 **4** 种操作：**PLAY**， **PAUSE** ， **RESUME** 和 **STOP**。其中，只有 **PLAY** 接受 **item** 数据。
+    * **PLAY**：如果有 **item** 数据，则按照最新的 **item** 从头开始播放，如果没有 **item** 数据，且原来有在播放的内容，则从原来播放的内容开始播放
+    * **PAUSE**：暂停当前播放的内容，播放的进度等数据不会丢失（可以直接通过 **RESUME** 指令直接恢复原来的播放状态）
     * **RESUME**：继续播放（从原来的播放进度播放）
     * **STOP**：停止播放，并且清空当前的播放进度，但是播放内容不清
-* **disableEvent**-表示当前这个Media执行过程中是否需要关闭Event事件，可以不传，默认**false**表示接收Media的EventRequest
+* **disableEvent**-表示当前这个 Media 执行过程中是否需要关闭 Event 事件，可以不传，默认 **false** 表示接收 Media 的 EventRequest
 * **item** - 定义了具体的播放内容，如下：
 
 ###### 3.3.2.1 Item
@@ -811,20 +810,20 @@ Media 用来播放CloudApp返回的流媒体内容。有 *audio* 和 *video* 两
 
 | 字段               | 类型            | 可能值 |
 |:-----------------:|:---------------:|:---------------|
-| itemId           | string          | *Media 内容的ID*  |
-| token              | string          | *用于鉴权的token，由CloudApp填充和判断*  |
+| itemId           | string          | *Media 内容的 ID*  |
+| token              | string          | *用于鉴权的 token，由 CloudApp 填充和判断*  |
 | type          | string          | *AUDIO / VIDEO* |
 | url  | string        | *可用的流媒体播放链接*  |
 | offsetInMilliseconds  | long        | *毫秒数值，表明从哪里开始播放*  |
 
-* **token** - 用于鉴权的token，由CloudApp填充和判断，且该Token的值会在该Media执行的EventRequest的拓展信息中原样带回。
-* **itemId**定义了播报内容的ID，当disableEvent=false时，MediaEvent会在拓展字段中带上itemId。
+* **token** - 用于鉴权的 token，由 CloudApp 填充和判断，且该 Token 的值会在该 Media 执行的 EventRequest 的拓展信息中原样带回。
+* **itemId**定义了播报内容的 ID，当 disableEvent=false 时，MediaEvent 会在拓展字段中带上 itemId。
 * **type** - 表明了当前媒体类型：**AUDIO** 或 **VIDEO**，有且只能取其一。
-* **url** - 为MediaPlayer指明可用的流媒体播放链接。
-* **offsetInMilliseconds** - 毫秒数值，告诉MediaPlayer开始播放的位置。有效范围从0到歌曲整体播放时长。
+* **url** - 为 MediaPlayer 指明可用的流媒体播放链接。
+* **offsetInMilliseconds** - 毫秒数值，告诉 MediaPlayer 开始播放的位置。有效范围从0到歌曲整体播放时长。
 
 ##### 3.3.3 Confirm
-表明此次返回中，是否存在需要confirm的内容。[了解用法指南](/2-RokidDocument/1-SkillsKit/important-concept/confirm)。
+表明此次返回中，是否存在需要 confirm 的内容。[了解用法指南](/2-RokidDocument/1-SkillsKit/important-concept/confirm)。
 
 ```json
 {
@@ -840,18 +839,18 @@ Media 用来播放CloudApp返回的流媒体内容。有 *audio* 和 *video* 两
 
 | 字段               | 类型            | 可能值 |
 |:-----------------:|:---------------:|:---------------|
-| confirmIntent           | string          | *需要进行confirm的intent内容*  |
-| confirmSlot           | string          | *需要进行confirm的slot内容*  |
-| optionWords           | array          | *动态新增的confirm内容*  |
+| confirmIntent           | string          | *需要进行 confirm 的 intent 内容*  |
+| confirmSlot           | string          | *需要进行 confirm 的 slot 内容*  |
+| optionWords           | array          | *动态新增的 confirm 内容*  |
 
-* **confirmIntent**：表明此次返回对哪一个intent进行confirm。
-* **confirmSlot**：表明此次返回对哪一个slot进行confirm。
-* **optionWords**：可选项。表明此次返回中在confirmSlot之上需要新增的confirm选项，用于需要动态新增confirm内容的场景。
+* **confirmIntent**：表明此次返回对哪一个 intent 进行 confirm。
+* **confirmSlot**：表明此次返回对哪一个 slot 进行 confirm。
+* **optionWords**：可选项。表明此次返回中在 confirmSlot 之上需要新增的 confirm 选项，用于需要动态新增 confirm 内容的场景。
 
 
 ##### 3.3.4 Pickup
 
-Pickup 用来控制拾音状态（可以理解为手机app上的对话框）。当CloudApp没有可执行的内容时，会执行Pickup，如果Pickup为空，则按照Pickup.enable=false执行。
+Pickup 用来控制拾音状态（可以理解为手机app上的对话框）。当 CloudApp 没有可执行的内容时，会执行 Pickup，如果 Pickup 为空，则按照 Pickup.enable=false 执行。
 
 ```json
 {
@@ -866,16 +865,10 @@ Pickup 用来控制拾音状态（可以理解为手机app上的对话框）。�
 |:-----------------:|:---------------:|:---------------|
 | enable              | boolean         | *true / false*  |
 | durationInMilliseconds  | int        | *在没有用户说话时拾音状态持续多久，单位毫秒*  |
-|retryTts|string|*定义在pickup未命中或超时后将会提示的语句*|
+|retryTts|string|*定义在 pickup 未命中或超时后将会提示的语句*|
 
-* **enable** - 定义了对拾音状态的开关操作：**true**，**false** ，其中，只有**true**接受**durationInMilliseconds**数据。
-    * **true**：当CloudApp没有可执行的内容（**Voice播报**，**Media播报**，**EventRequest发送**）时，会把拾音打开。
+* **enable** - 定义了对拾音状态的开关操作：**true**，**false** ，其中，只有 **true** 接受 **durationInMilliseconds** 数据。
+    * **true**：当 CloudApp 没有可执行的内容（**Voice播报**，**Media播报**，**EventRequest发送**）时，会把拾音打开。
     * **false**：不打开
 
-* **durationInMilliseconds** - 当**enable=true**时，表示在用户不说话的情况下，拾音打开持续时间，单位**毫秒**。最长持续时间为6000ms。
-
-
-
-
-
-
+* **durationInMilliseconds** - 当 **enable=true** 时，表示在用户不说话的情况下，拾音打开持续时间，单位**毫秒**。最长持续时间为6000ms。
