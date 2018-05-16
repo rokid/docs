@@ -47,7 +47,7 @@
     * [局域网对接](rokid-homebase-docs/connect/via-lan.md)
   * 调试
     * [命令行接口校验工具](rokid-homebase-docs/tools/rhome.md)
-    * [远程调试驱动](rokid-homebase-docs/tools/developer-driver.md)
+    * [自定义接入](rokid-homebase-docs/tools/developer-driver.md)
   * 智能家居协议(Beta)
     * [技能授权](rokid-homebase-docs/connect/rfc6749.md)
     * [消息格式参考](rokid-homebase-docs/v2/message-reference.md)
