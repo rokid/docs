@@ -280,6 +280,10 @@ Example:
 { "property": "channel", "name":"num", "value": 34}
 ```
 
+对应错误码：
+
+- [E_CHANNEL_NOT_FOUND](../error.md)
+
 ### <span id = "humidity">湿度 humidity</span>
 
 - actions 接受值 [ "up", "down", "max", "min", "num" ]
