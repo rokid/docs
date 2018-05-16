@@ -83,7 +83,6 @@
     * 新手入门
         * [创建设备流程](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/create-device.md)
         * [认证文件使用方法](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/usage.md) 
-    * [重要概念](5-enableVoice/rokid-vsvy-sdk-docs/important-concept.md)
     * Android 全链路通用方案
         * [概述](5-enableVoice/rokid-vsvy-sdk-docs/fullLink/introduce.md)
         * [SDK 目录结构](5-enableVoice/rokid-vsvy-sdk-docs/fullLink/sdk_dir.md)
@@ -116,6 +115,7 @@
     * Mobile SDK 接入文档
         * [Rokid Moblie Android SDK](https://rokid.github.io/mobile-sdk-android-docs/)
         * [Rokid Moblie ios SDK](https://rokid.github.io/mobile-sdk-ios-docs/)
+    * [重要概念](5-enableVoice/rokid-vsvy-sdk-docs/important-concept.md)
     * [错误码](5-enableVoice/rokid-vsvy-sdk-docs/common/err_code.md)
     * [Json格式配置字串](5-enableVoice/rokid-vsvy-sdk-docs/common/api_json.md) 
     * [云端应用接口开发协议](3-ApiReference/openvoice-api.md)
