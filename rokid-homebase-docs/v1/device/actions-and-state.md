@@ -118,7 +118,7 @@ Example:
 
 ### <span id = "mode">模式 mode</span>
 
-- actions 接受值 [ "auto", "manual", "cool", "heat", "dry", "fan", "silent", "energy", "sleep", "modeName"]
+- actions 接受值 [ "auto", "manual", "cool", "heat", "dry", "fan", "silent", "energy", "sleep"<!--, "modeName" -->]
   - "auto": 自动模式
   - "manual": 手动模式
   - "cool": 制冷模式
@@ -128,7 +128,7 @@ Example:
   - "silent": 静音模式
   - "energy": 省电模式
   - "sleep": 睡眠模式
-  - "modeName": 自定义模式，支持其它自定义的名称 （还在开发中）
+  <!-- - "modeName": 自定义模式，支持其它自定义的名称 （还在开发中） -->
 
 Example:
 
@@ -137,17 +137,17 @@ Example:
 { "property": "mode", "name":"auto" }
 ```
 
-自定义模式名
+<!-- 自定义模式名
 
 电饭煲打开香甜饭模式
 ```JSON
 { "property": "mode", "name":"modeName", value: "香甜饭" }
-```
+``` -->
 
 - state 值
   - {string}
   - actions 定义能力对应的一个状态
-  - 可以为 null  
+  - 可以为 null
 
 Example:
 ```JSON
@@ -390,7 +390,7 @@ Example:
     Example 2：若琪，我要听王菲的歌
 
     ```json
-    { 
+    {
         "property": "media_control",
         "name": "play_media",
         "value": {
