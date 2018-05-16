@@ -81,7 +81,7 @@ sox -r 24000 -e signed -b 16 -c 1 old.wav new.wav
 
 | 参数 | 可选值 |
 | :--- | :--- |
-| strength | <ul><li>none: 无停顿。常用于消除默认停顿的部分。</li><li>x-weak: 无停顿。和`none`效果一致。</li><li>weak: 标准停顿。等同于逗号的效果。和`medium`效果一致。</li><li>medium: 标准停顿。</li><li>strong: 句子停顿。等同于句号以及`<s>`标签的效果。</li><li>x-strong: 段落停顿。等同于`<p>`标签的效果。</li></ul>|
+| strength | <ul><li>none: 无停顿。常用于消除默认停顿的部分。</li><li>x-weak: 无停顿。和<code>none</code>效果一致。</li><li>weak: 标准停顿。等同于逗号的效果。和<code>medium</code>效果一致。</li><li>medium: 标准停顿。</li><li>strong: 句子停顿。等同于句号以及<code>&lt;s&gt;</code>标签的效果。</li><li>x-strong: 段落停顿。等同于<code>&lt;p&gt;</code>标签的效果。</li></ul>|
 | time | 具体停顿时长，秒的绝对值。上限10s，可以精确到小数点后1位。 |
 
 
