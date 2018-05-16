@@ -167,6 +167,7 @@ SwingMode.HorizonOff |
 SwingMode.Vertical |
 SwingMode.VerticalOff |
 
+<!--
 ## CustomMode 可自定义的模式状态
 类型: 模式描述符
 
@@ -181,7 +182,7 @@ CustomMode 描述符
 字段名 | 类型 | 描述
 --- | --- | ---
 mode.type | custom, preset |
-mode.name | `string` |
+mode.name | `string` | -->
 
 ## Humidity 湿度状态
 类型: percentage, unit: relative humidity
