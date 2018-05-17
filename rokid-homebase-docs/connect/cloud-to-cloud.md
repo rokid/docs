@@ -23,7 +23,3 @@
 
 - 开发云端驱动参考：[若琪智能家居协议](../v2/message-reference.md) 
 - 调试可以使用：[rhome 命令行工具](../tools/rhome.md) 或 [自定义接入](../tools/developer-driver.md)
-
-### 可以参考我们的示例程序
-
-- [homebase-ssdp-tcp-driver-sample](https://github.com/Rokid/homebase-ssdp-tcp-driver-sample)
