@@ -17,9 +17,9 @@
 
 ### 相关文档
 
-- 用户授权基于标准的 OAuth 2.0 协议：[符合 RFC6749 的 OAuth2.0](./rfc6749.md)
+- 用户授权基于标准的 OAuth 2.0 协议，具体参考：[符合 RFC6749 的 OAuth2.0](./rfc6749.md)
 
-通过用户授权，我们能够将厂商设备控制权交给若琪。另外，在开发和调试环节：
+通过用户授权，我们能够将厂商设备控制权交给若琪。在开发和调试环节：
 
-- 开发云端驱动参考：[若琪智能家居协议](../v2/message-reference.md) 
-- 调试可以使用：[rhome 命令行工具](../tools/rhome.md) 或 [自定义接入](../tools/developer-driver.md)
+- 开发云端驱动，具体参考：[若琪智能家居协议](../v2/message-reference.md) 
+- 调试云端驱动，可以使用：[rhome 命令行工具](../tools/rhome.md) 或 [自定义接入](../tools/developer-driver.md)
