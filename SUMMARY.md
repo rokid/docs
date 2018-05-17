@@ -21,7 +21,7 @@
         * [confirm](2-RokidDocument/1-SkillsKit/important-concept/confirm.md)
         * [session](2-RokidDocument/1-SkillsKit/important-concept/session.md)
         * [NLP 正则表达式](2-RokidDocument/1-SkillsKit/important-concept/regular-expression.md)
-    * 开发指南
+    * 技能开发指南
         * [Rokid 语音交互设计指南](2-RokidDocument/1-SkillsKit/rokid-voice-interaction-guidelines.md)
         * [Rokid Force System 使用指南](2-RokidDocument/1-SkillsKit/rokid-force-system-tutorial.md)
         * [Rokid Force JS 使用指南](2-RokidDocument/1-SkillsKit/rokid-force-js-tutorial.md)
@@ -31,11 +31,12 @@
         * [技能开发 Java 版指南](https://github.com/Rokid/rokid-skill-sample/tree/master/rokid-skill-sample-java)
     * 调试
         * [基于 VS Code 的 Yeoman & 测试脚本](https://github.com/Rokid/generator-rokid/blob/master/generators/rfs)
-    * 规范与协议
-        * [Rokid 云端技能协议](3-ApiReference/cloud-app-development-protocol_cn.md)
+        * [读取语音交互日志](2-RokidDocument/1-SkillsKit/test-skill-through-device-log.md)
+    * 规范
         * [技能发布标准](4-TermsAndAgreements/rokid-skill-release-standard.md)
         * [技能审核规范](4-TermsAndAgreements/rokid-skill-examine-and-verify-standard.md)
-    * [读取语音交互日志](2-RokidDocument/1-SkillsKit/test-skill-through-device-log.md)
+    * 技能协议
+        * [Rokid 云端技能协议](3-ApiReference/cloud-app-development-protocol_cn.md)
 
 * Rokid 智能家居设备接入平台
   * 平台介绍
@@ -81,7 +82,7 @@
 * Rokid 语音接入平台
     * [平台简介](5-enableVoice/rokid-vsvy-sdk-docs/introduction.md)
     * 新手入门
-        * [创建设备流程](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/create-device.md)
+        * [获取 SDK 流程](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/create-device.md)
         * [认证文件使用方法](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/usage.md) 
     * Android 全链路通用方案
         * [概述](5-enableVoice/rokid-vsvy-sdk-docs/fullLink/introduce.md)
