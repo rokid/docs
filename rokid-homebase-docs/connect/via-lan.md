@@ -1,10 +1,12 @@
 ## 局域网对接
 
-局域网对接，即通过简单服务发现协议（SSDP），实现同一局域网内智能家居网桥设备和 Rokid 设备的对接。
+局域网对接，即通过简单服务发现协议（SSDP），实现同一局域网内智能家居网桥设备和若琪设备的对接。
 
 ### 基本组成
 
 ![](https://s.rokidcdn.com/homebase/upload/r1H-Qt-wM.jpg)
+
+**注意：**局域网对接目前只支持旧版协议。
 
 对接步骤：
 
@@ -22,4 +24,4 @@
 
 ### 可以参考我们的示例程序
 
-https://github.com/Rokid/homebase-ssdp-tcp-driver-sample
+- [homebase-ssdp-tcp-driver-sample](https://github.com/Rokid/homebase-ssdp-tcp-driver-sample)
