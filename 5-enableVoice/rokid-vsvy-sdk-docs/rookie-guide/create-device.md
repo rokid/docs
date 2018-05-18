@@ -12,5 +12,7 @@
 ![](images/step13.png)
 6. 可以进行服务工具的配置，包括热词和拦截器配置。热词主要为了提升识别率；拦截器主要适用于兜底聊天和技能家居服务。
 ![](images/step7.png)
-7. 如下图所示，点击页面左下角的「 SDK 下载」，可查看到 Key、Secret、公司/个人ID、TypeID。可以进行在线测试、获取SN号。
+7. 如下图所示，点击页面左下角的「 SDK 下载」，可查看到 Key、Secret、公司/个人ID、TypeID。可以进行在线测试。
 ![](images/step8.png)
+8. B 端厂商可在 [SDK 下载处](https://developer.rokid.com/voice/#/product/configuration/voice/7E5477C7F61449969E8A78800976CECE)获取测试 SN，可以通过筛选框，查看不同产品的测试 SN，产品验证阶段可以申请测试SN，使用rokid语音服务。产品上线时，需要联系商务签订合同并确认导入数量。每个产品默认有10个测试SN。测试SN的语音调用次数为2000次/日,SN（同device id）为设备的序列号，设备的唯一标识项。用于进行Rokid设备认证和Rokid平台服务认证的基础参数。
+![](images/step20.png)
