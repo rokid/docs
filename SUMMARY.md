@@ -83,6 +83,7 @@
     * [平台简介](5-enableVoice/rokid-vsvy-sdk-docs/introduction.md)
     * 新手入门
         * [获取 SDK 流程](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/create-device.md)
+        * [获取测试 SN 和导入SN](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/sn.md)
         * [认证文件使用方法](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/usage.md) 
     * Android 全链路通用方案
         * [概述](5-enableVoice/rokid-vsvy-sdk-docs/fullLink/introduce.md)
