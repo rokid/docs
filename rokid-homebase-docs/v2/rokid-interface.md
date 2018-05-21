@@ -29,6 +29,30 @@
 Switch.On | 打开终端
 Switch.Off | 关闭终端
 
+命令示例：
+```json
+{
+  "header": {
+    "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+    "namespace": "Rokid.Control",
+    "name": "Switch.On",
+    "payloadVersion": "v1",
+    "authorization": {
+      "type": "BearerToken",
+      "token": "a-token-from-skill"
+    }
+  },
+  "endpoint": {
+    "endpointId": "device:an-id-unique-to-user",
+    "additionalInfo": {
+      "key": "value"
+    },
+    "states": []
+  },
+  "payload": {}
+}
+```
+
 ## MotionSwitch 行为状态
 
 类型: Enum
@@ -41,6 +65,30 @@ Switch.Off | 关闭终端
 --- | ---
 MotionSwitch.On | 终端开始运动
 MotionSwitch.Off | 终端停止运动
+
+命令示例：
+```json
+{
+  "header": {
+    "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+    "namespace": "Rokid.Control",
+    "name": "MotionSwitch.On",
+    "payloadVersion": "v1",
+    "authorization": {
+      "type": "BearerToken",
+      "token": "a-token-from-skill"
+    }
+  },
+  "endpoint": {
+    "endpointId": "device:an-id-unique-to-user",
+    "additionalInfo": {
+      "key": "value"
+    },
+    "states": []
+  },
+  "payload": {}
+}
+```
 
 ## Position 位置百分比状态
 
@@ -59,11 +107,63 @@ Position.Adjust | 通过相对值调整
 --- | --- | ---
 value | `number` | 百分比
 
+命令示例：
+```json
+{
+  "header": {
+    "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+    "namespace": "Rokid.Control",
+    "name": "Position.Set",
+    "payloadVersion": "v1",
+    "authorization": {
+      "type": "BearerToken",
+      "token": "a-token-from-skill"
+    }
+  },
+  "endpoint": {
+    "endpointId": "device:an-id-unique-to-user",
+    "additionalInfo": {
+      "key": "value"
+    },
+    "states": []
+  },
+  "payload": {
+    "value": 20
+  }
+}
+```
+
 #### Adjust Payload
 
 字段 | 类型 | 描述
 --- | --- | ---
 delta | `number` | 相对值
+
+命令示例：
+```json
+{
+  "header": {
+    "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+    "namespace": "Rokid.Control",
+    "name": "Position.Adjust",
+    "payloadVersion": "v1",
+    "authorization": {
+      "type": "BearerToken",
+      "token": "a-token-from-skill"
+    }
+  },
+  "endpoint": {
+    "endpointId": "device:an-id-unique-to-user",
+    "additionalInfo": {
+      "key": "value"
+    },
+    "states": []
+  },
+  "payload": {
+    "delta": -1
+  }
+}
+```
 
 ## Color 颜色状态
 
@@ -82,6 +182,57 @@ Color.SetRandom | 由 Skill 设置一个随机色值
 --- | --- | ---
 value | `number` | 颜色 RGB Hex 值
 
+命令示例：
+```json
+{
+  "header": {
+    "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+    "namespace": "Rokid.Control",
+    "name": "Color.Set",
+    "payloadVersion": "v1",
+    "authorization": {
+      "type": "BearerToken",
+      "token": "a-token-from-skill"
+    }
+  },
+  "endpoint": {
+    "endpointId": "device:an-id-unique-to-user",
+    "additionalInfo": {
+      "key": "value"
+    },
+    "states": []
+  },
+  "payload": {
+    "value": 255
+  }
+}
+```
+
+#### SetRandom Payload
+
+命令示例：
+```json
+{
+  "header": {
+    "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+    "namespace": "Rokid.Control",
+    "name": "Color.SetRandom",
+    "payloadVersion": "v1",
+    "authorization": {
+      "type": "BearerToken",
+      "token": "a-token-from-skill"
+    }
+  },
+  "endpoint": {
+    "endpointId": "device:an-id-unique-to-user",
+    "additionalInfo": {
+      "key": "value"
+    },
+    "states": []
+  },
+  "payload": {}
+}
+```
 
 ## ColorTemperature 色温状态
 
@@ -103,11 +254,117 @@ ColorTemperature.Adjust |
 --- | --- | ---
 value | `number` | 百分比
 
+命令示例：
+```json
+{
+  "header": {
+    "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+    "namespace": "Rokid.Control",
+    "name": "ColorTemperature.Set",
+    "payloadVersion": "v1",
+    "authorization": {
+      "type": "BearerToken",
+      "token": "a-token-from-skill"
+    }
+  },
+  "endpoint": {
+    "endpointId": "device:an-id-unique-to-user",
+    "additionalInfo": {
+      "key": "value"
+    },
+    "states": []
+  },
+  "payload": {
+    "value": 20
+  }
+}
+```
+
+#### SetMax Payload
+
+命令示例：
+```json
+{
+  "header": {
+    "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+    "namespace": "Rokid.Control",
+    "name": "ColorTemperature.SetMax",
+    "payloadVersion": "v1",
+    "authorization": {
+      "type": "BearerToken",
+      "token": "a-token-from-skill"
+    }
+  },
+  "endpoint": {
+    "endpointId": "device:an-id-unique-to-user",
+    "additionalInfo": {
+      "key": "value"
+    },
+    "states": []
+  },
+  "payload": {}
+}
+```
+
+#### SetMin Payload
+
+命令示例：
+```json
+{
+  "header": {
+    "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+    "namespace": "Rokid.Control",
+    "name": "ColorTemperature.SetMin",
+    "payloadVersion": "v1",
+    "authorization": {
+      "type": "BearerToken",
+      "token": "a-token-from-skill"
+    }
+  },
+  "endpoint": {
+    "endpointId": "device:an-id-unique-to-user",
+    "additionalInfo": {
+      "key": "value"
+    },
+    "states": []
+  },
+  "payload": {
+    "delta": -1
+  }
+}
+```
+
 #### Adjust Payload
 
 字段 | 类型 | 描述
 --- | --- | ---
 delta | `number` | 相对值
+
+命令示例：
+```json
+{
+  "header": {
+    "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+    "namespace": "Rokid.Control",
+    "name": "ColorTemperature.Adjust",
+    "payloadVersion": "v1",
+    "authorization": {
+      "type": "BearerToken",
+      "token": "a-token-from-skill"
+    }
+  },
+  "endpoint": {
+    "endpointId": "device:an-id-unique-to-user",
+    "additionalInfo": {
+      "key": "value"
+    },
+    "states": []
+  },
+  "payload": {
+    "delta": -1
+  }
+}
+```
 
 ## Brightness 亮度状态
 
@@ -129,11 +386,115 @@ Brightness.Adjust |
 --- | --- | ---
 value | `number` | 百分比
 
+命令示例：
+```json
+{
+  "header": {
+    "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+    "namespace": "Rokid.Control",
+    "name": "Brightness.Set",
+    "payloadVersion": "v1",
+    "authorization": {
+      "type": "BearerToken",
+      "token": "a-token-from-skill"
+    }
+  },
+  "endpoint": {
+    "endpointId": "device:an-id-unique-to-user",
+    "additionalInfo": {
+      "key": "value"
+    },
+    "states": []
+  },
+  "payload": {
+    "value": 20
+  }
+}
+```
+
+#### SetMax Payload
+
+命令示例：
+```json
+{
+  "header": {
+    "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+    "namespace": "Rokid.Control",
+    "name": "Brightness.SetMax",
+    "payloadVersion": "v1",
+    "authorization": {
+      "type": "BearerToken",
+      "token": "a-token-from-skill"
+    }
+  },
+  "endpoint": {
+    "endpointId": "device:an-id-unique-to-user",
+    "additionalInfo": {
+      "key": "value"
+    },
+    "states": []
+  },
+  "payload": {}
+}
+```
+
+#### SetMin Payload
+
+命令示例：
+```json
+{
+  "header": {
+    "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+    "namespace": "Rokid.Control",
+    "name": "Brightness.SetMin",
+    "payloadVersion": "v1",
+    "authorization": {
+      "type": "BearerToken",
+      "token": "a-token-from-skill"
+    }
+  },
+  "endpoint": {
+    "endpointId": "device:an-id-unique-to-user",
+    "additionalInfo": {
+      "key": "value"
+    },
+    "states": []
+  },
+  "payload": {}
+}
+```
+
 #### Adjust Payload
 
 字段 | 类型 | 描述
 --- | --- | ---
 delta | `number` | 相对值
+
+命令示例：
+```json
+{
+  "header": {
+    "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+    "namespace": "Rokid.Control",
+    "name": "Brightness.Adjust",
+    "payloadVersion": "v1",
+    "authorization": {
+      "type": "BearerToken",
+      "token": "a-token-from-skill"
+    }
+  },
+  "endpoint": {
+    "endpointId": "device:an-id-unique-to-user",
+    "additionalInfo": {
+      "key": "value"
+    },
+    "states": []
+  },
+  "payload": {
+    "delta": -1
+  }
+}
+```
 
 ## Mode 模式状态
 类型: enum
@@ -152,6 +513,30 @@ Mode.Silent | 静音模式
 Mode.Energy | 省电模式
 Mode.Sleep | 睡眠模式
 
+命令示例：
+```json
+{
+  "header": {
+    "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+    "namespace": "Rokid.Control",
+    "name": "Mode.Auto",
+    "payloadVersion": "v1",
+    "authorization": {
+      "type": "BearerToken",
+      "token": "a-token-from-skill"
+    }
+  },
+  "endpoint": {
+    "endpointId": "device:an-id-unique-to-user",
+    "additionalInfo": {
+      "key": "value"
+    },
+    "states": []
+  },
+  "payload": {}
+}
+```
+
 ## SwingMode 转向状态
 类型: enum
 
@@ -166,6 +551,30 @@ SwingMode.Horizon |
 SwingMode.HorizonOff |
 SwingMode.Vertical |
 SwingMode.VerticalOff |
+
+命令示例：
+```json
+{
+  "header": {
+    "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+    "namespace": "Rokid.Control",
+    "name": "SwingMode.Auto",
+    "payloadVersion": "v1",
+    "authorization": {
+      "type": "BearerToken",
+      "token": "a-token-from-skill"
+    }
+  },
+  "endpoint": {
+    "endpointId": "device:an-id-unique-to-user",
+    "additionalInfo": {
+      "key": "value"
+    },
+    "states": []
+  },
+  "payload": {}
+}
+```
 
 <!--
 ## CustomMode 可自定义的模式状态
@@ -202,11 +611,115 @@ Humidity.Adjust |
 --- | --- | ---
 value | `number` | 百分比
 
+命令示例：
+```json
+{
+  "header": {
+    "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+    "namespace": "Rokid.Control",
+    "name": "Humidity.Set",
+    "payloadVersion": "v1",
+    "authorization": {
+      "type": "BearerToken",
+      "token": "a-token-from-skill"
+    }
+  },
+  "endpoint": {
+    "endpointId": "device:an-id-unique-to-user",
+    "additionalInfo": {
+      "key": "value"
+    },
+    "states": []
+  },
+  "payload": {
+    "value": 20
+  }
+}
+```
+
+#### SetMax Payload
+
+命令示例：
+```json
+{
+  "header": {
+    "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+    "namespace": "Rokid.Control",
+    "name": "Humidity.SetMax",
+    "payloadVersion": "v1",
+    "authorization": {
+      "type": "BearerToken",
+      "token": "a-token-from-skill"
+    }
+  },
+  "endpoint": {
+    "endpointId": "device:an-id-unique-to-user",
+    "additionalInfo": {
+      "key": "value"
+    },
+    "states": []
+  },
+  "payload": {}
+}
+```
+
+#### SetMin Payload
+
+命令示例：
+```json
+{
+  "header": {
+    "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+    "namespace": "Rokid.Control",
+    "name": "Humidity.SetMin",
+    "payloadVersion": "v1",
+    "authorization": {
+      "type": "BearerToken",
+      "token": "a-token-from-skill"
+    }
+  },
+  "endpoint": {
+    "endpointId": "device:an-id-unique-to-user",
+    "additionalInfo": {
+      "key": "value"
+    },
+    "states": []
+  },
+  "payload": {}
+}
+```
+
 #### Adjust Payload
 
 字段 | 类型 | 描述
 --- | --- | ---
 delta | `number` | 相对值
+
+命令示例：
+```json
+{
+  "header": {
+    "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+    "namespace": "Rokid.Control",
+    "name": "Humidity.Adjust",
+    "payloadVersion": "v1",
+    "authorization": {
+      "type": "BearerToken",
+      "token": "a-token-from-skill"
+    }
+  },
+  "endpoint": {
+    "endpointId": "device:an-id-unique-to-user",
+    "additionalInfo": {
+      "key": "value"
+    },
+    "states": []
+  },
+  "payload": {
+    "delta": -1
+  }
+}
+```
 
 ## Temperature 温度状态
 类型: number, Unit: Celsius
@@ -227,11 +740,115 @@ Temperature.Adjust |
 --- | --- | ---
 value | `number` | 百分比
 
+命令示例：
+```json
+{
+  "header": {
+    "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+    "namespace": "Rokid.Control",
+    "name": "Temperature.Set",
+    "payloadVersion": "v1",
+    "authorization": {
+      "type": "BearerToken",
+      "token": "a-token-from-skill"
+    }
+  },
+  "endpoint": {
+    "endpointId": "device:an-id-unique-to-user",
+    "additionalInfo": {
+      "key": "value"
+    },
+    "states": []
+  },
+  "payload": {
+    "value": 20
+  }
+}
+```
+
+#### SetMax Payload
+
+命令示例：
+```json
+{
+  "header": {
+    "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+    "namespace": "Rokid.Control",
+    "name": "Temperature.SetMax",
+    "payloadVersion": "v1",
+    "authorization": {
+      "type": "BearerToken",
+      "token": "a-token-from-skill"
+    }
+  },
+  "endpoint": {
+    "endpointId": "device:an-id-unique-to-user",
+    "additionalInfo": {
+      "key": "value"
+    },
+    "states": []
+  },
+  "payload": {}
+}
+```
+
+#### SetMin Payload
+
+命令示例：
+```json
+{
+  "header": {
+    "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+    "namespace": "Rokid.Control",
+    "name": "Temperature.SetMin",
+    "payloadVersion": "v1",
+    "authorization": {
+      "type": "BearerToken",
+      "token": "a-token-from-skill"
+    }
+  },
+  "endpoint": {
+    "endpointId": "device:an-id-unique-to-user",
+    "additionalInfo": {
+      "key": "value"
+    },
+    "states": []
+  },
+  "payload": {}
+}
+```
+
 #### Adjust Payload
 
 字段 | 类型 | 描述
 --- | --- | ---
 delta | `number` | 相对值
+
+命令示例：
+```json
+{
+  "header": {
+    "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+    "namespace": "Rokid.Control",
+    "name": "Temperature.Adjust",
+    "payloadVersion": "v1",
+    "authorization": {
+      "type": "BearerToken",
+      "token": "a-token-from-skill"
+    }
+  },
+  "endpoint": {
+    "endpointId": "device:an-id-unique-to-user",
+    "additionalInfo": {
+      "key": "value"
+    },
+    "states": []
+  },
+  "payload": {
+    "delta": -1
+  }
+}
+```
 
 ## FanSpeed 风速状态
 类型: percentage
@@ -252,11 +869,115 @@ FanSpeed.Adjust |
 --- | --- | ---
 value | `number` | 百分比
 
+命令示例：
+```json
+{
+  "header": {
+    "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+    "namespace": "Rokid.Control",
+    "name": "FanSpeed.Set",
+    "payloadVersion": "v1",
+    "authorization": {
+      "type": "BearerToken",
+      "token": "a-token-from-skill"
+    }
+  },
+  "endpoint": {
+    "endpointId": "device:an-id-unique-to-user",
+    "additionalInfo": {
+      "key": "value"
+    },
+    "states": []
+  },
+  "payload": {
+    "value": 20
+  }
+}
+```
+
+#### SetMax Payload
+
+命令示例：
+```json
+{
+  "header": {
+    "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+    "namespace": "Rokid.Control",
+    "name": "FanSpeed.SetMax",
+    "payloadVersion": "v1",
+    "authorization": {
+      "type": "BearerToken",
+      "token": "a-token-from-skill"
+    }
+  },
+  "endpoint": {
+    "endpointId": "device:an-id-unique-to-user",
+    "additionalInfo": {
+      "key": "value"
+    },
+    "states": []
+  },
+  "payload": {}
+}
+```
+
+#### SetMin Payload
+
+命令示例：
+```json
+{
+  "header": {
+    "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+    "namespace": "Rokid.Control",
+    "name": "FanSpeed.SetMin",
+    "payloadVersion": "v1",
+    "authorization": {
+      "type": "BearerToken",
+      "token": "a-token-from-skill"
+    }
+  },
+  "endpoint": {
+    "endpointId": "device:an-id-unique-to-user",
+    "additionalInfo": {
+      "key": "value"
+    },
+    "states": []
+  },
+  "payload": {}
+}
+```
+
 #### Adjust Payload
 
 字段 | 类型 | 描述
 --- | --- | ---
 delta | `number` | 相对值
+
+命令示例：
+```json
+{
+  "header": {
+    "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+    "namespace": "Rokid.Control",
+    "name": "FanSpeed.Adjust",
+    "payloadVersion": "v1",
+    "authorization": {
+      "type": "BearerToken",
+      "token": "a-token-from-skill"
+    }
+  },
+  "endpoint": {
+    "endpointId": "device:an-id-unique-to-user",
+    "additionalInfo": {
+      "key": "value"
+    },
+    "states": []
+  },
+  "payload": {
+    "delta": -1
+  }
+}
+```
 
 ## Volume 音量状态
 类型: percentage
@@ -277,11 +998,115 @@ Volume.Adjust |
 --- | --- | ---
 value | `number` | 百分比
 
+命令示例：
+```json
+{
+  "header": {
+    "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+    "namespace": "Rokid.Control",
+    "name": "Volume.Set",
+    "payloadVersion": "v1",
+    "authorization": {
+      "type": "BearerToken",
+      "token": "a-token-from-skill"
+    }
+  },
+  "endpoint": {
+    "endpointId": "device:an-id-unique-to-user",
+    "additionalInfo": {
+      "key": "value"
+    },
+    "states": []
+  },
+  "payload": {
+    "value": 20
+  }
+}
+```
+
+#### SetMax Payload
+
+命令示例：
+```json
+{
+  "header": {
+    "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+    "namespace": "Rokid.Control",
+    "name": "Volume.SetMax",
+    "payloadVersion": "v1",
+    "authorization": {
+      "type": "BearerToken",
+      "token": "a-token-from-skill"
+    }
+  },
+  "endpoint": {
+    "endpointId": "device:an-id-unique-to-user",
+    "additionalInfo": {
+      "key": "value"
+    },
+    "states": []
+  },
+  "payload": {}
+}
+```
+
+#### SetMin Payload
+
+命令示例：
+```json
+{
+  "header": {
+    "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+    "namespace": "Rokid.Control",
+    "name": "Volume.SetMin",
+    "payloadVersion": "v1",
+    "authorization": {
+      "type": "BearerToken",
+      "token": "a-token-from-skill"
+    }
+  },
+  "endpoint": {
+    "endpointId": "device:an-id-unique-to-user",
+    "additionalInfo": {
+      "key": "value"
+    },
+    "states": []
+  },
+  "payload": {}
+}
+```
+
 #### Adjust Payload
 
 字段 | 类型 | 描述
 --- | --- | ---
 delta | `number` | 相对值
+
+命令示例：
+```json
+{
+  "header": {
+    "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+    "namespace": "Rokid.Control",
+    "name": "Volume.Adjust",
+    "payloadVersion": "v1",
+    "authorization": {
+      "type": "BearerToken",
+      "token": "a-token-from-skill"
+    }
+  },
+  "endpoint": {
+    "endpointId": "device:an-id-unique-to-user",
+    "additionalInfo": {
+      "key": "value"
+    },
+    "states": []
+  },
+  "payload": {
+    "delta": -1
+  }
+}
+```
 
 ## Media.TVChannel 频道状态
 类型: channel descriptor
@@ -302,6 +1127,89 @@ Media.TVChannel.Set |
 tvChannel.name | `string` |
 tvChannel.code | `string` |
 
+#### Set Payload
+
+命令示例：
+```json
+{
+  "header": {
+    "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+    "namespace": "Rokid.Control",
+    "name": "Media.TVChannel.Set",
+    "payloadVersion": "v1",
+    "authorization": {
+      "type": "BearerToken",
+      "token": "a-token-from-skill"
+    }
+  },
+  "endpoint": {
+    "endpointId": "device:an-id-unique-to-user",
+    "additionalInfo": {
+      "key": "value"
+    },
+    "states": []
+  },
+  "payload": {
+    "tvChannel": {
+      "name": "芒果台",
+      "code": "123"
+    }
+  }
+}
+```
+
+#### Previous Payload
+
+
+命令示例：
+```json
+{
+  "header": {
+    "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+    "namespace": "Rokid.Control",
+    "name": "Media.TVChannel.Previous",
+    "payloadVersion": "v1",
+    "authorization": {
+      "type": "BearerToken",
+      "token": "a-token-from-skill"
+    }
+  },
+  "endpoint": {
+    "endpointId": "device:an-id-unique-to-user",
+    "additionalInfo": {
+      "key": "value"
+    },
+    "states": []
+  },
+  "payload": {}
+}
+```
+
+#### Next Payload
+
+命令示例：
+```json
+{
+  "header": {
+    "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+    "namespace": "Rokid.Control",
+    "name": "Media.TVChannel.Next",
+    "payloadVersion": "v1",
+    "authorization": {
+      "type": "BearerToken",
+      "token": "a-token-from-skill"
+    }
+  },
+  "endpoint": {
+    "endpointId": "device:an-id-unique-to-user",
+    "additionalInfo": {
+      "key": "value"
+    },
+    "states": []
+  },
+  "payload": {}
+}
+```
 
 ## Media.Music 音乐控制
 类型: song descriptor

@@ -21,7 +21,7 @@ states | `InterfaceState[]` | 终端能力状态，具体信息请参考 [终端
   "header": {
     "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
     "namespace": "Rokid.Control",
-    "name": "Color.Adjust",
+    "name": "Brightness.Adjust",
     "payloadVersion": "v1",
     "authorization": {
       "type": "BearerToken",
