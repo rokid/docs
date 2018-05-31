@@ -1,6 +1,6 @@
 ### SDK生成产物目录结构
 #### config
-* speech_config.json ---- sdk需要的与厂商相关的key/secret等信息,在语音识别以及tts合成时,需要用这些配置信息进行认证,会作为参数传递进SDK,获取方式详见[Rokid自定义产品密钥获取](xxx)
+*  speech_config.json ---- sdk需要与厂商相关的key/secret等信息,在语音识别以及tts合成时,需要用这些配置信息进行认证,会作为参数传递进SDK,可以点击[语音接入](https://developer.rokid.com/voice/#/product/create/list)处创建产品，在下载 SDk 处查看key/secret。
 * workdir_asr_cn  ----前端mic硬件配置以及激活模型文件目录,其中```ctc.xxx.cfg``` 文件为配置激活词信息以及,```device.xxx.cfg``` 文件为麦克风阵列相关配置文件.```workdir_asr_cn```目录中的配置文件一旦生成,不允许私自修改内容及文件名.
 
 #### example
