@@ -1,14 +1,6 @@
-### 目录
+# Homebase over TCP
 
--   [Homebase TCP 通讯协议](#homebase-tcp-通讯协议)
-  - [连接过程](#连接过程)
-  - [指令](#指令)
-    * [method:list](#methodlist)
-    * [method:get](#methodget)
-    * [method:execute](#methodexecute)
-    * [method:command](#methodcommand)
-
-### Homebase TCP 通讯协议
+## 通讯协议
 
 通讯基于 JSON-RPC 2.0，使用 TCP 短连接
 
@@ -46,17 +38,17 @@
 }
 ```
 
-#### 连接过程
+## 连接过程
 
-- Homebase 获取到 TCP 驱动服务 ip 与 端口
-- Homebase 建立与该端口的连接
+- Homebase 获取到 TCP 驱动服务 IP地址 与 端口
+- Homebase 建立与该驱动服务的连接
 - Homebase 发送 TCP json-rpc call
-- 设备收到Homebase发送TCP的FIN包代表Homebase的数据已全部发送完毕，可以开始解析数据并做相应的处理
+- 设备收到 Homebase 发送 TCP 的 FIN 包代表 Homebase 的数据已全部发送完毕，可以开始解析数据并做相应的处理
 - TCP 驱动返回结果完毕后断开连接
 
-#### 指令
+## 指令
 
-##### method:list
+### method:list
 
 获取设备列表
 
@@ -101,39 +93,7 @@
 }
 ```
 
-##### method:get
-
-获取单个设备最新状态
-
-
-输入参数
-
-- params
-  - userAuth， 可选
-    - userId
-    - userToken
-  - device
-    - deviceId
-    - deviceInfo
-
-返回设备， 标准设备接口参考 [Homebase 设备][device]
-
-- result
-  - deviceId
-  - deviceInfo
-  - name
-  - type
-  - offline
-  - parent
-
-
-
-```json
---> {"jsonrpc": "2.0", "method": "get", "params": {"userAuth":{ "userId": "hello1234", "userToken": "" }, "device": {"deviceId": "", "deviceInfo": {}}}, "id": "1"}
-<-- {"jsonrpc": "2.0", "result": {"deviceId": "abc", "deviceInfo":{}, "name": "灯", "type": "light", "offline": false}, "id": "1"}
-```
-
-##### method:execute
+### method:execute
 
 - params
   - userAuth， 可选
@@ -166,11 +126,10 @@
 <-- { "jsonrpc": "2.0", "result": {"switch": "on"}, "id": "1"}
 ```
 
-##### method:command
+### method:command
 
 - params
   - method {String}
   - params {Object}
-
 
 [device]: ../v1/device/device.md
