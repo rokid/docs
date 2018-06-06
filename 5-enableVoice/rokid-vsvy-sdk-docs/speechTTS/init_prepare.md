@@ -2,7 +2,7 @@
 
 #### 获取SDK
 
- * 请通过 [Rokid SDK下载网站](https://developer-dev.rokid.com/tob) , 根据网站提示进行配置,生成 SDK 后下载
+ * 请登录[Rokid 开发者社区官网](https://developer.rokid.com/#/) （https://developer.rokid.com/#/）， 选择语音接入，创建产品，并根据网站提示进行配置，最后生成 SDK 后进行下载即可。
 
 #### 复制文件
 
