@@ -44,18 +44,10 @@
     * [错误码](5-enableVoice/rokid-vsvy-sdk-docs/common/err_code.md)
     * [Json格式配置字串](5-enableVoice/rokid-vsvy-sdk-docs/common/api_json.md) 
     * [云端应用接口开发协议](3-ApiReference/openvoice-api.md)
-    
 * Rokid 技能开放平台
     * [技能开放平台简介](2-RokidDocument/1-SkillsKit/platform-introduction.md)
     * 快速入门
-        * [准备工作](2-RokidDocument/1-SkillsKit/getting-started/prepare.md)
-        * [创建技能](2-RokidDocument/1-SkillsKit/getting-started/create-skill.md)
-        * [技能信息](2-RokidDocument/1-SkillsKit/getting-started/skill-information.md)
-        * [语音交互](2-RokidDocument/1-SkillsKit/getting-started/voice-interaction.md)
-        * [配置](2-RokidDocument/1-SkillsKit/getting-started/configuration.md)
-        * [集成测试](2-RokidDocument/1-SkillsKit/getting-started/test.md)
-        * [发布](2-RokidDocument/1-SkillsKit/getting-started/publish.md)
-        * [隐私与合规](2-RokidDocument/1-SkillsKit/getting-started/private-and-compliance.md)
+        * [技能创建与发布](2-RokidDocument/1-SkillsKit/getting-started/create-and-pulibsh.md)
         * [技能展示](2-RokidDocument/1-SkillsKit/getting-started/skill-store.md)
         * [技能示例代码](2-RokidDocument/1-SkillsKit/skill-sample.md)
     * 重要概念
@@ -122,6 +114,7 @@
         * [Homebase OAuth2.0 授权](rokid-homebase-docs/v1/OAuth2.0.md)
   * 高级功能
     * [Webhook](rokid-homebase-docs/webhook/index.md)
+
 
 * Rokid 智能开发套件
     * [智能开发套件简介](rokidos-linux-docs/README.md)
