@@ -1,4 +1,4 @@
-##创建和配置产品
+##一、创建和配置产品
 
 ###Step1:登录平台账号（若尚未有账号请先注册）
 
@@ -141,3 +141,135 @@ Rokid平台上的技能根据开放性的不同，可以分为**`公开技能`**
 [拦截器设置接入指南](https://developer.rokid.com/docs/3-ApiReference/rokid-interceptor.html)
 
 ![](images/10.png)
+
+
+
+## 二、获取SDK
+
+完成产品的创建和配置后，即可获取产品的SDK。获取SDK有如下两种方式。
+
+####方式一
+
+在【产品列表】页面下，选择相应的产品选项卡， 点击选项卡右下角的下载图标，即可下载产品SDK。如下图所示。
+
+![](images/sdk02.png)
+
+
+
+####方式二
+
+在产品的编辑页面，点击页面左下角【SDK下载】即可获取产品的SDK。
+
+![](images/11.png)
+
+
+
+点击后会弹出如下页面，接下来就可以进行下载SDK，获取测试SN，进行产品的在线测试等操作。如下图所示。
+
+![](images/sdk04.png)
+
+
+
+##三、获取测试SN和导入SN
+
+###获取测试SN
+
+####什么是SN和测试SN
+
+SN（同device id）为设备的序列号，设备的唯一标识项。用于进行Rokid设备认证和Rokid平台服务认证的基础参数。测试SN，主要用于测试期间使用Rokid设备认证和获取平台服务。
+
+####SN和typeID的区别
+
+typeID是同一类型硬件产品的共有id，而SN则为该类型产品下单个设备的唯一id。技能授权仅与typeID有关，与设备SN无关，用户提供typeID获取了技能授权后，该typeID下的所有设备均可使用这些技能。
+
+> 如：Rokid Pebble的typeID为95XXXXXX，但每一台pebble都有自己的SN。
+
+####获取测试SN的方式
+
+测试SN和Seed不再人工提供，用户在https://developer.rokid.com/voice/ 注册后，创建产品，进行自动生成。可在线进行查看和获取，具体有如下两种获取方式：
+
+#####方式1
+
+进行SDK下载时点击获取测试SN，如下图所示：
+
+![](images/sn01.png)
+
+
+
+#####方式2
+
+产品管理页面顶部设备SN，筛选对应产品即可看到测试SN，如下图所示：
+
+![](images/sn02.png)
+
+
+
+若想要申请更多的测试SN，请联系商务（商务邮箱：rokidopen@rokid.com）。
+
+
+
+###导入正式SN
+
+测试完成后，若想正式使用Rokid服务，需要导入正式SN。
+
+正式SN需要联系商务（商务邮箱：rokidopen@rokid.com）签订合同后才能获取导入资格。**邮件内容请写明：公司名称、联系方式、申请导入SN数量。**商务授权后即可导入正式SN。导入正式SN后，Rokid开放平台即对这批SN设备进行授权，这批设备即可正式使用Rokid语音交互服务。
+
+####具体操作：
+
+进入【设备SN】页面，然后点击【导入SN】，并按照指定模板导入即可。如下图所示：
+
+![](images/sn03.png)
+
+
+![](images/sn04.png)
+
+
+
+
+
+导入完成后，页面会提示导入成功。10分钟后，该批SN即可使用平台的语音服务。客户可以在页面的【类别选择】中选择【正式】类别查看自己导入的SN号。
+
+![](images/sn05.png)
+
+
+
+**注意：**若导入的SN号有重复，系统会自动对其进行去重，重复的SN号不计算在总的SN数量里。
+
+
+
+##四、认证文件使用方法
+
+###直接调用API时的配置方法
+
+直接通过API调用Rokid语音服务时，按照[Rokid开发者社区接口文档](/3-ApiReference/openvoice-api.md)中的要求，填入相应的参数即可。
+其中提到的`key` `secret` `account_id` `device_type_id`均通过开放平台语音接入 SDK 下载页面获得。
+
+但需要注意，`device_id`需要由开发者自行指定，由6~15位的字母和数字组成，不能含有空格和特殊符号。此ID每个设备唯一。
+
+###使用C++ SDK时的配置方法
+
+通过调用SDK中的config方法来配置认证信息：
+
+```c++
+void config(String key, String value)
+```
+
+同样的，`device_id`需要开发者自行指定，用以区分每个不同的设备。
+
+具体请查看[Rokid客户端SDK文档中的示例](/3-ApiReference/rokid-client-sdk-doc.md)。
+
+#### 在Android设备上使用TTS、Speech SDK时的配置方法
+
+##### TTS SDK
+SDK解包后`etc`目录下文件最终需要放到安卓设备的`/system/etc`目录下。
+其中`tts_sdk.json`提供TTS SDK需要的配置信息，包括连接服务器的认证信息。
+
+首先需要将创建认证文件中获得的认证信息填入到此文件中，具体需要修改如下几项：
+`key` `secret` `device_type_id` `device_id`
+
+再将`tts_sdk.json`文件push到设备中：
+
+```text
+cd etc
+adb push . /system/etc/
+```
