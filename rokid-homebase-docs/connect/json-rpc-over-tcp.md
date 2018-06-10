@@ -5,22 +5,24 @@
 **成功返回**
 
 - `jsonrpc` {string} 必须为"2.0"
-- `id` {int} 必须与请求对象中的id一致
+- `id` {string} 必须与请求对象中的id一致
 - `result` {any} 执行结果, 根据接口类型返回不同的结果
 
-
 ```json
-{"jsonrpc": "2.0", "result": "some data", "id": 1}
+{"jsonrpc": "2.0", "result": "some data", "id": "1"}
 ```
 
 **错误返回**
 
 - `jsonrpc` {string} 必须为"2.0"
-- `id` {int} 必须与请求对象中的id一致
+- `id` {string} 必须与请求对象中的id一致
 - `error` {object} 错误对象
+- `error.code` {int} 错误代号
+- `error.data` {string} 若琪标准错误， 同 error.errorName
+- `error.errorName` {string} 若琪标准错误 同 error.data
+- `error.vendorErrorCode` {string} 厂商错误码
 - `error.message` {string} 错误描述
-- `error.code` {int} 错误代码
-- `error.data` {string} 错误名称
+- `error.debugInfo` {string} 调试必要信息
 
 错误代码和错误名称需使用指定值，具体请参考 [标准错误](../v1/errors.md)
 
@@ -32,7 +34,7 @@
     "message": "error reason",
     "data": "E_DRIVER_ERROR"
   },
-  "id": 1
+  "id": "1"
 }
 ```
 
@@ -67,7 +69,7 @@
   - actions
 
 ```json
---> {"jsonrpc": "2.0", "method": "list", "params": {"userAuth":{ "userId": "hello1234" }}, "id": 1}
+--> {"jsonrpc": "2.0", "method": "list", "params": {"userAuth":{ "userId": "hello1234" }}, "id": "1"}
 <-- {
    "jsonrpc":"2.0",
    "result":[
@@ -87,7 +89,7 @@
          "offline":false
       }
    ],
-   "id":1
+   "id": "1"
 }
 ```
 
@@ -119,8 +121,8 @@
 
 
 ```json
---> {"jsonrpc": "2.0", "method": "get", "params": {"userAuth":{ "userId": "hello1234", "userToken": "" }, "device": {"deviceId": "", deviceInfo: {}}}, "id": 1}
-<-- {"jsonrpc": "2.0", "result": {"deviceId": "abc", "deviceInfo":{}, "name": "灯", "type": "light", "offline": false}, "id": 1}
+--> {"jsonrpc": "2.0", "method": "get", "params": {"userAuth":{ "userId": "hello1234", "userToken": "" }, "device": {"deviceId": "", deviceInfo: {}}}, "id": "1"}
+<-- {"jsonrpc": "2.0", "result": {"deviceId": "abc", "deviceInfo":{}, "name": "灯", "type": "light", "offline": false}, "id": "1"}
 ```
 
 ### method: `execute`

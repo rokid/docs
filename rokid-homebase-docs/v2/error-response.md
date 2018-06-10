@@ -12,7 +12,9 @@
   },
   "payload": {
     "name": "E_INTERNAL_ERROR",
-    "message": "发生了一些不可告人的错误"
+    "vendorErrorCode": "origin-error-code",
+    "message": "发生了一些不可告人的错误",
+    "debugInfo": "something for debug",
   }
 }
 ```
@@ -22,7 +24,9 @@
 字段名 | 类型 | 描述
 --- | --- | ---
 name | string | 若琪提供的枚举错误码
+vendorErrorCode | string | 厂家自有错误码
 message | string | Skill 对发生的错误的详细描述，若琪不会将这个消息展现给用户
+debugInfo | string | 用于调试的必要信息，用于协助问题定位
 
 ### Error Codes 错误码
 

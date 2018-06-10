@@ -33,15 +33,17 @@ HTTP 远程驱动使用 JSON 作为数据交换格式， 执行成功会返回�
 **错误返回**
 
 - `status` {Int} 必须 大于0 的正整数
-- `message` {String} status > 0 时必选，错误描述
-- `errorName` {String} 可选， Homebase 标准错误名，
+- `errorName` {String} 可选， Homebase 标准错误名
+- `message` {String} status > 0 时必选；错误描述, 对错误的简短描述
+- `debugInfo` {String} 可选， Homebase 标准错误名
 
 ```json
 {
   "status": 1,
+  "errorName": "E_DRIVER_ERROR",
+  "vendorErrorCode": 10001,
   "message": "time out",
-  "code": 10001,
-  "errorName": "E_DRIVER_ERROR"
+  "debugInfo": "some info for debug"
 }
 ```
 
