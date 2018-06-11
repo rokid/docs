@@ -1,33 +1,46 @@
-## 一、概述
+### 目录
+* [一、概述](#一、概述)
+* [二、SDK生成产物目录结构](#二、sdk生成产物目录结构)
+* [三、快速集成](#三、快速集成)
+  * [集成步骤](#集成步骤)
+* [四、API参考](#四、api参考)
+  * [VoiceRecognize](#voicerecognize)
+  * [内部类](#内部类)
+  * [回调接口](#回调接口)
+  * [示例代码](#示例代码)
 
-### Rokid 全链路通用方案
 
-Rokid 全链路系统集成是指选择 Rokid 全链路 SDK 下载后,通过 Android 源码方式集成SDK,集成 SDK 成功后,可以获取Rokid 前端语音激活/降噪以及 Rokid 语音识别服务和语音合成服务的相关能力.
+
+### 一、概述
+
+#### Rokid全链路通用方案
+
+Rokid 全链路系统集成是指选择 Rokid 全链路 SDK 下载后,通过 Android 源码方式集成SDK,集成 SDK 成功后,可以获取Rokid 前端语音激活/降噪以及 Rokid 语音识别服务和语音合成服务的相关能力。
  - 前端语音能力
-  - 将麦克风阵列中的语音数据转换成对应的前端语音激活/休眠等事件. Rokid 提供的前端语音能力可为开发者提供语音 AEC 降噪处理/回声消除处理等
+  - 将麦克风阵列中的语音数据转换成对应的前端语音激活/休眠等事件. Rokid 提供的前端语音能力可为开发者提供语音 AEC 降噪处理/回声消除处理等。
  - 语音识别服务(ASR)
-  - 语音识别可以通过开发者提供的原始语音数据/经过算法处理过的语音数据识别成对应的自然语言(ASR),以及对应的自然语言处理(NLP)信息
+  - 语音识别可以通过开发者提供的原始语音数据/经过算法处理过的语音数据识别成对应的自然语言(ASR),以及对应的自然语言处理(NLP)信息。
  - 语音合成服务(TTS)
   - Rokid语音合成服务可以根据开发者提供的文字合成高质量的音频。
 
 
 
-## 二、SDK生成产物目录结构
+### 二、SDK生成产物目录结构
 
-### config
+#### config
 
 *  speech_config.json ---- sdk需要与厂商相关的key/secret等信息,在语音识别以及tts合成时,需要用这些配置信息进行认证,会作为参数传递进SDK,可以点击[语音接入](https://developer.rokid.com/voice/#/product/create/list)处创建产品，在下载 SDk 处查看key/secret。
 *  workdir_asr_cn  ----前端mic硬件配置以及激活模型文件目录,其中```ctc.xxx.cfg``` 文件为配置激活词信息以及,```device.xxx.cfg``` 文件为麦克风阵列相关配置文件.```workdir_asr_cn```目录中的配置文件一旦生成,不允许私自修改内容及文件名.
 
-### example
+#### example
 
  - 源码示例程序1(android 源码编译集成前端 + speech 的示例程序 ,目录:SpeechExecutor)
 
-### executable
+#### executable
 
 * turenproc   ---- 前端拾音服务 链接mic数据读取以及语音识别服务(speech)模块的可执行进程
 
-### java-libraries  文件列表
+#### java-libraries  文件列表
 
 * jdk1.7  若编译器javac版本为java 1.7.x版本
   * VoiceRecognize.jar
@@ -40,7 +53,7 @@ Rokid 全链路系统集成是指选择 Rokid 全链路 SDK 下载后,通过 And
 * VoiceRecognize.jar    -----前端拾音服务(turen)输入输出 的java api接口封装
 * rokid_speech.jar    ---- 语音识别以及合成服务(speech/tts) 输入输出的java api接口封装
 
-### shared-libraries 文件列表
+#### shared-libraries 文件列表
 
 * arm64-v8a
    * libc++_shared.so
@@ -96,15 +109,15 @@ Rokid 全链路系统集成是指选择 Rokid 全链路 SDK 下载后,通过 And
 
 
 
-## 三、快速集成
+### 三、快速集成
 
-### 集成步骤
+#### 集成步骤
 
-#### 下载SDK
+##### 下载SDK
 
  * 请登录[Rokid 开发者社区官网](https://developer.rokid.com/#/) （https://developer.rokid.com/#/）， 选择语音接入，创建产品，并根据网站提示进行配置，最后生成 SDK 后进行下载即可。
 
-#### 集成SDK
+##### 集成SDK
 
   * 将下载的SDK进行解压,解压后的目录结构说明请参照 [SDK目录结构](sdk_dir.md)
   * 需要将对应的```so/jar/exe```以及配置文件预置到系统指定位置,可参考方法如下:将解压后的目录放到系统源码中,比如```/vendor/rokid/sdk_v2/``` 目录下,然后在此文件夹下添加如下 [sdk_v2.mk](../extra/sdk_v2.mk) ,同时按照以下步骤使sdk能够被系统编译到
@@ -132,17 +145,17 @@ Rokid 全链路系统集成是指选择 Rokid 全链路 SDK 下载后,通过 And
 
    * 将 java-libraries 下的静态jar包集成到一个系统应用中,来接收前端语音事件以及ASR/NLP,以提供的 example 中的 SpeechExecutor [模块说明](introduce_speechexecutor.md)为例,集成编译后会在```system/app/SpeechExecutor```下生成 SpeechExecutor.apk, 在系统开机配置好网络后,通过```adb shell am startservice com.rokid.voicerec/.SpeechExecutor``` 来启动Demo的service,然后通过Log查看是否有前端语音事件以及asr/nlp相关的log信息,如果有则证明集成OK.如果没有,请参考下边的集成注意事项或者联系我们.
 
-#### 集成注意事项
+##### 集成注意事项
 
  * 目前Android全链路前端语音识别部分仅支持32位armeabi-v7a so文件输出,64位支持正在开发中,敬请期待.
  * 由于前端拾音模块需要读取Mic数据,因此各个客户/集成开发者需要在hal层实现mic设备的open以及read等接口,并以```"mic_array"```为```HAL_MODULE_INFO_SYM``` 的 id.具体接口为 android 标准的硬件设备hal层实现,具体可参考 [mic_array.c](../extra/mic_array.c) & [mic_array.h](../extra/mic_array.h) 的实现.目前支持的 mic 阵列数据采集格式至少为```16K/16bit/单通道``` 的数据格式.
 
-#### 接口调用说明
+##### 接口调用说明
 * 请参考[Android全链路接口调用说明](api_voicerecognize.md)
 
 
 
-## 四、API参考
+### 四、API参考
 
 VoiceRecognize.jar中包含```VoiceRecognize```和```VoiceRecognizeBuilder```两个比较重要的类。
 使用```VoiceRecognizeBuilder```设置Rokid账号信息就能得到一个```VoiceRecognize```对象，账号获取方式见[创建设备流程](../rookie-guide/create-device.md)。
@@ -277,7 +290,7 @@ VoiceRecognize.jar中包含```VoiceRecognize```和```VoiceRecognizeBuilder```两
 
 
 #### 回调接口
-#####  VoiceRecognize.Callback
+##### VoiceRecognize.Callback
 
 | 返回类型 | 方法                                              | 备注                           |      |
 | -------- | ------------------------------------------------- | ------------------------------ | ---- |
@@ -394,5 +407,3 @@ import android.util.Log;
     }
     
 ```
-
-
