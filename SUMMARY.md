@@ -3,20 +3,12 @@
 * [Rokid 开放平台](README.md)
 * Rokid 语音接入平台
     * [平台简介](5-enableVoice/rokid-vsvy-sdk-docs/introduction.md)
-    * 新手入门
-        * [创建和配置产品](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/create-device.md)
-        * [获取SDK](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/sdk.md)
-        * [获取测试 SN 和导入SN](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/sn.md)
-        * [认证文件使用方法](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/usage.md) 
-    * Android 全链路通用方案
-        * [概述](5-enableVoice/rokid-vsvy-sdk-docs/fullLink/introduce.md)
-        * [SDK 目录结构](5-enableVoice/rokid-vsvy-sdk-docs/fullLink/sdk_dir.md)
-        * [快速集成](5-enableVoice/rokid-vsvy-sdk-docs/fullLink/init_quick.md)
-        * [API 参考](5-enableVoice/rokid-vsvy-sdk-docs/fullLink/api_voicerecognize.md)
+    * [新手入门](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/rookie-guide.md) 
+    * [Android 全链路通用方案](5-enableVoice/rokid-vsvy-sdk-docs/fullLink/fulllink.md)
     * Android 基础语音模块
         * [概述](5-enableVoice/rokid-vsvy-sdk-docs/speechTTS/introduce.md)
         * [SDK 目录结构](5-enableVoice/rokid-vsvy-sdk-docs/speechTTS/sdk_dir.md)
-        * [快速集成](5-enableVoice/rokid-vsvy-sdk-docs/speechTTS/init.md)
+        * 快速集成
            * [集成前准备](5-enableVoice/rokid-vsvy-sdk-docs/speechTTS/init_prepare.md)
            * [语音识别服务快速集成](5-enableVoice/rokid-vsvy-sdk-docs/speechTTS/init_speech.md)
            * [语音合成服务快速集成](5-enableVoice/rokid-vsvy-sdk-docs/speechTTS/init_tts.md)
@@ -114,7 +106,6 @@
         * [Homebase OAuth2.0 授权](rokid-homebase-docs/v1/OAuth2.0.md)
   * 高级功能
     * [Webhook](rokid-homebase-docs/webhook/index.md)
-
 
 * Rokid 智能开发套件
     * [智能开发套件简介](rokidos-linux-docs/README.md)
