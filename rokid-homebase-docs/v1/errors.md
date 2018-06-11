@@ -9,6 +9,7 @@
 - `E_DRIVER_WRONG_USERNAME_PASSWORD` 用户名密码错误（登录 command 内使用）
 - `E_DRIVER_LOGIN_FAILED` 登录失败（登录 command 内使用）
 - `E_CHANNEL_NOT_FOUND` 找不到该频道( channel.channelName action 使用)
+- `E_NETWORK_DOMAIN`
 
 ## 家庭音乐错误
 
