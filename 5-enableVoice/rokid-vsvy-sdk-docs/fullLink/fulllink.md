@@ -1,33 +1,33 @@
-##一、概述
+## 一、概述
 
-###Rokid 全链路通用方案
+### Rokid 全链路通用方案
 
 Rokid 全链路系统集成是指选择 Rokid 全链路 SDK 下载后,通过 Android 源码方式集成SDK,集成 SDK 成功后,可以获取Rokid 前端语音激活/降噪以及 Rokid 语音识别服务和语音合成服务的相关能力.
  - 前端语音能力
   - 将麦克风阵列中的语音数据转换成对应的前端语音激活/休眠等事件. Rokid 提供的前端语音能力可为开发者提供语音 AEC 降噪处理/回声消除处理等
- - 语音识别服务
+ - 语音识别服务(ASR)
   - 语音识别可以通过开发者提供的原始语音数据/经过算法处理过的语音数据识别成对应的自然语言(ASR),以及对应的自然语言处理(NLP)信息
  - 语音合成服务(TTS)
   - Rokid语音合成服务可以根据开发者提供的文字合成高质量的音频。
 
 
 
-##二、SDK生成产物目录结构
+## 二、SDK生成产物目录结构
 
-###config
+### config
 
 *  speech_config.json ---- sdk需要与厂商相关的key/secret等信息,在语音识别以及tts合成时,需要用这些配置信息进行认证,会作为参数传递进SDK,可以点击[语音接入](https://developer.rokid.com/voice/#/product/create/list)处创建产品，在下载 SDk 处查看key/secret。
 *  workdir_asr_cn  ----前端mic硬件配置以及激活模型文件目录,其中```ctc.xxx.cfg``` 文件为配置激活词信息以及,```device.xxx.cfg``` 文件为麦克风阵列相关配置文件.```workdir_asr_cn```目录中的配置文件一旦生成,不允许私自修改内容及文件名.
 
-###example
+### example
 
  - 源码示例程序1(android 源码编译集成前端 + speech 的示例程序 ,目录:SpeechExecutor)
 
-###executable
+### executable
 
 * turenproc   ---- 前端拾音服务 链接mic数据读取以及语音识别服务(speech)模块的可执行进程
 
-###java-libraries  文件列表
+### java-libraries  文件列表
 
 * jdk1.7  若编译器javac版本为java 1.7.x版本
   * VoiceRecognize.jar
@@ -40,7 +40,7 @@ Rokid 全链路系统集成是指选择 Rokid 全链路 SDK 下载后,通过 And
 * VoiceRecognize.jar    -----前端拾音服务(turen)输入输出 的java api接口封装
 * rokid_speech.jar    ---- 语音识别以及合成服务(speech/tts) 输入输出的java api接口封装
 
-###shared-libraries 文件列表
+### shared-libraries 文件列表
 
 * arm64-v8a
    * libc++_shared.so
@@ -96,7 +96,7 @@ Rokid 全链路系统集成是指选择 Rokid 全链路 SDK 下载后,通过 And
 
 
 
-##三、快速集成
+## 三、快速集成
 
 ### 集成步骤
 
@@ -142,7 +142,7 @@ Rokid 全链路系统集成是指选择 Rokid 全链路 SDK 下载后,通过 And
 
 
 
-##四、API参考
+## 四、API参考
 
 VoiceRecognize.jar中包含```VoiceRecognize```和```VoiceRecognizeBuilder```两个比较重要的类。
 使用```VoiceRecognizeBuilder```设置Rokid账号信息就能得到一个```VoiceRecognize```对象，账号获取方式见[创建设备流程](../rookie-guide/create-device.md)。
