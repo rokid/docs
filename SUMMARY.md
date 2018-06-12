@@ -5,26 +5,8 @@
     * [平台简介](5-enableVoice/rokid-vsvy-sdk-docs/introduction.md)
     * [新手入门](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/rookie-guide.md) 
     * [Android 全链路通用方案](5-enableVoice/rokid-vsvy-sdk-docs/fullLink/fulllink.md)
-    * Android 基础语音模块
-        * [概述](5-enableVoice/rokid-vsvy-sdk-docs/speechTTS/introduce.md)
-        * [SDK 目录结构](5-enableVoice/rokid-vsvy-sdk-docs/speechTTS/sdk_dir.md)
-        * 快速集成
-           * [集成前准备](5-enableVoice/rokid-vsvy-sdk-docs/speechTTS/init_prepare.md)
-           * [语音识别服务快速集成](5-enableVoice/rokid-vsvy-sdk-docs/speechTTS/init_speech.md)
-           * [语音合成服务快速集成](5-enableVoice/rokid-vsvy-sdk-docs/speechTTS/init_tts.md)
-        * [API参考](5-enableVoice/rokid-vsvy-sdk-docs/speechTTS/api.md)
-           * [语音识别服务](5-enableVoice/rokid-vsvy-sdk-docs/speechTTS/api_speech.md)
-           * [语音合成服务](5-enableVoice/rokid-vsvy-sdk-docs/speechTTS/api_tts.md)
-        * [示例源码](https://github.com/Rokid/RokidSpeechTTSDemo) 
-    * Linux基础架构
-        * [概述](5-enableVoice/rokid-vsvy-sdk-docs/speechTTS/introduce.md)
-        * [目录结构](5-enableVoice/rokid-vsvy-sdk-docs/linuxsdk/sdk_linux_dir.md)
-        * 快速集成
-           * [集成前准备](5-enableVoice/rokid-vsvy-sdk-docs/linuxsdk/init_linux_prepare.md)
-           * [开始集成](5-enableVoice/rokid-vsvy-sdk-docs/linuxsdk/begin_integrate.md)
-        * API 接口
-           * [语音合成服务](5-enableVoice/rokid-vsvy-sdk-docs/linuxsdk/linux_tts_api.md)
-           * [语音识别服务](5-enableVoice/rokid-vsvy-sdk-docs/linuxsdk/linux_speech_api.md)
+    * [Android 基础语音模块](5-enableVoice/rokid-vsvy-sdk-docs/speechTTS/speechtts.md)
+    * [Linux基础架构](5-enableVoice/rokid-vsvy-sdk-docs/linuxsdk/linuxsdk.md)
     * 接口文档
         * [拦截器接口文档](3-ApiReference/rokid-interceptor.md)
         * [设备接口文档](3-ApiReference/open-device-manager.md)
@@ -49,6 +31,7 @@
         * [confirm](2-RokidDocument/1-SkillsKit/important-concept/confirm.md)
         * [session](2-RokidDocument/1-SkillsKit/important-concept/session.md)
         * [NLP 正则表达式](2-RokidDocument/1-SkillsKit/important-concept/regular-expression.md)
+        * [Rokid 云端技能协议](3-ApiReference/cloud-app-development-protocol_cn.md)
     * 技能开发指南
         * [Rokid 语音交互设计指南](2-RokidDocument/1-SkillsKit/rokid-voice-interaction-guidelines.md)
         * [Rokid Force System 使用指南](2-RokidDocument/1-SkillsKit/rokid-force-system-tutorial.md)
@@ -63,8 +46,6 @@
     * 规范
         * [技能发布标准](4-TermsAndAgreements/rokid-skill-release-standard.md)
         * [技能审核规范](4-TermsAndAgreements/rokid-skill-examine-and-verify-standard.md)
-    * 技能协议
-        * [Rokid 云端技能协议](3-ApiReference/cloud-app-development-protocol_cn.md)
 
 * Rokid 智能家居设备接入平台
   * 平台介绍

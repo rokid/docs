@@ -12,8 +12,3 @@ Rokid语音接入平台是一个智能语音服务平台，基于Rokid的大数�
 ##### [全链路通用方案](/rokid-vsvy-sdk-docs/fullLink/introduce.md)：包括前端语音激活/降噪以及 Rokid 语音识别服务和语音合成服务的相关能力。
 
 ##### [基础语音模块](/rokid-vsvy-sdk-docs/speechTTS/introduce.md)：基础语语音服务的输出，包括语音识别服务和语音合成服务。
-
-
-
-###快速入口：[一键接入](https://developer.rokid.com/voice/#/product/create/access-new-prd)
-

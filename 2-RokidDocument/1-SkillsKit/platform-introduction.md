@@ -48,19 +48,17 @@ Rokid技能开放平台包含开发工具、文档、以及丰富的示例代码
 ##### 私有技能
 私有属性的技能无法向所有用户开放，仅针对经过授权的企业或个人的特定类型的设备开放。用户需要在被授权的设备上才能够使用私有技能。
 
-- 注意：在创建**`私有技能`**时还需选择是创建**`本地私有技能`**还是**`云端私有技能`**。创建**`本地私有技能`**需要写一个apk推送到设备上（具体参照：https://github.com/Rokid/NewsDemo）； 创建**`云端私有技能`**，则后台配置服务不在设备上而是在另外搭建的服务端上。不管本地还是云端，都需要遵守我们的[协议格式](/3-ApiReference/cloud-app-development-protocol_cn.md)进行通信。（具体参照【技能创建与发布】的第五步-后端服务配置：[技能创建与发布](/getting-started/create-and-pulibsh.md))
-
 <table style="word-break:break-all; word-wrap:break-all;">
     <tr>
         <th></th>
-        <th>公开技能</th>
+        <th width="48%">公开技能</th>
         <th>私有技能</th>
     </tr>
     <tr>
         <td align="center">定位</td>
-        <td align="center">面向终端用户。
+        <td align="left"><strong>面向终端用户</strong><br>
 对所有搭载Rokid语音解决方案的设备开放，终端用户可以通过在app中轻松开启/关闭公有技能。</td>
-        <td align="center">面向开发者。
+        <td align="left"><strong>面向开发者</strong><br>
 不面向终端用户开放，仅授权自有产品或其他指定产品使用。终端用户需要在被授权的设备上才能够使用私有技能。</td>
     </tr>
     <tr>
@@ -70,8 +68,8 @@ Rokid技能开放平台包含开发工具、文档、以及丰富的示例代码
     </tr>
     <tr>
         <td align="center">平台展示</td>
-        <td align="center">默认展示到技能商店供终端用户使用，同时默认展示在【产品管理>技能配置】 中供开发者配置。</td>
-        <td align="center">技能拥有者自己确定是否展示：（1）不展示，则仅技能拥有者自己可见；（2）展示，则展示在【产品管理>技能配置】中供开发者配置。</td>
+        <td align="left">默认展示到技能商店供终端用户使用，同时默认展示在【产品管理>技能配置】 中供开发者配置。</td>
+        <td align="left">技能拥有者自己确定是否展示：（1）不展示，则仅技能拥有者自己可见；（2）展示，则展示在【产品管理>技能配置】中供开发者配置。</td>
     </tr>
     <tr>
         <td align="center">审核</td>
@@ -80,18 +78,22 @@ Rokid技能开放平台包含开发工具、文档、以及丰富的示例代码
     </tr>
     <tr>
         <td align="center">第三方开发者申请使用</td>
-        <td align="center">第三方开发者可以直接在直接【产品管理>技能配置】中页面直接添加，即可使用到他们的产品中（配置到产品中的公有技能，终端用户无法关闭）。</td>
-        <td align="center">第三方开发者在【产品管理>技能配置】中向技能拥有者申请授权或申请购买，经过技能拥有者同意后方可使用到产品中。</td>
+        <td align="left">第三方开发者可以直接在直接【产品管理>技能配置】中页面直接添加，即可使用到他们的产品中（配置到产品中的公有技能，终端用户无法关闭）。</td>
+        <td align="left">第三方开发者在【产品管理>技能配置】中向技能拥有者申请授权或申请购买，经过技能拥有者同意后方可使用到产品中。</td>
     </tr>
     <tr>
         <td align="center">付费</td>
-        <td align="center">技能免费使用（技能在使用中部分存在收费项目）</td>
+        <td align="center">技能免费使用(技能在使用中部分存在收费项目)</td>
         <td align="center">技能拥有者自己确定技能是否收费</td>
     </tr>
     <tr>
         <td align="center">本地技能</td>
         <td align="center">不支持</td>
         <td align="center">支持</td>
+    </tr>
+    <tr>
+        <td align="center">备注</td>
+        <td colspan="2" align="left">在创建<strong><code>私有技能</code></strong>时还需选择是创建<strong><code>本地私有技能</code></strong>还是<strong><code>云端私有技能</code></strong>。<br>创建<strong><code>本地私有技能</code></strong>需要写一个apk推送到设备上（具体参照：<a href="https://github.com/Rokid/NewsDemo">Rokid NativeApp开发示例</a>）；创建<strong><code>云端私有技能</code></strong>，则后台配置服务不在设备上而是在另外搭建的服务端上。<br>不管本地还是云端，都需要遵守我们的<a href="./important-concept/cloud-app-development-protocol_cn.md">协议格式</a>进行通信。（具体参照【技能创建与发布】的第五步-后端服务配置：<a href="./getting-started/create-and-pulibsh.md">技能创建与发布</a>)</td>
     </tr>
 </table>
 
