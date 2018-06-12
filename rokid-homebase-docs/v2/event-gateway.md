@@ -1,6 +1,6 @@
 # 向若琪发送消息
 
-当 Skill 获取了由若琪颁发的 EventGateway Token 后，即可向若琪 EventGateway 推送用户终端的状态变化信息、异步消息等事件。
+当 Skill 获取了由若琪颁发的 EventGateway Token 后，即可向 Rokid EventGateway 推送用户终端的状态变化信息、异步消息等事件。
 
 Rokid IoT EventGateway 使用 HTTP 状态码来表述本次事件请求结果，当状态码为 202 时（成功）回复体为空：
 
