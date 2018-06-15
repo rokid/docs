@@ -1,12 +1,12 @@
-# 刷机说明
+## 刷机说明
 
-## Amlogic芯片
+### Amlogic芯片
 
-### Android 系统
+#### Android 系统
 
 如果您的开发板是 Android 系统，请参考[Android 刷机文档](https://developer-forum.rokid.com/t/topic/983)来了解 Android 系统生成的系统镜像的位置。
 
-### Linux 系统
+#### Linux 系统
 
 如果您的开发板是Linux系统，镜像位置及各** img **文件简单说明如下，该示例仅保证Amlogic/A113开发板有效。
 ```
@@ -23,7 +23,8 @@ output/<开发板型号>/images
     ├── rootfs.ubifs               #<< 注意: 根据您使用的
     ├── u-boot.bin                 #<< 可 fastboot 刷机镜像，bootloader 分区
 ```
-#### 官方刷机方式
+##### 官方刷机方式
+
 1. 安装 [Amlogic 官方刷机工具](https://scm-deps-library.rokid-inc.com/linux/buildroot_dl_aml/tools/aml_burn_img_tool_v2.1.2.exe)
 具体安装步骤，请参阅 [Amlogic 官方刷机工具使用教程](https://rokid.github.io/rokidos-linux-docs/files/amlogic/AmlUSBBurning.pdf)。
 2. 选择刷机镜像
@@ -38,7 +39,7 @@ output/<开发板型号>/images
 4. 开始刷机
 	点击刷机工具中的"**开始**"按钮，开始刷机，并等待刷机完成，请按照刷机工具中的提示操作。
 
-#### fastboot 刷机方式
+##### fastboot 刷机方式
 
 1. 进入 fastboot 模式
 	首先：开发板核心板 **TypeC** 接口与 **PC** 已连接。
@@ -76,7 +77,7 @@ output/<开发板型号>/images
 		fastboot flash boot boot.img
 		fastboot flash system rootfs.ubifs
 		fastboot flash recovery recovery.img
-		```	
+		```
 	* 开发板是 Android 系统，在PC端执行如下指令：
 		```shell
 		fastboot flash bootloader u-boot.bin
@@ -87,7 +88,7 @@ output/<开发板型号>/images
 		fastboot flash data userdata.img
 		```
 
-## 开发板镜像下载地址
+### 开发板镜像下载地址
 
 - Linux镜像下载地址：[linux](https://developer-forum.rokid.com/t/topic/1152)
 - Android镜像下载地址：[android](https://developer-forum.rokid.com/t/topic/1178)
