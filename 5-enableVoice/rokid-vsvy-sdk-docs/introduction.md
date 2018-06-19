@@ -9,6 +9,8 @@ Rokid语音接入平台是一个智能语音服务平台，基于Rokid的大数�
 
 ###接入方案类型
 
-##### [全链路通用方案](/rokid-vsvy-sdk-docs/fullLink/fulllink.md)：包括前端语音激活/降噪以及 Rokid 语音识别服务和语音合成服务的相关能力。
+##### [全链路系统级别方案](/rokid-vsvy-sdk-docs/fullLink/fulllink.md)：面向Android 系统开发工程师, 包括前端语音激活/降噪以及 Rokid 语音识别服务和语音合成服务的相关能力。
+
+##### [全链路APK级别方案](/rokid-vsvy-sdk-docs/RokidAiSdk/RokidAiSdk.md)：面向Android 软件开发工程师, 提供aar形式的SDK，简化接入流程，适应单独apk形式的集成，更方便用户接入Rokid AI语音技术。
 
 ##### [基础语音模块](/rokid-vsvy-sdk-docs/speechTTS/speechtts.md)：基础语语音服务的输出，包括语音识别服务和语音合成服务。
