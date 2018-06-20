@@ -5,7 +5,6 @@
     * [平台简介](5-enableVoice/rokid-vsvy-sdk-docs/introduction.md)
     * [新手入门](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/rookie-guide.md) 
     * [Android 全链路系统级别方案](5-enableVoice/rokid-vsvy-sdk-docs/fullLink/fulllink.md)
-    * [Android 全链路APK级别方案](5-enableVoice/rokid-vsvy-sdk-docs/RokidAiSdk/RokidAiSdk.md)
     * [Android 基础语音模块](5-enableVoice/rokid-vsvy-sdk-docs/speechTTS/speechtts.md)
     * [Linux基础架构](5-enableVoice/rokid-vsvy-sdk-docs/linuxsdk/linuxsdk.md)
     * 接口文档
