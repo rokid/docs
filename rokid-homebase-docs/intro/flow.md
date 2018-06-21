@@ -60,7 +60,7 @@
 
 使用 rhome 工具通过 json schema 来验证 discover|control|report-state 接口的返回值来验证接入 Rokid 智能家居协议。
 
-您可以参考 [命令行接口检验工具](../tools/rhome.md) 文档完成调试。
+您可以参考 [RHOME 桌面版调试工具](../tools/rhome-desktop.md) 文档完成调试。
 
 **自定义接入**
 

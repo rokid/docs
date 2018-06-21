@@ -4,7 +4,7 @@
 * Rokid 语音接入平台
     * [平台简介](5-enableVoice/rokid-vsvy-sdk-docs/introduction.md)
     * [新手入门](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/rookie-guide.md) 
-    * [Android 全链路通用方案](5-enableVoice/rokid-vsvy-sdk-docs/fullLink/fulllink.md)
+    * [Android 全链路系统级别方案](5-enableVoice/rokid-vsvy-sdk-docs/fullLink/fulllink.md)
     * [Android 基础语音模块](5-enableVoice/rokid-vsvy-sdk-docs/speechTTS/speechtts.md)
     * [Linux基础架构](5-enableVoice/rokid-vsvy-sdk-docs/linuxsdk/linuxsdk.md)
     * 接口文档
@@ -56,6 +56,7 @@
     * [云云对接](rokid-homebase-docs/connect/cloud-to-cloud.md)
     * [局域网对接](rokid-homebase-docs/connect/via-lan.md)
   * 调试
+    * [桌面版调试工具](rokid-homebase-docs/tools/rhome-desktop.md)
     * [命令行接口校验工具](rokid-homebase-docs/tools/rhome.md)
     * [自定义接入](rokid-homebase-docs/tools/developer-driver.md)
   * 智能家居协议(Beta)

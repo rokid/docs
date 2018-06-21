@@ -22,4 +22,4 @@
 通过用户授权，我们能够将厂商设备控制权交给若琪。在开发和调试环节：
 
 - 开发云端驱动，具体参考：[Rokid 智能家居协议](../v2/message-reference.md)
-- 调试云端驱动，可以使用：[rhome 命令行工具](../tools/rhome.md) 或 [自定义接入](../tools/developer-driver.md)
+- 调试云端驱动，可以使用：[rhome 命令行工具](../tools/rhome.md) 或 [自定义接入](../tools/developer-driver.md
