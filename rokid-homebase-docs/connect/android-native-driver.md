@@ -4,7 +4,7 @@ Native Driver 主要是针对 **使用 Android SDK 的第三方厂商** 方式�
 
 Native Driver 驱动在内部通过实现 [HTTP Driver](./http-remote-driver.md) 实现 获取/控制 设备。
 
-本文档主要用针对第三方开发者开发可运行在Rokid设备上提供智能家居服务。
+本文档主要用针对第三方开发者开发可运行在若琪设备上提供智能家居服务。
 
 智能家居 通讯 交互图
 

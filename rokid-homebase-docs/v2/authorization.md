@@ -6,7 +6,7 @@
 
 ### AcceptGrant
 
-`AcceptGrant` 是为了 Rokid 能够验证 Skill 的消息推送请求是为了哪一个用户发起。为了能够在用户授权 Skill 推送状态的能力后 Skill 能够接收到由 Rokid 颁发的事件推送 Token，Skill 必须实现这个命令以能够发送事件到 Rokid IoT EventGateway。
+`AcceptGrant` 是为了若琪能够验证 Skill 的消息推送请求是为了哪一个用户发起。为了能够在用户授权 Skill 推送状态的能力后 Skill 能够接收到由若琪颁发的事件推送 Token，Skill 必须实现这个命令以能够发送事件到 Rokid IoT EventGateway。
 
 详细 Payload
 

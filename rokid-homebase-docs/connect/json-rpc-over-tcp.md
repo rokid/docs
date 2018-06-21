@@ -1,4 +1,4 @@
-# Homebase TCP 通讯协议 [草稿]
+# Rokid 智能家居 TCP 通讯协议 [草稿]
 
 通讯基于 JSON-RPC 2.0，使用 TCP 短连接
 
@@ -38,10 +38,10 @@
 
 ## 连接过程
 
-- Homebase 获取到 TCP 驱动服务 ip 与 端口
-- Homebase 建立与该端口的连接
-- Homebase 发送 TCP json-rpc call
-- 设备收到Homebase发送TCP的FIN包代表Homebase的数据已全部发送完毕，可以开始解析数据并做相应的处理
+- 若琪获取到 TCP 驱动服务 ip 与 端口
+- 若琪建立与该端口的连接
+- 若琪发送 TCP json-rpc call
+- 设备收到若琪发送TCP的FIN包代表若琪的数据已全部发送完毕，可以开始解析数据并做相应的处理
 - TCP 驱动返回结果完毕后断开连接
 
 ## 指令
@@ -58,7 +58,7 @@
     - userToken
 
 
-返回设备列表， 标准设备接口参考 [Homebase 设备][device]
+返回设备列表， 标准设备接口参考 [Rokid 智能家居设备][device]
 
 - {Array} result
   - {String} deviceId
@@ -106,7 +106,7 @@
     - deviceId
     - deviceInfo
 
-返回设备， 标准设备接口参考 [Homebase 设备][device]
+返回设备， 标准设备接口参考 [Rokid 智能家居设备][device]
 
 - result
   - deviceId

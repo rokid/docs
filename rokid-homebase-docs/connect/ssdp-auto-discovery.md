@@ -4,7 +4,7 @@
 
 ## 交互
 
-- HomeBase 上线后， 会自动广播发送 [SSDP SEARCH](#ssdp-search) 并设置 ST 头为 homebase device
+- 若琪上线后， 会自动广播发送 [SSDP SEARCH](#ssdp-search) 并设置 ST 头为 homebase device
 - 设备收到 SSDP Search 广播， 马上向 SSDP 广播发送方（IP + 端口）发送UDP 单播 [Response](#ssdp-response)
 - 设备定时向 SSDP 广播 [alive](#ssdp-alive) 消息
 - 设备下线时， 向 SSDP 广播 [bye](#ssdp-bye) 消息
