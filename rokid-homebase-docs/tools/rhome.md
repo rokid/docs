@@ -1,6 +1,6 @@
 ## 命令行接口检验工具 - rhome
 
-使用 rhome 工具通过 json schema 来验证 discover|control|report-state 接口的返回值来验证接入 Rokid 智能家居协议。
+使用 rhome 工具通过 json schema 来验证 discover|control|report-state 接口的返回值来验证接入 Rokid Homebase 协议。
 
 ## 功能
 

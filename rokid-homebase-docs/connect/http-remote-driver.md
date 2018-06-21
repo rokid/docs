@@ -1,6 +1,6 @@
 # HTTP 远程驱动（旧版协议）
 
-HTTP 远程驱动是接入 Rokid 智能家居推荐的方式，云对云驱动也使用此协议。
+HTTP 远程驱动是接入 Homebase 推荐的方式，云对云驱动也使用此协议。
 
 你可以通过 开发者驱动， 或 [rhome 命令][rhome] 来开发和调试 HTTP Driver
 
@@ -37,7 +37,6 @@ HTTP 远程驱动使用 JSON 作为数据交换格式， 执行成功会返回�
 - `vendorErrorCode` {string} 可选， 厂家自有错误码
 - `message` {string} status > 0 时必选；错误描述, 对错误的简短描述
 - `debugInfo` {string} 可选， 调试信息
-
 
 ```json
 {
