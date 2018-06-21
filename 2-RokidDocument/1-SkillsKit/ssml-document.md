@@ -1,9 +1,9 @@
-# 在您的技能中使用 SSML
+### 在您的技能中使用 SSML
 若琪的文字转语音（Text to Speech，简称TTS，下同）会自动对标点符号做基本处理，比如在语句的`|` `，` `。`之后将会插入短停顿。能够满足基本的使用场景。
 
 如果您需要对TTS进行诸如插入一段音频、改变语速、改变发音人等更加灵活的自定义，可以使用下述的语音合成标记语言（Speech Synthesis Markup Language， 简称SSML，下同）。
 
-## 目录
+### 目录
 - [如何在您技能的Response中使用SSML](#如何在您技能的response中使用ssml)
 - [目前可使用的SSML标签](#目前可使用的ssml标签)
     - [audio](#audio)
@@ -20,7 +20,7 @@
 - [特别说明](#特别说明)
     
 
-## 如何在您技能的Response中使用SSML
+### 如何在您技能的Response中使用SSML
 直接在返回的TTS中加入SSML格式，完整Voice Response协议请查看[Rokid 技能协议文档Voice部分](3-ApiReference/cloud-app-development-protocol_cn.md)。
 
 ```json
@@ -29,9 +29,9 @@
 }
 ```
 
-## 目前可使用的SSML标签
+### 目前可使用的SSML标签
 
-### audio
+#### audio
 在TTS语句中插入一段音频，可用做TTS回复的背景音，或者特定的音效回复。
 
 | 参数 | 可选值 |
@@ -53,7 +53,7 @@
 - 单条response中最多只能插入5个音频文件
 - 单条response中的所有音频长度加总不能超过90秒。
 
-#### 将音频文件转换为Rokid可用的格式
+##### 将音频文件转换为Rokid可用的格式
 您需要使用转换工具将需要插入的TTS中的音频转为WAV文件，16 bit，mono 24000HZ。推荐使用开源的命令行工具[FFmpeg](https://www.ffmpeg.org/)。下方的命令可以帮您将`<input-file>`转换为`audio`标签可用的WAV文件。
 
 **MP3转WAV：**
@@ -76,7 +76,7 @@ sox -r 24000 -e signed -b 16 -c 1 old.wav new.wav
 ```
 
 
-### break
+#### break
 在TTS语句中插入停顿，
 
 | 参数 | 可选值 |
@@ -92,7 +92,7 @@ sox -r 24000 -e signed -b 16 -c 1 old.wav new.wav
 </speak>
 ```
 
-### p
+#### p
 表示一个段落。将会在段尾为TTS语音插入一个强停顿，等同于`<break strength="x-strong">`。
 
 ```html
@@ -102,7 +102,7 @@ sox -r 24000 -e signed -b 16 -c 1 old.wav new.wav
 </speak>    
 ```
 
-### phoneme
+#### phoneme
 为TTS指定不同的发音。
 
 | 参数 | 可选值 |
@@ -116,7 +116,7 @@ sox -r 24000 -e signed -b 16 -c 1 old.wav new.wav
 </speak>   
 ```
 
-### prosody
+#### prosody
 对TTS的语速、声调、音量做调整。
 
 | 参数 | 可选值 |
@@ -136,7 +136,7 @@ sox -r 24000 -e signed -b 16 -c 1 old.wav new.wav
 </speak>  
 ```
 
-### s
+#### s
 表示一个句子。将会在句后插入一个停顿。
 等同于：
 
@@ -152,7 +152,7 @@ sox -r 24000 -e signed -b 16 -c 1 old.wav new.wav
 ```
 
 
-### say-as
+#### say-as
 为单词或语句指定以何种方式进行发音。
 
 | 参数 | 可选值 |
@@ -166,7 +166,7 @@ sox -r 24000 -e signed -b 16 -c 1 old.wav new.wav
 </speak> 
 ```
 
-### speak
+#### speak
 SSML的根元素。
 
 ```html
@@ -175,7 +175,7 @@ SSML的根元素。
 </speak> 
 ```
 
-### sub
+#### sub
 将指定的单词或句子替换为特定的读音，需要搭配 `alias`参数来使用。
 
 | 参数 | 可选值 |
@@ -188,7 +188,7 @@ SSML的根元素。
 </speak> 
 ```
 
-### voice
+#### voice
 使用不同的发音人进行发音。
 
 | 参数 | 可选值 |
@@ -202,7 +202,7 @@ SSML的根元素。
 </speak> 
 ```
 
-### word
+#### word
 使指定的词组不被拆分以保证不会有停顿。
 
 ```html
@@ -211,7 +211,7 @@ SSML的根元素。
 </speak> 
 ```
 
-## 特别说明
+### 特别说明
 
 1. SSML语法不区分大小写。
 2. 若一个句子中嵌套了多个SSML用法，效果将会叠加。比如对整句进行了加速和蜡笔小新的效果叠加，将会以蜡笔小新的声音快速读完该句话。

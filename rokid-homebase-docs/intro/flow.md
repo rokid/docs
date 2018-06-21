@@ -9,22 +9,22 @@
 申请成为智能家居开发者需要准备：
 
 - 向商务申请一台测试的若琪设备；
-- 将测试若琪的 SN 码发给我们，我们会将其加入到开发者环境中；
+- 将测试若琪序列号发给我们，我们会将其加入到开发者环境中；
 
 **注意：**
 
-有些厂商希望在自有 APP 中集成若琪手机 SDK，通过若琪手机 SDK 登录为厂商 APP 用户自动绑定若琪账号，从而实现通过若琪语音控制自有设备的功能。这种情况您需要先在[开放平台](https://developer.rokid.com/)注册一个帐号，并联系我们申请 AppId 和 AppSecrect。
+有些厂商希望在自有 App 中集成若琪 SDK，通过若琪 SDK 登录为厂商 Ap 用户自动绑定若琪账号，从而实现通过若琪语音控制自有设备的功能。这种情况您需要先在[开放平台](https://developer.rokid.com/)注册一个帐号，并联系我们申请 AppId 和 AppSecret。
 
-您可以参考以下文档集成若琪手机 SDK：
+您可以参考以下文档集成若琪 SDK：
 
-- [Rokid Mobile SDK IOS 开发指南](https://rokid.github.io/mobile-sdk-ios-docs)
-- [Rokid Mobile SDK Android 开发指南](https://rokid.github.io/mobile-sdk-android-docs)
+- [若琪 iOS SDK 开发指南](https://rokid.github.io/mobile-sdk-ios-docs)
+- [若琪 Android SDK 开发指南](https://rokid.github.io/mobile-sdk-android-docs)
 
 ### Step 2：开发
 
-不管是云云对接，还是局域网对接，都需要遵循若琪智能家居协议，提供设备搜索接口、设备控制接口、设备状态查询接口（可选）。
+不管是云云对接，还是局域网对接，都需要遵循 Rokid 智能家居协议，提供设备搜索接口、设备控制接口、设备状态查询接口（可选）。
 
-我们推荐使用 v2 版本协议完成接入：[若琪智能家居协议](../v2/message-reference.md)
+我们推荐使用 v2 版本协议完成接入：[Rokid 智能家居协议](../v2/message-reference.md)
 
 **云云对接**
 
@@ -58,9 +58,9 @@
 
 **命令行接口校验工具 - rhome**
 
-使用 rhome 工具通过 json schema 来验证 discover|control|report-state 接口的返回值来验证接入 Rokid Homebase 协议。
+使用 rhome 工具通过 json schema 来验证 discover|control|report-state 接口的返回值来验证接入 Rokid 智能家居协议。
 
-您可以参考 [命令行接口检验工具](../tools/rhome.md) 文档完成调试。
+您可以参考 [RHOME 桌面版调试工具](../tools/rhome-desktop.md) 文档完成调试。
 
 **自定义接入**
 

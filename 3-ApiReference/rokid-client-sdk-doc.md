@@ -1,6 +1,15 @@
-## Tts接口定义
+### Rokid客户端协议
 
-### 调用接口
+#### 目录
+
+* [Tts接口定义](#tts接口定义)
+* [speech接口定义](#speech接口定义)
+* [asr接口定义](#asr接口定义)
+* [nlp接口定义](#nlp接口定义)
+
+#### Tts接口定义
+##### 调用接口
+
 ```
 bool prepare(const char* config_file);
 
@@ -18,7 +27,8 @@ void stop(int id);
 //                                  pcm
 void config(const char* key, const char* value);
 ```
-### 回调接口
+##### 回调接口
+
 ```
 virtual void onStart(int id) = 0;
 
@@ -33,7 +43,8 @@ virtual void onComplete(int id) = 0;
 virtual void onError(int id, int err) = 0;
 ```
 
-### 示例
+##### 示例
+
 ```
 class DemoCallback : public TtsCallback {
 public:
@@ -76,7 +87,8 @@ int32_t id = tts.speak("你好", cb);
 tts.release();
 ```
 
-## speech接口定义
+#### speech接口定义
+
 ```
 struct SpeechResult {
 	int32_t id;
@@ -161,9 +173,9 @@ while (true) {
 }
 ```
 
-## asr接口定义
+#### asr接口定义
+##### 调用接口
 
-### 调用接口
 ```
 bool prepare();
 
@@ -182,7 +194,8 @@ void cancel(int id);
 void config(const char* key, const char* value);
 ```
 
-### 回调接口
+##### 回调接口
+
 ```
 virtual void onStart(int id) = 0;
 
@@ -194,12 +207,13 @@ virtual void onComplete(int id) = 0;
 
 virtual void onError(int id, int err) = 0;
 ```
-### 示例
+##### 示例
+
 与tts接口用法相似
 
-## nlp接口定义
+#### nlp接口定义
+##### 调用接口
 
-### 调用接口
 ```
 bool prepare();
 
@@ -214,7 +228,8 @@ void cancel(int32_t id);
 void config(const char* key, const char* value);
 ```
 
-### 回调接口
+##### 回调接口
+
 ```
 virtual void onNlp(int id, const char* nlp) = 0;
 
@@ -222,5 +237,6 @@ virtual void onStop(int id) = 0;
 
 virtual void onError(int id, int err) = 0;
 ```
-### 示例
-与tts接口用法相似
+##### 示例
+
+与tts接口用法相似。

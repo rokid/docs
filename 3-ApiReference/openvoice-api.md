@@ -1,27 +1,27 @@
-# 开放平台接口定义文档(websocket版)
+### 开放平台接口定义文档(websocket版)
 
 > 文档版本:V0.2
 
-Rokid openvoice开放服务(websocket版)包含以下功能，
+Rokid openvoice开放服务(websocket版)包含以下功能：
 
 - 设备认证
-- 自然语言合成（TTS）
-- 完整语音交互(SPCH)
+- 自然语言合成（tts）
+- 完整语音交互(speech)
 
-## 文档简介
+#### 文档简介
 
 此文档用于定义开放平台上云端应用接口开发协议，协议遵循 [websocket](https://zh.wikipedia.org/zh-cn/WebSocket) 协议。
 
-## Speech 接口
+#### Speech 接口
 
-### 服务地址
+##### 服务地址
 
 wss://apigwws.open.rokid.com/api
 
-### protobuf 定义
+##### protobuf 定义
 详见[protobuf](https://github.com/Rokid/rokid-openvoice-websocket/tree/master/protobuf)
 
-### AuthRequest
+##### AuthRequest
 
 
 | 参数             | 类型     | 描述                     | 默认值  |
@@ -29,7 +29,7 @@ wss://apigwws.open.rokid.com/api
 | key            | string | 开放接口Key,在管理平台获取        | 无，必填 |
 | device_type_id | string | 设备类型ID                 | 无，必填 |
 | device_id      | string | 设备ID                   | 无，必填 |
-| service        | string | asr,tts,spch            | 无，必填 |
+| service        | string | tts,speech            | 无，必填 |
 | version        | string | 接口版本号                  | 无，必填 |
 | timestamp      | string | unix时间戳                | 无，必填 |
 | sign           | string | 由以上几项+secret按约定的加密方式生成 | 无，必填 |
@@ -46,7 +46,7 @@ key及secret可通过[开放平台语音接入](https://developer.rokid.com/docs
 
 此处version可有1.0或2.0，分别对应protobuf中v1或v2目录。
 
-### AuthResponse
+##### AuthResponse
 
 请求响应
 
@@ -54,7 +54,7 @@ key及secret可通过[开放平台语音接入](https://developer.rokid.com/docs
 | ------ | ----- | ----------------- |
 | result | int32 | 认证结果(成功:0, 失败:-1) |
 
-### TtsRequest
+##### TtsRequest
 
 PCM格式为 RIFF (little-endian) data, WAVE audio, Microsoft PCM, 16 bit, mono 24000 Hz语音。
 注意，这里的PCM与Asr的PCM格式不一致，因此不能将tts的输出直接作为asr的输入。
@@ -66,7 +66,7 @@ PCM格式为 RIFF (little-endian) data, WAVE audio, Microsoft PCM, 16 bit, mono 
 | declaimer | string | 发音者，目前支持 中文成人"zh" 与 中文儿童"c1" 两种 | 无 |
 | codec     | string | 语音流的编码，目前支持PCM，OPU，OPU2，mp3。    | 无  |
 
-### TtsResponse
+##### TtsResponse
 
 请求响应
 
@@ -78,7 +78,7 @@ PCM格式为 RIFF (little-endian) data, WAVE audio, Microsoft PCM, 16 bit, mono 
 | voice | bytes  | 合成的voice语音    |
 | finish   | bool | 语音是否结束 |
 
-### SpeechRequest
+##### SpeechRequest
 
 说明：
 1. 语音长度限制在 10s 以内。
@@ -106,7 +106,7 @@ PCM格式为 RIFF (little-endian) data, WAVE audio, Microsoft PCM, 16 bit, mono 
 | trigger_length   | float | 语音流的激活词的长度。  | 无   |
 | skill_options  | string | 设备上的状态信息，为json结构，此结构会传给相应的skill的cloud app中。         | 空     |
 
-### SpeechResponse
+##### SpeechResponse
 
 | 参数     | 类型     | 描述             |
 | ------ | ------ | -------------- |

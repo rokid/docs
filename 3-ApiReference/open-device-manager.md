@@ -1,4 +1,6 @@
-## 1. 调用方式
+### 设备接口文档
+#### 1）调用方式
+
 ```
 client                   http                   InternalService(grpc)
 -------------------------------------------------------------------------
@@ -15,26 +17,28 @@ http(带Authorization)      -->   根据Authorization进行设备认证或用户
                         C  <--   返回200 body为resp
 ```
 
-## 2. 认证方式
+#### 2）认证方式
+
 客户端向httpgw发起请求时，需要在HTTP头部中增加字段Authorization。
 
-### 2.1. 设备认证
+##### 设备认证
+###### Authorization
 
-#### 2.1.1. Authorization
 设备认证方式中的Authorization内容格式如下：
 
 ```
 version={version};time={time};sign={sign};key={key};device_type_id={device_type_id};device_id={device_id};service={service}
 ```
 
-#### 2.1.2. Signature
+###### Signature
+
 Authorization中的sign字段是签名串，是对下列组合的字符串（UTF-8编码）做MD5计算
 
 ```
 key={key}&device_type_id={device_type_id}&device_id={device_id}&service={service}&version={version}&time={time}&secret={secret}
 ```
 
-#### 2.1.3. 字段说明
+###### 字段说明
 
 | 字段名称       | 意义                                                              |
 | -------------- | ----------------------------------------------------------------- |
@@ -47,12 +51,14 @@ key={key}&device_type_id={device_type_id}&device_id={device_id}&service={service
 | service        | 服务类型，自定义，建议与请求的服务名保持一致                      |
 | secret         | 密钥，从开发者平台获取                                            |
 
-## 3. 接口
-#### 3.1.1. 地址
+#### 3）接口
+##### 地址
+
 ```
 https://apigwrest.open.rokid.com
 ```
-#### 3.1.2. 绑定接口 （POST）
+##### 绑定接口 （POST）
+
 ```
 /v1/device/deviceManager/bindMaster
 ```
@@ -70,7 +76,8 @@ https://apigwrest.open.rokid.com
     "message": "success"
 }
 ```
-#### 3.1.3. 解绑接口 （POST）
+##### 解绑接口 （POST）
+
 ```
 /v1/device/deviceManager/unBindMaster
 ```
