@@ -1,4 +1,4 @@
-## 桌面版调试工具 - RHOME Desktop
+## RHOME 桌面版调试工具
 
 使用 RHOME 桌面版调试工具，可以通过 json schema 来验证接口是否符合若琪 Homebase 协议。
 
