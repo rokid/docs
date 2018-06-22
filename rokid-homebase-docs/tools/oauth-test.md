@@ -1,10 +1,16 @@
-# 测试 OAuth|OAuth2.0 接口
+### 测试 OAuth|OAuth2.0 接口
 
 在驱动发布上先之前， 我们需要先测试 OAuth|OAuth2.0 授权接口, 假设驱动已经部署到如下地址  `https://awesome-iot-brand.com/driver`
 
 我们需要做以下 4 个测试，测试通过， 就可以提交你的驱动了！
 
-## 测试1. 获取 OAuth 授权接口地址
+### 目录
+- [测试1. 获取 OAuth 授权接口地址](#测试1-获取-oauth-授权接口地址)
+- [测试2. 授权逻辑](#测试2-授权逻辑)
+- [测试3. 检查通过 code 获取 userAuth『OAuth2.0』](#test3)
+- [测试4. 检查 token 刷新](#测试4-检查-token-刷新)
+
+#### 测试1. 获取 OAuth 授权接口地址
 
 OAuth 接口
 
@@ -32,7 +38,7 @@ Postman-Token: 1d89f10f-b14d-e37e-fa9e-8deb3fce02e7
 }
 ```
 
-## 测试2. 授权逻辑
+#### 测试2. 授权逻辑
 
 拿到结果的， 在浏览器打开， url `http://awesome-iot-brand.com/oauth/authorize?callbackURL=https%3A%2F%2Fs.rokidcdn.com%2Fpath%3Fu%3D1%26v%3D2`
 
@@ -50,7 +56,7 @@ Postman-Token: 1d89f10f-b14d-e37e-fa9e-8deb3fce02e7
   2. 如果 是 OAuth， 需要 URL 返回 userAuth 相关参数
 3. [OAuth2.0] 通过 code 调用 OAuthGetToken command 接口
 
-## 测试3. 检查通过 code 获取 userAuth『OAuth2.0』
+#### <span id = "test3">测试3. 检查通过 code 获取 userAuth『OAuth2.0』</span>
 
 通过 code 调用 `OAuthGetToken` command接口
 
@@ -83,7 +89,7 @@ Cache-Control: no-cache
 ```
 
 
-## 测试4. 检查 token 刷新
+#### 测试4. 检查 token 刷新
 
 调用 `OAuthRefresh` command接口, 完成token的刷新
 

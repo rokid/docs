@@ -1,4 +1,10 @@
-# HTTP 远程驱动（旧版协议）
+### 目录
+
+- [HTTP 远程驱动（旧版协议）](#http-远程驱动（旧版协议）)
+  - [通用格式](#通用格式)
+  - [标准接口](#标准接口)
+
+### HTTP 远程驱动（旧版协议）
 
 HTTP 远程驱动是接入 Homebase 推荐的方式，云对云驱动也使用此协议。
 
@@ -11,7 +17,7 @@ HTTP 远程驱动是接入 Homebase 推荐的方式，云对云驱动也使用�
 - `/command` （可选）用于处理用户授权，绑定，初始化等命令；相对于使用这个授权方式，我们更加推荐使用[标准 OAuth2.0 接入](rfc6749.md)
 
 
-## 通用格式
+#### 通用格式
 
 HTTP 远程驱动使用 JSON 作为数据交换格式， 执行成功会返回如下字段：
 
@@ -45,9 +51,9 @@ HTTP 远程驱动使用 JSON 作为数据交换格式， 执行成功会返回�
 }
 ```
 
-## 标准接口
+#### 标准接口
 
-### `POST /list` 设备搜索
+##### `POST /list` 设备搜索
 
 搜索给定用户账号下的所有设备， 包括虚拟设备， 子设备
 
@@ -91,7 +97,7 @@ HTTP 远程驱动使用 JSON 作为数据交换格式， 执行成功会返回�
 ```
 
 
-### `POST /execute` 执行操作指令， 并返回可确定的最新状态
+##### `POST /execute` 执行操作指令， 并返回可确定的最新状态
 
 设备执行操作， 将返回最新状态
 
@@ -144,7 +150,7 @@ response
 Object 设备最新状态， 如果无法确定设备的状态， 返回字段可以置空， 返回的设备状态将被缓存到虚拟设备中去
 
 
-### `POST /command` 执行特定指令
+##### `POST /command` 执行特定指令
 
 执行自定义指令
 
@@ -185,7 +191,7 @@ response sample
 ```
 
 
-#### 常用指令 Command
+###### 常用指令 Command
 
 command **OAuth**
 
@@ -282,7 +288,7 @@ returns result <Object>
 }
 ```
 
-### 如何描述你的设备？
+##### 如何描述你的设备？
 
 请参考： [设备定义][device]
 
@@ -290,6 +296,6 @@ returns result <Object>
 [device]: ../v1/device/device.md
 [rhome]: ../tools/rhome.md
 
-### 可以参考我们的示例程序
+##### 可以参考我们的示例程序
 
 [Rokid/homebase-nodejs-http-remote-driver-sample](https://github.com/Rokid/homebase-nodejs-http-remote-driver-sample)

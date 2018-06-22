@@ -1,8 +1,8 @@
-# btflinger
+### btflinger
 
 btflinger是RokidOS提供的蓝牙服务
 
-# 以下为相关的接口：
+### 以下为相关的接口：
 
 ```
 int bluetooth_rokid_open(char *name);//打开蓝牙

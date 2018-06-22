@@ -1,4 +1,4 @@
-# 设备能力与状态
+### 设备能力与状态
 
 - 设备能力 `actions`: 指的是智能设备具备的能力，比如智能灯泡具有开关、调颜色、调亮度的能力。
 - 设备状态 `state`: 指的是设备当前的状态，与定义的设备能力对应。
@@ -28,13 +28,12 @@ state:
 
 **state** 数据定义参考: [jsonschemalint 在线校验工具](https://jsonschemalint.com/#/version/draft-04/markup/json?gist=09e266c8fba04a88c117fe05e4ab41d6)
 
-## <span id = "actions">设备能力 actions</span>
+#### <span id = "actions">设备能力 actions</span>
 
 - 开关 [switch](#开关-switch)
 - 颜色 [color](#颜色-color)
 - 亮度 [brightness](#亮度-brightness)
 - 模式 [mode](#模式-mode)
-- 位置量 [position](#位置量-position)
 - 风速 [fanspeed](#风速-fanspeed)
 - 转向模式 [swing_mode](#转向模式-swingmode)
 - 音量 [volume](#音量-volume)
@@ -46,7 +45,7 @@ state:
 - Ping [ping](#ping)
 - 通用档位 [level](#level)
 
-### <span id = "switch">开关 switch</span>
+##### <span id = "switch">开关 switch</span>
 
 - actions 接受值 [ "on", "off", "stop"]
   - "on" : 开
@@ -68,7 +67,7 @@ Example:
 { "property": "switch", "name":"on" }
 ```
 
-### <span id = "color">颜色 color</span>
+##### <span id = "color">颜色 color</span>
 
 - actions 接受值 [ "random", "num" ]
   - "random": 颜色随机RGB值
@@ -91,7 +90,7 @@ Example:
 { "property": "color", "name":"num", "value": 65280 }
 ```
 
-### <span id = "brightness">亮度 brightness</span>
+##### <span id = "brightness">亮度 brightness</span>
 
 - actions 接受值 [ "up", "down", "max", "min", "num" ]
   - "up": 调亮
@@ -116,7 +115,7 @@ Example:
 { "property": "brightness", "name":"num", "value": 68 }
 ```
 
-### <span id = "mode">模式 mode</span>
+##### <span id = "mode">模式 mode</span>
 
 - actions 接受值 [ "auto", "manual", "cool", "heat", "dry", "fan", "silent", "energy", "sleep"<!--, "modeName" -->]
   - "auto": 自动模式
@@ -154,7 +153,7 @@ Example:
 { "property": "mode", "name":"auto"}
 ```
 
-### <del><span id = "position">位置量 position</span></del>  暂时不支持
+##### <del><span id = "position">位置量 position</span></del> 暂时不支持
 
 - actions 接受值 [ "up","down","num" ]
   - "up": 如：窗帘打开一点
@@ -176,7 +175,7 @@ Example:
 { "property": "position", "name":"num", "value": 10}
 ```
 
-### <span id = "fanspeed">风速 fanspeed</span>
+##### <span id = "fanspeed">风速 fanspeed</span>
 
 - actions 接受值 [ "up", "down", "max", "min", "switch", "num" ]
   - "up": 调高，调大
@@ -201,7 +200,7 @@ Example:
 { "property": "fanspeed", "name":"num", "value": 10}
 ```
 
-### <span id = "swing_mode">转向模式 swing_mode</span>
+##### <span id = "swing_mode">转向模式 swing_mode</span>
 
 - actions 接受值 [ "auto", "on", "off", "horizon", "horizon.off","vertical", "vertical.off" ]
   - "auto": 自动模式
@@ -228,7 +227,7 @@ Example:
 { "property": "position", "name":"num", "value": 10}
 ```
 
-### <span id = "volume">音量 volume</span>
+##### <span id = "volume">音量 volume</span>
 
 - actions 接受值 [ "up", "down", "max", "min", "num" ]
   - "up": 调高，调大
@@ -252,7 +251,7 @@ Example:
 { "property": "volume", "name":"num", "value": 100}
 ```
 
-### <span id = "channel">频道 channel</span>
+##### <span id = "channel">频道 channel</span>
 
 - actions 接受值 [ "next", "prev", "random", "num" ]
   - "prev": 上一个频道
@@ -284,7 +283,7 @@ Example:
 
 - [E_CHANNEL_NOT_FOUND](../error.md)
 
-### <span id = "humidity">湿度 humidity</span>
+##### <span id = "humidity">湿度 humidity</span>
 
 - actions 接受值 [ "up", "down", "max", "min", "num" ]
   - "up": 调高
@@ -308,7 +307,7 @@ Example:
 { "property": "humidity", "name":"num", "value": 100}
 ```
 
-### <span id = "temperature">温度 temperature</span>
+##### <span id = "temperature">温度 temperature</span>
 
 - actions 接受值 [ "up", "down", "max", "min", "num" ]
   - "up": 调高
@@ -332,7 +331,7 @@ Example:
 { "property": "temperature", "name":"num", "value": 26}
 ```
 
-### <span id = "color_temperature">色温 color_temperature</span>
+##### <span id = "color_temperature">色温 color_temperature</span>
 
 - actions 接受值 [ "up", "down", "max", "min", "num" ]
   - "up": 调高
@@ -356,7 +355,7 @@ Example:
 { "property": "color_temperature", "name":"num", "value": 26}
 ```
 
-### <span id = "ping">ping</span>
+##### <span id = "ping">ping</span>
 
 - actions 接受值 [ "trigger" ]
   - ping 是设备提示的功能。比如，智慧灯泡闪一下（打开关闭或者关闭打开，或者换颜色，改亮度），用来发现。如果设备没有该能力，又支持开关，那么默认开关一下，用以提示。
@@ -371,7 +370,7 @@ Example:
   - 为空，不需要提供state
 
 
-### 媒体播放控制 <span id = "media_control">media_control</span>
+##### 媒体播放控制 <span id = "media_control">media_control</span>
 
 - actions接受值[ "play_media",  "pause",  "play",  "stop",  "playmode",  "previous",  "next", "get_meta" ]
 
@@ -471,7 +470,7 @@ Example:
 - state 值
   - get_meta 需要提供指定格式的内容，其他的返回状态码即可
 
-### 通用档位 <span id = "level">level</span> 开发中
+##### 通用档位 <span id = "level">level</span> 开发中
 
 - actions 接受值 `["num"， "prev"， "next"]`
   - `num` 档位数值

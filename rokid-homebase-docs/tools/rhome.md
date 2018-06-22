@@ -1,22 +1,29 @@
-## 命令行接口检验工具 - rhome
+### 目录
 
-使用 rhome 工具通过 json schema 来验证 discover|control|report-state 接口的返回值来验证接入 Rokid Homebase 协议。
+-   [命令行接口检验工具 - rhome](#命令行接口检验工具---rhome)
+-   [功能](#功能)
+-   [安装](#安装)
+-   [使用](#使用)
 
-## 功能
+### 命令行接口检验工具 - rhome
 
-- 调用 discover|control|report-state 接口。
+使用 rhome 工具通过 json schema 来验证 discover\|control\|report-state 接口的返回值来验证接入 Rokid Homebase 协议。
 
-- 使用 jsonschema 对返回的数据格式进行校验，并指出具体错误信息。
+### 功能
 
-- 使用 jsonschema 对 ChangeReport 事件进行校验，并指出具体错误信息。
+-   调用 discover\|control\|report-state 接口。
 
-## 安装
+-   使用 jsonschema 对返回的数据格式进行校验，并指出具体错误信息。
 
-从 [Release](https://github.com/Rokid/rokid-homebase-cli/releases) 页面下载最新的适合你的操作系统的已打包的程序。
+-   使用 jsonschema 对 ChangeReport 事件进行校验，并指出具体错误信息。
 
-## 使用
+### 安装
 
-```bash
+从 [Release](https://github.com/Rokid/rokid-homebase-cli/releases)页面下载最新的适合你的操作系统的已打包的程序。
+
+### 使用
+
+``` {.bash}
 $ rhome -h
 
   Usage: rhome [options] [command]
@@ -41,16 +48,15 @@ $ rhome -h
     await-event [options]                       serve an event gateway to await change reports
 ```
 
+#### 步骤 1: 添加 Skill 配置
 
-### 步骤 1: 添加 Skill 配置
-
-* `rhome` 运行后，将在用户目录下新建 **rhome.json** 文件，保存 sessions、devices、currentSession 信息。如有必要，开发者可以进行修改。
-* `add` 是交互式命令。 name 必须由 **字母**、**数字** 和 **下划线** 组成。例如: demo_1。 其余为命令行模式。
-* `sessions` 命令显示已添加的所有 session，和显示当前使用的 session。默认使用第一个 session，或通过 `use` 指定。
-
+-   `rhome` 运行后，将在用户目录下新建 **rhome.json** 文件，保存 sessions、devices、currentSession信息。如有必要，开发者可以进行修改。
+-   `add` 是交互式命令。 name 必须由 **字母**、**数字** 和 **下划线**组成。例如: demo\_1。 其余为命令行模式。
+-   `sessions` 命令显示已添加的所有 session，和显示当前使用的session。默认使用第一个 session，或通过 `use` 指定。
 
 如：
-```bash
+
+``` {.bash}
 $ rhome add
 
 ? remote driver's name demo
@@ -65,11 +71,11 @@ $ rhome add
 }
 ```
 
-### 步骤 2: 搜索设备
+#### 步骤 2: 搜索设备
 
 在控制设备之前，我们需要先获取 Skill 能控制的设备
 
-```bash
+``` {.bash}
 $ rhome discover
 
 id: 0
@@ -78,14 +84,13 @@ endpointId: device-1
 displayName: 大米台灯
 displayType: light
 offline: false
-
 ```
 
-### 步骤 3: 控制设备
+#### 步骤 3: 控制设备
 
-使用 `control <endpointId> <directive> [payload]` 命令来控制设备，其中 `payload` 为序列化的 JSON 字符串，如 `'{"value": 123}'`
+使用 `control <endpointId> <directive> [payload]` 命令来控制设备，其中`payload` 为序列化的 JSON 字符串，如 `'{"value": 123}'`
 
-```bash
+``` {.bash}
 $ rhome control device-1 Switch.On
 
 id: 0
@@ -94,16 +99,15 @@ endpointId: device-1
 displayName: 大米台灯
 displayType: light
 offline: false
-
 ```
 
-#### 数据校验
+##### 数据校验
 
 `rhome` 将对返回数据进行校验，并显示具体的错误信息。
 
-* 数据格式正确
+-   数据格式正确
 
-```bash
+``` {.bash}
 $ rhome discover
 
 id: 0
@@ -114,24 +118,22 @@ type: light
 offline: false
 ```
 
-* 数据格式错误
+-   数据格式错误
 
 如有错误，将会显示具体的错误信息，以供参考。
 
-```
-$ rhome discover
+    $ rhome discover
+    
+    body checked by json schema:
+    instance does not match allOf schema [subschema 1] with 2 error[s]:
+    instance.data[0].actions.color[1] is not one of enum values: random,num
+    instance.data[0] requires property "type"
 
-body checked by json schema:
-instance does not match allOf schema [subschema 1] with 2 error[s]:
-instance.data[0].actions.color[1] is not one of enum values: random,num
-instance.data[0] requires property "type"
-```
+#### 步骤 4: 发送终端状态变化事件
 
-### 步骤 4: 发送终端状态变化事件
+使用 `await-event` 命令来启动一个本地接收事件的测试服务器，可以使用如`-p 7001` 的选项来指定服务器端口。
 
-使用 `await-event` 命令来启动一个本地接收事件的测试服务器，可以使用如 `-p 7001` 的选项来指定服务器端口。
-
-```bash
+``` {.bash}
 $ rhome await-event -p 9999
 
 rhome listening on port 9999

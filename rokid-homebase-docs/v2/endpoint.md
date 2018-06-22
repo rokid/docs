@@ -1,4 +1,4 @@
-# 终端
+### 终端
 
 若琪 IoT Skill 的对接的基本单元为终端，终端可以是一个真实的终端，也可以表示一个虚拟场景、应用。每一个终端需要说明它们具备的能力接口（Interface），一个能力接口可代表终端的一个可问询状态值，如一个终端具有温度接口（Temperature Interface），我们可以对若琪说："若琪，现在的温度是多少？"，来获取终端提供的温度接口的值；也可以对若琪说："若琪，把温度调高一点"，来调用温度接口提供的控制温度能力。
 
@@ -7,13 +7,14 @@
 endpointId | `string`, 必需 | 终端 Id，只需要对于某一个用户来说是唯一的
 displayType | `enum`，必需 |终端的显示类型，可能会和实际类型不太类似
 displayName | `string`，必需 | 若琪客户端显示的终端名称
+modelId | `string` | 在若琪开发者平台预注册的终端型号 Id，只允许大小写字母 A-Z，a-z，数字 0-9 和符号 `-_`
 recommendRoomName | `string` | 推荐若琪将这个终端划入与这个房间名相同的房间，便于用户命令
 offline | `bool` | Skill 能否成功连接到设备，如果不能则为 `true`
 additionalInfo | key-value pairs | 一组和终端关联的键值对，若琪每次会把这些键值对和终端 Id 一起发送给 Skill
 capabilities | `Capability[]` | 一组终端能力描述符
 states | `InterfaceState[]` | 一组终端能力接口状态描述符
 
-## 能力描述 Capability
+#### 能力描述 Capability
 
 终端能力 Interface 代表终端具备的变化状态值。
 
@@ -36,7 +37,7 @@ supportedOperations | `string[]` | 相应能力接口类型中支持的能力操
 isProactivelyReported | `bool`，默认 `false` | 是否支持由产商推送终端新状态，如果支持即可作为自动化的触发器
 isRetrievable | `bool`，默认 `false` | 是否支持若琪发起状态查询请求，如果支持即可向若琪问询终端状态
 
-## 能力状态 InterfaceState
+#### 能力状态 InterfaceState
 
 字段名 | 类型 | 描述
 --- | --- | ---

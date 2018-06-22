@@ -1,8 +1,8 @@
-# 智能家居 OAuth 授权
+### 智能家居 OAuth 授权
 
 ![](https://s.rokidcdn.com/homebase/upload/rJsJRvPCl.jpg)
 
-## 交互过程
+#### 交互过程
 
 - 用户添加驱动， 发起授权过程
 - Homebase 向驱动调用 OAuth Command 接口， 参数为登录回调页面地址
@@ -13,7 +13,7 @@
 - Homebase 保存授权信息， 下次用户调用 搜索设备和控制设备的时候会带上。
 
 
-## 字段说明
+#### 字段说明
 
 为了接入现有 OAuth 登录体系， 字段名称可以自定义， 默认字段名称如下：
 
@@ -25,7 +25,7 @@
 
 
 
-## 刷新 Token
+#### 刷新 Token
 
 - Homebase 检测到Token即将过期， 将现有的用户授权信息（userId, userToken, expiredTime, refreshToken）发送给驱动的 `refreshToken` command
 - 驱动返回新的用户授权信息
