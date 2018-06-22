@@ -1,4 +1,4 @@
-# 音量控制
+### 音量控制
 
 这是一个音量控制的接口，可以控制整体音量，也可以控制单个通道的音量。下面是头文件：
 
@@ -8,7 +8,7 @@
 
 除了要 `include` 头文件外，还需要链接 `-lrkvolumecontrol.so`。
 
-## API
+#### API
 
 ```c
 int set_all_volume(int vol);
@@ -25,7 +25,7 @@ int get_app_volume(char* name)
 
 ```
 
-## 示例
+#### 示例
 
 ```c
 #include <stdio.h>

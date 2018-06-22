@@ -1,4 +1,4 @@
-# TTS
+### TTS
 
 我们的语音合成接口使用 C/S 架构，服务端默认启动，开发者需要通过调用客户端接口与服务端通讯，TTS服务架构图如下：
 
@@ -12,7 +12,7 @@
 
 除了要 `include` 头文件外，还需要链接 `-lrktts`。
 
-## API
+#### API
 
 ```c
 int tts_init(); 
@@ -31,7 +31,7 @@ void tts_destroy();
 // tts退出接口
 ```
 
-## 回调接口
+#### 回调接口
 
 ```c
 void (*onStart)(int id, void* userdata);
@@ -47,7 +47,7 @@ void (*onError)(int id, int err, void* userdata);
 // tts服务出错事件
 ```
 
-## 示例
+#### 示例
 
 ```c
 #include <tts/tts_client.h>

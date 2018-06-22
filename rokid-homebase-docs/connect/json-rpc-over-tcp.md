@@ -1,4 +1,14 @@
-# Homebase TCP 通讯协议 [草稿]
+### 目录
+
+-   [Homebase TCP 通讯协议](#homebase-tcp-通讯协议)
+  - [连接过程](#连接过程)
+  - [指令](#指令)
+    * [method:list](#methodlist)
+    * [method:get](#methodget)
+    * [method:execute](#methodexecute)
+    * [method:command](#methodcommand)
+
+### Homebase TCP 通讯协议
 
 通讯基于 JSON-RPC 2.0，使用 TCP 短连接
 
@@ -36,7 +46,7 @@
 }
 ```
 
-## 连接过程
+#### 连接过程
 
 - Homebase 获取到 TCP 驱动服务 ip 与 端口
 - Homebase 建立与该端口的连接
@@ -44,9 +54,9 @@
 - 设备收到Homebase发送TCP的FIN包代表Homebase的数据已全部发送完毕，可以开始解析数据并做相应的处理
 - TCP 驱动返回结果完毕后断开连接
 
-## 指令
+#### 指令
 
-### method: `list`
+##### method:list
 
 获取设备列表
 
@@ -91,7 +101,7 @@
 }
 ```
 
-### method: `get`
+##### method:get
 
 获取单个设备最新状态
 
@@ -123,7 +133,7 @@
 <-- {"jsonrpc": "2.0", "result": {"deviceId": "abc", "deviceInfo":{}, "name": "灯", "type": "light", "offline": false}, "id": 1}
 ```
 
-### method: `execute`
+##### method:execute
 
 - params
   - userAuth， 可选
@@ -156,7 +166,7 @@
 <-- { "jsonrpc": "2.0", "result": {"switch": "on"}, "id": "1"}
 ```
 
-### method: `command`
+##### method:command
 
 - params
   - method {String}

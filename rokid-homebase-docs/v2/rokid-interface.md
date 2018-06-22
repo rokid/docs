@@ -1,24 +1,41 @@
-# 终端能力
+### 目录
+
+-   [终端能力](#终端能力)
+  - [Switch 开关状态](#switch-开关状态)
+  - [MotionSwitch 行为状态](#motionswitch-行为状态)
+  - [Position 位置百分比状态](#position-位置百分比状态)
+  - [Color 颜色状态](#color-颜色状态)
+  - [ColorTemperature 色温状态](#colortemperature-色温状态)
+  - [Brightness 亮度状态](#brightness-亮度状态)
+  - [Mode 模式状态](#mode-模式状态)
+  - [SwingMode 转向状态](#swingmode-转向状态)
+  - [Humidity 湿度状态](#humidity-湿度状态)
+  - [Temperature 温度状态](#temperature-温度状态)
+  - [FanSpeed 风速状态](#fanspeed-风速状态)
+  - [Volume 音量状态](#volume-音量状态)
+  - [Media.TVChannel 频道状态](#mediatvchannel-频道状态)
+  - [Media.Music 音乐控制](#mediamusic-音乐控制)
+  - [PlaybackControl 媒体播放状态](#playbackcontrol-媒体播放状态)
+  - [PlaybackMode 媒体播放模式状态](#playbackmode-媒体播放模式状态)
+
+
+### 终端能力
 
 终端能力 Interface 代表终端具备的变化状态值。
 
-当这个能力可以问询时（`isRetrievable`）, 除了可以通过向若琪控制:“帮我把灯调为红色”,将 `Color` 设置为红色, 还可以通向若琪问询:“这个现在是什么颜色”,若琪播报“这个灯现在是红色”。
-当这个能力会主动推送状态时（`isProactivelyReported`）, 那么就可以将这个终端状态作为一个自动化操作的触发器,
-如一个自动化操作是 “当在早上家门关闭时, 关闭家里所有灯”,那么就需要有一个家门的开关（ `Switch` ）可以主动推送状态（ `isProactivelyReported`）, 当在早上它的值设为`Switch.Off`时, 该自动化操作就会被触发。
-类似的，如果我们有一个温度传感器，而且他的温度（ `Temperature` ）能够主动推送（ `isProactivelyReported`）我们就可以设置一个自动化场景:
-“当室内高于25摄氏度时，开启电风扇”。
+当这个能力可以问询时（`isRetrievable`）,除了可以通过向若琪控制:"帮我把灯调为红色",将 `Color` 设置为红色,还可以通向若琪问询:"这个现在是什么颜色",若琪播报"这个灯现在是红色"。当这个能力会主动推送状态时（`isProactivelyReported`）,那么就可以将这个终端状态作为一个自动化操作的触发器, 如一个自动化操作是"当在早上家门关闭时, 关闭家里所有灯",那么就需要有一个家门的开关（`Switch` ）可以主动推送状态（ `isProactivelyReported`）,当在早上它的值设为`Switch.Off`时, 该自动化操作就会被触发。类似的，如果我们有一个温度传感器，而且他的温度（ `Temperature`）能够主动推送（ `isProactivelyReported`）我们就可以设置一个自动化场景:"当室内高于25摄氏度时，开启电风扇"。
 
 终端能力的状态值可以是 number 与 enum 或者特殊描述符类型；
-- Number 类型接口: 可以具有 Set 和 Adjust 控制命令；Set 为设为绝对期望值, Adjust 为 delta 如 +1, -1 等相对值
-  - Percentage: 取值 0 到 100, Adjust 默认步长为 10
-  - RGB: 取值 0 到 0xFFFFFF
-- Enum 类型接口: 具体的 Enum 值即为命令（相当于 Set 但是枚举了所有值）
-- 描述符类型接口: 是值的说法无法枚举、也不是 Number 类型的类型, 如歌曲、电视频道, 具有 Set 控制命令
+
+ - Number类型接口: 可以具有 Set 和 Adjust 控制命令；Set 为设为绝对期望值, Adjust为 delta 如 +1, -1 等相对值
+    - Percentage: 取值 0 到 100, Adjust 默认步长为 10 
+    - RGB: 取值 0 到 0xFFFFFF
+- Enum 类型接口: 具体的 Enum 值即为命令（相当于 Set 但是枚举了所有值） 
+- 描述符类型接口:是值的说法无法枚举、也不是 Number 类型的类型, 如歌曲、电视频道, 具有 Set控制命令
 
 > Beta 版尚不支持向若琪问询终端状态
->
 
-## Switch 开关状态
+#### Switch 开关状态
 
 类型: Enum
 
@@ -53,7 +70,7 @@ Switch.Off | 关闭终端
 }
 ```
 
-## MotionSwitch 行为状态
+#### MotionSwitch 行为状态
 
 类型: Enum
 
@@ -90,7 +107,7 @@ MotionSwitch.Off | 终端停止运动
 }
 ```
 
-## Position 位置百分比状态
+#### Position 位置百分比状态
 
 类型: percentage
 
@@ -101,7 +118,7 @@ MotionSwitch.Off | 终端停止运动
 Position.Set | 设置为指定值
 Position.Adjust | 通过相对值调整
 
-#### Set Payload
+##### Set Payload
 
 字段 | 类型 | 描述
 --- | --- | ---
@@ -133,7 +150,7 @@ value | `number` | 百分比
 }
 ```
 
-#### Adjust Payload
+##### Adjust Payload
 
 字段 | 类型 | 描述
 --- | --- | ---
@@ -165,7 +182,7 @@ delta | `number` | 相对值
 }
 ```
 
-## Color 颜色状态
+#### Color 颜色状态
 
 类型: Number
 
@@ -176,7 +193,7 @@ delta | `number` | 相对值
 Color.Set | 设置为指定值
 Color.SetRandom | 由 Skill 设置一个随机色值
 
-#### Set Payload
+##### Set Payload
 
 字段 | 类型 | 描述
 --- | --- | ---
@@ -208,7 +225,7 @@ value | `number` | 颜色 RGB Hex 值
 }
 ```
 
-#### SetRandom Payload
+##### SetRandom Payload
 
 命令示例：
 ```json
@@ -234,7 +251,7 @@ value | `number` | 颜色 RGB Hex 值
 }
 ```
 
-## ColorTemperature 色温状态
+#### ColorTemperature 色温状态
 
 类型: percentage
 
@@ -247,8 +264,7 @@ ColorTemperature.SetMax |
 ColorTemperature.SetMin |
 ColorTemperature.Adjust |
 
-
-#### Set Payload
+##### Set Payload
 
 字段 | 类型 | 描述
 --- | --- | ---
@@ -280,7 +296,7 @@ value | `number` | 百分比
 }
 ```
 
-#### SetMax Payload
+##### SetMax Payload
 
 命令示例：
 ```json
@@ -306,7 +322,7 @@ value | `number` | 百分比
 }
 ```
 
-#### SetMin Payload
+##### SetMin Payload
 
 命令示例：
 ```json
@@ -334,7 +350,7 @@ value | `number` | 百分比
 }
 ```
 
-#### Adjust Payload
+##### Adjust Payload
 
 字段 | 类型 | 描述
 --- | --- | ---
@@ -366,7 +382,7 @@ delta | `number` | 相对值
 }
 ```
 
-## Brightness 亮度状态
+#### Brightness 亮度状态
 
 类型: percentage
 
@@ -379,8 +395,7 @@ Brightness.SetMax |
 Brightness.SetMin |
 Brightness.Adjust |
 
-
-#### Set Payload
+##### Set Payload
 
 字段 | 类型 | 描述
 --- | --- | ---
@@ -412,7 +427,7 @@ value | `number` | 百分比
 }
 ```
 
-#### SetMax Payload
+##### SetMax Payload
 
 命令示例：
 ```json
@@ -438,7 +453,7 @@ value | `number` | 百分比
 }
 ```
 
-#### SetMin Payload
+##### SetMin Payload
 
 命令示例：
 ```json
@@ -464,7 +479,7 @@ value | `number` | 百分比
 }
 ```
 
-#### Adjust Payload
+##### Adjust Payload
 
 字段 | 类型 | 描述
 --- | --- | ---
@@ -496,7 +511,8 @@ delta | `number` | 相对值
 }
 ```
 
-## Mode 模式状态
+#### Mode 模式状态
+
 类型: enum
 
 可对应说法: 若琪, 把空调设为制冷模式
@@ -537,7 +553,8 @@ Mode.Sleep | 睡眠模式
 }
 ```
 
-## SwingMode 转向状态
+#### SwingMode 转向状态
+
 类型: enum
 
 可对应说法: 若琪, 打开风扇转向
@@ -592,8 +609,8 @@ CustomMode 描述符
 --- | --- | ---
 mode.type | custom, preset |
 mode.name | `string` | -->
+#### Humidity 湿度状态
 
-## Humidity 湿度状态
 类型: percentage, unit: relative humidity
 
 可对应说法: 若琪, 加湿器调大点；若琪, 加湿器设到五十
@@ -605,13 +622,14 @@ Humidity.SetMax |
 Humidity.SetMin |
 Humidity.Adjust |
 
-#### Set Payload
+##### Set Payload
 
 字段 | 类型 | 描述
 --- | --- | ---
 value | `number` | 百分比
 
 命令示例：
+
 ```json
 {
   "header": {
@@ -637,9 +655,10 @@ value | `number` | 百分比
 }
 ```
 
-#### SetMax Payload
+##### SetMax Payload
 
 命令示例：
+
 ```json
 {
   "header": {
@@ -663,9 +682,10 @@ value | `number` | 百分比
 }
 ```
 
-#### SetMin Payload
+##### SetMin Payload
 
 命令示例：
+
 ```json
 {
   "header": {
@@ -689,13 +709,14 @@ value | `number` | 百分比
 }
 ```
 
-#### Adjust Payload
+##### Adjust Payload
 
 字段 | 类型 | 描述
 --- | --- | ---
 delta | `number` | 相对值
 
 命令示例：
+
 ```json
 {
   "header": {
@@ -721,7 +742,8 @@ delta | `number` | 相对值
 }
 ```
 
-## Temperature 温度状态
+#### Temperature 温度状态
+
 类型: number, Unit: Celsius
 
 可对应说法: 若琪, 空调调高点
@@ -734,13 +756,14 @@ Temperature.SetMin |
 Temperature.Adjust |
 
 
-#### Set Payload
+##### Set Payload
 
 字段 | 类型 | 描述
 --- | --- | ---
 value | `number` | 百分比
 
 命令示例：
+
 ```json
 {
   "header": {
@@ -766,9 +789,10 @@ value | `number` | 百分比
 }
 ```
 
-#### SetMax Payload
+##### SetMax Payload
 
 命令示例：
+
 ```json
 {
   "header": {
@@ -792,9 +816,10 @@ value | `number` | 百分比
 }
 ```
 
-#### SetMin Payload
+##### SetMin Payload
 
 命令示例：
+
 ```json
 {
   "header": {
@@ -818,13 +843,14 @@ value | `number` | 百分比
 }
 ```
 
-#### Adjust Payload
+##### Adjust Payload
 
 字段 | 类型 | 描述
 --- | --- | ---
 delta | `number` | 相对值
 
 命令示例：
+
 ```json
 {
   "header": {
@@ -850,7 +876,8 @@ delta | `number` | 相对值
 }
 ```
 
-## FanSpeed 风速状态
+#### FanSpeed 风速状态
+
 类型: percentage
 
 可对应说法: 若琪, 空调风大点
@@ -863,13 +890,14 @@ FanSpeed.SetMin |
 FanSpeed.Adjust |
 
 
-#### Set Payload
+##### Set Payload
 
 字段 | 类型 | 描述
 --- | --- | ---
 value | `number` | 百分比
 
 命令示例：
+
 ```json
 {
   "header": {
@@ -895,9 +923,10 @@ value | `number` | 百分比
 }
 ```
 
-#### SetMax Payload
+##### SetMax Payload
 
 命令示例：
+
 ```json
 {
   "header": {
@@ -921,9 +950,10 @@ value | `number` | 百分比
 }
 ```
 
-#### SetMin Payload
+##### SetMin Payload
 
 命令示例：
+
 ```json
 {
   "header": {
@@ -947,13 +977,14 @@ value | `number` | 百分比
 }
 ```
 
-#### Adjust Payload
+##### Adjust Payload
 
 字段 | 类型 | 描述
 --- | --- | ---
 delta | `number` | 相对值
 
 命令示例：
+
 ```json
 {
   "header": {
@@ -979,7 +1010,8 @@ delta | `number` | 相对值
 }
 ```
 
-## Volume 音量状态
+#### Volume 音量状态
+
 类型: percentage
 
 可对应说法: 若琪, 电视音量大点
@@ -991,14 +1023,14 @@ Volume.SetMax |
 Volume.SetMin |
 Volume.Adjust |
 
-
-#### Set Payload
+##### Set Payload
 
 字段 | 类型 | 描述
 --- | --- | ---
 value | `number` | 百分比
 
 命令示例：
+
 ```json
 {
   "header": {
@@ -1024,9 +1056,10 @@ value | `number` | 百分比
 }
 ```
 
-#### SetMax Payload
+##### SetMax Payload
 
 命令示例：
+
 ```json
 {
   "header": {
@@ -1050,9 +1083,10 @@ value | `number` | 百分比
 }
 ```
 
-#### SetMin Payload
+##### SetMin Payload
 
 命令示例：
+
 ```json
 {
   "header": {
@@ -1076,13 +1110,14 @@ value | `number` | 百分比
 }
 ```
 
-#### Adjust Payload
+##### Adjust Payload
 
 字段 | 类型 | 描述
 --- | --- | ---
 delta | `number` | 相对值
 
 命令示例：
+
 ```json
 {
   "header": {
@@ -1108,7 +1143,8 @@ delta | `number` | 相对值
 }
 ```
 
-## Media.TVChannel 频道状态
+#### Media.TVChannel 频道状态
+
 类型: channel descriptor
 
 可对应说法: 若琪, 湖南卫视
@@ -1127,9 +1163,11 @@ Media.TVChannel.Set |
 tvChannel.name | `string` |
 tvChannel.code | `string` |
 
-#### Set Payload
+
+##### Set Payload
 
 命令示例：
+
 ```json
 {
   "header": {
@@ -1158,10 +1196,10 @@ tvChannel.code | `string` |
 }
 ```
 
-#### Previous Payload
-
+##### Previous Payload
 
 命令示例：
+
 ```json
 {
   "header": {
@@ -1185,9 +1223,10 @@ tvChannel.code | `string` |
 }
 ```
 
-#### Next Payload
+##### Next Payload
 
 命令示例：
+
 ```json
 {
   "header": {
@@ -1211,8 +1250,10 @@ tvChannel.code | `string` |
 }
 ```
 
-## Media.Music 音乐控制
+#### Media.Music 音乐控制
+
 类型: song descriptor
+型: song descriptor
 
 可对应说法: 若琪, 想听Don't You Worry Child
 
@@ -1233,7 +1274,8 @@ music.album | `string` |
 music.genre | `string` |
 music.source | `string` |
 
-## PlaybackControl 媒体播放状态
+#### PlaybackControl 媒体播放状态
+
 类型: enum
 
 可对应说法: 若琪, 暂停音乐
@@ -1245,7 +1287,8 @@ music.source | `string` |
 PlaybackControl.Play |
 PlaybackControl.Pause |
 
-## PlaybackMode 媒体播放模式状态
+#### PlaybackMode 媒体播放模式状态
+
 类型: enum
 
 可对应说法: 若琪, 单曲循环

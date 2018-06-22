@@ -1,8 +1,8 @@
-# WiFi控制
+### WiFi控制
 
 RokidOS 将一些常用 WiFi 控制函数已经封装成接口，并提供通用API方便开发者进行扩展。
 
-## STATION 模式API
+#### STATION 模式API
 
 现有基本上所有的 Linux 内核嵌入式 WiFi 设备都支持 wpa\_supplicant 进行 WiFi STATION 模式的管理和配置。所以 RokidOS 也是将 WiFi 控制封装成 wpa\_supplicant 控制接口。第三方开发者也可以移植到其他依赖于 wpa\_supplicant 控制的第三方设备中。代码相关路径位于 robot/external/wpa\_ctrl，常用接口如下：
 
@@ -75,7 +75,7 @@ enum {
 int wifi_send_command(int cmd, void *value, int val_len, void *res, int res_len);
 ```
 
-## AP模式API
+#### AP模式API
 
 对于目前支持 RokidOS 的几款官方开发板，采用的 WiFi 模组是“博通”公司的 AP6255 芯片，“博通”公司的 wifi 芯片 AP 与 STATION 切换需要对网卡驱动进行卸载重装，所以配网方式不建议使用 AP 模式配网，这会造成多次 WiFi 模式的切换，耗时可能比较严重。不过给出以下方法，开发者可以自行配置，进入 AP 模式。
 
@@ -130,13 +130,13 @@ ifconfig wlan0 192.168.2.1
 dnsmasq -iwlan0  --dhcp-option=3,192.168.2.1 --dhcp-range=192.168.2.50,192.168.2.200,12h -p100
 ```
 
-## 配网
+#### 配网
 
 RokidOS 配套的开发板支持 WiFi 连接 internet ，系统提供了一些控制 WiFi 连接的接口，配网业务及网络监控服务。设备第一次连接网络需要第三方设备发送 WiFi 相关信息如 SSID ， PSK 和加密方式到设备，第一次联网方式支持如下方式：
 
-#### 蓝牙配网
+###### 蓝牙配网
 
-#### AP 模式配网
+###### AP 模式配网
 
 
 

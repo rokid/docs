@@ -1,4 +1,4 @@
-# lumenflinger
+### lumenflinger
 
 lumenflinger为灯光服务程序，源码路径:robot\services\lumenflinger
 包括以下几个部分:
@@ -10,7 +10,7 @@ lumenflinger为灯光服务程序，源码路径:robot\services\lumenflinger
 其中 LumenLight.cpp、LumenEffects.cpp 为灯光 APP 提供调用接口，下面分别介绍
 
 
-## LumenLight
+#### LumenLight
 class LumenLight提供了控制灯光服务的基本接口
 
 m_platform：用于区别不同设备，实现不同客制化效果
@@ -24,7 +24,7 @@ m_pixelFormat：目前支持的RGB格式，值为3
 m_fps：服务端的刷新频率，目前最大30fps,过快刷新灯光数据可能会丢帧
 
 
-### 接口定义：
+##### 接口定义：
 
 - **unsigned char\* lumen_get_data(unsigned char\* buf, int len)**
 
@@ -63,11 +63,11 @@ m_fps：服务端的刷新频率，目前最大30fps,过快刷新灯光数据可
 
 
 
-## lumeneffects
+#### lumeneffects
 
 lumeneffects基于lumenflinger服务提供了一些简单的灯光效果接口。接口如下：（由LumenEffects.cpp、LumenEffects.h定义）。
 
-### 提供的效果：
+##### 提供的效果：
 
 - **bool EffectFadeIn\(bool dir,u8 poi,u8 len,u8\* color,int speed\)**
 
@@ -177,7 +177,7 @@ lumeneffects基于lumenflinger服务提供了一些简单的灯光效果接口�
 
   停止所有灯效并熄灭所有灯。
 
-### 提供的可用的动画效果接口：
+##### 提供的可用的动画效果接口：
 
 下述所有动画接口可参考上述动画函数的具体实现。
 

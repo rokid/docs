@@ -1,6 +1,6 @@
-# 标准化设备
+### 标准化设备
 
-## 数据类型 {Object}
+#### 数据类型 {Object}
 
 - {String} [deviceId](#deviceId)
 - {String} [name](#name)
@@ -15,7 +15,7 @@
 
 **标准化设备** 数据定义参考： [jsonschemalint 在线检查工具](https://jsonschemalint.com/#/version/draft-04/markup/json?gist=f9b8fcb4b8e9e2761978fb9cbde48392)
 
-### <span id = "deviceId">deviceId</span>
+##### <span id = "deviceId">deviceId</span>
 
 - {String}
 - 设备唯一Id，用来标识一个设备，要具备唯一性
@@ -25,7 +25,7 @@ Example: uuid 等
 "06d0dfe0-1123-11e7-93ae-92361f002671"
 ```
 
-### <span id = "name">name</span>
+##### <span id = "name">name</span>
 
 - {String}
 - 设备名称
@@ -35,7 +35,7 @@ Example:
 "智能灯泡"
 ```
 
-### <span id = "type">type</span>
+##### <span id = "type">type</span>
 
 - {String}
 - 设备类型
@@ -46,7 +46,7 @@ Example:
 "light"
 ```
 
-### <span id = "actions">actions</span>
+##### <span id = "actions">actions</span>
 
 - {Object}
 - 一个智能设备具备的能力，如下面 example 所示，智能灯泡具备开关，调颜色，调亮度三个能力。
@@ -61,7 +61,7 @@ Example:
 }
 ```
 
-### <span id = "state">state</span>
+##### <span id = "state">state</span>
 
 - {Object}
 - 设备当前状态
@@ -86,14 +86,14 @@ actions:
 }
 ```
 
-### <span id = "offline">offline</span>
+##### <span id = "offline">offline</span>
 
 - {Boolean}
 - 设备离线状态
   - true: 离线
   - false: 在线
 
-### <span id = "deviceInfo">deviceInfo</span>
+##### <span id = "deviceInfo">deviceInfo</span>
 
 - {Object}
 - Option
@@ -108,7 +108,7 @@ Example:
 }
 ```
 
-### <span id = "execDelay">execDelay</span>
+##### <span id = "execDelay">execDelay</span>
 
 - {Number} Option 该设备控制指令发出后与下一个控制指令的延迟， 默认 150ms
 
@@ -125,14 +125,14 @@ Example:
 }
 ```
 
-### <span id = "parent">parent</span>
+##### <span id = "parent">parent</span>
 
 - {String}
 - Option
 - 母设备的 deviceId
 - 例如多联开关的每一个开关都要单独转化为一个子设备，此时多联开关就是一个母设备。
 
-### <span id = "roomName">roomName</span>
+##### <span id = "roomName">roomName</span>
 
 - {String}
 - Option

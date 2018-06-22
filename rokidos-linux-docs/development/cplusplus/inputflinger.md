@@ -1,4 +1,4 @@
-# inputflinger
+### inputflinger
 
 inputflinger为输入事件服务，基于android源码修改。
 
@@ -23,7 +23,7 @@ rkinputmanager.cpp 提供接口供系统应用（如AMS）使用，并回调事�
 InputApplication.cpp 和InputWindow.cpp 暂时无需关心
 
 
-## rkinputmanager
+#### rkinputmanager
 主要有两个类:
 
 class InputServerInterface 需要系统服务（如AMS）注册并实现的回调函数接口类，其input事件处理和分发给APPs都在此接口实现。
@@ -31,7 +31,7 @@ class InputServerInterface 需要系统服务（如AMS）注册并实现的回�
 class NativeInputManager 提供系统应用(如AMS)控制注册input服务的接口，并创建InputManager对象
 
 
-### InputServerInterface：
+##### InputServerInterface：
 
 - **void notifySwitch(nsecs_t when, uint32_t switchValues, uint32_t switchMask)**
 
@@ -53,7 +53,7 @@ class NativeInputManager 提供系统应用(如AMS)控制注册input服务的接
   
   注：目前可以空实现，待扩展。
 
-### NativeInputManager：
+##### NativeInputManager：
 其中许多接口继承android框架但并未使用，其内部为空实现，待扩展。
 
 主要关注和使用的接口如下：
