@@ -15,7 +15,6 @@
 
 ![](https://s.rokidcdn.com/homebase/upload/ByGeJ4PTG.jpg)
 
-
 #### 一、注册开发者
 
 申请成为智能家居开发者需要准备：
@@ -31,7 +30,6 @@
 
 -   [Rokid Mobile SDKIOS开发指南](https://rokid.github.io/mobile-sdk-ios-docs)
 -   [Rokid Mobile SDKAndroid开发指南](https://rokid.github.io/mobile-sdk-android-docs)
-
 
 #### 二、开发
 
@@ -64,7 +62,6 @@
 
 -   [局域网自动发现](../connect/ssdp-auto-discovery.md)
 -   [局域网对接](../connect/via-lan.md)
-
 
 #### 三、调试
 
