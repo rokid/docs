@@ -68,6 +68,12 @@ ffmpeg -i <input-file.mp3> -acodec pcm_s16le -ac 1 -ar 24000 <output-file.wav>
 ffmpeg -f s16le -ar 24k -ac 1 -i <input-file.pcm> <output-file.wav>
 ```
 
+**MP4转WAV：**
+
+```
+ffmpeg -i <input-file.mp4> -acodec pcm_s16le -ac 1 -ar 24000 <output-file.wav>
+```
+
 **WAV头部规整：**
 
 如果wav格式符合以上格式，但在播放时最前面有爆音现象，是由于头部长度不是44字节，可以使用另一开源的命令行工具[sox](http://sox.sourceforge.net/)进行修正：
