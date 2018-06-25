@@ -71,7 +71,7 @@
 
 使用 rhome 工具通过 json schema 来验证 discover\|control\|report-state 接口的返回值来验证接入 Rokid Homebase 协议。
 
-您可以参考 [命令行接口检验工具](../tools/rhome.md) 文档完成调试。
+您可以参考 [RHOME 桌面版调试工具](../tools/rhome-desktop.md) 文档完成调试。
 
 ##### 自定义接入
 
@@ -83,7 +83,9 @@
 
 自测通过之后，请下载测试用例并按模板填写：[测试用例下载](https://s.rokidcdn.com/homebase/upload/HkOw4tzcf.xlsx)
 
+
 #### 四、发布上线
+
 
 申请发布上线智能家居品牌需要准备：
 
