@@ -15,6 +15,7 @@
 
 ![](https://s.rokidcdn.com/homebase/upload/ByGeJ4PTG.jpg)
 
+
 #### 一、注册开发者
 
 申请成为智能家居开发者需要准备：
@@ -30,6 +31,7 @@
 
 -   [Rokid Mobile SDKIOS开发指南](https://rokid.github.io/mobile-sdk-ios-docs)
 -   [Rokid Mobile SDKAndroid开发指南](https://rokid.github.io/mobile-sdk-android-docs)
+
 
 #### 二、开发
 
@@ -63,6 +65,7 @@
 -   [局域网自动发现](../connect/ssdp-auto-discovery.md)
 -   [局域网对接](../connect/via-lan.md)
 
+
 #### 三、调试
 
 我们提供两种测试方式：
@@ -71,7 +74,7 @@
 
 使用 rhome 工具通过 json schema 来验证 discover\|control\|report-state 接口的返回值来验证接入 Rokid Homebase 协议。
 
-您可以参考 [命令行接口检验工具](../tools/rhome.md) 文档完成调试。
+您可以参考 [RHOME 桌面版调试工具](../tools/rhome-desktop.md) 文档完成调试。
 
 ##### 自定义接入
 
@@ -82,6 +85,7 @@
 **注意：**
 
 自测通过之后，请下载测试用例并按模板填写：[测试用例下载](https://s.rokidcdn.com/homebase/upload/HkOw4tzcf.xlsx)
+
 
 #### 四、发布上线
 
