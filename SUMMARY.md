@@ -1,7 +1,7 @@
 # Summary
 
 * [Rokid 开放平台](README.md)
-* Rokid 语音接入平台
+* Rokid 语音整理方案
     * [平台简介](5-enableVoice/rokid-vsvy-sdk-docs/introduction.md)
     * [新手入门](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/rookie-guide.md) 
     * [Android 全链路系统级别方案](5-enableVoice/rokid-vsvy-sdk-docs/fullLink/fulllink.md)
@@ -18,11 +18,11 @@
     * [错误码](5-enableVoice/rokid-vsvy-sdk-docs/common/err_code.md)
     * [Json格式配置字串](5-enableVoice/rokid-vsvy-sdk-docs/common/api_json.md) 
     * [云端应用接口开发协议](3-ApiReference/openvoice-api.md)
-* Rokid 技能开放平台
-    * [技能开放平台简介](2-RokidDocument/1-SkillsKit/platform-introduction.md)
+* Rokid 技能开发工具
+    * [技能开发工具简介](2-RokidDocument/1-SkillsKit/platform-introduction.md)
     * 快速入门
         * [技能创建与发布](2-RokidDocument/1-SkillsKit/getting-started/create-and-pulibsh.md)
-        * [技能展示](2-RokidDocument/1-SkillsKit/getting-started/skill-store.md)
+        * [技能商店](2-RokidDocument/1-SkillsKit/getting-started/skill-store.md)
         * [技能示例代码](2-RokidDocument/1-SkillsKit/skill-sample.md)
     * 重要概念
         * [意图](2-RokidDocument/1-SkillsKit/important-concept/intend.md)
@@ -31,7 +31,7 @@
         * [confirm](2-RokidDocument/1-SkillsKit/important-concept/confirm.md)
         * [session](2-RokidDocument/1-SkillsKit/important-concept/session.md)
         * [NLP 正则表达式](2-RokidDocument/1-SkillsKit/important-concept/regular-expression.md)
-        * [Rokid 云端技能协议](3-ApiReference/cloud-app-development-protocol_cn.md)
+        * [Rokid 云端技能协议](2-RokidDocument/1-SkillsKit/important-concept/cloud-app-development-protocol_cn.md)
     * 技能开发指南
         * [Rokid 语音交互设计指南](2-RokidDocument/1-SkillsKit/rokid-voice-interaction-guidelines.md)
         * [Rokid Force System 使用指南](2-RokidDocument/1-SkillsKit/rokid-force-system-tutorial.md)
