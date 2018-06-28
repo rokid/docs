@@ -151,7 +151,7 @@ Rokid 全链路系统集成是指选择 Rokid 全链路 SDK 下载后,通过 And
  * 由于前端拾音模块需要读取Mic数据,因此各个客户/集成开发者需要在hal层实现mic设备的open以及read等接口,并以```"mic_array"```为```HAL_MODULE_INFO_SYM``` 的 id.具体接口为 android 标准的硬件设备hal层实现,具体可参考 [mic_array.c](../extra/mic_array.c) & [mic_array.h](../extra/mic_array.h) 的实现.目前支持的 mic 阵列数据采集格式至少为```16K/16bit/单通道``` 的数据格式.
 
 ##### 接口调用说明
-* 请参考[Android全链路接口调用说明](api_voicerecognize.md)
+* 请参考[Android全链路接口调用说明](#四、api参考)
 
 
 
