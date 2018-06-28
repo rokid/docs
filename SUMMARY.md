@@ -22,7 +22,7 @@
 * Rokid 技能开发工具
     * [技能开发工具简介](2-RokidDocument/1-SkillsKit/platform-introduction.md)
     * 快速入门
-        * [技能创建与发布](2-RokidDocument/1-SkillsKit/getting-started/create-and-pulibsh.md)
+        * [技能创建与发布](2-RokidDocument/1-SkillsKit/getting-started/creat-and-publish.md)
         * [技能商店](2-RokidDocument/1-SkillsKit/getting-started/skill-store.md)
         * [技能示例代码](2-RokidDocument/1-SkillsKit/skill-sample.md)
     * 重要概念
