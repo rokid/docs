@@ -48,7 +48,7 @@
         * [技能发布标准](4-TermsAndAgreements/rokid-skill-release-standard.md)
         * [技能审核规范](4-TermsAndAgreements/rokid-skill-examine-and-verify-standard.md)
 
-* Rokid 智能家居设备接入平台
+* Rokid 智能家居设备接入
   * 平台介绍
     * [平台简介](rokid-homebase-docs/README.md)
     * [智能家居设备接入流程](rokid-homebase-docs/intro/flow.md)
