@@ -158,7 +158,7 @@ Rokid 全链路系统集成是指选择 Rokid 全链路 SDK 下载后,通过 And
 ### 四、API参考
 
 VoiceRecognize.jar中包含```VoiceRecognize```和```VoiceRecognizeBuilder```两个比较重要的类。
-使用```VoiceRecognizeBuilder```设置Rokid账号信息就能得到一个```VoiceRecognize```对象，账号获取方式见[创建设备流程](../rookie-guide/create-device.md)。
+使用```VoiceRecognizeBuilder```设置Rokid账号信息就能得到一个```VoiceRecognize```对象，账号获取方式见[创建设备流程](../rookie-guide/rookie-guide.md)。
 下面详细介绍```VoiceRecognize```内部类和接口定义。
 
 
