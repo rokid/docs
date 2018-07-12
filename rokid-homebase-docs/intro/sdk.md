@@ -32,8 +32,8 @@
 
 在若琪 SDK 中，您可以通过 SDK 提供的方法获取用户登录的 Token，具体参考以下文档：
 
-- [iOS SDK 获取用户登录 Token](https://rokid.github.io/mobile-sdk-ios-docs/resource/43_account_info.html)
-- [Android SDK 获取用户登录 Token](https://rokid.github.io/mobile-sdk-android-docs/resource/43_account_info.html)
+- [iOS SDK 获取用户登录 Token](https://rokid.github.io/mobile-sdk-ios-docs/resource/31_token_login.html)
+- [Android SDK 获取用户登录 Token](https://rokid.github.io/mobile-sdk-android-docs/resource/31_login.html)
 
 接着，通过 Authorization HTTP 请求头携带用户 Token 来进行 Homebase Open API 鉴权。
 
