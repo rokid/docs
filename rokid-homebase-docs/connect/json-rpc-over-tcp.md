@@ -8,6 +8,7 @@
 - `id` {int} 必须与请求对象中的id一致
 - `result` {any} 执行结果, 根据接口类型返回不同的结果
 
+
 ```json
 {"jsonrpc": "2.0", "result": "some data", "id": 1}
 ```
@@ -17,12 +18,9 @@
 - `jsonrpc` {string} 必须为"2.0"
 - `id` {int} 必须与请求对象中的id一致
 - `error` {object} 错误对象
-- `error.code` {int} 错误代号
-- `error.data` {string} 若琪标准错误， 同 error.errorName
-- `error.errorName` {string} 若琪标准错误 同 error.data
-- `error.vendorErrorCode` {string} 厂商错误码
 - `error.message` {string} 错误描述
-- `error.debugInfo` {string} 调试必要信息
+- `error.code` {int} 错误代码
+- `error.data` {string} 错误名称
 
 错误代码和错误名称需使用指定值，具体请参考 [标准错误](../v1/errors.md)
 
@@ -89,7 +87,7 @@
          "offline":false
       }
    ],
-   "id": 1
+   "id":1
 }
 ```
 
@@ -148,14 +146,14 @@
 - result
 
 ```json
---> { "jsonrpc": "2.0", "method": "list", "params": {"userAuth":{ "userId": "hello1234" }, "device": {"deviceId": "abc"}, "action": {"property": "switch", "name": "on"}}, "id": 1 }
+--> { "jsonrpc": "2.0", "method": "list", "params": {"userAuth":{ "userId": "hello1234" }, "device": {"deviceId": "abc"}, "action": {"property": "switch", "name": "on"}}, "id": "1" }
 
 
 // 返回 null 会触发一次 get 请求来更新最新设备状态
-<-- { "jsonrpc": "2.0", "result": null, "id": 1}
+<-- { "jsonrpc": "2.0", "result": null, "id": "1"}
 
 // 返回设备最新 state, 可以更新设备状态
-<-- { "jsonrpc": "2.0", "result": {"switch": "on"}, "id": 1}
+<-- { "jsonrpc": "2.0", "result": {"switch": "on"}, "id": "1"}
 ```
 
 ### method: `command`
