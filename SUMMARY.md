@@ -57,8 +57,8 @@
   * 开发指南
     * [云云对接](rokid-homebase-docs/connect/cloud-to-cloud.md)
     * [局域网对接](rokid-homebase-docs/connect/via-lan.md)
-  * 调试
-    * [命令行接口校验工具](rokid-homebase-docs/tools/rhome.md)
+  * 如何调试
+    * [RHOME 桌面版调试工具](rokid-homebase-docs/tools/rhome-desktop.md)
     * [自定义接入](rokid-homebase-docs/tools/developer-driver.md)
   * 智能家居协议(v2)
     * [技能授权](rokid-homebase-docs/connect/rfc6749.md)
