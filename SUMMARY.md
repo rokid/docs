@@ -53,14 +53,14 @@
   * 平台介绍
     * [平台简介](rokid-homebase-docs/README.md)
     * [智能家居设备接入流程](rokid-homebase-docs/intro/flow.md)
-    * [名词解释](rokid-homebase-docs/intro/glossary.md)
+    * [语音控制引擎接入流程](rokid-homebase-docs/intro/sdk.md)
   * 开发指南
     * [云云对接](rokid-homebase-docs/connect/cloud-to-cloud.md)
     * [局域网对接](rokid-homebase-docs/connect/via-lan.md)
-  * 调试
-    * [命令行接口校验工具](rokid-homebase-docs/tools/rhome.md)
+  * 如何调试
+    * [RHOME 桌面版调试工具](rokid-homebase-docs/tools/rhome-desktop.md)
     * [自定义接入](rokid-homebase-docs/tools/developer-driver.md)
-  * 智能家居协议(Beta)
+  * 智能家居协议(v2)
     * [技能授权](rokid-homebase-docs/connect/rfc6749.md)
     * [消息格式参考](rokid-homebase-docs/v2/message-reference.md)
     * 提供接口
@@ -74,7 +74,7 @@
   * 智能家居 JSON RPC 协议
     * [局域网自动发现](rokid-homebase-docs/connect/ssdp-auto-discovery.md)
     * [JSON RPC 控制协议](rokid-homebase-docs/connect/json-rpc-over-tcp.md)
-  * 旧版协议
+  * 智能家居协议(v1)
     * [HTTP 远程驱动](rokid-homebase-docs/connect/http-remote-driver.md)
     * 设备描述
       * [设备](rokid-homebase-docs/v1/device/device.md)
