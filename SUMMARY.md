@@ -53,7 +53,7 @@
   * 平台介绍
     * [平台简介](rokid-homebase-docs/README.md)
     * [智能家居设备接入流程](rokid-homebase-docs/intro/flow.md)
-    * [语音控制引擎接入流程](rokid-homebase-docs/intro/sdk.md)
+    * [语控引擎接入流程](rokid-homebase-docs/intro/sdk.md)
   * 开发指南
     * [云云对接](rokid-homebase-docs/connect/cloud-to-cloud.md)
     * [局域网对接](rokid-homebase-docs/connect/via-lan.md)
@@ -87,6 +87,7 @@
     * 其他授权方式
         * [Homebase OAuth 授权](rokid-homebase-docs/v1/oauth.md)
         * [Homebase OAuth2.0 授权](rokid-homebase-docs/v1/OAuth2.0.md)
+        * [基于 JWT 签名的服务端授权](rokid-homebase-docs/connect/rfc7519.md)
   * 高级功能
     * [Webhook](rokid-homebase-docs/webhook/index.md)
 
