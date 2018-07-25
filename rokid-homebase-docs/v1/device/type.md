@@ -9,8 +9,8 @@
 - `switch`: 开关
 - `panel`: 面板
 - `tv`: 电视
-- `stb`: 机顶盒
-- `box`: 电视盒子
+- `stb`: 机顶盒，电视机顶盒
+- `box`: 电视盒子 (如小米盒子，天猫魔盒)
 - `fan`: 电风扇
 - `remoteController`: 遥控器
 - `ac`: 空调
