@@ -9,6 +9,8 @@
 - `switch`: 开关
 - `panel`: 面板
 - `tv`: 电视
+- `stb`: 机顶盒，电视机顶盒
+- `box`: 电视盒子 (如小米盒子，天猫魔盒)
 - `fan`: 电风扇
 - `remoteController`: 遥控器
 - `ac`: 空调
@@ -30,4 +32,4 @@
 - `wineCabinet`: 酒柜
 - `speaker`: 媒体播放器
 
-> 如果上面类型无法满足需求， 需要添加新的设备类型， 请向我们 [提交 Issues](https://github.com/Rokid/rokid-homebase-docs/issues)
+> 如果上面类型无法满足需求， 需要添加新的设备类型， 请向我们 [提交 Issues](https://github.com/Rokid/docs/issues)
