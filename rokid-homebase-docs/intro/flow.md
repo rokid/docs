@@ -98,7 +98,7 @@
     * 安装配置说明
 * 测试报告
 
-请下载品牌信息模板并填写：[品牌信息模板下载](https://s.rokidcdn.com/homebase/upload/SJPgGvN4m.md)，将以上信息通过邮箱：<smarthomeconnect@rokid.com> 发给我们。
+请下载品牌信息模板并填写：[品牌信息模板下载](https://s.rokidcdn.com/homebase/upload/HJVfmzDV7.md)，将以上信息通过邮箱：<smarthomeconnect@rokid.com> 发给我们。
 
 #### 五、获得帮助
 
