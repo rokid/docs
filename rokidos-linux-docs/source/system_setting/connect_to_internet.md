@@ -16,6 +16,7 @@
 <img src="images/001.png" style="height:70vh" align="center" />	
 
 第四步：打开蓝牙以后，在欢迎页面底部会出现【发现可连接音箱】的字样，点击它会跳出可连接的设备（开发板对应的名称前缀为Devboard）。或者也可以点击“欢迎使用若琪”5下，就可以进入开发板的配网模式，如下图所示。
+
 <img src="images/002.png" style="height:70vh" align="center" />	
 <img src="images/003.png" style="height:70vh" align="center" />	
 
