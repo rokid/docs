@@ -13,34 +13,18 @@
 第二步：下载 [Rokid 官方手机App](http://s.rokidcdn.com/app/m_index.html)，安装后，打开 App，注册账号并登录。
 
 第三步：登录成功后，会进入【欢迎使用若琪】页面，并提示打开手机蓝牙。请按提示打开手机蓝牙，点击【我知道了】。
-
 <img src="images/001.png" style="height:70vh" align="center" />	
 
-第四步：打开蓝牙以后，在欢迎页面底部会出现【发现可连接音箱】的字样，点击它会跳出可连接的设备（开发板对应的名称前缀为Devboard）。如下图所示。
-
-
-
+第四步：打开蓝牙以后，在欢迎页面底部会出现【发现可连接音箱】的字样，点击它会跳出可连接的设备（开发板对应的名称前缀为Devboard）。或者也可以点击“欢迎使用若琪”5下，就可以进入开发板的配网模式，如下图所示。
 <img src="images/002.png" style="height:70vh" align="center" />	
-
-
-
 <img src="images/003.png" style="height:70vh" align="center" />	
 
-
-
 第五步：点击【立即连接】进入网络配置页面，输入Wi-Fi名称和密码，并点击“发送到音箱”。随后等待连接完成即可。如下图所示。
-
 <img src="images/004.png" style="height:70vh" align="center" />	
-
 <img src="images/006.png" style="height:70vh" align="center" />	
 
-
-
 第六步：配网成功如下图所示：
-
 <img src="images/succeed.jpg" style="height:70vh" align="center" />	
-
-
 
 #### 二、已有绑定设备的情况下配网
 
