@@ -1,5 +1,5 @@
 ### 拦截器接口文档
-语义理解（NLP）的拦截器（intercepotr），可以允许开发者在进入我们NLP匹配之前或者是asr结果在若琪的NLP处理完成后结果为空时将请求进行拦截，拦截到开发者自己的https拦截器。用户可以在 Rokid 开放平台[语音接入](https://developer.rokid.com/voice/#/)板块中的服务接入中设置。
+语义理解（NLP）的拦截器（interceptor），可以允许开发者在进入我们NLP匹配之前或者是asr结果在若琪的NLP处理完成后结果为空时将请求进行拦截，拦截到开发者自己的https拦截器。用户可以在 Rokid 开放平台[语音接入](https://developer.rokid.com/voice/#/)板块中的服务接入中设置。
 
 下图是整个语音的后端处理流程图：
 ![intercepto](images/interceptor.jpg)
