@@ -133,6 +133,9 @@
 * 硬件设计参考方案
     * [Rokid 语音产品硬件设计指南](2-RokidDocument/2-EnableVoice/rokid-hardware-design-guide.md)
     * [Rokid 硬件交互设计指南](2-RokidDocument/2-EnableVoice/rokid-hardware-ux-design-guidelines.md)
+* Rokid 能力介绍
+    * [Rokid 语音识别](6-asrandtts/asr.md)
+    * [Rokid 语音合成](6-asrandtts/tts.md)
 * [服务协议](4-TermsAndAgreements/community-service-agreement.md)
 * [免责声明](4-TermsAndAgreements/community-disclaimer.md)
 * [联系我们](contact-us.md)
