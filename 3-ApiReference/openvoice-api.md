@@ -113,17 +113,6 @@
    3. FINISH 返回 nlp 结果
 5. 每个 session 以 FINISH 结束
 
-```mermaid
-sequenceDiagram
-  SDK ->> gw: AuthRequest(service=speech,version=2)
-  gw -->> SDK: AuthResponse
-  loop
-    SDK ->> gw: SpeechRequest
-    gw -->> SDK: SpeechResponse
-  end
-```
-
-
 ##### SpeechRequest
 
 
@@ -193,17 +182,6 @@ sequenceDiagram
 4. 中间数据块 finish = false
 5. 以 finish = true 的数据块结束
 
-```mermaid
-sequenceDiagram
-SDK->>gw: text(今天天气怎么样), codec(mp3)
-
-Loop 循环回语音
-gw-->>SDK: finish(false), voice
-end
-
-gw-->>SDK: finish(true), voice
-```
-
 ##### TtsRequest
 
 | 参数     | 类型        | 描述                   | 默认值  |
@@ -251,43 +229,11 @@ gw-->>SDK: finish(true), voice
   - 物理按键开始拾音（发送 START），发送 VOICE...，放开结束拾音（发送 END）
   - 用激活词唤醒（发送 START），发送 VOICE…，本地 vad 结束（发送 END）
 
-```mermaid
-sequenceDiagram
-  sdkspeech ->> gw: ReqType.START
-  sdkspeech ->> gw: ReqType.VOICE
-  gw -->> sdkspeech: INTERMEDIATE, SUCCESS, asr(若琪), extra{"activation":"none"}
-  sdkspeech ->> gw: ReqType.VOICE
-  gw -->> sdkspeech: INTERMEDIATE, SUCCESS, asr(若琪今天)
-  sdkspeech ->> gw: ReqType.VOICE
-  sdkspeech ->> gw: ReqType.VOICE
-  gw -->> sdkspeech: INTERMEDIATE, SUCCESS, asr(若琪今天天气)
-  sdkspeech ->> gw: ReqType.VOICE
-  sdkspeech ->> gw: ReqType.VOICE
-  sdkspeech ->> gw: ReqType.END
-  gw -->> sdkspeech: ASR_FINISH, SUCCESS, asr(若琪今天天气怎么样)
-  gw -->> sdkspeech: FINISH, SUCCESS, asr(若琪今天天气怎么样), nlp(json), action(json)
-```
 
 #### 云端 vad
 
 如果发送的 VOICE 中包含 "若琪今天天气怎么样"，设置 vad_timeout 为 500ms，不需要发送 END
 
-```mermaid
-sequenceDiagram
-  sdkspeech ->> gw: ReqType.START
-  sdkspeech ->> gw: ReqType.VOICE
-  gw -->> sdkspeech: INTERMEDIATE, SUCCESS, asr(若琪), extra{"activation":"none"}
-  sdkspeech ->> gw: ReqType.VOICE
-  gw -->> sdkspeech: INTERMEDIATE, SUCCESS, asr(若琪今天)
-  sdkspeech ->> gw: ReqType.VOICE
-  sdkspeech ->> gw: ReqType.VOICE
-  gw -->> sdkspeech: INTERMEDIATE, SUCCESS, asr(若琪今天天气)
-  sdkspeech ->> gw: ReqType.VOICE
-  sdkspeech ->> gw: ReqType.VOICE
-  sdkspeech ->> gw: ReqType.VOICE(包含 500ms 静音数据)
-  gw -->> sdkspeech: ASR_FINISH, SUCCESS, asr(若琪今天天气怎么样)
-  gw -->> sdkspeech: FINISH, SUCCESS, asr(若琪今天天气怎么样), nlp(json), action(json)
-```
 
 ### speech 异常
 
@@ -299,31 +245,6 @@ sequenceDiagram
 * 任一 session 的语音不允许超过 **10s**，超过即中止，按当时 asr 识别出的结果走后续流程
 * 任一 session 中 asr 返回最终结果为 空，则立即返回 {FINISH, SUCCESS, asr(""), nlp(""), action(""), ...}
 
-```mermaid
-sequenceDiagram
-  sdkspeech ->> gw: ReqType.START
-
-  Loop 循环发语音
-  sdkspeech ->> gw: ReqType.VOICE
-  end
-
-  Note right of gw: 3s 内不包含人声
-  Alt 有激活词
-  gw -->> sdkspeech: FINISH, SUCCESS, extra({"activation":"fake"})
-  else 无激活词
-  end
-
-  Note right of gw: 2s + vad_timeout 内未收到数据
-  Opt 2s + vad_timeout 内未收到数据
-  gw -->> sdkspeech: FINISH, SUCCESS, asr(若琪今天天气怎么样), nlp(json), action(json)
-  end
-
-  Note right of gw: 语音数据超过 10s
-  Opt 语音数据超过 10s
-  gw -->> sdkspeech: FINISH, SUCCESS, asr(若琪今天天气怎么样), nlp(json), action(json)
-  end
-
-```
 
 ### speech 特殊逻辑
 1. 二次确认 逻辑
