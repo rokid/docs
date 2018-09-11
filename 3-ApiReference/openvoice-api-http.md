@@ -101,3 +101,42 @@ message AsrResponse {
 | 参数             | 类型     | 描述                         | 默认值  |
 | -------------- | ------ | ------------------------------- | ---- |
 | asr            | string  | 语音文本结果                    | 无 |
+
+## 语音合成API
+
+### 请求URL
+
+线上：<https://apigwrest.open.rokid.com/api/v1/tts/TtsProxy/Tts>
+
+### 请求和回复数据
+
+``` protobuf
+syntax = "proto2";
+
+package rokid.open.v1.tts.TtsProxy;
+
+message TtsRequest {
+    required string text             = 1;
+    optional string declaimer        = 2;
+    optional string codec            = 3;
+}
+
+message TtsResponse {
+    required bytes voice             = 1;
+}
+
+```
+
+### TtsRequest 字段说明
+
+| 参数    | 类型    | 描述                                   | 默认值  |
+| --------| ------ | -------------------------------       | ---- |
+| text   | string  | 文字 | 无，必填 |
+| declaimer    | string | 朗读者，可选范围：zh, xmly, e2e                      | zh，可选 |
+| codec   | string | 语音格式，可选范围：mp3, pcm, opu, opu2       | mp3，可选 |
+
+### TtsResponse 字段说明
+
+| 参数             | 类型     | 描述                         | 默认值  |
+| -------------- | ------ | ------------------------------- | ---- |
+| voice            | bytes  | 语音二进制数据                    | 无 |
