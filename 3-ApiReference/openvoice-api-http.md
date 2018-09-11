@@ -61,6 +61,10 @@ func makeMD5(data string) string {
 }
 
 ```
+## 编码格式
+
+通过HTTP头部的Content-Type字段支持不同的编码格式，目前支持JSON和Protobuf2，默认为Protobuf2。如果客户端需要JSON格式，可以在HTTP头部设置`Content-Type为application/json;charset=utf-8`
+JSON 中 bytes 数据以 base64 编码的字符串表示
 
 ## 语音识别API
 
@@ -68,6 +72,10 @@ func makeMD5(data string) string {
 
 
 线上：<https://apigwrest.open.rokid.com/api/v1/asr/AsrProxy/Asr>
+
+### proto 文件
+
+[proto](https://github.com/Rokid/rokid-openvoice-http/blob/master/protobuf/asr.proto)
 
 ### 请求和回复数据
 
@@ -107,6 +115,10 @@ message AsrResponse {
 ### 请求URL
 
 线上：<https://apigwrest.open.rokid.com/api/v1/tts/TtsProxy/Tts>
+
+### proto 文件
+
+[proto](https://github.com/Rokid/rokid-openvoice-http/blob/master/protobuf/tts.proto)
 
 ### 请求和回复数据
 
