@@ -144,7 +144,7 @@ message TtsResponse {
 | 参数    | 类型    | 描述                                   | 默认值  |
 | --------| ------ | -------------------------------       | ---- |
 | text   | string  | 文字 | 无，必填 |
-| declaimer    | string | 朗读者，可选范围：zh, xmly, e2e                      | zh，可选 |
+| declaimer    | string | 朗读者，可选范围：zh(成人),c1(儿童)                      | zh，可选 |
 | codec   | string | 语音格式，可选范围：mp3, pcm, opu, opu2       | mp3，可选 |
 
 ### TtsResponse 字段说明
