@@ -4,11 +4,12 @@
 * Rokid 语音整体方案
     * [语音整体方案简介](5-enableVoice/rokid-vsvy-sdk-docs/introduction.md)
     * [语音接入流程](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/rookie-guide.md) 
-    * 语音接入流程
+    * 语音方案介绍
         * [Android 全链路通用方案](5-enableVoice/rokid-vsvy-sdk-docs/fullLink/fulllink.md)
         * [Android 全链路APK级别方案](5-enableVoice/rokid-vsvy-sdk-docs/RokidAiSdk/RokidAiSdk.md)
         * [Android 基础语音模块](5-enableVoice/rokid-vsvy-sdk-docs/speechTTS/speechtts.md)
         * [Linux基础架构](5-enableVoice/rokid-vsvy-sdk-docs/linuxsdk/linuxsdk.md)
+
     * 语音接入接口文档
         * [拦截器接口文档](3-ApiReference/rokid-interceptor.md)
         * [设备接口文档](3-ApiReference/open-device-manager.md)
@@ -20,7 +21,8 @@
     * [重要概念](5-enableVoice/rokid-vsvy-sdk-docs/important-concept.md)
     * [错误码](5-enableVoice/rokid-vsvy-sdk-docs/common/err_code.md)
     * [Json格式配置字串](5-enableVoice/rokid-vsvy-sdk-docs/common/api_json.md) 
-    * [云端应用接口开发协议](3-ApiReference/openvoice-api.md)
+    * [语音websocket接口开发协议](3-ApiReference/openvoice-api.md)
+    * [语音http接口开发协议](3-ApiReference/openvoice-api-http.md)
 * Rokid 技能开发工具
     * [技能开发工具简介](2-RokidDocument/1-SkillsKit/platform-introduction.md)
     * 快速入门
