@@ -4,12 +4,13 @@
 * Rokid 语音整体方案
     * [语音整体方案简介](5-enableVoice/rokid-vsvy-sdk-docs/introduction.md)
     * [语音接入流程](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/rookie-guide.md) 
-    * [语音方案介绍]
+    * 语音方案介绍
         * [Android 全链路通用方案](5-enableVoice/rokid-vsvy-sdk-docs/fullLink/fulllink.md)
         * [Android 全链路APK级别方案](5-enableVoice/rokid-vsvy-sdk-docs/RokidAiSdk/RokidAiSdk.md)
         * [Android 基础语音模块](5-enableVoice/rokid-vsvy-sdk-docs/speechTTS/speechtts.md)
         * [Linux基础架构](5-enableVoice/rokid-vsvy-sdk-docs/linuxsdk/linuxsdk.md)
-    * 接口文档
+
+    * 语音接入接口文档
         * [拦截器接口文档](3-ApiReference/rokid-interceptor.md)
         * [设备接口文档](3-ApiReference/open-device-manager.md)
         * [Rokid 客户端协议](3-ApiReference/rokid-client-sdk-doc.md)
