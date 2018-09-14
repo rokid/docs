@@ -13,6 +13,7 @@
         * [设备接口文档](3-ApiReference/open-device-manager.md)
         * [Rokid 客户端协议](3-ApiReference/rokid-client-sdk-doc.md)
     * Mobile SDK 接入文档
+        * [Mobile SDK 简介](5-enableVoice/rokid-vsvy-sdk-docs/mobliesdk/SDK.md)
         * [Rokid Moblie Android SDK](https://rokid.github.io/mobile-sdk-android-docs/)
         * [Rokid Moblie ios SDK](https://rokid.github.io/mobile-sdk-ios-docs/)
     * [重要概念](5-enableVoice/rokid-vsvy-sdk-docs/important-concept.md)
