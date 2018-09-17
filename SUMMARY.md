@@ -9,7 +9,6 @@
         * [Android 全链路APK级别方案](5-enableVoice/rokid-vsvy-sdk-docs/RokidAiSdk/RokidAiSdk.md)
         * [Android 基础语音模块](5-enableVoice/rokid-vsvy-sdk-docs/speechTTS/speechtts.md)
         * [Linux基础架构](5-enableVoice/rokid-vsvy-sdk-docs/linuxsdk/linuxsdk.md)
-
     * 语音接入接口文档
         * [拦截器接口文档](3-ApiReference/rokid-interceptor.md)
         * [设备接口文档](3-ApiReference/open-device-manager.md)
