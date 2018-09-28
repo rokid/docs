@@ -5,22 +5,8 @@
   - [协议概述](#%E5%8D%8F%E8%AE%AE%E6%A6%82%E8%BF%B0)
   - [协议详解](#%E5%8D%8F%E8%AE%AE%E8%AF%A6%E8%A7%A3)
     - [设备认证](#%E8%AE%BE%E5%A4%87%E8%AE%A4%E8%AF%81)
-      - [AuthRequest](#authrequest)
-      - [说明](#%E8%AF%B4%E6%98%8E)
-      - [AuthResponse](#authresponse)
-      - [说明](#%E8%AF%B4%E6%98%8E-1)
     - [语音交互](#%E8%AF%AD%E9%9F%B3%E4%BA%A4%E4%BA%92)
-      - [流程](#%E6%B5%81%E7%A8%8B)
-      - [SpeechRequest](#speechrequest)
-      - [说明](#%E8%AF%B4%E6%98%8E-2)
-      - [SpeechResponse](#speechresponse)
-      - [说明](#%E8%AF%B4%E6%98%8E-3)
     - [语音合成](#%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90)
-      - [流程](#%E6%B5%81%E7%A8%8B-1)
-      - [TtsRequest](#ttsrequest)
-      - [说明](#%E8%AF%B4%E6%98%8E-4)
-      - [TtsResponse](#ttsresponse)
-      - [说明](#%E8%AF%B4%E6%98%8E-5)
   - [典型场景](#%E5%85%B8%E5%9E%8B%E5%9C%BA%E6%99%AF)
     - [本地 vad](#%E6%9C%AC%E5%9C%B0-vad)
     - [云端 vad](#%E4%BA%91%E7%AB%AF-vad)
@@ -189,7 +175,7 @@
 | id        | int32  | 唯一标识，用于跟踪一个完整的请求，处理及响应事件。   | 0    |
 | text   | string    | 需要转换的text文本          | 无    |
 | declaimer | string | 发音人，目前支持 中文成人 "zh" 与 中文儿童 "c1" 两种 | 无 |
-| codec     | string | 语音流的编码，目前支持PCM、OPU、OPU2、mp3。   | 无  |
+| codec     | string | 语音流的编码，目前支持pcm、opu、OPU2、mp3。   | 无  |
 | sample_rate | uint32 | 语音流的码率，目前支持 16000 与 24000 | 24000 |
 
 ##### 说明
@@ -205,6 +191,9 @@
    - mp3：mp3编码，保存成文件可以直接用播放器播放
 4. 需要注意：这里的 pcm 与 [语音交互](#%E8%AF%AD%E9%9F%B3%E4%BA%A4%E4%BA%92) 的 pcm 格式语音的码率，如果不一致，则**不能**作为 [语音交互](#%E8%AF%AD%E9%9F%B3%E4%BA%A4%E4%BA%92) 的输入，否则会有识别问题。
 5. sample_rate 可设置为 16000 或 24000，16000 语音数据较少，所需带宽较小，效果较差
+6. voice的编码格式如下：
+   -识别支持pcm语音流识别，单通道 数据位宽16bit 采样率16kHZ pcm
+   -识别支持opu语音流识别，单通道 数据位宽16bit 采样率16kHZ opu opu压缩每帧数据格式由1字节（数据长度）+ opus压缩320字节数据
 
 ##### TtsResponse
 
