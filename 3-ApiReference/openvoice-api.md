@@ -226,6 +226,7 @@
 
 ### speech 异常
 
+* 如果内部服务异常或不可用，则 SpeechResponse.result 会被设为 INTERNAL
 * 语音开始前 3s 内不包含人声，则
   * 如果带激活词，并且 asr 已经识别出激活词打头，则返回 extra 为 {"activation": "fake"}
   * 否则 按正常流程继续
