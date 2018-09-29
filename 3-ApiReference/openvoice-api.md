@@ -90,13 +90,13 @@
 1. 需要先进行 service 为 speech 的 [设备认证](#%E8%AE%BE%E5%A4%87%E8%AE%A4%E8%AF%81)
 2. 一次完整的语音识别的数据包以 id 来标识，称为一个 session
 3. 设备端发送三种类型的数据
-   1. START 设置 session 的参数数据
-   2. VOICE 发送 session 的语音数据
-   3. END 表示 session 结束
+   - START 设置 session 的参数数据
+   - VOICE 发送 session 的语音数据
+   - END 表示 session 结束
 4. 云端返回三种 RespType 的数据
-   1. INTERMEDIATE 返回 asr 的中间结果，典型的有 extra 中 activation
-   2. ASR_FINISH 返回 asr 识别结果
-   3. FINISH 返回 nlp 结果
+   - INTERMEDIATE 返回 asr 的中间结果，典型的有 extra 中 activation
+   - ASR_FINISH 返回 asr 识别结果
+   - FINISH 返回 nlp 结果
 5. 每个 session 以 FINISH 结束
 
 ##### SpeechRequest
@@ -110,7 +110,7 @@
 | asr    | bytes     | 需要理解的 asr 文本      | 无    |
 | options    | SpeechOptions     | 辅助理解的选项        | 无    |
 | lang    | string | 语音流的语言，目前支持 zh-CN，en-US。  | zh-CN |
-| codec   | string | 语音流的编码，目前支持 PCM，OPU，OPU2。 | PCM   |
+| codec   | string | 语音流的编码，目前支持 pcm，opu，OPU2。 | PCM   |
 | vad_mode   | VadMode | LOCAL、CLOUD | LOCAL |
 | vend_timeout   | uint32 | 如果 vad_mode 为 CLOUD 时，指定 vad 时间，单位 ms，推荐设置为 500ms | 无   |
 | no_nlp   | bool | 是否需要语义理解（nlp） | false   |
@@ -192,8 +192,8 @@
 4. 需要注意：这里的 pcm 与 [语音交互](#%E8%AF%AD%E9%9F%B3%E4%BA%A4%E4%BA%92) 的 pcm 格式语音的码率，如果不一致，则**不能**作为 [语音交互](#%E8%AF%AD%E9%9F%B3%E4%BA%A4%E4%BA%92) 的输入，否则会有识别问题。
 5. sample_rate 可设置为 16000 或 24000，16000 语音数据较少，所需带宽较小，效果较差
 6. voice的编码格式如下：
-   -识别支持pcm语音流识别，单通道 数据位宽16bit 采样率16kHZ pcm
-   -识别支持opu语音流识别，单通道 数据位宽16bit 采样率16kHZ opu opu压缩每帧数据格式由1字节（数据长度）+ opus压缩320字节数据
+   - 识别支持pcm语音流识别，单通道 数据位宽16bit 采样率16kHZ pcm
+   - 识别支持opu语音流识别，单通道 数据位宽16bit 采样率16kHZ opu opu压缩每帧数据格式由1字节（数据长度）+ opus压缩320字节数据
 
 ##### TtsResponse
 
