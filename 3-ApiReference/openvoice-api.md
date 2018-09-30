@@ -116,7 +116,7 @@
 | no_nlp   | bool | 是否需要语义理解（nlp） | false   |
 | no_intermediate_asr   | bool | 是否需要 asr 的实时识别结果 | false   |
 | stack   | string | 设备当前的应用栈信息，"appid1:appid2"按照应用被调用的时间逆序排列          | 空     |
-| voice_trigger      | string | 激活词，即用于唤醒设备的名字，如"若琪"；可用 "\|"分隔指定多个 | 空    |
+| voice_trigger      | string | 激活词，即用于唤醒设备的名字，如"若琪"；可用竖线分隔指定多个 | 空    |
 | voice_power   | float | 语音流的音强，若设置则在多设备中作仲裁，同时只有音强最强的设备有响应 | 0      |
 | trigger_start   | float | 语音流的激活词的开始位置。  | 无   |
 | trigger_length   | float | 语音流的激活词的长度。  | 无   |
@@ -131,6 +131,9 @@
 2. VAD：语音活性检测(Voice activity detection)，当用户说了一个指令后，停顿一定时间(可以由vad_timeout参数设定)，会被设备或云端认为已经说完
 3. 仲裁：同一用户的多个设备同时收到语音指令时，由 voice_power 的强弱决定离说话人的远近，从而最近的设备有响应，而其它设备无响应
 4. 声纹：由 trigger_start 及 trigger_length 来指明 激活词 在语音流中的位置，声纹服务用来作说话人识别
+5. voice的编码格式如下：
+   - 识别支持pcm语音流识别，单通道 数据位宽16bit 采样率16kHZ pcm
+   - 识别支持opu语音流识别，单通道 数据位宽16bit 采样率16kHZ opu opu压缩每帧数据格式由1字节（数据长度）+ opus压缩320字节数据
 
 ##### SpeechResponse
 
@@ -197,6 +200,7 @@
 6. voice的编码格式如下：
    - 识别支持pcm语音流识别，单通道 数据位宽16bit 采样率16kHZ pcm
    - 识别支持opu语音流识别，单通道 数据位宽16bit 采样率16kHZ opu opu压缩每帧数据格式由1字节（数据长度）+ opus压缩320字节数据
+
 
 
 ##### TtsResponse
