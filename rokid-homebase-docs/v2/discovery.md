@@ -41,7 +41,6 @@ endpoints | `Endpoint[]` | 一组终端描述符，具体终端描述请参考 [
       {
         "endpointId": "device:an-id-unique-to-user",
         "displayName": "大米台灯",
-        "modelId": "GROSS-REIS-LAMPE-ALPHA",
         "displayType": "light",
         "recommendRoomName": "厨房",
         "additionalInfo": {
