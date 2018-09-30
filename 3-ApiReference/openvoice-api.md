@@ -131,6 +131,9 @@
 2. VAD：语音活性检测(Voice activity detection)，当用户说了一个指令后，停顿一定时间(可以由vad_timeout参数设定)，会被设备或云端认为已经说完
 3. 仲裁：同一用户的多个设备同时收到语音指令时，由 voice_power 的强弱决定离说话人的远近，从而最近的设备有响应，而其它设备无响应
 4. 声纹：由 trigger_start 及 trigger_length 来指明 激活词 在语音流中的位置，声纹服务用来作说话人识别
+5. voice的编码格式如下：
+   - 识别支持pcm语音流识别，单通道 数据位宽16bit 采样率16kHZ pcm
+   - 识别支持opu语音流识别，单通道 数据位宽16bit 采样率16kHZ opu opu压缩每帧数据格式由1字节（数据长度）+ opus压缩320字节数据
 
 ##### SpeechResponse
 
@@ -158,9 +161,6 @@
 3. SpeechRequest 中的 no_trigger_confirm 指定是否返回字段 extra 中 activation 为 "fake" 的结果
 4. SpeechRequest 中的 no_intermediate_asr 指定是否返回字段 asr 中间结果
 5. SpeechRequest 中的 no_nlp 指定是否返回字段 nlp 结果
-6. voice的编码格式如下：
-   - 识别支持pcm语音流识别，单通道 数据位宽16bit 采样率16kHZ pcm
-   - 识别支持opu语音流识别，单通道 数据位宽16bit 采样率16kHZ opu opu压缩每帧数据格式由1字节（数据长度）+ opus压缩320字节数据
 
 #### 语音合成
 
