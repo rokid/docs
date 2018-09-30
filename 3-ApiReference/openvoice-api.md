@@ -158,6 +158,9 @@
 3. SpeechRequest 中的 no_trigger_confirm 指定是否返回字段 extra 中 activation 为 "fake" 的结果
 4. SpeechRequest 中的 no_intermediate_asr 指定是否返回字段 asr 中间结果
 5. SpeechRequest 中的 no_nlp 指定是否返回字段 nlp 结果
+6. voice的编码格式如下：
+   - 识别支持pcm语音流识别，单通道 数据位宽16bit 采样率16kHZ pcm
+   - 识别支持opu语音流识别，单通道 数据位宽16bit 采样率16kHZ opu opu压缩每帧数据格式由1字节（数据长度）+ opus压缩320字节数据
 
 #### 语音合成
 
@@ -194,6 +197,7 @@
 6. voice的编码格式如下：
    - 识别支持pcm语音流识别，单通道 数据位宽16bit 采样率16kHZ pcm
    - 识别支持opu语音流识别，单通道 数据位宽16bit 采样率16kHZ opu opu压缩每帧数据格式由1字节（数据长度）+ opus压缩320字节数据
+
 
 ##### TtsResponse
 
