@@ -116,7 +116,7 @@
 | no_nlp   | bool | 是否需要语义理解（nlp） | false   |
 | no_intermediate_asr   | bool | 是否需要 asr 的实时识别结果 | false   |
 | stack   | string | 设备当前的应用栈信息，"appid1:appid2"按照应用被调用的时间逆序排列          | 空     |
-| voice_trigger      | string | 激活词，即用于唤醒设备的名字，如"若琪"；可用 "\|"分隔指定多个 | 空    |
+| voice_trigger      | string | 激活词，即用于唤醒设备的名字，如"若琪"；可用竖线分隔指定多个 | 空    |
 | voice_power   | float | 语音流的音强，若设置则在多设备中作仲裁，同时只有音强最强的设备有响应 | 0      |
 | trigger_start   | float | 语音流的激活词的开始位置。  | 无   |
 | trigger_length   | float | 语音流的激活词的长度。  | 无   |
