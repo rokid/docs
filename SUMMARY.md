@@ -60,6 +60,7 @@
   * 开发指南
     * [云云对接](rokid-homebase-docs/connect/cloud-to-cloud.md)
     * [局域网对接](rokid-homebase-docs/connect/via-lan.md)
+    * [FAQ](rokid-homebase-docs/faq.md)
   * 如何调试
     * [RHOME 桌面版调试工具](rokid-homebase-docs/tools/rhome-desktop.md)
     * [自定义接入](rokid-homebase-docs/tools/developer-driver.md)
