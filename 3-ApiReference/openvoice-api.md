@@ -161,6 +161,9 @@
 3. SpeechRequest 中的 no_trigger_confirm 指定是否返回字段 extra 中 activation 为 "fake" 的结果
 4. SpeechRequest 中的 no_intermediate_asr 指定是否返回字段 asr 中间结果
 5. SpeechRequest 中的 no_nlp 指定是否返回字段 nlp 结果
+6. voice的编码格式如下：
+   - 识别支持pcm语音流识别，单通道 数据位宽16bit 采样率16kHZ pcm
+   - 识别支持opu语音流识别，单通道 数据位宽16bit 采样率16kHZ opu opu压缩每帧数据格式由1字节（数据长度）+ opus压缩320字节数据
 
 #### 语音合成
 
@@ -194,6 +197,10 @@
    - mp3：mp3编码，保存成文件可以直接用播放器播放
 4. 需要注意：这里的 pcm 与 [语音交互](#%E8%AF%AD%E9%9F%B3%E4%BA%A4%E4%BA%92) 的 pcm 格式语音的码率，如果不一致，则**不能**作为 [语音交互](#%E8%AF%AD%E9%9F%B3%E4%BA%A4%E4%BA%92) 的输入，否则会有识别问题。
 5. sample_rate 可设置为 16000 或 24000，16000 语音数据较少，所需带宽较小，效果较差
+6. voice的编码格式如下：
+   - 识别支持pcm语音流识别，单通道 数据位宽16bit 采样率16kHZ pcm
+   - 识别支持opu语音流识别，单通道 数据位宽16bit 采样率16kHZ opu opu压缩每帧数据格式由1字节（数据长度）+ opus压缩320字节数据
+
 
 
 ##### TtsResponse
@@ -227,6 +234,7 @@
 
 ### speech 异常
 
+* 如果内部服务异常或不可用，则 SpeechResponse.result 会被设为 INTERNAL
 * 语音开始前 3s 内不包含人声，则
   * 如果带激活词，并且 asr 已经识别出激活词打头，则返回 extra 为 {"activation": "fake"}
   * 否则 按正常流程继续
