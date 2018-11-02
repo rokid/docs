@@ -305,5 +305,7 @@ B端用户可以根据不同的设备接入相同的人工语料引擎的同时�
 
 ![](images/自动聊天.png)
 
-以上内容配置完成后，立即生效。
+以上内容配置完成后，需要在服务配置中，配置后置拦截器URL：https://device-custom-chat.rokid.com/entry/process，如图，填写完成后立即生效。
+
+![](images/拦截器.png)
 
