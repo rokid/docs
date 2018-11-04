@@ -119,7 +119,7 @@
 
 
 ```json
---> {"jsonrpc": "2.0", "method": "get", "params": {"userAuth":{ "userId": "hello1234", "userToken": "" }, "device": {"deviceId": "", deviceInfo: {}}}, "id": "1"}
+--> {"jsonrpc": "2.0", "method": "get", "params": {"userAuth":{ "userId": "hello1234", "userToken": "" }, "device": {"deviceId": "", "deviceInfo": {}}}, "id": "1"}
 <-- {"jsonrpc": "2.0", "result": {"deviceId": "abc", "deviceInfo":{}, "name": "灯", "type": "light", "offline": false}, "id": "1"}
 ```
 
