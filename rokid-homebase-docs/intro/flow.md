@@ -12,7 +12,7 @@
 
 智能家居设备接入流程可以分为 4 个步骤：
 
-![](https://s.rokidcdn.com/homebase/upload/3NQNvGEkW.jpg)
+![](https://s.rokidcdn.com/homebase/upload/c4TxC9sID.jpg)
 
 #### 一、商务对接
 
