@@ -4,7 +4,7 @@
 
 字段名 | 类型 | 描述
 --- | --- | ---
-endpointId | `string`, 必需 | 终端 Id，只需要对于某一个用户来说是唯一的
+endpointId | `string`, 必需 | 开发者自己定义的终端 Id，需要同一品牌其他终端保持唯一
 displayType | `enum`，必需 |终端的显示类型，需要和终端类型列表保持一致，具体信息请参考 [终端类型](./endpoint-type.md)
 displayName | `string`，必需 | 若琪客户端显示的终端名称
 recommendRoomName | `string` | 推荐若琪将这个终端划入与这个房间名相同的房间，便于用户命令
