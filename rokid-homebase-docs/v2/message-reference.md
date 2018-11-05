@@ -1,6 +1,6 @@
 ### 目录
 
--   [若琪智能家居协议（Beta）](#若琪智能家居协议beta)
+-   [若琪智能家居协议](#若琪智能家居协议)
   - [请求消息类型](#请求消息类型)
   - [回复消息类型](#回复消息类型)
   - [消息体](#消息体)  
@@ -10,7 +10,7 @@
   - [当发生了错误时的一个返回](#当发生了错误时的一个返回)
 
 
-### 若琪智能家居协议（Beta）
+### 若琪智能家居协议
 
 #### 请求消息类型
 
@@ -20,11 +20,11 @@
 
 -   Rokid.Discovery: 搜索终端
 -   Rokid.Control: 终端控制，如"帮我打开客厅灯"
--   Rokid.Query: 终端状态查询，如"现在家里门锁了吗"
+-   Rokid.Query: 终端状态查询，如"现在家里门锁了吗"（暂不支持）
 
 Skill 对于若琪命令的回复需要使用 Responses所定义的消息类型，否则若琪会认为本次消息发送失败；
 
-> Beta 版尚不支持向若琪问询终端状态
+> 当前版本尚不支持向若琪问询终端状态
 
 ##### 事件 Events
 
@@ -33,7 +33,7 @@ Skill 对于若琪命令的回复需要使用 Responses所定义的消息类型�
 -   Rokid.AsyncResponse: 当 Skill 认为终端控制、终端发现可能需要超过 3秒的时间来完成时，可以推迟回复
 -   Rokid.ChangeReport: 终端状态变更，如灯被手动打开了
 
-> Beta 版尚不支持事件推送
+> 当前版本尚不支持事件推送
 
 #### 回复消息类型
 
@@ -79,6 +79,80 @@ token | `string` | 从若琪获取的 Token 或者若琪从 Skill 方获取的 T
 
 ### 示例
 
+#### 一个搜索设备请求
+
+
+``` {.json}
+{
+  "header": {
+    "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+    "namespace": "Rokid.Discovery",
+    "name": "Discover",
+    "payloadVersion": "v1",
+    "authorization": {
+      "type": "BearerToken",
+      "token": "a-token-from-skill"
+    }
+  },
+  "payload": {}
+}
+```
+
+#### 一个搜索设备成功的返回
+
+
+
+``` {.json}
+{
+  "header": {
+    "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+    "namespace": "Rokid",
+    "name": "DiscoveryResponse",
+    "payloadVersion": "v1"
+  },
+  "payload": {
+    "endpoints": [
+      {
+        "endpointId": "开发者自己定义的终端Id",
+        "displayName": "大米台灯",
+        "displayType": "light",
+        "recommendRoomName": "厨房",
+        "additionalInfo": {
+          "key1": "value"
+        },
+        "capabilities": [
+          {
+            "interface": "Switch",
+            "supportedOperations": [ "On", "Off" ],
+            "proactivelyReported": true,
+            "retrievable": true
+          },
+          {
+            "interface": "Color",
+            "supportedOperations": [ "Set" ],
+            "proactivelyReported": true,
+            "retrievable": true
+          }
+        ],
+        "states": [
+          {
+            "interface": "Switch",
+            "value": "On",
+            "timeOfSample": "2018-03-15T18:00:00.000Z"
+          },
+          {
+            "interface": "Color",
+            "value": 12345,
+            "timeOfSample": "2018-03-15T18:00:00.000Z"
+          }
+        ]
+      }
+    ],
+  }
+}
+
+```
+
 #### 一个控制请求
 
 ``` {.json}
@@ -94,7 +168,7 @@ token | `string` | 从若琪获取的 Token 或者若琪从 Skill 方获取的 T
     }
   },
   "endpoint": {
-    "endpointId": "unique-id-for-user",
+    "endpointId": "开发者自己定义的终端Id",
     "additionalInfo": {
       "key1": "value1"
     },
@@ -123,7 +197,7 @@ token | `string` | 从若琪获取的 Token 或者若琪从 Skill 方获取的 T
     "payloadVersion": "v1",
   },
   "endpoint": {
-    "endpointId": "unique-id-for-user",
+    "endpointId": "开发者自己定义的终端Id",
     "states": [
       {
         "interface": "Color",

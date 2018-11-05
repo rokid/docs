@@ -60,7 +60,7 @@ Switch.Off | 关闭终端
     }
   },
   "endpoint": {
-    "endpointId": "device:an-id-unique-to-user",
+    "endpointId": "开发者自己定义的终端Id",
     "additionalInfo": {
       "key": "value"
     },
@@ -97,7 +97,7 @@ MotionSwitch.Off | 终端停止运动
     }
   },
   "endpoint": {
-    "endpointId": "device:an-id-unique-to-user",
+    "endpointId": "开发者自己定义的终端Id",
     "additionalInfo": {
       "key": "value"
     },
@@ -138,7 +138,7 @@ value | `number` | 百分比
     }
   },
   "endpoint": {
-    "endpointId": "device:an-id-unique-to-user",
+    "endpointId": "开发者自己定义的终端Id",
     "additionalInfo": {
       "key": "value"
     },
@@ -170,7 +170,7 @@ delta | `number` | 相对值
     }
   },
   "endpoint": {
-    "endpointId": "device:an-id-unique-to-user",
+    "endpointId": "开发者自己定义的终端Id",
     "additionalInfo": {
       "key": "value"
     },
@@ -213,7 +213,7 @@ value | `number` | 颜色 RGB Hex 值
     }
   },
   "endpoint": {
-    "endpointId": "device:an-id-unique-to-user",
+    "endpointId": "开发者自己定义的终端Id",
     "additionalInfo": {
       "key": "value"
     },
@@ -241,7 +241,7 @@ value | `number` | 颜色 RGB Hex 值
     }
   },
   "endpoint": {
-    "endpointId": "device:an-id-unique-to-user",
+    "endpointId": "开发者自己定义的终端Id",
     "additionalInfo": {
       "key": "value"
     },
@@ -284,7 +284,7 @@ value | `number` | 百分比
     }
   },
   "endpoint": {
-    "endpointId": "device:an-id-unique-to-user",
+    "endpointId": "开发者自己定义的终端Id",
     "additionalInfo": {
       "key": "value"
     },
@@ -312,7 +312,7 @@ value | `number` | 百分比
     }
   },
   "endpoint": {
-    "endpointId": "device:an-id-unique-to-user",
+    "endpointId": "开发者自己定义的终端Id",
     "additionalInfo": {
       "key": "value"
     },
@@ -338,7 +338,7 @@ value | `number` | 百分比
     }
   },
   "endpoint": {
-    "endpointId": "device:an-id-unique-to-user",
+    "endpointId": "开发者自己定义的终端Id",
     "additionalInfo": {
       "key": "value"
     },
@@ -370,7 +370,7 @@ delta | `number` | 相对值
     }
   },
   "endpoint": {
-    "endpointId": "device:an-id-unique-to-user",
+    "endpointId": "开发者自己定义的终端Id",
     "additionalInfo": {
       "key": "value"
     },
@@ -415,7 +415,7 @@ value | `number` | 百分比
     }
   },
   "endpoint": {
-    "endpointId": "device:an-id-unique-to-user",
+    "endpointId": "开发者自己定义的终端Id",
     "additionalInfo": {
       "key": "value"
     },
@@ -443,7 +443,7 @@ value | `number` | 百分比
     }
   },
   "endpoint": {
-    "endpointId": "device:an-id-unique-to-user",
+    "endpointId": "开发者自己定义的终端Id",
     "additionalInfo": {
       "key": "value"
     },
@@ -469,7 +469,7 @@ value | `number` | 百分比
     }
   },
   "endpoint": {
-    "endpointId": "device:an-id-unique-to-user",
+    "endpointId": "开发者自己定义的终端Id",
     "additionalInfo": {
       "key": "value"
     },
@@ -499,7 +499,7 @@ delta | `number` | 相对值
     }
   },
   "endpoint": {
-    "endpointId": "device:an-id-unique-to-user",
+    "endpointId": "开发者自己定义的终端Id",
     "additionalInfo": {
       "key": "value"
     },
@@ -543,7 +543,7 @@ Mode.Sleep | 睡眠模式
     }
   },
   "endpoint": {
-    "endpointId": "device:an-id-unique-to-user",
+    "endpointId": "开发者自己定义的终端Id",
     "additionalInfo": {
       "key": "value"
     },
@@ -583,7 +583,7 @@ SwingMode.VerticalOff |
     }
   },
   "endpoint": {
-    "endpointId": "device:an-id-unique-to-user",
+    "endpointId": "开发者自己定义的终端Id",
     "additionalInfo": {
       "key": "value"
     },
@@ -643,7 +643,7 @@ value | `number` | 百分比
     }
   },
   "endpoint": {
-    "endpointId": "device:an-id-unique-to-user",
+    "endpointId": "开发者自己定义的终端Id",
     "additionalInfo": {
       "key": "value"
     },
@@ -672,7 +672,7 @@ value | `number` | 百分比
     }
   },
   "endpoint": {
-    "endpointId": "device:an-id-unique-to-user",
+    "endpointId": "开发者自己定义的终端Id",
     "additionalInfo": {
       "key": "value"
     },
@@ -699,7 +699,7 @@ value | `number` | 百分比
     }
   },
   "endpoint": {
-    "endpointId": "device:an-id-unique-to-user",
+    "endpointId": "开发者自己定义的终端Id",
     "additionalInfo": {
       "key": "value"
     },
@@ -730,7 +730,7 @@ delta | `number` | 相对值
     }
   },
   "endpoint": {
-    "endpointId": "device:an-id-unique-to-user",
+    "endpointId": "开发者自己定义的终端Id",
     "additionalInfo": {
       "key": "value"
     },
@@ -777,7 +777,7 @@ value | `number` | 百分比
     }
   },
   "endpoint": {
-    "endpointId": "device:an-id-unique-to-user",
+    "endpointId": "开发者自己定义的终端Id",
     "additionalInfo": {
       "key": "value"
     },
@@ -806,7 +806,7 @@ value | `number` | 百分比
     }
   },
   "endpoint": {
-    "endpointId": "device:an-id-unique-to-user",
+    "endpointId": "开发者自己定义的终端Id",
     "additionalInfo": {
       "key": "value"
     },
@@ -833,7 +833,7 @@ value | `number` | 百分比
     }
   },
   "endpoint": {
-    "endpointId": "device:an-id-unique-to-user",
+    "endpointId": "开发者自己定义的终端Id",
     "additionalInfo": {
       "key": "value"
     },
@@ -864,7 +864,7 @@ delta | `number` | 相对值
     }
   },
   "endpoint": {
-    "endpointId": "device:an-id-unique-to-user",
+    "endpointId": "开发者自己定义的终端Id",
     "additionalInfo": {
       "key": "value"
     },
@@ -911,7 +911,7 @@ value | `number` | 百分比
     }
   },
   "endpoint": {
-    "endpointId": "device:an-id-unique-to-user",
+    "endpointId": "开发者自己定义的终端Id",
     "additionalInfo": {
       "key": "value"
     },
@@ -940,7 +940,7 @@ value | `number` | 百分比
     }
   },
   "endpoint": {
-    "endpointId": "device:an-id-unique-to-user",
+    "endpointId": "开发者自己定义的终端Id",
     "additionalInfo": {
       "key": "value"
     },
@@ -967,7 +967,7 @@ value | `number` | 百分比
     }
   },
   "endpoint": {
-    "endpointId": "device:an-id-unique-to-user",
+    "endpointId": "开发者自己定义的终端Id",
     "additionalInfo": {
       "key": "value"
     },
@@ -998,7 +998,7 @@ delta | `number` | 相对值
     }
   },
   "endpoint": {
-    "endpointId": "device:an-id-unique-to-user",
+    "endpointId": "开发者自己定义的终端Id",
     "additionalInfo": {
       "key": "value"
     },
@@ -1044,7 +1044,7 @@ value | `number` | 百分比
     }
   },
   "endpoint": {
-    "endpointId": "device:an-id-unique-to-user",
+    "endpointId": "开发者自己定义的终端Id",
     "additionalInfo": {
       "key": "value"
     },
@@ -1073,7 +1073,7 @@ value | `number` | 百分比
     }
   },
   "endpoint": {
-    "endpointId": "device:an-id-unique-to-user",
+    "endpointId": "开发者自己定义的终端Id",
     "additionalInfo": {
       "key": "value"
     },
@@ -1100,7 +1100,7 @@ value | `number` | 百分比
     }
   },
   "endpoint": {
-    "endpointId": "device:an-id-unique-to-user",
+    "endpointId": "开发者自己定义的终端Id",
     "additionalInfo": {
       "key": "value"
     },
@@ -1131,7 +1131,7 @@ delta | `number` | 相对值
     }
   },
   "endpoint": {
-    "endpointId": "device:an-id-unique-to-user",
+    "endpointId": "开发者自己定义的终端Id",
     "additionalInfo": {
       "key": "value"
     },
@@ -1181,7 +1181,7 @@ tvChannel.code | `string` |
     }
   },
   "endpoint": {
-    "endpointId": "device:an-id-unique-to-user",
+    "endpointId": "开发者自己定义的终端Id",
     "additionalInfo": {
       "key": "value"
     },
@@ -1213,7 +1213,7 @@ tvChannel.code | `string` |
     }
   },
   "endpoint": {
-    "endpointId": "device:an-id-unique-to-user",
+    "endpointId": "开发者自己定义的终端Id",
     "additionalInfo": {
       "key": "value"
     },
@@ -1240,7 +1240,7 @@ tvChannel.code | `string` |
     }
   },
   "endpoint": {
-    "endpointId": "device:an-id-unique-to-user",
+    "endpointId": "开发者自己定义的终端Id",
     "additionalInfo": {
       "key": "value"
     },
