@@ -1,9 +1,12 @@
 ### 终端类型
 
 目前支持的终端类型以及定义：
+
+> 注意：智能场景也可以通过终端类型来表示
 
 类型 | 描述
 --- | ---
+`scene` | 场景
 `curtain` | 窗帘
 `light` | 灯
 `irController` | 红外控制器
@@ -17,7 +20,6 @@
 `remoteController` | 遥控器
 `ac` | 空调
 `airPurifier` | 空气净化器
-`scene` | 场景
 `cleanBot` | 扫地机器人
 `projector` | 投影仪
 `dehumidifier` | 除湿器

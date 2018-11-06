@@ -6,9 +6,9 @@
 
 字段名 | 类型 | 描述
 --- | --- | ---
-endpointId | `string` | Skill 提供的终端 Id
+endpointId | `string` | Skill 提供的终端 Id 
 additionalInfo | key-value pairs | Skill 提供的终端附加信息
-states | `InterfaceState[]` | 终端能力状态，具体信息请参考 [终端描述](./endpoint.md)
+states | `InterfaceState[]` | 终端能力状态，具体信息请参考 [终端](./endpoint.md)
 
 
 #### Request Payload
@@ -29,7 +29,7 @@ states | `InterfaceState[]` | 终端能力状态，具体信息请参考 [终端
     }
   },
   "endpoint": {
-    "endpointId": "device:an-id-unique-to-user",
+    "endpointId": "开发者自己定义的终端Id",
     "additionalInfo": {
       "key": "value"
     },
@@ -55,7 +55,7 @@ states | `InterfaceState[]` | 终端能力状态，具体信息请参考 [终端
     "payloadVersion": "v1"
   },
   "endpoint": {
-    "endpointId": "device:an-id-unique-to-user",
+    "endpointId": "开发者自己定义的终端Id",
     "states": [
       {
         "interface": "Color",

@@ -39,7 +39,7 @@ endpoints | `Endpoint[]` | 一组终端描述符，具体终端描述请参考 [
   "payload": {
     "endpoints": [
       {
-        "endpointId": "device:an-id-unique-to-user",
+        "endpointId": "开发者自己定义的终端Id",
         "displayName": "大米台灯",
         "displayType": "light",
         "recommendRoomName": "厨房",
