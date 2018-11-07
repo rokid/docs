@@ -73,17 +73,18 @@ Rokid Server处理消息并向用户询问“你要吃什么”。
 第三步：用户回答“我要吃西瓜”，Rokid Server处理消息告知技能{food: 西瓜}。
 ```
 {
-    "request": {
-        "reqType": "intent", 
-        "reqId": "010116000100-ad1f462f4f0946ccb24e9248362c504a", 
-        "content": {
-            "applicationId": "com.rokid.confirm", 
-            "intent": "eat", 
-            "slots": {
-                "food": "西瓜"
-            }
-        }
+  "request": {
+    "reqType": "INTENT / EVENT",
+    "reqId": "010116000100-ad1f462f4f0946ccb24e9248362c504a",
+    "content": {
+      "intent": "eat",
+      "sentence": "用户语句",
+      "slots": {
+        "key1":{"type":"","value":""},
+        "key2":{"type":"","value":""}
+      }
     }
+  }
 }
 ```
 
