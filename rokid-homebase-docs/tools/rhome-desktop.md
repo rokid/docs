@@ -9,7 +9,7 @@
 
 ## 安装
 
-从 [Release](http://s.rokidcdn.com/homebase/rhome-desktop/releases/download/latest.html) 页面下载最新的适合你的操作系统的已打包的程序。
+从 [Release](https://s.rokidcdn.com/homebase/rhome-desktop/releases/download/RHOME-0.1.9.dmg) 页面下载最新的适合你的操作系统的已打包的程序。
 
 注：目前支持 Mac 64 位、Windows 32/64 位操作系统。
 
