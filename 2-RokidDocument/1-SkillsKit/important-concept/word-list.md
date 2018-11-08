@@ -471,18 +471,7 @@ $iwant喝$drink
 ![intercepto](images/WeChatf5c5bd4e50518967dd6c469560e45904.png)
 
 
-等待编译完毕以后就可以进行语义测试啦：
-
-* 测试结果
-
-![intercepto](images/WeChat4f7f1ac138e9b8efd2474929a46e0da8.png)
-
-
-* 测试结果
-
-![intercepto](images/WeChat14c8a72b97b0bdcb6d86db81af37b281.png)
-
-
+等待编译完毕以后就可以进行语义测试。
 
 ### 特别说明
 一个词表内容可以被多个不同的词表名称引用，用于把同一类的值输出到不同的应用场景中。比如在下例中，ROKID.NUMBER_ZH可以被不同的词表名称引用多次，在用户说出两小时十五分钟三十六秒的时候，能够输出
@@ -516,12 +505,6 @@ slots":{"hour":"两","min":"十五","sec":"三十六"}
  ]
 }
 ```
-
-![intercepto](images/WeChat72cc6157148683e086c33546241d8192.png)
-
-![intercepto](images/WeChat57a31a26fa65e4e7145d90e983b023e0.png)
-
-
 
 #### **一个技能中，所有词表内容的值的总数，不能超过10万个**。
 
