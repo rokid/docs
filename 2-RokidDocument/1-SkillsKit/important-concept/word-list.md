@@ -3,7 +3,7 @@
 
 词表是用户与技能交互过程中的一个重要概念，是指某领域词汇的集合。当用户询问北京天气怎么样时，其中北京是城市信息，将北京、天津、上海等所有城市信息集合起来就组成了中国城市的词表。
 目前开放平台有自定义词表和预定义词表
-
+### 预定义词表
 ### 1. 数字、日期和时间相关
 数字的预定义词表。
 
@@ -392,6 +392,8 @@ ROKID.TIME
 | ROKID.NO_ZH | 表示「否定」的词汇  |   中文 |
 | ROKID.NEW_ZH | 描述「新」的词汇  |   中文 |
 
+### 自定义词表
+
 在Rokid开发者社区提供的预定义词表之外，开发者可以自定义自己的词表内容。在创建技能过程中的语音交互环节进行添加自定义词表内容，开发者可以把任何可以抽象的内容定义为词表，并在用户语句中通过$ + 词表名称进行调用。比如当您希望定义以下几种用户语句时：
 ```
 我想喝咖啡
@@ -399,19 +401,90 @@ ROKID.TIME
 我想要喝咖啡
 我要喝可乐
 我想喝果汁
+```
 可以抽象出两个词表：
-iwant
+* iwant
+
+```
 我想
 我要
 我想要
-drink
+```
+* drink
+
+```
 咖啡
 可乐
 果汁
+```
 并通过以下语句统一表达：
+```
 $iwant喝$drink
 ```
-需要注意：
+如果开发者想把多个词表内容做统一的输出，如"咖啡"，"拿铁"统一输出为："coffee",则可以把词表drink修改为：
+
+```
+咖啡:coffee
+拿铁:coffee
+可乐
+果汁
+```
+
+配置过程如下：
+
+* 添加词表drink和iwant
+
+![intercepto](images/词表添加.jpeg)
+
+
+![intercepto](images/WeChat2beb3b57cee9bb0d14307480c6e57d26.png)
+
+![intercepto](images/WechatIMG4.jpeg)
+
+配置完毕词表并且保存以后，进行意图定义，定义内容如下：
+```json
+{
+	"intents": [
+		{
+			"intent": "Hello_Developer",
+			"slots": [
+				{
+					"name": "drinkSomeThing1",
+					"type": "drink"
+				},
+				{
+					"name": "drinkSomeThing2",
+					"type": "drink"
+				}
+			],
+			"user_says": [
+				"$iwant喝$drinkSomeThing1和$drinkSomeThing2",
+				"$iwant喝$drinkSomeThing1"
+			]
+		}
+	]
+}
+```
+![intercepto](images/14949268746999.jpg)
+
+点击保存并且点击开始编译
+![intercepto](images/WeChatf5c5bd4e50518967dd6c469560e45904.png)
+
+
+等待编译完毕以后就可以进行语义测试啦：
+
+* 测试结果
+
+![intercepto](images/WeChat4f7f1ac138e9b8efd2474929a46e0da8.png)
+
+
+* 测试结果
+
+![intercepto](images/WeChat14c8a72b97b0bdcb6d86db81af37b281.png)
+
+
+
+### 特别说明
 一个词表内容可以被多个不同的词表名称引用，用于把同一类的值输出到不同的应用场景中。比如在下例中，ROKID.NUMBER_ZH可以被不同的词表名称引用多次，在用户说出两小时十五分钟三十六秒的时候，能够输出
 ```
 slots":{"hour":"两","min":"十五","sec":"三十六"}
@@ -443,6 +516,13 @@ slots":{"hour":"两","min":"十五","sec":"三十六"}
  ]
 }
 ```
+
+![intercepto](images/WeChat72cc6157148683e086c33546241d8192.png)
+
+![intercepto](images/WeChat57a31a26fa65e4e7145d90e983b023e0.png)
+
+
+
 #### **一个技能中，所有词表内容的值的总数，不能超过10万个**。
 
 
