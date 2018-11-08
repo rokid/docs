@@ -2,10 +2,6 @@
 
 语义理解（NLP）的拦截器（interceptor），可以允许开发者在进入Rokid NLP匹配之前或者是asr结果在若琪的NLP处理完成后结果为空时将请求进行拦截，拦截到开发者自己的https拦截器。
 
-用户可以在 Rokid 开放平台[语音接入](https://developer.rokid.com/voice/#/)板块中的服务接入中设置，具体配置的位置见下图，
-
-![intercepto](images/interceptor2.png)
-
 下图是整个语音的后端处理流程图：
 
 ![intercepto](images/interceptor.jpg)
@@ -17,6 +13,10 @@
 > 图中的「Thirdparty Function Service」即为https拦截器
 
 从图中可知，开放平台允许开发者对于每一类自有设备类型提供两个拦截器，从上到下依次为前置拦截器、后置拦截器。
+
+用户可以在 Rokid 开放平台[语音接入](https://developer.rokid.com/voice/#/)板块中的服务接入中设置，具体配置的位置见下图，
+
+![intercepto](images/interceptor2.png)
 
 **备注：**语义理解服务会**并行**调用开发者的前置拦截器，Rokid NLP匹配引擎以及后置拦截器，但是对于正常的响应结果，语义理解服务会对响应结果做优先级处理，优先级如下：前置拦截器结果>Rokid NLP匹配服务>后置拦截器，即当前置拦截器有正常结果响应时，语义理解服务会选择前置拦截器的结果给Dispatch Services,否则会查看Rokid NLP匹配服务是否有结果响应，有则将该结果给Dispatch Services，没有的话再看后置拦截器的结果。
 
