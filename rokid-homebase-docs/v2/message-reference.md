@@ -117,6 +117,7 @@ token | `string` | 从若琪获取的 Token 或者若琪从 Skill 方获取的 T
         "displayName": "大米台灯",
         "displayType": "light",
         "recommendRoomName": "厨房",
+        "recommendHomeName": "我的家",
         "additionalInfo": {
           "key1": "value"
         },
