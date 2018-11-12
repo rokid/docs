@@ -16,6 +16,9 @@
 - 长度：欢迎语长度建议介于30-60字，不宜过长。
 - 友好：欢迎语需要包含进入下一步操作的提示。
 
+### 技能交互规范
+- 技能的交互需符合[语音交互设计指南](https://developer.rokid.com/docs/2-RokidDocument/1-SkillsKit/rokid-voice-interaction-guidelines.html)的相关要求。
+
 ### 技能图标
 - 大小：建议尺寸为 512 × 512 或 1024 × 1024。
 - 格式：png 或者 jpg。 
