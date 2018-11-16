@@ -44,7 +44,6 @@
     * 云端技能协议
         * [Rokid 云端技能协议](2-RokidDocument/1-SkillsKit/important-concept/cloud-app-development-protocol_cn.md)
     * 技能开发指南
-        * [Rokid 语音交互设计指南](2-RokidDocument/1-SkillsKit/rokid-voice-interaction-guidelines.md)
         * [Rokid Force System 使用指南](2-RokidDocument/1-SkillsKit/rokid-force-system-tutorial.md)
         * [Rokid Force JS 使用指南](2-RokidDocument/1-SkillsKit/rokid-force-js-tutorial.md)
         * [SSML 使用指南](2-RokidDocument/1-SkillsKit/ssml-document.md)
