@@ -27,7 +27,7 @@
 
 * Rokid 技能开发工具
     * [技能开发工具简介](2-RokidDocument/1-SkillsKit/platform-introduction.md) 
-    * 开始创建技能
+    * 技能创建流程
         * [技能语音交互规范](2-RokidDocument/1-SkillsKit/rokid-voice-interaction-guidelines.md)  
         * 重要概念
            * [意图](2-RokidDocument/1-SkillsKit/important-concept/intend.md)
