@@ -50,12 +50,8 @@
         * [Rokid Oauth 使用指南](2-RokidDocument/1-SkillsKit/rokid-oauth.md)
         * [获取 SSL 证书指南](2-RokidDocument/1-SkillsKit/get-SSL-certificate-tutorial.md)
         * [技能开发 Java 版指南](https://github.com/Rokid/rokid-skill-sample/tree/master/rokid-skill-sample-java)
-    * 调试
         * [基于 VS Code 的 Yeoman & 测试脚本](https://github.com/Rokid/generator-rokid/blob/master/generators/rfs)
         * [读取语音交互日志](2-RokidDocument/1-SkillsKit/test-skill-through-device-log.md)
-    * 规范
-        * [技能发布标准](4-TermsAndAgreements/rokid-skill-release-standard.md)
-        * [技能审核规范](4-TermsAndAgreements/rokid-skill-examine-and-verify-standard.md)
 
 * Rokid 智能家居设备接入
   * 平台介绍
