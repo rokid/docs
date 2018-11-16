@@ -26,10 +26,9 @@
         * [Json格式配置字串](5-enableVoice/rokid-vsvy-sdk-docs/common/api_json.md) 
 
 * Rokid 技能开发工具
-    * [技能开发工具简介](2-RokidDocument/1-SkillsKit/platform-introduction.md)
-    * [技能语音交互规范](2-RokidDocument/1-SkillsKit/platform-introduction.md)   
-    * [开始创建技能]
-        * [技能分类]((2-RokidDocument/1-SkillsKit/platform-introduction.md))
+    * [技能开发工具简介](2-RokidDocument/1-SkillsKit/platform-introduction.md) 
+    * 开始创建技能
+        * [技能语音交互规范](2-RokidDocument/1-SkillsKit/rokid-voice-interaction-guidelines.md)  
         * 重要概念
            * [意图](2-RokidDocument/1-SkillsKit/important-concept/intend.md)
            * [词表](2-RokidDocument/1-SkillsKit/important-concept/word-list.md)
@@ -37,20 +36,11 @@
            * [confirm](2-RokidDocument/1-SkillsKit/important-concept/confirm.md)
            * [session](2-RokidDocument/1-SkillsKit/important-concept/session.md)
            * [NLP 正则表达式](2-RokidDocument/1-SkillsKit/important-concept/regular-expression.md)
-        * 开发流程
-           * [技能创建与发布](2-RokidDocument/1-SkillsKit/getting-started/creat-and-publish.md)
-        * 自定义功能   
+        * [开发流程](2-RokidDocument/1-SkillsKit/getting-started/creat.md)
+        * [自定义功能](2-RokidDocument/1-SkillsKit/more-fuction.md)  
         * 技能审核和上线规范
            * [技能发布标准](4-TermsAndAgreements/rokid-skill-release-standard.md)
            * [技能审核规范](4-TermsAndAgreements/rokid-skill-examine-and-verify-standard.md)
-
-    * 重要概念
-        * [意图](2-RokidDocument/1-SkillsKit/important-concept/intend.md)
-        * [词表](2-RokidDocument/1-SkillsKit/important-concept/word-list.md)
-        * [用户语句](2-RokidDocument/1-SkillsKit/important-concept/usersays.md)
-        * [confirm](2-RokidDocument/1-SkillsKit/important-concept/confirm.md)
-        * [session](2-RokidDocument/1-SkillsKit/important-concept/session.md)
-        * [NLP 正则表达式](2-RokidDocument/1-SkillsKit/important-concept/regular-expression.md)
     * 云端技能协议
         * [Rokid 云端技能协议](2-RokidDocument/1-SkillsKit/important-concept/cloud-app-development-protocol_cn.md)
     * 技能开发指南
