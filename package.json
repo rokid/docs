@@ -10,7 +10,6 @@
     "gitbook-cli": "^2.3.2",
     "gitbook-plugin-anchor-navigation-ex": "^1.0.10",
     "gitbook-plugin-expandable-chapters-interactive": "^0.1.0",
-    "gitbook-plugin-mermaid-gb3": "^2.1.0",
     "gitbook-plugin-vistors-github": "^1.2.0"
   }
 }
