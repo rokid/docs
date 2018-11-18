@@ -2,7 +2,8 @@
   "plugins" : [
     "anchor-navigation-ex",
     "expandable-chapters-interactive",
-    "vistors-github"
+    "vistors-github",
+    "mermaid-gb3"
   ],
   "pluginsConfig" : {
     "vistors-github": {
