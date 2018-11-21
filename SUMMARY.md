@@ -4,6 +4,7 @@
 * Rokid 语音整体方案
     * [语音整体方案简介](5-enableVoice/rokid-vsvy-sdk-docs/introduction.md)
     * [语音方案接入流程](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/rookie-guide.md) 
+    * [公版app配置说明](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/gongban.md) 
     * 语音方案介绍
         * [Android 全链路通用方案](5-enableVoice/rokid-vsvy-sdk-docs/fullLink/fulllink.md)
         * [Android 全链路APK级别方案](5-enableVoice/rokid-vsvy-sdk-docs/RokidAiSdk/RokidAiSdk.md)
