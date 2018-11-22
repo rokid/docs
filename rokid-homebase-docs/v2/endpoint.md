@@ -6,12 +6,15 @@
 --- | --- | ---
 endpointId | `string`, 必需 | 开发者自己定义的终端 Id，需要同一品牌其他终端保持唯一
 displayType | `enum`，必需 |终端的显示类型，需要和终端类型列表保持一致，具体信息请参考 [终端类型](./endpoint-type.md)
-displayName | `string`，必需 | 若琪客户端显示的终端名称
-recommendRoomName | `string` | 推荐若琪将这个终端划入与这个房间名相同的房间，便于用户命令
+displayName | `string`，必需 | 若琪客户端显示的终端名称,注意：此名称不得包含数字和特殊字符
+recommendRoomName | `string` | 推荐若琪将这个终端划入与这个房间名相同的房间，便于用户命令,注意：此名称不得包含数字和特殊字符
 offline | `bool` | Skill 能否成功连接到设备，如果不能则为 `true`
 additionalInfo | key-value pairs | 一组和终端关联的键值对，若琪每次会把这些键值对和终端 Id 一起发送给 Skill
 capabilities | `Capability[]` | 一组终端能力描述符
 states | `InterfaceState[]` | 一组终端能力接口状态描述符
+
+
+> 注意：displayName 和 recommendRoomName 中不得包含数字和特殊字符
 
 #### 能力描述 Capability
 
