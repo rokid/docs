@@ -1030,7 +1030,7 @@ Mute.Off | 取消静音
   "header": {
     "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
     "namespace": "Rokid.Control",
-    "name": "Volume.On",
+    "name": "Mute.On",
     "payloadVersion": "v1",
     "authorization": {
       "type": "BearerToken",
@@ -1049,7 +1049,7 @@ Mute.Off | 取消静音
 }
 ```
 
-##### On Payload
+##### Off Payload
 
 命令示例：
 
@@ -1058,7 +1058,7 @@ Mute.Off | 取消静音
   "header": {
     "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
     "namespace": "Rokid.Control",
-    "name": "Volume.On",
+    "name": "Mute.Off",
     "payloadVersion": "v1",
     "authorization": {
       "type": "BearerToken",
