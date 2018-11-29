@@ -528,9 +528,6 @@ Mode.Fan | 送风模式
 Mode.Silent | 静音模式
 Mode.Energy | 省电模式
 Mode.Sleep | 睡眠模式
-Mode.HighSpeed | 高速模式
-Mode.MediumSpeed | 中速模式
-Mode.LowSpeed | 低速模式
 
 命令示例：
 ```json
