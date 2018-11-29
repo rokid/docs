@@ -528,6 +528,9 @@ Mode.Fan | 送风模式
 Mode.Silent | 静音模式
 Mode.Energy | 省电模式
 Mode.Sleep | 睡眠模式
+Mode.HighSpeed | 高速模式
+Mode.MediumSpeed | 中速模式
+Mode.LowSpeed | 低速模式
 
 命令示例：
 ```json
@@ -884,10 +887,13 @@ delta | `number` | 相对值
 
 命令 | 描述
 --- | ---
-FanSpeed.Set |
-FanSpeed.SetMax |
-FanSpeed.SetMin |
-FanSpeed.Adjust |
+FanSpeed.Set | 设置风速到指定百分比
+FanSpeed.SetMax | 调到最大风速
+FanSpeed.SetMin | 设置最低风速
+FanSpeed.Adjust | 调整风速
+FanSpeed.SetHigh | 调到高风模式
+FanSpeed.setLow | 调到低风模式
+FanSpeed.setMedium | 调到中风模式
 
 
 ##### Set Payload
@@ -1007,6 +1013,86 @@ delta | `number` | 相对值
   "payload": {
     "delta": -1
   }
+}
+```
+##### setHigh Payload
+
+命令示例：
+
+```json
+{
+  "header": {
+    "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+    "namespace": "Rokid.Control",
+    "name": "FanSpeed.setHigh",
+    "payloadVersion": "v1",
+    "authorization": {
+      "type": "BearerToken",
+      "token": "a-token-from-skill"
+    }
+  },
+  "endpoint": {
+    "endpointId": "开发者自己定义的终端Id",
+    "additionalInfo": {
+      "key": "value"
+    },
+    "states": []
+  },
+  "payload": {}
+}
+```
+
+##### setLow Payload
+
+命令示例：
+
+```json
+{
+  "header": {
+    "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+    "namespace": "Rokid.Control",
+    "name": "FanSpeed.setLow",
+    "payloadVersion": "v1",
+    "authorization": {
+      "type": "BearerToken",
+      "token": "a-token-from-skill"
+    }
+  },
+  "endpoint": {
+    "endpointId": "开发者自己定义的终端Id",
+    "additionalInfo": {
+      "key": "value"
+    },
+    "states": []
+  },
+  "payload": {}
+}
+```
+
+##### setMedium Payload
+
+命令示例：
+
+```json
+{
+  "header": {
+    "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+    "namespace": "Rokid.Control",
+    "name": "FanSpeed.setMedium",
+    "payloadVersion": "v1",
+    "authorization": {
+      "type": "BearerToken",
+      "token": "a-token-from-skill"
+    }
+  },
+  "endpoint": {
+    "endpointId": "开发者自己定义的终端Id",
+    "additionalInfo": {
+      "key": "value"
+    },
+    "states": []
+  },
+  "payload": {}
 }
 ```
 
