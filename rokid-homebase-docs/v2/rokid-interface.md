@@ -1010,6 +1010,50 @@ delta | `number` | 相对值
 }
 ```
 
+#### Mute 静音状态
+
+类型: bool
+
+可对应说法: 若琪, 电视静音； 若琪，电视取消静音。
+
+命令 | 描述
+--- | ---
+Mute.set | 设置静音
+
+##### Set Payload
+
+字段 | 类型 | 描述
+--- | --- | ---
+value | `boolean` | 是否静音
+
+命令示例：
+
+```json
+{
+  "header": {
+    "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+    "namespace": "Rokid.Control",
+    "name": "Volume.Set",
+    "payloadVersion": "v1",
+    "authorization": {
+      "type": "BearerToken",
+      "token": "a-token-from-skill"
+    }
+  },
+  "endpoint": {
+    "endpointId": "开发者自己定义的终端Id",
+    "additionalInfo": {
+      "key": "value"
+    },
+    "states": []
+  },
+  "payload": {
+    "value": true
+  }
+}
+```
+
+
 #### Volume 音量状态
 
 类型: percentage
@@ -1018,10 +1062,10 @@ delta | `number` | 相对值
 
 命令 | 描述
 --- | ---
-Volume.Set |
-Volume.SetMax |
-Volume.SetMin |
-Volume.Adjust |
+Volume.Set | 设置音量
+Volume.SetMax | 调到最大音量
+Volume.SetMin | 调到最小音量
+Volume.Adjust | 调节音量
 
 ##### Set Payload
 
