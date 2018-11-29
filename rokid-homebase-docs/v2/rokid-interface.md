@@ -892,8 +892,8 @@ FanSpeed.SetMax | 调到最大风速
 FanSpeed.SetMin | 设置最低风速
 FanSpeed.Adjust | 调整风速
 FanSpeed.SetHigh | 调到高风模式
-FanSpeed.setLow | 调到低风模式
-FanSpeed.setMedium | 调到中风模式
+FanSpeed.SetLow | 调到低风模式
+FanSpeed.SetMedium | 调到中风模式
 
 
 ##### Set Payload
@@ -1015,7 +1015,7 @@ delta | `number` | 相对值
   }
 }
 ```
-##### setHigh Payload
+##### SetHigh Payload
 
 命令示例：
 
@@ -1024,7 +1024,7 @@ delta | `number` | 相对值
   "header": {
     "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
     "namespace": "Rokid.Control",
-    "name": "FanSpeed.setHigh",
+    "name": "FanSpeed.SetHigh",
     "payloadVersion": "v1",
     "authorization": {
       "type": "BearerToken",
@@ -1042,7 +1042,7 @@ delta | `number` | 相对值
 }
 ```
 
-##### setLow Payload
+##### SetLow Payload
 
 命令示例：
 
@@ -1051,7 +1051,7 @@ delta | `number` | 相对值
   "header": {
     "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
     "namespace": "Rokid.Control",
-    "name": "FanSpeed.setLow",
+    "name": "FanSpeed.SetLow",
     "payloadVersion": "v1",
     "authorization": {
       "type": "BearerToken",
@@ -1069,7 +1069,7 @@ delta | `number` | 相对值
 }
 ```
 
-##### setMedium Payload
+##### SetMedium Payload
 
 命令示例：
 
@@ -1078,7 +1078,7 @@ delta | `number` | 相对值
   "header": {
     "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
     "namespace": "Rokid.Control",
-    "name": "FanSpeed.setMedium",
+    "name": "FanSpeed.SetMedium",
     "payloadVersion": "v1",
     "authorization": {
       "type": "BearerToken",
