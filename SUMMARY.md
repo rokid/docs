@@ -3,7 +3,7 @@
 * [Rokid 开放平台](README.md)
 * Rokid 语音整体方案
     * [语音整体方案简介](5-enableVoice/rokid-vsvy-sdk-docs/introduction.md)
-    * [语音方案接入流程](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/rookie-guide.md) 
+    * [产品创建和sn导入流程](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/rookie-guide.md) 
     * [技能配置](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/skillstore.md) 
     * [系统升级OTA](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/ota.md) 
     * [公版app配置说明](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/gongban.md) 
