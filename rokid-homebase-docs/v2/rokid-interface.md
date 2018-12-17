@@ -884,10 +884,13 @@ delta | `number` | 相对值
 
 命令 | 描述
 --- | ---
-FanSpeed.Set |
-FanSpeed.SetMax |
-FanSpeed.SetMin |
-FanSpeed.Adjust |
+FanSpeed.Set | 设置风速到指定百分比
+FanSpeed.SetMax | 调到最大风速
+FanSpeed.SetMin | 设置最低风速
+FanSpeed.Adjust | 调整风速
+FanSpeed.SetHigh | 调到高风模式
+FanSpeed.SetLow | 调到低风模式
+FanSpeed.SetMedium | 调到中风模式
 
 
 ##### Set Payload
@@ -1009,6 +1012,155 @@ delta | `number` | 相对值
   }
 }
 ```
+##### SetHigh Payload
+
+命令示例：
+
+```json
+{
+  "header": {
+    "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+    "namespace": "Rokid.Control",
+    "name": "FanSpeed.SetHigh",
+    "payloadVersion": "v1",
+    "authorization": {
+      "type": "BearerToken",
+      "token": "a-token-from-skill"
+    }
+  },
+  "endpoint": {
+    "endpointId": "开发者自己定义的终端Id",
+    "additionalInfo": {
+      "key": "value"
+    },
+    "states": []
+  },
+  "payload": {}
+}
+```
+
+##### SetLow Payload
+
+命令示例：
+
+```json
+{
+  "header": {
+    "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+    "namespace": "Rokid.Control",
+    "name": "FanSpeed.SetLow",
+    "payloadVersion": "v1",
+    "authorization": {
+      "type": "BearerToken",
+      "token": "a-token-from-skill"
+    }
+  },
+  "endpoint": {
+    "endpointId": "开发者自己定义的终端Id",
+    "additionalInfo": {
+      "key": "value"
+    },
+    "states": []
+  },
+  "payload": {}
+}
+```
+
+##### SetMedium Payload
+
+命令示例：
+
+```json
+{
+  "header": {
+    "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+    "namespace": "Rokid.Control",
+    "name": "FanSpeed.SetMedium",
+    "payloadVersion": "v1",
+    "authorization": {
+      "type": "BearerToken",
+      "token": "a-token-from-skill"
+    }
+  },
+  "endpoint": {
+    "endpointId": "开发者自己定义的终端Id",
+    "additionalInfo": {
+      "key": "value"
+    },
+    "states": []
+  },
+  "payload": {}
+}
+```
+
+#### Mute 静音状态
+
+类型: enum
+
+可对应说法: 若琪, 电视静音； 若琪，电视取消静音。
+
+命令 | 描述
+--- | ---
+Mute.On | 设置静音
+Mute.Off | 取消静音
+
+##### On Payload
+
+命令示例：
+
+```json
+{
+  "header": {
+    "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+    "namespace": "Rokid.Control",
+    "name": "Mute.On",
+    "payloadVersion": "v1",
+    "authorization": {
+      "type": "BearerToken",
+      "token": "a-token-from-skill"
+    }
+  },
+  "endpoint": {
+    "endpointId": "开发者自己定义的终端Id",
+    "additionalInfo": {
+      "key": "value"
+    },
+    "states": []
+  },
+  "payload": {
+  }
+}
+```
+
+##### Off Payload
+
+命令示例：
+
+```json
+{
+  "header": {
+    "messageId": "5f8a426e-01e4-4cc9-8b79-65f8bd0fd8a4",
+    "namespace": "Rokid.Control",
+    "name": "Mute.Off",
+    "payloadVersion": "v1",
+    "authorization": {
+      "type": "BearerToken",
+      "token": "a-token-from-skill"
+    }
+  },
+  "endpoint": {
+    "endpointId": "开发者自己定义的终端Id",
+    "additionalInfo": {
+      "key": "value"
+    },
+    "states": []
+  },
+  "payload": {
+  }
+}
+```
+
+
 
 #### Volume 音量状态
 
@@ -1018,10 +1170,10 @@ delta | `number` | 相对值
 
 命令 | 描述
 --- | ---
-Volume.Set |
-Volume.SetMax |
-Volume.SetMin |
-Volume.Adjust |
+Volume.Set | 设置音量
+Volume.SetMax | 调到最大音量
+Volume.SetMin | 调到最小音量
+Volume.Adjust | 调节音量
 
 ##### Set Payload
 
