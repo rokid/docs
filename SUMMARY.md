@@ -14,6 +14,22 @@
         * [Android 全链路APK级别方案](5-enableVoice/rokid-vsvy-sdk-docs/RokidAiSdk/RokidAiSdk.md)
         * [Android 基础语音模块](5-enableVoice/rokid-vsvy-sdk-docs/speechTTS/speechtts.md)
         * [Linux基础架构](5-enableVoice/rokid-vsvy-sdk-docs/linuxsdk/linuxsdk.md)
+        * [yodaOS系统](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/yodaosSystem.md)
+           * [系统集成](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/Sys-integration.md)
+           * [编译与运行](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/compile-run.md)
+           * 系统服务
+              * 模块简介
+                  * [httpdns](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/httpdns/10_模块简介/10_httpdns.md)
+                  * [lumenlight](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/lumenlight/10_模块简介/11_lumenlight.md)
+                  * player
+                     * [RPlayer](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/librplayer/10_模块简介/12_player/10_RPlayer.md)
+                     * [WavPlayer](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/librplayer/10_模块简介/12_player/11_WavPlayer.md)
+                  * [rklog](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/rklog/10_模块简介/13_rklog.md)
+                  * [input-event](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/input-event/10_模块简介/14_input-event.md)
+                  * [libmemcheck](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/libmemcheck/10_模块简介/14_libmemcheck.md)
+                  * [volctl](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/vol_ctrl/10_模块简介/15_volctl.md)
+                  * [display](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/display/10_模块简介/20_display.md)
+
     * 语音接入接口文档
         * [拦截器接口文档](3-ApiReference/rokid-interceptor.md)
         * [设备接口文档](3-ApiReference/open-device-manager.md)
