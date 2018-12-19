@@ -9,6 +9,7 @@
     * [公版app配置说明](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/gongban.md) 
     * [设备数据管理](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/data.md)
     * [聊天问答配置](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/chat.md) 
+    * [YodaOS](https://yodaos-project.github.io/yoda-book/)
     * 语音方案介绍
         * [Android 全链路通用方案](5-enableVoice/rokid-vsvy-sdk-docs/fullLink/fulllink.md)
         * [Android 全链路APK级别方案](5-enableVoice/rokid-vsvy-sdk-docs/RokidAiSdk/RokidAiSdk.md)
@@ -111,8 +112,7 @@
             * [S905D](rokidos-linux-docs/reference/dev_board/amlogic/usermanual_s905d.md)
         * [刷机教程](rokidos-linux-docs/source/downloading_building/burn_image.md)
         * [自定义激活词配置](rokidos-linux-docs/source/system_setting/custom_activation.md)
-    * [YodaOS](https://yodaos-project.github.io/yoda-book/)
-    <!-- * [RokidOS](rokidos-linux-docs/source/getting_started/overview.md)
+    * [RokidOS](rokidos-linux-docs/source/getting_started/overview.md)
         * 下载和构建
             * [概览](rokidos-linux-docs/source/downloading_building/requirements.md)
             * [搭建编译环境](rokidos-linux-docs/source/downloading_building/build_env.md)
@@ -140,7 +140,7 @@
                 * [输入服务](rokidos-linux-docs/development/cplusplus/inputflinger.md)
                 * [电量查询](rokidos-linux-docs/development/cplusplus/power_ctrl.md)
                 * [系统升级](rokidos-linux-docs/development/cplusplus/upgrade.md)
-                * [蓝牙](rokidos-linux-docs/development/cplusplus/btflinger.md) -->
+                * [蓝牙](rokidos-linux-docs/development/cplusplus/btflinger.md)
 * 硬件设计参考方案
     * [Rokid 语音产品硬件设计指南](2-RokidDocument/2-EnableVoice/rokid-hardware-design-guide.md)
     * [Rokid 硬件交互设计指南](2-RokidDocument/2-EnableVoice/rokid-hardware-ux-design-guidelines.md)
