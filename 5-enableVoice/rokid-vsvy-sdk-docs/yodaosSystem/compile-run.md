@@ -40,12 +40,12 @@ YodaOS Universal 如何配置系统和应用
 
 #### 安装编译依赖工具
 
-	**ubuntu 16.04**
+      **ubuntu 16.04**
 	
 ```sh
   sudo apt-get install build-essential subversion libncurses5-dev zlib1g-dev gawk gcc-multilib flex git-core gettext libssl-dev unzip texinfo device-tree-compiler dosfstools libusb
 ```
-	**CentOS7**
+      **CentOS7**
 	
 ```sh
 yum install -y unzip bzip2 dosfstools wget gcc gcc-c++ git ncurses-devel zlib-static openssl-devel svn patch perl-Module-Install.noarch perl-Thread-Queue
@@ -337,7 +337,7 @@ Debug 模式下
 查看alab-libs/Makefile 根据menuconfig中是否有选择TURENPROC_AUTO_RUN来判断是否开机启动。\
 
 ```sh
-    if [ "$(CONFIG_TURENPROC_AUTO_RUN)" != "y" ]; then \
+if [ "$(CONFIG_TURENPROC_AUTO_RUN)" != "y" ]; then \
 $(SED) "s/^START/#START/g" $(1)/etc/init.d/turenproc; \
 fi
 ```
