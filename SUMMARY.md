@@ -15,7 +15,7 @@
         * [Android 全链路APK级别方案](5-enableVoice/rokid-vsvy-sdk-docs/RokidAiSdk/RokidAiSdk.md)
         * [Android 基础语音模块](5-enableVoice/rokid-vsvy-sdk-docs/speechTTS/speechtts.md)
         * [Linux基础架构](5-enableVoice/rokid-vsvy-sdk-docs/linuxsdk/linuxsdk.md)
-        * [yodaOS系统](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/yodaosSystem.md)
+        * [YodaOS系统](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/yodaosSystem.md)
            * [系统集成](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/Sys-integration.md)
            * [编译与运行](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/compile-run.md)
            * 系统服务
