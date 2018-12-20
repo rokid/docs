@@ -141,8 +141,8 @@ rpm -i dtc-1.4.0-1.el6.x86_64.rpm
 ```
 
 #### 固件地址
-*具体参考Rokid Kamino18 Universal Install Guide V2.5.pdf 6章节 这里做简要描述
-*生成固件在 openwrt/bin/leo-k18-universal-glibc/
+* 具体参考Rokid Kamino18 Universal Install Guide V2.5.pdf 6章节 这里做简要描述
+* 生成固件在 openwrt/bin/leo-k18-universal-glibc/
 
 ```sh
     -rwxr-xr-x  1 xhl  staff    57K 10 16 23:40 bootmusic.wav
@@ -171,11 +171,11 @@ rpm -i dtc-1.4.0-1.el6.x86_64.rpm
     -rw-r--r--  1 xhl  staff   983B 10 16 23:40 sw-description
 ```
 
-*编译方法3，会拷贝固件到openwrt/bin/leo-k18-universal-glibc/full_images，并将full_images压缩后放到check_by_jenkins用于发布。
+* 编译方法3，会拷贝固件到openwrt/bin/leo-k18-universal-glibc/full_images，并将full_images压缩后放到check_by_jenkins用于发布。
 
     
 #### 烧写固件
-**linux 烧写**
+** linux 烧写 **
 
 ```sh
     cd openwrt/bin/leo-k18-universal-glibc/
@@ -183,7 +183,7 @@ rpm -i dtc-1.4.0-1.el6.x86_64.rpm
     ./download.sh all
     根据提示按住调试板上的 BOOT_KEY，然后连接 USB 线到 PC 上.
 ```
-**indows烧写**
+** indows烧写 **
 
 使用 windows 烧写工具前，对于一台新电脑需要安装 usb 驱动(驱动安装文件和说明在`leo-k18-universal-glibc/bootx_win/driver_install`
 目录下), Windows 电脑上具体烧写流程如下:
