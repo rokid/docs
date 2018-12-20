@@ -43,6 +43,7 @@ endpoints | `Endpoint[]` | 一组终端描述符，具体终端描述请参考 [
         "displayName": "大米台灯",
         "displayType": "light",
         "recommendRoomName": "厨房",
+        "recommendHomeName": "杭州的家",
         "additionalInfo": {
           "key1": "value"
         },
