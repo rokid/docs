@@ -22,7 +22,7 @@ YodaOS Universal 如何配置系统和应用
 #### 代码结构
 
 ```sh
-*   ├── 3rd ：第三方软件包
+    ├── 3rd ：第三方软件包
     ├── applications :应用
     ├── build.sh -> /home/hailiang.xu/naboo/products/rokid/common/build.sh  ：ci 编译脚本
     ├── envsetup.sh -> /home/hailiang.xu/naboo/products/rokid/common/envsetup.sh ：本地编译脚本
