@@ -119,7 +119,7 @@
   * 高级功能
     * [Webhook](rokid-homebase-docs/webhook/index.md)
 
-* Rokid 智能开发套件
+* Rokid 智能硬件产品开发
     * [智能开发套件简介](rokidos-linux-docs/README.md)
     * 开发套件使用手册
         * [基本参数](rokidos-linux-docs/reference/dev_board/board_list.md)
@@ -158,12 +158,13 @@
                 * [电量查询](rokidos-linux-docs/development/cplusplus/power_ctrl.md)
                 * [系统升级](rokidos-linux-docs/development/cplusplus/upgrade.md)
                 * [蓝牙](rokidos-linux-docs/development/cplusplus/btflinger.md)
-* 硬件设计参考方案
-    * [Rokid 语音产品硬件设计指南](2-RokidDocument/2-EnableVoice/rokid-hardware-design-guide.md)
-    * [Rokid 硬件交互设计指南](2-RokidDocument/2-EnableVoice/rokid-hardware-ux-design-guidelines.md)
+    * 硬件设计参考方案
+        * [Rokid 语音产品硬件设计指南](2-RokidDocument/2-EnableVoice/rokid-hardware-design-guide.md)
+        * [Rokid 硬件交互设计指南](2-RokidDocument/2-EnableVoice/rokid-hardware-ux-design-guidelines.md)
 * Rokid 能力介绍
     * [Rokid 语音识别](6-asrandtts/asr.md)
     * [Rokid 语音合成](6-asrandtts/tts.md)
+* [YodaOS(强烈推荐)](https://yodaos-project.github.io/yoda-book/)
 * [服务协议](4-TermsAndAgreements/community-service-agreement.md)
 * [免责声明](4-TermsAndAgreements/community-disclaimer.md)
 * [联系我们](contact-us.md)
