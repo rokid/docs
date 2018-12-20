@@ -230,21 +230,21 @@ YodaOS 是基于 openwrt 编译系统，所以需要了解优化后的目录结�
   * `logs` 日志文件夹，遇到错误时从这里获取信息，分析编译失败的原因。
   
 #### 如何生成定制化配置
-*使用 `make menuconfig` 完成配置修改
-*使用`diffconfig.sh`脚本生成配置
+* 使用 `make menuconfig` 完成配置修改
+* 使用`diffconfig.sh`脚本生成配置
 
 ```sh
 ./scripts/diffconfig.sh > configs/<板级>_defconfig
 ```
 
 #### 如何编译单个包
-*清理、编译、安装单个包
+* 清理、编译、安装单个包
 
 ```sh
 make package/<name>/{clean,compile,install}
 ```
 
-*编译清理, 编译, 安装工具链
+* 编译清理, 编译, 安装工具链
 
 ```sh
 make toolchain/{clean,compile,install}
@@ -334,7 +334,7 @@ Debug 模式下
     endmenu
 ```
 
-查看alab-libs/Makefile 根据menuconfig中是否有选择TURENPROC_AUTO_RUN来判断是否开机启动。\
+查看alab-libs/Makefile 根据menuconfig中是否有选择TURENPROC_AUTO_RUN来判断是否开机启动。
 
 ```sh
 if [ "$(CONFIG_TURENPROC_AUTO_RUN)" != "y" ]; then \
