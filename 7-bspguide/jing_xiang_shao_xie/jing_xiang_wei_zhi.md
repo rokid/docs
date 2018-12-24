@@ -2,6 +2,8 @@
 
 当系统镜像用build.sh完整编译完成后在$(K18DIR)/openwrt/bin/目录中会生成两个目录，如下图所示：
 
+![](assets/image.png)
+
 leo-k18-universal-glibc/full_images目录中包含系统烧写所需全部镜像，以及Linux或Windows电脑上用的烧写工具。leo-gx8010-ota-1v-glibc目录中包含recovery镜像，最终recovery镜像也会被包含在leo-k18-universal-glibc/full_images目录中。
 
 leo-k18-universal-glibc/full_images目录中各文件的含义如下表：

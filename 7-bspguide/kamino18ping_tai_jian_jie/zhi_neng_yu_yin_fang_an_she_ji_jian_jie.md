@@ -1,5 +1,5 @@
 ## 智能语音方案设计简介
-
+![](assets/intro.png)
 *   电源：锂电池（便携模式）, 5V/2A,5V/1A AC/DC电源适配器（普通模式）或PC USB接口供电
 *   存储器：SPI NAND Flash单颗1GBit~2GBit
 *   音频：Audio Right/Left，模拟音频输出

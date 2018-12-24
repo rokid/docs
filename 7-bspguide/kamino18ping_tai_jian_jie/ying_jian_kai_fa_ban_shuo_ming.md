@@ -2,7 +2,7 @@
 
 Kamino18 Dev平台是面向智能语音应用而设计的硬件参考方案，分为主板和调试子板两部分。如下图所示：
 
-![最终](D:\work\Markdown\git\rokid_doc\docs\7-bspguide\assets\zui_zhong.jpeg)
+![](assets/zui_zhong.jpeg)
 
 **主板示意图**
 
@@ -18,7 +18,7 @@ Kamino18 Dev平台是面向智能语音应用而设计的硬件参考方案，�
 10.  LED 12PCS RGB LED
 11.  MIC 4PCS PDM MIC
 
-**![DEBUG](D:\work\Markdown\git\rokid_doc\docs\7-bspguide\assets\debug.jpeg)**
+**![](assets/debug.jpeg)**
 
 **调试子板示意图**
 
@@ -32,6 +32,8 @@ Kamino18 Dev平台是面向智能语音应用而设计的硬件参考方案，�
 8.  MUTE 麦克静音
 9.  RST 系统复位
 10.  GPIO 外接GPIO 型号定义参考原理图
+
+![](assets/usbconnect1.png) ![](assets/usbconnect2.png)
 
 **USB线连接说明图**
 

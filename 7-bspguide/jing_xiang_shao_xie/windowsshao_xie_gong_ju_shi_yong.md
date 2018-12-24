@@ -5,3 +5,5 @@
 *   进入$(K18DIR)/openwrt/bin/ leo-k18-universal-glibc /full_images目录
 *   双击download.bat
 *   根据提示按住调试板上的BOOT_KEY，然后连接USB线到PC上.
+
+![](assets/windows.png)

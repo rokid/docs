@@ -1,5 +1,5 @@
 ## 芯片框图
-
+![](assets/SOC.png)
 *   支持2/4/6/8路麦克风阵列
 *   集成8通道ADC/I2S/PDM音频输入接口，支持模拟麦和数字麦
 *   集成DAC/I2S音频输出接口，支持内部audio codec输出或外接audio codec输出
