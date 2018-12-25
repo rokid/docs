@@ -17,8 +17,8 @@
         * [Android 全链路APK级别方案](5-enableVoice/rokid-vsvy-sdk-docs/RokidAiSdk/RokidAiSdk.md)
         * [Android 基础语音模块](5-enableVoice/rokid-vsvy-sdk-docs/speechTTS/speechtts.md)
         * [Linux基础架构](5-enableVoice/rokid-vsvy-sdk-docs/linuxsdk/linuxsdk.md)
-        * [YodaOS系统](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/yodaosSystem.md)
-           * [系统集成](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/Sys-integration.md)
+        * YodaOS本地服务
+           * [本地服务简介](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/system-service.md)
            * [编译与运行](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/compile-run.md)
            * 系统服务
               * 模块简介
@@ -32,6 +32,7 @@
                   * [libmemcheck](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/libmemcheck/10_模块简介/14_libmemcheck.md)
                   * [volctl](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/vol_ctrl/10_模块简介/15_volctl.md)
                   * [display](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/display/10_模块简介/20_display.md)
+                  * [yimo](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/yimo/README.md)
 
     * 语音接入接口文档
         * [拦截器接口文档](3-ApiReference/rokid-interceptor.md)
