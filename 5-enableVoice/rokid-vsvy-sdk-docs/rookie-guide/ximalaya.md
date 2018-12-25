@@ -20,6 +20,7 @@
 <tr>  <td>喜马拉雅儿歌</td>  <td>晚安妈妈睡前故事、米小圈上学记、蜜桃姐姐讲故事、小马宝莉、海底小纵队、钱儿爸、钱儿妈、牛津阅读树、新东方多纳英语、托马斯和他的朋友们、经典绘本故事、十万个为什么全集、格林童话、一千零一夜、迪士尼经典故事、凯迪克大奖作品等</td>  <td>故事加儿歌 60W，声音1000W+</td></tr>
 </tbody></table>
 
+
 #### 1.2 喜马拉雅skill功能列表
 
 <table>
@@ -218,6 +219,7 @@
 #### 3.1 喜马拉雅开放平台创建应用
 
 1）合作方需要在[喜马拉雅开放平台](https://open.ximalaya.com) 创建移动应用。
+
   ![](images/ximalya.png)
 
 2）在喜马拉雅开放平台-应用管理-移动应用-应用信息处获取App Key 和 App Secret，用于喜马拉雅账号 oauth 和 获取内容资源。
@@ -234,11 +236,13 @@
 1）公版APP方式：
 
 a.在开放平台创建一个APP即可：[Rokid开放平台APP配置](https://developer.rokid.com/docs/5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/gongban.html)
+
 b.提供在喜马拉雅申请的key和厂商的设备类型ID，联系Rokid商务进行操作，才可在APP上显示喜马拉雅内容
 
 2）SDK方式：
 
 a.接入我们的App SDK：[Rokid Mobile SDK接入文档](https://developer.rokid.com/docs/5-enableVoice/rokid-vsvy-sdk-docs/mobliesdk/SDK.html)，需要研发人员进行开发；
+
 b.提供在喜马拉雅申请的key和厂商的设备类型ID，联系Rokid对接的商务进行操作，才可在APP上显示喜马拉雅内容，才可在APP上显示喜马拉雅内容
 
 #### 3.4 喜马拉雅账号 Oauth 流程（合作方 App 接入喜马拉雅账号时需要）
