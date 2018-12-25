@@ -224,9 +224,10 @@
 如果需要支持在移动APP上进行内容展示和点播，有以下2种方式接入，选择其中之一即可：
 
 1）公版APP方式：
-a.在开放平台创建一个APP即可：[Rokid开放平台APP配置](https://developer.rokid.com/docs/5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/gongban.html)
-b.提供在喜马拉雅申请的key和厂商的设备类型ID，联系Rokid商务进行操作，才可在APP上显示喜马拉雅内容
 
+a.在开放平台创建一个APP即可：[Rokid开放平台APP配置](https://developer.rokid.com/docs/5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/gongban.html)
+
+b.提供在喜马拉雅申请的key和厂商的设备类型ID，联系Rokid商务进行操作，才可在APP上显示喜马拉雅内容
 
 2）SDK方式：
 a.接入我们的App SDK：[Rokid Mobile SDK接入文档](https://developer.rokid.com/docs/5-enableVoice/rokid-vsvy-sdk-docs/mobliesdk/SDK.html)，需要研发人员进行开发；
