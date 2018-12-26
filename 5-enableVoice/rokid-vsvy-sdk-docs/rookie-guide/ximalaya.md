@@ -219,7 +219,6 @@
 #### 3.1 喜马拉雅开放平台创建应用
 
 1）合作方需要在[喜马拉雅开放平台](https://open.ximalaya.com) 创建移动应用。
-
   ![](images/ximalya.png)
 
 2）在喜马拉雅开放平台-应用管理-移动应用-应用信息处获取App Key 和 App Secret，用于喜马拉雅账号 oauth 和 获取内容资源。
@@ -229,6 +228,8 @@
 
 联系对应的Rokid商务，操作技能授权，并将在喜马拉雅开放平台创建的应用 App Key 和 App Secret 给到对接的Rokid商务，由 Rokid 生成 oauth 回调地址，合作方在喜马拉雅开放平台填入回调地址。
    ![](images/ximalyaurl.jpg)
+
+备注：完成以上两个步骤时，音箱可实现了正常的语音点播功能。
 
 #### 3.3 移动端 App 内容展示/点播
 
@@ -249,11 +250,17 @@ b.提供在喜马拉雅申请的key和厂商的设备类型ID，联系Rokid对�
 
 #### 3.4 喜马拉雅账号 Oauth 流程（合作方 App 接入喜马拉雅账号时需要）
 
-接入喜马拉雅账号登录后，则合作方用户可关联其已有喜马拉雅账号，收听订阅专辑、已购专辑，同步账号下收听历史。
+接入喜马拉雅账号登录后，则合作方用户可关联其已有喜马拉雅账号，收听订阅专辑、已购专辑，同步账号下收听历史。合作方需在喜马拉雅开放平台填入回调地址,参照3.2. 然后据用户选择的APP接入方式来确定oauth鉴权的流程：
 
-1）合作方 App 端接入[喜马拉雅开放平台 SDK](https://open.ximalaya.com/doc/mobile-sdk)
+1）公版APP方式
 
-2）然后按照以下文档开发：
+如果是通过公版APP的方式接入，已包含oauth鉴权的流程和页面，只需要完成第一步的回调地址填写即可，无需再开发。
+
+2) SDK方式 
+
+a.合作方 App 端接入[喜马拉雅开放平台 SDK](https://open.ximalaya.com/doc/mobile-sdk)
+
+b.然后按照以下文档开发：
 
 IOS：[IOS端喜马拉雅账号授权接入文档](https://rokid.github.io/mobile-sdk-ios-docs/res/skill/media_thrid_xmly.html)
 
