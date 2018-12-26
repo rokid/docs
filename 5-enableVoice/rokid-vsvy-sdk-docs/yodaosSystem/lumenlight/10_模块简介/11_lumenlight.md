@@ -1,36 +1,37 @@
 ## LumenLight
 
-&ensp;&ensp;&ensp;&ensp;LumenLight模块为应用层提供灯光绘制方法和LED信息。
+### 1. 简介
 
-<br>
+* LumenLight模块为应用层提供灯光绘制方法和LED信息。
 
-**位置** ：frameworks/native/libs/lumenlight
+### 2. API说明
 
-### Method
+#### 2.1 函数说明
 
-#### void lumen_set_enable(bool cmd)
+##### 2.1.1  void lumen_set_enable(bool cmd)
 
-&ensp;&ensp;&ensp;&ensp;设置 *lumen_draw* 是否生效.
+* 设置 *lumen_draw* 是否生效。
 
-#### int lumen_draw(unsigned char* buf, int len)
+##### 2.1.2  int lumen_draw(unsigned char* buf, int len)
 
-&ensp;&ensp;&ensp;&ensp;写入LED像素值.
+* 写入LED像素值。
 
+* buf：像素值数据。
 
-### Variable
+* len：像素值数据长度。
 
-#### int m_ledCount
+##### 2.1.3  inline int getLedCount()
 
-&ensp;&ensp;&ensp;&ensp;LED数量。
+* 读取LED数目。
 
-#### int m_pixelFormat
+##### 2.1.4 inline int getPixelFormat()
 
-&ensp;&ensp;&ensp;&ensp;像素格式，3代表RGB格式。
+* 读取像素格式，如：3代表RGB格式。
 
-#### int m_frameSize
+##### 2.1.5 inline int getFrameSize()
 
-&ensp;&ensp;&ensp;&ensp;像素值总长度，*m_frameSzie =  m_ledCount *  m_pixelFormat*。
+* 读取像素值总长度，*m_frameSzie =  m_ledCount *  m_pixelFormat*。
 
-#### int m_fps
+##### 2.1.6 inline int getFps()
 
-&ensp;&ensp;&ensp;&ensp;建议使用的最大帧率，实际帧率大于该值时可能导致丢帧。
+* 读取建议使用的最大帧率，实际帧率大于该值时可能导致丢帧。
