@@ -229,7 +229,8 @@
 #### 3.2 若琪开放平台授权喜马拉雅相关 skill
 
 联系对应的Rokid商务，操作技能授权，并将在喜马拉雅开放平台创建的应用 App Key 和 App Secret 给到对接的Rokid商务，由 Rokid 生成 oauth 回调地址，合作方在喜马拉雅开放平台填入回调地址。
-   ![](images/url.png)
+   ![](images/ximalyaurl.jpg)
+
 
 #### 3.3 移动端 App 内容展示/点播
 
