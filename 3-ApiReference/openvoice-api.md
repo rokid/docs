@@ -1,5 +1,15 @@
 ### 开放平台接口定义文档(websocket版)
 
+### 概述
+
+本文档目的是描述云端语音接口的 websocket 版本的开放协议，主要包含语音识别、语义理解、语音合成三大部分功能，主要面向想要了解语音交互细节，并具有一定开发能力的开发者或用户。
+
+如果使用 http 版本的开放协议，请点[这里](https://developer.rokid.com/docs/3-ApiReference/openvoice-api-http.html)；
+
+如果通过 sdk 接入，请点[这里](https://developer.rokid.com/docs/5-enableVoice/rokid-vsvy-sdk-docs/fullLink/fulllink.html)；
+
+如果开发 skill ，请点[这里](https://developer.rokid.com/docs/2-RokidDocument/1-SkillsKit/platform-introduction.html)；
+
   - [服务地址](#服务地址)
   - [协议地址](#协议地址)
   - [协议概述](#协议概述)
