@@ -39,6 +39,13 @@
       - [yimo](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/yimo/README.md)
 
 *  智能硬件产品开发
+<<<<<<< HEAD
+  - [智能开发套件简介](rokidos-linux-docs/README.md)
+  - 开发套件使用手册
+    - [基本参数](rokidos-linux-docs/reference/dev_board/board_list.md)
+    - [联网教程](rokidos-linux-docs/source/system_setting/connect_to_internet.md)
+    - 编译指南
+=======
     - [智能开发套件简介](rokidos-linux-docs/README.md)
    -K18平台相关
     - [k18 Dev3.31用户手册](rokidos-linux-docs/source/system_setting/Dev_3.31/13_ROKID_AI_Dev_Board_HW_UserGuide_v3.31.md)
@@ -46,11 +53,16 @@
     - [基本参数](rokidos-linux-docs/reference/dev_board/board_list.md)
     - [联网教程](rokidos-linux-docs/source/system_setting/connect_to_internet.md)
    - 编译指南
+>>>>>>> master
       - [A113](rokidos-linux-docs/reference/dev_board/amlogic/usermanual_a113.md)
       - [S905D](rokidos-linux-docs/reference/dev_board/amlogic/usermanual_s905d.md)
     - [刷机教程](rokidos-linux-docs/source/downloading_building/burn_image.md)
     - [自定义激活词配置](rokidos-linux-docs/source/system_setting/custom_activation.md)
+<<<<<<< HEAD
+  - [RokidOS](rokidos-linux-docs/source/getting_started/overview.md)
+=======
     - [RokidOS](rokidos-linux-docs/source/getting_started/overview.md)
+>>>>>>> master
     - 下载和构建
       - [概览](rokidos-linux-docs/source/downloading_building/requirements.md)
       - [搭建编译环境](rokidos-linux-docs/source/downloading_building/build_env.md)
@@ -125,6 +137,10 @@
     * [拦截器接口文档](3-ApiReference/rokid-interceptor.md)
     * 头部技能接入流程
       * [喜马拉雅技能接入流程](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/ximalaya.md) 
+<<<<<<< HEAD
+      * [叮当音乐技能接入流程](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/dingdangmusic.md) 
+=======
+>>>>>>> master
   * [技能开发工具简介](2-RokidDocument/1-SkillsKit/platform-introduction.md) 
   * 技能创建流程
     * [技能语音交互规范](2-RokidDocument/1-SkillsKit/rokid-voice-interaction-guidelines.md)  
@@ -211,6 +227,18 @@
     * [设备数据管理](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/data.md)
     * [聊天问答配置](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/chat.md) 
 
+<<<<<<< HEAD
+* 认证和上线
+  * 相关认证和sn导入
+    * [设备接口文档](3-ApiReference/open-device-manager.md)
+    * [产品创建和sn导入流程](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/rookie-guide-end.md)
+  * 工具
+    * [系统升级OTA](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/ota.md) 
+    * [设备数据管理](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/data.md)
+    * [聊天问答配置](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/chat.md) 
+
+=======
+>>>>>>> master
 * [服务协议](4-TermsAndAgreements/community-service-agreement.md)
 
 * [免责声明](4-TermsAndAgreements/community-disclaimer.md)
