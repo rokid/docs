@@ -1,3 +1,21 @@
+<!----- Conversion time: 1.242 seconds.
+
+
+Using this Markdown file:
+
+1. Cut and paste this output into your source file.
+2. See the notes and action items below regarding this conversion run.
+3. Check the rendered output (headings, lists, code blocks, tables) for proper
+   formatting and use a linkchecker before you publish this page.
+
+Conversion notes:
+
+* GD2md-html version 1.0β12
+* Mon Oct 01 2018 06:59:25 GMT-0700 (PDT)
+* Source doc: https://docs.google.com/open?id=1TMLe1x6TtPucHfD148havtVI9cKQTOCNS4bTTFegLWY
+----->
+
+
 
 # 智能家居接入 FAQ：
 
