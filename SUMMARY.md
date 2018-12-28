@@ -40,9 +40,8 @@
 
 *  智能硬件产品开发
 
-  - [智能开发套件简介](rokidos-linux-docs/README.md)
-   - K18平台相关
-    - [k18 Dev3.31用户手册](rokidos-linux-docs/Dev_3.31/13_ROKID_AI_Dev_Board_HW_UserGuide_v3.31.md)
+  - [k18芯片和开发板](rokidos-linux-docs/Dev_3.31/13_ROKID_AI_Dev_Board_HW_UserGuide_v3.31.md)
+  - [aMlogic开发套件](rokidos-linux-docs/README.md)
    - 开发套件使用手册
     - [基本参数](rokidos-linux-docs/reference/dev_board/board_list.md)
     - [联网教程](rokidos-linux-docs/source/system_setting/connect_to_internet.md)
