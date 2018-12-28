@@ -42,10 +42,10 @@
 
   - [k18芯片和开发板](rokidos-linux-docs/Dev_3.31/13_ROKID_AI_Dev_Board_HW_UserGuide_v3.31.md)
   - [Amlogic开发平台](rokidos-linux-docs/README.md)
-   - 开发套件使用手册
-    - [基本参数](rokidos-linux-docs/reference/dev_board/board_list.md)
-    - [联网教程](rokidos-linux-docs/source/system_setting/connect_to_internet.md)
-   - 编译指南
+    - 开发套件使用手册
+      - [基本参数](rokidos-linux-docs/reference/dev_board/board_list.md)
+      - [联网教程](rokidos-linux-docs/source/system_setting/connect_to_internet.md)
+    - 编译指南
       - [A113](rokidos-linux-docs/reference/dev_board/amlogic/usermanual_a113.md)
       - [S905D](rokidos-linux-docs/reference/dev_board/amlogic/usermanual_s905d.md)
     - [刷机教程](rokidos-linux-docs/source/downloading_building/burn_image.md)
