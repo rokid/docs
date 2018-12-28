@@ -39,16 +39,30 @@
       - [yimo](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/yimo/README.md)
 
 *  智能硬件产品开发
+<<<<<<< HEAD
   - [智能开发套件简介](rokidos-linux-docs/README.md)
   - 开发套件使用手册
     - [基本参数](rokidos-linux-docs/reference/dev_board/board_list.md)
     - [联网教程](rokidos-linux-docs/source/system_setting/connect_to_internet.md)
     - 编译指南
+=======
+    - [智能开发套件简介](rokidos-linux-docs/README.md)
+   -K18平台相关
+    - [k18 Dev3.31用户手册](rokidos-linux-docs/source/system_setting/Dev_3.31/13_ROKID_AI_Dev_Board_HW_UserGuide_v3.31.md)
+   - 开发套件使用手册
+    - [基本参数](rokidos-linux-docs/reference/dev_board/board_list.md)
+    - [联网教程](rokidos-linux-docs/source/system_setting/connect_to_internet.md)
+   - 编译指南
+>>>>>>> master
       - [A113](rokidos-linux-docs/reference/dev_board/amlogic/usermanual_a113.md)
       - [S905D](rokidos-linux-docs/reference/dev_board/amlogic/usermanual_s905d.md)
     - [刷机教程](rokidos-linux-docs/source/downloading_building/burn_image.md)
     - [自定义激活词配置](rokidos-linux-docs/source/system_setting/custom_activation.md)
+<<<<<<< HEAD
   - [RokidOS](rokidos-linux-docs/source/getting_started/overview.md)
+=======
+    - [RokidOS](rokidos-linux-docs/source/getting_started/overview.md)
+>>>>>>> master
     - 下载和构建
       - [概览](rokidos-linux-docs/source/downloading_building/requirements.md)
       - [搭建编译环境](rokidos-linux-docs/source/downloading_building/build_env.md)
@@ -123,7 +137,10 @@
     * [拦截器接口文档](3-ApiReference/rokid-interceptor.md)
     * 头部技能接入流程
       * [喜马拉雅技能接入流程](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/ximalaya.md) 
+<<<<<<< HEAD
       * [叮当音乐技能接入流程](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/dingdangmusic.md) 
+=======
+>>>>>>> master
   * [技能开发工具简介](2-RokidDocument/1-SkillsKit/platform-introduction.md) 
   * 技能创建流程
     * [技能语音交互规范](2-RokidDocument/1-SkillsKit/rokid-voice-interaction-guidelines.md)  
@@ -152,48 +169,54 @@
     * [基于 VS Code 的 Yeoman & 测试脚本](https://github.com/Rokid/generator-rokid/blob/master/generators/rfs)
     * [读取语音交互日志](2-RokidDocument/1-SkillsKit/test-skill-through-device-log.md)
 
-* Rokid 智能家居设备接入
-  * 平台介绍
-    * [平台简介](rokid-homebase-docs/README.md)
-    * [智能家居设备接入流程](rokid-homebase-docs/intro/flow.md)
-    * [语控引擎接入流程](rokid-homebase-docs/intro/sdk.md)
-  * 开发指南
-    * [云云对接](rokid-homebase-docs/connect/cloud-to-cloud.md)
-    * [局域网对接](rokid-homebase-docs/connect/via-lan.md)
-    * [FAQ](rokid-homebase-docs/faq.md)
-  * 如何调试
-    * [RHOME 桌面版调试工具](rokid-homebase-docs/tools/rhome-desktop.md)
-    * [自定义接入](rokid-homebase-docs/tools/developer-driver.md)
-  * 智能家居协议(v2)
-    * [技能授权](rokid-homebase-docs/connect/rfc6749.md)
-    * [消息格式参考](rokid-homebase-docs/v2/message-reference.md)
-    * 提供接口
-        * [搜索发现 Discovery](rokid-homebase-docs/v2/discovery.md)
-        * [终端控制 Control](rokid-homebase-docs/v2/control.md)
-    * 终端描述
-      * [终端](rokid-homebase-docs/v2/endpoint.md)
-      * [终端类型](rokid-homebase-docs/v2/endpoint-type.md)
-      * [终端能力与状态](rokid-homebase-docs/v2/rokid-interface.md)
-    * [当发生了错误](rokid-homebase-docs/v2/error-response.md)
-  * 智能家居 JSON RPC 协议
-    * [局域网自动发现](rokid-homebase-docs/connect/ssdp-auto-discovery.md)
-    * [JSON RPC 控制协议](rokid-homebase-docs/connect/json-rpc-over-tcp.md)
-  * 智能家居协议(v1)
-    * [HTTP 远程驱动](rokid-homebase-docs/connect/http-remote-driver.md)
-    * 设备描述
-      * [设备](rokid-homebase-docs/v1/device/device.md)
-      * [设备类型](rokid-homebase-docs/v1/device/type.md)
-      * [设备能力与状态](rokid-homebase-docs/v1/device/actions-and-state.md)
-      * [设备房间](rokid-homebase-docs/v1/device/room-name.md)
-      * [标准错误](rokid-homebase-docs/v1/errors.md)
-    * 如何调试
-      * [测试 Command 接口](rokid-homebase-docs/tools/oauth-test.md)
-    * 其他授权方式
-        * [Homebase OAuth 授权](rokid-homebase-docs/v1/oauth.md)
-        * [Homebase OAuth2.0 授权](rokid-homebase-docs/v1/OAuth2.0.md)
+* Rokid 智能家居
+  * [方案输出](smarthome/README.md)
+    * 行业解决方案
+        * [面向酒店](smarthome/hotel.md)
+        * [面向 ODM](smarthome/odm.md)
+    * [技能授权](smarthome/skills.md)
+    * [智能家居H5配置界面](smarthome/mobile-user-web-app.md)
+    * [智能家居开放接口](smarthome/open-api.md)
+    * [智能家居隐身接入](rokid-homebase-docs/intro/sdk.md)
         * [基于 JWT 签名的服务端授权](rokid-homebase-docs/connect/rfc7519.md)
-  * 高级功能
-    * [Webhook](rokid-homebase-docs/webhook/index.md)
+  * [智能家居设备接入](rokid-homebase-docs/README.md)
+    * [智能家居设备接入流程](rokid-homebase-docs/intro/flow.md)
+    * 开发指南
+        * [云云对接](rokid-homebase-docs/connect/cloud-to-cloud.md)
+        * [局域网对接](rokid-homebase-docs/connect/via-lan.md)
+        * [RHOME 桌面版调试工具](rokid-homebase-docs/tools/rhome-desktop.md)
+        * [自定义接入](rokid-homebase-docs/tools/developer-driver.md)
+        * [FAQ](rokid-homebase-docs/faq.md)
+    * 智能家居协议(v2)
+        * [技能授权](rokid-homebase-docs/connect/rfc6749.md)
+        * [消息格式参考](rokid-homebase-docs/v2/message-reference.md)
+        * 提供接口
+            * [搜索发现 Discovery](rokid-homebase-docs/v2/discovery.md)
+            * [终端控制 Control](rokid-homebase-docs/v2/control.md)
+        * 终端描述
+        * [终端](rokid-homebase-docs/v2/endpoint.md)
+        * [终端类型](rokid-homebase-docs/v2/endpoint-type.md)
+        * [终端能力与状态](rokid-homebase-docs/v2/rokid-interface.md)
+        * [当发生了错误](rokid-homebase-docs/v2/error-response.md)
+        * [设备房间](rokid-homebase-docs/v1/device/room-name.md)
+    * 智能家居 JSON RPC 协议
+        * [局域网自动发现](rokid-homebase-docs/connect/ssdp-auto-discovery.md)
+        * [JSON RPC 控制协议](rokid-homebase-docs/connect/json-rpc-over-tcp.md)
+    * 智能家居协议(v1)
+        * [HTTP 远程驱动](rokid-homebase-docs/connect/http-remote-driver.md)
+        * 设备描述
+        * [设备](rokid-homebase-docs/v1/device/device.md)
+        * [设备类型](rokid-homebase-docs/v1/device/type.md)
+        * [设备能力与状态](rokid-homebase-docs/v1/device/actions-and-state.md)
+        
+        * [标准错误](rokid-homebase-docs/v1/errors.md)
+        * 如何调试
+        * [测试 Command 接口](rokid-homebase-docs/tools/oauth-test.md)
+        * 其他授权方式
+            * [Homebase OAuth 授权](rokid-homebase-docs/v1/oauth.md)
+            * [Homebase OAuth2.0 授权](rokid-homebase-docs/v1/OAuth2.0.md)
+    * 高级功能
+        * [Webhook](rokid-homebase-docs/webhook/index.md)
 
 * 认证和上线
   * 相关认证和sn导入
@@ -204,6 +227,18 @@
     * [设备数据管理](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/data.md)
     * [聊天问答配置](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/chat.md) 
 
+<<<<<<< HEAD
+* 认证和上线
+  * 相关认证和sn导入
+    * [设备接口文档](3-ApiReference/open-device-manager.md)
+    * [产品创建和sn导入流程](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/rookie-guide-end.md)
+  * 工具
+    * [系统升级OTA](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/ota.md) 
+    * [设备数据管理](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/data.md)
+    * [聊天问答配置](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/chat.md) 
+
+=======
+>>>>>>> master
 * [服务协议](4-TermsAndAgreements/community-service-agreement.md)
 
 * [免责声明](4-TermsAndAgreements/community-disclaimer.md)
