@@ -41,47 +41,6 @@
 *  智能硬件产品开发
 
   - [k18芯片和开发板](rokidos-linux-docs/Dev_3.31/13_ROKID_AI_Dev_Board_HW_UserGuide_v3.31.md)
-  - [Amlogic开发平台](rokidos-linux-docs/README.md)
-    - 开发套件使用手册
-      - [基本参数](rokidos-linux-docs/reference/dev_board/board_list.md)
-      - [联网教程](rokidos-linux-docs/source/system_setting/connect_to_internet.md)
-    - 编译指南
-      - [A113](rokidos-linux-docs/reference/dev_board/amlogic/usermanual_a113.md)
-      - [S905D](rokidos-linux-docs/reference/dev_board/amlogic/usermanual_s905d.md)
-    - [刷机教程](rokidos-linux-docs/source/downloading_building/burn_image.md)
-    - [自定义激活词配置](rokidos-linux-docs/source/system_setting/custom_activation.md)
-  - [RokidOS](rokidos-linux-docs/source/getting_started/overview.md)
-    - 下载和构建
-      - [概览](rokidos-linux-docs/source/downloading_building/requirements.md)
-      - [搭建编译环境](rokidos-linux-docs/source/downloading_building/build_env.md)
-      - [下载源代码](rokidos-linux-docs/source/downloading_building/downloading_codes.md)
-      - [准备构建](rokidos-linux-docs/source/downloading_building/building.md)
-    - [设备使用](rokidos-linux-docs/source/system_setting/overview.md)
-      - [语音接入配置](rokidos-linux-docs/source/system_setting/openvoice_access_config.md)
-    - [设备调试](rokidos-linux-docs/source/develop_debugging/debugging.md)
-    - [系统移植](rokidos-linux-docs/porting/overview.md)
-      - 音频
-        - [概览](rokidos-linux-docs/porting/audio/overview.md)
-        - [术语](rokidos-linux-docs/porting/audio/terminology.md)
-      - [开机动画](rokidos-linux-docs/porting/bootanim/bootanim.md)
-      - [WiFi](rokidos-linux-docs/porting/wifi/wifi.md)
-      - [系统升级](rokidos-linux-docs/porting/upgrade/upgrade.md)
-      - [蓝牙服务](rokidos-linux-docs/porting/bluetooth/bluetooth.md)
-    - [应用开发](rokidos-linux-docs/development/overview.md)
-      - [Node.js](rokidos-linux-docs/development/tutorial-nodejs.md)
-      - [C/C++](docs/rokidos-linux-docs/development/tutorial-cplusplus.md)
-        - [语音合成](rokidos-linux-docs/development/cplusplus/tts.md)
-        - [音量控制](rokidos-linux-docs/development/cplusplus/volume_ctrl.md)
-        - [多媒体播放](rokidos-linux-docs/development/cplusplus/mediaplayer.md)
-        - [灯光效果](rokidos-linux-docs/development/cplusplus/lumenflinger.md)
-        - [WiFi控制](rokidos-linux-docs/development/cplusplus/wpa_ctrl.md)
-        - [输入服务](rokidos-linux-docs/development/cplusplus/inputflinger.md)
-        - [电量查询](rokidos-linux-docs/development/cplusplus/power_ctrl.md)
-        - [系统升级](rokidos-linux-docs/development/cplusplus/upgrade.md)
-        - [蓝牙](rokidos-linux-docs/development/cplusplus/btflinger.md)
-  - 硬件设计参考方案
-    - [Rokid 语音产品硬件设计指南](2-RokidDocument/2-EnableVoice/rokid-hardware-design-guide.md)
-    - [Rokid 硬件交互设计指南](2-RokidDocument/2-EnableVoice/rokid-hardware-ux-design-guidelines.md)
   - bsp/驱动开发指南
     - [Rokid Kamino18 Universal Install Guide V2.4](7-bspguide/README.md)
     - [概述](7-bspguide/gai_shu/README.md)
@@ -110,6 +69,48 @@
     - [SN与Seed烧写](7-bspguide/snyu_seed_shao_xie.md)
     - [配网验证](7-bspguide/pei_wang_yan_zheng/README.md)
       - [BT配网](7-bspguide/pei_wang_yan_zheng/btpei_wang.md)
+ 
+  - [Amlogic开发平台](rokidos-linux-docs/README.md)
+    - 开发套件使用手册
+      - [基本参数](rokidos-linux-docs/reference/dev_board/board_list.md)
+      - [联网教程](rokidos-linux-docs/source/system_setting/connect_to_internet.md)
+    - 编译指南
+      - [A113](rokidos-linux-docs/reference/dev_board/amlogic/usermanual_a113.md)
+      - [S905D](rokidos-linux-docs/reference/dev_board/amlogic/usermanual_s905d.md)
+    - [刷机教程](rokidos-linux-docs/source/downloading_building/burn_image.md)
+    - [自定义激活词配置](rokidos-linux-docs/source/system_setting/custom_activation.md)
+    - [RokidOS](rokidos-linux-docs/source/getting_started/overview.md)
+      - 下载和构建
+        - [概览](rokidos-linux-docs/source/downloading_building/requirements.md)
+        - [搭建编译环境](rokidos-linux-docs/source/downloading_building/build_env.md)
+        - [下载源代码](rokidos-linux-docs/source/downloading_building/downloading_codes.md)
+        - [准备构建](rokidos-linux-docs/source/downloading_building/building.md)
+      - [设备使用](rokidos-linux-docs/source/system_setting/overview.md)
+        - [语音接入配置](rokidos-linux-docs/source/system_setting/openvoice_access_config.md)
+      - [设备调试](rokidos-linux-docs/source/develop_debugging/debugging.md)
+      - [系统移植](rokidos-linux-docs/porting/overview.md)
+        - 音频
+          - [概览](rokidos-linux-docs/porting/audio/overview.md)
+          - [术语](rokidos-linux-docs/porting/audio/terminology.md)
+        - [开机动画](rokidos-linux-docs/porting/bootanim/bootanim.md)
+        - [WiFi](rokidos-linux-docs/porting/wifi/wifi.md)
+        - [系统升级](rokidos-linux-docs/porting/upgrade/upgrade.md)
+        - [蓝牙服务](rokidos-linux-docs/porting/bluetooth/bluetooth.md)
+      - [应用开发](rokidos-linux-docs/development/overview.md)
+        - [Node.js](rokidos-linux-docs/development/tutorial-nodejs.md)
+        - [C/C++](docs/rokidos-linux-docs/development/tutorial-cplusplus.md)
+          - [语音合成](rokidos-linux-docs/development/cplusplus/tts.md)
+          - [音量控制](rokidos-linux-docs/development/cplusplus/volume_ctrl.md)
+          - [多媒体播放](rokidos-linux-docs/development/cplusplus/mediaplayer.md)
+          - [灯光效果](rokidos-linux-docs/development/cplusplus/lumenflinger.md)
+          - [WiFi控制](rokidos-linux-docs/development/cplusplus/wpa_ctrl.md)
+          - [输入服务](rokidos-linux-docs/development/cplusplus/inputflinger.md)
+          - [电量查询](rokidos-linux-docs/development/cplusplus/power_ctrl.md)
+          - [系统升级](rokidos-linux-docs/development/cplusplus/upgrade.md)
+          - [蓝牙](rokidos-linux-docs/development/cplusplus/btflinger.md)
+  - 硬件设计参考方案
+    - [Rokid 语音产品硬件设计指南](2-RokidDocument/2-EnableVoice/rokid-hardware-design-guide.md)
+    - [Rokid 硬件交互设计指南](2-RokidDocument/2-EnableVoice/rokid-hardware-ux-design-guidelines.md)
 
 * App
 
