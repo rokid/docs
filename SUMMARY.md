@@ -39,7 +39,8 @@
       - [yimo](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/yimo/README.md)
 
 *  智能硬件产品开发
-    - [智能开发套件简介](rokidos-linux-docs/README.md)
+
+  - [智能开发套件简介](rokidos-linux-docs/README.md)
    -K18平台相关
     - [k18 Dev3.31用户手册](rokidos-linux-docs/source/system_setting/Dev_3.31/13_ROKID_AI_Dev_Board_HW_UserGuide_v3.31.md)
    - 开发套件使用手册
@@ -50,7 +51,7 @@
       - [S905D](rokidos-linux-docs/reference/dev_board/amlogic/usermanual_s905d.md)
     - [刷机教程](rokidos-linux-docs/source/downloading_building/burn_image.md)
     - [自定义激活词配置](rokidos-linux-docs/source/system_setting/custom_activation.md)
-    - [RokidOS](rokidos-linux-docs/source/getting_started/overview.md)
+  - [RokidOS](rokidos-linux-docs/source/getting_started/overview.md)
     - 下载和构建
       - [概览](rokidos-linux-docs/source/downloading_building/requirements.md)
       - [搭建编译环境](rokidos-linux-docs/source/downloading_building/build_env.md)
@@ -125,6 +126,7 @@
     * [拦截器接口文档](3-ApiReference/rokid-interceptor.md)
     * 头部技能接入流程
       * [喜马拉雅技能接入流程](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/ximalaya.md) 
+      * [叮当音乐技能接入流程](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/dingdangmusic.md) 
   * [技能开发工具简介](2-RokidDocument/1-SkillsKit/platform-introduction.md) 
   * 技能创建流程
     * [技能语音交互规范](2-RokidDocument/1-SkillsKit/rokid-voice-interaction-guidelines.md)  
