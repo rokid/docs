@@ -39,7 +39,6 @@
       - [yimo](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/yimo/README.md)
 
 *  智能硬件产品开发
-
   - [k18芯片和开发板](rokidos-linux-docs/Dev_3.31/13_ROKID_AI_Dev_Board_HW_UserGuide_v3.31.md)
   - bsp/驱动开发指南
     - [Rokid Kamino18 Universal Install Guide V2.4](7-bspguide/README.md)
