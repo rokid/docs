@@ -205,6 +205,7 @@
             * [Homebase OAuth2.0 授权](rokid-homebase-docs/v1/OAuth2.0.md)
     * 高级功能
         * [Webhook](rokid-homebase-docs/webhook/index.md)
+
 * 认证和上线
   * 相关认证和sn导入
     * [设备接口文档](3-ApiReference/open-device-manager.md)
