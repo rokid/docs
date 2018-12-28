@@ -12,11 +12,11 @@
 #### 1.1 叮当音乐skill内容介绍
 
 <table><tbody>
-<tr style="font-weight:bold">  <td style="width: 100px">技能名称</td>  <td style="width: 180px">介绍</td>  <td style="width: 180px">价格</td> <<td style="width: 180px">>头部内容</td><td>内容数量</td></tr>
+<tr style="font-weight:bold">  <td style="width: 100px">技能名称</td>  <td style="width: 180px">介绍</td>  <td style="width: 180px">价格</td> <td style="width: 180px">>头部内容</td><td>内容数量</td></tr>
 <tr>  <td>叮当音乐</td>  <td>容来自腾讯QQ音乐，API方式接入，需要和腾讯叮当进行商务合作</td>  <td>15元／台／年以上</td> <td>歌手：周杰伦、陈奕迅、王菲、张学友、刘德华、林俊杰、李荣浩、邓紫棋、艾伦.沃克、张杰、杨宗纬、李宇春、陈粒、赵雷、张靓颖、吴亦凡、金志文、胡彦斌、TFboys、胡66、华晨宇、周笔畅等
 歌单&专辑：抖音神曲、中国好声音、中国新说唱、明日之子等</td> <td>歌曲数1700W
 腾讯QQ音乐音箱端版权所有歌曲</td> </tr>
-
+</tbody></table>
 
 #### 1.2 叮当音乐skill功能列表
 
