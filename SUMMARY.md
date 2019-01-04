@@ -117,7 +117,7 @@
   * 授权和配置
     * [技能配置](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/skillstore.md) 
     * [拦截器接口文档](3-ApiReference/rokid-interceptor.md)
-    * 头部技能接入流程
+  * 头部技能接入流程
       * [喜马拉雅技能接入流程](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/ximalaya.md) 
       * [叮当音乐技能接入流程](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/dingdangmusic.md) 
   * [技能开发工具简介](2-RokidDocument/1-SkillsKit/platform-introduction.md) 

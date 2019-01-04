@@ -228,12 +228,11 @@
 #### 3.2 若琪开放平台授权喜马拉雅相关 skill
 
 联系对应的Rokid商务，操作技能授权，并将在喜马拉雅开放平台创建的应用，获取的 App Key 和 App Secret，填写到rokid 开放平台技能配置处。
-
    ![](images/ximalaya1.jpg)
-   ![](images/ximalaya2.jpg)
+   ![](images/ximalaya12.png)
 
 由 Rokid 生成 oauth 回调地址，合作方在喜马拉雅开放平台填入回调地址。
-   ![](images/ximalyaurl.jpg)
+   ![](images/ximalaya34.png)
 
 备注：完成以上两个步骤时，音箱可实现了正常的语音点播功能。
 
