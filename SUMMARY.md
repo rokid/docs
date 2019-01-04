@@ -124,7 +124,7 @@
   * 授权和配置
     * [技能配置](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/skillstore.md) 
     * [拦截器接口文档](3-ApiReference/rokid-interceptor.md)
-    * 头部技能接入流程
+  * 头部技能接入流程
       * [喜马拉雅技能接入流程](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/ximalaya.md) 
       * [叮当音乐技能接入流程](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/dingdangmusic.md) 
   * [技能开发工具简介](2-RokidDocument/1-SkillsKit/platform-introduction.md) 
@@ -154,15 +154,13 @@
     * [技能开发 Java 版指南](https://github.com/Rokid/rokid-skill-sample/tree/master/rokid-skill-sample-java)
     * [基于 VS Code 的 Yeoman & 测试脚本](https://github.com/Rokid/generator-rokid/blob/master/generators/rfs)
     * [读取语音交互日志](2-RokidDocument/1-SkillsKit/test-skill-through-device-log.md)
-
 * Rokid 智能家居
   * [方案输出](smarthome/README.md)
     * 行业解决方案
         * [面向酒店](smarthome/hotel.md)
         * [面向 ODM](smarthome/odm.md)
     * [技能授权](smarthome/skills.md)
-    * [智能家居H5配置界面](smarthome/mobile-user-web-app.md)
-    * [智能家居开放接口](smarthome/open-api.md)
+    * [智能家居H5配置界面](smarthome/mobile-user-app.md)
     * [智能家居隐身接入](rokid-homebase-docs/intro/sdk.md)
         * [基于 JWT 签名的服务端授权](rokid-homebase-docs/connect/rfc7519.md)
   * [智能家居设备接入](rokid-homebase-docs/README.md)
