@@ -4,7 +4,6 @@
   - [Rokid 开放平台](README.md)
   - [语音整体方案简介](5-enableVoice/rokid-vsvy-sdk-docs/introduction.md)
   - [YodaOS(推荐)](https://yodaos-project.github.io/yoda-book/)
-
 * 语音接入
   - 能力介绍
     - [Rokid 语音识别](6-asrandtts/asr.md)
@@ -37,52 +36,8 @@
       - [volctl](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/vol_ctrl/10_模块简介/15_volctl.md)
       - [display](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/display/10_模块简介/20_display.md)
       - [yimo](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/yimo/README.md)
-
 *  智能硬件产品开发
-
-  - [智能开发套件简介](rokidos-linux-docs/README.md)
-   -K18平台相关
-    - [k18 Dev3.31用户手册](rokidos-linux-docs/source/system_setting/Dev_3.31/13_ROKID_AI_Dev_Board_HW_UserGuide_v3.31.md)
-   - 开发套件使用手册
-    - [基本参数](rokidos-linux-docs/reference/dev_board/board_list.md)
-    - [联网教程](rokidos-linux-docs/source/system_setting/connect_to_internet.md)
-   - 编译指南
-      - [A113](rokidos-linux-docs/reference/dev_board/amlogic/usermanual_a113.md)
-      - [S905D](rokidos-linux-docs/reference/dev_board/amlogic/usermanual_s905d.md)
-    - [刷机教程](rokidos-linux-docs/source/downloading_building/burn_image.md)
-    - [自定义激活词配置](rokidos-linux-docs/source/system_setting/custom_activation.md)
-  - [RokidOS](rokidos-linux-docs/source/getting_started/overview.md)
-    - 下载和构建
-      - [概览](rokidos-linux-docs/source/downloading_building/requirements.md)
-      - [搭建编译环境](rokidos-linux-docs/source/downloading_building/build_env.md)
-      - [下载源代码](rokidos-linux-docs/source/downloading_building/downloading_codes.md)
-      - [准备构建](rokidos-linux-docs/source/downloading_building/building.md)
-    - [设备使用](rokidos-linux-docs/source/system_setting/overview.md)
-      - [语音接入配置](rokidos-linux-docs/source/system_setting/openvoice_access_config.md)
-    - [设备调试](rokidos-linux-docs/source/develop_debugging/debugging.md)
-    - [系统移植](rokidos-linux-docs/porting/overview.md)
-      - 音频
-        - [概览](rokidos-linux-docs/porting/audio/overview.md)
-        - [术语](rokidos-linux-docs/porting/audio/terminology.md)
-      - [开机动画](rokidos-linux-docs/porting/bootanim/bootanim.md)
-      - [WiFi](rokidos-linux-docs/porting/wifi/wifi.md)
-      - [系统升级](rokidos-linux-docs/porting/upgrade/upgrade.md)
-      - [蓝牙服务](rokidos-linux-docs/porting/bluetooth/bluetooth.md)
-    - [应用开发](rokidos-linux-docs/development/overview.md)
-      - [Node.js](rokidos-linux-docs/development/tutorial-nodejs.md)
-      - [C/C++](docs/rokidos-linux-docs/development/tutorial-cplusplus.md)
-        - [语音合成](rokidos-linux-docs/development/cplusplus/tts.md)
-        - [音量控制](rokidos-linux-docs/development/cplusplus/volume_ctrl.md)
-        - [多媒体播放](rokidos-linux-docs/development/cplusplus/mediaplayer.md)
-        - [灯光效果](rokidos-linux-docs/development/cplusplus/lumenflinger.md)
-        - [WiFi控制](rokidos-linux-docs/development/cplusplus/wpa_ctrl.md)
-        - [输入服务](rokidos-linux-docs/development/cplusplus/inputflinger.md)
-        - [电量查询](rokidos-linux-docs/development/cplusplus/power_ctrl.md)
-        - [系统升级](rokidos-linux-docs/development/cplusplus/upgrade.md)
-        - [蓝牙](rokidos-linux-docs/development/cplusplus/btflinger.md)
-  - 硬件设计参考方案
-    - [Rokid 语音产品硬件设计指南](2-RokidDocument/2-EnableVoice/rokid-hardware-design-guide.md)
-    - [Rokid 硬件交互设计指南](2-RokidDocument/2-EnableVoice/rokid-hardware-ux-design-guidelines.md)
+  - [k18芯片和开发板](rokidos-linux-docs/Dev_3.31/13_ROKID_AI_Dev_Board_HW_UserGuide_v3.31.md)
   - bsp/驱动开发指南
     - [Rokid Kamino18 Universal Install Guide V2.4](7-bspguide/README.md)
     - [概述](7-bspguide/gai_shu/README.md)
@@ -111,15 +66,53 @@
     - [SN与Seed烧写](7-bspguide/snyu_seed_shao_xie.md)
     - [配网验证](7-bspguide/pei_wang_yan_zheng/README.md)
       - [BT配网](7-bspguide/pei_wang_yan_zheng/btpei_wang.md)
-
+  - [Amlogic开发平台](rokidos-linux-docs/README.md)
+    - 开发套件使用手册
+      - [基本参数](rokidos-linux-docs/reference/dev_board/board_list.md)
+      - [联网教程](rokidos-linux-docs/source/system_setting/connect_to_internet.md)
+    - 编译指南
+      - [A113](rokidos-linux-docs/reference/dev_board/amlogic/usermanual_a113.md)
+      - [S905D](rokidos-linux-docs/reference/dev_board/amlogic/usermanual_s905d.md)
+    - [刷机教程](rokidos-linux-docs/source/downloading_building/burn_image.md)
+    - [自定义激活词配置](rokidos-linux-docs/source/system_setting/custom_activation.md)
+    - [RokidOS](rokidos-linux-docs/source/getting_started/overview.md)
+      - 下载和构建
+        - [概览](rokidos-linux-docs/source/downloading_building/requirements.md)
+        - [搭建编译环境](rokidos-linux-docs/source/downloading_building/build_env.md)
+        - [下载源代码](rokidos-linux-docs/source/downloading_building/downloading_codes.md)
+        - [准备构建](rokidos-linux-docs/source/downloading_building/building.md)
+      - [设备使用](rokidos-linux-docs/source/system_setting/overview.md)
+        - [语音接入配置](rokidos-linux-docs/source/system_setting/openvoice_access_config.md)
+      - [设备调试](rokidos-linux-docs/source/develop_debugging/debugging.md)
+      - [系统移植](rokidos-linux-docs/porting/overview.md)
+        - 音频
+          - [概览](rokidos-linux-docs/porting/audio/overview.md)
+          - [术语](rokidos-linux-docs/porting/audio/terminology.md)
+        - [开机动画](rokidos-linux-docs/porting/bootanim/bootanim.md)
+        - [WiFi](rokidos-linux-docs/porting/wifi/wifi.md)
+        - [系统升级](rokidos-linux-docs/porting/upgrade/upgrade.md)
+        - [蓝牙服务](rokidos-linux-docs/porting/bluetooth/bluetooth.md)
+      - [应用开发](rokidos-linux-docs/development/overview.md)
+        - [Node.js](rokidos-linux-docs/development/tutorial-nodejs.md)
+        - [C/C++](docs/rokidos-linux-docs/development/tutorial-cplusplus.md)
+          - [语音合成](rokidos-linux-docs/development/cplusplus/tts.md)
+          - [音量控制](rokidos-linux-docs/development/cplusplus/volume_ctrl.md)
+          - [多媒体播放](rokidos-linux-docs/development/cplusplus/mediaplayer.md)
+          - [灯光效果](rokidos-linux-docs/development/cplusplus/lumenflinger.md)
+          - [WiFi控制](rokidos-linux-docs/development/cplusplus/wpa_ctrl.md)
+          - [输入服务](rokidos-linux-docs/development/cplusplus/inputflinger.md)
+          - [电量查询](rokidos-linux-docs/development/cplusplus/power_ctrl.md)
+          - [系统升级](rokidos-linux-docs/development/cplusplus/upgrade.md)
+          - [蓝牙](rokidos-linux-docs/development/cplusplus/btflinger.md)
+  - 硬件设计参考方案
+    - [Rokid 语音产品硬件设计指南](2-RokidDocument/2-EnableVoice/rokid-hardware-design-guide.md)
+    - [Rokid 硬件交互设计指南](2-RokidDocument/2-EnableVoice/rokid-hardware-ux-design-guidelines.md)
 * App
-
   * Mobile SDK 接入文档
     * [Mobile SDK 简介](5-enableVoice/rokid-vsvy-sdk-docs/mobliesdk/SDK.md)
     * [Rokid Moblie Android SDK](https://rokid.github.io/mobile-sdk-android-docs/)
     * [Rokid Moblie ios SDK](https://rokid.github.io/mobile-sdk-ios-docs/)
   * [公版app配置说明](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/gongban.md) 
-
 * 技能接入
   * 授权和配置
     * [技能配置](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/skillstore.md) 
@@ -154,54 +147,54 @@
     * [技能开发 Java 版指南](https://github.com/Rokid/rokid-skill-sample/tree/master/rokid-skill-sample-java)
     * [基于 VS Code 的 Yeoman & 测试脚本](https://github.com/Rokid/generator-rokid/blob/master/generators/rfs)
     * [读取语音交互日志](2-RokidDocument/1-SkillsKit/test-skill-through-device-log.md)
+
 * Rokid 智能家居
   * [方案输出](smarthome/README.md)
     * 行业解决方案
-        * [面向酒店](smarthome/hotel.md)
-        * [面向 ODM](smarthome/odm.md)
+      * [面向酒店](smarthome/hotel.md)
+      * [面向 ODM](smarthome/odm.md)
     * [技能授权](smarthome/skills.md)
     * [智能家居H5配置界面](smarthome/mobile-user-app.md)
+    * [智能家居开放接口](smarthome/open-api.md)
     * [智能家居隐身接入](rokid-homebase-docs/intro/sdk.md)
-        * [基于 JWT 签名的服务端授权](rokid-homebase-docs/connect/rfc7519.md)
+      * [基于 JWT 签名的服务端授权](rokid-homebase-docs/connect/rfc7519.md)
   * [智能家居设备接入](rokid-homebase-docs/README.md)
     * [智能家居设备接入流程](rokid-homebase-docs/intro/flow.md)
     * 开发指南
-        * [云云对接](rokid-homebase-docs/connect/cloud-to-cloud.md)
-        * [局域网对接](rokid-homebase-docs/connect/via-lan.md)
-        * [RHOME 桌面版调试工具](rokid-homebase-docs/tools/rhome-desktop.md)
-        * [自定义接入](rokid-homebase-docs/tools/developer-driver.md)
-        * [FAQ](rokid-homebase-docs/faq.md)
+      * [云云对接](rokid-homebase-docs/connect/cloud-to-cloud.md)
+      * [局域网对接](rokid-homebase-docs/connect/via-lan.md)
+      * [RHOME 桌面版调试工具](rokid-homebase-docs/tools/rhome-desktop.md)
+      * [自定义接入](rokid-homebase-docs/tools/developer-driver.md)
+      * [FAQ](rokid-homebase-docs/faq.md)
     * 智能家居协议(v2)
-        * [技能授权](rokid-homebase-docs/connect/rfc6749.md)
-        * [消息格式参考](rokid-homebase-docs/v2/message-reference.md)
-        * 提供接口
-            * [搜索发现 Discovery](rokid-homebase-docs/v2/discovery.md)
-            * [终端控制 Control](rokid-homebase-docs/v2/control.md)
-        * 终端描述
+      * [技能授权](rokid-homebase-docs/connect/rfc6749.md)
+      * [消息格式参考](rokid-homebase-docs/v2/message-reference.md)
+      * 提供接口
+        * [搜索发现 Discovery](rokid-homebase-docs/v2/discovery.md)
+        * [终端控制 Control](rokid-homebase-docs/v2/control.md)
+      * 终端描述
         * [终端](rokid-homebase-docs/v2/endpoint.md)
         * [终端类型](rokid-homebase-docs/v2/endpoint-type.md)
         * [终端能力与状态](rokid-homebase-docs/v2/rokid-interface.md)
         * [当发生了错误](rokid-homebase-docs/v2/error-response.md)
         * [设备房间](rokid-homebase-docs/v1/device/room-name.md)
     * 智能家居 JSON RPC 协议
-        * [局域网自动发现](rokid-homebase-docs/connect/ssdp-auto-discovery.md)
-        * [JSON RPC 控制协议](rokid-homebase-docs/connect/json-rpc-over-tcp.md)
+      * [局域网自动发现](rokid-homebase-docs/connect/ssdp-auto-discovery.md)
+      * [JSON RPC 控制协议](rokid-homebase-docs/connect/json-rpc-over-tcp.md)
     * 智能家居协议(v1)
-        * [HTTP 远程驱动](rokid-homebase-docs/connect/http-remote-driver.md)
-        * 设备描述
+      * [HTTP 远程驱动](rokid-homebase-docs/connect/http-remote-driver.md)
+      * 设备描述
         * [设备](rokid-homebase-docs/v1/device/device.md)
         * [设备类型](rokid-homebase-docs/v1/device/type.md)
         * [设备能力与状态](rokid-homebase-docs/v1/device/actions-and-state.md)
-        
         * [标准错误](rokid-homebase-docs/v1/errors.md)
-        * 如何调试
+      * 如何调试
         * [测试 Command 接口](rokid-homebase-docs/tools/oauth-test.md)
-        * 其他授权方式
-            * [Homebase OAuth 授权](rokid-homebase-docs/v1/oauth.md)
-            * [Homebase OAuth2.0 授权](rokid-homebase-docs/v1/OAuth2.0.md)
+      * 其他授权方式
+        * [Homebase OAuth 授权](rokid-homebase-docs/v1/oauth.md)
+        * [Homebase OAuth2.0 授权](rokid-homebase-docs/v1/OAuth2.0.md)
     * 高级功能
-        * [Webhook](rokid-homebase-docs/webhook/index.md)
-
+      * [Webhook](rokid-homebase-docs/webhook/index.md)
 * 认证和上线
   * 相关认证和sn导入
     * [设备接口文档](3-ApiReference/open-device-manager.md)
@@ -210,11 +203,7 @@
     * [系统升级OTA](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/ota.md) 
     * [设备数据管理](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/data.md)
     * [聊天问答配置](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/chat.md) 
-
 * [服务协议](4-TermsAndAgreements/community-service-agreement.md)
-
 * [免责声明](4-TermsAndAgreements/community-disclaimer.md)
-
 * [联系我们](contact-us.md)
-
 * [Rokid 讨论区](https://developer-forum.rokid.com)
