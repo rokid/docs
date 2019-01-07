@@ -4,7 +4,7 @@
   - [Rokid 开放平台](README.md)
   - [语音整体方案简介](5-enableVoice/rokid-vsvy-sdk-docs/introduction.md)
   - [YodaOS(推荐)](https://yodaos-project.github.io/yoda-book/)
-* 语音接入
+* 语音接入和系统
   - 能力介绍
     - [Rokid 语音识别](6-asrandtts/asr.md)
     - [Rokid 语音合成](6-asrandtts/tts.md)
@@ -128,11 +128,11 @@
         * [confirm](2-RokidDocument/1-SkillsKit/important-concept/confirm.md)
         * [session](2-RokidDocument/1-SkillsKit/important-concept/session.md)
         * [NLP 正则表达式](2-RokidDocument/1-SkillsKit/important-concept/regular-expression.md)
-        * [开发流程](2-RokidDocument/1-SkillsKit/getting-started/creat.md)
-        * [自定义功能](2-RokidDocument/1-SkillsKit/more-fuction.md)  
-        * 技能审核和上线规范
-           * [技能发布标准](4-TermsAndAgreements/rokid-skill-release-standard.md)
-           * [技能审核规范](4-TermsAndAgreements/rokid-skill-examine-and-verify-standard.md)
+    * [开发流程](2-RokidDocument/1-SkillsKit/getting-started/creat.md)
+    * [自定义功能](2-RokidDocument/1-SkillsKit/more-fuction.md)  
+    * 技能审核和上线规范
+        * [技能发布标准](4-TermsAndAgreements/rokid-skill-release-standard.md)
+        * [技能审核规范](4-TermsAndAgreements/rokid-skill-examine-and-verify-standard.md)
   * 云端技能协议
     * [Rokid 云端技能协议](2-RokidDocument/1-SkillsKit/important-concept/cloud-app-development-protocol_cn.md)
   * 技能开发指南
@@ -201,7 +201,10 @@
     * [系统升级OTA](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/ota.md) 
     * [设备数据管理](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/data.md)
     * [聊天问答配置](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/chat.md) 
-* [服务协议](4-TermsAndAgreements/community-service-agreement.md)
-* [免责声明](4-TermsAndAgreements/community-disclaimer.md)
-* [联系我们](contact-us.md)
-* [Rokid 讨论区](https://developer-forum.rokid.com)
+* 帮助与反馈
+    * [Rokid讨论区](https://developer-forum.rokid.com/tags/文档)
+    <!-- * [常见问题](contact-us.md) -->
+    * [联系我们](contact-us.md)
+* 服务协议和免责
+    * [服务协议](4-TermsAndAgreements/community-service-agreement.md)
+    * [免责声明](4-TermsAndAgreements/community-disclaimer.md)
