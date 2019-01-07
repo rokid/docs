@@ -4,7 +4,7 @@
   - [Rokid 开放平台](README.md)
   - [语音整体方案简介](5-enableVoice/rokid-vsvy-sdk-docs/introduction.md)
   - [YodaOS(推荐)](https://yodaos-project.github.io/yoda-book/)
-* 语音接入
+* 语音接入和系统
   - 能力介绍
     - [Rokid 语音识别](6-asrandtts/asr.md)
     - [Rokid 语音合成](6-asrandtts/tts.md)
@@ -203,7 +203,10 @@
     * [系统升级OTA](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/ota.md) 
     * [设备数据管理](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/data.md)
     * [聊天问答配置](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/chat.md) 
-* [服务协议](4-TermsAndAgreements/community-service-agreement.md)
-* [免责声明](4-TermsAndAgreements/community-disclaimer.md)
-* [联系我们](contact-us.md)
-* [Rokid 讨论区](https://developer-forum.rokid.com)
+* 帮助与反馈
+    * [Rokid讨论区](https://developer-forum.rokid.com/tags/文档)
+    <!-- * [常见问题](contact-us.md) -->
+    * [联系我们](contact-us.md)
+* 服务协议和免责
+    * [服务协议](4-TermsAndAgreements/community-service-agreement.md)
+    * [免责声明](4-TermsAndAgreements/community-disclaimer.md)
