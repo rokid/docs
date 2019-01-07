@@ -130,11 +130,11 @@
         * [confirm](2-RokidDocument/1-SkillsKit/important-concept/confirm.md)
         * [session](2-RokidDocument/1-SkillsKit/important-concept/session.md)
         * [NLP 正则表达式](2-RokidDocument/1-SkillsKit/important-concept/regular-expression.md)
-        * [开发流程](2-RokidDocument/1-SkillsKit/getting-started/creat.md)
-        * [自定义功能](2-RokidDocument/1-SkillsKit/more-fuction.md)  
-        * 技能审核和上线规范
-           * [技能发布标准](4-TermsAndAgreements/rokid-skill-release-standard.md)
-           * [技能审核规范](4-TermsAndAgreements/rokid-skill-examine-and-verify-standard.md)
+    * [开发流程](2-RokidDocument/1-SkillsKit/getting-started/creat.md)
+    * [自定义功能](2-RokidDocument/1-SkillsKit/more-fuction.md)  
+    * 技能审核和上线规范
+        * [技能发布标准](4-TermsAndAgreements/rokid-skill-release-standard.md)
+        * [技能审核规范](4-TermsAndAgreements/rokid-skill-examine-and-verify-standard.md)
   * 云端技能协议
     * [Rokid 云端技能协议](2-RokidDocument/1-SkillsKit/important-concept/cloud-app-development-protocol_cn.md)
   * 技能开发指南
