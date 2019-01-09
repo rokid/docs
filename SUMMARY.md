@@ -217,6 +217,7 @@
     * [系统升级OTA](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/ota.md) 
     * [设备数据管理](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/data.md)
     * [聊天问答配置](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/chat.md) 
+* [视频教程](9-video/summary.md)
 * 帮助与反馈
     * [Rokid讨论区](https://developer-forum.rokid.com/tags/文档)
     <!-- * [常见问题](contact-us.md) -->

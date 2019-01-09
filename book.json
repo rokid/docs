@@ -3,7 +3,8 @@
     "anchor-navigation-ex",
     "expandable-chapters-interactive",
     "vistors-github",
-    "mermaid-gb3"
+    "mermaid-gb3",
+    "html5-video"
   ],
   "pluginsConfig" : {
     "vistors-github": {
