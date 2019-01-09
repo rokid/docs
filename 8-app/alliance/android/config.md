@@ -2,7 +2,7 @@
 
 在运行或编译工程前，需要根据厂商的需求填写一些基础的配置信息，具体如下：
 
-## 3.1 配置 APP 基础信息
+## 配置 APP 基础信息
 
 APP 基础信息主要包括了：
 
@@ -97,7 +97,7 @@ android:scheme="rokidalliance"
 </div>
 输入你的 **scheme** 后，点击 **REPLACE ALL** 即可全局替换掉整个工程的 **scheme**。
 
-## 3.2 配置 APP 主题颜色
+## 配置 APP 主题颜色
 公版 APP 现在主要用到的颜色有以下 7 类主要颜色：
 
 * 透明
@@ -160,10 +160,10 @@ android:scheme="rokidalliance"
 
 以上 7 类颜色只是公版 APP 中默认的通用颜色，如果无法满足厂商的需求，厂商可根据自身设计的 APP 风格到对应页面的布局文件中替换为任一颜色。
 
-## 3.2 配置设备配网信息
+## 配置设备配网信息
 由于各厂商的设备信息会有差异，公版 APP 提供了一些配置文件用于配置各自设备的相关信息，这部分主要介绍用于设备配网相关页面的配置信息。
 
-### 3.2.1 配网首页数据信息
+### 配网首页数据信息
 配网首页的数据文件存在于 **app_base -> src -> main -> assets -> binder** 目录下，类名为 **config_binder_brief.json**，找到该文件后双击打开，配置信息是 json，具体格式如下：
 
 ```json
@@ -204,7 +204,7 @@ android:scheme="rokidalliance"
 配网首页
 </div>
 
-### 3.2.2 具体某个设备类型配网数据信息
+### 具体某个设备类型配网数据信息
 具体某个设备的配网信息也存在于 **app_base -> src -> main -> assets -> binder** 目录下， 每个设备类型对应一个 json 文件，以 Pebble 设备为例，在目录下会有**config_binder_detail_pebble.json**，找到该文件后双击打开，配置信息是 json，具体格式如下：
 
 ```json
@@ -369,7 +369,7 @@ android:scheme="rokidalliance"
 | progresses | Object | 配网的进度状态码以及进度控制数据信息|
 | errors | Object | 配网的错误状态码以及进度控制数据信息|
 
-#### 3.2.2.1 “support” 相关字段说明：
+#### “support” 相关字段说明：
 该数据主要用于 APP 中的发送 wifi 信息界面，对应的 Activity 是 **WifiSettingsActivity**。
 
 | key | 类型 | 说明 |
@@ -383,7 +383,7 @@ android:scheme="rokidalliance"
 发送 wifi 信息界面
 </div>
 
-#### 3.2.2.2 “guide” 相关字段说明：
+#### “guide” 相关字段说明：
 该数据主要用于 APP 中的单个设备搜索蓝牙和对应的两个帮助界面，对应的 Activity 是 **BinderSearchDeviceBleActivity**、**BinderPromptHelpActivity** 和 **BinderNetworkHelpActivity**。
 
 | key | 类型 | 说明 |
@@ -400,7 +400,7 @@ android:scheme="rokidalliance"
     具体某个设备类型配网首页和帮助页
 </center>
 
-#### 3.2.2.3 “progresses” 相关字段说明：
+#### “progresses” 相关字段说明：
 该数据主要用于 APP 中配网过程中相关页面的信息展示，对应的 Activity 是 **BindStatusActivity**。
 
 | key | 类型 | 说明 |
@@ -432,7 +432,7 @@ android:scheme="rokidalliance"
 设备正在配网中页面
 </div>
 
-#### 3.2.2.4 “errors” 相关字段说明：
+#### “errors” 相关字段说明：
 该数据主要用于 APP 中配网过程中发生异常时的信息展示，对应的 Activity 是 **BinderConnectErrorHelpActivity** 和 **BinderConfirmErrorStateActivity**。
 
 | key | 类型 | 说明 |
@@ -447,10 +447,10 @@ ame".json**，厂商在设置自己的设备时，只需修改具体的设备类
     设备配网失败页面
 </center>
 
-## 3.3 配置设备设置项信息
+## 配置设备设置项信息
 不同的设备可能会有不同的设置项，为了方便厂商适配各自的设备，公版 APP 也提供了一些配置文件来设置各个设备的具体设置项信息。
 
-### 3.3.1 “我的”页面设置项列表数据配置
+### “我的”页面设置项列表数据配置
 公版 APP 在“我的”页面默认设置了 6 项主要且通用的设置信息，如需修改，请到 **app_base -> src -> main -> assets -> settings** 目录下找到 **config_settingIndex.json** 和 **config_settingIndex_daily.json** 文件，二者分别对应的是正式服的设置项和测试服的设置项，该数据对应的类是**SettingsIndexFragment**， 具体的格式如下：
 
 ```json
@@ -555,7 +555,7 @@ ame".json**，厂商在设置自己的设备时，只需修改具体的设备类
 “我的”页面首页
 </div>
 
-### 3.3.2 具体某个设备类型设置项数据配置
+### 具体某个设备类型设置项数据配置
 不同的设备可能具有不同的设置项，为了方便厂商配置设备的具体设置项信息，公版 APP 也是通过配置文件来进行相关的设置，这部分数据主要是设备的卡片数据和该设备类型支持的全部设置项，配置这块数据需到 **app_base -> src -> main -> assets -> settings** 目录下找到 **config_deviceTypeInfo.json** 文件，文件具体格式如下：
 
 ```json
