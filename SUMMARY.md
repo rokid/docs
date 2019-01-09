@@ -4,6 +4,7 @@
   - [Rokid 开放平台](README.md)
   - [语音整体方案简介](5-enableVoice/rokid-vsvy-sdk-docs/introduction.md)
   - [YodaOS(推荐)](https://yodaos-project.github.io/yoda-book/)
+---------
 * 语音接入和系统
   - 能力介绍
     - [Rokid 语音识别](6-asrandtts/asr.md)
@@ -193,6 +194,7 @@
         * [Homebase OAuth2.0 授权](rokid-homebase-docs/v1/OAuth2.0.md)
     * 高级功能
       * [Webhook](rokid-homebase-docs/webhook/index.md)
+---------
 * 认证和上线
   * 相关认证和sn导入
     * [设备接口文档](3-ApiReference/open-device-manager.md)
