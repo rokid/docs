@@ -106,12 +106,26 @@
   - 硬件设计参考方案
     - [Rokid 语音产品硬件设计指南](2-RokidDocument/2-EnableVoice/rokid-hardware-design-guide.md)
     - [Rokid 硬件交互设计指南](2-RokidDocument/2-EnableVoice/rokid-hardware-ux-design-guidelines.md)
-* App
-  * Mobile SDK 接入文档
-    * [Mobile SDK 简介](5-enableVoice/rokid-vsvy-sdk-docs/mobliesdk/SDK.md)
-    * [Rokid Moblie Android SDK](https://rokid.github.io/mobile-sdk-android-docs/)
-    * [Rokid Moblie ios SDK](https://rokid.github.io/mobile-sdk-ios-docs/)
-  * [公版app配置说明](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/gongban.md) 
+* Rokid App 方案
+    * Mobile SDK 接入文档
+        * [Mobile SDK 简介](5-enableVoice/rokid-vsvy-sdk-docs/mobliesdk/SDK.md)
+        * [Rokid Moblie Android SDK](https://rokid.github.io/mobile-sdk-android-docs/)
+        * [Rokid Moblie ios SDK](https://rokid.github.io/mobile-sdk-ios-docs/)
+    * 公版App
+        * [Web 配置说明](8-app/alliance/web/gongban.md)
+        * Android 版
+            * [修订记录](8-app/alliance/android/version.md)
+            * [文档说明](8-app/alliance/android/summary.md)
+            * [开发环境](8-app/alliance/android/develop.md)
+            * [工程结构](8-app/alliance/android/resouce_summary.md)
+            * [基础信息配置](8-app/alliance/android/config.md)
+            * [注意事项](8-app/alliance/android/announcement.md)
+        * iOS 版
+            * [修订记录](8-app/alliance/iOS/version.md)
+            * [文档说明](8-app/alliance/iOS/summary.md)
+            * [开发环境](8-app/alliance/iOS/develop.md)
+            * [工程结构](8-app/alliance/iOS/resouce_summary.md)
+            * [基础信息配置](8-app/alliance/iOS/config.md)
 * 技能接入
   * 授权和配置
     * [技能配置](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/skillstore.md) 
@@ -210,3 +224,5 @@
 * 服务协议和免责
     * [服务协议](4-TermsAndAgreements/community-service-agreement.md)
     * [免责声明](4-TermsAndAgreements/community-disclaimer.md)
+
+
