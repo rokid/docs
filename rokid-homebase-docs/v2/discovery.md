@@ -22,8 +22,7 @@ endpoints | `Endpoint[]` | 一组终端描述符，具体终端描述请参考 [
       "type": "BearerToken",
       "token": "a-token-from-skill"
     }
-  },
-  "payload": {}
+  }
 }
 ```
 

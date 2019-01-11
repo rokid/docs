@@ -75,7 +75,7 @@ token | `string` | 从若琪获取的 Token 或者若琪从 Skill 方获取的 T
 
 ##### Payload Object
 
-根据消息类型决定内容，像控制请求的期望值等
+可选。根据消息类型决定内容，像控制请求的期望值等
 
 ### 示例
 
@@ -93,8 +93,7 @@ token | `string` | 从若琪获取的 Token 或者若琪从 Skill 方获取的 T
       "type": "BearerToken",
       "token": "a-token-from-skill"
     }
-  },
-  "payload": {}
+  }
 }
 ```
 

@@ -13,7 +13,9 @@ states | `InterfaceState[]` | 终端能力状态，具体信息请参考 [终端
 
 #### Request Payload
 
-根据各个控制命令，Payload 会有所变化，具体信息请参考 [终端能力](./rokid-interface.md)
+根据各个控制命令，Payload 会有所变化，具体信息请参考 [终端能力](./rokid-interface.md)。
+
+`注意：对于无 payload/value 的能力，如 Temperature.SetMax，Request 中 payload 字段缺失。`
 
 ##### Example Request
 ```json
