@@ -219,12 +219,10 @@
 * [视频教程](9-video/summary.md)
 * 常见问题
     * [智能家居](rokid-homebase-docs/faq.md)  
-* 帮助与反馈
-    * [Rokid讨论区](https://developer-forum.rokid.com/tags/文档)
-    <!-- * [常见问题](contact-us.md) -->
-    * [联系我们](contact-us.md)
+* [求助和文档意见区](https://developer-forum.rokid.com/tags/文档)
 * 服务协议和免责
     * [服务协议](4-TermsAndAgreements/community-service-agreement.md)
     * [免责声明](4-TermsAndAgreements/community-disclaimer.md)
+    * [联系我们](contact-us.md)
 
 
