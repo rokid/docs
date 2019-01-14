@@ -1,6 +1,6 @@
 # Summary
 
-* 为什么选择rokid
+* 为什么选择Rokid
   - [Rokid 开放平台](README.md)
   - [语音整体方案简介](5-enableVoice/rokid-vsvy-sdk-docs/introduction.md)
   - [YODAOS(推荐)](https://yodaos-project.github.io/yoda-book/)
@@ -40,9 +40,8 @@
 *  智能硬件产品开发
   - [k18芯片和开发板](rokidos-linux-docs/Dev_3.31/13_ROKID_AI_Dev_Board_HW_UserGuide_v3.31.md)
   - BSP/驱动开发指南
-    - [概述](7-bspguide/gai_shu/README.md)
-      - [目的与适用范围](7-bspguide/gai_shu/mu_de.md)
-    - [Kamino18平台简介](7-bspguide/kamino18ping_tai_jian_jie/README.md)
+    - [目的与适用范围](7-bspguide/gai_shu/mu_de.md)
+    - [Kamino18平台简介]
       - [芯片框图](7-bspguide/kamino18ping_tai_jian_jie/xin_pian_kuang_tu.md)
       - [智能语音方案设计简介](7-bspguide/kamino18ping_tai_jian_jie/zhi_neng_yu_yin_fang_an_she_ji_jian_jie.md)
       - [硬件开发板说明](7-bspguide/kamino18ping_tai_jian_jie/ying_jian_kai_fa_ban_shuo_ming.md)
@@ -148,7 +147,6 @@
     * 技能审核和上线规范
         * [技能发布标准](4-TermsAndAgreements/rokid-skill-release-standard.md)
         * [技能审核规范](4-TermsAndAgreements/rokid-skill-examine-and-verify-standard.md)
-  * 云端技能协议
     * [Rokid 云端技能协议](2-RokidDocument/1-SkillsKit/important-concept/cloud-app-development-protocol_cn.md)
   * 技能开发指南
     * [Rokid Force System 使用指南](2-RokidDocument/1-SkillsKit/rokid-force-system-tutorial.md)
@@ -208,15 +206,16 @@
         * [Homebase OAuth2.0 授权](rokid-homebase-docs/v1/OAuth2.0.md)
     * 高级功能
       * [Webhook](rokid-homebase-docs/webhook/index.md)
----------
 * 认证和上线
   * 相关认证和sn导入
+    * [声学认证](https://developer-forum.rokid.com/t/topic/2837)
     * [设备接口文档](3-ApiReference/open-device-manager.md)
     * [产品创建和sn导入流程](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/rookie-guide-end.md)
   * 工具
     * [系统升级OTA](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/ota.md) 
     * [设备数据管理](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/data.md)
     * [聊天问答配置](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/chat.md) 
+---------
 * [视频教程](9-video/summary.md)
 * 帮助与反馈
     * [Rokid讨论区](https://developer-forum.rokid.com/tags/文档)
