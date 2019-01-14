@@ -2,7 +2,7 @@
 
 ### Openwrt编译 {#openwrt}
 
-作为Kamino18 YodaOS的整体编译环境，使用openwrt可以编译出系统正常运行所需的主要image如下：
+作为Kamino18 YODAOS的整体编译环境，使用openwrt可以编译出系统正常运行所需的主要image如下：
 
 | **镜像名字** | **镜像运行位置** | **镜像说明** | **镜像生成位置** |
 | --- | --- | --- | --- |
@@ -13,7 +13,7 @@
 | zImage | ARM | Linux kernel image | $(K18DIR)/openwrt/bin/leo-k18-universal -glibc/openwrt- leo-k18-universal-zImage |
 | ubi.img | ARM | Rootfs | $(K18DIR)/openwrt/bin/leo-k18-universal -glibc/openwrt-leo-k18-universal-ubi.img |
 
-有两种整体编译Kamino18 YodaOS镜像的方法如下：
+有两种整体编译Kamino18 YODAOS镜像的方法如下：
 
 1\. 系统根目录下运行
 
