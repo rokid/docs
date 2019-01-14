@@ -1,6 +1,6 @@
 ## 代码目录
 
-Kamino18 Dev平台采用基于Linux内核的YodaOS操作系统，其代码目录如下图所示：
+Kamino18 Dev平台采用基于Linux内核的YODAOS操作系统，其代码目录如下图所示：
 
 ├── 3rd
 
@@ -37,8 +37,8 @@ Kamino18 Dev平台采用基于Linux内核的YodaOS操作系统，其代码目录
 *   frameworks: 应用框架，native 服务、命令、库，和对第三方的抽象等
 *   hardware: HAL (hardware abstract layer)，包括主芯片和外设的硬件抽象
 *   kernel: Kamino18 DEV平台Linux内核代码
-*   openwrt: YodaOS编译环境代码
+*   openwrt: YODAOS编译环境代码
 *   toolchains:自带工具链目录
-*   tools: YodaOS开发调试测试工具目录
+*   tools: YODAOS开发调试测试工具目录
 *   uboot: Kamino18 DEV平台uboot代码
 *   vendor: 第三方平台供应商驱动或sdk代码

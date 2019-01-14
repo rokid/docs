@@ -20,4 +20,4 @@ The material in this document is the intellectual property of **Rokid**. It is p
 | V2.2 | 张鹏 | 2018/8/2 | Add new lib for openwrt compile |
 | V2.3 | 朱斌 | 2018/8/9 | Modify for kernel uboot compile |
 | V2.4 | 朱斌 | 2018/9/8 | Modify for image flash tool |
-| V2.5 | 朱斌 | 2018/10/25 | To match YodaOS |
+| V2.5 | 朱斌 | 2018/10/25 | To match YODAOS |
