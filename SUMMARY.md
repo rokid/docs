@@ -1,9 +1,9 @@
 # Summary
 
-* 为什么选择Rokid
+* 为什么选择 Rokid
   - [Rokid 开放平台](README.md)
   - [语音整体方案简介](5-enableVoice/rokid-vsvy-sdk-docs/introduction.md)
-  - [YODAOS(推荐)](https://yodaos-project.github.io/yoda-book/)
+  - [YODAOS (推荐)](https://yodaos-project.github.io/yoda-book/)
 ---------
 * 语音接入和系统
   - 能力介绍
@@ -11,12 +11,12 @@
     - [Rokid 语音合成](6-asrandtts/tts.md)
     - [Rokid 客户端协议](3-ApiReference/rokid-client-sdk-doc.md)
     - 语音接口开发协议
-      - [语音websocket接口开发协议](3-ApiReference/openvoice-api.md)
-      - [语音http接口开发协议](3-ApiReference/openvoice-api-http.md)
+      - [语音 WebSocket 接口开发协议](3-ApiReference/openvoice-api.md)
+      - [语音 HTTP 接口开发协议](3-ApiReference/openvoice-api-http.md)
     - 错误码和重要概念
       - [重要概念](5-enableVoice/rokid-vsvy-sdk-docs/important-concept.md)
       - [错误码](5-enableVoice/rokid-vsvy-sdk-docs/common/err_code.md)
-      - [Json格式配置字串](5-enableVoice/rokid-vsvy-sdk-docs/common/api_json.md) 
+      - [JSON 格式配置字串](5-enableVoice/rokid-vsvy-sdk-docs/common/api_json.md) 
   - sdk系统方案介绍
     - [Android 全链路通用方案](5-enableVoice/rokid-vsvy-sdk-docs/fullLink/fulllink.md)
     - [Android 全链路APK级别方案](5-enableVoice/rokid-vsvy-sdk-docs/RokidAiSdk/RokidAiSdk.md)
