@@ -132,7 +132,7 @@
   * 头部技能接入流程
       * [喜马拉雅技能接入流程](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/ximalaya.md) 
       * [叮当音乐技能接入流程](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/dingdangmusic.md) 
-  * [技能开发](2-RokidDocument/1-SkillsKit/platform-introduction.md) 
+  * [技能开发介绍](2-RokidDocument/1-SkillsKit/platform-introduction.md) 
     * 技能创建流程
     * [技能语音交互规范](2-RokidDocument/1-SkillsKit/rokid-voice-interaction-guidelines.md)  
       * 重要概念
@@ -176,7 +176,6 @@
       * [局域网对接](rokid-homebase-docs/connect/via-lan.md)
       * [RHOME 桌面版调试工具](rokid-homebase-docs/tools/rhome-desktop.md)
       * [自定义接入](rokid-homebase-docs/tools/developer-driver.md)
-      * [FAQ](rokid-homebase-docs/faq.md)
     * 智能家居协议(v2)
       * [技能授权](rokid-homebase-docs/connect/rfc6749.md)
       * [消息格式参考](rokid-homebase-docs/v2/message-reference.md)
@@ -206,6 +205,7 @@
         * [Homebase OAuth2.0 授权](rokid-homebase-docs/v1/OAuth2.0.md)
     * 高级功能
       * [Webhook](rokid-homebase-docs/webhook/index.md)
+  * [FAQ](rokid-homebase-docs/faq.md)
 * 认证和上线
   * 相关认证和sn导入
     * [声学认证](https://developer-forum.rokid.com/t/topic/2837)
@@ -217,6 +217,8 @@
     * [聊天问答配置](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/chat.md) 
 ---------
 * [视频教程](9-video/summary.md)
+* 常见问题
+    * [智能家居](rokid-homebase-docs/faq.md)  
 * 帮助与反馈
     * [Rokid讨论区](https://developer-forum.rokid.com/tags/文档)
     <!-- * [常见问题](contact-us.md) -->
