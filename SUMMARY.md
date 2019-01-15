@@ -105,6 +105,9 @@
   - 硬件设计参考方案
     - [Rokid 语音产品硬件设计指南](2-RokidDocument/2-EnableVoice/rokid-hardware-design-guide.md)
     - [Rokid 硬件交互设计指南](2-RokidDocument/2-EnableVoice/rokid-hardware-ux-design-guidelines.md)
+---------    
+* YODAOS English document
+---------
 * Rokid App 方案
     * Mobile SDK 接入文档
         * [Mobile SDK 简介](5-enableVoice/rokid-vsvy-sdk-docs/mobliesdk/SDK.md)
@@ -215,8 +218,6 @@
     * [系统升级OTA](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/ota.md) 
     * [设备数据管理](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/data.md)
     * [聊天问答配置](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/chat.md) 
----------
-* YODAOS English document
 ---------
 * [视频教程](9-video/summary.md)
 * 常见问题
