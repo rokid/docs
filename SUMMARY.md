@@ -226,6 +226,9 @@
     * [联系我们](contact-us.md)
 ---------    
 * YODAOS English document
+    * Kamino18 Universal Install Guide
+    * YODAOSBuild Environment
+    
 
 
 
