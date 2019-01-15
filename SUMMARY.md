@@ -9,8 +9,8 @@
   - 能力介绍
     - [Rokid 语音识别](6-asrandtts/asr.md)
     - [Rokid 语音合成](6-asrandtts/tts.md)
-    - [Rokid 客户端协议](3-ApiReference/rokid-client-sdk-doc.md)
     - 语音接口开发协议
+      - [Rokid 接口定义](3-ApiReference/rokid-client-sdk-doc.md)
       - [语音 WebSocket 接口开发协议](3-ApiReference/openvoice-api.md)
       - [语音 HTTP 接口开发协议](3-ApiReference/openvoice-api-http.md)
     - 错误码和重要概念
