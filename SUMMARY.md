@@ -216,8 +216,6 @@
     * [设备数据管理](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/data.md)
     * [聊天问答配置](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/chat.md) 
 ---------
-* YODAOS Documentation in English
----------
 * [视频教程](9-video/summary.md)
 * 常见问题
     * [智能家居](rokid-homebase-docs/faq.md)  
