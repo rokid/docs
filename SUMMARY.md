@@ -227,7 +227,7 @@
 ---------    
 * YODAOS English document
     * Kamino18 Universal Install Guide
-    * YODAOSBuild Environment
+    * YODAOS Build Environment
     
 
 
