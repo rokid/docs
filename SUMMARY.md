@@ -125,40 +125,6 @@
             * [开发环境](8-app/alliance/iOS/develop.md)
             * [工程结构](8-app/alliance/iOS/resouce_summary.md)
             * [基础信息配置](8-app/alliance/iOS/config.md)
-* 技能接入
-  * 授权和配置
-    * [技能配置](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/skillstore.md) 
-    * [拦截器接口文档](3-ApiReference/rokid-interceptor.md)
-  * 头部技能接入流程
-      * [喜马拉雅技能接入流程](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/ximalaya.md) 
-      * [叮当音乐技能接入流程](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/dingdangmusic.md) 
-  * [技能开发介绍](2-RokidDocument/1-SkillsKit/platform-introduction.md) 
-    * 技能创建流程
-    * [技能语音交互规范](2-RokidDocument/1-SkillsKit/rokid-voice-interaction-guidelines.md)  
-      * 重要概念
-        * [意图](2-RokidDocument/1-SkillsKit/important-concept/intend.md)
-        * [词表](2-RokidDocument/1-SkillsKit/important-concept/word-list.md)
-        * [用户语句](2-RokidDocument/1-SkillsKit/important-concept/usersays.md)
-        * [confirm](2-RokidDocument/1-SkillsKit/important-concept/confirm.md)
-        * [session](2-RokidDocument/1-SkillsKit/important-concept/session.md)
-        * [NLP 正则表达式](2-RokidDocument/1-SkillsKit/important-concept/regular-expression.md)
-    * [开发流程](2-RokidDocument/1-SkillsKit/getting-started/creat.md)
-    * [自定义功能](2-RokidDocument/1-SkillsKit/more-fuction.md)  
-    * 技能审核和上线规范
-        * [技能发布标准](4-TermsAndAgreements/rokid-skill-release-standard.md)
-        * [技能审核规范](4-TermsAndAgreements/rokid-skill-examine-and-verify-standard.md)
-    * [Rokid 云端技能协议](2-RokidDocument/1-SkillsKit/important-concept/cloud-app-development-protocol_cn.md)
-  * 技能开发指南
-    * [Rokid Force System 使用指南](2-RokidDocument/1-SkillsKit/rokid-force-system-tutorial.md)
-    * [Rokid Force JS 使用指南](2-RokidDocument/1-SkillsKit/rokid-force-js-tutorial.md)
-    * [SSML 使用指南](2-RokidDocument/1-SkillsKit/ssml-document.md)
-    * [Rokid Oauth 使用指南](2-RokidDocument/1-SkillsKit/rokid-oauth.md)
-    * [喜马拉雅技能开发指南](2-RokidDocument/1-SkillsKit/rokid-ximalay.md)
-    * [获取 SSL 证书指南](2-RokidDocument/1-SkillsKit/get-SSL-certificate-tutorial.md)
-    * [技能开发 Java 版指南](https://github.com/Rokid/rokid-skill-sample/tree/master/rokid-skill-sample-java)
-    * [基于 VS Code 的 Yeoman & 测试脚本](https://github.com/Rokid/generator-rokid/blob/master/generators/rfs)
-    * [读取语音交互日志](2-RokidDocument/1-SkillsKit/test-skill-through-device-log.md)
-
 * Rokid 智能家居
   * [方案输出](smarthome/README.md)
     * 行业解决方案
@@ -206,6 +172,40 @@
     * 高级功能
       * [Webhook](rokid-homebase-docs/webhook/index.md)
   * [FAQ](rokid-homebase-docs/faq.md)
+---------
+* 技能接入
+  * 授权和配置
+    * [技能配置](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/skillstore.md) 
+    * [拦截器接口文档](3-ApiReference/rokid-interceptor.md)
+  * 头部技能接入流程
+      * [喜马拉雅技能接入流程](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/ximalaya.md) 
+      * [叮当音乐技能接入流程](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/dingdangmusic.md) 
+  * [技能开发介绍](2-RokidDocument/1-SkillsKit/platform-introduction.md) 
+    * 技能创建流程
+    * [技能语音交互规范](2-RokidDocument/1-SkillsKit/rokid-voice-interaction-guidelines.md)  
+      * 重要概念
+        * [意图](2-RokidDocument/1-SkillsKit/important-concept/intend.md)
+        * [词表](2-RokidDocument/1-SkillsKit/important-concept/word-list.md)
+        * [用户语句](2-RokidDocument/1-SkillsKit/important-concept/usersays.md)
+        * [confirm](2-RokidDocument/1-SkillsKit/important-concept/confirm.md)
+        * [session](2-RokidDocument/1-SkillsKit/important-concept/session.md)
+        * [NLP 正则表达式](2-RokidDocument/1-SkillsKit/important-concept/regular-expression.md)
+    * [开发流程](2-RokidDocument/1-SkillsKit/getting-started/creat.md)
+    * [自定义功能](2-RokidDocument/1-SkillsKit/more-fuction.md)  
+    * 技能审核和上线规范
+        * [技能发布标准](4-TermsAndAgreements/rokid-skill-release-standard.md)
+        * [技能审核规范](4-TermsAndAgreements/rokid-skill-examine-and-verify-standard.md)
+    * [Rokid 云端技能协议](2-RokidDocument/1-SkillsKit/important-concept/cloud-app-development-protocol_cn.md)
+  * 技能开发指南
+    * [Rokid Force System 使用指南](2-RokidDocument/1-SkillsKit/rokid-force-system-tutorial.md)
+    * [Rokid Force JS 使用指南](2-RokidDocument/1-SkillsKit/rokid-force-js-tutorial.md)
+    * [SSML 使用指南](2-RokidDocument/1-SkillsKit/ssml-document.md)
+    * [Rokid Oauth 使用指南](2-RokidDocument/1-SkillsKit/rokid-oauth.md)
+    * [喜马拉雅技能开发指南](2-RokidDocument/1-SkillsKit/rokid-ximalay.md)
+    * [获取 SSL 证书指南](2-RokidDocument/1-SkillsKit/get-SSL-certificate-tutorial.md)
+    * [技能开发 Java 版指南](https://github.com/Rokid/rokid-skill-sample/tree/master/rokid-skill-sample-java)
+    * [基于 VS Code 的 Yeoman & 测试脚本](https://github.com/Rokid/generator-rokid/blob/master/generators/rfs)
+    * [读取语音交互日志](2-RokidDocument/1-SkillsKit/test-skill-through-device-log.md)
 * 认证和上线
   * 相关认证和sn导入
     * [声学认证](https://developer-forum.rokid.com/t/topic/2837)
