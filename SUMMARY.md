@@ -22,7 +22,7 @@
     - [Android 全链路APK级别方案](5-enableVoice/rokid-vsvy-sdk-docs/RokidAiSdk/RokidAiSdk.md)
     - [Android 基础语音模块](5-enableVoice/rokid-vsvy-sdk-docs/speechTTS/speechtts.md)
     - [Linux基础架构](5-enableVoice/rokid-vsvy-sdk-docs/linuxsdk/linuxsdk.md)
-  - YODAOS本地服务
+  - YODAOS开源系统
     - [本地服务简介](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/system-service.md)
     - [编译与运行](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/compile-run.md)
     - 系统服务模块简介
