@@ -173,7 +173,7 @@
       * [Webhook](rokid-homebase-docs/webhook/index.md)
   * [FAQ](rokid-homebase-docs/faq.md)
 ---------
-* 技能接入
+* <font color=#008000>技能接入</font>
   * 授权和配置
     * [技能配置](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/skillstore.md) 
     * [拦截器接口文档](3-ApiReference/rokid-interceptor.md)
@@ -206,7 +206,7 @@
     * [技能开发 Java 版指南](https://github.com/Rokid/rokid-skill-sample/tree/master/rokid-skill-sample-java)
     * [基于 VS Code 的 Yeoman & 测试脚本](https://github.com/Rokid/generator-rokid/blob/master/generators/rfs)
     * [读取语音交互日志](2-RokidDocument/1-SkillsKit/test-skill-through-device-log.md)
-* 认证和上线
+* <font color=#008000>认证和上线</font>
   * 相关认证和sn导入
     * [声学认证](https://developer-forum.rokid.com/t/topic/2837)
     * [设备接口文档](3-ApiReference/open-device-manager.md)
