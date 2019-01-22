@@ -5,41 +5,26 @@
   - [语音整体方案简介](5-enableVoice/rokid-vsvy-sdk-docs/introduction.md)
   - [YODAOS (推荐)](https://yodaos-project.github.io/yoda-book/)
 ---------
-* 语音接入和系统
+* 语音接入
   - 能力介绍
     - [Rokid 语音识别](6-asrandtts/asr.md)
     - [Rokid 语音合成](6-asrandtts/tts.md)
-    - 语音接口开发协议
-      - [Rokid 接口定义](3-ApiReference/rokid-client-sdk-doc.md)
-      - [语音 WebSocket 接口开发协议](3-ApiReference/openvoice-api.md)
-      - [语音 HTTP 接口开发协议](3-ApiReference/openvoice-api-http.md)
-    - 错误码和重要概念
-      - [重要概念](5-enableVoice/rokid-vsvy-sdk-docs/important-concept.md)
-      - [错误码](5-enableVoice/rokid-vsvy-sdk-docs/common/err_code.md)
-      - [JSON 格式配置字串](5-enableVoice/rokid-vsvy-sdk-docs/common/api_json.md) 
-  - sdk系统方案介绍
+  - 语音接口开发协议
+    - [Rokid 接口定义](3-ApiReference/rokid-client-sdk-doc.md)
+    - [语音 WebSocket 接口开发协议](3-ApiReference/openvoice-api.md)
+    - [语音 HTTP 接口开发协议](3-ApiReference/openvoice-api-http.md)
+  - 错误码和重要概念
+    - [重要概念](5-enableVoice/rokid-vsvy-sdk-docs/important-concept.md)
+    - [错误码](5-enableVoice/rokid-vsvy-sdk-docs/common/err_code.md)
+    - [JSON 格式配置字串](5-enableVoice/rokid-vsvy-sdk-docs/common/api_json.md) 
+  - sdk方案介绍
     - [Android 全链路通用方案](5-enableVoice/rokid-vsvy-sdk-docs/fullLink/fulllink.md)
     - [Android 全链路APK级别方案](5-enableVoice/rokid-vsvy-sdk-docs/RokidAiSdk/RokidAiSdk.md)
     - [Android 基础语音模块](5-enableVoice/rokid-vsvy-sdk-docs/speechTTS/speechtts.md)
-    - [Linux基础架构](5-enableVoice/rokid-vsvy-sdk-docs/linuxsdk/linuxsdk.md)
-  - YODAOS开源系统
-    - [本地服务简介](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/system-service.md)
-    - [编译与运行](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/compile-run.md)
-    - 系统服务模块简介
-      - [httpdns](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/httpdns/10_模块简介/10_httpdns.md)
-      - [lumenlight](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/lumenlight/10_模块简介/11_lumenlight.md)
-      - player
-        - [RPlayer](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/librplayer/10_模块简介/12_player/10_RPlayer.md)
-        - [WavPlayer](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/librplayer/10_模块简介/12_player/11_WavPlayer.md)
-      - [rklog](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/rklog/10_模块简介/13_rklog.md)
-      - [input-event](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/input-event/10_模块简介/14_input-event.md)
-      - [libmemcheck](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/libmemcheck/10_模块简介/14_libmemcheck.md)
-      - [volctl](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/vol_ctrl/10_模块简介/15_volctl.md)
-      - [display](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/display/10_模块简介/20_display.md)
-      - [yimo](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/yimo/README.md)
+    - [Linux基础架构/树莓派](5-enableVoice/rokid-vsvy-sdk-docs/linuxsdk/linuxsdk.md)
 *  智能硬件产品开发
   - [k18芯片和开发板](rokidos-linux-docs/Dev_3.31/13_ROKID_AI_Dev_Board_HW_UserGuide_v3.31.md)
-  - BSP/驱动开发指南
+  - BSP/驱动开发
     - [目的与适用范围](7-bspguide/gai_shu/mu_de.md)
     - [Kamino18平台简介]
       - [芯片框图](7-bspguide/kamino18ping_tai_jian_jie/xin_pian_kuang_tu.md)
@@ -64,6 +49,21 @@
     - [SN与Seed烧写](7-bspguide/snyu_seed_shao_xie.md)
     - [配网验证](7-bspguide/pei_wang_yan_zheng/README.md)
       - [BT配网](7-bspguide/pei_wang_yan_zheng/btpei_wang.md)
+  - YODAOS开源系统
+    - [本地服务简介](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/system-service.md)
+    - [编译与运行](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/compile-run.md)
+    - 系统服务模块简介
+      - [httpdns](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/httpdns/10_模块简介/10_httpdns.md)
+      - [lumenlight](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/lumenlight/10_模块简介/11_lumenlight.md)
+      - player
+        - [RPlayer](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/librplayer/10_模块简介/12_player/10_RPlayer.md)
+        - [WavPlayer](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/librplayer/10_模块简介/12_player/11_WavPlayer.md)
+      - [rklog](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/rklog/10_模块简介/13_rklog.md)
+      - [input-event](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/input-event/10_模块简介/14_input-event.md)
+      - [libmemcheck](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/libmemcheck/10_模块简介/14_libmemcheck.md)
+      - [volctl](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/vol_ctrl/10_模块简介/15_volctl.md)
+      - [display](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/display/10_模块简介/20_display.md)
+      - [yimo](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/yimo/README.md)
   - [Amlogic开发平台](rokidos-linux-docs/README.md)
     - 开发套件使用手册
       - [基本参数](rokidos-linux-docs/reference/dev_board/board_list.md)
