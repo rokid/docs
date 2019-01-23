@@ -227,6 +227,7 @@
     * [联系我们](contact-us.md)
 ---------    
 * YODAOS English document
+---------  
 * BSP/Driver Develop Guide
 	* [Rokid Kamino18 Universal Install Guide V2.5](10-bspguide-eng/README.md)
 	* [General Description & Purpose](10-bspguide-eng/general_description/README.md)
@@ -255,7 +256,7 @@
 	* [Network Setup](10-bspguide-eng/network_setup/README.md)
 		* [Network Setup through BT](10-bspguide-eng/network_setup/network_setup_through_bt.md)
 	* [Q&A](10-bspguide-eng/q&a.md)
-
+* [YODAOS book](https://yodaos-project.github.io/yoda-book/en-us/)
 * YODAOS Build Environment
     
 
