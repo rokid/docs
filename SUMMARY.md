@@ -257,8 +257,7 @@
 		* [Network Setup through BT](10-bspguide-eng/network_setup/network_setup_through_bt.md)
 	* [Q&A](10-bspguide-eng/q&a.md)
 * [YODAOS book](https://yodaos-project.github.io/yoda-book/en-us/)
-* YODAOS Build Environment
-    
+* [YODAOS Build Environment](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/general/YodaOS_Build_Environment.md)
 
 
 
