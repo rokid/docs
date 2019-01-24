@@ -2,7 +2,7 @@
 
 * 为什么选择 Rokid
   - [Rokid 开放平台](README.md)
-  - [语音整体方案简介](5-enableVoice/rokid-vsvy-sdk-docs/introduction.md)
+    - [语音整体方案简介](5-enableVoice/rokid-vsvy-sdk-docs/introduction.md)
   - [YODAOS (推荐)](https://yodaos-project.github.io/yoda-book/)
 ---------
 * 语音接入
