@@ -132,7 +132,7 @@
       * [面向 ODM](smarthome/odm.md)
     * [技能授权](smarthome/skills.md)
     * [智能家居H5配置界面](smarthome/mobile-user-app.md)
-    * [智能家居开放接口](smarthome/open-api.md)
+    * [智能家居开放接口（链接）](https://homebase-open.rokid.com/docs)
     * [智能家居隐身接入](rokid-homebase-docs/intro/sdk.md)
       * [基于 JWT 签名的服务端授权](rokid-homebase-docs/connect/rfc7519.md)
   * [智能家居设备接入](rokid-homebase-docs/README.md)
