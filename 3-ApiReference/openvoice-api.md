@@ -4,6 +4,10 @@
 
 本文档目的是描述云端语音接口的 websocket 版本的开放协议，主要包含语音识别、语义理解、语音合成三大部分功能，主要面向想要了解语音交互细节，并具有一定开发能力的开发者或用户。
 
+如果使用 java 开发，可以参考 [这里](https://github.com/Rokid/rokid-speech)；
+
+如果使用 python 开发，可以参考 [这里](https://github.com/Rokid/speech-python-demo)；
+
 如果使用 http 版本的开放协议，请点[这里](https://developer.rokid.com/docs/3-ApiReference/openvoice-api-http.html)；
 
 如果通过 sdk 接入，请点[这里](https://developer.rokid.com/docs/5-enableVoice/rokid-vsvy-sdk-docs/fullLink/fulllink.html)；
