@@ -2,10 +2,10 @@ YodaOS Universal 如何配置系统和应用
 =============================== 
 ## 目录
 
-*	[YodaOS 完整体验](#yodaos) 
+*	[YODAOS 完整体验](#yodaos) 
 *	[如何定制化系统和应用](#setup)
 
-### <span id="yodaos">一.YodaOS完整体验</span>
+### <span id="yodaos">一.YODAOS完整体验</span>
 #### 下载代码
 
 1. google repo:
@@ -183,7 +183,7 @@ rpm -i dtc-1.4.0-1.el6.x86_64.rpm
     ./download.sh all
     根据提示按住调试板上的 BOOT_KEY，然后连接 USB 线到 PC 上.
 ```
-**indows烧写**
+**windows烧写**
 
 使用 windows 烧写工具前，对于一台新电脑需要安装 usb 驱动(驱动安装文件和说明在`leo-k18-universal-glibc/bootx_win/driver_install`
 目录下), Windows 电脑上具体烧写流程如下:
@@ -194,7 +194,7 @@ rpm -i dtc-1.4.0-1.el6.x86_64.rpm
 
 ### 定制系统和应用
 
-YodaOS 是基于 openwrt 编译系统，所以需要了解优化后的目录结构。	
+YODAOS 是基于 openwrt 编译系统，所以需要了解优化后的目录结构。	
 
 #### OpenWrt 目录结构
 
@@ -208,7 +208,7 @@ YodaOS 是基于 openwrt 编译系统，所以需要了解优化后的目录结�
 * `toolchain` 交叉编译链，这个文件中存放的就是编译交叉编译链的软件包.包括 binutils、gcc、libc 等等。
 * `target` OpenWrt 的源码可以编译出各个平台适用的二进制文件，各平台在这个目录里定义了固件和内核的编译过程。
 * `package` 存放了系统中适用的软件包,包含针对各个软件包的 Makefile。OpenWrt 定义了一套 Makefile 模板。各软件参照这个模板定义了自己的信息，如软件包的版本、下载地址、编译方式、安装地址等。在二次开发过程中，这个文件夹我们会经常打交道。事实上，通过 `./scripts/feed update -a` 和 `./scripts/feed install -a` 的软件包也会存放在这个目录之中。
-  * `rokid` 存放了YodaOS所需要的package。
+  * `rokid` 存放了YODAOS所需要的package。
   * `include` OpenWrt 的 Makefile 都存放在这里。文件名为 `*.mk`。这里的文件上是在 Makefile 里被包含的，类似于库文件，这些文件定义了编译过程。
   * `feeds` OpenWrt 的附加软件包管理器的扩展包索引目录。简单来说就是下载管理软件包的。默认 feeds 下载有 packages、management、luci、routing、telephony。如要下载其他的软件包，需打开源码根目录下面的 feeds.conf.default 文件，去掉相应软件包前面的#号，然后更新源：`./scripts/feeds update -a`，安装下载好的包：`./scripts/feeds install -a`
 * `dl` 在编译过程中使用的很多软件，刚开始下载源码并没有包含，而是在编译过程中从其他服务器下载的，这里是统一的保存目录。

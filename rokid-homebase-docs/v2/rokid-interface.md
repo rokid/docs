@@ -197,7 +197,7 @@ Color.SetRandom | 由 Skill 设置一个随机色值
 
 字段 | 类型 | 描述
 --- | --- | ---
-value | `number` | 颜色 RGB Hex 值
+value | `number` | 颜色 RGB (0x000000-0xFFFFFF) 对应的十进制数值
 
 命令示例：
 ```json

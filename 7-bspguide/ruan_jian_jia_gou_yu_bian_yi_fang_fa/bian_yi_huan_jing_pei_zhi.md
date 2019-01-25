@@ -4,7 +4,7 @@
 
 ### Openwrt编译环境搭建 {#openwrt}
 
-整个Kamino18平台的YodaOS是基于openwrt进行编译的，通过openwrt我们可以得到文件系统，交叉编译工具链等。请在进行openwrt编译前，确保如下工具包已经在ubuntu环境上安装完成。
+整个Kamino18平台的YODAOS是基于openwrt进行编译的，通过openwrt我们可以得到文件系统，交叉编译工具链等。请在进行openwrt编译前，确保如下工具包已经在ubuntu环境上安装完成。
 
 *   sudo apt-get install build-essential subversion libncurses5-dev zlib1g-dev gawk gcc-multilib flex git-core gettext libssl-dev unzip texinfo
 *   sudo apt-get install device-tree-compiler

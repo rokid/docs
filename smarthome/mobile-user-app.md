@@ -2,13 +2,19 @@
 
 ## 特性介绍
 
-@绍铨
+Rokid 智能家居 H5配置界面，主要用于嵌入到接入方的 App，提供完整的智能家居配置功能。 包含：
+
+- 智能家居品牌的配置， 查看， 删除
+- 配置家庭，房间，设备别名
+- 查看已经设置的定时任务
+- 查看同步的所有设备管理和设备的说法
+- 其他相关配置
 
 ## 准备工作
 
 1. 通过 [Rokid Mobile SDK 接入文档](https://rokid.github.io/mobile-sdk-android-docs/) 集成 SDK 到您的应用中
 
-2. 实现使用智能家居模块所**必需**的 SDK webbridge 方法：[智能家居 H5 接入指南](https://rokid.github.io/mobile-sdk-android-docs/resource/63_homebase.html)、[WebBridge 快速接入指南](https://rokid.github.io/mobile-sdk-android-docs/resource/71_use_bridge.html)
+2. 实现使用智能家居模块所**必需**的 SDK webbridge 方法：[智能家居 H5 接入指南](https://rokid.github.io/mobile-sdk-android-docs/res/skill/homebase.html)、[WebBridge 快速接入指南](https://rokid.github.io/mobile-sdk-android-docs/res/71_use_bridge.html)
 
 
 ## 常见问题
@@ -26,7 +32,7 @@ Q: 前端日志抓取步骤：
     ![alt_text](https://s.rokidcdn.com/homebase/upload/Byn5u506m.png "image_tooltip")
 
 
-	
+
 
 2. 打开手机的 USB 调试功能
 ![alt_text](https://s.rokidcdn.com/homebase/upload/B1qpOcApX.jpeg "image_tooltip")
