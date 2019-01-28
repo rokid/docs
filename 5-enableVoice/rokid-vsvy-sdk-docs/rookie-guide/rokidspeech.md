@@ -4,19 +4,8 @@
 
 ![](images/1.jpg)
 
-* [一、创建和配置产品](#一、创建和配置产品)
-  * [登录平台账号](#1.登录平台账号)
-  * [创建产品](#2.创建产品)
-  * [配置产品](#3.配置产品)
-  [二、技能配置](#https://developer.rokid.com/docs/5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/skillstore.html)
-* [三、对接 Rokid 语音能力](#三、对接Rokid语音能力)
-  * [SDK下载](#1、SDK下载)
-  * [开放平台接口定义](#https://developer.rokid.com/docs/3-ApiReference/openvoice-api.html)
 
-  
-### 一、创建和配置产品
-
-#### 1.登录平台账号
+### 一、登录平台账号
 
 **若没有账号请先注册，再登录**
 
@@ -32,7 +21,7 @@
 ![](images/02.png)
 
 
-#### 2.创建产品
+#### 二.创建产品
 
 产品是指您想要接入Rokid语音服务的一种实体设备，一个产品只对应一种语音配置。如您想要实现多种语音配置效果，需要创建多个产品。
 
@@ -46,75 +35,26 @@
   ![](images/04.png)
 
 
-##### 填写产品基本信息
+### 三、获得配置语音产品配置信息
 
-填写产品相关的【方案类型】、【系统类型】、【产品名称】、【产品描述】、【产品图片】等基本信息。
+```
+每个语音产品建立完成后，都会分配10个测试sn提供调试测试使用
+```
 
-**注意：**【方案类型】分为 [**全链路通用方案**](./fullLink/fulllink.md) 和 [**基础语音模块**](./speechTTS/speechtts.md) 两种。两者的主要区别是：全链路方案会包含前端模块（拾音方式和MIC阵列），基础语音模块不包含前端模块（拾音方式和MIC阵列）。
+ ![](images/rokidspeech-setting1.png)
+ 
+ ![](images/rokidspeech-setting2.png)
+ 
+ ![](images/rokidspeech-setting3.png)
+ 
+### 四、技能配置
+```
+在语音产品创建完成后，rokid开放平台会默认配置一些常用的技能到语音产品类型下，也可以自行移除或添加
+```
 
-![](images/05.png)
+![](images/rokidspeech-skill1.png)
 
+技能配置详见[技能开通文档](https://developer.rokid.com/docs/5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/skillstore.html)
 
-
-#### 3.配置产品
-
-#### 语音配置
-
-#### **1)前端语音配置**
-
-可根据硬件产品选择【拾音方式】、【麦克风阵列】，并设置【激活词】。如下图所示。
-
-##### 激活词
-
-**`激活词`**即**`唤醒词`**，默认为“若琪”，该激活词已经进行训练，唤醒率比较高，测试时为了保障效果建议使用“若琪”。
-
-设置自定义激活词，请单击**`激活词`**输入框输入想要的激活词；**`激活词`**支持4～5个汉字，不建议使用拼音相同的叠字或带有“若琪”字眼的词语，**`激活词`**的评分需在3星以上才能保存。
-
-若您选择了自定义**`激活词`**，且要求优秀的唤醒效果，建议联系商务（商务邮箱：rokidopen@rokid.com）申请数据训练。
-
-![](images/123.png)
-
-
-#### **2)语音合成配置**
-
-当前页面下拉，编辑“语速”、“发音音域”等可自定义配置语音合成效果。目前只支持【若琪声音-普通话】的调用。其他类型合成音只提供在线试听，暂不可应用到设备，后期会实现应用至设备端。 
-
-![](images/456.png)
-
-##### 服务工具配置
-
-服务工具的配置，包括热词和拦截器配置。热词主要为了提升识别率；拦截器主要适用于兜底聊天和技能家居服务。 具体参照以下指南：
-
-[热词管理接入指南](https://developer.rokid.com/docs/5-enableVoice/rokid-vsvy-sdk-docs/important-concept.html)
-
-[拦截器设置接入指南](https://developer.rokid.com/docs/3-ApiReference/rokid-interceptor.html)
-
-![](images/125.png)
-
-### 二、技能配置
-
-技能配置详见[技能开通文档]（https://developer.rokid.com/docs/5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/skillstore.html）
-
-### 三、对接Rokid语音能力
-
-1、SDK下载
-
-完成产品的创建和配置后，即可获取产品的SDK。获取SDK有如下两种方式。
-
-#### 方式一
-
-在【产品列表】页面下，选择相应的产品选项卡，点击选项卡右下角的下载图标，即可下载产品SDK。如下图所示。
-![](images/127.png)
-
-#### 方式二
-
-在产品的编辑页面，点击页面左上角【SDK下载】即可获取产品的SDK。
-
-![](images/sdk.jpg)
-
-点击后会弹出如下页面，可选择下载SDK、获取测试序列号或在线测试产品等。如下图所示。还可以看到设备的TypeID、key和Secret
-
-![](images/sdk04.png)
-
-2、按照[开放平台接口定义文档](https://developer.rokid.com/docs/3-ApiReference/openvoice-api.html) 进行开发。
-
+### 五、开始对接Rokid语音能力接口
+[开始对接语音接口](https://developer.rokid.com/docs/3-ApiReference/openvoice-api.html)
