@@ -46,7 +46,7 @@ graph LR;
   ![](images/04.png)
 
 
-### 三、获得配置语音产品配置信息
+#### 三、获得配置语音产品配置信息
 
 ```
 每个语音产品建立完成后，都会分配10个测试sn提供调试测试使用
@@ -58,7 +58,7 @@ graph LR;
  
  ![](images/rokidspeech-setting3.png)
  
-### 四、技能配置
+#### 四、技能配置
 ```
 在语音产品创建完成后，rokid开放平台会默认配置一些常用的技能到语音产品类型下，也可以自行移除或添加
 ```
@@ -67,5 +67,5 @@ graph LR;
 
 技能配置详见[技能开通文档](https://developer.rokid.com/docs/5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/skillstore.html)
 
-### 五、开始对接Rokid语音能力接口
+#### 五、开始对接Rokid语音能力接口
 [开始对接语音接口](https://developer.rokid.com/docs/3-ApiReference/openvoice-api.html)
