@@ -4,6 +4,9 @@
   - [Rokid 开放平台](README.md)
     - [语音整体方案简介](5-enableVoice/rokid-vsvy-sdk-docs/introduction.md)
   - [YODAOS (推荐)](https://yodaos-project.github.io/yoda-book/)
+* 若琪新闻
+  - [原力觉醒](https://mp.weixin.qq.com/s/XeY0fG9d40LZUniPsqAS5Q)
+  - [眼镜&ceo文章](https://mp.weixin.qq.com/s/I-LImijqkI5lGxpThSm9jg)
 ---------
 * 语音接入
   - 能力介绍
