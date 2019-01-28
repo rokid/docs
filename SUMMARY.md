@@ -174,22 +174,22 @@
   * [FAQ](rokid-homebase-docs/faq.md)
 ---------
 * 技能接入
-  * 授权和配置
-    * [技能配置](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/skillstore.md) 
+  * 授权开通和配置
+    * [技能开通](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/skillstore.md) 
     * [拦截器接口文档](3-ApiReference/rokid-interceptor.md)
-  * 头部技能接入流程
-      * [喜马拉雅技能接入流程](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/ximalaya.md) 
-      * [叮当音乐技能接入流程](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/dingdangmusic.md) 
-  * [技能开发介绍](2-RokidDocument/1-SkillsKit/platform-introduction.md) 
-    * [技能语音交互规范](2-RokidDocument/1-SkillsKit/rokid-voice-interaction-guidelines.md)  
-      * 重要概念
+    * 头部技能开通流程
+        * [喜马拉雅技能开通流程](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/ximalaya.md) 
+        * [叮当音乐技能开通流程](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/dingdangmusic.md) 
+  * [技能平台新手引导](2-RokidDocument/1-SkillsKit/platform-introduction.md)  
+    * 重要概念
         * [意图](2-RokidDocument/1-SkillsKit/important-concept/intend.md)
         * [词表](2-RokidDocument/1-SkillsKit/important-concept/word-list.md)
         * [用户语句](2-RokidDocument/1-SkillsKit/important-concept/usersays.md)
         * [confirm](2-RokidDocument/1-SkillsKit/important-concept/confirm.md)
         * [session](2-RokidDocument/1-SkillsKit/important-concept/session.md)
         * [NLP 正则表达式](2-RokidDocument/1-SkillsKit/important-concept/regular-expression.md)
-    * [开发流程](2-RokidDocument/1-SkillsKit/getting-started/creat.md)
+    * [技能语音交互规范](2-RokidDocument/1-SkillsKit/rokid-voice-interaction-guidelines.md) 
+    * [平台创建技能流程](2-RokidDocument/1-SkillsKit/getting-started/creat.md)
     * [自定义功能](2-RokidDocument/1-SkillsKit/more-fuction.md)  
     * 技能审核和上线规范
         * [技能发布标准](4-TermsAndAgreements/rokid-skill-release-standard.md)
