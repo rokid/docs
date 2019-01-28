@@ -7,6 +7,7 @@
 * 若琪新闻
   - [原力觉醒](https://mp.weixin.qq.com/s/XeY0fG9d40LZUniPsqAS5Q)
   - [眼镜&ceo文章](https://mp.weixin.qq.com/s/I-LImijqkI5lGxpThSm9jg)
+  - [若琪的2018年](https://mp.weixin.qq.com/s/sCDJJAUBlAyc5uEAFihp6Q)
 ---------
 * 语音接入
   - 能力介绍
