@@ -41,18 +41,18 @@
 每个语音产品建立完成后，都会分配10个测试sn提供调试测试使用
 ```
 
- ![](images/rokidspeech-setting1.jpg)
+ ![](images/rokidspeech-setting1.png)
  
- ![](images/rokidspeech-setting2.jpg)
+ ![](images/rokidspeech-setting2.png)
  
- ![](images/rokidspeech-setting3.jpg)
+ ![](images/rokidspeech-setting3.png)
  
 ### 四、技能配置
 ```
 在语音产品创建完成后，rokid开放平台会默认配置一些常用的技能到语音产品类型下，也可以自行移除或添加
 ```
 
-![](images/rokidspeech-skill1.jpg)
+![](images/rokidspeech-skill1.png)
 
 技能配置详见[技能开通文档](https://developer.rokid.com/docs/5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/skillstore.html)
 
