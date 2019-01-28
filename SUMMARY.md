@@ -180,8 +180,7 @@
   * 头部技能接入流程
       * [喜马拉雅技能接入流程](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/ximalaya.md) 
       * [叮当音乐技能接入流程](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/dingdangmusic.md) 
-  * [技能开发介绍](2-RokidDocument/1-SkillsKit/platform-introduction.md) 
-    * 技能创建流程
+  * [技能开发](2-RokidDocument/1-SkillsKit/platform-introduction.md) 
     * [技能语音交互规范](2-RokidDocument/1-SkillsKit/rokid-voice-interaction-guidelines.md)  
       * 重要概念
         * [意图](2-RokidDocument/1-SkillsKit/important-concept/intend.md)
