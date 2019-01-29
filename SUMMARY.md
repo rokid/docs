@@ -220,12 +220,14 @@
     * [基于 VS Code 的 Yeoman & 测试脚本](https://github.com/Rokid/generator-rokid/blob/master/generators/rfs)
     * [读取语音交互日志](2-RokidDocument/1-SkillsKit/test-skill-through-device-log.md)   
 ---------
+帮助和支持
+---------
 * [视频教程](9-video/summary.md)
 * 常见问题
     * [智能家居](rokid-homebase-docs/faq.md)
     * [其他问题收集](https://developer-forum.rokid.com/c/50-category)
----------
 * [求助和文档意见区](https://developer-forum.rokid.com/tags/文档)
+--------- 
 * 服务协议和免责
     * [服务协议](4-TermsAndAgreements/community-service-agreement.md)
     * [免责声明](4-TermsAndAgreements/community-disclaimer.md)
