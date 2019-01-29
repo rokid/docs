@@ -1,13 +1,5 @@
 # Summary
 
-* Rokid 开放平台
-  - [平台整体介绍](README.md)
-    - [语音整体方案简介](5-enableVoice/rokid-vsvy-sdk-docs/introduction.md) 
-  - 平台使用说明和工具（参考）
-    * [产品创建和sn导入流程](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/rookie-guide-end.md)
-    * [系统升级OTA](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/ota.md) 
-    * [设备数据管理](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/data.md)
-    * [聊天问答配置](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/chat.md)
 * 若琪新闻
   - [原力觉醒](https://mp.weixin.qq.com/s/XeY0fG9d40LZUniPsqAS5Q)
   - [眼镜&ceo文章](https://mp.weixin.qq.com/s/I-LImijqkI5lGxpThSm9jg)
@@ -16,7 +8,6 @@
 技术文档
 ---------
 * 语音接入/YODAOS
-  - [YODAOS 应用框架](https://yodaos-project.github.io/yoda-book/)
   - 能力介绍
     - [Rokid 语音识别](6-asrandtts/asr.md)
     - [Rokid 语音合成](6-asrandtts/tts.md)
@@ -30,7 +21,7 @@
     - [重要概念](5-enableVoice/rokid-vsvy-sdk-docs/important-concept.md)
     - [错误码](5-enableVoice/rokid-vsvy-sdk-docs/common/err_code.md)
     - [JSON 格式配置字串](5-enableVoice/rokid-vsvy-sdk-docs/common/api_json.md) 
-  - sdk方案介绍
+  - sdk
     - [Android 全链路通用方案](5-enableVoice/rokid-vsvy-sdk-docs/fullLink/fulllink.md)
     - [Android 全链路APK级别方案](5-enableVoice/rokid-vsvy-sdk-docs/RokidAiSdk/RokidAiSdk.md)
     - [Android 基础语音模块](5-enableVoice/rokid-vsvy-sdk-docs/speechTTS/speechtts.md)
@@ -50,7 +41,7 @@
       - [volctl](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/vol_ctrl/10_模块简介/15_volctl.md)
       - [display](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/display/10_模块简介/20_display.md)
       - [yimo](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/yimo/README.md)
-*  智能硬件产品开发
+  - [YODAOS 应用框架](https://yodaos-project.github.io/yoda-book/)
   - YODAOS 支持的开发板
     - [k18芯片和开发板（自有）](rokidos-linux-docs/Dev_3.31/13_ROKID_AI_Dev_Board_HW_UserGuide_v3.31.md)
     - [A113](rokidos-linux-docs/reference/dev_board/amlogic/usermanual_a113.md)
@@ -120,26 +111,6 @@
           - [电量查询](rokidos-linux-docs/development/cplusplus/power_ctrl.md)
           - [系统升级](rokidos-linux-docs/development/cplusplus/upgrade.md)
           - [蓝牙](rokidos-linux-docs/development/cplusplus/btflinger.md)
-* Rokid App 方案
-    * Mobile SDK 接入文档
-        * [Mobile SDK 简介](5-enableVoice/rokid-vsvy-sdk-docs/mobliesdk/SDK.md)
-        * [Rokid Moblie Android SDK](https://rokid.github.io/mobile-sdk-android-docs/)
-        * [Rokid Moblie ios SDK](https://rokid.github.io/mobile-sdk-ios-docs/)
-    * 公版App
-        * [Web 配置说明](8-app/alliance/web/gongban.md)
-        * Android 版
-            * [修订记录](8-app/alliance/android/version.md)
-            * [文档说明](8-app/alliance/android/summary.md)
-            * [开发环境](8-app/alliance/android/develop.md)
-            * [工程结构](8-app/alliance/android/resouce_summary.md)
-            * [基础信息配置](8-app/alliance/android/config.md)
-            * [注意事项](8-app/alliance/android/announcement.md)
-        * iOS 版
-            * [修订记录](8-app/alliance/iOS/version.md)
-            * [文档说明](8-app/alliance/iOS/summary.md)
-            * [开发环境](8-app/alliance/iOS/develop.md)
-            * [工程结构](8-app/alliance/iOS/resouce_summary.md)
-            * [基础信息配置](8-app/alliance/iOS/config.md)
 * Rokid 智能家居
   * [方案输出](smarthome/README.md)
     * 行业解决方案
@@ -218,7 +189,35 @@
     * [获取 SSL 证书指南](2-RokidDocument/1-SkillsKit/get-SSL-certificate-tutorial.md)
     * [技能开发 Java 版指南](https://github.com/Rokid/rokid-skill-sample/tree/master/rokid-skill-sample-java)
     * [基于 VS Code 的 Yeoman & 测试脚本](https://github.com/Rokid/generator-rokid/blob/master/generators/rfs)
-    * [读取语音交互日志](2-RokidDocument/1-SkillsKit/test-skill-through-device-log.md)   
+    * [读取语音交互日志](2-RokidDocument/1-SkillsKit/test-skill-through-device-log.md) 
+* App 厂商方案
+    * Mobile SDK 接入文档
+        * [Mobile SDK 简介](5-enableVoice/rokid-vsvy-sdk-docs/mobliesdk/SDK.md)
+        * [Rokid Moblie Android SDK](https://rokid.github.io/mobile-sdk-android-docs/)
+        * [Rokid Moblie ios SDK](https://rokid.github.io/mobile-sdk-ios-docs/)
+    * 公版App
+        * [Web 配置说明](8-app/alliance/web/gongban.md)
+        * Android 版
+            * [修订记录](8-app/alliance/android/version.md)
+            * [文档说明](8-app/alliance/android/summary.md)
+            * [开发环境](8-app/alliance/android/develop.md)
+            * [工程结构](8-app/alliance/android/resouce_summary.md)
+            * [基础信息配置](8-app/alliance/android/config.md)
+            * [注意事项](8-app/alliance/android/announcement.md)
+        * iOS 版
+            * [修订记录](8-app/alliance/iOS/version.md)
+            * [文档说明](8-app/alliance/iOS/summary.md)
+            * [开发环境](8-app/alliance/iOS/develop.md)
+            * [工程结构](8-app/alliance/iOS/resouce_summary.md)
+            * [基础信息配置](8-app/alliance/iOS/config.md)
+* Rokid 开放平台
+  - [平台整体介绍](README.md)
+    - [语音整体方案简介](5-enableVoice/rokid-vsvy-sdk-docs/introduction.md) 
+  - 平台指南和工具（参考）
+    * [产品创建和sn导入流程](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/rookie-guide-end.md)
+    * [系统升级OTA](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/ota.md) 
+    * [设备数据管理](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/data.md)
+    * [聊天问答配置](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/chat.md)
 ---------
 帮助和支持
 ---------
