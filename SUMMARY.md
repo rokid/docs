@@ -1,23 +1,31 @@
 # Summary
 
-* 为什么选择 Rokid
-  - [Rokid 开放平台](README.md)
-    - [语音整体方案简介](5-enableVoice/rokid-vsvy-sdk-docs/introduction.md)
-  - [YODAOS (推荐)](https://yodaos-project.github.io/yoda-book/)
+* Rokid 开放平台
+  - [平台整体介绍](README.md)
+    - [语音整体方案简介](5-enableVoice/rokid-vsvy-sdk-docs/introduction.md) 
+  - 平台使用说明和工具（参考）
+    * [产品创建和sn导入流程](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/rookie-guide-end.md)
+    * [系统升级OTA](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/ota.md) 
+    * [设备数据管理](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/data.md)
+    * [聊天问答配置](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/chat.md)
 * 若琪新闻
   - [原力觉醒](https://mp.weixin.qq.com/s/XeY0fG9d40LZUniPsqAS5Q)
   - [眼镜&ceo文章](https://mp.weixin.qq.com/s/I-LImijqkI5lGxpThSm9jg)
   - [若琪的2018年](https://mp.weixin.qq.com/s/sCDJJAUBlAyc5uEAFihp6Q)
 ---------
-* 语音接入
+技术文档
+---------
+* 语音接入/YODAOS
+  - [YODAOS 应用框架](https://yodaos-project.github.io/yoda-book/)
   - 能力介绍
     - [Rokid 语音识别](6-asrandtts/asr.md)
     - [Rokid 语音合成](6-asrandtts/tts.md)
   - 语音接口开发协议
-    - [语音能力接入流程](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/rokidspeech.md)
     - [Rokid 接口定义](3-ApiReference/rokid-client-sdk-doc.md)
     - [语音 WebSocket 接口开发协议](3-ApiReference/openvoice-api.md)
     - [语音 HTTP 接口开发协议](3-ApiReference/openvoice-api-http.md)
+    - [设备接口文档](3-ApiReference/open-device-manager.md)
+    - [语音能力接入流程（参考）](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/rokidspeech.md)
   - 错误码和重要概念
     - [重要概念](5-enableVoice/rokid-vsvy-sdk-docs/important-concept.md)
     - [错误码](5-enableVoice/rokid-vsvy-sdk-docs/common/err_code.md)
@@ -27,6 +35,21 @@
     - [Android 全链路APK级别方案](5-enableVoice/rokid-vsvy-sdk-docs/RokidAiSdk/RokidAiSdk.md)
     - [Android 基础语音模块](5-enableVoice/rokid-vsvy-sdk-docs/speechTTS/speechtts.md)
     - [Linux基础架构/树莓派](5-enableVoice/rokid-vsvy-sdk-docs/linuxsdk/linuxsdk.md)
+  - YODAOS 开源系统
+    - [本地服务简介](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/system-service.md)
+    - [编译与运行](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/compile-run.md)
+    - 系统服务模块简介
+      - [httpdns](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/httpdns/10_模块简介/10_httpdns.md)
+      - [lumenlight](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/lumenlight/10_模块简介/11_lumenlight.md)
+      - player
+        - [RPlayer](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/librplayer/10_模块简介/12_player/10_RPlayer.md)
+        - [WavPlayer](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/librplayer/10_模块简介/12_player/11_WavPlayer.md)
+      - [rklog](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/rklog/10_模块简介/13_rklog.md)
+      - [input-event](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/input-event/10_模块简介/14_input-event.md)
+      - [libmemcheck](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/libmemcheck/10_模块简介/14_libmemcheck.md)
+      - [volctl](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/vol_ctrl/10_模块简介/15_volctl.md)
+      - [display](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/display/10_模块简介/20_display.md)
+      - [yimo](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/yimo/README.md)
 *  智能硬件产品开发
   - [k18芯片和开发板](rokidos-linux-docs/Dev_3.31/13_ROKID_AI_Dev_Board_HW_UserGuide_v3.31.md)
   - BSP/驱动开发
@@ -54,21 +77,7 @@
     - [SN与Seed烧写](7-bspguide/snyu_seed_shao_xie.md)
     - [配网验证](7-bspguide/pei_wang_yan_zheng/README.md)
       - [BT配网](7-bspguide/pei_wang_yan_zheng/btpei_wang.md)
-  - YODAOS开源系统
-    - [本地服务简介](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/system-service.md)
-    - [编译与运行](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/compile-run.md)
-    - 系统服务模块简介
-      - [httpdns](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/httpdns/10_模块简介/10_httpdns.md)
-      - [lumenlight](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/lumenlight/10_模块简介/11_lumenlight.md)
-      - player
-        - [RPlayer](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/librplayer/10_模块简介/12_player/10_RPlayer.md)
-        - [WavPlayer](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/librplayer/10_模块简介/12_player/11_WavPlayer.md)
-      - [rklog](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/rklog/10_模块简介/13_rklog.md)
-      - [input-event](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/input-event/10_模块简介/14_input-event.md)
-      - [libmemcheck](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/libmemcheck/10_模块简介/14_libmemcheck.md)
-      - [volctl](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/vol_ctrl/10_模块简介/15_volctl.md)
-      - [display](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/display/10_模块简介/20_display.md)
-      - [yimo](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/yimo/README.md)
+  - [声学认证](https://developer-forum.rokid.com/t/topic/2837)
   - [Amlogic开发平台](rokidos-linux-docs/README.md)
     - 开发套件使用手册
       - [基本参数](rokidos-linux-docs/reference/dev_board/board_list.md)
@@ -177,7 +186,6 @@
     * 高级功能
       * [Webhook](rokid-homebase-docs/webhook/index.md)
   * [FAQ](rokid-homebase-docs/faq.md)
----------
 * 技能接入
   * 授权开通和配置
     * [技能开通](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/skillstore.md) 
@@ -199,8 +207,8 @@
     * 技能审核和上线规范
         * [技能发布标准](4-TermsAndAgreements/rokid-skill-release-standard.md)
         * [技能审核规范](4-TermsAndAgreements/rokid-skill-examine-and-verify-standard.md)
-    * [Rokid 云端技能协议](2-RokidDocument/1-SkillsKit/important-concept/cloud-app-development-protocol_cn.md)
   * 技能开发指南
+    * [Rokid 云端技能协议](2-RokidDocument/1-SkillsKit/important-concept/cloud-app-development-protocol_cn.md)
     * [Rokid Force System 使用指南](2-RokidDocument/1-SkillsKit/rokid-force-system-tutorial.md)
     * [Rokid Force JS 使用指南](2-RokidDocument/1-SkillsKit/rokid-force-js-tutorial.md)
     * [SSML 使用指南](2-RokidDocument/1-SkillsKit/ssml-document.md)
@@ -209,21 +217,13 @@
     * [获取 SSL 证书指南](2-RokidDocument/1-SkillsKit/get-SSL-certificate-tutorial.md)
     * [技能开发 Java 版指南](https://github.com/Rokid/rokid-skill-sample/tree/master/rokid-skill-sample-java)
     * [基于 VS Code 的 Yeoman & 测试脚本](https://github.com/Rokid/generator-rokid/blob/master/generators/rfs)
-    * [读取语音交互日志](2-RokidDocument/1-SkillsKit/test-skill-through-device-log.md)
-* 认证和上线
-  * 相关认证和sn导入
-    * [声学认证](https://developer-forum.rokid.com/t/topic/2837)
-    * [设备接口文档](3-ApiReference/open-device-manager.md)
-    * [产品创建和sn导入流程](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/rookie-guide-end.md)
-  * 工具
-    * [系统升级OTA](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/ota.md) 
-    * [设备数据管理](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/data.md)
-    * [聊天问答配置](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/chat.md) 
+    * [读取语音交互日志](2-RokidDocument/1-SkillsKit/test-skill-through-device-log.md)   
 ---------
 * [视频教程](9-video/summary.md)
 * 常见问题
     * [智能家居](rokid-homebase-docs/faq.md)
     * [其他问题收集](https://developer-forum.rokid.com/c/50-category)
+---------
 * [求助和文档意见区](https://developer-forum.rokid.com/tags/文档)
 * 服务协议和免责
     * [服务协议](4-TermsAndAgreements/community-service-agreement.md)
