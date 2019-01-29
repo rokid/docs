@@ -51,7 +51,9 @@
       - [display](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/display/10_模块简介/20_display.md)
       - [yimo](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/yimo/README.md)
 *  智能硬件产品开发
-  - [k18芯片和开发板](rokidos-linux-docs/Dev_3.31/13_ROKID_AI_Dev_Board_HW_UserGuide_v3.31.md)
+  - YODAOS 支持的开发板
+    - [k18芯片和开发板（自有）](rokidos-linux-docs/Dev_3.31/13_ROKID_AI_Dev_Board_HW_UserGuide_v3.31.md)
+    - [A113](rokidos-linux-docs/reference/dev_board/amlogic/usermanual_a113.md)
   - BSP/驱动开发
     - [目的与适用范围](7-bspguide/gai_shu/mu_de.md)
     - [Kamino18平台简介]
@@ -78,12 +80,14 @@
     - [配网验证](7-bspguide/pei_wang_yan_zheng/README.md)
       - [BT配网](7-bspguide/pei_wang_yan_zheng/btpei_wang.md)
   - [声学认证](https://developer-forum.rokid.com/t/topic/2837)
-  - [Amlogic开发平台](rokidos-linux-docs/README.md)
+  - 硬件设计参考方案
+    - [Rokid 语音产品硬件设计指南](2-RokidDocument/2-EnableVoice/rokid-hardware-design-guide.md)
+    - [Rokid 硬件交互设计指南](2-RokidDocument/2-EnableVoice/rokid-hardware-ux-design-guidelines.md)
+  - [其他开发平台（已下架）](rokidos-linux-docs/README.md)
     - 开发套件使用手册
       - [基本参数](rokidos-linux-docs/reference/dev_board/board_list.md)
       - [联网教程](rokidos-linux-docs/source/system_setting/connect_to_internet.md)
     - 编译指南
-      - [A113](rokidos-linux-docs/reference/dev_board/amlogic/usermanual_a113.md)
       - [S905D](rokidos-linux-docs/reference/dev_board/amlogic/usermanual_s905d.md)
     - [刷机教程](rokidos-linux-docs/source/downloading_building/burn_image.md)
     - [自定义激活词配置](rokidos-linux-docs/source/system_setting/custom_activation.md)
@@ -116,9 +120,6 @@
           - [电量查询](rokidos-linux-docs/development/cplusplus/power_ctrl.md)
           - [系统升级](rokidos-linux-docs/development/cplusplus/upgrade.md)
           - [蓝牙](rokidos-linux-docs/development/cplusplus/btflinger.md)
-  - 硬件设计参考方案
-    - [Rokid 语音产品硬件设计指南](2-RokidDocument/2-EnableVoice/rokid-hardware-design-guide.md)
-    - [Rokid 硬件交互设计指南](2-RokidDocument/2-EnableVoice/rokid-hardware-ux-design-guidelines.md)
 * Rokid App 方案
     * Mobile SDK 接入文档
         * [Mobile SDK 简介](5-enableVoice/rokid-vsvy-sdk-docs/mobliesdk/SDK.md)
@@ -230,7 +231,7 @@
     * [免责声明](4-TermsAndAgreements/community-disclaimer.md)
     * [联系我们](contact-us.md)
 ---------    
-* YODAOS English document
+English document
 ---------  
 * BSP/Driver Develop Guide
 	* [Rokid Kamino18 Universal Install Guide V2.5](10-bspguide-eng/README.md)
