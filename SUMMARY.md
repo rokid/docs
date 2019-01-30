@@ -1,6 +1,6 @@
 # Summary
 
-* 若琪新闻
+* 了解若琪
   - [YODAOS正式开源](https://developer-forum.rokid.com/t/topic/2890)
   - [眼镜&ceo文章](https://mp.weixin.qq.com/s/I-LImijqkI5lGxpThSm9jg)
   - [若琪的2018年](https://mp.weixin.qq.com/s/sCDJJAUBlAyc5uEAFihp6Q)
@@ -232,38 +232,37 @@
     * [免责声明](4-TermsAndAgreements/community-disclaimer.md)
     * [联系我们](contact-us.md)
 ---------    
-English document
----------  
-* BSP/Driver Develop Guide
-	* [Rokid Kamino18 Universal Install Guide V2.5](10-bspguide-eng/README.md)
-	* [General Description & Purpose](10-bspguide-eng/general_description/README.md)
-		* [Range](10-bspguide-eng/general_description/range.md)
-	* [Kamino18 Platform Introduction](10-bspguide-eng/kamino18_platform_introduction/README.md)
-		* [K18 Chip Diagram](10-bspguide-eng/kamino18_platform_introduction/k18_chip_diagram.md)
-		* [Smart Speaker Solution Introduction](10-bspguide-eng/kamino18_platform_introduction/smart_speaker_solution_introduction.md)
-		* [K18 Dev3.0 Board Introduction](10-bspguide-eng/kamino18_platform_introduction/k18_dev30_board_introduction.md)
-	* [Software Folder Structue and Compiling Method](10-bspguide-eng/software_folder_structue_and_compiling_method/README.md)
-		* [Software Folder Structure](10-bspguide-eng/software_folder_structue_and_compiling_method/software_folder_structure.md)
-		* [Compiling Environment](10-bspguide-eng/software_folder_structue_and_compiling_method/compiling_environment.md)
-		* [Code Compile](10-bspguide-eng/software_folder_structue_and_compiling_method/code_compile.md)
-	* [PINMUX and GPIO Setup](10-bspguide-eng/pinmux_and_gpio_setup/README.md)
-		* [MCU Domain PINMUX Setup](10-bspguide-eng/pinmux_and_gpio_setup/mcu_domain_pinmux_setup.md)
-		* [ARM Domain PINMUX Setup](10-bspguide-eng/pinmux_and_gpio_setup/arm_domain_pinmux_setup.md)
-		* [GPIO Setting](10-bspguide-eng/pinmux_and_gpio_setup/gpio_setting.md)
-	* [Flash Partition and File System Management](10-bspguide-eng/flash_partition_and_file_system_management/README.md)
-		* [Partition Setup](10-bspguide-eng/flash_partition_and_file_system_management/partition_setup.md)
-		* [File System Setup](10-bspguide-eng/flash_partition_and_file_system_management/file_system_setup.md)
-	* [Image Burning](10-bspguide-eng/image_burning/README.md)
-		* [Image Location](10-bspguide-eng/image_burning/image_location.md)
-		* [Image Burning Tool Utilization for Linux PC](10-bspguide-eng/image_burning/image_burning_tool_utilization_for_linux_pc.md)
-		* [Image Burning Tool Utilization for Windows PC](10-bspguide-eng/image_burning/image_burning_tool_utilization_for_windows_pc.md)
-		* [Image Burning Tool Utilization for Factory](10-bspguide-eng/image_burning/image_burning_tool_utilization_for_factory.md)
-	* [SN and Seed Burning](10-bspguide-eng/sn_and_seed_burning.md)
-	* [Network Setup](10-bspguide-eng/network_setup/README.md)
-		* [Network Setup through BT](10-bspguide-eng/network_setup/network_setup_through_bt.md)
-	* [Q&A](10-bspguide-eng/q&a.md)
-* [YODAOS book](https://yodaos-project.github.io/yoda-book/en-us/)
-* [YODAOS Build Environment](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/general/YodaOS_Build_Environment.md)
+* English document 
+  * BSP/Driver Develop Guide
+	  * [Rokid Kamino18 Universal Install Guide V2.5](10-bspguide-eng/README.md)
+	  * [General Description & Purpose](10-bspguide-eng/general_description/README.md)
+		  * [Range](10-bspguide-eng/general_description/range.md)
+	  * [Kamino18 Platform Introduction](10-bspguide-eng/kamino18_platform_introduction/README.md)
+		  * [K18 Chip Diagram](10-bspguide-eng/kamino18_platform_introduction/k18_chip_diagram.md)
+		  * [Smart Speaker Solution Introduction](10-bspguide-eng/kamino18_platform_introduction/smart_speaker_solution_introduction.md)
+		  * [K18 Dev3.0 Board Introduction](10-bspguide-eng/kamino18_platform_introduction/k18_dev30_board_introduction.md)
+	  * [Software Folder Structue and Compiling Method](10-bspguide-eng/software_folder_structue_and_compiling_method/README.md)
+		  * [Software Folder Structure](10-bspguide-eng/software_folder_structue_and_compiling_method/software_folder_structure.md)
+		  * [Compiling Environment](10-bspguide-eng/software_folder_structue_and_compiling_method/compiling_environment.md)
+		  * [Code Compile](10-bspguide-eng/software_folder_structue_and_compiling_method/code_compile.md)
+	  * [PINMUX and GPIO Setup](10-bspguide-eng/pinmux_and_gpio_setup/README.md)
+		  * [MCU Domain PINMUX Setup](10-bspguide-eng/pinmux_and_gpio_setup/mcu_domain_pinmux_setup.md)
+		  * [ARM Domain PINMUX Setup](10-bspguide-eng/pinmux_and_gpio_setup/arm_domain_pinmux_setup.md)
+		  * [GPIO Setting](10-bspguide-eng/pinmux_and_gpio_setup/gpio_setting.md)
+	  * [Flash Partition and File System Management](10-bspguide-eng/flash_partition_and_file_system_management/README.md)
+		  * [Partition Setup](10-bspguide-eng/flash_partition_and_file_system_management/partition_setup.md)
+		  * [File System Setup](10-bspguide-eng/flash_partition_and_file_system_management/file_system_setup.md)
+	  * [Image Burning](10-bspguide-eng/image_burning/README.md)
+		  * [Image Location](10-bspguide-eng/image_burning/image_location.md)
+		  * [Image Burning Tool Utilization for Linux PC](10-bspguide-eng/image_burning/image_burning_tool_utilization_for_linux_pc.md)
+		  * [Image Burning Tool Utilization for Windows PC](10-bspguide-eng/image_burning/image_burning_tool_utilization_for_windows_pc.md)
+		  * [Image Burning Tool Utilization for Factory](10-bspguide-eng/image_burning/image_burning_tool_utilization_for_factory.md)
+	  * [SN and Seed Burning](10-bspguide-eng/sn_and_seed_burning.md)
+	  * [Network Setup](10-bspguide-eng/network_setup/README.md)
+		  * [Network Setup through BT](10-bspguide-eng/network_setup/network_setup_through_bt.md)
+	  * [Q&A](10-bspguide-eng/q&a.md)
+  * [YODAOS book](https://yodaos-project.github.io/yoda-book/en-us/)
+  * [YODAOS Build Environment](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/general/YodaOS_Build_Environment.md)
 
 
 
