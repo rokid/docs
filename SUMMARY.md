@@ -41,7 +41,7 @@
       - [volctl](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/vol_ctrl/10_模块简介/15_volctl.md)
       - [display](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/display/10_模块简介/20_display.md)
       - [yimo](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/yimo/README.md)
-  - [YODAOS 应用框架](https://yodaos-project.github.io/yoda-book/)
+  - [YODAOS 应用框架](https://yodaos-project.github.io/yoda-book/zh-cn/)
   - YODAOS 支持的开发板
     - [k18芯片和开发板（自有）](rokidos-linux-docs/Dev_3.31/13_ROKID_AI_Dev_Board_HW_UserGuide_v3.31.md)
     - [A113](rokidos-linux-docs/reference/dev_board/amlogic/usermanual_a113.md)
