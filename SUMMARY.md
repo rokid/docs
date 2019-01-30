@@ -210,7 +210,7 @@
             * [开发环境](8-app/alliance/iOS/develop.md)
             * [工程结构](8-app/alliance/iOS/resouce_summary.md)
             * [基础信息配置](8-app/alliance/iOS/config.md)
-* Rokid 开放平台
+* 平台使用说明
   - [平台整体介绍](README.md)
     - [语音整体方案简介](5-enableVoice/rokid-vsvy-sdk-docs/introduction.md) 
   - 平台指南和工具（参考）
@@ -222,10 +222,10 @@
 帮助和支持
 ---------
 * [视频教程](9-video/summary.md)
-* 常见问题
+* 常见问题和讨论区
     * [智能家居](rokid-homebase-docs/faq.md)
     * [其他问题收集](https://developer-forum.rokid.com/c/50-category)
-* [求助和文档意见区](https://developer-forum.rokid.com/tags/文档)
+    * [求助和文档意见区](https://developer-forum.rokid.com/tags/文档)
 --------- 
 * 服务协议和免责
     * [服务协议](4-TermsAndAgreements/community-service-agreement.md)
