@@ -226,6 +226,7 @@
     * [智能家居](rokid-homebase-docs/faq.md)
     * [其他问题收集](https://developer-forum.rokid.com/c/50-category)
     * [求助和文档意见区](https://developer-forum.rokid.com/tags/文档)
+* [k18开发板购买通道](https://detail.youzan.com/show/goods?alias=2g1gpqlb5vr8c&)    
 --------- 
 * 服务协议和免责
     * [服务协议](4-TermsAndAgreements/community-service-agreement.md)
