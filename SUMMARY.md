@@ -225,7 +225,7 @@
 帮助和支持
 ---------
 * [视频教程](9-video/summary.md)
-* [有问必答](https://forum.rokid.com/category/all)
+* [有问必答和反馈意见](https://forum.rokid.com/category/all)
 * [k18开发板购买通道](https://detail.youzan.com/show/goods?alias=2g1gpqlb5vr8c&)    
 --------- 
 * 服务协议和免责
