@@ -12,5 +12,3 @@
 ### 公版app开发/Android篇
 {% video %}https://yodaos-video.rokidcdn.com/app-android.mp4{% endvideo %}
 
-### 运营后台工具使用方法
-{% video %}https://yodaos-video.rokidcdn.com/operation-backstage.mp4{% endvideo %}
