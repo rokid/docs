@@ -13,7 +13,7 @@
     - [Rokid 语音合成](6-asrandtts/tts.md)
   - 语音接口开发协议
     - [SDK 接口定义](3-ApiReference/rokid-client-sdk-doc.md)
-    - [云端语音接口开发协议](3-ApiReference/openvoice-api.md)
+    - 云端语音接口开发协议
       - [云端语音 WebSocket 接口开发协议](3-ApiReference/openvoice-api-websocket.md)
       - [云端语音 HTTP 接口开发协议](3-ApiReference/openvoice-api-http.md)
     - [设备接口文档](3-ApiReference/open-device-manager.md)
