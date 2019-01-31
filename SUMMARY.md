@@ -4,6 +4,8 @@
   - [YODAOS正式开源](https://developer-forum.rokid.com/t/topic/2890)
   - [眼镜&ceo文章](https://mp.weixin.qq.com/s/I-LImijqkI5lGxpThSm9jg)
   - [若琪的2018年](https://mp.weixin.qq.com/s/sCDJJAUBlAyc5uEAFihp6Q)
+  - [rokid 音箱](https://www.rokid.com/me.html)
+  - [rokid glass](https://glass.rokid.com)
 ---------
 技术文档
 ---------
