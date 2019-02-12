@@ -36,7 +36,7 @@
       - [方案简介](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/yodaosavs/1方案简介.md)
       - [功能演示说明](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/yodaosavs/2功能演示说明.md)
       - [功能流程](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/yodaosavs/3功能流程.md)
-      - [设备接口说明](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/yodaosavs/设备接口说明.md)
+      - [设备接口说明](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/yodaosavs/4设备接口说明.md)
     - 系统服务模块简介
       - [httpdns](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/httpdns/10_模块简介/10_httpdns.md)
       - [lumenlight](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/lumenlight/10_模块简介/11_lumenlight.md)
