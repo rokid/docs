@@ -24,19 +24,19 @@
     - [重要概念](5-enableVoice/rokid-vsvy-sdk-docs/important-concept.md)
     - [错误码](5-enableVoice/rokid-vsvy-sdk-docs/common/err_code.md)
     - [JSON 格式配置字串](5-enableVoice/rokid-vsvy-sdk-docs/common/api_json.md) 
-  - sdk
+  - SDK
     - [Android 全链路通用方案](5-enableVoice/rokid-vsvy-sdk-docs/fullLink/fulllink.md)
     - [Android 全链路APK级别方案](5-enableVoice/rokid-vsvy-sdk-docs/RokidAiSdk/RokidAiSdk.md)
     - [Android 基础语音模块](5-enableVoice/rokid-vsvy-sdk-docs/speechTTS/speechtts.md)
     - [Linux基础架构/树莓派](5-enableVoice/rokid-vsvy-sdk-docs/linuxsdk/linuxsdk.md)
+  - YODAOS AVS 方案/海外
+    - [方案简介](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/yodaosavs/1方案简介.md)
+    - [功能演示说明](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/yodaosavs/2功能演示说明.md)
+    - [功能流程](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/yodaosavs/3功能流程.md)
+    - [设备接口说明](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/yodaosavs/4设备接口说明.md)
   - YODAOS 开源系统
     - [本地服务简介](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/system-service.md)
-    - [编译与运行](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/compile-run.md)
-    - YODAOS AVS 方案
-      - [方案简介](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/yodaosavs/1方案简介.md)
-      - [功能演示说明](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/yodaosavs/2功能演示说明.md)
-      - [功能流程](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/yodaosavs/3功能流程.md)
-      - [设备接口说明](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/yodaosavs/4设备接口说明.md)
+    - [编译与运行](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/compile-run.md) 
     - 系统服务模块简介
       - [httpdns](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/httpdns/10_模块简介/10_httpdns.md)
       - [lumenlight](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/lumenlight/10_模块简介/11_lumenlight.md)
