@@ -1,6 +1,6 @@
-# API文档
+### 开放平台接口定义文档(http版) - 语音合成
 
-## 认证方式
+### 认证方式
 
 客户端发起 HTTP 请求时，需要在 HTTP 头部中增加字段 Authorization，支持设备验证方式。
 
@@ -65,50 +65,6 @@ func makeMD5(data string) string {
 
 通过HTTP头部的Content-Type字段支持不同的编码格式，目前支持JSON和Protobuf2，默认为Protobuf2。如果客户端需要JSON格式，可以在HTTP头部设置`Content-Type为application/json;charset=utf-8`
 JSON 中 bytes 数据以 base64 编码的字符串表示
-
-## 语音识别API
-
-### 请求URL
-
-
-线上：<https://apigwrest.open.rokid.com/api/v1/asr/AsrProxy/Asr>
-
-### proto 文件
-
-[proto](https://github.com/Rokid/rokid-openvoice-http/blob/master/protobuf/asr.proto)
-
-### 请求和回复数据
-
-``` protobuf
-syntax = "proto2";
-
-package rokid.open.v1.asr.AsrProxy;
-
-message AsrRequest {
-    required bytes voice         = 1;
-    optional string lang         = 2;
-    optional string codec        = 3;
-}
-
-message AsrResponse {
-    required string asr          = 1;
-}
-
-```
-
-### AsrRequest 字段说明
-
-| 参数    | 类型    | 描述                                   | 默认值  |
-| --------| ------ | -------------------------------       | ---- |
-| voice   | bytes  | 语音二进制数据 | 无，必填 |
-| lang    | string | 语言，可选范围：zh                      | zh，可选 |
-| codec   | string | 编码格式，可选范围：pcm, opu, opu2       | pcm，可选 |
-
-### AsrResponse 字段说明
-
-| 参数             | 类型     | 描述                         | 默认值  |
-| -------------- | ------ | ------------------------------- | ---- |
-| asr            | string  | 语音文本结果                    | 无 |
 
 ## 语音合成API
 
