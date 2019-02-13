@@ -17,7 +17,7 @@
     - [SDK 接口定义](3-ApiReference/rokid-client-sdk-doc.md)
     - 云端语音接口开发协议
       - [云端语音 WebSocket 接口开发协议](3-ApiReference/openvoice-api.md)
-      - [云端语音 Http 接口开发协议-语音识别](3-ApiReference/openvoice-http-api.md)
+      - [云端语音 HTTP 接口开发协议-语音识别](3-ApiReference/openvoice-http-api.md)
       - [云端语音 HTTP 接口开发协议-语音合成](3-ApiReference/openvoice-api-http.md)
     - [设备接口文档](3-ApiReference/open-device-manager.md)
     - [语音能力接入流程（参考）](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/rokidspeech.md)
