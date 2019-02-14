@@ -87,6 +87,7 @@ time={time};sign={sign};key={key};device_type_id={device_type_id};device_id={dev
 |     | lang | string | 语音流的语言，目前支持 ZH。  | ZH |
 |    | codec | string | 语音流的编码，目前支持 PCM，OPU，OPU2，OPUS，AMRWB，AMRNB，PCM8K。<br />PCM，OPU，OPU2，OPUS，AMRWB 的语音数据格式为单通道，采样率16Khz，16bit；<br />AMRNB，PCM8K的语音数据格式为单通道，采样率8Khz，16bit； | PCM   |
 |      | voiceTrigger | string | 激活词，即用于唤醒设备的名字，如"若琪"；<br />可用 "&#0124;" 分隔指定多个，如 "若琪&#0124;洛奇"<br />若指定，则会提高对此词的识别 | 空     |
+|     | noNlp | bool | 是否需要语义理解（nlp）。  | false |
 
 
 5. 后续段的 Content-Disposition: form-data; **name**="xxx"，其中 name 可以任意，其Content-Type 应为 application/octet-stream，内容为语音内容
@@ -108,6 +109,10 @@ time={time};sign={sign};key={key};device_type_id={device_type_id};device_id={dev
 | type  | RespType | 结果类型：FINISH |
 | asr    | string | asr识别的结果     |
 | asrScores | float 数组 | asr识别的得分 |
+| nlp    | string | nlp识别的结果: {"appId": "技能id", "appName": "技能名称", "asr": "asr识别结果", "cloud": "是否为云端技能: true / fasle", "intent": "意图", "pattern": "设定的用户语句","slots": { "槽名称": { "type": "槽类型", "value": "槽的值" }}}|
+| action | string | cloud app处理的结果，json字符串 |
+| extra | string | 目前有：{"activation": "xxx"} |
+| vpr | string | 声纹的结果，json字符串，目前为：{"id": "xxx"} |
 
 1. 包含**多个**语音数据的语音交互时，仅当是最后一个请求即 type 为 END 的包有以上响应
 2. 只包含**一个**语音数据的语音交互时，即 type 为 ONESHOT 的请求同样也有以上响应
