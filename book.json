@@ -4,11 +4,15 @@
     "expandable-chapters-interactive",
     "vistors-github",
     "mermaid-gb3",
-    "html5-video"
+    "html5-video",
+    "github-issue-feedback"
   ],
   "pluginsConfig" : {
     "vistors-github": {
       "repo": "Rokid/docs"
+    },
+    "github-issue-feedback": {
+        "repo": "Rokid/docs"
     }
   }
 }
