@@ -6,6 +6,7 @@
   - [若琪的2018年](https://mp.weixin.qq.com/s/sCDJJAUBlAyc5uEAFihp6Q)
   - [rokid 音箱](https://www.rokid.com/alien.html)
   - [rokid glass](https://glass.rokid.com)
+* [文档意见反馈和问答](https://developer-forum.rokid.com/c/53-category)
 ---------
 技术文档
 ---------
@@ -231,7 +232,6 @@
 帮助和支持
 ---------
 * [视频教程](9-video/summary.md)
-* [有问必答和反馈意见](https://forum.rokid.com/category/all)
 * [k18开发板购买通道](https://detail.youzan.com/show/goods?alias=2g1gpqlb5vr8c&)    
 --------- 
 * 服务协议和免责
