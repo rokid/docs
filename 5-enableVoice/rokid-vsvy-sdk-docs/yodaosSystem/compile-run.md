@@ -7,16 +7,35 @@ YodaOS Universal 如何配置系统和应用
 
 ### <span id="yodaos">一.YODAOS完整体验</span>
 #### 下载代码
+Yodaos使用git作为源代码管理工具，用Repo 命令行工具管理多个git代码仓库，下载代码时需要用户注册成为Rokid 平台开发者。
 
-1. google repo:
+##### 注册成为 Rokid 平台开发者
+*	 注册方式
+单击[http://openai-corp.rokid.com](http://openai-corp.rokid.com)，并注册为rokid开发人员（注册,请用英文填写username和fullname）。
+*       登录方式
+登录[https://openai-corp.rokid.com/](http://openai-corp.rokid.com)，会统一跳转到 Rokid开发者网站 进行授权认证，登录后会跳转到 gerrit 页面，右上角就是登录用户名。
+*	代码访问权限说明
+gerrit 服务仅开放 ssh 方式下载，所以必须先将你机器的公钥 添加到你个人账号下（右上角账号->Settings->ssh public keys->add key）。 注册的用户必须进行特定的授权后才可以下载。
 
-```sh
-  repo init -u ssh://yourname@openai-corp.rokid.com:29418/kamino_universal_cust/open-platform/manifest -m yodaos-7.27.0-alpha-20181030.xml
+##### 安装repo 工具
+
+repo是Google开发的用于管理Android版本库的一个工具，Repo管理很多的git仓库,可以做统一的上传等其他操作,并且可以自动化部分Andoid开发流程。repo并不意味着取代Git，而是为了让Android开发者更为有效的利用git。repo命令是一个可执行的python脚本，可以放在路径中的任何位置。
+
+按照以下命令手动安装：
+
 ```
-2. rokid repo:
+  $ sudo curl https://raw.githubusercontent.com/yodaos-project/yodaos/master/tools/repo > /usr/local/bin/repo
+  $ sudo chmod 777 /usr/local/bin/repo
+```
+
+目前以稳定分支v7.30.x为例子
+
+*       repo init:
 
 ```sh
-  repo init -u ssh://yourname@openai-corp.rokid.com:29418/kamino_universal_cust/open-platform/manifest -m yodaos-7.27.0-alpha-20181030.xml -repo-url=ssh://yourname@openai-corp.rokid.com:29418/tools/repo  --no-repo-verify
+  $ repo init -u https://github.com/yodaos-project/yodaos.git -m manifest.xml --repo-url=http://openai-corp.rokid.com/tools/repo --no-repo-verify
+  $ .repo/manifests/tools/repo-username -u {your rokid developer username} # set your username to fetch source from gerrit
+  $ repo sync
 ```
 
 #### 代码结构
@@ -36,7 +55,7 @@ YodaOS Universal 如何配置系统和应用
     ├── tools：系统工具
     ├── uboot：uboot
     └── vendor：第三方厂家文件
-  ```
+```
 
 #### 安装编译依赖工具
 
@@ -217,7 +236,7 @@ YODAOS 是基于 openwrt 编译系统，所以需要了解优化后的目录结�
 * `Config.in` 在 `include/toplevel.mk` 中我们可以看到，这是和 `make menuconfig` 相关联的文件。
 * `feeds.conf.default` 是下载第三方一些软件包时所使用的地址。
 * LICENSE & README 即软件许可证和软件基本说明，README 描述了编译软件的基本过程和依赖文件。
-   
+  
 ###### 生成目录
 
 * `build_dir` 在前面的原始目录中，我们提到了 host 工具，toolchain 工具还有目标文件。OpenWrt 将在这个目录中展开各个软件包，进行编译，所以这个文件夹中包含3个子文件夹:
