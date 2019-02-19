@@ -127,7 +127,7 @@ ROKID AI Dev v3.31开发板外部连接非常简单，插入12V/1A DC 适配器�
 
 ### 烧写Image与SN
 
-1.  安装设备驱动
+1.  安装设备驱动，安装文件和说明在leo-k18-universal-glibc/bootx_win/driver_install目录下
 
 2.  将microUSB 线一端连到开发板USB Slave接口，另一端插入PC；
 
