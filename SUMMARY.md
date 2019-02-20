@@ -200,12 +200,12 @@
     * [技能开发 Java 版指南](https://github.com/Rokid/rokid-skill-sample/tree/master/rokid-skill-sample-java)
     * [基于 VS Code 的 Yeoman & 测试脚本](https://github.com/Rokid/generator-rokid/blob/master/generators/rfs)
     * [读取语音交互日志](2-RokidDocument/1-SkillsKit/test-skill-through-device-log.md) 
-* App 厂商方案
-    * Mobile SDK 接入文档
+* App 开发
+    * Mobile SDK （适用于厂商有自己的app）
         * [Mobile SDK 简介](5-enableVoice/rokid-vsvy-sdk-docs/mobliesdk/SDK.md)
         * [Rokid Moblie Android SDK](https://rokid.github.io/mobile-sdk-android-docs/)
         * [Rokid Moblie ios SDK](https://rokid.github.io/mobile-sdk-ios-docs/)
-    * 公版App
+    * 公版App(适用于厂商无自有app）
         * [Web 配置说明](8-app/alliance/web/gongban.md)
         * Android 版
             * [修订记录](8-app/alliance/android/version.md)
