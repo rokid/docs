@@ -4,8 +4,8 @@
   - [YODAOS正式开源](https://developer-forum.rokid.com/t/topic/2890)
   - [眼镜&ceo文章](https://mp.weixin.qq.com/s/I-LImijqkI5lGxpThSm9jg)
   - [若琪的2018年](https://mp.weixin.qq.com/s/sCDJJAUBlAyc5uEAFihp6Q)
-  - [rokid 音箱](https://www.rokid.com/alien.html)
-  - [rokid glass](https://glass.rokid.com)
+  - [Rokid 音箱](https://www.rokid.com/alien.html)
+  - [Rokid glass](https://glass.rokid.com)
 * [文档意见反馈和问答](https://developer-forum.rokid.com/c/53-category)
 ---------
 技术文档
@@ -26,7 +26,7 @@
     - [重要概念](5-enableVoice/rokid-vsvy-sdk-docs/important-concept.md)
     - [错误码](5-enableVoice/rokid-vsvy-sdk-docs/common/err_code.md)
     - [JSON 格式配置字串](5-enableVoice/rokid-vsvy-sdk-docs/common/api_json.md) 
-  - SDK
+  - 语音方案SDK
     - [Android 全链路通用方案](5-enableVoice/rokid-vsvy-sdk-docs/fullLink/fulllink.md)
     - [Android 全链路APK级别方案](5-enableVoice/rokid-vsvy-sdk-docs/RokidAiSdk/RokidAiSdk.md)
     - [Android 基础语音模块](5-enableVoice/rokid-vsvy-sdk-docs/speechTTS/speechtts.md)
