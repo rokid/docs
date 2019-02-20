@@ -228,6 +228,7 @@
     * [系统升级OTA](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/ota.md) 
     * [设备数据管理](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/data.md)
     * [聊天问答配置](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/chat.md)
+    * [语音识别改写](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/query.md)
 ---------
 帮助和支持
 ---------
