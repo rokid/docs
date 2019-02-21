@@ -2,10 +2,10 @@
 
 * 了解若琪
   - [YODAOS正式开源](https://developer-forum.rokid.com/t/topic/2890)
-  - [眼镜&ceo文章](https://mp.weixin.qq.com/s/I-LImijqkI5lGxpThSm9jg)
   - [若琪的2018年](https://mp.weixin.qq.com/s/sCDJJAUBlAyc5uEAFihp6Q)
   - [Rokid 音箱](https://www.rokid.com/alien.html)
-  - [Rokid glass](https://glass.rokid.com)
+  - [Rokid Glass](https://glass.rokid.com)
+  - [ceo关于眼镜的文章](https://mp.weixin.qq.com/s/I-LImijqkI5lGxpThSm9jg)
 * [文档意见反馈和问答](https://developer-forum.rokid.com/c/53-category)
 ---------
 技术文档
@@ -201,7 +201,7 @@
     * [基于 VS Code 的 Yeoman & 测试脚本](https://github.com/Rokid/generator-rokid/blob/master/generators/rfs)
     * [读取语音交互日志](2-RokidDocument/1-SkillsKit/test-skill-through-device-log.md) 
 * App 开发
-    * Mobile SDK （适用于厂商有自己的app）
+    * Mobile SDK （厂商接入自有app）
         * [Mobile SDK 简介](5-enableVoice/rokid-vsvy-sdk-docs/mobliesdk/SDK.md)
         * [Rokid Moblie Android SDK](https://rokid.github.io/mobile-sdk-android-docs/)
         * [Rokid Moblie ios SDK](https://rokid.github.io/mobile-sdk-ios-docs/)
