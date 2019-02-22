@@ -11,9 +11,11 @@
 技术文档
 ---------
 * 语音接入/YODAOS
-  - 能力介绍
+  - 语音能力和硬件设计
     - [Rokid 语音识别](6-asrandtts/asr.md)
     - [Rokid 语音合成](6-asrandtts/tts.md)
+    - [Rokid 硬件产品设计指南](2-RokidDocument/2-EnableVoice/rokid-hardware-design-guide.md)
+    - [Rokid 硬件交互设计指南](2-RokidDocument/2-EnableVoice/rokid-hardware-ux-design-guidelines.md)
   - 语音接口开发协议
     - [SDK 接口定义](3-ApiReference/rokid-client-sdk-doc.md)
     - 云端语音接口开发协议
@@ -81,9 +83,6 @@
     - [配网验证](7-bspguide/pei_wang_yan_zheng/README.md)
       - [BT配网](7-bspguide/pei_wang_yan_zheng/btpei_wang.md)
   - [声学认证](https://developer-forum.rokid.com/t/topic/2837)
-  - 硬件设计参考方案
-    - [Rokid 语音产品硬件设计指南](2-RokidDocument/2-EnableVoice/rokid-hardware-design-guide.md)
-    - [Rokid 硬件交互设计指南](2-RokidDocument/2-EnableVoice/rokid-hardware-ux-design-guidelines.md)
   - [其他开发平台（已下架）](rokidos-linux-docs/README.md)
     - 开发套件使用手册
       - [基本参数](rokidos-linux-docs/reference/dev_board/board_list.md)
