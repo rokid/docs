@@ -10,7 +10,7 @@
 ---------
 技术文档
 ---------
-* 语音接入/YODAOS
+* 语音接入（云端和设备端）
   - 语音能力和硬件设计
     - [Rokid 语音识别](6-asrandtts/asr.md)
     - [Rokid 语音合成](6-asrandtts/tts.md)
@@ -167,7 +167,7 @@
     * 高级功能
       * [Webhook](rokid-homebase-docs/webhook/index.md)
   * [FAQ](rokid-homebase-docs/faq.md)
-* 技能接入
+* 技能和内容接入
   * 授权开通和配置
     * [技能开通](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/skillstore.md) 
     * [拦截器接口文档](3-ApiReference/rokid-interceptor.md)
