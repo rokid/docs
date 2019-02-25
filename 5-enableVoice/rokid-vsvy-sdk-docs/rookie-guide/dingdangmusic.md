@@ -7,9 +7,9 @@
 * [三、叮当音乐skill接入流程](#三、叮当音乐skill接入流程)
 
   
-### 一、叮当音乐skill介绍
+### 叮当音乐skill介绍
 
-#### 1.1 叮当音乐skill内容介绍
+#### 叮当音乐skill内容介绍
 
 <table><tbody>
 <tr style="font-weight:bold">  <td style="width: 100px">技能名称</td>  <td style="width: 180px">介绍</td>  <td style="width: 180px">价格</td> <td style="width: 180px">>头部内容</td><td>内容数量</td></tr>
@@ -18,7 +18,7 @@
 腾讯QQ音乐音箱端版权所有歌曲</td> </tr>
 </tbody></table>
 
-#### 1.2 叮当音乐skill功能列表
+#### 叮当音乐skill功能列表
 
 <table>
     <tr>
@@ -156,59 +156,59 @@
     </tr>
 </table>
 
-### 二、叮当音乐skill接入通用流程介绍
+### 叮当音乐skill接入通用流程介绍
 
 需要合作方和若琪商务（rokidopen@rokid.com）、叮当音乐商务确定合作，确定商务协议后，进行叮当音乐skill的接入，需要进行的步骤: 
 
-#### 2.1.获取叮当音乐App key和App secret：详细见3.1描述 
+#### 获取叮当音乐App key和App secret：详细见3.1描述 
 
-#### 2.2.若琪开放平台授权叮当音乐相关 skill：详细见3.2描述   
+#### 若琪开放平台授权叮当音乐相关 skill：详细见3.2描述   
 
-#### 2.3.移动端 App 内容展示/点播：详细见3.3描述  
+#### 移动端 App 内容展示/点播：详细见3.3描述  
 
 需要手机App进行内容展示时需要开发，如不需App内容展示，则无需开发。
 
-#### 2.4.QQ音乐账号oauth流程：详细见3.4描述    
+#### QQ音乐账号oauth流程：详细见3.4描述    
 
 接入QQ音乐账号登录后，则合作方用户可关联其已有QQ音乐账号下的收藏歌曲，并支持收藏相关功能，如不需要QQ音乐账号登陆，则无需开发。
 
 
-### 三、叮当音乐skill接入流程
+### 叮当音乐skill接入流程
 
-#### 3.1 获取叮当音乐的App key和App Secret
+#### 获取叮当音乐的App key和App Secret
 
 每个合作商在商务流程确认后，腾讯叮当会给到该厂商持有的App Key和APP Secret，用来申请音乐资源。
 
-#### 3.2 若琪开放平台授权叮当音乐相关 skill
+#### 若琪开放平台授权叮当音乐相关 skill
 
 联系对接的商务进行授权。并将在叮当音乐商务给到的 App Key 和 App Secret 给到对应的商务。
 
-#### 3.3 移动端 App 内容展示/点播
+#### 移动端 App 内容展示/点播
 
 目前叮当音乐还未开放资源展示页面，正在开发中，后续再提供移动端App内容展示界面。
 
-#### 3.4 QQ音乐账号oauth流程
+#### QQ音乐账号oauth流程
 
 叮当音乐未登录QQ音乐账号时可以进行点播、控制功能，但只有绑定了QQ音乐账号后，才可以享受个性化音乐推荐，使用收藏功能。
 
-3.4.1.合作方需要在[QQ互联平台](https://connect.qq.com/index.html)创建移动应用
+- 合作方需要在[QQ互联平台](https://connect.qq.com/index.html)创建移动应用
 
 ![](images/mobileapp.png)
 
 备注：目前腾讯已不开放微信登录能力，厂商新申请的微信登录的ID是不能打通微信登录的，只能使用QQ账号登录。
 
-3.4.2.在QQ互联平台-应用管理-移动应用-查看处获取App ID 和 App Key，用于QQ音乐账号 oauth
+- 在QQ互联平台-应用管理-移动应用-查看处获取App ID 和 App Key，用于QQ音乐账号 oauth
 
 ![](images/image.png)
 
-3.4.3.将从QQ互联平台获取的App ID 和 App Key 给到对应的商务。
+- 将从QQ互联平台获取的App ID 和 App Key 给到对应的商务。
 
-3.4.4.提供两种oauth流程接入方式：
+- 提供两种oauth流程接入方式：
 
-1）公版APP方式：
+公版APP方式：
 如果是通过公版APP的方式接入，已包含oauth鉴权的流程和页面，只需在开放平台创建一个APP即可：[开放平台APP配置](https://account.rokid.com/account.html#/login?redirect=https%3A%2F%2Fdeveloper.rokid.com%2Fvoice%2F%23%2Fproduct%2Fcreate%2Flist)。
  
-2）SDK方式：
+SDK方式：
 
 如果是通过SDK方式接入，则需要按照以下文档开发完成SDK接入才可以完成喜马拉雅账号oauth鉴权：
 
