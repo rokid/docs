@@ -63,11 +63,11 @@ Rokid语音合成服务可以根据开发者提供的文字合成高质量的音
 
 将```java-libraries```文件夹下的```rokid_speech.jar```复制到 Android 工程下的 ```app/libs``` 文件夹中，并设置为工程的依赖库
 
-![](../img/init_jar.png)
+![](image/init_jar.png)
 
 将```shared-libraries```文件夹下的全部文件包含文件夹复制到 Android 工程下的```app/src/main/jniLibs``` 文件夹中
 
-![](../img/init_jnilibs.png)
+![](image/init_jnilibs.png)
 
 ##### 添加权限
 
@@ -939,9 +939,9 @@ Rokid TTS 语音合成 SDK 初始化
 | secret           | String | 用于语音识别服务认证                                 |
 | device\_id       | String | 设备id，用于语音识别服务认证                         |
 
-获取key、id等参数，请参考[创建设备流程](../rookie-guide/create-device.md)章节。
+获取key、id等参数，请参考“产品创建和SN导入”章节。
 
 ### 五、示例源码
 
-参见[示例源码](https://github.com/Rokid/RokidSpeechTTSDemo)
+参见[示例源码RokidSpeechTTSDemo](https://github.com/Rokid/RokidSpeechTTSDemo)
 
