@@ -1,15 +1,5 @@
 # Summary
 
-* 了解若琪
-  - [YODAOS正式开源](https://developer-forum.rokid.com/t/topic/2890)
-  - [若琪的2018年](https://mp.weixin.qq.com/s/sCDJJAUBlAyc5uEAFihp6Q)
-  - [Rokid 音箱](https://www.rokid.com/alien.html)
-  - [Rokid Glass](https://glass.rokid.com)
-  - [ceo关于眼镜的文章](https://mp.weixin.qq.com/s/I-LImijqkI5lGxpThSm9jg)
-* [文档意见反馈和问答](https://developer-forum.rokid.com/c/53-category)
----------
-技术文档
----------
 * 语音接入（云端和设备端）
   - 语音能力和硬件设计
     - [Rokid 语音识别](6-asrandtts/asr.md)
@@ -28,7 +18,7 @@
     - [重要概念](5-enableVoice/rokid-vsvy-sdk-docs/important-concept.md)
     - [错误码](5-enableVoice/rokid-vsvy-sdk-docs/common/err_code.md)
     - [JSON 格式配置字串](5-enableVoice/rokid-vsvy-sdk-docs/common/api_json.md) 
-  - 语音方案SDK
+  - [语音方案SDK](5-enableVoice/rokid-vsvy-sdk-docs/introduction.md)
     - [Android 全链路通用方案](5-enableVoice/rokid-vsvy-sdk-docs/fullLink/fulllink.md)
     - [Android 全链路APK级别方案](5-enableVoice/rokid-vsvy-sdk-docs/RokidAiSdk/RokidAiSdk.md)
     - [Android 基础语音模块](5-enableVoice/rokid-vsvy-sdk-docs/speechTTS/speechtts.md)
@@ -79,8 +69,7 @@
         - [display](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/display/10_模块简介/20_display.md)
         - [yimo](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/yimo/README.md)
     - [YODAOS 应用框架](https://yodaos-project.github.io/yoda-book/zh-cn/)
-  - YODAOS AVS 方案/海外
-    - [方案简介](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/yodaosavs/1方案简介.md)
+  - [YODAOS AVS 方案/海外](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/yodaosavs/1方案简介.md)
     - [功能演示说明](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/yodaosavs/2功能演示说明.md)
     - [功能流程](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/yodaosavs/3功能流程.md)
     - [设备接口说明](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/yodaosavs/4设备接口说明.md)
@@ -169,8 +158,7 @@
       * [Webhook](rokid-homebase-docs/webhook/index.md)
   * [FAQ](rokid-homebase-docs/faq.md)
 * 技能和内容接入
-  * 授权开通和配置
-    * [技能开通](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/skillstore.md) 
+  * [授权开通和配置](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/skillstore.md) 
     * [拦截器接口文档](3-ApiReference/rokid-interceptor.md)
     * 头部技能开通流程
         * [喜马拉雅技能开通流程](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/ximalaya.md) 
@@ -189,7 +177,7 @@
     * 技能审核和上线规范
         * [技能发布标准](4-TermsAndAgreements/rokid-skill-release-standard.md)
         * [技能审核规范](4-TermsAndAgreements/rokid-skill-examine-and-verify-standard.md)
-  * 技能开发指南
+  * 技能开发
     * [Rokid 云端技能协议](2-RokidDocument/1-SkillsKit/important-concept/cloud-app-development-protocol_cn.md)
     * [Rokid Force System 使用指南](2-RokidDocument/1-SkillsKit/rokid-force-system-tutorial.md)
     * [Rokid Force JS 使用指南](2-RokidDocument/1-SkillsKit/rokid-force-js-tutorial.md)
@@ -201,12 +189,10 @@
     * [基于 VS Code 的 Yeoman & 测试脚本](https://github.com/Rokid/generator-rokid/blob/master/generators/rfs)
     * [读取语音交互日志](2-RokidDocument/1-SkillsKit/test-skill-through-device-log.md) 
 * App 开发
-    * Mobile SDK （厂商接入自有app）
-        * [Mobile SDK 简介](5-enableVoice/rokid-vsvy-sdk-docs/mobliesdk/SDK.md)
+    *  [Mobile SDK （厂商接入自有app）](5-enableVoice/rokid-vsvy-sdk-docs/mobliesdk/SDK.md)
         * [Rokid Moblie Android SDK](https://rokid.github.io/mobile-sdk-android-docs/)
         * [Rokid Moblie ios SDK](https://rokid.github.io/mobile-sdk-ios-docs/)
-    * 公版App(适用于厂商无自有app）
-        * [Web 配置说明](8-app/alliance/web/gongban.md)
+    *  [公版App(适用于厂商无自有app）](8-app/alliance/web/gongban.md)
         * Android 版
             * [修订记录](8-app/alliance/android/version.md)
             * [文档说明](8-app/alliance/android/summary.md)
@@ -221,25 +207,25 @@
             * [工程结构](8-app/alliance/iOS/resouce_summary.md)
             * [基础信息配置](8-app/alliance/iOS/config.md)
 * 平台使用说明
-  - [平台整体介绍](README.md)
-    - [语音整体方案简介](5-enableVoice/rokid-vsvy-sdk-docs/introduction.md) 
-  - 平台指南和工具（参考）
-    * [产品创建和sn导入流程](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/rookie-guide-end.md)
-    * [系统升级OTA](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/ota.md) 
-    * [设备数据管理](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/data.md)
-    * [聊天问答配置](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/chat.md)
-    * [语音识别改写](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/query.md)
----------
-帮助和支持
----------
-* [视频教程](9-video/summary.md)
-* [k18开发板购买通道](https://detail.youzan.com/show/goods?alias=2g1gpqlb5vr8c&)    
---------- 
-* 服务协议和免责
-    * [服务协议](4-TermsAndAgreements/community-service-agreement.md)
-    * [免责声明](4-TermsAndAgreements/community-disclaimer.md)
-    * [联系我们](contact-us.md)
----------    
+  - [平台整体介绍](README.md) 
+  * [产品创建和sn导入流程](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/rookie-guide-end.md)
+  * [系统升级OTA](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/ota.md) 
+  * [设备数据管理](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/data.md)
+  * [聊天问答配置](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/chat.md)
+  * [语音识别改写](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/query.md)
+* 帮助和支持
+  * [文档意见反馈和问答](https://developer-forum.rokid.com/c/53-category)
+  * [视频教程](9-video/summary.md)
+  * [k18开发板购买通道](https://detail.youzan.com/show/goods?alias=2g1gpqlb5vr8c&)    
+  * [服务协议](4-TermsAndAgreements/community-service-agreement.md)
+  * [免责声明](4-TermsAndAgreements/community-disclaimer.md)
+  * [联系我们](contact-us.md) 
+  * 了解若琪
+    - [YODAOS正式开源](https://developer-forum.rokid.com/t/topic/2890)
+    - [若琪的2018年](https://mp.weixin.qq.com/s/sCDJJAUBlAyc5uEAFihp6Q)
+    - [Rokid 音箱](https://www.rokid.com/alien.html)
+    - [Rokid Glass](https://glass.rokid.com)
+    - [ceo关于眼镜的文章](https://mp.weixin.qq.com/s/I-LImijqkI5lGxpThSm9jg)
 * English document 
   * BSP/Driver Develop Guide
 	  * [Rokid Kamino18 Universal Install Guide V2.5](10-bspguide-eng/README.md)
