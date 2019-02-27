@@ -1,21 +1,18 @@
 # Summary
 
 * 语音接入（云端和设备端）
-  - 语音能力和硬件设计
+  - [语音能力和硬件设计](2-RokidDocument/2-EnableVoice/rokid-hardware-design-guide.md)
     - [Rokid 语音识别](6-asrandtts/asr.md)
     - [Rokid 语音合成](6-asrandtts/tts.md)
-    - [Rokid 硬件产品设计指南](2-RokidDocument/2-EnableVoice/rokid-hardware-design-guide.md)
     - [Rokid 硬件交互设计指南](2-RokidDocument/2-EnableVoice/rokid-hardware-ux-design-guidelines.md)
-  - 语音接口开发协议
+  - [云端语音接口开发协议](3-ApiReference/openvoice-api.md)
     - [SDK 接口定义](3-ApiReference/rokid-client-sdk-doc.md)
-    - 云端语音接口开发协议
-      - [云端语音 WebSocket 接口开发协议](3-ApiReference/openvoice-api.md)
-      - [云端语音 HTTP 接口开发协议-语音识别](3-ApiReference/openvoice-http-api.md)
-      - [云端语音 HTTP 接口开发协议-语音合成](3-ApiReference/openvoice-api-http.md)
+    - HTTP接口开发协议
+      - [语音识别](3-ApiReference/openvoice-http-api.md)
+      - [语音合成](3-ApiReference/openvoice-api-http.md)
     - [设备接口文档](3-ApiReference/open-device-manager.md)
     - [语音能力接入流程（参考）](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/rokidspeech.md)
-  - 错误码和重要概念
-    - [重要概念](5-enableVoice/rokid-vsvy-sdk-docs/important-concept.md)
+  - [重要概念和错误码](5-enableVoice/rokid-vsvy-sdk-docs/important-concept.md)
     - [错误码](5-enableVoice/rokid-vsvy-sdk-docs/common/err_code.md)
     - [JSON 格式配置字串](5-enableVoice/rokid-vsvy-sdk-docs/common/api_json.md) 
   - [语音方案SDK](5-enableVoice/rokid-vsvy-sdk-docs/introduction.md)
@@ -27,8 +24,7 @@
   - 开发板
     - [k18芯片和开发板（推荐）](rokidos-linux-docs/Dev_3.31/13_ROKID_AI_Dev_Board_HW_UserGuide_v3.31.md)
     - [A113](rokidos-linux-docs/reference/dev_board/amlogic/usermanual_a113.md)
-  - BSP/驱动开发
-    - [目的与适用范围](7-bspguide/gai_shu/mu_de.md)
+  - [BSP/驱动开发](7-bspguide/gai_shu/mu_de.md)
     - [Kamino18平台简介]
       - [芯片框图](7-bspguide/kamino18ping_tai_jian_jie/xin_pian_kuang_tu.md)
       - [智能语音方案设计简介](7-bspguide/kamino18ping_tai_jian_jie/zhi_neng_yu_yin_fang_an_she_ji_jian_jie.md)
@@ -52,9 +48,7 @@
     - [SN与Seed烧写](7-bspguide/snyu_seed_shao_xie.md)
     - [配网验证](7-bspguide/pei_wang_yan_zheng/README.md)
       - [BT配网](7-bspguide/pei_wang_yan_zheng/btpei_wang.md)
-  - YODAOS
-    - YODAOS 开源系统
-      - [本地服务简介](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/system-service.md)
+  - [YODAOS](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/system-service.md) 
       - [编译与运行](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/compile-run.md) 
       - 系统服务模块简介
         - [httpdns](5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/httpdns/10_模块简介/10_httpdns.md)
