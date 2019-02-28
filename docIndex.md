@@ -11,8 +11,8 @@
   * [其他开发平台（已下架）](https://developer.rokid.com/docs/rokidos-linux-docs/README.html)
 
 * Rokid 智能家居
-  * [方案输出](https://developer.rokid.com/docs/smarthome/README.html)
-  * [智能家居设备接入](https://developer.rokid.com/docs/rokid-homebase-docs/README.html)	
+  * [方案输出](https://developer.rokid.com/docs/smarthome/)
+  * [智能家居设备接入](https://developer.rokid.com/docs/rokid-homebase-docs/)	
   * [FAQ](https://developer.rokid.com/docs/rokid-homebase-docs/faq.html)
 
 * 技能和内容接入
@@ -39,7 +39,7 @@
   * [服务协议](https://developer.rokid.com/docs/4-TermsAndAgreements/community-service-agreement.html)
   * [免责声明](https://developer.rokid.com/docs/4-TermsAndAgreements/community-disclaimer.html)
   * [联系我们](https://developer.rokid.com/docs/contact-us.html) 
-  * 了解若琪
+  
   
 * 快速入口 
   * [身份认证](https://account.rokid.com/#/setting/auth)
@@ -51,7 +51,7 @@
   * [产品数据后台](https://developer.rokid.com/dataservice/#/device-stats/active-acc)
   
 * English document 
-  * [BSP/Driver Develop Guide](10-bspguide-eng/README.html)
+  * [BSP/Driver Develop Guide](https://developer.rokid.com/docs/10-bspguide-eng/)
   * [YODAOS book](https://yodaos-project.github.io/yoda-book/en-us/)
   * [YODAOS Build Environment](https://developer.rokid.com/docs/5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/general/YodaOS_Build_Environment.html)
 
