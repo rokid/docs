@@ -172,8 +172,7 @@
     * 技能审核和上线规范
         * [技能发布标准](4-TermsAndAgreements/rokid-skill-release-standard.md)
         * [技能审核规范](4-TermsAndAgreements/rokid-skill-examine-and-verify-standard.md)
-  * 技能开发
-    * [Rokid 云端技能协议](2-RokidDocument/1-SkillsKit/important-concept/cloud-app-development-protocol_cn.md)
+  * [技能开发](2-RokidDocument/1-SkillsKit/important-concept/cloud-app-development-protocol_cn.md)
     * [Rokid Force System 使用指南](2-RokidDocument/1-SkillsKit/rokid-force-system-tutorial.md)
     * [Rokid Force JS 使用指南](2-RokidDocument/1-SkillsKit/rokid-force-js-tutorial.md)
     * [SSML 使用指南](2-RokidDocument/1-SkillsKit/ssml-document.md)
