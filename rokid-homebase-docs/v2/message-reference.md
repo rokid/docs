@@ -43,10 +43,10 @@ Skill 回复若琪发起的命令
 
 所有回复应该在 3 秒内返回，如果 Skill认为本次操作需要更长的时间，应该考虑使用 DeferredResponse来向若琪告知会在一定时间内使用 AsyncResponse 回复若琪
 
--   Response: 普通的命令回复，包含终端的最新状态
--   DiscoveryResponse: 终端发现命名空间的回复，需要包含终端所有应有的信息
--   ErrorResponse: 发生错误时的回复，包含一个错误码和一条描述错误的消息
--   DeferredResponse: 表示这个操作会超过2秒，需要在指定时间内使用 AsyncResponse 事件通知 Rokid EventGateway
+- Response: 普通的命令回复，包含终端的最新状态
+- DiscoveryResponse: 终端发现命名空间的回复，需要包含终端所有应有的信息
+- ErrorResponse: 发生错误时的回复，包含一个错误码和一条描述错误的消息
+- DeferredResponse（**(规划中)**）: 表示这个操作会超过2秒，需要在指定时间内使用 AsyncResponse 事件通知 Rokid EventGateway
 
 #### 消息体
 
