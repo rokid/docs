@@ -12,7 +12,9 @@
 
 * Rokid 智能家居
   * [方案输出](https://developer.rokid.com/docs/smarthome/)
-  * [智能家居设备接入](https://developer.rokid.com/docs/rokid-homebase-docs/)	
+  * [智能家居H5配置界面](smarthome/mobile-user-app.md)
+  * [开放接口](https://homebase-open.rokid.com/docs)
+  * [设备接入](https://developer.rokid.com/docs/rokid-homebase-docs/)	
   * [FAQ](https://developer.rokid.com/docs/rokid-homebase-docs/faq.html)
 
 * 技能和内容接入
@@ -21,8 +23,8 @@
   * [技能开发](https://developer.rokid.com/docs/2-RokidDocument/1-SkillsKit/important-concept/cloud-app-development-protocol_cn.html) 
 
 * App 开发
-    *  [Mobile SDK （厂商接入自有app）](https://developer.rokid.com/docs/5-enableVoice/rokid-vsvy-sdk-docs/mobliesdk/SDK.html)
-    *  [公版App(适用于厂商无自有app）](https://developer.rokid.com/docs/8-app/alliance/web/gongban.html)
+    *  [Mobile SDK](https://developer.rokid.com/docs/5-enableVoice/rokid-vsvy-sdk-docs/mobliesdk/SDK.html)
+    *  [公版App](https://developer.rokid.com/docs/8-app/alliance/web/gongban.html)
     
 * 平台使用说明
   * [平台整体介绍](https://developer.rokid.com/docs/README.html) 
