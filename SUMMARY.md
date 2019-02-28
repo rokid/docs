@@ -221,8 +221,7 @@
     - [Rokid Glass](https://glass.rokid.com)
     - [ceo关于眼镜的文章](https://mp.weixin.qq.com/s/I-LImijqkI5lGxpThSm9jg)
 * English document 
-  * BSP/Driver Develop Guide
-	  * [Rokid Kamino18 Universal Install Guide V2.5](10-bspguide-eng/README.md)
+  * [BSP/Driver Develop Guide](10-bspguide-eng/README.md)
 	  * [General Description & Purpose](10-bspguide-eng/general_description/README.md)
 		  * [Range](10-bspguide-eng/general_description/range.md)
 	  * [Kamino18 Platform Introduction](10-bspguide-eng/kamino18_platform_introduction/README.md)
