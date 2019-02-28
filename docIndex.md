@@ -42,7 +42,7 @@
   * 了解若琪
   
 * English document 
-  * BSP/Driver Develop Guide
+  * [BSP/Driver Develop Guide](10-bspguide-eng/README.md)
   * [YODAOS book](https://yodaos-project.github.io/yoda-book/en-us/)
   * [YODAOS Build Environment](https://developer.rokid.com/docs/5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/general/YodaOS_Build_Environment.md)
 
