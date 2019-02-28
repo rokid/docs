@@ -41,6 +41,15 @@
   * [联系我们](https://developer.rokid.com/docs/contact-us.html) 
   * 了解若琪
   
+* 快速入口 
+  * [身份认证](https://account.rokid.com/#/setting/auth)
+  * [创建产品](https://developer.rokid.com/voice/#/product/create/access-new-prd)
+  * [SDK下载](https://developer.rokid.com/voice/#/product/create/list) 
+  * [创建技能](https://developer.rokid.com/skill/skill.html#/)
+  * [开通技能](https://developer.rokid.com/voice/#/product/create/list)
+  * [智能家居接入](https://developer.rokid.com/#/portal)
+  * [产品数据后台](https://developer.rokid.com/dataservice/#/device-stats/active-acc)
+  
 * English document 
   * [BSP/Driver Develop Guide](10-bspguide-eng/README.html)
   * [YODAOS book](https://yodaos-project.github.io/yoda-book/en-us/)
