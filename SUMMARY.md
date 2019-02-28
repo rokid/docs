@@ -7,7 +7,7 @@
     - [Rokid 语音识别](6-asrandtts/asr.md)
     - [Rokid 语音合成](6-asrandtts/tts.md)
     - [Rokid 硬件交互设计指南](2-RokidDocument/2-EnableVoice/rokid-hardware-ux-design-guidelines.md)
-  - [云端语音接口开发协议](3-ApiReference/openvoice-api.md)
+  - [接口开发协议](3-ApiReference/openvoice-api.md)
     - [SDK 接口定义](3-ApiReference/rokid-client-sdk-doc.md)
     - HTTP接口开发协议
       - [语音识别](3-ApiReference/openvoice-http-api.md)
