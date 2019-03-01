@@ -15,7 +15,7 @@ Rokid Homebase，是面向智能家居的设备接入框架，通过适配接入
 
 ### 接入方案
 
-您可以通过 [云云对接](connect/cloud-to-cloud.md) 或 [局域网对接](connect/via-lan.md) 来完成对接。目前我们主推的是云云对接，通过标准 OAuth 2.0 协议接入用户授权。
+您可以通过 [云云对接](connect/cloud-to-cloud.md) 或 [局域网对接](connect/via-lan.md) 来完成对接。详见[接入流程](https://developer.rokid.com/docs/rokid-homebase-docs/intro/flow.html)。目前我们主推的是云云对接，通过标准 OAuth 2.0 协议接入用户授权。
 
 ### 链接
 

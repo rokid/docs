@@ -27,7 +27,7 @@
     *  [公版App](https://developer.rokid.com/docs/8-app/alliance/web/gongban.html)
     
 * 平台使用说明
-  * [平台整体介绍](https://developer.rokid.com/docs/README.html) 
+  * [平台整体介绍](https://developer.rokid.com/docs/) 
   * [产品创建和sn导入流程](https://developer.rokid.com/docs/5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/rookie-guide-end.html)
   * [系统升级OTA](https://developer.rokid.com/docs/5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/ota.html) 
   * [设备数据管理](https://developer.rokid.com/docs/5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/data.html)
