@@ -215,6 +215,7 @@
   * [免责声明](4-TermsAndAgreements/community-disclaimer.md)
   * [联系我们](contact-us.md) 
   * 了解若琪
+    - [HHHHH](glass/Rokid人脸识别SDK1.2.0.15.md)
     - [YODAOS正式开源](https://developer-forum.rokid.com/t/topic/2890)
     - [若琪的2018年](https://mp.weixin.qq.com/s/sCDJJAUBlAyc5uEAFihp6Q)
     - [Rokid 音箱](https://www.rokid.com/alien.html)
