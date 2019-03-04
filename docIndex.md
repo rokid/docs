@@ -27,8 +27,8 @@
     *  [公版App](https://developer.rokid.com/docs/8-app/alliance/web/gongban.html)
     
 * 视觉能力
-  - [人脸识别](glass/Rokid人脸识别SDK1.2.0.15.md)
-  - [车牌识别](glass/Rokid车牌识别SDK1.0.0.md)
+  - [人脸识别](https://developer.rokid.com/docs/glass/Rokid人脸识别SDK1.2.0.15.html)
+  - [车牌识别](https://developer.rokid.com/docs/glass/Rokid车牌识别SDK1.0.0.html)
     
 * 平台使用说明
   * [平台整体介绍](https://developer.rokid.com/docs/) 
