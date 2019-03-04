@@ -152,6 +152,9 @@
     * 高级功能
       * [Webhook](rokid-homebase-docs/webhook/index.md)
   * [FAQ](rokid-homebase-docs/faq.md)
+* 视觉能力
+  - [人脸识别](glass/Rokid人脸识别SDK1.2.0.15.md)
+  - [车牌识别](glass/Rokid车牌识别SDK1.0.0.md)
 * 技能和内容接入
   * [授权开通和配置](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/skillstore.md) 
     * [拦截器接口文档](3-ApiReference/rokid-interceptor.md)
@@ -215,7 +218,6 @@
   * [免责声明](4-TermsAndAgreements/community-disclaimer.md)
   * [联系我们](contact-us.md) 
   * 了解若琪
-    - [HHHHH](glass/Rokid人脸识别SDK1.2.0.15.md)
     - [YODAOS正式开源](https://developer-forum.rokid.com/t/topic/2890)
     - [若琪的2018年](https://mp.weixin.qq.com/s/sCDJJAUBlAyc5uEAFihp6Q)
     - [Rokid 音箱](https://www.rokid.com/alien.html)
