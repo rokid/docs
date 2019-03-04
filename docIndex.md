@@ -16,7 +16,7 @@
   * [开放接口](https://homebase-open.rokid.com/docs)
   * [设备接入](https://developer.rokid.com/docs/rokid-homebase-docs/)	
   * [FAQ](https://developer.rokid.com/docs/rokid-homebase-docs/faq.html)
-
+  
 * 技能和内容接入
   * [授权开通和配置](https://developer.rokid.com/docs/5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/skillstore.html)
   * [技能平台新手引导](https://developer.rokid.com/docs/2-RokidDocument/1-SkillsKit/platform-introduction.html)
@@ -25,6 +25,10 @@
 * App 开发
     *  [Mobile SDK](https://developer.rokid.com/docs/5-enableVoice/rokid-vsvy-sdk-docs/mobliesdk/SDK.html)
     *  [公版App](https://developer.rokid.com/docs/8-app/alliance/web/gongban.html)
+    
+* 视觉能力
+  - [人脸识别](glass/Rokid人脸识别SDK1.2.0.15.md)
+  - [车牌识别](glass/Rokid车牌识别SDK1.0.0.md)
     
 * 平台使用说明
   * [平台整体介绍](https://developer.rokid.com/docs/) 
