@@ -10,10 +10,10 @@
 
 ### 接入方案类型
 
-[全链路通用方案](./fullLink/fulllink.md)：包括前端语音激活/降噪以及 Rokid 语音识别服务和语音合成服务的相关能力。 
+- [全链路通用方案](./fullLink/fulllink.md)：包括前端语音激活/降噪以及 Rokid 语音识别服务和语音合成服务的相关能力。 
 
-[基础语音模块](./speechTTS/speechtts.md)：基础语语音服务的输出，包括语音识别服务和语音合成服务。
+- [基础语音模块](./speechTTS/speechtts.md)：基础语语音服务的输出，包括语音识别服务和语音合成服务。
 
-[全开源方案](https://developer.rokid.com/docs/5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/system-service.html)：YODAOS系统，可根据厂商或者个人开发者的需求，灵活修改，也欢迎开发者一起建设。
+- [全开源方案](https://developer.rokid.com/docs/5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/system-service.html)：YODAOS系统，可根据厂商或者个人开发者的需求，灵活修改，也欢迎开发者一起建设。
 
 
