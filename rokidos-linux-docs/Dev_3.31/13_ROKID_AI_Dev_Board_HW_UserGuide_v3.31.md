@@ -207,7 +207,10 @@ ROKID AI Dev v3.31开发板外部连接非常简单，插入12V/1A DC 适配器�
 
 1.  至此，SN烧录步骤完成。设备自动重启，进入配网模式。
 
-还有其他问题可以参考
+还有其他问题可以参考：
+
 [**Linux烧写工具使用**](https://developer.rokid.com/docs/7-bspguide/jing_xiang_shao_xie/linuxshao_xie_gong_ju_shi_yong.html)
+
 [**Windows烧写工具使用**](https://developer.rokid.com/docs/7-bspguide/jing_xiang_shao_xie/windowsshao_xie_gong_ju_shi_yong.html)
+
 [**工厂烧写工具使用**](https://developer.rokid.com/docs/7-bspguide/jing_xiang_shao_xie/gong_chang_shao_xie_gong_ju_shi_yong.html)
