@@ -4,20 +4,23 @@
 如果您需要对TTS进行诸如插入一段音频、改变语速、改变发音人等更加灵活的自定义，可以使用下述的语音合成标记语言（Speech Synthesis Markup Language， 简称SSML，下同）。
 
 ### 目录
-- [如何在您技能的Response中使用SSML](#如何在您技能的response中使用ssml)
-- [目前可使用的SSML标签](#目前可使用的ssml标签)
-    - [audio](#audio)
-    - [break](#break)
-    - [p](#p)
-    - [phoneme](#phoneme)
-    - [prosody](#prosody)
-    - [s](#s)
-    - [say-as](#say-as)
-    - [speak](#speak)
-    - [sub](#sub)
-    - [voice](#voice)
-    - [word](#word)
-- [特别说明](#特别说明)
+- [在您的技能中使用 SSML](#%E5%9C%A8%E6%82%A8%E7%9A%84%E6%8A%80%E8%83%BD%E4%B8%AD%E4%BD%BF%E7%94%A8-ssml)
+- [目录](#%E7%9B%AE%E5%BD%95)
+- [如何在您技能的Response中使用SSML](#%E5%A6%82%E4%BD%95%E5%9C%A8%E6%82%A8%E6%8A%80%E8%83%BD%E7%9A%84response%E4%B8%AD%E4%BD%BF%E7%94%A8ssml)
+- [目前可使用的SSML标签](#%E7%9B%AE%E5%89%8D%E5%8F%AF%E4%BD%BF%E7%94%A8%E7%9A%84ssml%E6%A0%87%E7%AD%BE)
+  - [audio](#audio)
+    - [将音频文件转换为Rokid可用的格式](#%E5%B0%86%E9%9F%B3%E9%A2%91%E6%96%87%E4%BB%B6%E8%BD%AC%E6%8D%A2%E4%B8%BArokid%E5%8F%AF%E7%94%A8%E7%9A%84%E6%A0%BC%E5%BC%8F)
+  - [break](#break)
+  - [p](#p)
+  - [phoneme](#phoneme)
+  - [prosody](#prosody)
+  - [s](#s)
+  - [say-as](#say-as)
+  - [speak](#speak)
+  - [sub](#sub)
+  - [voice](#voice)
+  - [word](#word)
+- [特别说明](#%E7%89%B9%E5%88%AB%E8%AF%B4%E6%98%8E)
     
 
 ### 如何在您技能的Response中使用SSML
@@ -43,7 +46,7 @@
 ```html
 <speak>
     欢迎成为Rokid开发者。
-    <audio src="s.rokidcdn.com/temp/rokid-ring.wav" /> 
+    <audio src="http://s.rokidcdn.com/temp/rokid-ring.wav" /> 
     您会听到一段悦耳的铃声。 
 </speak> 
 ```
