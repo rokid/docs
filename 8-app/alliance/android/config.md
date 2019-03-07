@@ -29,9 +29,14 @@ APP 基础信息主要包括了：
 
 ```java
     /**
-     * 默认唤醒词，如 ”若琪“，必填项
+     * 品牌名称，如 ”若琪“，必填项
      */
     String VENDOR_NAME = "your VENDOR_NAME";
+    
+    /**
+     * 设备唤醒词，如 ”若琪“，必填项
+     */
+    String WAKE_UP_WORD = "your WAKE_UP_WORD";
 
     /**
      * 配网蓝牙前缀，如 ”Rokid“
@@ -71,7 +76,8 @@ APP 基础信息主要包括了：
 
 | Config Key | 含义 | 必须 | 说明 |
 | --- | --- | --- | --- |
-| VENDOR_NAME | 默认唤醒词 | 是  |  公版 APP 中的默认值是 ”若琪“，厂商设置成自有的设备名称后，会自动替换掉整个 APP 中的 UI 层面的所有”若琪“|
+| VENDOR_NAME | 厂商品牌名称 | 是  |  公版 APP 中的默认值是 ”若琪“，厂商设置成自有的设备名称后，会自动替换掉整个 APP 中的 UI 层面的所有”若琪“|
+| WAKE_UP_WORD | 设备唤醒词 | 是  |  公版 APP 中的默认值是 ”若琪“，厂商需更改为自己的唤醒词|
 | VENDOR_BLE_PREFIX | 配网蓝牙前缀 | 是  |  公版 APP 中的默认值是 ”Rokid“，厂商设置成自有的设备蓝牙前缀后，配网时 APP 就会自动搜索以该蓝牙前缀开头的所有设备|
 | ROUTER_SCHEME | 路由 Scheme | 是  |  公版 APP 中的所有的页面跳转均是隐式跳转，需要根据具体的 uri 进行页面间的跳转，默认值是 ”rokidalliance“，厂商设置成自有的 schema 后，APP 会自动替换整个路由表的 schema|
 | ROUTER_ACTION | 路由 Action | 是  |  公版 APP 中的所有的页面跳转均是隐式跳转，需要根据具体的 uri 进行页面间的跳转，默认值是 ”com.rokidalliance.action.ROUTER"，厂商设置成自有的 action 后，APP 会自动替换整个路由表的 action|
@@ -81,23 +87,30 @@ APP 基础信息主要包括了：
 | LOG_PROJECT | 日志库标识 | 是  |用于相关 log 上传的标识|
 
 <font color=red>替换 **ROUTER_SCHEME** 注意事项：</font>
+
 在替换全局路由 **ROUTER_SCHEME** 的值后，还需全局替换工程中所有 **AndroidManifest.xml** 文件中所有 **Activity** **intent-filter** 中的 **data** 的 **android:scheme**"。比如：
+
 <center class="half">
 <img src="media/15416663207628.jpg" width="300" style="border:solid 1px #9A9A9A;"/>
-    AndroidManifest 文件
+    <br/>AndroidManifest 文件
 </center>
+
 替换时可以先选中如下代码
 
 ```
 android:scheme="rokidalliance"
 ```
+
 然后按下键盘上的 **command** + **shift** + **R** 键，即可开启全局替换的窗口，如图：
+
 <div align=center>
 <img src="media/15416670442530.jpg" with="400" height="400"/>
 </div>
+
 输入你的 **scheme** 后，点击 **REPLACE ALL** 即可全局替换掉整个工程的 **scheme**。
 
 ## 配置 APP 主题颜色
+
 公版 APP 现在主要用到的颜色有以下 7 类主要颜色：
 
 * 透明
@@ -139,6 +152,7 @@ android:scheme="rokidalliance"
     <color name="device_offline_bg">#FFF6F4</color>
     <color name="device_offline_top_bg">#FF7474</color>
 ```
+
 具体颜色说明：
 
 | color name | color 色值 | 说明 |
@@ -161,9 +175,11 @@ android:scheme="rokidalliance"
 以上 7 类颜色只是公版 APP 中默认的通用颜色，如果无法满足厂商的需求，厂商可根据自身设计的 APP 风格到对应页面的布局文件中替换为任一颜色。
 
 ## 配置设备配网信息
+
 由于各厂商的设备信息会有差异，公版 APP 提供了一些配置文件用于配置各自设备的相关信息，这部分主要介绍用于设备配网相关页面的配置信息。
 
 ### 配网首页数据信息
+
 配网首页的数据文件存在于 **app_base -> src -> main -> assets -> binder** 目录下，类名为 **config_binder_brief.json**，找到该文件后双击打开，配置信息是 json，具体格式如下：
 
 ```json
@@ -187,6 +203,7 @@ android:scheme="rokidalliance"
  ]
 
 ```
+
 相关字段具体说明如表格所示：
 
 | key | 类型 | 说明 |
@@ -201,10 +218,11 @@ android:scheme="rokidalliance"
 
 <div align=center>
 <img src="media/15422718317958.jpg" with="400" height="400" style="border:solid 1px #9A9A9A;"/>
-配网首页
+<br/>配网首页
 </div>
 
 ### 具体某个设备类型配网数据信息
+
 具体某个设备的配网信息也存在于 **app_base -> src -> main -> assets -> binder** 目录下， 每个设备类型对应一个 json 文件，以 Pebble 设备为例，在目录下会有**config_binder_detail_pebble.json**，找到该文件后双击打开，配置信息是 json，具体格式如下：
 
 ```json
@@ -354,6 +372,7 @@ android:scheme="rokidalliance"
                ]
 }
 ```
+
 相关字段具体说明如表格所示：
 
 | key | 类型 | 说明 |
@@ -370,6 +389,7 @@ android:scheme="rokidalliance"
 | errors | Object | 配网的错误状态码以及进度控制数据信息|
 
 #### “support” 相关字段说明：
+
 该数据主要用于 APP 中的发送 wifi 信息界面，对应的 Activity 是 **WifiSettingsActivity**。
 
 | key | 类型 | 说明 |
@@ -378,12 +398,14 @@ android:scheme="rokidalliance"
 | tip | String | 不支持 5G 网络的提示文案|
 | helpButton | String | 帮助按钮的文案 |
 | connectButton | String | 发送WiFi账号密码的按钮文案 |
+
 <div align=center>
 <img src="media/15414257674615.jpg" with="400" height="400" style="border:solid 1px #9A9A9A;"/>
-发送 wifi 信息界面
+<br/>发送 wifi 信息界面
 </div>
 
 #### “guide” 相关字段说明：
+
 该数据主要用于 APP 中的单个设备搜索蓝牙和对应的两个帮助界面，对应的 Activity 是 **BinderSearchDeviceBleActivity**、**BinderPromptHelpActivity** 和 **BinderNetworkHelpActivity**。
 
 | key | 类型 | 说明 |
@@ -395,12 +417,14 @@ android:scheme="rokidalliance"
 | coverImageUrl | String | BinderSearchDeviceBleActivity 页面视频第一帧图片 URL|
 | usageHelper | Object | 没有听到配网提示音的帮助页面数据信息，对应 **BinderPromptHelpActivity**|
 | noDeviceHelper | Object | 没有找到可连接的音箱帮助页面数据信息，对应 **BinderNetworkHelpActivity**|
+
 <center class="half">
     <img src="media/15414252797409.jpg" width="200" style="border:solid 1px #9A9A9A;"/><img src="media/15414266546488.jpg" width="200" style="border:solid 1px #9A9A9A;"/><img src="media/15414266997271.jpg" width="200" style="border:solid 1px #9A9A9A;"/>
-    具体某个设备类型配网首页和帮助页
+    <br/>具体某个设备类型配网首页和帮助页
 </center>
 
 #### “progresses” 相关字段说明：
+
 该数据主要用于 APP 中配网过程中相关页面的信息展示，对应的 Activity 是 **BindStatusActivity**。
 
 | key | 类型 | 说明 |
@@ -427,12 +451,14 @@ android:scheme="rokidalliance"
 | 200 | 绑定中 |
 | 201 | 绑定成功 |
 | -201 | 绑定失败 |
+
 <div align=center>
 <img src="media/15414259313697.jpg" with="400" height="400" style="border:solid 1px #9A9A9A;"/>
-设备正在配网中页面
+<br/>设备正在配网中页面
 </div>
 
 #### “errors” 相关字段说明：
+
 该数据主要用于 APP 中配网过程中发生异常时的信息展示，对应的 Activity 是 **BinderConnectErrorHelpActivity** 和 **BinderConfirmErrorStateActivity**。
 
 | key | 类型 | 说明 |
@@ -442,15 +468,18 @@ android:scheme="rokidalliance"
 | tips | Object | 配网错误页面相关的提示信息数据 |
 需注意的是，该配置文件命名的通用格式为： **config_binder_detail_"deviceTypeN
 ame".json**，厂商在设置自己的设备时，只需修改具体的设备类型名称即可，例如你有个设备类型名称叫做 “ABC”，那么对应的文件名称为 **config_binder_detail_ABC.json**，“**config_binder_detail_**”保持不变。同时，一个配置文件对应一个设备类型，若有多个设备类型，则添加对应数量的配置文件即可。
+
 <center class="half">
     <img src="media/15414260412040.jpg" width="300" style="border:solid 1px #9A9A9A;"/><img src="media/15414264908081.jpg" width="300" style="border:solid 1px #9A9A9A;"/>
-    设备配网失败页面
+    <br/>设备配网失败页面
 </center>
 
 ## 配置设备设置项信息
+
 不同的设备可能会有不同的设置项，为了方便厂商适配各自的设备，公版 APP 也提供了一些配置文件来设置各个设备的具体设置项信息。
 
 ### “我的”页面设置项列表数据配置
+
 公版 APP 在“我的”页面默认设置了 6 项主要且通用的设置信息，如需修改，请到 **app_base -> src -> main -> assets -> settings** 目录下找到 **config_settingIndex.json** 和 **config_settingIndex_daily.json** 文件，二者分别对应的是正式服的设置项和测试服的设置项，该数据对应的类是**SettingsIndexFragment**， 具体的格式如下：
 
 ```json
@@ -529,6 +558,7 @@ ame".json**，厂商在设置自己的设备时，只需修改具体的设备类
   }
 ]
 ```
+
 设置项数据是按照组的形式来进行划分，具体的字段说明，如表格所示：
 
 | key | 类型 | 说明 |
@@ -552,20 +582,22 @@ ame".json**，厂商在设置自己的设备时，只需修改具体的设备类
 
 <div align=center>
 <img src="media/15422719135072.jpg" with="400" height="400" style="border:solid 1px #9A9A9A;"/>
-“我的”页面首页
+<br/>“我的”页面首页
 </div>
 
 ### 具体某个设备类型设置项数据配置
+
 不同的设备可能具有不同的设置项，为了方便厂商配置设备的具体设置项信息，公版 APP 也是通过配置文件来进行相关的设置，这部分数据主要是设备的卡片数据和该设备类型支持的全部设置项，配置这块数据需到 **app_base -> src -> main -> assets -> settings** 目录下找到 **config_deviceTypeInfo.json** 文件，文件具体格式如下：
 
 ```json
 [
   {
-    "typeId": "rokid",
-    "typeName": "Rokid",
-    "cnName": "未知外星设备",
-    "blePrefix": "Rokid",
-    "imageUrl": "https://s.rokidcdn.com/mobile-app/icon/device/rokid.png",
+    "typeId": "98EA4B548AEB4A329D21615B9ED060E5",
+    "typeName": "Pebble",
+    "cnName": "若琪 · 月石",
+    "blePrefix": "Rokid-Pebble-",
+    "cloudAlarmSupport": true,
+    "imageUrl": "https://s.rokidcdn.com/mobile-app/icon/device/pebble.png",
     "quickSettingList": [
       {
         "type": "vtWord",
@@ -617,7 +649,7 @@ ame".json**，厂商在设置自己的设备时，只需修改具体的设备类
       [
         {
           "type": "deviceNick",
-          "name": "设备名称",
+          "name": "设备名字",
           "linkUrl": "rokid://settings/device/nickName",
           "action": "UPDATE",
           "minVersion": "0.0.0",
@@ -630,6 +662,17 @@ ame".json**，厂商在设置自己的设备时，只需修改具体的设备类
           "name": "唤醒词",
           "iconUrl": "https://s.rokidcdn.com/mobile-app/setting_device/settings_vt_word.png",
           "linkUrl": "rokid://settings/device/vtWord",
+          "action": "UPDATE",
+          "minVersion": "0.0.0",
+          "maxVersion": "9.9.9",
+          "feature": false,
+          "needOnline": true
+        },
+        {
+          "type": "deviceAccent",
+          "name": "变声",
+          "iconUrl": "https://s.rokidcdn.com/mobile-app/setting_device/settings_voice.png",
+          "linkUrl": "rokid://settings/device/accent",
           "action": "UPDATE",
           "minVersion": "0.0.0",
           "maxVersion": "9.9.9",
@@ -660,15 +703,86 @@ ame".json**，厂商在设置自己的设备时，只需修改具体的设备类
           "feature": false,
           "needOnline": false
         }
+      ],
+      [
+        {
+          "type": "nightMode",
+          "name": "夜间模式",
+          "description": "降低音量和灯光，减少误唤醒",
+          "iconUrl": "https://s.rokidcdn.com/mobile-app/setting_device/settings_night.png",
+          "linkUrl": "rokid://settings/device/nightMode",
+          "action": "LINK",
+          "minVersion": "0.0.0",
+          "maxVersion": "9.9.9",
+          "feature": false,
+          "needOnline": true
+        },
+        {
+          "type": "wakeupSoundEffects",
+          "name": "唤醒音效",
+          "description": "开启后，唤醒时有声音反馈",
+          "linkUrl": "",
+          "action": "SWITCH",
+          "switchAction": "wakeupSoundEffects",
+          "minVersion": "0.0.0",
+          "maxVersion": "9.9.9",
+          "feature": false,
+          "needOnline": true
+        },
+        {
+          "type": "standbyLight",
+          "name": "待机灯光",
+          "description": "开启后，待机时亮起蓝色灯光",
+          "linkUrl": "",
+          "action": "SWITCH",
+          "switchAction": "standbyLight",
+          "minVersion": "0.0.0",
+          "maxVersion": "9.9.9",
+          "feature": false,
+          "needOnline": true
+        }
+      ],
+      [
+        {
+          "type": "systemUpdate",
+          "name": "系统升级",
+          "linkUrl": "rokid://settings/device/update",
+          "action": "LINK",
+          "minVersion": "0.0.0",
+          "maxVersion": "9.9.9",
+          "feature": false,
+          "needOnline": true
+        },
+        {
+          "type": "deviceUnbind",
+          "name": "解绑设备",
+          "linkUrl": "",
+          "action": "DIALOG",
+          "minVersion": "0.0.0",
+          "maxVersion": "9.9.9",
+          "feature": false,
+          "needOnline": false
+        },
+        {
+          "type": "deviceReset",
+          "name": "恢复出厂设置",
+          "linkUrl": "",
+          "action": "DIALOG",
+          "minVersion": "0.0.0",
+          "maxVersion": "9.9.9",
+          "feature": false,
+          "needOnline": true
+        }
       ]
     ]
   },
   {
-    "typeId": "102463A173734BAAB3E6EB5F497DB9FE",
-    "typeName": "Pebble",
-    "cnName": "若琪 · 月石",
-    "blePrefix": "Rokid-Pebble",
-    "imageUrl": "https://s.rokidcdn.com/mobile-app/icon/device/pebble.png",
+    "typeId": "AA12D7458EAD4AC4A8BF8ABB96FD8B74",
+    "typeName": "Rokid",
+    "cnName": "未知外星设备",
+    "blePrefix": "Rokid",
+    "cloudAlarmSupport": true/false,
+    "imageUrl": "https://s.rokidcdn.com/mobile-app/icon/device/rokid.png",
     "quickSettingList": [
     ],
     "settingList": [
@@ -676,6 +790,7 @@ ame".json**，厂商在设置自己的设备时，只需修改具体的设备类
   }
 ]
 ```
+
 具体的字段说明，如表格所示：
 
 | key | 类型 | 说明 |
@@ -684,6 +799,7 @@ ame".json**，厂商在设置自己的设备时，只需修改具体的设备类
 | typeName | String | 设备类型名称|
 | cnName | String | 设备中文名称|
 | blePrefix | String | 该设备蓝牙搜索前缀 |
+| cloudAlarmSupport | Boolean | 是否支持云闹钟 |
 | imageUrl | String | 设备预览图片 URL|
 | quickSettingList | Object | 设备卡片4个快捷设置项入口信息数据|
 | settingList | Object | 设备全部设置项信息数据 |
@@ -704,7 +820,7 @@ ame".json**，厂商在设置自己的设备时，只需修改具体的设备类
 
 <div align=center>
 <img src="media/15422721525734.jpg" with="400" height="400" style="border:solid 1px #9A9A9A;"/>
-单个设备设置项页面
+<br/>单个设备设置项页面
 </div>
 
 
