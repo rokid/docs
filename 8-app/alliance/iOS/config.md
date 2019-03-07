@@ -437,6 +437,8 @@
     "cnName": "未知外星设备",
     "blePrefix": "Rokid",
     "imageUrl": "https://s.rokidcdn.com/mobile-app/icon/device/rokid.png",
+    "cloudAlarmSupport": false,
+
     "quickSettingList": [
       {
         "type": "vtWord",
@@ -525,6 +527,7 @@
 | cnName | String | 设备中文名称|
 | blePrefix | String | 该设备蓝牙搜索前缀 |
 | imageUrl | String | 设备预览图片 URL|
+| cloudAlarmSupport | Bool | 是否支持云闹钟|
 | quickSettingList | Object | 设备卡片4个快捷设置项入口信息数据|
 | settingList | Object | 设备全部设置项信息数据 |
 
