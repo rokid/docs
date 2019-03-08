@@ -15,11 +15,13 @@
 </div>
 
 Android studio 中对应的项目结构如下：
+
 <div align=center>
 <img src="media/15412365140180.jpg" with="400" height="400"/>
 </div>
 
 ## module 功能介绍
+
 工程中一共有 8 个 module，每个 module 负责一块具体的业务逻辑，具体如下：
 
 * **m_account**：账户中心模块，主要包含了 APP 登录注册、密码找回和修改等关于账户的功能；
@@ -31,6 +33,7 @@ Android studio 中对应的项目结构如下：
 * **m_webview：webview** 模块，APP 中很多地方需要加载 H5 页面，这是 APP 中对原生的webview 进行了相应封装以更加高效便捷的加载 H5 页面。
 
 ## APP 架构介绍
+
 APP 采用的是 MVP 架构，每个模块中 **activity/fragment** 主要是负责 UI 层，即各个 Activity 和 Fragment的创建和数据显示，不包含具体的业务逻辑，只是 UI 相关。具体业务逻辑处理，比如数据的请求等操作，均放在 **presenter** 中，与 UI 的无关。如果界面中有列表控件，如 recycleview，则会在 **adapter** 处理与列表控件相关的 item 和数据等。如果页面中有一些自定义的控件，比如 popupWindow，则会将相关的控件放在 **view** 中。下图是 m_binder module 的目录结构：
  
 <div align=center>

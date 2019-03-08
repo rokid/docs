@@ -125,6 +125,9 @@ ROKID AI Dev v3.31 PCBA Bottom层接口定义：
 
 ROKID AI Dev v3.31开发板外部连接非常简单，插入12V/1A DC 适配器即自动开机。
 
+- [**BT配网**](https://developer.rokid.com/docs/7-bspguide/pei_wang_yan_zheng/btpei_wang.html)
+
+
 ### 烧写Image与SN
 
 1.  安装设备驱动，安装文件和说明在leo-k18-universal-glibc/bootx_win/driver_install目录下
@@ -207,4 +210,12 @@ ROKID AI Dev v3.31开发板外部连接非常简单，插入12V/1A DC 适配器�
 
 1.  至此，SN烧录步骤完成。设备自动重启，进入配网模式。
 
-还有其他问题可以参考[**驱动开发**](https://developer.rokid.com/docs/7-bspguide/ruan_jian_jia_gou_yu_bian_yi_fang_fa/dai_ma_mu_lu.html)
+还有其他问题可以参考：
+
+- [**Linux烧写工具使用**](https://developer.rokid.com/docs/7-bspguide/jing_xiang_shao_xie/linuxshao_xie_gong_ju_shi_yong.html)
+
+- [**Windows烧写工具使用**](https://developer.rokid.com/docs/7-bspguide/jing_xiang_shao_xie/windowsshao_xie_gong_ju_shi_yong.html)
+
+- [**工厂烧写工具使用**](https://developer.rokid.com/docs/7-bspguide/jing_xiang_shao_xie/gong_chang_shao_xie_gong_ju_shi_yong.html)
+
+
