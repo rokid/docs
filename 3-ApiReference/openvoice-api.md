@@ -5,21 +5,21 @@
 本文档目的是描述云端语音接口的 WebSocket 版本的开放协议，主要包含语音识别、语义理解、语音合成三大部分功能，主要面向想要了解语音交互细节，并具有一定开发能力的开发者或用户。
 
 
-####WebSocket API接入
-[WebSocket 接入Demo（JAVA）](https://github.com/Rokid/rokid-speech)；
+#### WebSocket API接入
+[WebSocket 接入Demo（JAVA）](https://github.com/Rokid/rokid-speech)
 
-[WebSocket  接入Demo（Python）](https://github.com/Rokid/speech-python-demo)；
+[WebSocket  接入Demo（Python）](https://github.com/Rokid/speech-python-demo)
 
-####HTTP 接入
-[ 语音合成（TTS） HTTP 接入文档](https://developer.rokid.com/docs/3-ApiReference/openvoice-api-http.html)；
+#### HTTP 接入
+[ 语音合成（TTS） HTTP 接入文档](https://developer.rokid.com/docs/3-ApiReference/openvoice-api-http.html)
 
-[ 语音识别（ASR） HTTP 接入文档](https://developer.rokid.com/docs/3-ApiReference/openvoice-http-api.html)；
+[ 语音识别（ASR） HTTP 接入文档](https://developer.rokid.com/docs/3-ApiReference/openvoice-http-api.html)
 
-####Android SDK 接入
-[ Android SDK 接入文档](https://developer.rokid.com/docs/5-enableVoice/rokid-vsvy-sdk-docs/fullLink/fulllink.html)；
+#### Android SDK 接入
+[ Android SDK 接入文档](https://developer.rokid.com/docs/5-enableVoice/rokid-vsvy-sdk-docs/fullLink/fulllink.html)
 
 #### 技能开发
-[Skill开发指南（相关技能开发）](https://developer.rokid.com/docs/2-RokidDocument/1-SkillsKit/platform-introduction.html)；
+[Skill开发指南（相关技能开发）](https://developer.rokid.com/docs/2-RokidDocument/1-SkillsKit/platform-introduction.html)
 
 #### 索引
   - [服务地址](#服务地址)
