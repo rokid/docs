@@ -127,22 +127,27 @@
 | 参数     | 类型        | 描述                   | 默认值  |
 | ------ | --------- | -------------------- | ---- |
 | id      | int32  | 唯一标识，用于跟踪一个完整的请求，处理及响应事件。 | 0     |
-| type   | ReqType | START、VOICE、END 或 TEXT | 无   |
-| voice  | bytes     | 需要识别的语音流      | 无    |
-| asr    | bytes     | 需要理解的 asr 文本      | 无    |
-| options    | SpeechOptions     | 辅助理解的选项        | 无    |
+| type   | ReqType | START、VOICE、END 或 TEXT | 空  |
+| voice  | bytes     | 需要识别的语音流      | 空   |
+| asr    | bytes     | 需要理解的 asr 文本      | 空   |
+| options    | SpeechOptions     | 辅助理解的选项，内容见下表       | 空   |
+
+**options 字段的详细说明**
+
+| 参数     | 类型        | 描述                   | 默认值  |
+| ------ | --------- | -------------------- | ---- |
 | lang    | string | 语音流的语言，目前支持 zh-CN，en-US。  | zh-CN |
-| codec   | string | 语音流的编码，目前支持 PCM，OPU，OPU2，OPUS，AMRWB，AMRNB，PCM8K。<br />PCM，OPU，OPU2，OPUS，AMRWB 的语音数据格式为单通道，采样率16Khz，16bit；<br />AMRNB，PCM8K的语音数据格式为单通道，采样率8Khz，16bit； | pcm   |
+| codec   | string | 语音流的编码，目前支持 PCM，OPU，OPU2。 | PCM   |
 | vad_mode   | VadMode | LOCAL、CLOUD | LOCAL |
-| vend_timeout   | uint32 | 如果 vad_mode 为 CLOUD 时，指定 vad 时间，单位 ms，推荐设置为 500ms | 无   |
+| vend_timeout   | uint32 | 如果 vad_mode 为 CLOUD 时，指定 vad 时间，单位 ms，推荐设置为 500ms | 0  |
 | no_nlp   | bool | 是否需要语义理解（nlp） | false   |
 | no_intermediate_asr   | bool | 是否需要 asr 的实时识别结果 | false   |
-| stack   | string | 设备当前的应用栈信息，"appid1:appid2"按照应用被调用的时间逆序排列          | 空     |
-| voice_trigger      | string | 激活词，即用于唤醒设备的名字，如"若琪"；可用竖线分隔指定多个 | 空    |
+| stack   | string | 设备当前的应用栈信息，"appid1:appid2"按照应用被调用的时间逆序排列          | 空   |
+| voice_trigger      | string | 激活词，即用于唤醒设备的名字，如"若琪"；可用 "\|" 分隔指定多个，如 "若琪\|洛奇" | 空   |
 | voice_power   | float | 语音流的音强，若设置则在多设备中作仲裁，同时只有音强最强的设备有响应 | 0      |
-| trigger_start   | float | 语音流的激活词的开始位置。  | 无   |
-| trigger_length   | float | 语音流的激活词的长度。  | 无   |
-| skill_options  | string | 设备上的状态信息，为 json 结构，此结构会传给相应的 skill 的 cloud app   | 空     |
+| trigger_start   | float | 语音流的激活词的开始位置。  | 0   |
+| trigger_length   | float | 语音流的激活词的长度。  | 0   |
+| skill_options  | string | 设备上的状态信息，为 json 结构，此结构会传给相应的 skill 的 cloud app   | 空   |
 | voice_extra | string | asr 引擎 的参数，json 格式 | 空 |
 | vad_begin | uint32 |  | 0 |
 | no_trigger_confirm | bool | 是否需要云端激活词的二次确认功能 | false |
@@ -201,9 +206,9 @@
 | 参数     | 类型        | 描述                   | 默认值  |
 | ------ | --------- | -------------------- | ---- |
 | id        | int32  | 唯一标识，用于跟踪一个完整的请求，处理及响应事件。   | 0    |
-| text   | string    | 需要转换的text文本          | 无    |
-| declaimer | string | 发音人，目前支持 中文成人 "zh" 与 中文儿童 "c1" 两种 | 无 |
-| codec     | string | 语音流的编码，目前支持pcm、opu、OPU2、mp3。   | 无  |
+| text   | string    | 需要转换的text文本          | 空   |
+| declaimer | string | 发音人，目前支持 中文成人 "zh" 与 中文儿童 "c1" 两种 | 空 |
+| codec     | string | 语音流的编码，目前支持PCM、OPU、OPU2、mp3。   | 空 |
 | sample_rate | uint32 | 语音流的码率，目前支持 16000 与 24000 | 24000 |
 
 ##### 说明
