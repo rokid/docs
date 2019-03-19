@@ -181,7 +181,7 @@ videoFace = VideoRokidFace.create(context);
  videoFace.destroy();
 ```
 
---
+----- 
 
 <h3 id="2.3">2.3 人脸数据库操作：</h3>
 
