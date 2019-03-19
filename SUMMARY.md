@@ -1,6 +1,6 @@
 # Summary
 ---------
-技术文档
+Rokid 技术文档
 ---------
 * 语音接入（云端和设备端）
   - [语音能力和硬件设计](2-RokidDocument/2-EnableVoice/rokid-hardware-design-guide.md)
