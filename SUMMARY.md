@@ -22,6 +22,7 @@ Rokid 技术文档
     - [Android 全链路APK级别方案](5-enableVoice/rokid-vsvy-sdk-docs/RokidAiSdk/RokidAiSdk.md)
     - [Android 基础语音模块](5-enableVoice/rokid-vsvy-sdk-docs/speechTTS/speechtts.md)
     - [Linux基础架构/树莓派](5-enableVoice/rokid-vsvy-sdk-docs/linuxsdk/linuxsdk.md)
+    - [Android APK级别本地技能开发简易工具](5-enableVoice/rokid-vsvy-sdk-docs/LocalSkillSdk/LocalSkillSdk.md)
   - [声学认证](https://developer-forum.rokid.com/t/topic/2837)
   - [k18芯片和开发板](rokidos-linux-docs/Dev_3.31/13_ROKID_AI_Dev_Board_HW_UserGuide_v3.31.md)
     - [A113开发板](rokidos-linux-docs/reference/dev_board/amlogic/usermanual_a113.md)
