@@ -37,10 +37,10 @@
 
 ### Curl示例
 
-- 可直接使用 curl 命令构造请求：
+- 可直接使用 curl 命令构造请求测试：
 
 ```bash
-curl --header "Content-Type:application/json" \
+curl -X POST --header "Content-Type:application/json" \
 --header "Authorization:key=xxx;device_type_id=xxx;device_id=xxx;service=rest;version=1;time=xxx;sign=xxx;" \
 --data '{"text": "xxx", "declaimer":"zh", "codec":"mp3"}' \
 https://apigwrest.open.rokid.com/api/v1/tts/TtsProxy/Tts
@@ -57,7 +57,7 @@ version={version};time={time};sign={sign};key={key};device_type_id={device_type_
 
 #### Signature
 
-Authorization中的sign字段是签名串，是对下列组合的字符串（UTF-8编码）做MD5计算
+需要根据time字段实时计算，Authorization中的sign字段是签名串，是对下列组合的字符串（UTF-8编码）做MD5计算
 
 ```text
 key={key}&device_type_id={device_type_id}&device_id={device_id}&service={service}&version={version}&time={time}&secret={secret}
