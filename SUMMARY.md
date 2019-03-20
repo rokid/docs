@@ -26,7 +26,7 @@ Rokid 技术文档
   - [k18芯片和开发板](rokidos-linux-docs/Dev_3.31/13_ROKID_AI_Dev_Board_HW_UserGuide_v3.31.md)
     - [A113开发板](rokidos-linux-docs/reference/dev_board/amlogic/usermanual_a113.md)
   - [BSP/驱动开发](7-bspguide/gai_shu/mu_de.md)
-    - [Kamino18平台简介]
+    - Kamino18平台简介
       - [芯片框图](7-bspguide/kamino18ping_tai_jian_jie/xin_pian_kuang_tu.md)
       - [智能语音方案设计简介](7-bspguide/kamino18ping_tai_jian_jie/zhi_neng_yu_yin_fang_an_she_ji_jian_jie.md)
       - [硬件开发板说明](7-bspguide/kamino18ping_tai_jian_jie/ying_jian_kai_fa_ban_shuo_ming.md)
@@ -186,23 +186,23 @@ Rokid 技术文档
     * [基于 VS Code 的 Yeoman & 测试脚本](https://github.com/Rokid/generator-rokid/blob/master/generators/rfs)
     * [读取语音交互日志](2-RokidDocument/1-SkillsKit/test-skill-through-device-log.md) 
 * App 开发
-    *  [Mobile SDK （厂商接入自有app）](5-enableVoice/rokid-vsvy-sdk-docs/mobliesdk/SDK.md)
-        * [Rokid Moblie Android SDK](https://rokid.github.io/mobile-sdk-android-docs/)
-        * [Rokid Moblie ios SDK](https://rokid.github.io/mobile-sdk-ios-docs/)
-    *  [公版App(适用于厂商无自有app）](8-app/alliance/web/gongban.md)
-        * Android 版
-            * [修订记录](8-app/alliance/android/version.md)
-            * [文档说明](8-app/alliance/android/summary.md)
-            * [开发环境](8-app/alliance/android/develop.md)
-            * [工程结构](8-app/alliance/android/resouce_summary.md)
-            * [基础信息配置](8-app/alliance/android/config.md)
-            * [注意事项](8-app/alliance/android/announcement.md)
-        * iOS 版
-            * [修订记录](8-app/alliance/iOS/version.md)
-            * [文档说明](8-app/alliance/iOS/summary.md)
-            * [开发环境](8-app/alliance/iOS/develop.md)
-            * [工程结构](8-app/alliance/iOS/resouce_summary.md)
-            * [基础信息配置](8-app/alliance/iOS/config.md)
+  *  [Mobile SDK （厂商接入自有app）](5-enableVoice/rokid-vsvy-sdk-docs/mobliesdk/SDK.md)
+    * [Rokid Moblie Android SDK](https://rokid.github.io/mobile-sdk-android-docs/)
+    * [Rokid Moblie ios SDK](https://rokid.github.io/mobile-sdk-ios-docs/)
+  *  [公版App(适用于厂商无自有app）](8-app/alliance/web/gongban.md)
+    * Android 版
+      * [修订记录](8-app/alliance/android/version.md)
+      * [文档说明](8-app/alliance/android/summary.md)
+      * [开发环境](8-app/alliance/android/develop.md)
+      * [工程结构](8-app/alliance/android/resouce_summary.md)
+      * [基础信息配置](8-app/alliance/android/config.md)
+      * [注意事项](8-app/alliance/android/announcement.md)
+    * iOS 版
+      * [修订记录](8-app/alliance/iOS/version.md)
+      * [文档说明](8-app/alliance/iOS/summary.md)
+      * [开发环境](8-app/alliance/iOS/develop.md)
+      * [工程结构](8-app/alliance/iOS/resouce_summary.md)
+      * [基础信息配置](8-app/alliance/iOS/config.md)
 * 平台使用说明
   - [平台整体介绍](README.md) 
   * [产品创建和sn导入流程](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/rookie-guide-end.md)
