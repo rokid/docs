@@ -174,6 +174,8 @@
 | action | string | cloud app处理的结果，json字符串 |
 | extra | string | 目前有：{"activation": "xxx"} |
 | vpr | string | 声纹的结果，json字符串，目前为：{"id": "xxx"} |
+| asr_phoneticisms | string | 每个字的拼音结果，json字符串，如“晓”字的拼音为{"phoneticism":"xiao3","word":"晓","type":"CHINESE"} |
+| voice_trigger | string | 激活词的识别结果 |
 
 ##### 说明
 
