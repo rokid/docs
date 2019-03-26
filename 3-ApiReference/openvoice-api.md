@@ -137,7 +137,7 @@
 | 参数     | 类型        | 描述                   | 默认值  |
 | ------ | --------- | -------------------- | ---- |
 | lang    | string | 语音流的语言，目前支持 zh-CN，en-US。  | zh-CN |
-| codec   | string | 语音流的编码，目前支持 PCM，OPU，OPU2。 | PCM   |
+| codec | string | 语音流的编码，目前支持 PCM，OPU，OPU2，OPUS，AMRWB，AMRNB，PCM8K。<br />PCM，OPU，OPU2，OPUS，AMRWB 的语音数据格式为单通道，采样率16Khz，16bit；<br />AMRNB，PCM8K的语音数据格式为单通道，采样率8Khz，16bit； | PCM   |
 | vad_mode   | VadMode | LOCAL、CLOUD | LOCAL |
 | vend_timeout   | uint32 | 如果 vad_mode 为 CLOUD 时，指定 vad 时间，单位 ms，推荐设置为 500ms | 0  |
 | no_nlp   | bool | 是否需要语义理解（nlp） | false   |
