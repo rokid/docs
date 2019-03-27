@@ -12,7 +12,7 @@
 - [语音交互](#语音交互)（speech）
 
 #### WebSocket API接入
-[ 语音合成（TTS） WebSocket 接入文档](https://developer.rokid.com/docs/3-ApiReference/openvoice-api-http.html)
+[ 语音合成（TTS） WebSocket 接入文档](https://developer.rokid.com/docs/3-ApiReference/wstts-api.html)
 
 [WebSocket 接入Demo（JAVA）](https://github.com/Rokid/rokid-speech)
 
