@@ -197,7 +197,7 @@
 
 ### 典型场景
 
-#### 本地 vad
+#### 本地vad
 
 - 如果发送的 VOICE 中包含 "若琪今天天气怎么样"，需要发送 END
 - 使用场景
@@ -205,12 +205,12 @@
   - 用激活词唤醒（发送 START），发送 VOICE…，本地 vad 结束（发送 END）
 
 
-#### 云端 vad
+#### 云端vad
 
 如果发送的 VOICE 中包含 "若琪今天天气怎么样"，设置 vad_timeout 为 500ms，不需要发送 END
 
 
-### speech 异常
+### speech异常
 
 * 如果内部服务异常或不可用，则 SpeechResponse.result 会被设为 INTERNAL
 * 语音开始前 3s 内不包含人声，则

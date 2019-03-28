@@ -6,9 +6,9 @@
 * [二、酷狗音乐skill通用流程](#二、叮当音乐skill接入通用流程介绍)
 
   
-### 叮当音乐skill介绍
+### 酷狗音乐skill介绍
 
-#### 叮当音乐skill内容介绍
+#### 酷狗音乐skill内容介绍
 
 <table><tbody>
 <tr style="font-weight:bold">  <td style="width: 100px">技能名称</td>  <td style="width: 180px">介绍</td>  <td style="width: 180px">价格</td> <td style="width: 180px">>头部内容</td><td>内容数量</td></tr>
