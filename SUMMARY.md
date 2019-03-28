@@ -164,6 +164,7 @@ Rokid 技术文档
     * 头部技能开通流程
         * [喜马拉雅技能开通流程](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/ximalaya.md) 
         * [叮当音乐技能开通流程](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/dingdangmusic.md) 
+        * [酷狗音乐技能开通流程](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/kugou.md) 
   * [技能平台新手引导](2-RokidDocument/1-SkillsKit/platform-introduction.md)  
     * 重要概念
         * [意图](2-RokidDocument/1-SkillsKit/important-concept/intend.md)
