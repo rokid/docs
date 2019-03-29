@@ -24,131 +24,102 @@
     <tr>
         <td>功能</td> 
         <td>示例</td> 
-        <td>备注</td> 
    </tr>
     <tr>
         <td >歌手点播</td>    
         <td >我要听刘德华的歌</td>  
-        <td></td>
     </tr>
     <tr>
         <td >歌曲点播</td> 
         <td >我要听冰雨</td> 
-         <td></td> 
     </tr>
      <tr>
         <td >歌手+歌曲点播</td> 
         <td >我要听刘德华的冰雨</td>  
-          <td></td> 
     </tr>
      <tr>
         <td >播放我的收藏</td> 
         <td >播放我的收藏歌曲</td>
-          <td></td>  
     </tr>
      <tr>
         <td >点播专辑</td> 
         <td >播放周杰伦的专辑范特西</td> 
-          <td></td> 
     </tr>
      <tr>
         <td >播放榜单歌曲</td> 
         <td >我要听新歌榜</td> 
-          <td></td>
     </tr>
      <tr>
         <td >若琪推荐</td> 
         <td >播放音乐</td> 
-          <td></td>
     </tr>
      <tr>
         <td >年代、场景、情绪点播</td> 
         <td >播放睡前音乐</td> 
-        <td></td>
     </tr>
      <tr>
         <td >语言点播</td> 
         <td >我要听中文歌</td> 
-         <td></td>
     </tr>
      <tr>
         <td >点播播放历史</td> 
         <td >播放我最近听过的歌</td> 
-         <td></td>
     </tr>
      <tr>
         <td >歌手类别点播</td> 
         <td >我要听华语歌手的歌 / 我要听男歌手的歌</td> 
-         <td></td>
     </tr>
      <tr>
         <td >下一首/td> 
         <td >下一首</td> 
-        <td></td>
     </tr>
      <tr>
         <td >上一首</td> 
         <td >上一首</td> 
-        <td></td>
     </tr>
      <tr>
         <td >停止播放</td> 
         <td >别放了</td> 
-        <td></td>
     </tr>
      <tr>
         <td >继续播放</td> 
         <td >继续播放</td> 
-         <td></td>
     </tr>
      <tr>
         <td >暂停</td> 
         <td >暂停播放</td> 
-         <td></td>
     </tr>
      <tr>
         <td >取消循环</td> 
         <td >取消单曲循环</td> 
-        <td></td>
     </tr>
      <tr>
         <td >单曲循环</td> 
         <td >单曲循环</td> 
-        <td></td>
     </tr>
      <tr>
         <td >从头播放</td> 
         <td >再放一遍</td> 
-        <td></td>
     </tr>
      <tr>
         <td >收藏/我喜欢</td> 
         <td >我喜欢这首歌 / 收藏</td> 
-        <td>需要接入账号绑定才支持收藏</td>
     </tr>
     <tr>
         <td >歌曲黑名单</td>    
         <td >我不喜欢这首歌</td>  
-        <td></td>
     </tr>
     <tr>
         <td >不取消收藏</td> 
         <td >取消收藏</td>  
-        <td></td>
     </tr>
      <tr>
         <td >帮助</td>    
         <td >介绍下音乐功能</td>  
-        <td></td>
     </tr>
      <tr>
         <td >取消订阅专辑</td> 
         <td >取消订阅</td> 
-    </tr>
-     <tr>
-        <td rowspan="2">喜欢</td>    
-        <td >喜欢某个声音</td>  
-        <td>喜欢</td>
     </tr>
      <tr>
         <td >询问歌曲信息</td> 
@@ -160,18 +131,16 @@
 
 需要合作方和若琪商务（rokidopen@rokid.com）确定合作，确定商务协议后，进行酷狗音乐skill的接入，需要进行的步骤: 
 
-- 若琪开放平台授权酷狗音乐 skill
+#### 若琪开放平台授权酷狗音乐 skill
 
 在开放平台将酷狗音乐技能授权给合作方设备，合作方接受授权
 
-- 酷狗音乐账号oauth流程
+#### 酷狗音乐账号oauth流程
 
 腾讯牛音乐必须在登录酷狗音乐账号后才可以收听音乐。
 
-- 公版APP的方式接入：
+公版APP的方式接入：
 
 公版APP已包含oauth鉴权的流程和页面，只需在开放平台创建一个APP即可，详见[开放平台APP配置](https://developer.rokid.com/docs/8-app/alliance/web/gongban.html)。
 
-备注：目前仅支持公版APP方式接入，如需要APP SDK，需与对接的商务进行沟通。
-
-- 目前酷狗音乐只支持 Android 和 linux 系统的设备。
+备注：目前仅支持公版APP方式接入，如需要APP SDK，需与对接的商务进行沟通,目前酷狗音乐只支持 Android 和 linux 系统的设备。
