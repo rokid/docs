@@ -12,8 +12,6 @@
 
 * Rokid 智能家居
   * [方案输出](https://developer.rokid.com/docs/smarthome/)
-  * [智能家居H5配置界面](https://developer.rokid.com/docs/smarthome/mobile-user-app.html)
-  * [开放接口](https://homebase-open.rokid.com/docs)
   * [设备接入](https://developer.rokid.com/docs/rokid-homebase-docs/)	
   * [FAQ](https://developer.rokid.com/docs/rokid-homebase-docs/faq.html)
   
