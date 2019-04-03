@@ -130,9 +130,9 @@ sox -r 24000 -e signed -b 16 -c 1 old.wav new.wav
 
 | 参数 | 可选值 |
 | :--- | :--- |
-| rate | 语句的发音速度 <ul><li>枚举值：x-slow, slow, medium, fast, x-fast</li><li>相对值：<ul><li>+x表示加速，最高+12</li><li>-x表示减速，最低-12</li><li>0表示无变化</li></ul>|
-| pitch | 语句的语调 <ul><li>枚举值：x-low, low, medium, high, x-high</li><li>相对值：<ul><li>+x表示升高语调，最高+12</li><li>-x表示降低语调，最低-12</li><li>0表示无变化</li></ul>|
-| volume |  声音的高低 <ul><li>枚举值：silent, x-soft, soft, medium, loud, x-loud</li><li>相对值：<ul><li>+x表示调高音量，最高+12</li><li>-x表示降低音量，最低-12</li><li>0表示无变化</li></ul>|
+| rate | 语句的发音速度 <ul><li>枚举值：x-slow, slow, medium, fast, x-fast
+| pitch | 语句的语调 <ul><li>枚举值：x-low, low, medium, high, x-high
+| volume |  声音的高低 <ul><li>枚举值：silent, x-soft, soft, medium, loud, x-loud
 
 ```html
 <speak>
