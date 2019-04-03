@@ -2,6 +2,7 @@
 
 本文旨在介绍酷狗音乐技能的接入流程，方便B端厂商快速接入酷狗音乐优质的资源内容。
 
+
 * [一、酷狗音乐skill介绍](#酷狗音乐skill介绍)
 * [二、酷狗音乐skill通用流程](#酷狗音乐skill接入通用流程介绍)
 
@@ -144,3 +145,4 @@
 公版APP已包含oauth鉴权的流程和页面，只需在开放平台创建一个APP即可，详见[开放平台APP配置](https://developer.rokid.com/docs/8-app/alliance/web/gongban.html)。
 
 备注：目前仅支持公版APP方式接入，如需要APP SDK，需与对接的商务进行沟通,目前酷狗音乐只支持 Android 和 linux 系统的设备。
+
