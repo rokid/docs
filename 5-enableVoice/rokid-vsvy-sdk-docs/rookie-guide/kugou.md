@@ -140,9 +140,18 @@
 
 腾讯牛音乐必须在登录酷狗音乐账号后才可以收听音乐。
 
-公版APP的方式接入：
+-公版APP的方式接入：
 
 公版APP已包含oauth鉴权的流程和页面，只需在开放平台创建一个APP即可，详见[开放平台APP配置](https://developer.rokid.com/docs/8-app/alliance/web/gongban.html)。
 
-备注：目前仅支持公版APP方式接入，如需要APP SDK，需与对接的商务进行沟通,目前酷狗音乐只支持 Android 和 linux 系统的设备。
+-SDK方式：
+
+如果是通过SDK方式接入，则需要按照以下文档开发完成SDK接入才可以完成酷狗音乐oauth鉴权：
+
+IOS:[IOS端酷狗音乐账号授权接入文档](https://rokid.github.io/mobile-sdk-ios-docs/res/skill/media_thrid_kugou.html)
+
+Android:[Android端酷狗音乐账号授权接入文档](https://rokid.github.io/mobile-sdk-android-docs/res/skill/media_third_kugou.html)
+
+
+备注：目前酷狗音乐只支持 Android 和 linux 系统的设备。
 
