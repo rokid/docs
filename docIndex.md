@@ -21,8 +21,8 @@
   * [技能开发](https://developer.rokid.com/docs/2-RokidDocument/1-SkillsKit/important-concept/cloud-app-development-protocol_cn.html) 
 
 * App 开发
-    *  [Mobile SDK](https://developer.rokid.com/docs/5-enableVoice/rokid-vsvy-sdk-docs/mobliesdk/SDK.html)
-    *  [公版App](https://developer.rokid.com/docs/8-app/alliance/web/gongban.html)
+  *  [Mobile SDK](https://developer.rokid.com/docs/5-enableVoice/rokid-vsvy-sdk-docs/mobliesdk/SDK.html)
+  *  [公版App](https://developer.rokid.com/docs/8-app/alliance/web/gongban.html)
     
 * 视觉能力
   - [人脸识别](https://developer.rokid.com/docs/glass/Rokid人脸识别SDK1.2.0.15.html)
@@ -33,6 +33,7 @@
   * [产品创建和sn导入流程](https://developer.rokid.com/docs/5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/rookie-guide-end.html)
   * [系统升级OTA](https://developer.rokid.com/docs/5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/ota.html) 
   * [设备数据管理](https://developer.rokid.com/docs/5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/data.html)
+  * [热词和拦截器](https://developer.rokid.com/docs/5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/hotword.html)
   * [聊天问答配置](https://developer.rokid.com/docs/5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/chat.html)
   * [语音识别改写](https://developer.rokid.com/docs/5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/query.html)
   
