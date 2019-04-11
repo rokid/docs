@@ -149,7 +149,7 @@
 | trigger_length   | float | 语音流的激活词的长度。  | 0   |
 | skill_options  | string | 设备上的状态信息，为 json 结构，此结构会传给相应的 skill 的 cloud app   | 空   |
 | voice_extra | string | asr 引擎 的参数，json 格式 | 空 |
-| vad_begin | uint32 |  | 0 |
+| vad_begin | uint32 | vad begin 的窗口大小 :-( | 0 |
 | no_trigger_confirm | bool | 是否需要云端激活词的二次确认功能 | false |
 
 ##### 说明
