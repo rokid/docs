@@ -7,9 +7,10 @@ Rokid 技术文档
     - [Rokid 语音识别](6-asrandtts/asr.md)
     - [Rokid 语音合成](6-asrandtts/tts.md)
     - [Rokid 硬件交互设计指南](2-RokidDocument/2-EnableVoice/rokid-hardware-ux-design-guidelines.md)
-  - [开放平台接口定义文档](3-ApiReference/openvoice-api.md)
+  - [开放平台接口定义文档]
     - [SDK 接口定义](3-ApiReference/rokid-client-sdk-doc.md)
     - WebSocket 开发协议
+      - [语音交互](3-ApiReference/openvoice-speech-api.md)
       - [语音合成](3-ApiReference/wstts-api.md)
     - HTTP接口开发协议
       - [语音识别](3-ApiReference/openvoice-http-api.md)
