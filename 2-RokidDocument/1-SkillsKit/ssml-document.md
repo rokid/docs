@@ -10,7 +10,7 @@
   - [audio](#audio)
     - [将音频文件转换为Rokid可用的格式](#%E5%B0%86%E9%9F%B3%E9%A2%91%E6%96%87%E4%BB%B6%E8%BD%AC%E6%8D%A2%E4%B8%BArokid%E5%8F%AF%E7%94%A8%E7%9A%84%E6%A0%BC%E5%BC%8F)
   - [break](#break)
-  - [lang（暂未开启使用）](#lang%E6%9A%82%E6%9C%AA%E5%BC%80%E5%90%AF%E4%BD%BF%E7%94%A8)
+  - [lang](#lang)
   - [mark](#mark)
   - [p](#p)
   - [phoneme](#phoneme)
@@ -226,7 +226,7 @@ sox -r 24000 -e signed -b 16 -c 1 old.wav new.wav
 </speak>
 ```
 
-#### lang（暂未开启使用）
+#### lang
 指定文本朗读的语言。lang的引用场景为可以强制数字或者字母按照英语的方式来朗读。
 lang标签可以包含`audio/break/lang/mark/phoneme/prosody/say-as/sub/token/w/voice`标签，
 可以包含于`lang/phoneme/prosody/voice`标签。
@@ -402,7 +402,7 @@ P标签可包含`audio/break/lang/mark/phoneme/prosody/say-as/sub/s/t/voice`标�
 | `tempo` | 唱歌时，每分钟的拍子数，单位为`BPM`（beats per minute）                  |
 | `tone`  | 用来调整整体音高，单位为半音（`semitone`）取值从-12到12。0代表正常音高。 |
 为了给每句歌词的每个汉字指定音高和时长（也即是歌谱），需要在`s`标签中给`pd`(pitch/duration)属性赋值。具体规则是：
-冒号‘:’后面的部分使用‘;’分隔成很多段，各段按先后顺序一一对应文 字信息里面的各个音节(syllable)。曲谱和文字的对应关系是以syllable为基准的。汉语里面，通常每个汉字就 是一个syllable。英语里面，每个单词可能有多个syllable，但每个syllable里 有且只有一个元音。
+使用‘;’把pd的值分隔成很多段，各段按先后顺序一一对应文 字信息里面的各个音节(syllable)。曲谱和文字的对应关系是以syllable为基准的。汉语里面，通常每个汉字就 是一个syllable。英语里面，每个单词可能有多个syllable，但每个syllable里 有且只有一个元音。
 每一个‘;’之间的内容是描述调值(Tone)和拍子数(Duration)。例如： ‘C4 0.5’代表半拍的1(do)：C4表示1(do)，0.5表示半拍。中间都要用空格格开。如果是空拍子，调值应该写“`NL`”。
 
 ```html
