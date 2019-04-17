@@ -466,8 +466,8 @@ android:scheme="rokidalliance"
 | code | String | 配网失败的错误码|
 | subtitle | String | 配网错误页面副标题|
 | tips | Object | 配网错误页面相关的提示信息数据 |
-需注意的是，该配置文件命名的通用格式为： **config_binder_detail_"deviceTypeN
-ame".json**，厂商在设置自己的设备时，只需修改具体的设备类型名称即可，例如你有个设备类型名称叫做 “ABC”，那么对应的文件名称为 **config_binder_detail_ABC.json**，“**config_binder_detail_**”保持不变。同时，一个配置文件对应一个设备类型，若有多个设备类型，则添加对应数量的配置文件即可。
+
+需注意的是，该配置文件命名的通用格式为： **config_binder_detail_deviceTypeName.json**，厂商在设置自己的设备时，只需修改具体的设备类型名称即可，若设备类型名称有大写字母需转换成对应的小写字母，例如你有个设备类型名称叫做 “ABC”，那么对应的文件名称为 **config_binder_detail_abc.json**，` config_binder_detail_` 保持不变，<font color=red>设备类型名称需全部转换成小写，如"ABC"->"abc"</font>。同时，一个配置文件对应一个设备类型，若有多个设备类型，则添加对应数量的配置文件即可。
 
 <center class="half">
     <img src="media/15414260412040.jpg" width="300" style="border:solid 1px #9A9A9A;"/><img src="media/15414264908081.jpg" width="300" style="border:solid 1px #9A9A9A;"/>
