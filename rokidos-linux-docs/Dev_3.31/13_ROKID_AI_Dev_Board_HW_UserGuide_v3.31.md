@@ -82,7 +82,7 @@ USB接口)调试主芯片及各外设，方便用户开发调试。
 
 ROKID AI Dev Board v3.31整机外形图如下：
 
-![](media/0dd348d472f722577db3c12d14ca5ee4.png)
+![](media/WechatIMG253.tiff)
 
 图 4 ROKID AI Dev v3.31开发板外形
 
