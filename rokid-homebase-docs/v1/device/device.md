@@ -2,16 +2,16 @@
 
 #### 数据类型 {Object}
 
-- {String} [deviceId](#deviceId)
-- {String} [name](#name)
-- {String} [type](#type)
-- {Object} [actions](#actions)
-- {Object} [state](#state)
-- {Boolean} [offline](#offline)
-- {Object} [deviceInfo](#deviceInfo) (Optional)
-- {Object} [execDelay](#execDelay) (Optional)
-- {String} [parent](#parent) (Optional)
-- {String} [roomName](#roomName) (Optional)
+- {String} [deviceId](#deviceId) 设备ID
+- {String} [name](#name) 设备名
+- {String} [type](#type) 设备类型
+- {Object} [actions](#actions) 设备支持的能力
+- {Object} [state](#state) 设备状态
+- {Boolean} [offline](#offline) 是否离线
+- {Object} [deviceInfo](#deviceInfo) (Optional) 附加信息
+- {Object} [execDelay](#execDelay) (Optional) 控制延迟
+- {String} [roomName](#roomName) (Optional) 房间名称
+- {String} [homeName](#homeName) (Optional) 家庭名称
 
 **标准化设备** 数据定义参考： [jsonschemalint 在线检查工具](https://jsonschemalint.com/#/version/draft-04/markup/json?gist=f9b8fcb4b8e9e2761978fb9cbde48392)
 
@@ -112,6 +112,9 @@ Example:
 
 - {Number} Option 该设备控制指令发出后与下一个控制指令的延迟， 默认 150ms
 
+对于一些红外设备， 用控制延迟可以避免两次控制指令同时下发，导致控制冲突或者设备压力过大引起的控制失败
+
+
 Example:
 ```JSON
 {
@@ -125,20 +128,39 @@ Example:
 }
 ```
 
-##### <span id = "parent">parent</span>
-
-- {String}
-- Option
-- 母设备的 deviceId
-- 例如多联开关的每一个开关都要单独转化为一个子设备，此时多联开关就是一个母设备。
-
 ##### <span id = "roomName">roomName</span>
 
 - {String}
-- Option
+- 可选
 - 设备所属房间名称
 
 Example:
+
+```json
+{
+  "deviceId": "qwert",
+  "name": "落地灯",
+  "roomName": "卧室",
+}
 ```
-roomName: "卧室"
+
+
+##### <span id = "homeName">homeName</span>
+
+- {String}
+- 可选
+- 设备所属家庭名称
+
+提供家庭名称， 可以帮助设备绑定的时候，用户可以选择自动创建该家庭， 并将设备自动同步到该家庭。
+
+家庭可以做设备控制的隔离， 特别适合酒店客房或者不同住所控制需要。避免控制到其他客房或者住所的设备。
+
+Example:
+
+```json
+{
+  "deviceId": "qwert",
+  "name": "落地灯",
+  "homeNmae": "客房218"
+}
 ```

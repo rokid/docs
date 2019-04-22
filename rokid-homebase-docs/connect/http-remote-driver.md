@@ -86,8 +86,23 @@ HTTP 远程驱动使用 JSON 作为数据交换格式， 执行成功会返回�
     "data": [
       {
         "type": "light",
-        "deviceId": "123123",
+        "deviceId": "demoDevcie1",
         "name": "灯灯灯灯",
+        "roomName": "客厅",
+        "homeName": "我的家",
+        "actions": {
+          "switch": ["on", "off"]
+        },
+        "state": {
+          "switch": "off"
+        }
+      },
+      {
+        "type": "light",
+        "deviceId": "demoDevcie2",
+        "name": "灯灯灯灯",
+        "roomName": "办公室",
+        "homeName": "公司",
         "actions": {
           "switch": ["on", "off"]
         },
