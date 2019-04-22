@@ -77,6 +77,8 @@
          "deviceId":"test-id",
          "name":"测试设备",
          "type":"light",
+         "roomName": "办公室",
+         "homeName": "公司",
          "actions":{
             "switch":[
                "on",
