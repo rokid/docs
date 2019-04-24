@@ -3,21 +3,22 @@
 Rokid 技术文档
 ---------
 * 语音接入（云端和设备端）
-  - [语音能力和硬件设计](2-RokidDocument/2-EnableVoice/rokid-hardware-design-guide.md)
+  - [语音能力和硬件设计介绍](2-RokidDocument/2-EnableVoice/rokid-hardware-design-guide.md)
     - [Rokid 语音识别](6-asrandtts/asr.md)
     - [Rokid 语音合成](6-asrandtts/tts.md)
     - [Rokid 硬件交互设计指南](2-RokidDocument/2-EnableVoice/rokid-hardware-ux-design-guidelines.md)
-  - 开放平台接口定义文档
-    - [SDK 接口定义](3-ApiReference/rokid-client-sdk-doc.md)
-    - WebSocket 开发协议
-      - [语音交互](3-ApiReference/openvoice-speech-api.md)
-      - [语音理解](3-ApiReference/openvoice-nlp-api.md)
+  - [开放平台接口定义文档](3-ApiReference/openvoice-speech-api.md)
+    - [开通账号](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/)
+    - WebSocket方式接入
+      - [语音交互](3-ApiReference/wsasr-api.md)
+      - [自然语言理解](3-ApiReference/openvoice-nlp-api.md)
       - [语音合成](3-ApiReference/wstts-api.md)
-    - HTTP接口开发协议
+    - HTTP方式接入
       - [语音识别](3-ApiReference/openvoice-http-api.md)
       - [语音合成](3-ApiReference/openvoice-api-http.md)
-    - [设备接口文档](3-ApiReference/open-device-manager.md)
-    - [语音能力接入流程（参考）](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/rokidspeech.md)
+    - 设备端SDK协议
+      - [SDK 接口定义](3-ApiReference/rokid-client-sdk-doc.md)
+      - [设备接口文档](3-ApiReference/open-device-manager.md)rokidspeech.md)
   - [重要概念和错误码](5-enableVoice/rokid-vsvy-sdk-docs/important-concept.md)
     - [错误码](5-enableVoice/rokid-vsvy-sdk-docs/common/err_code.md)
     - [JSON 格式配置字串](5-enableVoice/rokid-vsvy-sdk-docs/common/api_json.md) 
