@@ -6,7 +6,7 @@
 主要包含语音识别、语义理解、语音合成等功能，面向想要了解语音交互细节，并具有一定开发能力的开发者或用户。
 
 注意：语音识别、语义理解、语音合成的接口地址是同一个，通过不同的service参数来区分，详见各接入文档
-#### [设备认证]()
+#### [设备认证](https://developer.rokid.com/docs/3-ApiReference/openvoice-auth-api.html)
 
 #### WebSocket 接入
 - [ 语音识别（ASR） WebSocket 接入文档](https://developer.rokid.com/docs/3-ApiReference/wsasr-api.html)
