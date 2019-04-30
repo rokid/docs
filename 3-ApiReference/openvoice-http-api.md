@@ -53,7 +53,7 @@ time={time};sign={sign};key={key};device_type_id={device_type_id};device_id={dev
 | key            | string | 开放接口Key，在[开放平台语音接入](https://developer.rokid.com/docs/2-RokidDocument/2-EnableVoice/get-the-certification-file.html)获取        | 无，必填 |
 | secret         | string | 开放接口Key，在[开放平台语音接入](https://developer.rokid.com/docs/2-RokidDocument/2-EnableVoice/get-the-certification-file.html)获取        | 无，必填 |
 | device_type_id | string | 设备类型ID                 | 无，必填 |
-| device_id      | string | 设备ID                   | 无，必填 |
+| device_id      | string | 设备ID，请确保使用认证sn，开发者平台默认赠送10个               | 无，必填 |
 | service        | string | 服务名：asr 或 tts | 无，必填 |
 | version        | string | 服务版本号：2 或 1     | 无，必填 |
 | time     | string | unix时间戳              | 无，必填 |
