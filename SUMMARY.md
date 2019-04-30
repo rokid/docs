@@ -14,8 +14,8 @@ Rokid 技术文档
       - [自然语言理解](3-ApiReference/openvoice-nlp-api.md)
       - [语音合成](3-ApiReference/wstts-api.md)
     - HTTP方式接入
-      - [语音识别](3-ApiReference/openvoice-http-api.md)
-      - [语音合成](3-ApiReference/openvoice-api-http.md)
+      - [语音识别](3-ApiReference/openvoice-http-asr.md)
+      - [语音合成](3-ApiReference/openvoice-http-tts.md)
     - 设备端SDK协议
       - [SDK 接口定义](3-ApiReference/rokid-client-sdk-doc.md)
       - [设备接口文档](3-ApiReference/open-device-manager.md)rokidspeech.md)
