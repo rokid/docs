@@ -35,40 +35,9 @@ https://apigwws.open.rokid.com/api/v2/asr/uid 其中 uid 是客户端指定的�
 
 此文档用于定义开放平台上云端应用接口开发协议，协议遵循 http 协议。
 
-### 认证
+#### 认证
+- 详见 [认证设备](https://developer.rokid.com/docs/3-ApiReference/openvoice-auth-api.html)
 
-在 HTTP 头部中提供一个 **Authorization** 包含认证信息，格式如下：
-
-```
-time={time};sign={sign};key={key};device_type_id={device_type_id};device_id={device_id};
-```
-其中
-
-- 各 key=value 之间由 分号 分隔
-- 各 key 顺序随意
-- 各参数说明如下
-
-| 参数             | 类型     | 描述                     | 默认值  |
-| -------------- | ------ | ---------------------- | ---- |
-| key            | string | 开放接口Key，在[开放平台语音接入](https://developer.rokid.com/docs/2-RokidDocument/2-EnableVoice/get-the-certification-file.html)获取        | 无，必填 |
-| secret         | string | 开放接口Key，在[开放平台语音接入](https://developer.rokid.com/docs/2-RokidDocument/2-EnableVoice/get-the-certification-file.html)获取        | 无，必填 |
-| device_type_id | string | 设备类型ID                 | 无，必填 |
-| device_id      | string | 设备ID                   | 无，必填 |
-| service        | string | 服务名：asr 或 tts | 无，必填 |
-| version        | string | 服务版本号：2 或 1     | 无，必填 |
-| time     | string | unix时间戳              | 无，必填 |
-| sign           | string | 由以上几项按以下方法计算生成 | 无，必填 |
-
-##### 说明
-
-- 字段 **sign** 计算方法：
-
-1. 拼成如下字符串 utf8 的字符串 utf8str：key={key}&device_type_id={device_type_id}&device_id={device_id}&service={service}&version={version}&time={time}&secret={secret}，其中 ：
-    - {xxx} 由 xxx 的值替代
-    - key 及 secret 由开发方通过[开放平台语音接入](https://developer.rokid.com/docs/2-RokidDocument/2-EnableVoice/get-the-certification-file.html)获取
-2. 计算 str 字符串的 md5 值
-3. **asr** 服务的 sign 的字符串为 utf8str：key={key}&device_type_id={device_type_id}&device_id={device_id}&service=**asr**&version=**2**&time={time}&secret={secret}
-4. **tts** 服务的 sign 的字符串为 utf8str：key={key}&device_type_id={device_type_id}&device_id={device_id}&service=**tts**&version=**1**&time={time}&secret={secret}
 
 #### 语音识别
 

@@ -46,50 +46,7 @@ curl -X POST --header "Content-Type:application/json" \
 https://apigwrest.open.rokid.com/api/v1/tts/TtsProxy/Tts
 ```
 ### 设备认证
-
-#### Authorization
-
-设备认证方式中的Authorization内容格式如下：
-
-```text
-version={version};time={time};sign={sign};key={key};device_type_id={device_type_id};device_id={device_id};service={service}
-```
-
-#### Signature
-
-需要根据time字段实时计算，Authorization中的sign字段是签名串，是对下列组合的字符串（UTF-8编码）做MD5计算
-
-```text
-key={key}&device_type_id={device_type_id}&device_id={device_id}&service={service}&version={version}&time={time}&secret={secret}
-```
-
-#### 生成sign示例代码（golang）
-
-```go
-
-func generateAuthorization(version, secret, key, deviceTypeID, deviceID, service string) string {
-    now := strconv.FormatInt(time.Now().Unix(), 10)
-    return fmt.Sprintf("version=%s;time=%s;sign=%s;key=%s;device_type_id=%s;device_id=%s;service=%s",
-        version, now, generateSign(now, version, secret, key, deviceTypeID, deviceID, service),
-        key, deviceTypeID, deviceID, service)
-}
-
-func generateSign(now, version, secret, key, deviceTypeID, deviceID, service string) string {
-    src := "key=" + key + "&device_type_id=" + deviceTypeID + "&device_id=" + deviceID + "&service=" + service + "&version=" + version + "&time=" + now + "&secret=" + secret
-    fmt.Println("sign source:", src)
-    sign := strings.ToUpper(makeMD5(src))
-    fmt.Println("sign:", sign)
-    return sign
-}
-
-func makeMD5(data string) string {
-    h := md5.New()
-    h.Write([]byte(data))
-    return hex.EncodeToString(h.Sum(nil))
-}
-
-```
-
+- 详见[认证设备](https://developer.rokid.com/docs/3-ApiReference/openvoice-auth-api.html)
 
 ## 语音合成API
 
