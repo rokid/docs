@@ -11,7 +11,7 @@ Rokid 技术文档
     - [设备认证](3-ApiReference/openvoice-auth-api.md)
     - WebSocket方式接入
       - [语音交互](3-ApiReference/wsasr-api.md)
-      - [自然语言理解](3-ApiReference/openvoice-nlp-api.md)
+      - [语义理解](3-ApiReference/openvoice-nlp-api.md)
       - [语音合成](3-ApiReference/wstts-api.md)
     - HTTP方式接入
       - [语音识别](3-ApiReference/openvoice-http-asr.md)
