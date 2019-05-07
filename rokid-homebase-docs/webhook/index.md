@@ -1,11 +1,6 @@
-### 目录
-- [Webhook 功能简介](#webhook-功能简介)
-- [Webhook 使用详述](#webhook-使用详述)
-  - [触发 Webhook](#触发-webhook)
-  - [触发 Body](#触发-body)
-  - [常见问题](#常见问题)
+# Webhook
 
-### Webhook 功能简介
+## Webhook 功能简介
 
 目前若琪通过该接口开放了tts播报、播放音乐流媒体及asr指令的能力。
 开发者可以将新增的Webhook接口地址复制并添加至智能家居第三方平台，（如Abox，homeassistant...）
@@ -14,17 +9,25 @@
 
 `请开发者注意：最大调用限制：每分钟20次，每24小时1000次。`
 
-### Webhook 使用详述
+## Webhook 使用详述
 
 Webhook 是一个通过 HTTP 调用控制用户授权设备的服务，当某一个事件发生时，通过发起一个 HTTP Post 请求并使用期望的参数至指定的 Webhook URL 接口即可直接控制家庭里的设备。
 
-#### 触发 Webhook
+获取方式：
 
-创建一个 HTTP POST 请求至
+![图 1](https://s.rokidcdn.com/homebase/upload/SJ0ccn0jN.png)
+
+图1
+
+## 触发 Webhook
+
+创建一个 HTTP POST 请求至 Webhook 生成的地址
 
 ```
 https://homebase.rokid.com/trigger/with/{your_very_awesome_token}
 ```
+
+> webhook 地址获取方式见 图 1
 
 与一个可选的 JSON 请求 Body，如：
 
@@ -56,7 +59,7 @@ curl -X "POST" "https://homebase.rokid.com/trigger/with/{your_very_awesome_token
 }'
 ```
 
-#### 触发 Body
+### 触发 Body
 
 Webhook 请求体的数据结构如下表所示，是一个 JSON 格式的 `object` 类型
 
@@ -129,7 +132,7 @@ text | `string` | 必需 | 语音控制指令，如 `打开欢迎模式`, `天�
 }
 ```
 
-#### 常见问题
+## 常见问题
 
 1. HTTP 状态码 422
   Webhook 的调用请求内容不符合约定，可以根据请求返回的错误消息修改请求内容。
