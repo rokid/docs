@@ -222,6 +222,9 @@ Rokid 技术文档
   * [热词和拦截器](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/hotword.md)
   * [聊天问答配置](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/chat.md)
   * [语音识别改写](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/query.md)
+* 运营商方案
+  * [移动入库(杭研)](http://confluence:8090/pages/viewpage.action?pageId=3310908)
+  * [联通集采](operator/CUCC/CUCC_VoWIFI_Yodaos.md)
 * 帮助和支持
   * [文档意见反馈和问答](https://developer-forum.rokid.com/c/53-category)
   * [视频教程](9-video/summary.md)
