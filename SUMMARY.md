@@ -223,8 +223,16 @@ Rokid 技术文档
   * [聊天问答配置](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/chat.md)
   * [语音识别改写](5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/query.md)
 * 运营商方案
-  * [移动入库(杭研)](http://confluence:8090/pages/viewpage.action?pageId=3310908)
-  * [联通集采](operator/CUCC/CUCC_VoWIFI_Yodaos.md)
+  * 移动入库(杭研)
+      * [入库说明:中国移动 - 杭州研究院](operator/cmcc/入库说明_中国移动_杭州研究院.md)
+      * [中国移动合家固话实现方案](operator/cmcc/中国移动合家固话实现方案.md)
+      * [YodaOS杭研移动和家固话+云网关方案V1.0](operator/cmcc/YodaOS杭研移动和家固话_云网关方案V1.0.md)
+  * 电信集团
+      * [入库说明](operator/ctcc/电信集团.md)
+      * [南京电信yodaos接入文档](operator/ctcc/南京电信yodaos接入文档.md)
+  * 中国联通
+      * [入库说明](operator/CUCC/入库说明.md)
+      * [YodaOs接入文档](operator/CUCC/CUCC_VoWIFI_Yodaos.md)
 * 帮助和支持
   * [文档意见反馈和问答](https://developer-forum.rokid.com/c/53-category)
   * [视频教程](9-video/summary.md)
