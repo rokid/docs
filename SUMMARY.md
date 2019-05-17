@@ -19,6 +19,7 @@ Rokid 技术文档
     - 设备端SDK协议
       - [SDK 接口定义](3-ApiReference/rokid-client-sdk-doc.md)
       - [设备接口文档](3-ApiReference/open-device-manager.md)rokidspeech.md)
+    - [语音云云对接](3-ApiReference/mapi-doc/overview.md)
   - [重要概念和错误码](5-enableVoice/rokid-vsvy-sdk-docs/important-concept.md)
     - [错误码](5-enableVoice/rokid-vsvy-sdk-docs/common/err_code.md)
     - [JSON 格式配置字串](5-enableVoice/rokid-vsvy-sdk-docs/common/api_json.md) 
