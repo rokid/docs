@@ -25,7 +25,7 @@
 
 此协议遵循http协议。协议采用先认证，再使用的方式，步骤如下：
 
-* 建立 https 连接，注意是 **https**，在此基础上进行[请求认证](./gw-auth-api.md)
+* 建立 https 连接，注意是 **https**，在此基础上进行[请求认证](https://developer.rokid.com/docs/3-ApiReference/mapi-doc/gw-auth-api.html)
 * service 设置为 tts，此连接后续可进行一次语音合成
 
 
@@ -33,7 +33,7 @@
 
 ##### 请求
 
-1. 需要带包含认证信息的 **authorization** 的 http header [请求认证](./gw-auth-api.md)
+1. 需要带包含认证信息的 **authorization** 的 http header [请求认证](https://developer.rokid.com/docs/3-ApiReference/mapi-doc/gw-auth-api.html)
 2. 使用 **HTTP POST** 方式
 3. 其中 Content-Type 为 **Content-Type:application/json**
 4. 请求url中的requestid需要自增或者唯一，两个并发请求的requestid相同时可能引发并发错误

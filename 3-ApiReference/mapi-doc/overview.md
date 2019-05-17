@@ -8,14 +8,14 @@
 
 
 #### 语音识别(ASR)
- - [WebSocket接口文档](./gw-ws-asr-api.md)
- - [HTTP接口文档](./gw-http-asr-api.md)
+ - [WebSocket接口文档](https://developer.rokid.com/docs/3-ApiReference/mapi-doc/gw-ws-asr-api.html)
+ - [HTTP接口文档](https://developer.rokid.com/docs/3-ApiReference/mapi-doc/gw-http-asr-api.html)
 
 
 
 #### 语音合成(TTS)
- - [WebSocket接口文档](./gw-ws-tts-api.md)
- - [HTTP接口文档](./gw-http-tts-api.md)
+ - [WebSocket接口文档](https://developer.rokid.com/docs/3-ApiReference/mapi-doc/gw-ws-tts-api.html)
+ - [HTTP接口文档](https://developer.rokid.com/docs/3-ApiReference/mapi-doc/gw-http-tts-api.html)
 
 #### 数据统计和收费模式
   TODO

@@ -14,7 +14,7 @@
 
 ### 协议详解
 
-- 请求认证：在建立websocket连接时，通过http header authorization 进行[请求认证](./gw-auth-api.md)
+- 请求认证：在建立websocket连接时，通过http header authorization 进行[请求认证](https://developer.rokid.com/docs/3-ApiReference/mapi-doc/gw-auth-api.html)
 - ASR语音识别
 
 #### WebSocket API 接入参考Demo
@@ -30,7 +30,7 @@
 
 此协议遵循 [websocket](https://zh.wikipedia.org/zh-cn/WebSocket) 协议。协议采用先认证，再使用的方式，步骤如下：
 
-* 建立 wss 连接，注意是 **websocket + ssl**，在此基础上进行[请求认证](./gw-auth-api.md)
+* 建立 wss 连接，注意是 **websocket + ssl**，在此基础上进行[请求认证](https://developer.rokid.com/docs/3-ApiReference/mapi-doc/gw-auth-api.html)
 * service 设置为 asr，此连接后续可进行一次或多次语音交互，直至连接断开
 
 
