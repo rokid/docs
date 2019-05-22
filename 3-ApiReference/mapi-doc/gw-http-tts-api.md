@@ -64,6 +64,7 @@
 | id        | int32  | 唯一标识，用于跟踪一个完整的请求，处理及响应事件。   |
 
 2. http code 除了200以外，还有部分非200的code，取值如下：
+
 | code 值         | 含义           |
 | ----------------- | -------------- |
 | 400           | Bad Request ：url格式不对，requestId不对或者为空 |
@@ -78,8 +79,5 @@
   - UNINITIALIZED 没有发START或者ONESHOT包导致SESSION顺序错误
   - INTERNAL 云端内部错误
   - BADREQUEST 网络或者协议导致的错误
-
-### 示例
-
 
 
