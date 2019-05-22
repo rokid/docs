@@ -89,10 +89,11 @@ codec=%s;voice_trigger=%s;engine=%s;need_hotWords=%s
 3. 其余请求返回为空
 4. http code 除了200以外，还有部分非200的code，取值如下：
 
-| code 值         | 含义           |
+| code 值         | 涵义           |
 | ----------------- | -------------- |
 | 400           | Bad Request ：url格式不对，requestId不对或者为空 |
 | 405           | 非post方法不可行       |
+| 413           | 请求体过大，HTTP BODY 最大支持655350；如果超过这个大小，建议用websocket方式进行流式传输|
 | 500           | http协议层错误     |
 
 5. http code 为200时，所有请求成功与否由 result 决定：SUCCESS 为成功，其余的为失败,返回值如下：
