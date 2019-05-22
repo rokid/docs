@@ -88,20 +88,18 @@ codec=%s;voice_trigger=%s;engine=%s;need_hotWords=%s
 2. 只包含**一个**语音数据的语音交互时，即 type 为 ONESHOT 的请求同样也有以上响应，响应结果是json格式
 3. 其余请求返回为空
 4. http code 除了200以外，还有部分非200的code，取值如下：
+
 | code 值         | 含义           |
 | ----------------- | -------------- |
 | 400           | Bad Request ：url格式不对，requestId不对或者为空 |
 | 405           | 非post方法不可行       |
 | 500           | http协议层错误     |
 
-
-4. http code 为200时，所有请求成功与否由 result 决定：SUCCESS 为成功，其余的为失败,返回值如下：
+5. http code 为200时，所有请求成功与否由 result 决定：SUCCESS 为成功，其余的为失败,返回值如下：
   - SUCCESS 成功
   - BUSY 云端繁忙/调用受限/欠费
   - UNAUTHENTICATED 验证未通过
   - UNINITIALIZED 没有发START或者ONESHOT包导致SESSION顺序错误
   - INTERNAL 云端内部错误
   - BADREQUEST 网络或者协议导致的错误
-
-### 示例
 
