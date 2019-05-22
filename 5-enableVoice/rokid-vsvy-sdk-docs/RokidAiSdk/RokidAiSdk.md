@@ -69,7 +69,7 @@ Rokid 语音技术需要硬件设备做承接，相关的硬件信息同时也�
 ### 2.3 SDK获取
 1、可以从[Rokid开放平台](https://developer.rokid.com/#/)开放平台获取，注册相应类型设备的同时，会生成相应的SDK，供开发者下载。参考[产品创建及Sn导入](https://developer.rokid.com/docs/5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/rookie-guide-end.html)。
 
-2、从参考Demo程序获取最新SDK：https://github.com/Rokid/RokidAiSdkDemo （最新版本1.4.1）
+2、从参考Demo程序获取最新SDK：https://github.com/Rokid/RokidAiSdkDemo （最新版本1.4.3）
 
 ## 三、集成说明
 
@@ -224,12 +224,10 @@ log.level=1
 ```
 ##### 3.3.2.2 lothal_single_modules.ini / lothal_double_modules.ini
 * 模型配置文件，各种模型配置项，示例中对应了单麦/双麦。
-* 需要指定模型配置文件`rasr.emb.*.ini`的路径配置，目前需要绝对路径，配置方式：
+* 需要指定模型配置文件`rasr.emb.*.ini`的路径配置，配置方式：
 
 ```shell
-rasr_ini= rasr.emb.*.ini文件最终存放目录
-# 格式为绝对路径：/sdcard/Android/data/{app packageName}/files/{your assert config path name}/rasr.emb.*.ini
-# eg: /sdcard/Android/data/com.rokid.ai.sdkdemo/files/workdir_asr_cn/rasr.emb.single.ini
+rasr_ini= rasr.emb.*.ini
 ```
 
 ##### 3.3.2.3 rasr.emb.*.ini 
@@ -277,10 +275,10 @@ packagingOptions {
 // 引入依赖, gson、appcompat-v7需要用户引入，版本可以自定
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation (name:'basic-1.4.1', ext:'aar')
-    implementation (name:'turenso-1.4.1', ext:'aar')
-    implementation (name:'nlpconsumer-1.4.1', ext:'aar')
-    implementation (name:'audioai-1.4.1', ext:'aar')
+    implementation (name:'basic-1.4.3', ext:'aar')
+    implementation (name:'turenso-1.4.3', ext:'aar')
+    implementation (name:'nlpconsumer-1.4.3', ext:'aar')
+    implementation (name:'audioai-1.4.3', ext:'aar')
     implementation "com.google.code.gson:gson:2.8.5"
     implementation 'com.android.support:appcompat-v7:27.1.1'
     // ...
@@ -547,7 +545,7 @@ Rokid语音SDK内部附带校验机制，需要开发者在启动服务时提供
 * deviceTypeId ：Rokid开放平台注册时生成的DeviceTypeId
 * deviceId ：设备SN号，由6~15位的字母和数字组成，不能含有空格和特殊符号
 * seed ：设备seed号，跟rokid设备账号绑定时使用
-*  macAddress ：设备网络的mac 地址，每一对deviceId、seed只能对应一个设备，即一个macAddress。请开发者谨慎使用十个免费的测试deviceId和seed，如果想要大量商用的，请联系Rokid商务进行正式的SN、Seed信息导入。
+* macAddress ：设备网络的mac 地址，每一对deviceId、seed只能对应一个设备，即一个macAddress。请开发者谨慎使用十个免费的测试deviceId和seed，如果想要大量商用的，请联系Rokid商务进行正式的SN、Seed信息导入。
 
 在IRokidAudioAiService的回调函数中，会接收到校验失败返回信息
 ```java
@@ -887,6 +885,7 @@ private ServerConfig getServiceConfig() {
 | void   | controlNlpAppExit()  处理NLP中的退出所有app指令  |
 | boolean   | interceptCloudNlpControl(int id, String nlp, String action)  对NlpConsumer云端处理NLP进行拦截（id：会话ID，nlp：自然语义解析结果， action：云端skill结果）  |
 | void   | onVerifyFailed(String deviceTypeId, String deviceId, String seed, String mac)  设备校验失败回调（deviceTypeId：设备类型ID，deviceId：设备sn， seed：账号值， mac：mac地址） |
+| void   | onRecogniseStatusChange(boolean isOnLine))  识别状态变更通知（isOnLine：是否是在线识别 true-在线） |
 
 ### 5.3 ServiceConfig.java 
 **启动参数配置类**
@@ -1006,12 +1005,12 @@ private ServerConfig getServiceConfig() {
 
 ### 6.1 最新版本
 
-SDK 版本：（aar）1.4.1 
+SDK 版本：（aar）1.4.3 
   
-* audioai-1.4.1.aar
-* basic-1.4.1.aar
-* nlpconsumer-1.4.1.aar
-* turenso-1.4.1.aar
+* audioai-1.4.3.aar
+* basic-1.4.3.aar
+* nlpconsumer-1.4.3.aar
+* turenso-1.4.3.aar
 
 ### 6.2 参考demo地址（包含最新SDK）
 
