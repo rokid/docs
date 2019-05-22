@@ -23,11 +23,10 @@ authorization: key={key}&device_type_id={device_type_id}&device_id={device_id}&s
 ##### 参数说明
 
 1. 字段 sign 计算方法：
-  1. 拼成如下字符串 utf8 的字符串：key={key}&device_type_id={device_type_id}&device_id={device_id}&service={service}&version={version}&time={time}&secret={secret}，其中 ：
+  - 拼成如下字符串 utf8 的字符串：key={key}&device_type_id={device_type_id}&device_id={device_id}&service={service}&version={version}&time={time}&secret={secret}，其中 ：
      - {xxx} 由 xxx 的值替代
      - key 及 secret 由开发方通过[开放平台语音接入](https://developer.rokid.com/docs/2-RokidDocument/2-EnableVoice/get-the-certification-file.html)获取
-  2. 计算 str 字符串的 md5 值
-
+  - 计算 str 字符串的 md5 值
 2. 字段 version 有 1.0 或 2.0，目前支持的协议版本：
   - 语音识别： serivce(**asr**)， version(**2**)
   - 语音合成 ：serivce(**tts**)， version(**1**)
@@ -36,6 +35,6 @@ authorization: key={key}&device_type_id={device_type_id}&device_id={device_id}&s
 
 #### 响应说明
 1. 当认证失败时，服务端会**主动断开**此连接。
-2. 确保device_id是经过认证的sn，开发者平台里面默认赠送10个认证sn，用于测试。
+2. 确保device_id是经过认证的sn，开发者平台里面默认赠送10个已认证sn，用于测试。
 
 
