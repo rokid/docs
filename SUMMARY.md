@@ -7,7 +7,7 @@ Rokid 技术文档
     - [Rokid 语音识别](6-asrandtts/asr.md)
     - [Rokid 语音合成](6-asrandtts/tts.md)
     - [Rokid 硬件交互设计指南](2-RokidDocument/2-EnableVoice/rokid-hardware-ux-design-guidelines.md)
-  - [开放平台接口定义文档](3-ApiReference/openvoice-speech-api.md)
+  - [设备端接入文档](3-ApiReference/openvoice-speech-api.md)
     - [设备认证](3-ApiReference/openvoice-auth-api.md)
     - WebSocket方式接入
       - [语音交互](3-ApiReference/wsasr-api.md)
@@ -19,7 +19,14 @@ Rokid 技术文档
     - 设备端SDK协议
       - [SDK 接口定义](3-ApiReference/rokid-client-sdk-doc.md)
       - [设备接口文档](3-ApiReference/open-device-manager.md)rokidspeech.md)
-    - [语音云云对接(Beta)](3-ApiReference/mapi-doc/overview.md)
+  - [云云接入文档](3-ApiReference/mapi-doc/overview.md)
+    - [设备认证](3-ApiReference/mapi-doc/gw-auth-api.md)
+    - WebSocket方式接入
+      - [语音交互](3-ApiReference/mapi-doc/gw-ws-asr-api.md)
+      - [语音合成](3-ApiReference/mapi-doc/gw-ws-tts-api.md)
+    - HTTP方式接入
+      - [语音识别](3-ApiReference/mapi-doc/gw-http-asr-api.md)
+      - [语音合成](3-ApiReference/mapi-doc/gw-http-tts-api.md)
   - [重要概念和错误码](5-enableVoice/rokid-vsvy-sdk-docs/important-concept.md)
     - [错误码](5-enableVoice/rokid-vsvy-sdk-docs/common/err_code.md)
     - [JSON 格式配置字串](5-enableVoice/rokid-vsvy-sdk-docs/common/api_json.md) 
