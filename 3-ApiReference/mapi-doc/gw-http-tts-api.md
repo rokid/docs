@@ -1,4 +1,4 @@
-## TTS(语音合成) WebSocket接口文档(Beta版)
+## TTS(语音合成) WebSocket接口文档
 
 ### 概述
 
