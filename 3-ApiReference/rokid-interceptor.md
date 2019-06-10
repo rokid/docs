@@ -35,7 +35,7 @@
         "device_id": "设备ID",
         "sentence": "用户语句",
         "language": "zh",
-        "clientStack": "SkillId1:SkillId2"
+        "stack": "SkillId1:SkillId2"
 }
     ```
     
@@ -106,26 +106,25 @@
     * 主要场景：聊天问答/百科问答
     * 官方后置拦截器辅助技能：聊天（app_id：E33FCE60E7294A61B84C43C1A171DFD8）
     * 官方后置拦截器响应：
-
     ```json
     {
-  "slots": {
-    "tts": {
-      "type": "tts",
-      "value": "我是若琪，很高兴认识你"
-    },
-    "from": {
-      "type": "from",
-      "value": "XXX聊天"
-    },
-    "asr": {
-      "type": "asr",
-      "value": "你好"
+      "slots": {
+        "tts": {
+          "type": "tts",
+          "value": "我是若琪，很高兴认识你"
+        },
+        "from": {
+          "type": "from",
+          "value": "XXX聊天"
+        },
+        "asr": {
+          "type": "asr",
+          "value": "你好"
+        }
+      },
+      "app_id": "E33FCE60E7294A61B84C43C1A171DFD8",
+      "intent": "chat"
     }
-  },
-  "app_id": "E33FCE60E7294A61B84C43C1A171DFD8",
-  "intent": "chat"
-}
     ```
 Json参数说明:
  
@@ -138,9 +137,9 @@ Slots参数说明：
 
 ```json
 "asr": {
-      "type": "asr",
-      "value": "你好"
-    }
+    "type": "asr",
+    "value": "你好"
+}
 ```
 
 **说明:**开发者只需要将value替换为用户的语句
