@@ -35,7 +35,7 @@
         "device_id": "设备ID",
         "sentence": "用户语句",
         "language": "zh",
-        "stack": "SkillId1:SkillId2"
+        "client_stack": "SkillId1:SkillId2"
 }
     ```
     
@@ -49,7 +49,7 @@
 | device_id      | string |是|设备ID |
 | sentence       | string |是|待解析语句 |
 | language       | string |是|语言，当前仅支持zh（中文） |
-| stack          | string |否|当前设备的会话技能Id列表用'**:**'进行分割 | 
+| client_stack          | string |否|当前设备的会话技能Id列表用'**:**'进行分割 | 
 
 * 语音理解服务调用拦截器的调用说明
     * 响应内容:Json字符串
