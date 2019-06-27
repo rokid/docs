@@ -5,7 +5,7 @@
 
 功能:
 
-1. 添加本地闹钟和云闹钟的支持
+1. 添加本地闹钟和云闹钟的支持，defaultDeviceTypes.json 文件中新增 `cloudAlarmSupport` 字段表示是否支持云闹钟，默认不支持。
 
 解决问题:
 
