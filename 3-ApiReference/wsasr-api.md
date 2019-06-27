@@ -58,7 +58,7 @@
 | id      | int32  | 唯一标识，用于跟踪一个完整的请求，处理及响应事件。 | 0     |
 | type   | ReqType | START、VOICE、END 或 TEXT | 空  |
 | voice  | bytes     | 需要识别的语音流      | 空   |
-| asr    | bytes     | 需要理解的 asr 文本      | 空   |
+| asr    | bytes     | 需要理解的 asr 文本, 如果不传voice参数，而传递这个参数，则相当于跳过语音识别，单独调用了nlp      | 空   |
 | options    | SpeechOptions     | 辅助理解的选项，内容见下表       | 空   |
 
 **options 字段的详细说明**
@@ -90,6 +90,8 @@
 5. voice的编码格式如下：
    - 识别支持pcm语音流识别，单通道 数据位宽16bit 采样率16kHZ pcm
    - 识别支持opu语音流识别，单通道 数据位宽16bit 采样率16kHZ opu opu压缩每帧数据格式由1字节（数据长度）+ opus压缩320字节数据
+6. 如果只需要ASR，则设置no_nlp为true。
+7. 如果只需要NLP，则直接传入asr文本参数。
 
 ##### SpeechResponse
 
@@ -122,7 +124,6 @@
 6. voice的编码格式如下：
    - 识别支持pcm语音流识别，单通道 数据位宽16bit 采样率16kHZ pcm
    - 识别支持opu语音流识别，单通道 数据位宽16bit 采样率16kHZ opu opu压缩每帧数据格式由1字节（数据长度）+ opus压缩320字节数据
-
 
 ### 典型场景
 
