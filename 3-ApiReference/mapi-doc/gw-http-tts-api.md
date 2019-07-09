@@ -48,7 +48,7 @@
 | content_type | string | raw: 返回是二进制语音数据  url: 返回是对应语音数据CDN的url | raw  |
 | id        | int32  | 唯一标识，用于跟踪一个完整的请求，处理及响应事件。   | 0    |
 | midi      | bytes  | 用于歌曲合成使用，二进制midi文件   | 空    |
-| phonemes  | string | 歌词的音素，用于歌曲合成使用，配合midi文件使用   | 空    |
+| score  | string | 歌词信息，用于歌曲合成使用  | 空    |
 
   
 
