@@ -42,12 +42,13 @@
  
 | 参数     | 类型        | 描述                   | 默认值  |
 | ------ | --------- | -------------------- | ---- |
-| text   | string    | 需要转换的text文本          | 空   |
+| text   | string    | 需要转换的text文本（或为唱歌歌词）          | 空   |
 | declaimer | string | 发音人，目前支持 中文成人 "zh" 与 中文儿童 "c1" 两种 | 空 |
 | codec     | string | 语音流的编码，目前支持PCM、OPU、OPU2、mp3。   | 空 |
-| content_type | string | raw: 返回是二进制语音数据  url: 返回是对应语音数据CDN的url | raw  |
+| content_type | string | 1、raw: 返回是二进制语音数据  2、url: 返回是对应语音数据CDN的url  3、sing: 使用midi或者score合成歌曲保存到cdn| raw  |
 | id        | int32  | 唯一标识，用于跟踪一个完整的请求，处理及响应事件。   | 0    |
-
+| midi      | bytes  | 用于歌曲合成使用，二进制midi文件   | 空    |
+| score  | string | 歌词信息，用于歌曲合成使用  | 空    |
 
   
 
