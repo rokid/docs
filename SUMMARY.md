@@ -22,7 +22,7 @@ Rokid 技术文档
   - [云云接入文档](3-ApiReference/mapi-doc/overview.md)
     - [设备认证](3-ApiReference/mapi-doc/gw-auth-api.md)
     - WebSocket方式接入
-      - [语音交互](3-ApiReference/mapi-doc/gw-ws-asr-api.md)
+      - [语音识别](3-ApiReference/mapi-doc/gw-ws-asr-api.md)
       - [语音合成](3-ApiReference/mapi-doc/gw-ws-tts-api.md)
     - HTTP方式接入
       - [语音识别](3-ApiReference/mapi-doc/gw-http-asr-api.md)

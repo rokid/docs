@@ -58,7 +58,7 @@
 | id      | int32  | 唯一标识，用于跟踪一个完整的请求，处理及响应事件。 | 0     |
 | type   | ReqType | START、VOICE、END 或 TEXT | 空  |
 | voice  | bytes     | 需要识别的语音流      | 空   |
-| asr    | bytes     | 需要理解的 asr 文本      | 空   |
+| asr    | bytes     | 需要理解的 asr 文本, 如果不传voice参数，而传递这个参数，则相当于跳过语音识别，单独调用了nlp      | 空   |
 | options    | SpeechOptions     | 辅助理解的选项，内容见下表       | 空   |
 
 **options 字段的详细说明**
@@ -68,7 +68,7 @@
 | lang    | string | 语音流的语言，目前支持 zh-CN，en-US。  | zh-CN |
 | codec | string | 语音流的编码，目前支持 PCM，OPU，OPU2，OPUS，AMRWB，AMRNB，PCM8K。<br />PCM，OPU，OPU2，OPUS，AMRWB 的语音数据格式为单通道，采样率16Khz，16bit；<br />AMRNB，PCM8K的语音数据格式为单通道，采样率8Khz，16bit； | PCM   |
 | vad_mode   | VadMode | LOCAL、CLOUD | LOCAL |
-| vend_timeout   | uint32 | 如果 vad_mode 为 CLOUD 时，指定 vad 时间，单位 ms，推荐设置为 500ms | 0  |
+| vad_timeout   | uint32 | 如果 vad_mode 为 CLOUD 时，指定 vad 时间，单位 ms，推荐设置为 500ms | 0  |
 | no_nlp   | bool | 是否需要语义理解（nlp） | false   |
 | no_intermediate_asr   | bool | 是否需要 asr 的实时识别结果 | false   |
 | stack   | string | 设备当前的应用栈信息，"appid1:appid2"按照应用被调用的时间逆序排列          | 空   |
@@ -90,6 +90,8 @@
 5. voice的编码格式如下：
    - 识别支持pcm语音流识别，单通道 数据位宽16bit 采样率16kHZ pcm
    - 识别支持opu语音流识别，单通道 数据位宽16bit 采样率16kHZ opu opu压缩每帧数据格式由1字节（数据长度）+ opus压缩320字节数据
+6. 如果只需要ASR，则设置no_nlp为true。
+7. 如果只需要NLP，则直接传入asr文本参数。
 
 ##### SpeechResponse
 
@@ -122,7 +124,6 @@
 6. voice的编码格式如下：
    - 识别支持pcm语音流识别，单通道 数据位宽16bit 采样率16kHZ pcm
    - 识别支持opu语音流识别，单通道 数据位宽16bit 采样率16kHZ opu opu压缩每帧数据格式由1字节（数据长度）+ opus压缩320字节数据
-
 
 ### 典型场景
 
