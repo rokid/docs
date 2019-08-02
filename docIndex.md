@@ -38,7 +38,7 @@
   * [语音识别改写](https://developer.rokid.com/docs/5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/query.html)
   
 * 帮助和支持
-  * [文档意见反馈和问答](https://developer-forum.rokid.com/c/53-category)
+  * [文档意见反馈和问答](https://forum.rokid.com/)
   * [视频教程](https://developer.rokid.com/docs/9-video/summary.html)
   * [k18开发板购买通道](https://detail.youzan.com/show/goods?alias=2g1gpqlb5vr8c&)    
   * [服务协议](https://developer.rokid.com/docs/4-TermsAndAgreements/community-service-agreement.html)
