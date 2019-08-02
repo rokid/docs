@@ -95,7 +95,7 @@ Rokid技能开发工具包含开发工具、文档、以及丰富的示例代码
     </tr>
     <tr>
         <td align="center">备注</td>
-        <td colspan="2" align="left">在创建<strong><code>私有技能</code></strong>时还需选择是创建<strong><code>本地私有技能</code></strong>还是<strong><code>云端私有技能</code></strong>。<br>创建<strong><code>本地私有技能</code></strong>需要写一个apk推送到设备上（具体参照：<a href="https://github.com/Rokid/NewsDemo">Rokid NativeApp开发示例</a>）；创建<strong><code>云端私有技能</code></strong>，则后台配置服务不在设备上而是在另外搭建的服务端上。<br>不管本地还是云端，都需要遵守我们的<a href="./important-concept/cloud-app-development-protocol_cn.md">协议格式</a>进行通信。（具体参照【技能创建与发布】的第五步-后端服务配置：<a href="./getting-started/create-and-pulibsh.md">技能创建与发布</a>)</td>
+        <td colspan="2" align="left">在创建<strong><code>私有技能</code></strong>时还需选择是创建<strong><code>本地私有技能</code></strong>还是<strong><code>云端私有技能</code></strong>。<br>创建<strong><code>本地私有技能</code></strong>需要写一个apk推送到设备上（具体参照：<a href="https://github.com/Rokid/NewsDemo">Rokid NativeApp开发示例</a>）；创建<strong><code>云端私有技能</code></strong>，则后台配置服务不在设备上而是在另外搭建的服务端上。<br>不管本地还是云端，都需要遵守我们的<a href="./important-concept/cloud-app-development-protocol_cn.md">协议格式</a>进行通信。（具体参照【技能创建与发布】的第五步-后端服务配置：<a href="./getting-started/creat.md">技能创建与发布</a>)</td>
     </tr>
 </table>
 
