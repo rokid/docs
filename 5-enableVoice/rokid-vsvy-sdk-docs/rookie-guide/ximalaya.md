@@ -242,7 +242,7 @@
 
 1）公版APP方式：
 
-a.在开放平台创建一个APP即可：[Rokid开放平台APP配置](https://developer.rokid.com/docs/5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/gongban.html)
+a.在开放平台创建一个APP即可：[Rokid开放平台APP配置](https://developer.rokid.com/docs/8-app/alliance/web/gongban.html)
 
 b.提供在喜马拉雅申请的 App Key、App Secret和厂商的设备类型ID，联系Rokid商务进行操作，才可在APP上显示喜马拉雅内容
 
