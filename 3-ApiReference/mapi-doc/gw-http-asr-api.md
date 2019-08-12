@@ -57,7 +57,7 @@ codec=%s;voice_trigger=%s;engine=%s;need_hotWords=%s
 | ------ | --------- | -------------------- | ---- |
 | codec | string | 语音流的编码，目前支持 PCM，OPU，OPU2，OPUS，AMRWB，AMRNB，PCM8K。<br />PCM，OPU，OPU2，OPUS，AMRWB 的语音数据格式为单通道，采样率16Khz，16bit；<br />AMRNB，PCM8K的语音数据格式为单通道，采样率8Khz，16bit； | PCM  
 | voice_trigger      | string | 激活词，即用于唤醒设备的名字，如"若琪"；可用 "\|" 分隔指定多个，如 "若琪\|洛奇" | 空   |
-| engine    | string | 语音流引擎，目前支持ZH，KID。  | ZH |
+| engine    | string | 语音流引擎，目前支持ZH，KID，ZH-CS。  | ZH |
 | need_hotWords    | bool | 是否需要热词，保留字段，暂不生效  | false |
 
 10. http body里面的数据是protobuf 2.0协议的AsrRequest的二进制数据，AsrRequest字段如下是：
