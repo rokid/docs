@@ -80,7 +80,7 @@
 | voice_extra | string | asr 引擎 的参数，json 格式 | 空 |
 | vad_begin | uint32 | vad begin 的窗口大小 :-( | 0 |
 | no_trigger_confirm | bool | 是否需要云端激活词的二次确认功能 | false |
-| enable_itn | bool | 是否要将文本转化为数字; 例: 一二三 -> 123 | false |
+| itn | bool | 是否要将文本转化为数字; 例: 一二三 -> 123 | false |
 
 ##### 说明
 
