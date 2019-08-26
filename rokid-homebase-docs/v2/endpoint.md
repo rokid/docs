@@ -10,7 +10,7 @@ displayName | `string`，必需 | 若琪客户端显示的终端名称， 注意
 recommendRoomName | `string` | 推荐若琪将这个终端划入与这个房间名相同的房间，便于用户命令，注意：此名称包含数字和特殊字符可能无法识别
 recommendHomeName | `string` | 推荐若琪将这个终端划入与这个家庭名称相同的家庭，便于用户分家庭
 offline | `bool` | Skill 能否成功连接到设备，如果不能则为 `true`
-additionalInfo | key-value pairs | 一组和终端关联的键值对，若琪每次会把这些键值对和终端 Id 一起发送给 Skill
+additionalInfo | `object` | 一组和终端关联的键值对，若琪每次会把这些键值对和终端 Id 一起发送给 Skill。**注意：请不要在 key 中包含 ".", 否则可能造成难以追踪的错误**
 capabilities | `Capability[]` | 一组终端能力描述符
 states | `InterfaceState[]` | 一组终端能力接口状态描述符
 
