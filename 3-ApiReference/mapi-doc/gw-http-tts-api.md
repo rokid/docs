@@ -45,12 +45,27 @@
 | text   | string    | 需要转换的text文本（或为唱歌歌词）          | 空   |
 | declaimer | string | 发音人，目前支持 中文成人 "zh" 与 中文儿童 "c1" 两种 | 空 |
 | codec     | string | 语音流的编码，目前支持PCM、OPU、OPU2、opus、mp3。   | 空 |
-| content_type | string | 1、raw: 返回是二进制语音数据  2、url: 返回是对应语音数据CDN的url  3、sing: 使用midi或者score合成歌曲保存到cdn| raw  |
+| content_type | string | 1、raw: 返回是二进制语音数据  2、url: 返回是对应语音数据CDN的url  3、sing: 使用midi或者score合成歌曲保存到cdn 4、mix 与背景音乐混音（需要配合options字段使用，切codec仅支持mp3）| raw  |
 | id        | int32  | 唯一标识，用于跟踪一个完整的请求，处理及响应事件。   | 0    |
 | midi      | bytes  | 用于歌曲合成使用，二进制midi文件   | 空    |
 | score  | string | 歌词信息，用于歌曲合成使用  | 空    |
+| options  | string | 可选json字段，配合各种需求使用详见下表  | 空    |
 
-  
+
+######  options里面的请求是json格式的，字段描述如下：
+| 参数     | 类型        | 描述               | 默认值  |
+| ------ | --------- | -------------------- | ---- | 
+| mixbgurl | string | 当content_type为mix时使用，混音背景音url，格式为遵循此规则的wav(https://developer.rokid.com/docs/2-RokidDocument/1-SkillsKit/ssml-document.html#audio) | 空 | 
+| mixtype | string | 当content_type为mix时使用，可分为"mixtts"和"mixmusic") | 空 | 
+###### 示例使用mix混音tts和背景音乐则需要填写参数
+```
+		options:     `{"mixbgurl":"https://s.rokidcdn.com/temp/rokid-ring.wav","mixtype":"mixmusic"}`,
+		declaimer:   "zh",
+		codec:       "mp3",
+		contentType: "mix",
+		text:        "",
+		score:       "header\t93\t4\t4\tC4\t1\n1\tM\t0.5\t相\n1\tM\t0.5\t逢\n3\tM\t0.5\t在\n4\tM\t0.5\t我\n3\tM\t0.5\t的\n7\tL\t1.5\t梦，\n1\tM\t0.5\t快\n2\tM\t0.5\t乐\n3\tM\t0.5\t是\n3\tM\t0.5\t我\n2\tM\t0.5\t的\n1\tM\t1.0\t家，\n0\tM\t0.5\t\n2\tM\t0.5\t幸\n3\tM\t0.5\t福\n4\tM\t0.5\t的\n4\tM\t0.5\t眼\n4\tM\t0.5\t神\n3\tM\t1.0\t里，\n0\tM\t0.5\t\n1\tM\t0.5\t想\n2\tM\t0.5\t跟\n2\tM\t0.5\t你\n4\tM\t0.5\t在\n5\tM\t0.5\t一\n1\tM\t1\t起，\n0\tM\t4.5\t\n4\tM\t0.5\t我\n6\tM\t0.5\t有\n1\tM\t0.5\t我\n4\tM\t0.5\t的\n1\tM\t0.5\t欢\n4\tM\t1.5\t喜，\n5\tM\t0.5\t青\n6\tM\t0.5\t春\n7\tL\t0.5\t的\n5\tM\t0.5\t故\n4\tM\t0.5\t事\n3\tM\t1.0\t里，\n0\tM\t0.5\n4\tM\t0.5\t你\n4\tM\t0.5\t不\n6\tL\t0.5\t会\n3\tM\t0.5\t再\n2\tM\t0.5\t哭\n5\tL\t0.5\t泣，\n0\tM\t1\t\n1\tM\t0.5\t愿\n2\tM\t0.5\t意\n1\tM\t0.5\t为\n3\tM\t0.5\t我\n3\tM\t0.5\t的\n1\tM\t0.5\t心，\n0\tM\t1\t\n4\tM\t0.5\t留\n6\tM\t0.5\t下\n1\tM\t0.5\t我\n4\tM\t0.5\t一\n1\tM\t0.5\t生\n4\tM\t1.5\t的，\n5\tM\t0.5\t全\n6\tM\t0.5\t世\n7\tL\t0.5\t界\n5\tM\t0.5\t的\n4\tM\t0.5\t人\n3\tM\t1.0\t啊，\n0\tM\t0.5\t\n4\tM\t0.5\t身\n4\tM\t0.5\t边\n6\tL\t0.5\t有\n3\tM\t0.5\t一\n2\tM\t0.5\t个\n5\tL\t0.5\t梦，\n0\tM\t1.0\t\n1\tM\t0.5\t向\n2\tM\t0.5\t往\n1\tM\t0.5\t梦\n3\tM\t0.5\t中\n3\tM\t0.5\t的\n1\tM\t1\t你。\n",
+```
 
 ##### 响应
 
@@ -64,7 +79,7 @@
 | result  | string | 结果信息  SUCCESS/ERROR等 |
 | id        | int32  | 唯一标识，用于跟踪一个完整的请求，处理及响应事件。   |
 
-2. http code 除了200以外，还有部分非200的code，取值如下：
+1. http code 除了200以外，还有部分非200的code，取值如下：
 
 | code 值         | 涵义           |
 | ----------------- | -------------- |

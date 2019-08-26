@@ -3,12 +3,12 @@
 如果您需要对TTS进行诸如插入停顿、音频、改变多音字读音、改变语速、改变发音人等更加灵活的自定义，可以使用下述的语音合成标签。
 
 ### 目录
-- [在语音合成系统中使用SSML](#%E5%9C%A8%E8%AF%AD%E9%9F%B3%E5%90%88%E6%88%90%E7%B3%BB%E7%BB%9F%E4%B8%AD%E4%BD%BF%E7%94%A8ssml)
-- [目录](#%E7%9B%AE%E5%BD%95)
-- [如何在您技能的Response中使用SSML](#%E5%A6%82%E4%BD%95%E5%9C%A8%E6%82%A8%E6%8A%80%E8%83%BD%E7%9A%84response%E4%B8%AD%E4%BD%BF%E7%94%A8ssml)
-- [目前可使用的SSML标签](#%E7%9B%AE%E5%89%8D%E5%8F%AF%E4%BD%BF%E7%94%A8%E7%9A%84ssml%E6%A0%87%E7%AD%BE)
+- [在语音合成系统中使用SSML](#%e5%9c%a8%e8%af%ad%e9%9f%b3%e5%90%88%e6%88%90%e7%b3%bb%e7%bb%9f%e4%b8%ad%e4%bd%bf%e7%94%a8ssml)
+- [目录](#%e7%9b%ae%e5%bd%95)
+- [如何在您技能的Response中使用SSML](#%e5%a6%82%e4%bd%95%e5%9c%a8%e6%82%a8%e6%8a%80%e8%83%bd%e7%9a%84response%e4%b8%ad%e4%bd%bf%e7%94%a8ssml)
+- [目前可使用的SSML标签](#%e7%9b%ae%e5%89%8d%e5%8f%af%e4%bd%bf%e7%94%a8%e7%9a%84ssml%e6%a0%87%e7%ad%be)
   - [audio](#audio)
-    - [将音频文件转换为Rokid可用的格式](#%E5%B0%86%E9%9F%B3%E9%A2%91%E6%96%87%E4%BB%B6%E8%BD%AC%E6%8D%A2%E4%B8%BArokid%E5%8F%AF%E7%94%A8%E7%9A%84%E6%A0%BC%E5%BC%8F)
+    - [将音频文件转换为Rokid可用的格式](#%e5%b0%86%e9%9f%b3%e9%a2%91%e6%96%87%e4%bb%b6%e8%bd%ac%e6%8d%a2%e4%b8%barokid%e5%8f%af%e7%94%a8%e7%9a%84%e6%a0%bc%e5%bc%8f)
   - [break](#break)
   - [lang](#lang)
   - [mark](#mark)
@@ -168,7 +168,7 @@
 ```html
 <speak>
     欢迎成为Rokid开发者。
-    <audio src="s.rokidcdn.com/temp/rokid-ring.wav" /> 
+    <audio src="https://s.rokidcdn.com/temp/rokid-ring.wav" /> 
     您会听到一段悦耳的铃声。 
 </speak> 
 ```
