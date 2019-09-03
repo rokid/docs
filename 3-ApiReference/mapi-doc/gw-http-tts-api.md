@@ -60,7 +60,7 @@
 | order | string | 当content_type为mix时使用，需要提供计费订单号，订单号有请求次数限制) | 空 | 
 ###### 示例使用mix混音tts和背景音乐则需要填写参数
 ```
-		options:     `{"mixbgurl":"https://s.rokidcdn.com/temp/rokid-ring.wav","mixtype":"mixmusic"}`,
+		options:     `{"mixbgurl":"https://s.rokidcdn.com/temp/rokid-ring.wav","mixtype":"mixmusic","order":"1111"}`,
 		declaimer:   "zh",
 		codec:       "mp3",
 		contentType: "mix",
