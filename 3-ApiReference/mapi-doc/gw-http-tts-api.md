@@ -56,7 +56,8 @@
 | 参数     | 类型        | 描述               | 默认值  |
 | ------ | --------- | -------------------- | ---- | 
 | mixbgurl | string | 当content_type为mix时使用，混音背景音url，格式为遵循此规则的wav(https://developer.rokid.com/docs/2-RokidDocument/1-SkillsKit/ssml-document.html#audio) | 空 | 
-| mixtype | string | 当content_type为mix时使用，可分为"mixtts"和"mixmusic") | 空 | 
+| mixtype | string | 当content_type为mix时使用，可分为"mixtts"和"mixmusic") | 空 |
+| order | string | 当content_type为mix时使用，需要提供计费订单号，订单号有请求次数限制) | 空 | 
 ###### 示例使用mix混音tts和背景音乐则需要填写参数
 ```
 		options:     `{"mixbgurl":"https://s.rokidcdn.com/temp/rokid-ring.wav","mixtype":"mixmusic"}`,
