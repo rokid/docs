@@ -22,7 +22,7 @@
 curl -X POST --header "Content-Type:application/json" --header "Authorization:${Authorization}" https://mapi.open.rokid.com/rest/getBgmList
 ```
 
-**注** `${Authrization}`为您根据认证得到的字符串
+**注** `${Authrization}`为您根据[请求认证](https://developer.rokid.com/docs/3-ApiReference/mapi-doc/gw-auth-api.html)得到的字符串
 
 ### 协议概述
 
