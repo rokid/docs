@@ -52,9 +52,9 @@ https://mapi.open.rokid.com/rest/getBgmList
 | recode  | string | 返回码  | 
 | message | string | 返回描述 | 
 | success | bool   | 是否成功 |
-| data    |        | 返回结果集 |
+| data    | list   | 返回结果集 |
 
-2. data 参数详解
+2. data里对象参数详解
 
 | 参数    | 类型     | 描述            |
 | ----- | ------ | ------------- |
@@ -69,3 +69,25 @@ https://mapi.open.rokid.com/rest/getBgmList
 | 0000           | 成功 |
 | 1000           | 系统异常       |
 | 3004           | 验签失败 | 
+
+4. 返回参数实例
+
+```json
+{
+    "data": [
+        {
+            "id": "8899576FE6CC1D92E0530100007F2CFA",
+            "bgmurl": "https://club.10155.com/wxringpic/1557562775613022692.mp3",
+            "bgmname": "第2个",
+        },
+        {
+            "id": "872DF013C0BE5272E0530100007F3048",
+            "bgmurl": "https://club.10155.com/wxringpic/1556005104221682472.mp3",
+            "bgmname": "正常测试",
+        }
+    ],
+    "recode": "000000",
+    "success": true,
+    "message": "成功"
+}
+```
