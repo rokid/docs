@@ -45,7 +45,7 @@ https://mapi.open.rokid.com/rest/getBgmList
 
 ##### 响应
 
-1.响应是json格式的，字段如下：
+1. 响应是json格式的，字段如下：
 
 | 参数    | 类型     | 描述            |
 | ----- | ------ | ------------- |
