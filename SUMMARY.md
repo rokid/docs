@@ -27,6 +27,7 @@ Rokid 技术文档
     - HTTP方式接入
       - [语音识别](3-ApiReference/mapi-doc/gw-http-asr-api.md)
       - [语音合成](3-ApiReference/mapi-doc/gw-http-tts-api.md)
+      - [背景音乐列表取得](3-ApiReference/mapi-doc/gw-http-tts-bgm-api.md)
   - [重要概念和错误码](5-enableVoice/rokid-vsvy-sdk-docs/important-concept.md)
     - [错误码](5-enableVoice/rokid-vsvy-sdk-docs/common/err_code.md)
     - [JSON 格式配置字串](5-enableVoice/rokid-vsvy-sdk-docs/common/api_json.md) 

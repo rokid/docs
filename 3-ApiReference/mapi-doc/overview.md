@@ -19,6 +19,9 @@
  - [WebSocket接口文档](https://developer.rokid.com/docs/3-ApiReference/mapi-doc/gw-ws-tts-api.html)
  - [HTTP接口文档](https://developer.rokid.com/docs/3-ApiReference/mapi-doc/gw-http-tts-api.html)
 
+#### 背景音乐取得(TTS)
+ - [HTTP接口文档](https://developer.rokid.com/docs/3-ApiReference/mapi-doc/gw-http-tts-bgm-api.html)
+
 #### 数据统计和收费模式
   TODO
 
