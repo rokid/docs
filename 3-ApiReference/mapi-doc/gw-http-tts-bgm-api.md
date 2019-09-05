@@ -70,7 +70,7 @@ https://mapi.open.rokid.com/rest/getBgmList
 | 1000           | 系统异常       |
 | 3004           | 验签失败 | 
 
-4. 返回参数实例
+4. 返回参数示例
 
 ```json
 {
