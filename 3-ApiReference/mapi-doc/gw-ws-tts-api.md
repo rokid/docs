@@ -25,7 +25,7 @@
 
 ### 协议地址
 
-- [github](https://github.com/Rokid/mapi-demo-outer/src/main/proto/outer)
+- [github](https://github.com/Rokid/mapi-demo-outer/tree/master/src/main/proto/outer)
 
 ### 协议概述
 
@@ -53,6 +53,10 @@
 | codec     | string | 语音流的编码，目前支持PCM、OPU、OPU2、mp3。   | 空 |
 | content_type | string | raw: 返回是二进制语音数据  url: 返回是对应语音数据CDN的url | raw  |
 | id        | int32  | 唯一标识，用于跟踪一个完整的请求，处理及响应事件。   | 0    |
+| midi      | bytes  | 用于歌曲合成使用，二进制midi文件   | 空    |
+| score  | string | 歌词信息，用于歌曲合成使用  | 空    |
+| options  | string | 可选json字段，配合各种需求使用详见下表  | 空    |
+
 
 4. websocket响应以流式数据返回，每个BinaryWebSocketFrame对应的是一个Response的字节流，Response如下：
 ##### Response如下

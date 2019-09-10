@@ -24,7 +24,7 @@
 
 ### 协议地址
 
-- [github](https://github.com/Rokid/mapi-demo-outer/src/main/proto/outer)
+- [github](https://github.com/Rokid/mapi-demo-outer/tree/master/src/main/proto/outer)
 
 ### 协议概述
 
@@ -69,12 +69,16 @@
 | 参数     | 类型        | 描述                   | 默认值  |
 | ------ | --------- | -------------------- | ---- |
 | codec | string | 语音流的编码，目前支持 PCM，OPU，OPU2，OPUS，AMRWB，AMRNB，PCM8K。<br />PCM，OPU，OPU2，OPUS，AMRWB 的语音数据格式为单通道，采样率16Khz，16bit；<br />AMRNB，PCM8K的语音数据格式为单通道，采样率8Khz，16bit； | PCM  
-| voiceTrigger      | string | 激活词，即用于唤醒设备的名字，如"若琪"；可用 "\|" 分隔指定多个，如 "若琪\|洛奇" | 空   |
+| voiceTrigger      | string | 激活词，即用于唤醒设备的名字，如"若琪"；可用 "&#124;" 分隔指定多个，如 "若琪&#124;洛奇" | 空   |
 | engine    | string | 语音流引擎，目前支持ZH，KID, ZH-CS。  | ZH |
 | needHotWords    | bool | 是否需要热词，保留字段，暂不生效  | false |
 | deviceTypeId    | string | 设备类型，必填  | N/A |
 | deviceId    | string | 设备ID，必填  | N/A |
 | noIntermediateAsr   | bool | 是否不需要 asr 的实时识别结果 | false   |
+| extensionOptions   | string | 额外配置信息. 如:配置vad为700ms {\"vad_end_ms\": 700} | 空   |
+| recv_timeout_sec   | int | 静音时长，超过该时间没有识别结果则返回超时 | 300秒   |
+| enable_itn   | bool | 是否在后处理中执行ITN，设置为true时，中文数字将转为阿拉伯数字输出 | false   |
+| enable_punctuation   | bool | 是否在后处理中添加标点 | false   |
 
 ##### 说明
 
