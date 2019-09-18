@@ -149,6 +149,7 @@ Rokid 技术文档
         * [终端能力与状态](rokid-homebase-docs/v2/rokid-interface.md)
         * [当发生了错误](rokid-homebase-docs/v2/error-response.md)
         * [设备房间](rokid-homebase-docs/v1/device/room-name.md)
+      * [状态上报](rokid-homebase-docs/v2/notify.md)
     * 智能家居 JSON RPC 协议
       * [局域网自动发现](rokid-homebase-docs/connect/ssdp-auto-discovery.md)
       * [JSON RPC 控制协议](rokid-homebase-docs/connect/json-rpc-over-tcp.md)
