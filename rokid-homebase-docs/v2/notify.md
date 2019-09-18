@@ -7,14 +7,15 @@
 1. 在开放平台-智能家居-品牌管理-权限管理中开启**上报设备状态**开关。此时会得到平台分配的clientId，clientSecret。
 2. 在用户绑定此品牌时，在rokid开放平台智能家居品牌中配置的endpoint地址会收到一个`AcceptGrant`（具体描述见下文）指令，payload中会包含code和用户在rokid的用户id。
 3. 厂商需要按照OAuth2.0的标准，携带上一步得到的code，去rokid OAuth2.0 [token endpoint](https://tools.ietf.org/html/rfc6749#section-3.2)（地址: [https://oauth-service.rokid.com/oauth/token](https://oauth-service.rokid.com/oauth/token)）换取access_token,refresh_token (具体描述见 [https://tools.ietf.org/html/rfc6749#section-4.1.3]( https://tools.ietf.org/html/rfc6749#section-4.1.3))，然后按照下文协议描述正确响应`AcceptGrant`指令。
-4.  厂商需在token过期时间以内主动刷新token，保证token永不过期。
+4. 厂商需在token过期时间以内主动刷新token，保证token永不过期。
+5. 厂商状态上报地址为  [https://homebase-openapi.rokid.com/async/events](https://homebase-openapi.rokid.com/async/events ) 
 
 
 ## AcceptGrant 指令 
 
 - **AcceptGrant**
 
-向三方发送`AcceptGrant`通知 (POST) 
+Rokid 向厂商发送`AcceptGrant`指令 (POST) 
 
 ```json
 {
@@ -31,7 +32,7 @@
   "payload": {
     "grant": {
       "type": "OAuth2.AuthorizationCode",
-      "code": "VGhpcyBpcyBhbiBhdXRob3JpemF0aW9uIGNvZGUuIDotKQ=="，
+      "code": "VGhpcyBpcyBhbiBhdXRob3JpemF0aW9uIGNvZGUuIDotKQ==",
       "userId": "12e213e345" //用户在rokid的用户id
     }
   }
@@ -59,6 +60,8 @@
 ------
 
 ## 推送消息类型
+
+消息推送地址  POST  [https://homebase-openapi.rokid.com/async/events](https://homebase-openapi.rokid.com/async/events ) 
 
 当设备状态变化时，支持以下三种异步消息
 
@@ -277,13 +280,13 @@
 ### 当access_token失效并且refresh不成功时，该如何做？
 
 > 为了保证良好的用户体验，我们需要一种机制让用户在*状态上报链路*失效时感知到。
-> 为此我们提供了接口 https://homebase.rokid.com/report/failed 
+> 为此我们提供了接口 ~~[https://homebase-openapi.rokid.com/report/failed](https://homebase-openapi.rokid.com/report/failed)~~  	(WIP ***暂未完成***)
 > 当 access_token 失效并且不能成功刷新时，厂商应当将`AcceptGrant`指令带来的 userId，和自身clientId上报告知rokid，rokid会选择合适的方式通知用户（包括在rokid App内发送通知、短信通知等）。
 > 上报请求举例：
 
 ``` 
 POST /report/failed HTTP/1.1
-Host: homebase.rokid.com
+Host: homebase-openapi.rokid.com
 Content-Type: application/x-www-form-urlencoded
 
 userId=2erf3gfeg3gt&clientId=SplxlOBeZQQYbYS6WxSbIA&sign=3sdfsfesdfeffffffffff
