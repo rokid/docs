@@ -110,7 +110,7 @@ curl -X POST \
 	-H 'Authorization:key=xxx;device_type_id=xxx;device_id=xxx;time=xxx;sign=xxx;' \
 	-F 'voice-config=@voice-config.json' \
 	-F 'voice=@test.pcm' \
-	https://apigwws-pre.open.rokid.com/api/v2/asr
+	https://apigwws.open.rokid.com/api/v2/asr/your-uid-fill-here
 ```
 
 其中：
@@ -124,8 +124,8 @@ curl -X POST \
 - 请求 http 内容：
 
 ```http
-POST /api/v2/asr HTTP/1.1
-Host: apigwws-pre.open.rokid.com
+POST /api/v2/asr/your-uid-fill-here HTTP/1.1
+Host: apigwws.open.rokid.com
 Accept: */*
 Content-Length: 307
 Content-Type: multipart/form-data; boundary=----------------------------77bb6bb36e97
