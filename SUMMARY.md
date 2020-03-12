@@ -129,6 +129,7 @@ Rokid 技术文档
     * [智能家居隐身接入](rokid-homebase-docs/intro/sdk.md)
     * 行业解决方案
       * [面向酒店](smarthome/hotel.md)
+      * [酒店开放 API](smarthome/hotel-open-api.md)
       * [面向 ODM](smarthome/odm.md)
   * [智能家居设备接入](rokid-homebase-docs/README.md)
     * [智能家居设备接入流程](rokid-homebase-docs/intro/flow.md)
