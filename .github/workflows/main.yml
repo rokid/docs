@@ -24,15 +24,15 @@ jobs:
       - uses: actions/checkout@v2
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.1.5
-      - run: yarn
+      - run: npm install
         name: NPM install
       - name: build doc
-        run: yarn build
+        run: npm run build
       - uses: manyuanrong/setup-ossutil@v2.0
         with:
           # the bucket data region location
           endpoint: oss-cn-hangzhou.aliyuncs.com
           access-key-id: ${{ secrets.OSS_KEY }}
           access-key-secret: ${{ secrets.OSS_SECRET }}
-      - run: ossutil cp -rf docs oss://rokid-platform/docs/main/
+      - run: ossutil cp -rf _book oss://rokid-platform/docs/main-test/
 
