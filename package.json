@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "license": "UNLICENSED",
   "scripts": {
-    "postinstall": "gitbook install",
+    "postinstall": "cd ./node_modules/npm && npm install graceful-fs@latest && cd ../../ && gitbook install",
     "build": "gitbook build"
   },
   "dependencies": {
