@@ -31,9 +31,7 @@ Rokid 语音技术需要硬件设备做承接，相关的硬件信息同时也�
 
 ### SDK获取
 
-1、可以从[Rokid开放平台](https://developer.rokid.com/#/)开放平台获取，注册相应类型设备的同时，会生成相应的SDK，供开发者下载。参考[产品创建及Sn导入](https://developer.rokid.com/docs/5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/rookie-guide-end.html)。
-
-2、最新SDK：https://github.com/rokid/RokidVoiceAISDK
+1、最新SDK：https://github.com/rokid/RokidVoiceAISDK
 
 2、SDK参考Demo程序：https://github.com/rokid/RokidVoiceAIDemo
 
