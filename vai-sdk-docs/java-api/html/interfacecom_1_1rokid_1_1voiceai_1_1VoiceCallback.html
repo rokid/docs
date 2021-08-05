@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>voice-ai-java: com.rokid.voiceai.VoiceCallback接口 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">voice-ai-java
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>com</b></li><li class="navelem"><b>rokid</b></li><li class="navelem"><b>voiceai</b></li><li class="navelem"><a class="el" href="interfacecom_1_1rokid_1_1voiceai_1_1VoiceCallback.html">VoiceCallback</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="interfacecom_1_1rokid_1_1voiceai_1_1VoiceCallback-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">com.rokid.voiceai.VoiceCallback接口 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a8fa300463cec1bda4541b6e248fbf128"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1rokid_1_1voiceai_1_1VoiceCallback.html#a8fa300463cec1bda4541b6e248fbf128">onAccept</a> (String status)</td></tr>
+<tr class="memdesc:a8fa300463cec1bda4541b6e248fbf128"><td class="mdescLeft">&#160;</td><td class="mdescRight">云端是否接受此次语音激活 仅当前端远场语音激活时有效 如按键录音，不会有此回调。即startVoice(null)的情况下，不会回调  <a href="#a8fa300463cec1bda4541b6e248fbf128">更多...</a><br /></td></tr>
+<tr class="separator:a8fa300463cec1bda4541b6e248fbf128"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6235833734bbbce035ee27344b5760a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1rokid_1_1voiceai_1_1VoiceCallback.html#ab6235833734bbbce035ee27344b5760a">onAsr</a> (String asr, boolean intermediate)</td></tr>
+<tr class="memdesc:ab6235833734bbbce035ee27344b5760a"><td class="mdescLeft">&#160;</td><td class="mdescRight">语音识别为文字  <a href="#ab6235833734bbbce035ee27344b5760a">更多...</a><br /></td></tr>
+<tr class="separator:ab6235833734bbbce035ee27344b5760a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26fc4304c3830393ed2e4db556491a76"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1rokid_1_1voiceai_1_1VoiceCallback.html#a26fc4304c3830393ed2e4db556491a76">onResult</a> (String nlp, String action)</td></tr>
+<tr class="memdesc:a26fc4304c3830393ed2e4db556491a76"><td class="mdescLeft">&#160;</td><td class="mdescRight">语音技能返回结果  <a href="#a26fc4304c3830393ed2e4db556491a76">更多...</a><br /></td></tr>
+<tr class="separator:a26fc4304c3830393ed2e4db556491a76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac83a98258c31fbbfc9e4f76d1dd8dbbc"><td class="memItemLeft" align="right" valign="top"><a id="ac83a98258c31fbbfc9e4f76d1dd8dbbc"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interfacecom_1_1rokid_1_1voiceai_1_1VoiceCallback.html#ac83a98258c31fbbfc9e4f76d1dd8dbbc">onError</a> (int code)</td></tr>
+<tr class="memdesc:ac83a98258c31fbbfc9e4f76d1dd8dbbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">语音识别错误 错误码暂未定义，非0即为出错 <br /></td></tr>
+<tr class="separator:ac83a98258c31fbbfc9e4f76d1dd8dbbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a8fa300463cec1bda4541b6e248fbf128"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8fa300463cec1bda4541b6e248fbf128">&#9670;&nbsp;</a></span>onAccept()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.rokid.voiceai.VoiceCallback.onAccept </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>status</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>云端是否接受此次语音激活 仅当前端远场语音激活时有效 如按键录音，不会有此回调。即startVoice(null)的情况下，不会回调 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">status</td><td>云端返回的状态 "accept" 激活成功(仲裁) "reject" 拒绝激活(仲裁) "fake" 误激活(云端二次确认) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ab6235833734bbbce035ee27344b5760a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6235833734bbbce035ee27344b5760a">&#9670;&nbsp;</a></span>onAsr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.rokid.voiceai.VoiceCallback.onAsr </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>asr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">boolean&#160;</td>
+          <td class="paramname"><em>intermediate</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>语音识别为文字 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">asr</td><td>语音转成的文字 </td></tr>
+    <tr><td class="paramname">intermediate</td><td>是否为中间结果 true 中间结果，本次语音识别还未完成 false 最终结果，本次语音识别完成，客户端应停止录音 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a26fc4304c3830393ed2e4db556491a76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26fc4304c3830393ed2e4db556491a76">&#9670;&nbsp;</a></span>onResult()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void com.rokid.voiceai.VoiceCallback.onResult </td>
+          <td>(</td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>nlp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">String&#160;</td>
+          <td class="paramname"><em>action</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>语音技能返回结果 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nlp</td><td>自然语义解析结果 </td></tr>
+    <tr><td class="paramname">action</td><td>语音云技能下发的指令 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>注解</dt><dd>一般用户不需要关心这两个结果，除非要开发本地技能 </dd></dl>
+
+</div>
+</div>
+<hr/>该接口的文档由以下文件生成:<ul>
+<li>java/com/rokid/voiceai/VoiceCallback.java</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

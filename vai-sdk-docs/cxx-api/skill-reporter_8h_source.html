@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>voice-ai-sdk: skill-reporter.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">voice-ai-sdk
+   </div>
+   <div id="projectbrief">若琪语音交互SDK</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_b74d6e6cdd0e602791b76b5f94c907fa.html">rokid</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">skill-reporter.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div><div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="classSkillReporter.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="classSkillReporter.html">SkillReporter</a> {</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="classSkillReporter_1_1Builder.html">    8</a></span>&#160;  <span class="keyword">class </span><a class="code" href="classSkillReporter_1_1Builder.html">Builder</a> {</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  <span class="keyword">public</span>:</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="classSkillReporter_1_1Builder.html">Builder</a>&amp; setUrl(<span class="keyword">const</span> std::string&amp; url);</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="classSkillReporter_1_1Builder.html">Builder</a>&amp; setKey(<span class="keyword">const</span> std::string&amp; key);</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="classSkillReporter_1_1Builder.html">Builder</a>&amp; setDeviceTypeId(<span class="keyword">const</span> std::string&amp; <span class="keywordtype">id</span>);</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="classSkillReporter_1_1Builder.html">Builder</a>&amp; setDeviceId(<span class="keyword">const</span> std::string&amp; <span class="keywordtype">id</span>);</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="classSkillReporter_1_1Builder.html">Builder</a>&amp; setSecret(<span class="keyword">const</span> std::string&amp; secret);</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="classSkillReporter_1_1Builder.html">Builder</a>&amp; setTag(<span class="keyword">const</span> std::string&amp; tag);</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    std::shared_ptr&lt;SkillReporter&gt; build();</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;  <span class="keyword">private</span>:</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    std::string url;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    std::string key;</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    std::string deviceTypeId;</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    std::string deviceId;</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    std::string secret;</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    std::string tag{<span class="stringliteral">&quot;rokid.skrep&quot;</span>};</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  };</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keyword">virtual</span> ~<a class="code" href="classSkillReporter.html">SkillReporter</a>() = <span class="keywordflow">default</span>;</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keyword">virtual</span> <span class="keywordtype">bool</span> post(<span class="keyword">const</span> std::string&amp; body, std::string&amp; out) = 0;</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;};</div><div class="ttc" id="classSkillReporter_1_1Builder_html"><div class="ttname"><a href="classSkillReporter_1_1Builder.html">SkillReporter::Builder</a></div><div class="ttdef"><b>Definition:</b> skill-reporter.h:8</div></div>
+<div class="ttc" id="classSkillReporter_html"><div class="ttname"><a href="classSkillReporter.html">SkillReporter</a></div><div class="ttdef"><b>Definition:</b> skill-reporter.h:6</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

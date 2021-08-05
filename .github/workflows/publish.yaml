@@ -1,0 +1,56 @@
+name: auto-generate-gitbook
+on:                                 #在main分支上进行push时触发  
+  push:
+    branches:
+    - main
+
+jobs:
+  main-to-gh-pages:
+    runs-on: ubuntu-latest
+        
+    steps:                          
+    - name: checkout main
+      uses: actions/checkout@v2
+      with:
+        ref: main
+            
+    - name: install nodejs
+      uses: actions/setup-node@v1
+      
+    - name: configue gitbook
+      run: |
+        npm install -g gitbook-cli
+        gitbook install
+        # npm install -g gitbook-summary
+        # npm install
+        # npm run build
+                
+    - name: generate _book folder
+      run: |
+        # book sm
+        # gitbook init --book sm
+        gitbook build
+        cp SUMMARY.md _book
+        cp -rf vai-sdk-docs _book
+        echo "Removing unwanted files"
+        rm -vf _book/.travis.yml
+        rm -vf _book/*.yml
+        rm -vf _book/*.md
+        rm -vf _book/*.sh
+                
+    - name: push _book to branch gh-pages 
+      env:
+        TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        REF: github.com/${{github.repository}}
+        MYEMAIL: weigang.xu@rokid.com                  # ！！记得修改为自己github设置的邮箱
+        MYNAME: ${{github.repository_owner}}          
+      run: |
+        cd _book
+        git config --global user.email "${MYEMAIL}"
+        git config --global user.name "${MYNAME}"
+        git init
+        git remote add origin https://${REF}
+        git add . 
+        git commit -m "Updated By Github Actions With Build ${{github.run_number}} of ${{github.workflow}} For Github Pages"
+        git branch -M main
+        git push --force --quiet "https://${GITHUB_TOKEN}@${REF}" main:gh-pages

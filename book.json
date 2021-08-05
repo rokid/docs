@@ -5,14 +5,22 @@
     "vistors-github",
     "mermaid-gb3",
     "html5-video",
-    "github-issue-feedback"
+    "github-issue-feedback",
+    "url-embed",
+    "include-codeblock",
+    "ace"
   ],
   "pluginsConfig" : {
     "vistors-github": {
       "repo": "Rokid/docs"
     },
     "github-issue-feedback": {
-        "repo": "Rokid/docs"
+      "repo": "Rokid/docs"
+    },
+    "include-codeblock": {
+      "template": "ace",
+      "unindent": true,
+      "edit": true
     }
   }
 }
