@@ -38,10 +38,10 @@ Rokid 语音技术需要硬件设备做承接，相关的硬件信息同时也�
 ## 三、主要API参考
 
 {% urlembed %}
-https://leoeco2000.github.io/ActionTest/vai-sdk-docs/java-api/index.html
+https://rokid.github.io/docs/vai-sdk-docs/java-api/index.html
 {% endurlembed %}
 
 {% urlembed %}
-https://leoeco2000.github.io/ActionTest/vai-sdk-docs/cxx-api/index.html
+https://rokid.github.io/docs/vai-sdk-docs/cxx-api/index.html
 {% endurlembed %}
 
