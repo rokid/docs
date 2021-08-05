@@ -1,13 +1,14 @@
 var indexSectionsWithContent =
 {
-  0: "acdegimnoprstvw",
+  0: "acdegimnoprstvwè",
   1: "astv",
   2: "v",
   3: "acegnoprstw",
   4: "gimnpt",
   5: "a",
   6: "ados",
-  7: "acimoprst"
+  7: "acimoprst",
+  8: "è"
 };
 
 var indexSectionNames =
@@ -19,7 +20,8 @@ var indexSectionNames =
   4: "variables",
   5: "typedefs",
   6: "enums",
-  7: "enumvalues"
+  7: "enumvalues",
+  8: "pages"
 };
 
 var indexSectionLabels =
@@ -31,6 +33,7 @@ var indexSectionLabels =
   4: "变量",
   5: "类型定义",
   6: "枚举",
-  7: "枚举值"
+  7: "枚举值",
+  8: "页"
 };
 

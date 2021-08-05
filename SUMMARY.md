@@ -32,7 +32,7 @@ Rokid 技术文档
     - [错误码](5-enableVoice/rokid-vsvy-sdk-docs/common/err_code.md)
     - [JSON 格式配置字串](5-enableVoice/rokid-vsvy-sdk-docs/common/api_json.md) 
   - [语音方案SDK](5-enableVoice/rokid-vsvy-sdk-docs/introduction.md)
-    - [Android 全链路APK级别方案(新)](5-enableVoice/rokid-vsvy-sdk-docs/fullLink/fulllink-new.md)
+    - [Android 全链路通用方案(新)](5-enableVoice/rokid-vsvy-sdk-docs/fullLink/fulllink-new.md)
     - [Android 全链路通用方案](5-enableVoice/rokid-vsvy-sdk-docs/fullLink/fulllink.md)
     - [Android 全链路APK级别方案](5-enableVoice/rokid-vsvy-sdk-docs/RokidAiSdk/RokidAiSdk.md)
     - [Android 基础语音模块](5-enableVoice/rokid-vsvy-sdk-docs/speechTTS/speechtts.md)

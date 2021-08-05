@@ -10,7 +10,7 @@
 
 ### 接入方案类型
 
-- [安卓端全链路APK级别接入方案](./fullLink/fulllink-new.md)：包括安卓平台Rokid 语音识别服务和语音合成服务的相关能力。 
+- [安卓端全链路通用接入方案](./fullLink/fulllink-new.md)：包括安卓平台Rokid 语音识别服务和语音合成服务的相关能力。 
 
 - [全链路通用方案](./fullLink/fulllink.md)：包括前端语音激活/降噪以及 Rokid 语音识别服务和语音合成服务的相关能力。 
 
