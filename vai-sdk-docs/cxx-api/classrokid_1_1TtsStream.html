@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>voice-ai-sdk: rokid::TtsStream类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">voice-ai-sdk
+   </div>
+   <div id="projectbrief">若琪语音交互SDK - C++接口</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>rokid</b></li><li class="navelem"><a class="el" href="classrokid_1_1TtsStream.html">TtsStream</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="classrokid_1_1TtsStream-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">rokid::TtsStream类 参考<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>语音合成语音数据流  
+ <a href="classrokid_1_1TtsStream.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="voice-ai_8h_source.html">voice-ai.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ab644092b94277b76d4e09e3003a78dea"><td class="memItemLeft" align="right" valign="top">virtual uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrokid_1_1TtsStream.html#ab644092b94277b76d4e09e3003a78dea">available</a> () const =0</td></tr>
+<tr class="memdesc:ab644092b94277b76d4e09e3003a78dea"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取当前可读取的音频字节数  <a href="#ab644092b94277b76d4e09e3003a78dea">更多...</a><br /></td></tr>
+<tr class="separator:ab644092b94277b76d4e09e3003a78dea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21f54b4388909013b121f4af73d438c6"><td class="memItemLeft" align="right" valign="top">virtual uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrokid_1_1TtsStream.html#a21f54b4388909013b121f4af73d438c6">read</a> (void *out, uint32_t bufsize)=0</td></tr>
+<tr class="memdesc:a21f54b4388909013b121f4af73d438c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">读取音频数据  <a href="#a21f54b4388909013b121f4af73d438c6">更多...</a><br /></td></tr>
+<tr class="separator:a21f54b4388909013b121f4af73d438c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3041fc81ae4a7477dbec1668dcd3f254"><td class="memItemLeft" align="right" valign="top">virtual int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrokid_1_1TtsStream.html#a3041fc81ae4a7477dbec1668dcd3f254">getError</a> () const =0</td></tr>
+<tr class="memdesc:a3041fc81ae4a7477dbec1668dcd3f254"><td class="mdescLeft">&#160;</td><td class="mdescRight">获取错误码，错误码暂时无详细定义，非0即为有错误  <a href="#a3041fc81ae4a7477dbec1668dcd3f254">更多...</a><br /></td></tr>
+<tr class="separator:a3041fc81ae4a7477dbec1668dcd3f254"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>语音合成语音数据流 </p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="ab644092b94277b76d4e09e3003a78dea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab644092b94277b76d4e09e3003a78dea">&#9670;&nbsp;</a></span>available()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual uint32_t rokid::TtsStream::available </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取当前可读取的音频字节数 </p>
+<dl class="section return"><dt>返回</dt><dd>可读取的字节数 </dd></dl>
+
+</div>
+</div>
+<a id="a21f54b4388909013b121f4af73d438c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21f54b4388909013b121f4af73d438c6">&#9670;&nbsp;</a></span>read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual uint32_t rokid::TtsStream::read </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>out</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>bufsize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>读取音频数据 </p>
+<p>若暂时没有音频数据，函数将阻塞直至可读取音频数据或音频流结束 </p><dl class="section return"><dt>返回</dt><dd>实际读取的字节数，或0 表示音频流结束 </dd></dl>
+
+</div>
+</div>
+<a id="a3041fc81ae4a7477dbec1668dcd3f254"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3041fc81ae4a7477dbec1668dcd3f254">&#9670;&nbsp;</a></span>getError()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int32_t rokid::TtsStream::getError </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>获取错误码，错误码暂时无详细定义，非0即为有错误 </p>
+<dl class="section return"><dt>返回</dt><dd>错误码 </dd></dl>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li><a class="el" href="voice-ai_8h_source.html">voice-ai.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

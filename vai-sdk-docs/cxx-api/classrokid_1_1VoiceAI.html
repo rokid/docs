@@ -1,0 +1,782 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>voice-ai-sdk: rokid::VoiceAI类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">voice-ai-sdk
+   </div>
+   <div id="projectbrief">若琪语音交互SDK - C++接口</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>rokid</b></li><li class="navelem"><a class="el" href="classrokid_1_1VoiceAI.html">VoiceAI</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#pub-types">Public 类型</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="classrokid_1_1VoiceAI-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">rokid::VoiceAI类 参考<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>若琪语音交互逻辑  
+ <a href="classrokid_1_1VoiceAI.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="voice-ai_8h_source.html">voice-ai.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrokid_1_1VoiceAI_1_1ActionCallback.html">ActionCallback</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">云端及本地技能指令回调  <a href="classrokid_1_1VoiceAI_1_1ActionCallback.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrokid_1_1VoiceAI_1_1Session.html">Session</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">语音技能会话  <a href="classrokid_1_1VoiceAI_1_1Session.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrokid_1_1VoiceAI_1_1VoiceCallback.html">VoiceCallback</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">语音识别事件回调  <a href="classrokid_1_1VoiceAI_1_1VoiceCallback.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrokid_1_1VoiceAI_1_1VoiceOptions.html">VoiceOptions</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">语音上传参数选项  <a href="classrokid_1_1VoiceAI_1_1VoiceOptions.html#details">更多...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public 类型</h2></td></tr>
+<tr class="memitem:a675f02297139938374912b91cd6b0880"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrokid_1_1VoiceAI.html#a675f02297139938374912b91cd6b0880">Option</a> { <br />
+&#160;&#160;<a class="el" href="classrokid_1_1VoiceAI.html#a675f02297139938374912b91cd6b0880a58d6c7ca6a32599860f9b20b53a84db0">Option::SPEECH_URI</a> = 0, 
+<a class="el" href="classrokid_1_1VoiceAI.html#a675f02297139938374912b91cd6b0880af981db5bea2ed4ef261da41b3fbda010">Option::REPORT_URI</a>, 
+<a class="el" href="classrokid_1_1VoiceAI.html#a675f02297139938374912b91cd6b0880a71cc8ff2826a954f31f2fc24735a666f">Option::AUTHINFO</a>, 
+<a class="el" href="classrokid_1_1VoiceAI.html#a675f02297139938374912b91cd6b0880a3aeefce4011b3e89c26b629a3b0f77e9">Option::AUDIO_CODEC</a>, 
+<br />
+&#160;&#160;<a class="el" href="classrokid_1_1VoiceAI.html#a675f02297139938374912b91cd6b0880a3a78554351b704350c60e3259f50230a">Option::INTERMEDIA_ASR</a>, 
+<a class="el" href="classrokid_1_1VoiceAI.html#a675f02297139938374912b91cd6b0880a657e395ed4ad29ccdd1bfdac28e38757">Option::CONTINUOUS_DIALOGUE</a>, 
+<a class="el" href="classrokid_1_1VoiceAI.html#a675f02297139938374912b91cd6b0880a8638e93b1561908bd42f00741ff6a3c8">Option::TTS_CODEC</a>, 
+<a class="el" href="classrokid_1_1VoiceAI.html#a675f02297139938374912b91cd6b0880a19f081455aa2767f7f941c48416652e6">Option::TTS_DECLAIMER</a>, 
+<br />
+&#160;&#160;<a class="el" href="classrokid_1_1VoiceAI.html#a675f02297139938374912b91cd6b0880ab04fc99e8df3945627ec2de090695c4f">Option::TTS_SAMPLERATE</a>
+<br />
+ }<tr class="memdesc:a675f02297139938374912b91cd6b0880"><td class="mdescLeft">&#160;</td><td class="mdescRight">配置选项  <a href="classrokid_1_1VoiceAI.html#a675f02297139938374912b91cd6b0880">更多...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:a675f02297139938374912b91cd6b0880"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee279c0468933a14efda7bd2787a8f38"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrokid_1_1VoiceAI.html#aee279c0468933a14efda7bd2787a8f38">AudioCodec</a> { <a class="el" href="classrokid_1_1VoiceAI.html#aee279c0468933a14efda7bd2787a8f38a1088fbc901dc88b6c18085220cc33de9">AudioCodec::PCM</a> = 0, 
+<a class="el" href="classrokid_1_1VoiceAI.html#aee279c0468933a14efda7bd2787a8f38af8d68da46570d175f59ed38ea191ada1">AudioCodec::OPU</a>, 
+<a class="el" href="classrokid_1_1VoiceAI.html#aee279c0468933a14efda7bd2787a8f38a59f15baeec1d8638eb123a0cc9c7fcf9">AudioCodec::OPU2</a>, 
+<a class="el" href="classrokid_1_1VoiceAI.html#aee279c0468933a14efda7bd2787a8f38a27bcd310c52f6445cf4b93b90f52f5ef">AudioCodec::MP3</a>
+ }<tr class="memdesc:aee279c0468933a14efda7bd2787a8f38"><td class="mdescLeft">&#160;</td><td class="mdescRight">音频编码格式  <a href="classrokid_1_1VoiceAI.html#aee279c0468933a14efda7bd2787a8f38">更多...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:aee279c0468933a14efda7bd2787a8f38"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c4b0f3d4851ccccff0ac561b8c6b7a8"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrokid_1_1VoiceAI.html#a0c4b0f3d4851ccccff0ac561b8c6b7a8">Declaimer</a> { <a class="el" href="classrokid_1_1VoiceAI.html#a0c4b0f3d4851ccccff0ac561b8c6b7a8aa620dcf9de02eff02164cb324e9b8ba0">Declaimer::ROKID</a> = 0, 
+<a class="el" href="classrokid_1_1VoiceAI.html#a0c4b0f3d4851ccccff0ac561b8c6b7a8a579871369d41c17cb48ffe10a0015e74">Declaimer::CHILD1</a>
+ }<tr class="memdesc:a0c4b0f3d4851ccccff0ac561b8c6b7a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">语音合成播报员  <a href="classrokid_1_1VoiceAI.html#a0c4b0f3d4851ccccff0ac561b8c6b7a8">更多...</a><br /></td></tr>
+</td></tr>
+<tr class="separator:a0c4b0f3d4851ccccff0ac561b8c6b7a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa33d3de83653f5537bdc83a198939553"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrokid_1_1VoiceAI.html#aa33d3de83653f5537bdc83a198939553">SkillForm</a> { <b>CUT</b> = 1, 
+<b>SCENE</b>
+ }</td></tr>
+<tr class="separator:aa33d3de83653f5537bdc83a198939553"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a262187b8d7445801079cf36caf3ddb1a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrokid_1_1VoiceAI.html#a262187b8d7445801079cf36caf3ddb1a">startVoice</a> (const <a class="el" href="classrokid_1_1VoiceAI_1_1VoiceOptions.html">VoiceOptions</a> *opts=nullptr, void *userp=nullptr)=0</td></tr>
+<tr class="separator:a262187b8d7445801079cf36caf3ddb1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c484ef56120b022fb81efca680f6d3f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrokid_1_1VoiceAI.html#a0c484ef56120b022fb81efca680f6d3f">writeVoice</a> (const void *data, uint32_t size)=0</td></tr>
+<tr class="separator:a0c484ef56120b022fb81efca680f6d3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33b4ac447fa80438a2a94b08ed22614f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrokid_1_1VoiceAI.html#a33b4ac447fa80438a2a94b08ed22614f">endVoice</a> ()=0</td></tr>
+<tr class="separator:a33b4ac447fa80438a2a94b08ed22614f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4570b37529bb6cb7106ec8d3a731778a"><td class="memItemLeft" align="right" valign="top"><a id="a4570b37529bb6cb7106ec8d3a731778a"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrokid_1_1VoiceAI.html#a4570b37529bb6cb7106ec8d3a731778a">stop</a> ()=0</td></tr>
+<tr class="memdesc:a4570b37529bb6cb7106ec8d3a731778a"><td class="mdescLeft">&#160;</td><td class="mdescRight">中止当前语音交互, 并停止所有技能会话 <br /></td></tr>
+<tr class="separator:a4570b37529bb6cb7106ec8d3a731778a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa20539f90e703e9ad46078f1983f5db0"><td class="memItemLeft" align="right" valign="top"><a id="aa20539f90e703e9ad46078f1983f5db0"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>stopChildSkill</b> (const std::string &amp;appId)=0</td></tr>
+<tr class="separator:aa20539f90e703e9ad46078f1983f5db0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a743791d8f0b00865e04d95607e4c4c61"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrokid_1_1VoiceAI.html#a743791d8f0b00865e04d95607e4c4c61">putAsr</a> (const std::string &amp;asr, const std::string &amp;parentAppId=&quot;&quot;, void *userp=nullptr)=0</td></tr>
+<tr class="separator:a743791d8f0b00865e04d95607e4c4c61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13fa5b2c2e3cb00306b7dbc441d4b0d0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrokid_1_1VoiceAI.html#a13fa5b2c2e3cb00306b7dbc441d4b0d0">putAction</a> (const std::string &amp;nlp, const std::string &amp;action)=0</td></tr>
+<tr class="separator:a13fa5b2c2e3cb00306b7dbc441d4b0d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af00c7048dc866c20ddc0490d848cb664"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrokid_1_1VoiceAI.html#af00c7048dc866c20ddc0490d848cb664">startNativeSession</a> (const std::string &amp;appId, <a class="el" href="classrokid_1_1VoiceAI.html#aa33d3de83653f5537bdc83a198939553">SkillForm</a> form)=0</td></tr>
+<tr class="separator:af00c7048dc866c20ddc0490d848cb664"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a920b34e2107dfc75c542609ad6fbcb48"><td class="memItemLeft" align="right" valign="top">virtual std::shared_ptr&lt; <a class="el" href="classrokid_1_1TtsStream.html">TtsStream</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrokid_1_1VoiceAI.html#a920b34e2107dfc75c542609ad6fbcb48">textToSpeech</a> (const std::string &amp;text)=0</td></tr>
+<tr class="separator:a920b34e2107dfc75c542609ad6fbcb48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad926c5844dfda1ca0c82d63b3eaefee1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrokid_1_1VoiceAI.html#ad926c5844dfda1ca0c82d63b3eaefee1">config</a> (<a class="el" href="classrokid_1_1VoiceAI.html#a675f02297139938374912b91cd6b0880">Option</a> opt,...)</td></tr>
+<tr class="separator:ad926c5844dfda1ca0c82d63b3eaefee1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52c7c73b710f55a3721351ab34c33222"><td class="memItemLeft" align="right" valign="top"><a id="a52c7c73b710f55a3721351ab34c33222"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>config</b> (<a class="el" href="classrokid_1_1VoiceAI.html#a675f02297139938374912b91cd6b0880">Option</a> opt, va_list ap)=0</td></tr>
+<tr class="separator:a52c7c73b710f55a3721351ab34c33222"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fa591d35185793b48e42c5a1277daab"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrokid_1_1VoiceAI.html#a1fa591d35185793b48e42c5a1277daab">setVoiceCallback</a> (<a class="el" href="classrokid_1_1VoiceAI_1_1VoiceCallback.html">VoiceCallback</a> *cb)=0</td></tr>
+<tr class="memdesc:a1fa591d35185793b48e42c5a1277daab"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置回调对象  <a href="#a1fa591d35185793b48e42c5a1277daab">更多...</a><br /></td></tr>
+<tr class="separator:a1fa591d35185793b48e42c5a1277daab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76a15c677f27a6423c5f249b87f28583"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrokid_1_1VoiceAI.html#a76a15c677f27a6423c5f249b87f28583">setActionCallback</a> (<a class="el" href="classrokid_1_1VoiceAI_1_1ActionCallback.html">ActionCallback</a> *cb)=0</td></tr>
+<tr class="memdesc:a76a15c677f27a6423c5f249b87f28583"><td class="mdescLeft">&#160;</td><td class="mdescRight">设置回调对象  <a href="#a76a15c677f27a6423c5f249b87f28583">更多...</a><br /></td></tr>
+<tr class="separator:a76a15c677f27a6423c5f249b87f28583"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7d1dd0e6511a7c1e73181666f0f4270"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrokid_1_1VoiceAI.html#ac7d1dd0e6511a7c1e73181666f0f4270">setActionFilter</a> (<a class="el" href="voice-ai_8h.html#a56b6140bc000895fdfcc03cab1f540e0">ActionFilter</a> filter)=0</td></tr>
+<tr class="separator:ac7d1dd0e6511a7c1e73181666f0f4270"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a15e6fe62fdec4bcff835efcd7a649804"><td class="memItemLeft" align="right" valign="top"><a id="a15e6fe62fdec4bcff835efcd7a649804"></a>
+static std::shared_ptr&lt; <a class="el" href="classrokid_1_1VoiceAI.html">VoiceAI</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrokid_1_1VoiceAI.html#a15e6fe62fdec4bcff835efcd7a649804">newInstance</a> ()</td></tr>
+<tr class="memdesc:a15e6fe62fdec4bcff835efcd7a649804"><td class="mdescLeft">&#160;</td><td class="mdescRight">创建VoiceAI对象 <br /></td></tr>
+<tr class="separator:a15e6fe62fdec4bcff835efcd7a649804"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>若琪语音交互逻辑 </p>
+</div><h2 class="groupheader">成员枚举类型说明</h2>
+<a id="a675f02297139938374912b91cd6b0880"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a675f02297139938374912b91cd6b0880">&#9670;&nbsp;</a></span>Option</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classrokid_1_1VoiceAI.html#a675f02297139938374912b91cd6b0880">rokid::VoiceAI::Option</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>配置选项 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a675f02297139938374912b91cd6b0880a58d6c7ca6a32599860f9b20b53a84db0"></a>SPEECH_URI&#160;</td><td class="fielddoc"><p>语音识别服务uri </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a675f02297139938374912b91cd6b0880af981db5bea2ed4ef261da41b3fbda010"></a>REPORT_URI&#160;</td><td class="fielddoc"><p>状态上报服务uri </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a675f02297139938374912b91cd6b0880a71cc8ff2826a954f31f2fc24735a666f"></a>AUTHINFO&#160;</td><td class="fielddoc"><p>若琪帐号认证信息<br />
+ key, secret, deviceTypeId, deviceId </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a675f02297139938374912b91cd6b0880a3aeefce4011b3e89c26b629a3b0f77e9"></a>AUDIO_CODEC&#160;</td><td class="fielddoc"><p>上传语音编码格式<br />
+ 参数类型: <a class="el" href="classrokid_1_1VoiceAI.html#aee279c0468933a14efda7bd2787a8f38" title="音频编码格式 ">VoiceAI::AudioCodec</a><br />
+ 默认PCM </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a675f02297139938374912b91cd6b0880a3a78554351b704350c60e3259f50230a"></a>INTERMEDIA_ASR&#160;</td><td class="fielddoc"><p>语音中间识别结果开关<br />
+ 参数类型: uint32_t<br />
+ 0: 关闭 1: 开启<br />
+ 默认1 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a675f02297139938374912b91cd6b0880a657e395ed4ad29ccdd1bfdac28e38757"></a>CONTINUOUS_DIALOGUE&#160;</td><td class="fielddoc"><p>连续对话开关<br />
+ 参数类型: uint32_t<br />
+ 0: 关闭 1: 开启<br />
+ 默认0 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a675f02297139938374912b91cd6b0880a8638e93b1561908bd42f00741ff6a3c8"></a>TTS_CODEC&#160;</td><td class="fielddoc"><p>语音合成音频编码格式<br />
+ 参数类型: <a class="el" href="classrokid_1_1VoiceAI.html#aee279c0468933a14efda7bd2787a8f38" title="音频编码格式 ">VoiceAI::AudioCodec</a><br />
+ 默认PCM </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a675f02297139938374912b91cd6b0880a19f081455aa2767f7f941c48416652e6"></a>TTS_DECLAIMER&#160;</td><td class="fielddoc"><p>语音合成播报员<br />
+ 参数类型: <a class="el" href="classrokid_1_1VoiceAI.html#a0c4b0f3d4851ccccff0ac561b8c6b7a8" title="语音合成播报员 ">VoiceAI::Declaimer</a><br />
+ 默认ROKID </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a675f02297139938374912b91cd6b0880ab04fc99e8df3945627ec2de090695c4f"></a>TTS_SAMPLERATE&#160;</td><td class="fielddoc"><p>语音合成音频采样率<br />
+ 默认24000 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="aee279c0468933a14efda7bd2787a8f38"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee279c0468933a14efda7bd2787a8f38">&#9670;&nbsp;</a></span>AudioCodec</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classrokid_1_1VoiceAI.html#aee279c0468933a14efda7bd2787a8f38">rokid::VoiceAI::AudioCodec</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>音频编码格式 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="aee279c0468933a14efda7bd2787a8f38a1088fbc901dc88b6c18085220cc33de9"></a>PCM&#160;</td><td class="fielddoc"><p>pcm原始音频采样格式(可用于语音输入和语音合成) </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aee279c0468933a14efda7bd2787a8f38af8d68da46570d175f59ed38ea191ada1"></a>OPU&#160;</td><td class="fielddoc"><p>rokid自定义opu包装格式(用于语音输入)<br />
+ | 1 byte | - opu包数据字节数<br />
+ | n bytes | - opu包数据<br />
+ ... repeat ... </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aee279c0468933a14efda7bd2787a8f38a59f15baeec1d8638eb123a0cc9c7fcf9"></a>OPU2&#160;</td><td class="fielddoc"><p>rokid自定义opu包装格式(用于语音合成)<br />
+ | 40 bytes | - 固定40字节的opu包数据<br />
+ ... repeat ... </p>
+</td></tr>
+<tr><td class="fieldname"><a id="aee279c0468933a14efda7bd2787a8f38a27bcd310c52f6445cf4b93b90f52f5ef"></a>MP3&#160;</td><td class="fielddoc"><p>mp3格式(用于语音合成) </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a0c4b0f3d4851ccccff0ac561b8c6b7a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c4b0f3d4851ccccff0ac561b8c6b7a8">&#9670;&nbsp;</a></span>Declaimer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classrokid_1_1VoiceAI.html#a0c4b0f3d4851ccccff0ac561b8c6b7a8">rokid::VoiceAI::Declaimer</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>语音合成播报员 </p>
+<table class="fieldtable">
+<tr><th colspan="2">枚举值</th></tr><tr><td class="fieldname"><a id="a0c4b0f3d4851ccccff0ac561b8c6b7a8aa620dcf9de02eff02164cb324e9b8ba0"></a>ROKID&#160;</td><td class="fielddoc"><p>若琪默认 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a0c4b0f3d4851ccccff0ac561b8c6b7a8a579871369d41c17cb48ffe10a0015e74"></a>CHILD1&#160;</td><td class="fielddoc"><p>儿童 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="aa33d3de83653f5537bdc83a198939553"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa33d3de83653f5537bdc83a198939553">&#9670;&nbsp;</a></span>SkillForm</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="classrokid_1_1VoiceAI.html#aa33d3de83653f5537bdc83a198939553">rokid::VoiceAI::SkillForm</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>技能类型<br />
+ 仅用于startNativeSession时指定本地技能的类型 </p>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a262187b8d7445801079cf36caf3ddb1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a262187b8d7445801079cf36caf3ddb1a">&#9670;&nbsp;</a></span>startVoice()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void rokid::VoiceAI::startVoice </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classrokid_1_1VoiceAI_1_1VoiceOptions.html">VoiceOptions</a> *&#160;</td>
+          <td class="paramname"><em>opts</em> = <code>nullptr</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>userp</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>开始语音交互 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">opts</td><td>上传语音的参数选项 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>注解</dt><dd>仅当前端语音激活时需要设定opts, 如果非用户语音激活的情况下打开拾音, 传nullptr </dd></dl>
+
+</div>
+</div>
+<a id="a0c484ef56120b022fb81efca680f6d3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0c484ef56120b022fb81efca680f6d3f">&#9670;&nbsp;</a></span>writeVoice()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void rokid::VoiceAI::writeVoice </td>
+          <td>(</td>
+          <td class="paramtype">const void *&#160;</td>
+          <td class="paramname"><em>data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>在开始语音交互的情况下，上传语音 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">data</td><td>语音数据 </td></tr>
+    <tr><td class="paramname">size</td><td>本次上次的语音数据字节数 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a33b4ac447fa80438a2a94b08ed22614f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33b4ac447fa80438a2a94b08ed22614f">&#9670;&nbsp;</a></span>endVoice()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void rokid::VoiceAI::endVoice </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>主动结束语音交互 </p><dl class="section note"><dt>注解</dt><dd>一般情况下由云端决定vad end, 不需要调用endVoice </dd>
+<dd>
+特定情况下需要由客户端主动停止语音交互时，使用此方法 </dd></dl>
+
+</div>
+</div>
+<a id="a743791d8f0b00865e04d95607e4c4c61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a743791d8f0b00865e04d95607e4c4c61">&#9670;&nbsp;</a></span>putAsr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void rokid::VoiceAI::putAsr </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>asr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>parentAppId</em> = <code>&quot;&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>userp</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>进行一次文字会话 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">asr</td><td>会话文字，如 "你好"/"天气" 等等... </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a13fa5b2c2e3cb00306b7dbc441d4b0d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13fa5b2c2e3cb00306b7dbc441d4b0d0">&#9670;&nbsp;</a></span>putAction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void rokid::VoiceAI::putAction </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>nlp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>action</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>外部输入语义识别结果及技能执行指令 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nlp</td><td>语义识别结果 </td></tr>
+    <tr><td class="paramname">action</td><td>云端技能指令 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af00c7048dc866c20ddc0490d848cb664"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af00c7048dc866c20ddc0490d848cb664">&#9670;&nbsp;</a></span>startNativeSession()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void rokid::VoiceAI::startNativeSession </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>appId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classrokid_1_1VoiceAI.html#aa33d3de83653f5537bdc83a198939553">SkillForm</a>&#160;</td>
+          <td class="paramname"><em>form</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>创建本地技能会话<br />
+ 有些情况下，本地技能应用执行命令，不是由语音指触发的。<br />
+ 比如闹钟在特定时间点响铃<br />
+ 这种情况下，需要通知sdk启动一个本地技能会话 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">appId</td><td>指定本地技能appId </td></tr>
+    <tr><td class="paramname">form</td><td>指定本地技能类型, cut或scene </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a920b34e2107dfc75c542609ad6fbcb48"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a920b34e2107dfc75c542609ad6fbcb48">&#9670;&nbsp;</a></span>textToSpeech()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::shared_ptr&lt;<a class="el" href="classrokid_1_1TtsStream.html">TtsStream</a>&gt; rokid::VoiceAI::textToSpeech </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>text</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>文字转语音 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">text</td><td>tts文本 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>注解</dt><dd>此方法暂时未实现 </dd></dl>
+
+</div>
+</div>
+<a id="ad926c5844dfda1ca0c82d63b3eaefee1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad926c5844dfda1ca0c82d63b3eaefee1">&#9670;&nbsp;</a></span>config()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rokid::VoiceAI::config </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classrokid_1_1VoiceAI.html#a675f02297139938374912b91cd6b0880">Option</a>&#160;</td>
+          <td class="paramname"><em>opt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>配置sdk各项参数 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">opt</td><td>配置选项 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>注解</dt><dd>配置选项及参数列表 </dd>
+<dd>
+Options::SPEECH_URI [arg0] string url </dd>
+<dd>
+Options::REPORT_URI [arg0] string url </dd>
+<dd>
+Options::AUTHINFO [arg0] string key, [arg1] string secret </dd>
+<dd>
+[arg2] string deviceTypeId, [arg3] string deviceId </dd>
+<dd>
+Options::AUDIO_CODEC [arg0] AudioCodec </dd>
+<dd>
+Options::INTERMEDIA_ASR [arg0] int32_t </dd>
+<dd>
+Options::CONTINUOUS_DIALOGUE [arg0] int32_t </dd>
+<dd>
+Options::TTS_CODEC [arg0] AudioCodec </dd>
+<dd>
+Options::TTS_SAMPLERATE [arg0] int32_t </dd>
+<dd>
+Options::TTS_DECLAIMER [arg0] Declaimer </dd></dl>
+
+</div>
+</div>
+<a id="a1fa591d35185793b48e42c5a1277daab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fa591d35185793b48e42c5a1277daab">&#9670;&nbsp;</a></span>setVoiceCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void rokid::VoiceAI::setVoiceCallback </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classrokid_1_1VoiceAI_1_1VoiceCallback.html">VoiceCallback</a> *&#160;</td>
+          <td class="paramname"><em>cb</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置回调对象 </p>
+<dl class="section note"><dt>注解</dt><dd>未实现线程安全 </dd>
+<dd>
+在输入语音数据之前，先设置回调对象，即可正常使用 </dd></dl>
+
+</div>
+</div>
+<a id="a76a15c677f27a6423c5f249b87f28583"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76a15c677f27a6423c5f249b87f28583">&#9670;&nbsp;</a></span>setActionCallback()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void rokid::VoiceAI::setActionCallback </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classrokid_1_1VoiceAI_1_1ActionCallback.html">ActionCallback</a> *&#160;</td>
+          <td class="paramname"><em>cb</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>设置回调对象 </p>
+<dl class="section note"><dt>注解</dt><dd>未实现线程安全 </dd>
+<dd>
+在输入语音数据之前，先设置回调对象，即可正常使用 </dd></dl>
+
+</div>
+</div>
+<a id="ac7d1dd0e6511a7c1e73181666f0f4270"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7d1dd0e6511a7c1e73181666f0f4270">&#9670;&nbsp;</a></span>setActionFilter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void rokid::VoiceAI::setActionFilter </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="voice-ai_8h.html#a56b6140bc000895fdfcc03cab1f540e0">ActionFilter</a>&#160;</td>
+          <td class="paramname"><em>filter</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>设置ActionFilter<br />
+ 如果'filter'非空, 所有语音/文字交互产生的nlp/action(非状态上报返回的action)字串,<br />
+ 将先送到ActionFilter中处理<br />
+ 如果ActionFilter返回true, 表示此次nlp/action由ActionFilter处理, sdk不处理.<br />
+ 如果ActionFilter返回false, 表示此次nlp/action未由ActionFilter处理, 交由sdk处理. </p>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li><a class="el" href="voice-ai_8h_source.html">voice-ai.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

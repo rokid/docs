@@ -1,0 +1,635 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>voice-ai-sdk: rokid::VoiceAI::ActionCallback类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">voice-ai-sdk
+   </div>
+   <div id="projectbrief">若琪语音交互SDK - C++接口</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>rokid</b></li><li class="navelem"><a class="el" href="classrokid_1_1VoiceAI.html">VoiceAI</a></li><li class="navelem"><a class="el" href="classrokid_1_1VoiceAI_1_1ActionCallback.html">ActionCallback</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="classrokid_1_1VoiceAI_1_1ActionCallback-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">rokid::VoiceAI::ActionCallback类 参考<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>云端及本地技能指令回调  
+ <a href="classrokid_1_1VoiceAI_1_1ActionCallback.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="voice-ai_8h_source.html">voice-ai.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:ac8de53eb515c3cd35952a6086aaa581c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrokid_1_1VoiceAI_1_1ActionCallback.html#ac8de53eb515c3cd35952a6086aaa581c">onSessionStart</a> (std::shared_ptr&lt; <a class="el" href="classrokid_1_1VoiceAI_1_1Session.html">Session</a> &gt; &amp;sess)=0</td></tr>
+<tr class="memdesc:ac8de53eb515c3cd35952a6086aaa581c"><td class="mdescLeft">&#160;</td><td class="mdescRight">会话开始  <a href="#ac8de53eb515c3cd35952a6086aaa581c">更多...</a><br /></td></tr>
+<tr class="separator:ac8de53eb515c3cd35952a6086aaa581c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3128a67d339f9f13cbedd893121f9eed"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrokid_1_1VoiceAI_1_1ActionCallback.html#a3128a67d339f9f13cbedd893121f9eed">onSessionActionCompleted</a> (std::shared_ptr&lt; <a class="el" href="classrokid_1_1VoiceAI_1_1Session.html">Session</a> &gt; &amp;sess, void *userp)=0</td></tr>
+<tr class="memdesc:a3128a67d339f9f13cbedd893121f9eed"><td class="mdescLeft">&#160;</td><td class="mdescRight">会话当前所有动作执行完成  <a href="#a3128a67d339f9f13cbedd893121f9eed">更多...</a><br /></td></tr>
+<tr class="separator:a3128a67d339f9f13cbedd893121f9eed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1934e4f0ce8c986a4850ff1425927758"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrokid_1_1VoiceAI_1_1ActionCallback.html#a1934e4f0ce8c986a4850ff1425927758">onSessionEnd</a> (std::shared_ptr&lt; <a class="el" href="classrokid_1_1VoiceAI_1_1Session.html">Session</a> &gt; &amp;sess)=0</td></tr>
+<tr class="memdesc:a1934e4f0ce8c986a4850ff1425927758"><td class="mdescLeft">&#160;</td><td class="mdescRight">会话结束  <a href="#a1934e4f0ce8c986a4850ff1425927758">更多...</a><br /></td></tr>
+<tr class="separator:a1934e4f0ce8c986a4850ff1425927758"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a210a9fb0db621a0d60e8c615e3378a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrokid_1_1VoiceAI_1_1ActionCallback.html#a6a210a9fb0db621a0d60e8c615e3378a">onPlayTts</a> (std::shared_ptr&lt; <a class="el" href="classrokid_1_1VoiceAI_1_1Session.html">Session</a> &gt; &amp;sess, const std::string &amp;text)=0</td></tr>
+<tr class="separator:a6a210a9fb0db621a0d60e8c615e3378a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42bede642f1749e9e7934855c3a7c930"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrokid_1_1VoiceAI_1_1ActionCallback.html#a42bede642f1749e9e7934855c3a7c930">onStopTts</a> (std::shared_ptr&lt; <a class="el" href="classrokid_1_1VoiceAI_1_1Session.html">Session</a> &gt; &amp;sess)=0</td></tr>
+<tr class="separator:a42bede642f1749e9e7934855c3a7c930"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad96c6495f7d53c9428b68dd30dba4e3d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrokid_1_1VoiceAI_1_1ActionCallback.html#ad96c6495f7d53c9428b68dd30dba4e3d">onPlayMedia</a> (std::shared_ptr&lt; <a class="el" href="classrokid_1_1VoiceAI_1_1Session.html">Session</a> &gt; &amp;info, const std::string &amp;url, uint32_t position)=0</td></tr>
+<tr class="separator:ad96c6495f7d53c9428b68dd30dba4e3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc829b7e1466fcecd6dcf9d54ff34cb2"><td class="memItemLeft" align="right" valign="top">virtual int32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrokid_1_1VoiceAI_1_1ActionCallback.html#acc829b7e1466fcecd6dcf9d54ff34cb2">onStopMedia</a> (std::shared_ptr&lt; <a class="el" href="classrokid_1_1VoiceAI_1_1Session.html">Session</a> &gt; &amp;sess)=0</td></tr>
+<tr class="separator:acc829b7e1466fcecd6dcf9d54ff34cb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7140d87ff771b50fabf08d818f7cc726"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrokid_1_1VoiceAI_1_1ActionCallback.html#a7140d87ff771b50fabf08d818f7cc726">onPickup</a> (std::shared_ptr&lt; <a class="el" href="classrokid_1_1VoiceAI_1_1Session.html">Session</a> &gt; &amp;sess, bool open, uint32_t duration)=0</td></tr>
+<tr class="separator:a7140d87ff771b50fabf08d818f7cc726"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0977d71d8c420707a3e362098f910706"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrokid_1_1VoiceAI_1_1ActionCallback.html#a0977d71d8c420707a3e362098f910706">onNativeAction</a> (std::shared_ptr&lt; <a class="el" href="classrokid_1_1VoiceAI_1_1Session.html">Session</a> &gt; &amp;sess, const std::string &amp;nlp)=0</td></tr>
+<tr class="separator:a0977d71d8c420707a3e362098f910706"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a319ce0e5ee9b79ad386601c8e29872ab"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrokid_1_1VoiceAI_1_1ActionCallback.html#a319ce0e5ee9b79ad386601c8e29872ab">onNativePause</a> (std::shared_ptr&lt; <a class="el" href="classrokid_1_1VoiceAI_1_1Session.html">Session</a> &gt; &amp;sess)=0</td></tr>
+<tr class="separator:a319ce0e5ee9b79ad386601c8e29872ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9065b871be3795f2963cd189060d345a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrokid_1_1VoiceAI_1_1ActionCallback.html#a9065b871be3795f2963cd189060d345a">onNativeResume</a> (std::shared_ptr&lt; <a class="el" href="classrokid_1_1VoiceAI_1_1Session.html">Session</a> &gt; &amp;sess)=0</td></tr>
+<tr class="separator:a9065b871be3795f2963cd189060d345a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a703b880946b55e7addd54f5531a25ee8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrokid_1_1VoiceAI_1_1ActionCallback.html#a703b880946b55e7addd54f5531a25ee8">onNativeExit</a> (std::shared_ptr&lt; <a class="el" href="classrokid_1_1VoiceAI_1_1Session.html">Session</a> &gt; &amp;sess)=0</td></tr>
+<tr class="separator:a703b880946b55e7addd54f5531a25ee8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a405bfa211b547635c8db69add784057e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrokid_1_1VoiceAI_1_1ActionCallback.html#a405bfa211b547635c8db69add784057e">onActionError</a> (int32_t err, void *userdata)=0</td></tr>
+<tr class="separator:a405bfa211b547635c8db69add784057e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>云端及本地技能指令回调 </p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="ac8de53eb515c3cd35952a6086aaa581c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac8de53eb515c3cd35952a6086aaa581c">&#9670;&nbsp;</a></span>onSessionStart()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void rokid::VoiceAI::ActionCallback::onSessionStart </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classrokid_1_1VoiceAI_1_1Session.html">Session</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>sess</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>会话开始 </p>
+<p>一次会话对应语音交互后设备所执行的一系列有关联的动作<br />
+ 比如播报天气<br />
+ 比如播放一个音乐列表，以及在播放期间可能发生的暂停/继续<br />
+ 直到用户停止播放，都算作一次会话 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sess</td><td>会话对象 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a3128a67d339f9f13cbedd893121f9eed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3128a67d339f9f13cbedd893121f9eed">&#9670;&nbsp;</a></span>onSessionActionCompleted()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void rokid::VoiceAI::ActionCallback::onSessionActionCompleted </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classrokid_1_1VoiceAI_1_1Session.html">Session</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>sess</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>userp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>会话当前所有动作执行完成 </p>
+<p>这不代表会话结束<br />
+ 例如用户说"今天杭州天气怎么样"，当设备播放完天气tts后，<br />
+ 会话所有动作执行完成，回调onSessionActionCompleted<br />
+ 此时"询问天气"的会话未结束，用户可以再说"明天呢"，设备将继续播放明天杭州天气<br />
+ 当明天天气播放结束，onSessionActionCompleted会再次回调<br />
+ 直到用户说"没事了"/"休息吧"或者用户发起另一个会话<br />
+ 当前会话才结束，回调onSessionEnd </p>
+
+</div>
+</div>
+<a id="a1934e4f0ce8c986a4850ff1425927758"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1934e4f0ce8c986a4850ff1425927758">&#9670;&nbsp;</a></span>onSessionEnd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void rokid::VoiceAI::ActionCallback::onSessionEnd </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classrokid_1_1VoiceAI_1_1Session.html">Session</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>sess</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>会话结束 </p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sess</td><td>会话对象 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6a210a9fb0db621a0d60e8c615e3378a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a210a9fb0db621a0d60e8c615e3378a">&#9670;&nbsp;</a></span>onPlayTts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void rokid::VoiceAI::ActionCallback::onPlayTts </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classrokid_1_1VoiceAI_1_1Session.html">Session</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>sess</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>text</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>播放tts </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">会话对象</td><td></td></tr>
+    <tr><td class="paramname">text</td><td>tts文本 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>注解</dt><dd>tts播放结束后，通过sess-&gt;ttsPlayFinish回报sdk </dd></dl>
+
+</div>
+</div>
+<a id="a42bede642f1749e9e7934855c3a7c930"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42bede642f1749e9e7934855c3a7c930">&#9670;&nbsp;</a></span>onStopTts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void rokid::VoiceAI::ActionCallback::onStopTts </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classrokid_1_1VoiceAI_1_1Session.html">Session</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>sess</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>停止播放tts </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sess</td><td>会话对象 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>注解</dt><dd>由此回调中止的tts不需要sess-&gt;ttsPlayFinish回报 </dd></dl>
+
+</div>
+</div>
+<a id="ad96c6495f7d53c9428b68dd30dba4e3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad96c6495f7d53c9428b68dd30dba4e3d">&#9670;&nbsp;</a></span>onPlayMedia()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void rokid::VoiceAI::ActionCallback::onPlayMedia </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classrokid_1_1VoiceAI_1_1Session.html">Session</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>info</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>url</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>position</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>播放媒体资源 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">会话对象</td><td></td></tr>
+    <tr><td class="paramname">url</td><td>媒体资源url </td></tr>
+    <tr><td class="paramname">position</td><td>媒体播放启始位置 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>注解</dt><dd>媒体播放结束后，通过sess-&gt;mediaPlayFinish回报sdk </dd></dl>
+
+</div>
+</div>
+<a id="acc829b7e1466fcecd6dcf9d54ff34cb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc829b7e1466fcecd6dcf9d54ff34cb2">&#9670;&nbsp;</a></span>onStopMedia()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int32_t rokid::VoiceAI::ActionCallback::onStopMedia </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classrokid_1_1VoiceAI_1_1Session.html">Session</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>sess</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>停止播放媒体 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sess</td><td>会话对象 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>当前媒体播放位置，&lt;0表示未知 </dd></dl>
+<dl class="section note"><dt>注解</dt><dd>由此回调中止的媒体播放不需要sess-&gt;mediaPlayFinish回报 </dd></dl>
+
+</div>
+</div>
+<a id="a7140d87ff771b50fabf08d818f7cc726"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7140d87ff771b50fabf08d818f7cc726">&#9670;&nbsp;</a></span>onPickup()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void rokid::VoiceAI::ActionCallback::onPickup </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classrokid_1_1VoiceAI_1_1Session.html">Session</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>sess</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>open</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>duration</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>打开/关闭拾音 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sess</td><td>会话对象 </td></tr>
+    <tr><td class="paramname">open</td><td>true 打开拾音 false 关闭拾音 </td></tr>
+    <tr><td class="paramname">duration</td><td>如果打开拾音，最多持续'duration'毫秒 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0977d71d8c420707a3e362098f910706"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0977d71d8c420707a3e362098f910706">&#9670;&nbsp;</a></span>onNativeAction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void rokid::VoiceAI::ActionCallback::onNativeAction </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classrokid_1_1VoiceAI_1_1Session.html">Session</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>sess</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>nlp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>本地技能指令 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sess</td><td>会话对象 </td></tr>
+    <tr><td class="paramname">nlp</td><td>语义识别结果 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a319ce0e5ee9b79ad386601c8e29872ab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a319ce0e5ee9b79ad386601c8e29872ab">&#9670;&nbsp;</a></span>onNativePause()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void rokid::VoiceAI::ActionCallback::onNativePause </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classrokid_1_1VoiceAI_1_1Session.html">Session</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>sess</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>本地技能暂停 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sess</td><td>会话对象 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9065b871be3795f2963cd189060d345a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9065b871be3795f2963cd189060d345a">&#9670;&nbsp;</a></span>onNativeResume()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void rokid::VoiceAI::ActionCallback::onNativeResume </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classrokid_1_1VoiceAI_1_1Session.html">Session</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>sess</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>本地技能继续执行 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sess</td><td>会话对象 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a703b880946b55e7addd54f5531a25ee8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a703b880946b55e7addd54f5531a25ee8">&#9670;&nbsp;</a></span>onNativeExit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void rokid::VoiceAI::ActionCallback::onNativeExit </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="classrokid_1_1VoiceAI_1_1Session.html">Session</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>sess</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>本地技能退出 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sess</td><td>会话对象 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a405bfa211b547635c8db69add784057e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a405bfa211b547635c8db69add784057e">&#9670;&nbsp;</a></span>onActionError()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void rokid::VoiceAI::ActionCallback::onActionError </td>
+          <td>(</td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>err</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>userdata</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>技能执行错误 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">err&lt;br&gt;</td><td>-1 未知错误<br />
+ -2 父技能appId不存在或未在执行状态 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li><a class="el" href="voice-ai_8h_source.html">voice-ai.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

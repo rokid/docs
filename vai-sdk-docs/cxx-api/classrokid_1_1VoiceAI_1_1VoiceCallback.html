@@ -1,0 +1,293 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>voice-ai-sdk: rokid::VoiceAI::VoiceCallback类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">voice-ai-sdk
+   </div>
+   <div id="projectbrief">若琪语音交互SDK - C++接口</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>rokid</b></li><li class="navelem"><a class="el" href="classrokid_1_1VoiceAI.html">VoiceAI</a></li><li class="navelem"><a class="el" href="classrokid_1_1VoiceAI_1_1VoiceCallback.html">VoiceCallback</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="classrokid_1_1VoiceAI_1_1VoiceCallback-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">rokid::VoiceAI::VoiceCallback类 参考<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>语音识别事件回调  
+ <a href="classrokid_1_1VoiceAI_1_1VoiceCallback.html#details">更多...</a></p>
+
+<p><code>#include &lt;<a class="el" href="voice-ai_8h_source.html">voice-ai.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a72a75ac565cb911447e89760dc269294"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrokid_1_1VoiceAI_1_1VoiceCallback.html#a72a75ac565cb911447e89760dc269294">onAccept</a> (const std::string &amp;status, void *userp)=0</td></tr>
+<tr class="separator:a72a75ac565cb911447e89760dc269294"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a538bedd0e6b6e521459e43d65709c594"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrokid_1_1VoiceAI_1_1VoiceCallback.html#a538bedd0e6b6e521459e43d65709c594">onAsr</a> (const std::string &amp;asr, bool intermediate, void *userp)=0</td></tr>
+<tr class="separator:a538bedd0e6b6e521459e43d65709c594"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb3b399b2e54b0610cb5ff81c2bc4138"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrokid_1_1VoiceAI_1_1VoiceCallback.html#afb3b399b2e54b0610cb5ff81c2bc4138">onResult</a> (const std::string &amp;nlp, const std::string &amp;action, void *userp)=0</td></tr>
+<tr class="separator:afb3b399b2e54b0610cb5ff81c2bc4138"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97c60c7ac5ddc35d6ec49cf0e13fff87"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrokid_1_1VoiceAI_1_1VoiceCallback.html#a97c60c7ac5ddc35d6ec49cf0e13fff87">onVoiceError</a> (int32_t err, void *userp)=0</td></tr>
+<tr class="separator:a97c60c7ac5ddc35d6ec49cf0e13fff87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">详细描述</h2>
+<div class="textblock"><p>语音识别事件回调 </p>
+</div><h2 class="groupheader">成员函数说明</h2>
+<a id="a72a75ac565cb911447e89760dc269294"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72a75ac565cb911447e89760dc269294">&#9670;&nbsp;</a></span>onAccept()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void rokid::VoiceAI::VoiceCallback::onAccept </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>status</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>userp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>成组设备激活/若琪设备云端二次激活确认 仲裁结果 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">status</td><td>"accept" 激活成功 (仲裁)<br />
+ "reject" 拒绝激活 (仲裁)<br />
+ "fake" 误激活 (云端二次确认, 两汉字激活词需要打开云端二次确认) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a538bedd0e6b6e521459e43d65709c594"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a538bedd0e6b6e521459e43d65709c594">&#9670;&nbsp;</a></span>onAsr()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void rokid::VoiceAI::VoiceCallback::onAsr </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>asr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>intermediate</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>userp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>语音转文字结果 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">asr</td><td>文字结果 </td></tr>
+    <tr><td class="paramname">intermediate</td><td>是否是中间识别结果 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afb3b399b2e54b0610cb5ff81c2bc4138"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb3b399b2e54b0610cb5ff81c2bc4138">&#9670;&nbsp;</a></span>onResult()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void rokid::VoiceAI::VoiceCallback::onResult </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>nlp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>action</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>userp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>语义及技能执行结果 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">nlp</td><td>语义理解结果, json格式 </td></tr>
+    <tr><td class="paramname">action</td><td>云端技能执行结果, json格式 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a97c60c7ac5ddc35d6ec49cf0e13fff87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97c60c7ac5ddc35d6ec49cf0e13fff87">&#9670;&nbsp;</a></span>onVoiceError()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void rokid::VoiceAI::VoiceCallback::onVoiceError </td>
+          <td>(</td>
+          <td class="paramtype">int32_t&#160;</td>
+          <td class="paramname"><em>err</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>userp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>发生错误 </p><dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">err</td><td>错误码 3: 服务端连接过多<br />
+ 4: 服务端资源不足<br />
+ 7: 服务端识别超时<br />
+ 8: 未识别出文字<br />
+ 101: 服务未连接<br />
+ 103: 本地等待识别结果超时 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li><a class="el" href="voice-ai_8h_source.html">voice-ai.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

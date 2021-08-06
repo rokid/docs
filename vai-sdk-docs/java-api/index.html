@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>voice-ai-java: 若琪语音交互sdk java接口</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">voice-ai-java
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">若琪语音交互sdk java接口 </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><h2>1. 概述</h2>
+<div class="fragment"><div class="line">封装若琪语音交互协议。</div><div class="line">通过此sdk可接入使用若琪智能音箱语音交互功能。</div></div><!-- fragment --><h2>2. 功能</h2>
+<ul>
+<li>语音识别</li>
+<li>语音合成</li>
+<li>若琪语音技能指令执行</li>
+</ul>
+<div class="fragment"><div class="line">简单描述sdk工作的场景</div><div class="line"></div><div class="line">向sdk输入语音数据，sdk回调语音数据识别结果，例如&quot;你好&quot;。</div><div class="line">随后sdk回调&quot;你好&quot;应该执行的响应指令，一般为一段需要语音合成的文字: &quot;你好呀，今天天气真美好&quot;</div><div class="line">将&quot;你好呀，今天天气真美好&quot;文字输入sdk进行语音合成，sdk回调这段文字合成的音频数据库，可由设备播放。</div><div class="line"></div><div class="line">更详细的sdk使用方式请阅读类接口定义</div></div><!-- fragment --><h2>3. 示例</h2>
+<h3>3.1 创建实例</h3>
+<div class="fragment"><div class="line">VoiceAI voiceAI = new VoiceAI.Builder()</div><div class="line">        .setSpeechUri(SPEECH_URI)</div><div class="line">        .setReportUri(REPORT_URI)</div><div class="line">        .setAuthInfo(ROKID_KEY, ROKID_SECRET, ROKID_DEVICE_TYPE_ID, ROKID_DEVICE_ID)</div><div class="line">        .setVoiceCallback(voiceCallback)</div><div class="line">        .setActionCallback(actionCallback)</div><div class="line">        .build();</div></div><!-- fragment --><h3>3.2 回调对象</h3>
+<div class="fragment"><div class="line">VoiceCallback voiceCallback = new VoiceCallback() {</div><div class="line">    @Override</div><div class="line">    public void onAccept(String status) {</div><div class="line">        // status为&quot;fake&quot;或&quot;reject&quot;时，结束录音</div><div class="line">        if (status.equals(&quot;fake&quot;) || status.equals(&quot;reject&quot;))</div><div class="line">            endRecording();</div><div class="line">    }</div><div class="line"></div><div class="line">    @Override</div><div class="line">    public void onAsr(String asr, boolean inter) {</div><div class="line">        // 语音识别完整结果已得到，结束录音</div><div class="line">        if (!inter)</div><div class="line">            endRecording();</div><div class="line">        ......</div><div class="line">    }</div><div class="line"></div><div class="line">    @Override</div><div class="line">    public void onResult(String nlp, String action) {</div><div class="line">        // 一般不需要处理nlp, action, sdk会内部执行</div><div class="line">    }</div><div class="line"></div><div class="line">    @Override</div><div class="line">    public void onError(int code) {</div><div class="line">        // 语音识别出错，结束录音</div><div class="line">        endRecording();</div><div class="line">    }</div><div class="line">};</div><div class="line">ActionCallback actionCallback = new ActionCallback() {</div><div class="line">    // session的概念，请参考接口文档内的描述</div><div class="line">    // 简单程序可以不用处理session</div><div class="line">    @Override</div><div class="line">    public void onSessionStart(Session sess) {</div><div class="line">    }</div><div class="line"></div><div class="line">    @Override</div><div class="line">    public void onSessionActionCompleted(Session sess) {</div><div class="line">    }</div><div class="line"></div><div class="line">    @Override</div><div class="line">    public void onSessionEnd(Session sess) {</div><div class="line">    }</div><div class="line"></div><div class="line">    @Override</div><div class="line">    public void onPlayTts(Session sess, String text) {</div><div class="line">        Log.d(TAG, &quot;play tts: &quot; + text);</div><div class="line">        voiceAI.textToSpeech(text, ttsCallback);</div><div class="line">        mainHandler.post(()-&gt;{</div><div class="line">            ttsText.setText(text);</div><div class="line">        });</div><div class="line">    }</div><div class="line"></div><div class="line">    @Override</div><div class="line">    public void onStopTts(Session sess) {</div><div class="line">    }</div><div class="line"></div><div class="line">    @Override</div><div class="line">    public void onPlayMedia(Session sess, String url, int position) {</div><div class="line">    }</div><div class="line"></div><div class="line">    @Override</div><div class="line">    public int onStopMedia(Session sess) {</div><div class="line">        return 0;</div><div class="line">    }</div><div class="line"></div><div class="line">    @Override</div><div class="line">    public void onPickup(Session sess, boolean on, int dur) {</div><div class="line">    }</div><div class="line"></div><div class="line">    // 本地技能的状态及动作回调</div><div class="line">    // 属于比较复杂的运用，只涉及云技能的情况下，不用处理</div><div class="line">    @Override</div><div class="line">    public void onNativeAction(Session sess, String nlp) {</div><div class="line">    }</div><div class="line"></div><div class="line">    @Override</div><div class="line">    public void onNativeExit(Session sess) {</div><div class="line">    }</div><div class="line"></div><div class="line">    @Override</div><div class="line">    public void onNativePause(Session sess) {</div><div class="line">    }</div><div class="line"></div><div class="line">    @Override</div><div class="line">    public void onNativeResume(Session sess) {</div><div class="line">    }</div><div class="line">};</div></div><!-- fragment --><h3>3.3 输入语音</h3>
+<div class="fragment"><div class="line">开始一次语音交互</div><div class="line">按键录音，传null就可以</div><div class="line">前端激活词激活，需要传入VoiceOptions对象，由前端给出的信息填充，具体参数见接口文档</div><div class="line">voiceAI.startVoice(null);</div><div class="line"></div><div class="line">分多次传入语音数据</div><div class="line">data为byte[]，可以是pcm数据，也可以是opu格式的数据</div><div class="line">详见接口文档</div><div class="line">voiceAI.writeVoice(data, 0, len);</div><div class="line"></div><div class="line"></div><div class="line">云端识别语音结尾，一般不需要调用 voiceAI.endVoice()</div><div class="line">endVoice()用于提前结束语音交互</div></div><!-- fragment --><h3>3.4 语音合成</h3>
+<div class="fragment"><div class="line">传入文本，回调音频数据流</div><div class="line">voiceAI.textToSpeech(text, ttsCallback);</div><div class="line"></div><div class="line">TtsCallback ttsCallback = new TtsCallback() {</div><div class="line">    // 分多次回调文本转成的音频数据</div><div class="line">    // 音频数据编码可以是PCM, OPU2, MP3，详见接口文档</div><div class="line">    @Override</div><div class="line">    public void onAudioData(byte[] data, int offset, int length) {</div><div class="line">        ttsPlayer.write(data, offset, length);</div><div class="line">    }</div><div class="line"></div><div class="line">    @Override</div><div class="line">    public void onCompleted() {</div><div class="line">        Log.d(TAG, &quot;tts completed&quot;);</div><div class="line">    }</div><div class="line"></div><div class="line">    @Override</div><div class="line">    public void onError(int code) {</div><div class="line">        Log.d(TAG, &quot;tts error: &quot; + code);</div><div class="line">    }</div><div class="line">};</div></div><!-- fragment --> </div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

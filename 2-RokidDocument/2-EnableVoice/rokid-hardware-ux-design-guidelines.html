@@ -1,0 +1,4665 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Rokid 硬件交互设计指南 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-expandable-chapters-interactive/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-ace/ace.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../../3-ApiReference/openvoice-speech-api.html" />
+    
+    
+    <link rel="prev" href="../../6-asrandtts/tts.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        <li class="header">Rokid 技术文档</li>
+        
+        
+    
+        <li class="chapter " data-level="1.1" >
+            
+                <span>
+            
+                    
+                    语音接入（云端和设备端）
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" data-path="rokid-hardware-design-guide.html">
+            
+                <a href="rokid-hardware-design-guide.html">
+            
+                    
+                    语音能力和硬件设计介绍
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1.1" data-path="../../6-asrandtts/asr.html">
+            
+                <a href="../../6-asrandtts/asr.html">
+            
+                    
+                    Rokid 语音识别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.1.2" data-path="../../6-asrandtts/tts.html">
+            
+                <a href="../../6-asrandtts/tts.html">
+            
+                    
+                    Rokid 语音合成
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.1.1.3" data-path="rokid-hardware-ux-design-guidelines.html">
+            
+                <a href="rokid-hardware-ux-design-guidelines.html">
+            
+                    
+                    Rokid 硬件交互设计指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" data-path="../../3-ApiReference/openvoice-speech-api.html">
+            
+                <a href="../../3-ApiReference/openvoice-speech-api.html">
+            
+                    
+                    设备端接入文档
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.2.1" data-path="../../3-ApiReference/openvoice-auth-api.html">
+            
+                <a href="../../3-ApiReference/openvoice-auth-api.html">
+            
+                    
+                    设备认证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.2" >
+            
+                <span>
+            
+                    
+                    WebSocket方式接入
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.2.2.1" data-path="../../3-ApiReference/wsasr-api.html">
+            
+                <a href="../../3-ApiReference/wsasr-api.html">
+            
+                    
+                    语音交互
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.2.2" data-path="../../3-ApiReference/openvoice-nlp-api.html">
+            
+                <a href="../../3-ApiReference/openvoice-nlp-api.html">
+            
+                    
+                    语义理解
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.2.3" data-path="../../3-ApiReference/wstts-api.html">
+            
+                <a href="../../3-ApiReference/wstts-api.html">
+            
+                    
+                    语音合成
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.3" >
+            
+                <span>
+            
+                    
+                    HTTP方式接入
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.2.3.1" data-path="../../3-ApiReference/openvoice-http-asr.html">
+            
+                <a href="../../3-ApiReference/openvoice-http-asr.html">
+            
+                    
+                    语音识别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.3.2" data-path="../../3-ApiReference/openvoice-http-tts.html">
+            
+                <a href="../../3-ApiReference/openvoice-http-tts.html">
+            
+                    
+                    语音合成
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.4" >
+            
+                <span>
+            
+                    
+                    设备端SDK协议
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.2.4.1" data-path="../../3-ApiReference/rokid-client-sdk-doc.html">
+            
+                <a href="../../3-ApiReference/rokid-client-sdk-doc.html">
+            
+                    
+                    SDK 接口定义
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2.4.2" data-path="../../3-ApiReference/open-device-manager.html">
+            
+                <a href="../../3-ApiReference/open-device-manager.html">
+            
+                    
+                    设备接口文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" data-path="../../3-ApiReference/mapi-doc/overview.html">
+            
+                <a href="../../3-ApiReference/mapi-doc/overview.html">
+            
+                    
+                    云云接入文档
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.3.1" data-path="../../3-ApiReference/mapi-doc/gw-auth-api.html">
+            
+                <a href="../../3-ApiReference/mapi-doc/gw-auth-api.html">
+            
+                    
+                    设备认证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.2" >
+            
+                <span>
+            
+                    
+                    WebSocket方式接入
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.3.2.1" data-path="../../3-ApiReference/mapi-doc/gw-ws-asr-api.html">
+            
+                <a href="../../3-ApiReference/mapi-doc/gw-ws-asr-api.html">
+            
+                    
+                    语音识别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.2.2" data-path="../../3-ApiReference/mapi-doc/gw-ws-tts-api.html">
+            
+                <a href="../../3-ApiReference/mapi-doc/gw-ws-tts-api.html">
+            
+                    
+                    语音合成
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.3" >
+            
+                <span>
+            
+                    
+                    HTTP方式接入
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.3.3.1" data-path="../../3-ApiReference/mapi-doc/gw-http-asr-api.html">
+            
+                <a href="../../3-ApiReference/mapi-doc/gw-http-asr-api.html">
+            
+                    
+                    语音识别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.3.2" data-path="../../3-ApiReference/mapi-doc/gw-http-tts-api.html">
+            
+                <a href="../../3-ApiReference/mapi-doc/gw-http-tts-api.html">
+            
+                    
+                    语音合成
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.3.3" data-path="../../3-ApiReference/mapi-doc/gw-http-tts-bgm-api.html">
+            
+                <a href="../../3-ApiReference/mapi-doc/gw-http-tts-bgm-api.html">
+            
+                    
+                    背景音乐列表取得
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" data-path="../../5-enableVoice/rokid-vsvy-sdk-docs/important-concept.html">
+            
+                <a href="../../5-enableVoice/rokid-vsvy-sdk-docs/important-concept.html">
+            
+                    
+                    重要概念和错误码
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.4.1" data-path="../../5-enableVoice/rokid-vsvy-sdk-docs/common/err_code.html">
+            
+                <a href="../../5-enableVoice/rokid-vsvy-sdk-docs/common/err_code.html">
+            
+                    
+                    错误码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4.2" data-path="../../5-enableVoice/rokid-vsvy-sdk-docs/common/api_json.html">
+            
+                <a href="../../5-enableVoice/rokid-vsvy-sdk-docs/common/api_json.html">
+            
+                    
+                    JSON 格式配置字串
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5" data-path="../../5-enableVoice/rokid-vsvy-sdk-docs/introduction.html">
+            
+                <a href="../../5-enableVoice/rokid-vsvy-sdk-docs/introduction.html">
+            
+                    
+                    语音方案SDK
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.1" data-path="../../5-enableVoice/rokid-vsvy-sdk-docs/fullLink/fulllink-new.html">
+            
+                <a href="../../5-enableVoice/rokid-vsvy-sdk-docs/fullLink/fulllink-new.html">
+            
+                    
+                    Android 全链路通用方案(新)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.2" data-path="../../5-enableVoice/rokid-vsvy-sdk-docs/fullLink/fulllink.html">
+            
+                <a href="../../5-enableVoice/rokid-vsvy-sdk-docs/fullLink/fulllink.html">
+            
+                    
+                    Android 全链路通用方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.3" data-path="../../5-enableVoice/rokid-vsvy-sdk-docs/RokidAiSdk/RokidAiSdk.html">
+            
+                <a href="../../5-enableVoice/rokid-vsvy-sdk-docs/RokidAiSdk/RokidAiSdk.html">
+            
+                    
+                    Android 全链路APK级别方案
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.4" data-path="../../5-enableVoice/rokid-vsvy-sdk-docs/speechTTS/speechtts.html">
+            
+                <a href="../../5-enableVoice/rokid-vsvy-sdk-docs/speechTTS/speechtts.html">
+            
+                    
+                    Android 基础语音模块
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.5" data-path="../../5-enableVoice/rokid-vsvy-sdk-docs/linuxsdk/linuxsdk.html">
+            
+                <a href="../../5-enableVoice/rokid-vsvy-sdk-docs/linuxsdk/linuxsdk.html">
+            
+                    
+                    Linux基础架构/树莓派
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.6" data-path="../../5-enableVoice/rokid-vsvy-sdk-docs/LocalSkillSdk/LocalSkillSdk.html">
+            
+                <a href="../../5-enableVoice/rokid-vsvy-sdk-docs/LocalSkillSdk/LocalSkillSdk.html">
+            
+                    
+                    Android APK级别本地技能开发简易工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.6" >
+            
+                <a target="_blank" href="https://developer-forum.rokid.com/t/topic/2837">
+            
+                    
+                    声学认证
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.7" data-path="../../rokidos-linux-docs/Dev_3.31/13_ROKID_AI_Dev_Board_HW_UserGuide_v3.31.html">
+            
+                <a href="../../rokidos-linux-docs/Dev_3.31/13_ROKID_AI_Dev_Board_HW_UserGuide_v3.31.html">
+            
+                    
+                    k18芯片和开发板
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.7.1" data-path="../../rokidos-linux-docs/reference/dev_board/amlogic/usermanual_a113.html">
+            
+                <a href="../../rokidos-linux-docs/reference/dev_board/amlogic/usermanual_a113.html">
+            
+                    
+                    A113开发板
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.8" data-path="../../7-bspguide/gai_shu/mu_de.html">
+            
+                <a href="../../7-bspguide/gai_shu/mu_de.html">
+            
+                    
+                    BSP/驱动开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.8.1" >
+            
+                <span>
+            
+                    
+                    Kamino18平台简介
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.8.1.1" data-path="../../7-bspguide/kamino18ping_tai_jian_jie/xin_pian_kuang_tu.html">
+            
+                <a href="../../7-bspguide/kamino18ping_tai_jian_jie/xin_pian_kuang_tu.html">
+            
+                    
+                    芯片框图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.8.1.2" data-path="../../7-bspguide/kamino18ping_tai_jian_jie/zhi_neng_yu_yin_fang_an_she_ji_jian_jie.html">
+            
+                <a href="../../7-bspguide/kamino18ping_tai_jian_jie/zhi_neng_yu_yin_fang_an_she_ji_jian_jie.html">
+            
+                    
+                    智能语音方案设计简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.8.1.3" data-path="../../7-bspguide/kamino18ping_tai_jian_jie/ying_jian_kai_fa_ban_shuo_ming.html">
+            
+                <a href="../../7-bspguide/kamino18ping_tai_jian_jie/ying_jian_kai_fa_ban_shuo_ming.html">
+            
+                    
+                    硬件开发板说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.8.2" data-path="../../7-bspguide/ruan_jian_jia_gou_yu_bian_yi_fang_fa/">
+            
+                <a href="../../7-bspguide/ruan_jian_jia_gou_yu_bian_yi_fang_fa/">
+            
+                    
+                    软件架构与编译方法
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.8.2.1" data-path="../../7-bspguide/ruan_jian_jia_gou_yu_bian_yi_fang_fa/dai_ma_mu_lu.html">
+            
+                <a href="../../7-bspguide/ruan_jian_jia_gou_yu_bian_yi_fang_fa/dai_ma_mu_lu.html">
+            
+                    
+                    代码目录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.8.2.2" data-path="../../7-bspguide/ruan_jian_jia_gou_yu_bian_yi_fang_fa/bian_yi_huan_jing_pei_zhi.html">
+            
+                <a href="../../7-bspguide/ruan_jian_jia_gou_yu_bian_yi_fang_fa/bian_yi_huan_jing_pei_zhi.html">
+            
+                    
+                    编译环境配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.8.2.3" data-path="../../7-bspguide/ruan_jian_jia_gou_yu_bian_yi_fang_fa/dai_ma_bian_yi.html">
+            
+                <a href="../../7-bspguide/ruan_jian_jia_gou_yu_bian_yi_fang_fa/dai_ma_bian_yi.html">
+            
+                    
+                    代码编译
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.8.3" data-path="../../7-bspguide/pinmuxji_gpio_she_zhi/">
+            
+                <a href="../../7-bspguide/pinmuxji_gpio_she_zhi/">
+            
+                    
+                    PINMUX及GPIO设置
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.8.3.1" data-path="../../7-bspguide/pinmuxji_gpio_she_zhi/mcuyu_pinmux_she_zhi.html">
+            
+                <a href="../../7-bspguide/pinmuxji_gpio_she_zhi/mcuyu_pinmux_she_zhi.html">
+            
+                    
+                    MCU域PINMUX设置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.8.3.2" data-path="../../7-bspguide/pinmuxji_gpio_she_zhi/armyu_pinmux_she_zhi.html">
+            
+                <a href="../../7-bspguide/pinmuxji_gpio_she_zhi/armyu_pinmux_she_zhi.html">
+            
+                    
+                    ARM域PINMUX设置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.8.3.3" data-path="../../7-bspguide/pinmuxji_gpio_she_zhi/gpioshe_zhi.html">
+            
+                <a href="../../7-bspguide/pinmuxji_gpio_she_zhi/gpioshe_zhi.html">
+            
+                    
+                    GPIO设置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.8.4" data-path="../../7-bspguide/flashfen_qu_ji_wen_jian_xi_tong_guan_li/">
+            
+                <a href="../../7-bspguide/flashfen_qu_ji_wen_jian_xi_tong_guan_li/">
+            
+                    
+                    Flash分区及文件系统管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.8.4.1" data-path="../../7-bspguide/flashfen_qu_ji_wen_jian_xi_tong_guan_li/fen_qu_she_zhi.html">
+            
+                <a href="../../7-bspguide/flashfen_qu_ji_wen_jian_xi_tong_guan_li/fen_qu_she_zhi.html">
+            
+                    
+                    分区设置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.8.4.2" data-path="../../7-bspguide/flashfen_qu_ji_wen_jian_xi_tong_guan_li/wen_jian_xi_tong_pei_zhi.html">
+            
+                <a href="../../7-bspguide/flashfen_qu_ji_wen_jian_xi_tong_guan_li/wen_jian_xi_tong_pei_zhi.html">
+            
+                    
+                    文件系统配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.8.5" data-path="../../7-bspguide/jing_xiang_shao_xie/">
+            
+                <a href="../../7-bspguide/jing_xiang_shao_xie/">
+            
+                    
+                    镜像烧写
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.8.5.1" data-path="../../7-bspguide/jing_xiang_shao_xie/jing_xiang_wei_zhi.html">
+            
+                <a href="../../7-bspguide/jing_xiang_shao_xie/jing_xiang_wei_zhi.html">
+            
+                    
+                    镜像位置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.8.5.2" data-path="../../7-bspguide/jing_xiang_shao_xie/linuxshao_xie_gong_ju_shi_yong.html">
+            
+                <a href="../../7-bspguide/jing_xiang_shao_xie/linuxshao_xie_gong_ju_shi_yong.html">
+            
+                    
+                    Linux烧写工具使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.8.5.3" data-path="../../7-bspguide/jing_xiang_shao_xie/windowsshao_xie_gong_ju_shi_yong.html">
+            
+                <a href="../../7-bspguide/jing_xiang_shao_xie/windowsshao_xie_gong_ju_shi_yong.html">
+            
+                    
+                    Windows烧写工具使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.8.5.4" data-path="../../7-bspguide/jing_xiang_shao_xie/gong_chang_shao_xie_gong_ju_shi_yong.html">
+            
+                <a href="../../7-bspguide/jing_xiang_shao_xie/gong_chang_shao_xie_gong_ju_shi_yong.html">
+            
+                    
+                    工厂烧写工具使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.8.6" data-path="../../7-bspguide/snyu_seed_shao_xie.html">
+            
+                <a href="../../7-bspguide/snyu_seed_shao_xie.html">
+            
+                    
+                    SN与Seed烧写
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.8.7" data-path="../../7-bspguide/pei_wang_yan_zheng/">
+            
+                <a href="../../7-bspguide/pei_wang_yan_zheng/">
+            
+                    
+                    配网验证
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.8.7.1" data-path="../../7-bspguide/pei_wang_yan_zheng/btpei_wang.html">
+            
+                <a href="../../7-bspguide/pei_wang_yan_zheng/btpei_wang.html">
+            
+                    
+                    BT配网
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.9" data-path="../../5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/system-service.html">
+            
+                <a href="../../5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/system-service.html">
+            
+                    
+                    YODAOS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.9.1" data-path="../../5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/compile-run.html">
+            
+                <a href="../../5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/compile-run.html">
+            
+                    
+                    编译与运行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.9.2" >
+            
+                <span>
+            
+                    
+                    系统服务模块简介
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.9.2.1" data-path="../../5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/httpdns/10_模块简介/10_httpdns.html">
+            
+                <a href="../../5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/httpdns/10_模块简介/10_httpdns.html">
+            
+                    
+                    httpdns
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.9.2.2" data-path="../../5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/lumenlight/10_模块简介/11_lumenlight.html">
+            
+                <a href="../../5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/lumenlight/10_模块简介/11_lumenlight.html">
+            
+                    
+                    lumenlight
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.9.2.3" >
+            
+                <span>
+            
+                    
+                    player
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.9.2.3.1" data-path="../../5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/librplayer/10_模块简介/12_player/10_RPlayer.html">
+            
+                <a href="../../5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/librplayer/10_模块简介/12_player/10_RPlayer.html">
+            
+                    
+                    RPlayer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.9.2.3.2" data-path="../../5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/librplayer/10_模块简介/12_player/11_WavPlayer.html">
+            
+                <a href="../../5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/librplayer/10_模块简介/12_player/11_WavPlayer.html">
+            
+                    
+                    WavPlayer
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.9.2.4" data-path="../../5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/rklog/10_模块简介/13_rklog.html">
+            
+                <a href="../../5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/rklog/10_模块简介/13_rklog.html">
+            
+                    
+                    rklog
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.9.2.5" data-path="../../5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/input-event/10_模块简介/14_input-event.html">
+            
+                <a href="../../5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/input-event/10_模块简介/14_input-event.html">
+            
+                    
+                    input-event
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.9.2.6" data-path="../../5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/libmemcheck/10_模块简介/14_libmemcheck.html">
+            
+                <a href="../../5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/libmemcheck/10_模块简介/14_libmemcheck.html">
+            
+                    
+                    libmemcheck
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.9.2.7" data-path="../../5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/vol_ctrl/10_模块简介/15_volctl.html">
+            
+                <a href="../../5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/vol_ctrl/10_模块简介/15_volctl.html">
+            
+                    
+                    volctl
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.9.2.8" data-path="../../5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/display/10_模块简介/20_display.html">
+            
+                <a href="../../5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/display/10_模块简介/20_display.html">
+            
+                    
+                    display
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.9.2.9" data-path="../../5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/yimo/README.md">
+            
+                <span>
+            
+                    
+                    yimo
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.9.3" >
+            
+                <a target="_blank" href="https://yodaos-project.github.io/yoda-book/zh-cn/">
+            
+                    
+                    YODAOS 应用框架
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.10" data-path="../../5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/yodaosavs/1方案简介.html">
+            
+                <a href="../../5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/yodaosavs/1方案简介.html">
+            
+                    
+                    YODAOS AVS 方案/海外
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.10.1" data-path="../../5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/yodaosavs/2功能演示说明.html">
+            
+                <a href="../../5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/yodaosavs/2功能演示说明.html">
+            
+                    
+                    功能演示说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.10.2" data-path="../../5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/yodaosavs/3功能流程.html">
+            
+                <a href="../../5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/yodaosavs/3功能流程.html">
+            
+                    
+                    功能流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.10.3" data-path="../../5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/yodaosavs/4设备接口说明.html">
+            
+                <a href="../../5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/yodaosavs/4设备接口说明.html">
+            
+                    
+                    设备接口说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.11" data-path="../../rokidos-linux-docs/">
+            
+                <a href="../../rokidos-linux-docs/">
+            
+                    
+                    其他开发平台（已下架）
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.11.1" >
+            
+                <span>
+            
+                    
+                    开发套件使用手册
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.11.1.1" data-path="../../rokidos-linux-docs/reference/dev_board/board_list.html">
+            
+                <a href="../../rokidos-linux-docs/reference/dev_board/board_list.html">
+            
+                    
+                    基本参数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.11.1.2" data-path="../../rokidos-linux-docs/source/system_setting/connect_to_internet.html">
+            
+                <a href="../../rokidos-linux-docs/source/system_setting/connect_to_internet.html">
+            
+                    
+                    联网教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.11.2" >
+            
+                <span>
+            
+                    
+                    编译指南
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.11.2.1" data-path="../../rokidos-linux-docs/reference/dev_board/amlogic/usermanual_s905d.html">
+            
+                <a href="../../rokidos-linux-docs/reference/dev_board/amlogic/usermanual_s905d.html">
+            
+                    
+                    S905D
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.11.3" data-path="../../rokidos-linux-docs/source/downloading_building/burn_image.html">
+            
+                <a href="../../rokidos-linux-docs/source/downloading_building/burn_image.html">
+            
+                    
+                    刷机教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.11.4" data-path="../../rokidos-linux-docs/source/system_setting/custom_activation.html">
+            
+                <a href="../../rokidos-linux-docs/source/system_setting/custom_activation.html">
+            
+                    
+                    自定义激活词配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.11.5" data-path="../../rokidos-linux-docs/source/getting_started/overview.html">
+            
+                <a href="../../rokidos-linux-docs/source/getting_started/overview.html">
+            
+                    
+                    RokidOS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.11.5.1" >
+            
+                <span>
+            
+                    
+                    下载和构建
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.11.5.1.1" data-path="../../rokidos-linux-docs/source/downloading_building/requirements.html">
+            
+                <a href="../../rokidos-linux-docs/source/downloading_building/requirements.html">
+            
+                    
+                    概览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.11.5.1.2" data-path="../../rokidos-linux-docs/source/downloading_building/build_env.html">
+            
+                <a href="../../rokidos-linux-docs/source/downloading_building/build_env.html">
+            
+                    
+                    搭建编译环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.11.5.1.3" data-path="../../rokidos-linux-docs/source/downloading_building/downloading_codes.html">
+            
+                <a href="../../rokidos-linux-docs/source/downloading_building/downloading_codes.html">
+            
+                    
+                    下载源代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.11.5.1.4" data-path="../../rokidos-linux-docs/source/downloading_building/building.html">
+            
+                <a href="../../rokidos-linux-docs/source/downloading_building/building.html">
+            
+                    
+                    准备构建
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.11.5.2" data-path="../../rokidos-linux-docs/source/system_setting/overview.html">
+            
+                <a href="../../rokidos-linux-docs/source/system_setting/overview.html">
+            
+                    
+                    设备使用
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.11.5.2.1" data-path="../../rokidos-linux-docs/source/system_setting/openvoice_access_config.html">
+            
+                <a href="../../rokidos-linux-docs/source/system_setting/openvoice_access_config.html">
+            
+                    
+                    语音接入配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.11.5.3" data-path="../../rokidos-linux-docs/source/develop_debugging/debugging.html">
+            
+                <a href="../../rokidos-linux-docs/source/develop_debugging/debugging.html">
+            
+                    
+                    设备调试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.11.5.4" data-path="../../rokidos-linux-docs/porting/overview.html">
+            
+                <a href="../../rokidos-linux-docs/porting/overview.html">
+            
+                    
+                    系统移植
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.11.5.4.1" >
+            
+                <span>
+            
+                    
+                    音频
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.11.5.4.1.1" data-path="../../rokidos-linux-docs/porting/audio/overview.html">
+            
+                <a href="../../rokidos-linux-docs/porting/audio/overview.html">
+            
+                    
+                    概览
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.11.5.4.1.2" data-path="../../rokidos-linux-docs/porting/audio/terminology.html">
+            
+                <a href="../../rokidos-linux-docs/porting/audio/terminology.html">
+            
+                    
+                    术语
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.11.5.4.2" data-path="../../rokidos-linux-docs/porting/bootanim/bootanim.html">
+            
+                <a href="../../rokidos-linux-docs/porting/bootanim/bootanim.html">
+            
+                    
+                    开机动画
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.11.5.4.3" data-path="../../rokidos-linux-docs/porting/wifi/wifi.html">
+            
+                <a href="../../rokidos-linux-docs/porting/wifi/wifi.html">
+            
+                    
+                    WiFi
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.11.5.4.4" data-path="../../rokidos-linux-docs/porting/upgrade/upgrade.html">
+            
+                <a href="../../rokidos-linux-docs/porting/upgrade/upgrade.html">
+            
+                    
+                    系统升级
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.11.5.4.5" data-path="../../rokidos-linux-docs/porting/bluetooth/bluetooth.html">
+            
+                <a href="../../rokidos-linux-docs/porting/bluetooth/bluetooth.html">
+            
+                    
+                    蓝牙服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.11.5.5" data-path="../../rokidos-linux-docs/development/overview.html">
+            
+                <a href="../../rokidos-linux-docs/development/overview.html">
+            
+                    
+                    应用开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.11.5.5.1" data-path="../../rokidos-linux-docs/development/tutorial-nodejs.html">
+            
+                <a href="../../rokidos-linux-docs/development/tutorial-nodejs.html">
+            
+                    
+                    Node.js
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.11.5.5.2" data-path="../../docs/rokidos-linux-docs/development/tutorial-cplusplus.md">
+            
+                <span>
+            
+                    
+                    C/C++
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.11.5.5.2.1" data-path="../../rokidos-linux-docs/development/cplusplus/tts.html">
+            
+                <a href="../../rokidos-linux-docs/development/cplusplus/tts.html">
+            
+                    
+                    语音合成
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.11.5.5.2.2" data-path="../../rokidos-linux-docs/development/cplusplus/volume_ctrl.html">
+            
+                <a href="../../rokidos-linux-docs/development/cplusplus/volume_ctrl.html">
+            
+                    
+                    音量控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.11.5.5.2.3" data-path="../../rokidos-linux-docs/development/cplusplus/mediaplayer.html">
+            
+                <a href="../../rokidos-linux-docs/development/cplusplus/mediaplayer.html">
+            
+                    
+                    多媒体播放
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.11.5.5.2.4" data-path="../../rokidos-linux-docs/development/cplusplus/lumenflinger.html">
+            
+                <a href="../../rokidos-linux-docs/development/cplusplus/lumenflinger.html">
+            
+                    
+                    灯光效果
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.11.5.5.2.5" data-path="../../rokidos-linux-docs/development/cplusplus/wpa_ctrl.html">
+            
+                <a href="../../rokidos-linux-docs/development/cplusplus/wpa_ctrl.html">
+            
+                    
+                    WiFi控制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.11.5.5.2.6" data-path="../../rokidos-linux-docs/development/cplusplus/inputflinger.html">
+            
+                <a href="../../rokidos-linux-docs/development/cplusplus/inputflinger.html">
+            
+                    
+                    输入服务
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.11.5.5.2.7" data-path="../../rokidos-linux-docs/development/cplusplus/power_ctrl.html">
+            
+                <a href="../../rokidos-linux-docs/development/cplusplus/power_ctrl.html">
+            
+                    
+                    电量查询
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.11.5.5.2.8" data-path="../../rokidos-linux-docs/development/cplusplus/upgrade.html">
+            
+                <a href="../../rokidos-linux-docs/development/cplusplus/upgrade.html">
+            
+                    
+                    系统升级
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.11.5.5.2.9" data-path="../../rokidos-linux-docs/development/cplusplus/btflinger.html">
+            
+                <a href="../../rokidos-linux-docs/development/cplusplus/btflinger.html">
+            
+                    
+                    蓝牙
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" >
+            
+                <span>
+            
+                    
+                    Rokid 智能家居
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../../smarthome/">
+            
+                <a href="../../smarthome/">
+            
+                    
+                    方案输出
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../../smarthome/skills.html">
+            
+                <a href="../../smarthome/skills.html">
+            
+                    
+                    技能授权
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../../smarthome/demo-app.html">
+            
+                <a href="../../smarthome/demo-app.html">
+            
+                    
+                    智能家居公版 App
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="../../smarthome/mobile-user-app.html">
+            
+                <a href="../../smarthome/mobile-user-app.html">
+            
+                    
+                    智能家居 H5 界面
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4" >
+            
+                <a target="_blank" href="https://homebase-open.rokid.com/docs">
+            
+                    
+                    智能家居开放接口（链接）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5" data-path="../../rokid-homebase-docs/intro/sdk.html">
+            
+                <a href="../../rokid-homebase-docs/intro/sdk.html">
+            
+                    
+                    智能家居隐身接入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.6" >
+            
+                <span>
+            
+                    
+                    行业解决方案
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.6.1" data-path="../../smarthome/hotel.html">
+            
+                <a href="../../smarthome/hotel.html">
+            
+                    
+                    面向酒店
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.6.2" data-path="../../smarthome/hotel-open-api.html">
+            
+                <a href="../../smarthome/hotel-open-api.html">
+            
+                    
+                    酒店开放 API
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.6.3" data-path="../../smarthome/odm.html">
+            
+                <a href="../../smarthome/odm.html">
+            
+                    
+                    面向 ODM
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../../rokid-homebase-docs/">
+            
+                <a href="../../rokid-homebase-docs/">
+            
+                    
+                    智能家居设备接入
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../../rokid-homebase-docs/intro/flow.html">
+            
+                <a href="../../rokid-homebase-docs/intro/flow.html">
+            
+                    
+                    智能家居设备接入流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" >
+            
+                <span>
+            
+                    
+                    开发指南
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.2.1" data-path="../../rokid-homebase-docs/connect/cloud-to-cloud.html">
+            
+                <a href="../../rokid-homebase-docs/connect/cloud-to-cloud.html">
+            
+                    
+                    云云对接
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2.2" data-path="../../rokid-homebase-docs/connect/via-lan.html">
+            
+                <a href="../../rokid-homebase-docs/connect/via-lan.html">
+            
+                    
+                    局域网对接
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2.3" data-path="../../rokid-homebase-docs/tools/rhome-desktop.html">
+            
+                <a href="../../rokid-homebase-docs/tools/rhome-desktop.html">
+            
+                    
+                    RHOME 桌面版调试工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2.4" data-path="../../rokid-homebase-docs/tools/developer-driver.html">
+            
+                <a href="../../rokid-homebase-docs/tools/developer-driver.html">
+            
+                    
+                    自定义接入
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" >
+            
+                <span>
+            
+                    
+                    智能家居协议(v2)
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.3.1" data-path="../../rokid-homebase-docs/connect/rfc6749.html">
+            
+                <a href="../../rokid-homebase-docs/connect/rfc6749.html">
+            
+                    
+                    技能授权
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3.2" data-path="../../rokid-homebase-docs/v2/message-reference.html">
+            
+                <a href="../../rokid-homebase-docs/v2/message-reference.html">
+            
+                    
+                    消息格式参考
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3.3" >
+            
+                <span>
+            
+                    
+                    提供接口
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.3.3.1" data-path="../../rokid-homebase-docs/v2/discovery.html">
+            
+                <a href="../../rokid-homebase-docs/v2/discovery.html">
+            
+                    
+                    搜索发现 Discovery
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3.3.2" data-path="../../rokid-homebase-docs/v2/control.html">
+            
+                <a href="../../rokid-homebase-docs/v2/control.html">
+            
+                    
+                    终端控制 Control
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3.4" >
+            
+                <span>
+            
+                    
+                    终端描述
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.3.4.1" data-path="../../rokid-homebase-docs/v2/endpoint.html">
+            
+                <a href="../../rokid-homebase-docs/v2/endpoint.html">
+            
+                    
+                    终端
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3.4.2" data-path="../../rokid-homebase-docs/v2/endpoint-type.html">
+            
+                <a href="../../rokid-homebase-docs/v2/endpoint-type.html">
+            
+                    
+                    终端类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3.4.3" data-path="../../rokid-homebase-docs/v2/rokid-interface.html">
+            
+                <a href="../../rokid-homebase-docs/v2/rokid-interface.html">
+            
+                    
+                    终端能力与状态
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3.4.4" data-path="../../rokid-homebase-docs/v2/error-response.html">
+            
+                <a href="../../rokid-homebase-docs/v2/error-response.html">
+            
+                    
+                    当发生了错误
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3.4.5" data-path="../../rokid-homebase-docs/v1/device/room-name.md">
+            
+                <span>
+            
+                    
+                    设备房间
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3.5" data-path="../../rokid-homebase-docs/v2/notify.html">
+            
+                <a href="../../rokid-homebase-docs/v2/notify.html">
+            
+                    
+                    状态上报
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4" >
+            
+                <span>
+            
+                    
+                    智能家居 JSON RPC 协议
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.4.1" data-path="../../rokid-homebase-docs/connect/ssdp-auto-discovery.html">
+            
+                <a href="../../rokid-homebase-docs/connect/ssdp-auto-discovery.html">
+            
+                    
+                    局域网自动发现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4.2" data-path="../../rokid-homebase-docs/connect/json-rpc-over-tcp.html">
+            
+                <a href="../../rokid-homebase-docs/connect/json-rpc-over-tcp.html">
+            
+                    
+                    JSON RPC 控制协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5" >
+            
+                <span>
+            
+                    
+                    智能家居协议(v1)
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.5.1" data-path="../../rokid-homebase-docs/connect/http-remote-driver.html">
+            
+                <a href="../../rokid-homebase-docs/connect/http-remote-driver.html">
+            
+                    
+                    HTTP 远程驱动
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5.2" >
+            
+                <span>
+            
+                    
+                    设备描述
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.5.2.1" data-path="../../rokid-homebase-docs/v1/device/device.html">
+            
+                <a href="../../rokid-homebase-docs/v1/device/device.html">
+            
+                    
+                    设备
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5.2.2" data-path="../../rokid-homebase-docs/v1/device/type.html">
+            
+                <a href="../../rokid-homebase-docs/v1/device/type.html">
+            
+                    
+                    设备类型
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5.2.3" data-path="../../rokid-homebase-docs/v1/device/actions-and-state.html">
+            
+                <a href="../../rokid-homebase-docs/v1/device/actions-and-state.html">
+            
+                    
+                    设备能力与状态
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5.2.4" data-path="../../rokid-homebase-docs/v1/errors.html">
+            
+                <a href="../../rokid-homebase-docs/v1/errors.html">
+            
+                    
+                    标准错误
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5.3" >
+            
+                <span>
+            
+                    
+                    如何调试
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.5.3.1" data-path="../../rokid-homebase-docs/tools/oauth-test.html">
+            
+                <a href="../../rokid-homebase-docs/tools/oauth-test.html">
+            
+                    
+                    测试 Command 接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5.4" >
+            
+                <span>
+            
+                    
+                    其他授权方式
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.5.4.1" data-path="../../rokid-homebase-docs/v1/oauth.html">
+            
+                <a href="../../rokid-homebase-docs/v1/oauth.html">
+            
+                    
+                    Homebase OAuth 授权
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.5.4.2" data-path="../../rokid-homebase-docs/v1/OAuth2.0.html">
+            
+                <a href="../../rokid-homebase-docs/v1/OAuth2.0.html">
+            
+                    
+                    Homebase OAuth2.0 授权
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.6" >
+            
+                <span>
+            
+                    
+                    高级功能
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.6.1" data-path="../../rokid-homebase-docs/webhook/">
+            
+                <a href="../../rokid-homebase-docs/webhook/">
+            
+                    
+                    Webhook
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../../rokid-homebase-docs/faq.html">
+            
+                <a href="../../rokid-homebase-docs/faq.html">
+            
+                    
+                    FAQ
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" >
+            
+                <span>
+            
+                    
+                    视觉能力
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../glass/Rokid人脸识别SDK1.2.0.15.html">
+            
+                <a href="../../glass/Rokid人脸识别SDK1.2.0.15.html">
+            
+                    
+                    人脸识别
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../glass/Rokid车牌识别SDK1.0.0.html">
+            
+                <a href="../../glass/Rokid车牌识别SDK1.0.0.html">
+            
+                    
+                    车牌识别
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" >
+            
+                <span>
+            
+                    
+                    技能和内容接入
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../1-SkillsKit/platform-introduction.html">
+            
+                <a href="../1-SkillsKit/platform-introduction.html">
+            
+                    
+                    技能平台新手引导
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1" >
+            
+                <span>
+            
+                    
+                    重要概念
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.1.1" data-path="../1-SkillsKit/important-concept/intend.html">
+            
+                <a href="../1-SkillsKit/important-concept/intend.html">
+            
+                    
+                    意图
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.1.2" data-path="../1-SkillsKit/important-concept/word-list.html">
+            
+                <a href="../1-SkillsKit/important-concept/word-list.html">
+            
+                    
+                    词表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.1.3" data-path="../1-SkillsKit/important-concept/usersays.html">
+            
+                <a href="../1-SkillsKit/important-concept/usersays.html">
+            
+                    
+                    用户语句
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.1.4" data-path="../1-SkillsKit/important-concept/confirm.html">
+            
+                <a href="../1-SkillsKit/important-concept/confirm.html">
+            
+                    
+                    confirm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.1.5" data-path="../1-SkillsKit/important-concept/session.html">
+            
+                <a href="../1-SkillsKit/important-concept/session.html">
+            
+                    
+                    session
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.1.6" data-path="../1-SkillsKit/important-concept/regular-expression.html">
+            
+                <a href="../1-SkillsKit/important-concept/regular-expression.html">
+            
+                    
+                    NLP 正则表达式
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.2" data-path="../1-SkillsKit/rokid-voice-interaction-guidelines.html">
+            
+                <a href="../1-SkillsKit/rokid-voice-interaction-guidelines.html">
+            
+                    
+                    技能语音交互规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.3" data-path="../1-SkillsKit/getting-started/creat.html">
+            
+                <a href="../1-SkillsKit/getting-started/creat.html">
+            
+                    
+                    平台创建技能流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.4" data-path="../1-SkillsKit/more-fuction.html">
+            
+                <a href="../1-SkillsKit/more-fuction.html">
+            
+                    
+                    自定义功能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5" >
+            
+                <span>
+            
+                    
+                    技能审核和上线规范
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1.5.1" data-path="../../4-TermsAndAgreements/rokid-skill-release-standard.html">
+            
+                <a href="../../4-TermsAndAgreements/rokid-skill-release-standard.html">
+            
+                    
+                    技能发布标准
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.1.5.2" data-path="../../4-TermsAndAgreements/rokid-skill-examine-and-verify-standard.html">
+            
+                <a href="../../4-TermsAndAgreements/rokid-skill-examine-and-verify-standard.html">
+            
+                    
+                    技能审核规范
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../1-SkillsKit/important-concept/cloud-app-development-protocol_cn.html">
+            
+                <a href="../1-SkillsKit/important-concept/cloud-app-development-protocol_cn.html">
+            
+                    
+                    技能开发
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.2.1" data-path="../1-SkillsKit/important-concept/cloud-app-development-protocol_cn.html">
+            
+                <a href="../1-SkillsKit/important-concept/cloud-app-development-protocol_cn.html">
+            
+                    
+                    云端技能协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.2" data-path="../1-SkillsKit/rokid-force-system-tutorial.html">
+            
+                <a href="../1-SkillsKit/rokid-force-system-tutorial.html">
+            
+                    
+                    Rokid Force System 使用指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.3" data-path="../1-SkillsKit/rokid-force-js-tutorial.html">
+            
+                <a href="../1-SkillsKit/rokid-force-js-tutorial.html">
+            
+                    
+                    Rokid Force JS 使用指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.4" data-path="../1-SkillsKit/ssml-document.html">
+            
+                <a href="../1-SkillsKit/ssml-document.html">
+            
+                    
+                    全新SSML 2.0使用指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.5" data-path="../1-SkillsKit/rokid-oauth.html">
+            
+                <a href="../1-SkillsKit/rokid-oauth.html">
+            
+                    
+                    Rokid Oauth 使用指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.6" data-path="../1-SkillsKit/rokid-ximalay.html">
+            
+                <a href="../1-SkillsKit/rokid-ximalay.html">
+            
+                    
+                    喜马拉雅技能开发指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.7" data-path="../1-SkillsKit/get-SSL-certificate-tutorial.html">
+            
+                <a href="../1-SkillsKit/get-SSL-certificate-tutorial.html">
+            
+                    
+                    获取 SSL 证书指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.8" >
+            
+                <a target="_blank" href="https://github.com/Rokid/rokid-skill-sample/tree/master/rokid-skill-sample-java">
+            
+                    
+                    技能开发 Java 版指南
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.9" >
+            
+                <a target="_blank" href="https://github.com/Rokid/generator-rokid/blob/master/generators/rfs">
+            
+                    
+                    基于 VS Code 的 Yeoman & 测试脚本
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2.10" data-path="../1-SkillsKit/test-skill-through-device-log.html">
+            
+                <a href="../1-SkillsKit/test-skill-through-device-log.html">
+            
+                    
+                    读取语音交互日志
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../../5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/skillstore.html">
+            
+                <a href="../../5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/skillstore.html">
+            
+                    
+                    授权开通和配置
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.3.1" data-path="../../3-ApiReference/rokid-interceptor.html">
+            
+                <a href="../../3-ApiReference/rokid-interceptor.html">
+            
+                    
+                    拦截器接口文档
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" >
+            
+                <span>
+            
+                    
+                    头部技能开通流程
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.4.1" data-path="../../5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/ximalaya.html">
+            
+                <a href="../../5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/ximalaya.html">
+            
+                    
+                    喜马拉雅技能开通流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.2" data-path="../../5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/dingdangmusic.html">
+            
+                <a href="../../5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/dingdangmusic.html">
+            
+                    
+                    叮当音乐技能开通流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4.3" data-path="../../5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/kugou.html">
+            
+                <a href="../../5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/kugou.html">
+            
+                    
+                    酷狗音乐技能开通流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" >
+            
+                <span>
+            
+                    
+                    App 开发
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../../5-enableVoice/rokid-vsvy-sdk-docs/mobliesdk/SDK.html">
+            
+                <a href="../../5-enableVoice/rokid-vsvy-sdk-docs/mobliesdk/SDK.html">
+            
+                    
+                    Mobile SDK （厂商接入自有app）
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1.1" >
+            
+                <a target="_blank" href="https://rokid.github.io/mobile-sdk-android-docs/">
+            
+                    
+                    Rokid Moblie Android SDK
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.1.2" >
+            
+                <a target="_blank" href="https://rokid.github.io/mobile-sdk-ios-docs/">
+            
+                    
+                    Rokid Moblie ios SDK
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" >
+            
+                <span>
+            
+                    
+                    运营商 H5 输出
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.2.1" data-path="../../5-enableVoice/rokid-vsvy-sdk-docs/h5/ChinaMobile.html">
+            
+                <a href="../../5-enableVoice/rokid-vsvy-sdk-docs/h5/ChinaMobile.html">
+            
+                    
+                    移动和家亲 H5
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2.2" data-path="../../5-enableVoice/rokid-vsvy-sdk-docs/h5/ChinaTelecom.html">
+            
+                <a href="../../5-enableVoice/rokid-vsvy-sdk-docs/h5/ChinaTelecom.html">
+            
+                    
+                    电信 H5
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../../8-app/alliance/web/gongban.html">
+            
+                <a href="../../8-app/alliance/web/gongban.html">
+            
+                    
+                    公版App(适用于厂商无自有app）
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.1" >
+            
+                <span>
+            
+                    
+                    Android 版
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.1.1" data-path="../../8-app/alliance/android/version.html">
+            
+                <a href="../../8-app/alliance/android/version.html">
+            
+                    
+                    修订记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.1.2" data-path="../../8-app/alliance/android/summary.html">
+            
+                <a href="../../8-app/alliance/android/summary.html">
+            
+                    
+                    文档说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.1.3" data-path="../../8-app/alliance/android/develop.html">
+            
+                <a href="../../8-app/alliance/android/develop.html">
+            
+                    
+                    开发环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.1.4" data-path="../../8-app/alliance/android/resouce_summary.html">
+            
+                <a href="../../8-app/alliance/android/resouce_summary.html">
+            
+                    
+                    工程结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.1.5" data-path="../../8-app/alliance/android/config.html">
+            
+                <a href="../../8-app/alliance/android/config.html">
+            
+                    
+                    基础信息配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.1.6" data-path="../../8-app/alliance/android/announcement.html">
+            
+                <a href="../../8-app/alliance/android/announcement.html">
+            
+                    
+                    注意事项
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.2" >
+            
+                <span>
+            
+                    
+                    iOS 版
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.3.2.1" data-path="../../8-app/alliance/iOS/version.html">
+            
+                <a href="../../8-app/alliance/iOS/version.html">
+            
+                    
+                    修订记录
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.2.2" data-path="../../8-app/alliance/iOS/summary.html">
+            
+                <a href="../../8-app/alliance/iOS/summary.html">
+            
+                    
+                    文档说明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.2.3" data-path="../../8-app/alliance/iOS/develop.html">
+            
+                <a href="../../8-app/alliance/iOS/develop.html">
+            
+                    
+                    开发环境
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.2.4" data-path="../../8-app/alliance/iOS/resouce_summary.html">
+            
+                <a href="../../8-app/alliance/iOS/resouce_summary.html">
+            
+                    
+                    工程结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3.2.5" data-path="../../8-app/alliance/iOS/config.html">
+            
+                <a href="../../8-app/alliance/iOS/config.html">
+            
+                    
+                    基础信息配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" >
+            
+                <span>
+            
+                    
+                    平台使用说明
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    平台整体介绍
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="../../5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/rookie-guide-end.html">
+            
+                <a href="../../5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/rookie-guide-end.html">
+            
+                    
+                    产品创建和sn导入流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="../../5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/ota.html">
+            
+                <a href="../../5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/ota.html">
+            
+                    
+                    系统升级OTA
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="../../5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/data.html">
+            
+                <a href="../../5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/data.html">
+            
+                    
+                    设备数据管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.5" data-path="../../5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/hotword.html">
+            
+                <a href="../../5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/hotword.html">
+            
+                    
+                    热词和拦截器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="../../5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/chat.html">
+            
+                <a href="../../5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/chat.html">
+            
+                    
+                    聊天问答配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="../../5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/query.html">
+            
+                <a href="../../5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/query.html">
+            
+                    
+                    语音识别改写
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="../../5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/voiceParam.html">
+            
+                <a href="../../5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/voiceParam.html">
+            
+                    
+                    设备认证参数获取
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" >
+            
+                <span>
+            
+                    
+                    帮助和支持
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" >
+            
+                <a target="_blank" href="https://forum.rokid.com/">
+            
+                    
+                    文档意见反馈和问答
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../../9-video/summary.html">
+            
+                <a href="../../9-video/summary.html">
+            
+                    
+                    视频教程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" >
+            
+                <a target="_blank" href="https://detail.youzan.com/show/goods?alias=2g1gpqlb5vr8c&">
+            
+                    
+                    k18开发板购买通道
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../../4-TermsAndAgreements/community-service-agreement.html">
+            
+                <a href="../../4-TermsAndAgreements/community-service-agreement.html">
+            
+                    
+                    服务协议
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../../4-TermsAndAgreements/community-disclaimer.html">
+            
+                <a href="../../4-TermsAndAgreements/community-disclaimer.html">
+            
+                    
+                    免责声明
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../../contact-us.html">
+            
+                <a href="../../contact-us.html">
+            
+                    
+                    联系我们
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7" >
+            
+                <span>
+            
+                    
+                    了解若琪
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.7.1" >
+            
+                <a target="_blank" href="https://developer-forum.rokid.com/t/topic/2890">
+            
+                    
+                    YODAOS正式开源
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7.2" >
+            
+                <a target="_blank" href="https://mp.weixin.qq.com/s/sCDJJAUBlAyc5uEAFihp6Q">
+            
+                    
+                    若琪的2018年
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7.3" >
+            
+                <a target="_blank" href="https://www.rokid.com/alien.html">
+            
+                    
+                    Rokid 音箱
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7.4" >
+            
+                <a target="_blank" href="https://glass.rokid.com">
+            
+                    
+                    Rokid Glass
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.7.5" >
+            
+                <a target="_blank" href="https://mp.weixin.qq.com/s/I-LImijqkI5lGxpThSm9jg">
+            
+                    
+                    ceo关于眼镜的文章
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" >
+            
+                <span>
+            
+                    
+                    English document
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../../10-bspguide-eng/">
+            
+                <a href="../../10-bspguide-eng/">
+            
+                    
+                    BSP/Driver Develop Guide
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1.1" data-path="../../10-bspguide-eng/general_description/">
+            
+                <a href="../../10-bspguide-eng/general_description/">
+            
+                    
+                    General Description & Purpose
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1.1.1" data-path="../../10-bspguide-eng/general_description/range.html">
+            
+                <a href="../../10-bspguide-eng/general_description/range.html">
+            
+                    
+                    Range
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.2" data-path="../../10-bspguide-eng/kamino18_platform_introduction/">
+            
+                <a href="../../10-bspguide-eng/kamino18_platform_introduction/">
+            
+                    
+                    Kamino18 Platform Introduction
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1.2.1" data-path="../../10-bspguide-eng/kamino18_platform_introduction/k18_chip_diagram.html">
+            
+                <a href="../../10-bspguide-eng/kamino18_platform_introduction/k18_chip_diagram.html">
+            
+                    
+                    K18 Chip Diagram
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.2.2" data-path="../../10-bspguide-eng/kamino18_platform_introduction/smart_speaker_solution_introduction.html">
+            
+                <a href="../../10-bspguide-eng/kamino18_platform_introduction/smart_speaker_solution_introduction.html">
+            
+                    
+                    Smart Speaker Solution Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.2.3" data-path="../../10-bspguide-eng/kamino18_platform_introduction/k18_dev30_board_introduction.html">
+            
+                <a href="../../10-bspguide-eng/kamino18_platform_introduction/k18_dev30_board_introduction.html">
+            
+                    
+                    K18 Dev3.0 Board Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.3" data-path="../../10-bspguide-eng/software_folder_structue_and_compiling_method/">
+            
+                <a href="../../10-bspguide-eng/software_folder_structue_and_compiling_method/">
+            
+                    
+                    Software Folder Structue and Compiling Method
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1.3.1" data-path="../../10-bspguide-eng/software_folder_structue_and_compiling_method/software_folder_structure.html">
+            
+                <a href="../../10-bspguide-eng/software_folder_structue_and_compiling_method/software_folder_structure.html">
+            
+                    
+                    Software Folder Structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.3.2" data-path="../../10-bspguide-eng/software_folder_structue_and_compiling_method/compiling_environment.html">
+            
+                <a href="../../10-bspguide-eng/software_folder_structue_and_compiling_method/compiling_environment.html">
+            
+                    
+                    Compiling Environment
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.3.3" data-path="../../10-bspguide-eng/software_folder_structue_and_compiling_method/code_compile.html">
+            
+                <a href="../../10-bspguide-eng/software_folder_structue_and_compiling_method/code_compile.html">
+            
+                    
+                    Code Compile
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.4" data-path="../../10-bspguide-eng/pinmux_and_gpio_setup/">
+            
+                <a href="../../10-bspguide-eng/pinmux_and_gpio_setup/">
+            
+                    
+                    PINMUX and GPIO Setup
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1.4.1" data-path="../../10-bspguide-eng/pinmux_and_gpio_setup/mcu_domain_pinmux_setup.html">
+            
+                <a href="../../10-bspguide-eng/pinmux_and_gpio_setup/mcu_domain_pinmux_setup.html">
+            
+                    
+                    MCU Domain PINMUX Setup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.4.2" data-path="../../10-bspguide-eng/pinmux_and_gpio_setup/arm_domain_pinmux_setup.html">
+            
+                <a href="../../10-bspguide-eng/pinmux_and_gpio_setup/arm_domain_pinmux_setup.html">
+            
+                    
+                    ARM Domain PINMUX Setup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.4.3" data-path="../../10-bspguide-eng/pinmux_and_gpio_setup/gpio_setting.html">
+            
+                <a href="../../10-bspguide-eng/pinmux_and_gpio_setup/gpio_setting.html">
+            
+                    
+                    GPIO Setting
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.5" data-path="../../10-bspguide-eng/flash_partition_and_file_system_management/">
+            
+                <a href="../../10-bspguide-eng/flash_partition_and_file_system_management/">
+            
+                    
+                    Flash Partition and File System Management
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1.5.1" data-path="../../10-bspguide-eng/flash_partition_and_file_system_management/partition_setup.html">
+            
+                <a href="../../10-bspguide-eng/flash_partition_and_file_system_management/partition_setup.html">
+            
+                    
+                    Partition Setup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.5.2" data-path="../../10-bspguide-eng/flash_partition_and_file_system_management/file_system_setup.html">
+            
+                <a href="../../10-bspguide-eng/flash_partition_and_file_system_management/file_system_setup.html">
+            
+                    
+                    File System Setup
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.6" data-path="../../10-bspguide-eng/image_burning/">
+            
+                <a href="../../10-bspguide-eng/image_burning/">
+            
+                    
+                    Image Burning
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1.6.1" data-path="../../10-bspguide-eng/image_burning/image_location.html">
+            
+                <a href="../../10-bspguide-eng/image_burning/image_location.html">
+            
+                    
+                    Image Location
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.6.2" data-path="../../10-bspguide-eng/image_burning/image_burning_tool_utilization_for_linux_pc.html">
+            
+                <a href="../../10-bspguide-eng/image_burning/image_burning_tool_utilization_for_linux_pc.html">
+            
+                    
+                    Image Burning Tool Utilization for Linux PC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.6.3" data-path="../../10-bspguide-eng/image_burning/image_burning_tool_utilization_for_windows_pc.html">
+            
+                <a href="../../10-bspguide-eng/image_burning/image_burning_tool_utilization_for_windows_pc.html">
+            
+                    
+                    Image Burning Tool Utilization for Windows PC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.6.4" data-path="../../10-bspguide-eng/image_burning/image_burning_tool_utilization_for_factory.html">
+            
+                <a href="../../10-bspguide-eng/image_burning/image_burning_tool_utilization_for_factory.html">
+            
+                    
+                    Image Burning Tool Utilization for Factory
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.7" data-path="../../10-bspguide-eng/sn_and_seed_burning.html">
+            
+                <a href="../../10-bspguide-eng/sn_and_seed_burning.html">
+            
+                    
+                    SN and Seed Burning
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.8" data-path="../../10-bspguide-eng/network_setup/">
+            
+                <a href="../../10-bspguide-eng/network_setup/">
+            
+                    
+                    Network Setup
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1.8.1" data-path="../../10-bspguide-eng/network_setup/network_setup_through_bt.html">
+            
+                <a href="../../10-bspguide-eng/network_setup/network_setup_through_bt.html">
+            
+                    
+                    Network Setup through BT
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.1.9" data-path="../../10-bspguide-eng/q&a.html">
+            
+                <a href="../../10-bspguide-eng/q&a.html">
+            
+                    
+                    Q&A
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" >
+            
+                <a target="_blank" href="https://yodaos-project.github.io/yoda-book/en-us/">
+            
+                    
+                    YODAOS book
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../../5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/general/YodaOS_Build_Environment.html">
+            
+                <a href="../../5-enableVoice/rokid-vsvy-sdk-docs/yodaosSystem/general/YodaOS_Build_Environment.html">
+            
+                    
+                    YODAOS Build Environment
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Rokid 硬件交互设计指南</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><ul><ul><li><span class="title-icon "></span><a href="#&#x76EE;&#x5F55;"><b>1.1.1. </b>&#x76EE;&#x5F55;</a></li><li><span class="title-icon "></span><a href="#&#x7CFB;&#x7EDF;&#x6574;&#x4F53;"><b>1.1.2. </b>&#x7CFB;&#x7EDF;&#x6574;&#x4F53;</a></li><li><span class="title-icon "></span><a href="#&#x706F;&#x5149;_1"><b>1.1.3. </b>&#x706F;&#x5149;</a></li><li><span class="title-icon "></span><a href="#&#x97F3;&#x6548;_1"><b>1.1.4. </b>&#x97F3;&#x6548;</a></li></ul></ul></ul></div><a href="#" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h3 id="&#x76EE;&#x5F55;"><a name="&#x76EE;&#x5F55;" class="anchor-navigation-ex-anchor" href="#&#x76EE;&#x5F55;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.1. &#x76EE;&#x5F55;</h3>
+<ul>
+<li><a href="#&#x7CFB;&#x7EDF;&#x6574;&#x4F53;">&#x7CFB;&#x7EDF;&#x6574;&#x4F53;</a><ul>
+<li><a href="#tts">TTS</a></li>
+<li><a href="#&#x706F;&#x5149;">&#x706F;&#x5149;</a></li>
+<li><a href="#&#x754C;&#x9762;">&#x754C;&#x9762;</a></li>
+<li><a href="#&#x97F3;&#x6548;">&#x97F3;&#x6548;</a></li>
+</ul>
+</li>
+<li><a href="#&#x706F;&#x5149;">&#x706F;&#x5149;</a><ul>
+<li><a href="#a-&#x706F;&#x5149;&#x7684;&#x989C;&#x8272;&#x3001;&#x542B;&#x4E49;&#x548C;&#x7528;&#x9014;">A. &#x706F;&#x5149;&#x7684;&#x989C;&#x8272;&#x3001;&#x542B;&#x4E49;&#x548C;&#x7528;&#x9014;</a></li>
+<li><a href="#b-&#x706F;&#x6548;">B. &#x706F;&#x6548;</a></li>
+<li><a href="#c-&#x5149;&#x505C;&#x7559;&#x957F;&#x77ED;&#x548C;&#x95EA;&#x70C1;&#x9891;&#x7387;">C. &#x5149;&#x505C;&#x7559;&#x957F;&#x77ED;&#x548C;&#x95EA;&#x70C1;&#x9891;&#x7387;</a></li>
+<li><a href="#d-&#x5149;&#x7684;&#x5F3A;&#x5F31;-&#x4EAE;&#x5EA6;&#x503C;&#x548C;&#x8303;&#x56F4;">D. &#x5149;&#x7684;&#x5F3A;&#x5F31;-&#x4EAE;&#x5EA6;&#x503C;&#x548C;&#x8303;&#x56F4;</a></li>
+</ul>
+</li>
+<li><a href="#&#x97F3;&#x6548;">&#x97F3;&#x6548;</a><ul>
+<li><a href="#e-&#x7EC4;&#x6210;">E. &#x7EC4;&#x6210;</a></li>
+<li><a href="#f-&#x4F5C;&#x7528;">F. &#x4F5C;&#x7528;</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="&#x7CFB;&#x7EDF;&#x6574;&#x4F53;"><a name="&#x7CFB;&#x7EDF;&#x6574;&#x4F53;" class="anchor-navigation-ex-anchor" href="#&#x7CFB;&#x7EDF;&#x6574;&#x4F53;"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.2. &#x7CFB;&#x7EDF;&#x6574;&#x4F53;</h3>
+<p>&#x5BF9;&#x4E8E;<strong>Rokid</strong>&#x4EA7;&#x54C1;&#x6574;&#x4E2A;&#x7CFB;&#x7EDF;&#x6D41;&#x7A0B;&#x65B9;&#x9762;&#x7684;&#x4E3B;&#x8981;&#x4EA4;&#x4E92;&#x4E0A;&#x7684;&#x5E03;&#x5C40;&#x548C;&#x7EC6;&#x8282;&#x5185;&#x5BB9;&#x4F1A;&#x8003;&#x8651;&#x5982;&#x4E0B;&#x5185;&#x5BB9;&#x3002;</p>
+<p>&#x5BF9;&#x4E8E;&#x4EA4;&#x4E92;&#x7684;&#x6574;&#x4E2A;&#x6D41;&#x7A0B;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5E94;&#x9075;&#x5FAA;&#x5982;&#x4E0B;&#x51E0;&#x70B9;&#xFF1A;</p>
+<ul>
+<li>&#x5982;&#x4F55;&#x51C6;&#x786E;&#x7684;&#x5F15;&#x5BFC;&#x4F7F;&#x7528;&#x8005;&#x8FDB;&#x5165;&#x67D0;&#x9879;&#x529F;&#x80FD;&#x4E2D;,
+&#x8FD9;&#x4E2A;&#x529F;&#x80FD;&#x53EF;&#x80FD;&#x662F;&#x57FA;&#x7840;&#x914D;&#x7F51;&#x6216;&#x8005;&#x67D0;&#x4E2A;&#x5E94;&#x7528;&#x3002;</li>
+<li>&#x5176;&#x6B21;&#xFF0C;&#x6211;&#x4EEC;&#x5E94;&#x8BE5;&#x7ED9;&#x51FA;&#x8DB3;&#x591F;&#x7684;&#x63D0;&#x793A;&#x548C;&#x5F15;&#x5BFC;&#x5E2E;&#x52A9;&#x4F7F;&#x7528;&#x8005;&#x4E86;&#x89E3;&#x5982;&#x4F55;&#x624D;&#x80FD;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x4EA7;&#x54C1;&#x7684;&#x529F;&#x80FD;&#x3002;</li>
+<li>&#x540C;&#x65F6;&#x6211;&#x4EEC;&#x5E94;&#x8BE5;&#x5B9A;&#x4E49;&#x4F7F;&#x7528;&#x8005;&#x5728;&#x4EC0;&#x4E48;&#x73AF;&#x5883;&#x4E0B;&#x624D;&#x80FD;&#x4F7F;&#x7528;&#x6B64;&#x529F;&#x80FD;</li>
+<li>&#x6700;&#x540E;&#x6211;&#x4EEC;&#x8981;&#x5B9A;&#x4E49;&#x7B26;&#x5408;&#x4EC0;&#x4E48;&#x6761;&#x4EF6;&#x7684;&#x7528;&#x6237;&#x624D;&#x80FD;&#x4F7F;&#x7528;&#x6B64;&#x529F;&#x80FD;&#x3002;</li>
+</ul>
+<p>&#x6574;&#x4F53;&#x4E0A;&#xFF0C;Rokid&#x7684;&#x5404;&#x79CD;&#x4EA7;&#x54C1;&#x5E94;&#x8FBE;&#x5230;&#x4EA4;&#x4E92;&#x4E0A;&#x7684;&#x7EDF;&#x4E00;&#x3002;&#x5373;&#x662F;&#x4E0D;&#x7BA1;&#x6709;&#x6CA1;&#x6709;UI&#x754C;&#x9762;&#x663E;&#x793A;&#x4ED6;&#x4EEC;&#x7ED9;&#x4EBA;&#x4EA4;&#x4E92;&#x4E0A;&#x7684;&#x53CD;&#x9988;&#x5E94;&#x8BE5;&#x662F;&#x4E00;&#x81F4;&#x7684;&#x3002;&#x603B;&#x4F53;&#x4E0A;&#x7684;&#x4EA4;&#x4E92;&#x5C42;&#x7EA7;&#x5E94;&#x8BE5;&#x662F;&#x7531;TTS&gt;&#x706F;&#x5149;&gt;&#x97F3;&#x6548;&gt;&#x754C;&#x9762;&#x3002;&#x4F46;&#x662F;&#x97F3;&#x6548;&#x548C;TTS&#x76F8;&#x6BD4;&#x4E8E;UI&#x548C;&#x706F;&#x5149;&#x66F4;&#x52A0;&#x5177;&#x6709;&#x5E72;&#x6270;&#x6027;&#xFF0C;&#x5E94;&#x8BE5;&#x5C3D;&#x91CF;&#x907F;&#x514D;&#x51E0;&#x79CD;&#x9014;&#x5F84;&#x7684;&#x91CD;&#x590D;&#x53E0;&#x52A0;&#x4F7F;&#x7528;&#x3002;&#x4F46;&#x662F;&#x5982;&#x679C;&#x4E8B;&#x60C5;&#x662F;&#x5F88;&#x91CD;&#x8981;&#x7D27;&#x6025;&#x7684;&#xFF0C;&#x5219;&#x5E94;&#x8BE5;&#x91C7;&#x7528;2&#x79CD;&#x53CA;&#x4EE5;&#x4E0A;&#x7684;&#x9014;&#x5F84;&#x63D0;&#x793A;&#x7528;&#x6237;&#x53BB;&#x89E3;&#x51B3;&#x3002;</p>
+<h4 id="tts"><a name="tts" class="anchor-navigation-ex-anchor" href="#tts"><i class="fa fa-link" aria-hidden="true"></i></a>TTS</h4>
+<ul>
+<li>&#x4EA4;&#x4E92;&#x7684;&#x91CD;&#x70B9;&#x5E94;&#x8BE5;&#x653E;&#x5728;TTS&#x7684;&#x51C6;&#x786E;&#x6027;&#x4E0A;&#x800C;&#x5176;&#x4ED6;&#x611F;&#x5B98;&#x7684;&#x4EA4;&#x4E92;&#x5E94;&#x4F5C;&#x4E3A;&#x8F85;&#x52A9;TTS&#x7684;&#x529F;&#x80FD;&#x3002;</li>
+<li>TTS&#x5E94;&#x8BE5;&#x4F5C;&#x4E3A;&#x89E3;&#x91CA;&#x91CD;&#x8981;&#x4FE1;&#x606F;&#x548C;&#x660E;&#x786E;&#x6307;&#x4EE4;&#x7684;&#x4F20;&#x8FBE;&#x4F46;&#x662F;&#x8FC7;&#x591A;&#x4F7F;&#x7528;TTS&#x548C;TTS&#x8FC7;&#x957F;&#x4F1A;&#x8BA9;&#x7528;&#x6237;&#x6709;&#x89C9;&#x5F97;&#x5570;&#x55E6;&#x538C;&#x70E6;&#x5FC3;&#x91CC;&#x3002;</li>
+</ul>
+<h4 id="&#x706F;&#x5149;"><a name="&#x706F;&#x5149;" class="anchor-navigation-ex-anchor" href="#&#x706F;&#x5149;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x706F;&#x5149;</h4>
+<ul>
+<li>&#x706F;&#x5149;&#x7684;&#x4EA4;&#x4E92;&#x5E94;&#x8BE5;&#x505A;&#x5230;&#x80FD;&#x7B2C;&#x4E00;&#x65F6;&#x95F4;&#x4F20;&#x8FBE;&#x611F;&#x5B98;&#x4E0A;&#xFF0C;&#x51FA;&#x95EE;&#x9898;&#x4E86;&#x548C;&#x6CA1;&#x6709;&#x95EE;&#x9898;&#x7B49;&#x7684;&#x4E00;&#x4E9B;&#x53EF;&#x4EE5;&#x76F4;&#x89C2;&#x7406;&#x89E3;&#x7684;&#x4FE1;&#x606F;&#x3002;&#x5229;&#x7528;&#x4E0D;&#x540C;&#x989C;&#x8272;&#x7684;&#x706F;&#x5149;&#x53EF;&#x4EE5;&#x4F20;&#x8FBE;&#x4E0D;&#x540C;&#x7684;&#x6307;&#x4EE4;&#x4F8B;&#x5982;&#x7EFF;&#x5149;&#x662F;&#x6CA1;&#x95EE;&#x9898;&#xFF0C;&#x901A;&#x8FC7;&#x3002;&#x7EA2;&#x5149;&#x662F;&#x6709;&#x95EE;&#x9898;&#x3002;&#x9664;&#x4E86;&#x989C;&#x8272;&#x4E4B;&#x5916;&#x5149;&#x8FD8;&#x53EF;&#x4EE5;&#x6709;&#x5F3A;&#x5F31;&#xFF0C;&#x4E0D;&#x540C;&#x5149;&#x4EA4;&#x66FF;&#x7684;&#x6548;&#x679C;&#x548C;&#x5149;&#x95EA;&#x8000;&#x7684;&#x9891;&#x7387;&#x7B49;&#x7528;&#x4E8E;&#x4F20;&#x8FBE;&#x901F;&#x5EA6;&#x548C;&#x7CFB;&#x7EDF;&#x72B6;&#x6001;&#x7B49;&#x7684;&#x95EE;&#x9898;&#x3002;&#x4F46;&#x662F;&#x5927;&#x9762;&#x79EF;&#x7684;&#x5149;&#x5BB9;&#x6613;&#x6253;&#x6270;&#x5230;&#x7528;&#x6237;&#x5E94;&#x5C3D;&#x91CF;&#x907F;&#x514D;&#x957F;&#x65F6;&#x95F4;&#x548C;&#x9AD8;&#x5F3A;&#x5EA6;&#x5927;&#x9762;&#x79EF;&#x7684;&#x5149;&#x3002;</li>
+</ul>
+<h4 id="&#x754C;&#x9762;"><a name="&#x754C;&#x9762;" class="anchor-navigation-ex-anchor" href="#&#x754C;&#x9762;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x754C;&#x9762;</h4>
+<ul>
+<li>&#x53EF;&#x4EE5;&#x6F14;&#x53D8;&#x6210;&#x591A;&#x79CD;&#x5F62;&#x5F0F;&#x589E;&#x52A0;&#x5A31;&#x4E50;&#x6027;&#xFF0C;&#x4F46;&#x662F;&#x4E0D;&#x5E94;&#x8BE5;&#x8BA9;&#x7528;&#x6237;&#x8FC7;&#x591A;&#x4F9D;&#x8D56;UI&#x7684;&#x663E;&#x793A;&#x4ECE;&#x800C;&#x524A;&#x5F31;&#x4E86;TTS&#x7684;&#x529F;&#x80FD;&#x3002;</li>
+</ul>
+<h4 id="&#x97F3;&#x6548;"><a name="&#x97F3;&#x6548;" class="anchor-navigation-ex-anchor" href="#&#x97F3;&#x6548;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x97F3;&#x6548;</h4>
+<ul>
+<li>&#x97F3;&#x6548;&#x53EF;&#x4EE5;&#x5206;&#x4E3A;&#x97F5;&#x5F8B;&#x6027;&#x7684;&#x548C;&#x97F3;&#x6807;&#x3002;&#x5E26;&#x97F5;&#x5F8B;&#x6027;&#x7684;&#x97F3;&#x6548;&#x6709;&#x52A9;&#x4E8E;&#x4F20;&#x8FBE;&#x7ED9;&#x7528;&#x6237;&#x7F8E;&#x597D;&#x7684;&#x4F53;&#x9A8C;&#x548C;&#x4E30;&#x5BCC;&#x4ED6;&#x4EEC;&#x7684;&#x611F;&#x5B98;&#x4EAB;&#x53D7;&#x800C;&#x97F3;&#x6807;&#x5219;&#x662F;&#x50CF;&#x56FE;&#x6807;&#x4E00;&#x6837;&#x662F;&#x5177;&#x6709;&#x8C61;&#x5F81;&#x6027;&#x610F;&#x4E49;&#x7684;&#x67D0;&#x79CD;&#x7CFB;&#x7EDF;&#x97F3;&#x6548;&#x3002;&#x4ED6;&#x53EF;&#x4EE5;&#x62DF;&#x7269;&#x4E5F;&#x53EF;&#x4EE5;&#x4F5C;&#x4E3A;&#x91CD;&#x590D;&#x6027;&#x6216;&#x8005;&#x5177;&#x6709;&#x67D0;&#x79CD;&#x7279;&#x6B8A;&#x610F;&#x4E49;&#x7684;&#x8BED;&#x97F3;&#x4E0A;&#x7684;&#x7B26;&#x53F7;&#x3002;</li>
+</ul>
+<h3 id="&#x706F;&#x5149;_1"><a name="&#x706F;&#x5149;_1" class="anchor-navigation-ex-anchor" href="#&#x706F;&#x5149;_1"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.3. &#x706F;&#x5149;</h3>
+<p>&#x706F;&#x5149;&#x5E94;&#x8BE5;&#x4F5C;&#x4E3A;<strong>Rokid</strong>&#x8BBE;&#x5907;&#x9664;<strong>TTS</strong>&#x4E4B;&#x5916;&#x4E3B;&#x8981;&#x7684;&#x4EA4;&#x4E92;&#x9014;&#x5F84;&#x3002;</p>
+<p>&#x706F;&#x5149;&#x7684;&#x4EA4;&#x4E92;&#x5E94;&#x5F53;&#x5FEB;&#x901F;&#x7684;&#x4F20;&#x8FBE;&#x76F4;&#x89C2;&#x4FE1;&#x606F;&#x4FBF;&#x4E8E;&#x7528;&#x6237;&#x5BF9;&#x4EA7;&#x54C1;&#x72B6;&#x6001;&#x7684;&#x8FC5;&#x901F;&#x7406;&#x89E3;&#x548C;&#x5224;&#x65AD;&#x3002;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#x5927;&#x9762;&#x79EF;&#x7684;&#x5149;&#x5BB9;&#x6613;&#x6253;&#x6270;&#x5230;&#x7528;&#x6237;&#x5E94;&#x5C3D;&#x91CF;&#x907F;&#x514D;&#x957F;&#x65F6;&#x95F4;&#x548C;&#x9AD8;&#x5F3A;&#x5EA6;&#x5927;&#x9762;&#x79EF;&#x7684;&#x5149;&#x3002;</p>
+<p>&#x706F;&#x5149;&#x7684;&#x5448;&#x73B0;&#x5305;&#x62EC;&#xFF1A;</p>
+<ul>
+<li>&#x989C;&#x8272; (&#x542B;&#x4E49;&#x548C;&#x7528;&#x9014;&#xFF09;</li>
+<li>&#x4E0D;&#x540C;&#x706F;&#x6548;</li>
+<li>&#x5149;&#x505C;&#x7559;&#x7684;&#x957F;&#x77ED;&#x548C;&#x95EA;&#x70C1;&#x9891;&#x7387;</li>
+<li>&#x5149;&#x7684;&#x5F3A;&#x5F31; (&#x4EAE;&#x5EA6;&#x503C;&#x548C;&#x8303;&#x56F4;&#xFF09;</li>
+</ul>
+<h4 id="a-&#x706F;&#x5149;&#x7684;&#x989C;&#x8272;&#x3001;&#x542B;&#x4E49;&#x548C;&#x7528;&#x9014;"><a name="a-&#x706F;&#x5149;&#x7684;&#x989C;&#x8272;&#x3001;&#x542B;&#x4E49;&#x548C;&#x7528;&#x9014;" class="anchor-navigation-ex-anchor" href="#a-&#x706F;&#x5149;&#x7684;&#x989C;&#x8272;&#x3001;&#x542B;&#x4E49;&#x548C;&#x7528;&#x9014;"><i class="fa fa-link" aria-hidden="true"></i></a>A. &#x706F;&#x5149;&#x7684;&#x989C;&#x8272;&#x3001;&#x542B;&#x4E49;&#x548C;&#x7528;&#x9014;</h4>
+<ul>
+<li><p>&#x706F;&#x5149;&#x53EF;&#x4EE5;&#x5229;&#x7528;&#x5355;&#x4E00;&#x6216;&#x8005;&#x591A;&#x79CD;&#x989C;&#x8272;&#x53E0;&#x52A0;&#x7684;&#x4E0D;&#x540C;&#x5448;&#x73B0;&#x3002;&#x4E0D;&#x540C;&#x989C;&#x8272;&#x7684;&#x706F;&#x5149;&#x53EF;&#x4EE5;&#x4F20;&#x8FBE;&#x4E0D;&#x540C;&#x7684;&#x6307;&#x4EE4;&#x4F8B;&#x5982;&#x7EFF;&#x5149;&#x662F;&#x6CA1;&#x95EE;&#x9898;&#xFF0C;&#x901A;&#x8FC7;&#x3002;&#x7EA2;&#x5149;&#x662F;&#x6709;&#x95EE;&#x9898;&#x3002;</p>
+</li>
+<li><p>Pebble&#x91C7;&#x7528;&#x7684;&#x989C;&#x8272;&#x4E3B;&#x8981;&#x6709;&#x5982;&#x4E0B;&#x51E0;&#x79CD;&#xFF1A;</p>
+<ul>
+<li>&#x84DD;&#x8272;&#xFF1A;&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x7CFB;&#x7EDF;&#x672A;&#x51C6;&#x5907;&#x597D;&#x524D;&#x53CA;&#x7CFB;&#x7EDF;&#x914D;&#x7F6E;&#x7684;&#x706F;&#x5149;&#x663E;&#x793A;<ul>
+<li>&#x5F00;&#x673A;&#x65F6;</li>
+<li>&#x5F00;&#x673A;&#x52A0;&#x8F7D;&#x65F6;</li>
+<li>&#x5347;&#x7EA7;&#x65F6;</li>
+</ul>
+</li>
+<li>&#x767D;&#x8272;&#xFF1A;&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x7CFB;&#x7EDF;&#x51C6;&#x5907;&#x597D;&#x540E;&#x7684;&#x529F;&#x80FD;&#x6B63;&#x5E38;&#x8FD0;&#x8F6C;&#x7684;&#x663E;&#x793A;<ul>
+<li>&#x5BFB;&#x5411;&#x706F;</li>
+<li>&#x7CFB;&#x7EDF;&#x786E;&#x8BA4;&#x6210;&#x529F;</li>
+<li>&#x7CFB;&#x7EDF;&#x975E;&#x5F02;&#x5E38;&#x53CD;&#x9988;</li>
+<li>&#x6309;&#x952E;&#x6B63;&#x5E38;&#x53CD;&#x9988;</li>
+<li>&#x6307;&#x4EE4;&#x52A0;&#x8F7D;</li>
+<li>&#x5F00;&#x673A;&#x540E;</li>
+<li>&#x97F3;&#x91CF;</li>
+</ul>
+</li>
+<li>&#x6A58;&#x8272;&#xFF1A;&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x975E;&#x7D27;&#x6025;&#x60C5;&#x51B5;&#x7684;&#x63D0;&#x793A;&#x53CD;&#x9988;<ul>
+<li>&#x7CFB;&#x7EDF;&#x52A0;&#x8F7D;&#x8D85;&#x65F6;</li>
+<li>&#x7B49;&#x5F85;&#x914D;&#x7F51;/&#x8FDE;&#x63A5;&#x4E0D;&#x7A33;&#x5B9A;</li>
+<li>&#x4F4E;&#x7535;&#x91CF;&#x63D0;&#x793A; (\&lt;50%)</li>
+</ul>
+</li>
+<li>&#x7EA2;&#x8272;&#xFF1A;&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x7D27;&#x6025;&#x706F;&#x5149;&#x7684;&#x63D0;&#x793A;<ul>
+<li>&#x4F4E;&#x7535;&#x91CF;&#x63D0;&#x793A; (\&lt;20%)&#x9A6C;&#x4E0A;&#x5C31;&#x8981;&#x88AB;&#x52A8;&#x5173;&#x673A;</li>
+<li>&#x7F51;&#x7EDC;/&#x84DD;&#x7259;&#x8FDE;&#x63A5;&#x5931;&#x8D25;&#x4E2D;&#x65AD;</li>
+<li>&#x7981;&#x6B62;&#x62FE;&#x97F3;</li>
+</ul>
+</li>
+<li>&#x7EFF;&#x8272;&#xFF1A;&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x7535;&#x91CF;&#x76F8;&#x5173;&#x663E;&#x793A;<ul>
+<li>&#x5145;&#x7535;&#x7535;&#x91CF;</li>
+</ul>
+</li>
+<li>&#x6DF7;&#x8272;&#xFF1A;&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x5C4F;&#x4FDD;&#x663E;&#x793A;<ul>
+<li>&#x547C;&#x5438;&#x5149;</li>
+<li>&#x5C4F;&#x4FDD;&#x5149;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="b-&#x706F;&#x6548;"><a name="b-&#x706F;&#x6548;" class="anchor-navigation-ex-anchor" href="#b-&#x706F;&#x6548;"><i class="fa fa-link" aria-hidden="true"></i></a>B. &#x706F;&#x6548;</h4>
+<ul>
+<li>&#x5BFB;&#x5411;&#x706F;<ul>
+<li>&#x4ECE;&#x4E24;&#x8FB9;&#x5411;&#x58F0;&#x6E90;&#x5904;&#x6C47;&#x805A;</li>
+</ul>
+</li>
+<li>&#x706F;&#x5708;&#x5168;&#x4EAE;<ul>
+<li>&#x5F00;&#x673A;&#x65F6;&#xFF0C;&#x7ED9;&#x4EBA;&#x4E00;&#x79CD;&#x5F88;&#x5FEB;&#x8FC5;&#x901F;&#x7684;&#x611F;&#x89C9;</li>
+<li>&#x786E;&#x8BA4;&#x706F;&#x6548;, &#x653E;&#x5728;&#x6210;&#x529F;&#x5B8C;&#x6210;&#x67D0;&#x9879;&#x6307;&#x4EE4;&#x65F6;</li>
+<li>&#x63D0;&#x793A;&#x65F6;</li>
+</ul>
+</li>
+<li>&#x547C;&#x5438;&#x706F;<ul>
+<li>TTS&#x6CE2;&#x5F62;&#x547C;&#x5438;, &#x4F5C;&#x4E3A;TTS&#x65F6;&#x706F;&#x6548;</li>
+</ul>
+</li>
+<li>&#x523B;&#x5EA6;&#x706F;&#x6548; (&#x53CC;&#x8FB9;&#xFF09;<ul>
+<li>&#x8868;&#x73B0;&#x7CFB;&#x7EDF;&#x8FDB;&#x5EA6;&#x53EF;&#x77E5;&#x5982;&#x7CFB;&#x7EDF;&#x5347;&#x7EA7;, &#x5F00;&#x673A;&#x52A0;&#x8F7D;&#x65F6;</li>
+<li>&#x97F3;&#x91CF;+/-</li>
+<li>&#x5145;&#x7535;&#x91CF;&#x591A;&#x5C11;</li>
+</ul>
+</li>
+<li>&#x8DD1;&#x9A6C;&#x706F; (&#x5FEB;&#x901F;/&#x6162;&#x901F;&#xFF09;<ul>
+<li>&#x6162;&#x901F;&#x4E3A;&#x95F4;&#x9694;&#x706F;&#x73E0;&#x8DD1;&#x9A6C;&#x706F;&#x800C;&#x5FEB;&#x901F;&#x4E3A;&#x5355;&#x9897;&#x706F;&#x73E0;&#x8DD1;&#x9A6C;&#x706F;&#x6709;&#x6700;&#x4EAE;100%&#x548C;&#x6700;&#x6697;&#x7684;&#x706F;&#x73E0;&#x6E10;&#x53D8;</li>
+<li>&#x7CFB;&#x7EDF;&#x672A;&#x77E5;&#x65F6;&#x95F4;/&#x8FDB;&#x7A0B;&#x52A0;&#x8F7D; (&#x53EF;&#x5148;&#x6162;&#x901F;&#x518D;&#x5FEB;&#x901F;&#xFF09;</li>
+<li>&#x7CFB;&#x7EDF;&#x5DF2;&#x77E5;&#x65F6;&#x95F4;/&#x8FDB;&#x7A0B;&#x52A0;&#x8F7D; (&#x5FEB;&#x901F;&#xFF09;</li>
+<li>&#x81EA;&#x52A8;&#x68C0;&#x6D4B;&#xFF08;&#x6162;&#x901F;&#xFF09;</li>
+<li>&#x7CFB;&#x7EDF;&#x7B49;&#x5F85;&#x8F93;&#x5165;&#xFF08;&#x6162;&#x901F;&#xFF09;</li>
+</ul>
+</li>
+<li>&#x5C41;&#x80A1;&#x706F;<ul>
+<li>&#x53EF;&#x7528;&#x4E8E;&#x663E;&#x793A;&#x7535;&#x91CF;&#x591A;&#x5C11;&#x548C;&#x662F;&#x5426;&#x5145;&#x7535;&#x7684;&#x72B6;&#x6001;&#x3002;</li>
+<li>&#x5173;&#x673A;&#x5145;&#x7535;&#x65F6;</li>
+</ul>
+</li>
+<li>&#x626B;&#x5C3E;&#x706F;<ul>
+<li>&#x4ECE;&#x4E00;&#x70B9;&#x5411;&#x4E24;&#x8FB9;&#x5EF6;&#x4F38;&#x548C;&#x6536;&#x56DE;&#x706F;&#x5149;&#x3002;</li>
+<li>&#x901A;&#x7535;&#x4E00;&#x5239;&#x90A3;</li>
+</ul>
+</li>
+</ul>
+<h4 id="c-&#x5149;&#x505C;&#x7559;&#x957F;&#x77ED;&#x548C;&#x95EA;&#x70C1;&#x9891;&#x7387;"><a name="c-&#x5149;&#x505C;&#x7559;&#x957F;&#x77ED;&#x548C;&#x95EA;&#x70C1;&#x9891;&#x7387;" class="anchor-navigation-ex-anchor" href="#c-&#x5149;&#x505C;&#x7559;&#x957F;&#x77ED;&#x548C;&#x95EA;&#x70C1;&#x9891;&#x7387;"><i class="fa fa-link" aria-hidden="true"></i></a>C. &#x5149;&#x505C;&#x7559;&#x957F;&#x77ED;&#x548C;&#x95EA;&#x70C1;&#x9891;&#x7387;</h4>
+<ul>
+<li><p>&#x5149;&#x505C;&#x7559;&#x957F;&#x77ED;&#x5E94;&#x6839;&#x636E;&#x5176;&#x72B6;&#x6001;&#x662F;&#x5426;&#x6539;&#x53D8;&#x3002;&#x4F8B;&#x5982;&#x62FE;&#x97F3;&#x65F6;&#x6307;&#x5411;&#x706F;&#x53EA;&#x4F1A;&#x5728;&#x7528;&#x6237;&#x8BF4;&#x8BDD;&#x65F6;&#x5019;&#x663E;&#x793A;&#x3002;TTS&#x65F6;&#x4E5F;&#x4F1A;&#x6839;&#x636E;&#x7CFB;&#x7EDF;&#x56DE;&#x9988;&#x7684;&#x957F;&#x77ED;&#x540C;&#x65F6;&#x914D;&#x5408;&#x706F;&#x5149;&#x3002;</p>
+<ul>
+<li>&#x6240;&#x6709;&#x706F;&#x6548;&#x5982;&#x6709;&#x51FA;&#x73B0;&#x6216;&#x6D88;&#x5931;&#x9700;&#x63A7;&#x5236;&#x5728;300ms&#x4EE5;&#x5185;</li>
+<li>&#x72B6;&#x6001;&#x6210;&#x529F;&#x786E;&#x8BA4;&#x4E3A;0.5s&#x95EA;&#x70C1;&#x4E00;&#x6B21;&#xFF0C;&#x72B6;&#x6001;&#x63D0;&#x793A;0.5s&#x95EA;&#x70C1;2&#x6B21;&#xFF0C;&#x72B6;&#x6001;&#x8B66;&#x793A;&#x4E3A;1s&#x95EA;&#x70C1;1&#x6B21;</li>
+<li>&#x6309;&#x952E;&#x706F;&#x6548;&#x7684;&#x663E;&#x793A;&#x505C;&#x7559;0.5s</li>
+<li>&#x706F;&#x5708;&#x957F;&#x4EAE;&#x65F6;&#x72B6;&#x6001;&#x6709;&#x5F00;&#x673A;&#x4E00;&#x5F00;&#x59CB;, &#x9759;&#x97F3;&#x952E;&#x6309;&#x4E0B;&#x7684;&#x72B6;&#x6001;&#x65F6;</li>
+<li>&#x5C41;&#x80A1;&#x706F;&#x95EA;&#x70C1;0.5s&#x4E00;&#x6B21;&#x5FAA;&#x73AF;</li>
+<li>&#x666E;&#x901A;&#x8DD1;&#x9A6C;&#x706F;&#x4E3A;&#x8FDE;&#x7EED;&#xFF0C;600ms&#x4E00;&#x5708;</li>
+<li>&#x6709;&#x8FDB;&#x5EA6;&#x6761;&#x7684;&#x706F;&#x5728;&#x975E;&#x7528;&#x6237;&#x4E3B;&#x52A8;&#x884C;&#x4E3A;&#x9020;&#x6210;&#x7ED3;&#x679C;&#x663E;&#x793A;&#x4E0B;&#x4E3A;&#x957F;&#x4EAE;</li>
+<li>&#x523B;&#x5EA6;&#x706F;&#x6548;&#x505C;&#x7559;3s</li>
+<li>&#x5C4F;&#x4FDD;&#x706F;&#x4E3A;2s&#x4E00;&#x6362;</li>
+<li>&#x547C;&#x5438;&#x4E3A;2s&#x4E00;&#x5FAA;&#x73AF;</li>
+<li>&#x6E10;&#x9690;&#x6E10;&#x9000;&#x7684;&#x8854;&#x63A5;&#x4E3A;30ms&#x4EE5;&#x5185;</li>
+</ul>
+</li>
+</ul>
+<h4 id="d-&#x5149;&#x7684;&#x5F3A;&#x5F31;-&#x4EAE;&#x5EA6;&#x503C;&#x548C;&#x8303;&#x56F4;"><a name="d-&#x5149;&#x7684;&#x5F3A;&#x5F31;-&#x4EAE;&#x5EA6;&#x503C;&#x548C;&#x8303;&#x56F4;" class="anchor-navigation-ex-anchor" href="#d-&#x5149;&#x7684;&#x5F3A;&#x5F31;-&#x4EAE;&#x5EA6;&#x503C;&#x548C;&#x8303;&#x56F4;"><i class="fa fa-link" aria-hidden="true"></i></a>D. &#x5149;&#x7684;&#x5F3A;&#x5F31;-&#x4EAE;&#x5EA6;&#x503C;&#x548C;&#x8303;&#x56F4;</h4>
+<ul>
+<li>Pebble&#x4E0B;&#x6BCF;&#x9897;&#x5149;&#x73E0;&#x5982;&#x6709;&#x663E;&#x793A;&#xFF0C;&#x5149;&#x7684;default&#x4EAE;&#x5EA6;&#x503C;&#x4E3A;100%&#x3002;&#x5728;&#x4E00;&#x4E9B;&#x706F;&#x6548;&#x4E0B;&#x53EF;&#x4EE5;&#x5141;&#x8BB8;&#x4EAE;&#x5EA6;&#x503C;&#x6709;&#x6240;&#x8C03;&#x6574;&#xFF1A;<ul>
+<li>&#x8DD1;&#x9A6C;&#x706F;</li>
+<li>&#x547C;&#x5438;&#x706F;</li>
+<li>&#x5173;&#x673A;&#x706F;</li>
+</ul>
+</li>
+</ul>
+<h3 id="&#x97F3;&#x6548;_1"><a name="&#x97F3;&#x6548;_1" class="anchor-navigation-ex-anchor" href="#&#x97F3;&#x6548;_1"><i class="fa fa-link" aria-hidden="true"></i></a>1.1.4. &#x97F3;&#x6548;</h3>
+<p>&#x97F3;&#x6548;&#x548C;TTS&#x7684;&#x533A;&#x522B;&#x662F;&#x5B83;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x8F83;&#x5C11;&#x7684;&#x8BED;&#x97F3;&#x63D0;&#x793A;&#x53BB;&#x4F20;&#x8FBE;&#x4FE1;&#x606F;&#x540C;&#x65F6;&#x53C8;&#x4E0D;&#x50CF;TTS&#x4E00;&#x6837;&#x7E41;&#x7410;&#x3002;&#x4F46;&#x662F;&#x5B83;&#x7684;&#x5F0A;&#x7AEF;&#x4E5F;&#x5728;&#x4E8E;&#x4FE1;&#x606F;&#x7684;&#x51C6;&#x786E;&#x5EA6;&#x548C;&#x5145;&#x8DB3;&#x6027;&#x4E0D;&#x591F;&#xFF0C;&#x6240;&#x4EE5;&#x4E0D;&#x9002;&#x5408;&#x5355;&#x72EC;&#x53BB;&#x5448;&#x73B0;&#x65B0;&#x7684;&#x590D;&#x6742;&#x7684;&#x4FE1;&#x606F;&#x3002;&#x6240;&#x4EE5;&#x97F3;&#x6548;&#x6709;&#x65F6;&#x9700;&#x8981;&#x548C;&#x5176;&#x4ED6;&#x53CD;&#x9988;&#x7684;&#x9014;&#x5F84;&#x53BB;&#x914D;&#x5408;&#x7ED9;&#x7528;&#x6237;&#x5448;&#x73B0;&#x3002;</p>
+<h4 id="e-&#x7EC4;&#x6210;"><a name="e-&#x7EC4;&#x6210;" class="anchor-navigation-ex-anchor" href="#e-&#x7EC4;&#x6210;"><i class="fa fa-link" aria-hidden="true"></i></a>E. &#x7EC4;&#x6210;</h4>
+<ul>
+<li>&#x97F3;&#x8C03;<ul>
+<li>&#x97F3;&#x8C03;&#x7684;&#x9AD8;&#x4F4E;&#x4F1A;&#x4EA7;&#x751F;&#x5C42;&#x7EA7;&#x4E0A;&#x7684;&#x53D8;&#x5316;&#xFF0C;&#x6BD4;&#x5982;&#x83DC;&#x5355;&#x5F53;&#x4E2D;&#x4F4D;&#x4E8E;&#x6700;&#x9AD8;&#x5C42;&#x7684;&#x6216;&#x8005;&#x4E0A;&#x9762;&#x7684;&#x97F3;&#x8C03;&#x4F1A;&#x9AD8;&#x3002;&#x4F4D;&#x4E8E;&#x83DC;&#x5355;&#x6700;&#x5E95;&#x5C42;&#x7684;&#x6216;&#x8005;&#x4E0B;&#x9762;&#x7684;&#x97F3;&#x8C03;&#x4F1A;&#x4F4E;&#x3002;</li>
+</ul>
+</li>
+<li>&#x97F3;&#x8D28;<ul>
+<li>&#x4F18;&#x7F8E;&#x7684;&#x97F3;&#x8D28;&#x4F1A;&#x8BA9;&#x4EBA;&#x6109;&#x60A6;&#x3002;&#x5608;&#x6742;&#x7684;&#x97F3;&#x8D28;&#x4F1A;&#x8BA9;&#x4EBA;&#x53CD;&#x611F;&#x3002;</li>
+<li>&#x91C7;&#x7528;&#x4E0D;&#x540C;&#x7684;&#x4E50;&#x5668;&#x97F3;&#x8D28;&#x4E5F;&#x4F1A;&#x7ED9;&#x7528;&#x6237;&#x4E0D;&#x540C;&#x7684;&#x611F;&#x89C9;&#x3002;&#x4F8B;&#x5982;:&#x7535;&#x5B50;&#x4E50;&#x7ED9;&#x4EBA;&#x79D1;&#x6280;&#x611F;&#x66F4;&#x5F3A;&#x800C;&#x53E4;&#x5178;&#x4E50;&#x5668;&#x504F;&#x6728;&#x5236;&#x7684;&#x5219;&#x4F1A;&#x6709;&#x8D28;&#x611F;,
+&#x611F;&#x89C9;&#x66F4;&#x60C5;&#x8C03;&#x4E00;&#x4E9B;&#x3002;</li>
+</ul>
+</li>
+<li>&#x97F3;&#x91CF;<ul>
+<li>&#x97F3;&#x91CF;&#x7684;&#x4ECE;&#x4F4E;&#x5230;&#x9AD8;&#x4E5F;&#x53EF;&#x4EE5;&#x5E2E;&#x52A9;&#x63D0;&#x793A;&#x7528;&#x6237;&#x3002;</li>
+</ul>
+</li>
+<li>&#x65F6;&#x957F;<ul>
+<li>&#x65F6;&#x957F;&#x53EF;&#x4EE5;&#x5E2E;&#x52A9;&#x7528;&#x6237;&#x63D0;&#x793A;&#x8FDB;&#x7A0B;&#x3002;</li>
+</ul>
+</li>
+</ul>
+<h4 id="f-&#x4F5C;&#x7528;"><a name="f-&#x4F5C;&#x7528;" class="anchor-navigation-ex-anchor" href="#f-&#x4F5C;&#x7528;"><i class="fa fa-link" aria-hidden="true"></i></a>F. &#x4F5C;&#x7528;</h4>
+<ul>
+<li>&#x63D0;&#x9192;&#x63D0;&#x793A; &#xFF08;&#x91CD;&#x8981;/&#x4E00;&#x822C;&#xFF09;<ul>
+<li>&#x6309;&#x7167;&#x4E8B;&#x60C5;&#x7684;&#x7D27;&#x6025;&#x7A0B;&#x5EA6;&#x548C;&#x91CD;&#x8981;&#x6027;&#x4F7F;&#x7528;&#x4E0D;&#x540C;&#x7684;&#x97F3;&#x6548;&#x3002;&#x4E3B;&#x8981;&#x662F;&#x8981;&#x770B;&#x662F;&#x5426;&#x6709;&#x5E72;&#x6270;&#x5230;&#x7528;&#x6237;&#x6B63;&#x5E38;&#x7684;&#x64CD;&#x4F5C;&#x3002;&#x662F;&#x5E94;&#x8BE5;&#x505C;&#x4E0B;&#x6765;&#x624B;&#x8FB9;&#x7684;&#x4E8B;&#x53BB;&#x5173;&#x6CE8;&#x8FD8;&#x662F;&#x53EF;&#x4EE5;&#x4E86;&#x89E3;&#x4E00;&#x4E0B;&#x4F46;&#x4E0D;&#x9700;&#x8981;&#x9A6C;&#x4E0A;&#x89E3;&#x51B3;&#x3002;</li>
+<li>&#x5BF9;&#x4E8E;&#x7D27;&#x6025;&#x91CD;&#x8981;&#x7684;&#xFF0C;&#x5E94;&#x8BE5;&#x52A0;&#x5F3A;&#x97F3;&#x91CF;&#x548C;&#x97F3;&#x8C03;&#x3002;&#x5982;&#x679C;&#x662F;&#x60F3;&#x663E;&#x793A;&#x4E00;&#x4E2A;&#x8FDB;&#x7A0B;&#x7684;&#x8FC7;&#x7A0B;&#x800C;&#x4E0D;&#x662F;&#x72B6;&#x6001;&#xFF0C;&#x53EF;&#x4EE5;&#x8003;&#x8651;&#x5EF6;&#x957F;&#x65F6;&#x957F;&#x3002;</li>
+</ul>
+</li>
+<li>&#x91CD;&#x8981;&#x4FE1;&#x606F;&#x63D0;&#x793A;&#xFF1A;&#x662F;&#x7528;&#x6237;&#x8981;&#x9A6C;&#x4E0A;&#x91C7;&#x53D6;&#x5904;&#x7406;&#x624D;&#x80FD;&#x4E0D;&#x5F71;&#x54CD;&#x6B63;&#x5E38;&#x64CD;&#x4F5C;&#x7684;&#x9519;&#x8BEF;&#x548C;&#x5931;&#x8D25;&#x7684;&#x97F3;&#x6548;&#x3002;<ul>
+<li>&#x8054;&#x7F51;&#x4E2D;&#x65AD;</li>
+<li>&#x84DD;&#x7259;&#x914D;&#x5BF9;&#x5931;&#x8D25;</li>
+<li>&#x4F4E;&#x7535;&#x91CF; &#xFF08;\&lt;20%)</li>
+<li>&#x7CFB;&#x7EDF;&#x5F02;&#x5E38;</li>
+<li>&#x5F00;&#x673A;&#x8FDB;&#x7A0B;&#x52A0;&#x8F7D;&#x5931;&#x8D25;</li>
+<li>&#x6307;&#x4EE4;&#x8BC6;&#x522B;&#x5931;&#x8D25; (&#x4F8B;&#x5982;&#x7CFB;&#x7EDF;&#x65E0;&#x6CD5;&#x6267;&#x884C;TTS&#x53CD;&#x9988;, &#x65E0;&#x6CD5;&#x6267;&#x884C;&#x667A;&#x80FD;&#x5BB6;&#x5C45;&#x64CD;&#x4F5C;&#xFF09;</li>
+</ul>
+</li>
+<li>&#x4E00;&#x822C;&#x4FE1;&#x606F;&#x53CD;&#x9988;&#xFF1A;&#x7528;&#x97F3;&#x6548;&#x663E;&#x793A;&#x8FDB;&#x7A0B;&#x6216;&#x8005;&#x7ED3;&#x679C;(&#x597D;&#x7684;/&#x574F;&#x7684;&#xFF09;&#x4ED6;&#x7684;&#x89D2;&#x8272;&#x5C31;&#x662F;&#x8F85;&#x52A9;&#x706F;&#x5149;&#x6216;&#x8005;TTS<ul>
+<li>&#x97F3;&#x91CF;&#x8C03;&#x8282;</li>
+<li>&#x9759;&#x97F3;&#x952E;</li>
+<li>&#x624B;&#x673A;app&#x6062;&#x590D;&#x51FA;&#x5382;&#x8BBE;&#x7F6E;</li>
+<li>&#x8FDB;&#x7A0B;&#x53CD;&#x9988;/&#x6210;&#x529F;&#x786E;&#x8BA4;&#xFF08;&#x4F8B;&#x5982;&#x84DD;&#x7259;&#x914D;&#x5BF9;&#x6210;&#x529F;, &#x5F00;&#x673A;&#x7CFB;&#x7EDF;&#x52A0;&#x8F7D;&#x597D;&#xFF09;</li>
+<li>&#x5F00;&#x673A;&#x7CFB;&#x7EDF;&#x4E0D;&#x7A33;&#x5B9A;</li>
+<li>&#x6307;&#x4EE4;&#x6267;&#x884C; (&#x4F8B;&#x5982;&#x97F3;&#x4E50;&#x5E94;&#x7528;&#x6536;&#x85CF;&#xFF0C;&#x53D6;&#x6D88;&#x6536;&#x85CF;&#xFF09;</li>
+</ul>
+</li>
+<li>&#x65CB;&#x5F8B;<ul>
+<li>&#x7528;&#x6237;&#x77E5;&#x9053;</li>
+<li>&#x95F9;&#x949F;&#x65CB;&#x5F8B;</li>
+<li>&#x79D2;&#x8868;&#x65CB;&#x5F8B;</li>
+<li>&#x5F00;&#x5173;&#x673A;&#xFF08;&#x4F8B;&#x5982;&#x5F00;&#x673A;&#x7CFB;&#x7EDF;&#x52A0;&#x8F7D;&#x5B8C;&#x6210;&#x7684;&#x4ECE;&#x4F4E;&#x5230;&#x9AD8;&#x7684;&#xFF09;</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>&#x72B6;&#x6001;&#x7EC6;&#x8282;</th>
+<th>&#x706F;&#x5149;</th>
+<th>&#x97F3;&#x6548;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#x5F00;&#x673A;</td>
+<td>&#x5F00;&#x59CB;&#x542F;&#x52A8;</td>
+<td>&#x989C;&#x8272;&#xFF1A;&#x84DD;&#x8272;<br>&#x505C;&#x7559;&#x65F6;&#x957F;&#xFF1A;2-3s<br>&#x706F;&#x5149;&#x7EC6;&#x8282;&#xFF1A;&#x706F;&#x957F;&#x4EAE;</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td></td>
+<td>&#x542F;&#x52A8;&#x4E2D;-&#x542F;&#x52A8;&#x597D;</td>
+<td>&#x989C;&#x8272;&#xFF1A;&#x84DD;&#x8272;<br>&#x505C;&#x7559;&#x65F6;&#x957F;&#xFF1A;&#x76F4;&#x5230;&#x72B6;&#x6001;&#x8F6C;&#x6362;<br>&#x706F;&#x5149;&#x7EC6;&#x8282;&#xFF1A;&#x5355;&#x9897;&#x62D6;&#x5C3E;&#x5E26;&#x523B;&#x5EA6;&#x52A0;&#x8F7D;</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>&#x5173;&#x673A;</td>
+<td>N/A</td>
+<td>&#x989C;&#x8272;&#xFF1A;&#x5F53;&#x524D;&#x5149;&#xFF0D;&#x6DF1;&#x84DD;&#x8272;30%<br>&#x505C;&#x7559;&#x65F6;&#x957F;&#xFF1A;&#x76F4;&#x5230;&#x72B6;&#x6001;&#x8F6C;&#x6362;<br>&#x706F;&#x5149;&#x7EC6;&#x8282;&#xFF1A;&#x6DF1;&#x84DD;&#x8272;&#x706F;&#x5149;&#x95EA;&#x70C1;3&#x6B21;&#x4FDD;&#x6301;&#x5F53;&#x524D;&#x989C;&#x8272;&#xFF0C;&#x5F00;&#x59CB;&#x505A;&#x6E10;&#x6697;&#x6548;&#x679C;&#x76F4;&#x5230;&#x5173;&#x673A;&#x5B8C;&#x6210;</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>&#x4F11;&#x7720;</td>
+<td>N/A</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>&#x5C4F;&#x4FDD;</td>
+<td>N/A</td>
+<td>&#x989C;&#x8272;&#xFF1A;&#x84DD;&#x7D2B;&#x8272;&#x7CFB;30%<br>&#x505C;&#x7559;&#x65F6;&#x957F;&#xFF1A;&#x76F4;&#x5230;&#x72B6;&#x6001;&#x8F6C;&#x6362;<br>&#x706F;&#x5149;&#x7EC6;&#x8282;&#xFF1A;&#x8FDB;&#x5165;&#x5C4F;&#x4FDD;&#x65F6;&#xFF0C;&#x5148;&#x5728;0.5&#x79D2;&#x5185;&#x4ECE;30%&#x8FC7;&#x6E21;&#x5230;5%&#x4EAE;&#x5EA6;&#x7684;&#x57FA;&#x7840;&#x5E95;&#x706F;&#xFF0C;<br>&#x4FDD;&#x6301;2&#x79D2;&#x540E;&#x5F00;&#x59CB;&#x6E10;&#x53D8;&#x591A;&#x5F69;&#x8272;&#xFF0C;&#x4F4D;&#x7F6E;&#x968F;&#x673A;&#xFF0C;&#x4E00;&#x4E2A;&#x989C;&#x8272;&#x8FC7;&#x6E21;&#x65F6;&#x95F4;&#x4E3A;3&#x79D2;&#xFF0C;<br>&#x7136;&#x540E;&#x82B1;3&#x79D2;&#x949F;&#x4ECE;30%&#x6697;&#x5230;5%&#xFF0C;&#x518D;&#x8FC7;&#x5EA6;&#x5230;&#x4E0B;&#x4E00;&#x4E2A;&#x989C;&#x8272;</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>&#x6FC0;&#x6D3B;</td>
+<td>&#x8003;&#x8651;&#x662F;&#x5426;&#x53EF;&#x4EE5;&#x8BBE;&#x7F6E;&#x8BED;&#x97F3;&#x6216;&#x8005;&#x6309;&#x952E;&#x6FC0;</td>
+<td>&#x989C;&#x8272;&#xFF1A;&#x5E95;&#x8272;&#x84DD;30%+&#x5BFB;&#x5411;&#x706F;&#x767D;&#x8272;100%<br>&#x505C;&#x7559;&#x65F6;&#x957F;&#xFF1A;&#x76F4;&#x5230;&#x72B6;&#x6001;&#x8F6C;&#x6362;<br>&#x706F;&#x5149;&#x7EC6;&#x8282;&#xFF1A;&#x9996;&#x6B21;&#x62FE;&#x97F3;&#x4ECE;&#x5C3E;&#x90E8;&#x626B;&#x5230;&#x62FE;&#x97F3;&#x533A;&#xFF1B;&#x5728;&#x62FE;&#x97F3;&#x72B6;&#x6001;&#x6CA1;&#x6D88;&#x5931;&#x524D;&#xFF0C;&#x62FE;&#x97F3;&#x65B9;&#x5411;<br>&#x8F6C;&#x6362;&#x4F1A;&#x76F4;&#x63A5;&#x5728;&#x65B0;&#x65B9;&#x5411;&#x76F4;&#x63A5;&#x51FA;&#x73B0;&#x4E0D;&#x9700;&#x8981;&#x626B;&#x5C3E;&#x3002;</td>
+<td>Y&#xFF08;&#x8FDE;&#x7EED;&#x62FE;&#x97F3;&#x662F;&#x6CA1;&#x6709;&#x97F3;&#x6548;&#x7684;&#xFF09;</td>
+</tr>
+<tr>
+<td>&#x52A0;&#x8F7D;</td>
+<td>&#x7CFB;&#x7EDF;&#x672A;&#x542F;&#x52A8;&#x597D;&#xFF1A;<br>e.g. &#x7CFB;&#x7EDF;&#x5F00;&#x673A;&#x52A0;&#x8F7D;</td>
+<td>&#x989C;&#x8272;&#xFF1A;&#x84DD;&#x8272;<br>&#x505C;&#x7559;&#x65F6;&#x957F;: &#x76F4;&#x5230;&#x72B6;&#x6001;&#x8F6C;&#x6362;<br>&#x706F;&#x5149;&#x7EC6;&#x8282;: &#x5355;&#x9897;&#x62D6;&#x5C3E;&#x5E26;&#x523B;&#x5EA6;&#x52A0;&#x8F7D;</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td></td>
+<td>&#x7CFB;&#x7EDF;&#x542F;&#x52A8;&#x597D;&#xFF1A;<br>e.g. NLP&#x52A0;&#x8F7D;</td>
+<td>&#x989C;&#x8272;&#xFF1A;&#x767D;&#x8272;100%<br>&#x505C;&#x7559;&#x65F6;&#x957F;&#xFF1A;&#x76F4;&#x5230;&#x72B6;&#x6001;&#x8F6C;&#x6362;<br>&#x706F;&#x5149;&#x7EC6;&#x8282;&#xFF1A;&#x5355;&#x9897;&#x8DD1;&#x9A6C;&#x706F;600ms&#x4E00;&#x5708;</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>&#x5E94;&#x7528;</td>
+<td>TTS</td>
+<td>&#x989C;&#x8272;&#xFF1A;&#x767D;&#x8272;20%&#xFF5E;60%<br>&#x505C;&#x7559;&#x65F6;&#x957F;&#xFF1A;&#x76F4;&#x5230;&#x72B6;&#x6001;&#x8F6C;&#x6362;<br>&#x706F;&#x5149;&#x7EC6;&#x8282;&#xFF1A;&#x6CE2;&#x5F62;&#x95EA;&#x52A8;&#x7528;&#x706F;&#x5149;&#x6A21;&#x62DF;&#x58F0;&#x97F3;&#x7684;&#x9891;&#x7387;&#x660E;&#x6697;&#x95EA;&#x52A8;</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td></td>
+<td>&#x6267;&#x884C;&#x4E2D;</td>
+<td>N/A</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>&#x7535;&#x91CF;</td>
+<td>&#x5173;&#x673A;&#x7535;&#x91CF;&#x663E;&#x793A;&#xFF1A;&#x6EE1;&#x7535;</td>
+<td>&#x989C;&#x8272;&#xFF1A;&#x7EFF;&#x8272;100%<br>&#x505C;&#x7559;&#x65F6;&#x957F;&#xFF1A;&#x76F4;&#x5230;&#x72B6;&#x6001;&#x8F6C;&#x6362;<br>&#x706F;&#x5149;&#x7EC6;&#x8282;&#xFF1A;&#x5C41;&#x80A1;&#x706F;&#x5168;&#x4EAE;&#x6301;&#x7EED;</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td></td>
+<td>&#x5173;&#x673A;&#x7535;&#x91CF;&#x663E;&#x793A;&#xFF1A;&gt;20%</td>
+<td>&#x989C;&#x8272;&#xFF1A;&#x6A59;&#x8272;100%<br>&#x505C;&#x7559;&#x65F6;&#x957F;&#xFF1A;&#x76F4;&#x5230;&#x72B6;&#x6001;&#x8F6C;&#x6362;<br>&#x706F;&#x5149;&#x7EC6;&#x8282;&#xFF1A;&#x5C41;&#x80A1;&#x706F;&#x5168;&#x4EAE;&#x6301;&#x7EED;</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td></td>
+<td>&#x5173;&#x673A;&#x7535;&#x91CF;&#x663E;&#x793A;&#xFF1A;&lt;20%</td>
+<td>&#x989C;&#x8272;&#xFF1A;&#x7EA2;&#x8272;100%<br>&#x505C;&#x7559;&#x65F6;&#x957F;&#xFF1A;&#x76F4;&#x5230;&#x72B6;&#x6001;&#x8F6C;&#x6362;<br>&#x706F;&#x5149;&#x7EC6;&#x8282;&#xFF1A;&#x5C41;&#x80A1;&#x706F;&#x5168;&#x4EAE;&#x6301;&#x7EED;</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>&#x7535;&#x6E90;</td>
+<td>&#x62D4;&#x4E0B;&#x7535;&#x6E90;</td>
+<td>N/A</td>
+<td>Y</td>
+</tr>
+<tr>
+<td></td>
+<td>&#x63D2;&#x4E0A;&#x7535;&#x6E90;</td>
+<td>N/A</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>&#x97F3;&#x91CF;</td>
+<td>&#x52A0;&#x51CF;&#x97F3;&#x91CF;</td>
+<td>&#x989C;&#x8272;&#xFF1A;&#x5E95;&#x5149;&#x6DF1;&#x84DD;&#x8272;30%+&#x767D;&#x8272;100%<br>&#x505C;&#x7559;&#x65F6;&#x957F;&#xFF1A;&#x76F4;&#x5230;&#x72B6;&#x6001;&#x8F6C;&#x6362;<br>&#x706F;&#x5149;&#x7EC6;&#x8282;&#xFF1A;&#x4E24;&#x8FB9;&#x4ECE;&#x5C3E;&#x90E8;&#x706F;&#x52A0;&#x4E00;&#x683C;</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>&#x914D;&#x7F51;</td>
+<td>&#x8FDE;&#x63A5;&#x4E2D;</td>
+<td>&#x989C;&#x8272;&#xFF1A;&#x6A58;&#x8272;100%<br>&#x505C;&#x7559;&#x65F6;&#x957F;&#xFF1A;&#x76F4;&#x5230;&#x72B6;&#x6001;&#x8F6C;&#x6362;<br>&#x706F;&#x5149;&#x7EC6;&#x8282;&#xFF1A;4&#x4E2A;&#x4E00;&#x7EC4;&#x8DD1;&#x9A6C;&#x706F;600ms&#x547C;&#x5438;&#x4E00;&#x6B21;</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>&#x5347;&#x7EA7;</td>
+<td>&#x5347;&#x7EA7;&#x4E2D;</td>
+<td>&#x989C;&#x8272;&#xFF1A;&#x6574;&#x5708;&#x5E95;&#x5149;&#x6DF1;&#x84DD;&#x8272;30%+&#x523B;&#x5EA6;&#x84DD;&#x8272;100%&#x6309;&#x6BD4;&#x4F8B;&#x52A0;&#x8F7D;<br>&#x505C;&#x7559;&#x65F6;&#x957F;&#xFF1A;&#x76F4;&#x5230;&#x72B6;&#x6001;&#x8F6C;&#x6362;<br>&#x706F;&#x5149;&#x7EC6;&#x8282;&#xFF1A;&#x4ECE;&#x524D;&#x9762;&#x4E24;&#x7AEF;&#x524D;&#x540E;&#x626B;&#x5C3E;&#x52A0;&#x8F7D;&#x76F4;&#x5230;&#x5C3E;&#x90E8;</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>&#x9EA6;&#x514B;&#x98CE;&#x5F00;&#x542F;</td>
+<td></td>
+<td>&#x989C;&#x8272;&#xFF1A;&#x7EA2;&#x8272;100%<br>&#x505C;&#x7559;&#x65F6;&#x957F;&#xFF1A;&#x76F4;&#x5230;&#x72B6;&#x6001;&#x8F6C;&#x6362;<br>&#x706F;&#x5149;&#x7EC6;&#x8282;&#xFF1A;&#x706F;&#x5168;&#x4EAE;&#x4FDD;&#x6301;&#x76F4;&#x5230;&#x72B6;&#x6001;&#x53D6;&#x6D88;</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>&#x9EA6;&#x514B;&#x98CE;&#x5173;&#x95ED;</td>
+<td>&#x8FD8;&#x539F;&#x6700;&#x524D;&#x9762;&#x4E00;&#x4E2A;&#x72B6;&#x6001;</td>
+<td>N/A</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>&#x63D0;&#x793A;</td>
+<td>&#x5931;&#x8D25;<br>&#x4F4E;&#x7535;&#x91CF;&#xFF1B;&#x8FDE;&#x63A5;&#x8D85;&#x65F6;<br>&#x7CFB;&#x7EDF;&#x5F02;&#x5E38;</td>
+<td>&#x989C;&#x8272;&#xFF1A;&#x7EA2;&#x8272;100%<br>&#x505C;&#x7559;&#x65F6;&#x957F;&#xFF1A;&#x76F4;&#x5230;&#x72B6;&#x6001;&#x8F6C;&#x6362;<br>&#x706F;&#x5149;&#x7EC6;&#x8282;&#xFF1A;&#x706F;&#x5168;&#x4EAE;0.5s&#x95EA;&#x70C1;2&#x6B21;</td>
+<td>Y</td>
+</tr>
+<tr>
+<td></td>
+<td>&#x6210;&#x529F;</td>
+<td>&#x989C;&#x8272;&#xFF1A;&#x767D;&#x8272;100%<br>&#x505C;&#x7559;&#x65F6;&#x957F;&#xFF1A;&#x76F4;&#x5230;&#x72B6;&#x6001;&#x8F6C;&#x6362;<br>&#x4EA4;&#x4E92;&#x4F53;&#x9A8C;&#xFF1A;N/A<br>&#x706F;&#x5149;&#x7EC6;&#x8282;&#xFF1A;&#x706F;&#x5168;&#x4EAE;0.5s&#x95EA;&#x70C1;&#x4E00;&#x6B21;</td>
+<td>Y</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../../6-asrandtts/tts.html" class="navigation navigation-prev " aria-label="Previous page: Rokid 语音合成">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../../3-ApiReference/openvoice-speech-api.html" class="navigation navigation-next " aria-label="Next page: 设备端接入文档">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Rokid 硬件交互设计指南","level":"1.1.1.3","depth":3,"next":{"title":"设备端接入文档","level":"1.1.2","depth":2,"path":"3-ApiReference/openvoice-speech-api.md","ref":"3-ApiReference/openvoice-speech-api.md","articles":[{"title":"设备认证","level":"1.1.2.1","depth":3,"path":"3-ApiReference/openvoice-auth-api.md","ref":"3-ApiReference/openvoice-auth-api.md","articles":[]},{"title":"WebSocket方式接入","level":"1.1.2.2","depth":3,"ref":"","articles":[{"title":"语音交互","level":"1.1.2.2.1","depth":4,"path":"3-ApiReference/wsasr-api.md","ref":"3-ApiReference/wsasr-api.md","articles":[]},{"title":"语义理解","level":"1.1.2.2.2","depth":4,"path":"3-ApiReference/openvoice-nlp-api.md","ref":"3-ApiReference/openvoice-nlp-api.md","articles":[]},{"title":"语音合成","level":"1.1.2.2.3","depth":4,"path":"3-ApiReference/wstts-api.md","ref":"3-ApiReference/wstts-api.md","articles":[]}]},{"title":"HTTP方式接入","level":"1.1.2.3","depth":3,"ref":"","articles":[{"title":"语音识别","level":"1.1.2.3.1","depth":4,"path":"3-ApiReference/openvoice-http-asr.md","ref":"3-ApiReference/openvoice-http-asr.md","articles":[]},{"title":"语音合成","level":"1.1.2.3.2","depth":4,"path":"3-ApiReference/openvoice-http-tts.md","ref":"3-ApiReference/openvoice-http-tts.md","articles":[]}]},{"title":"设备端SDK协议","level":"1.1.2.4","depth":3,"ref":"","articles":[{"title":"SDK 接口定义","level":"1.1.2.4.1","depth":4,"path":"3-ApiReference/rokid-client-sdk-doc.md","ref":"3-ApiReference/rokid-client-sdk-doc.md","articles":[]},{"title":"设备接口文档","level":"1.1.2.4.2","depth":4,"path":"3-ApiReference/open-device-manager.md","ref":"3-ApiReference/open-device-manager.md","articles":[]}]}]},"previous":{"title":"Rokid 语音合成","level":"1.1.1.2","depth":3,"path":"6-asrandtts/tts.md","ref":"6-asrandtts/tts.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["anchor-navigation-ex","expandable-chapters-interactive","vistors-github","mermaid-gb3","html5-video","github-issue-feedback","url-embed","include-codeblock","ace"],"pluginsConfig":{"ace":{},"github-issue-feedback":{"repo":"Rokid/docs"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"vistors-github":{"repo":"Rokid/docs"},"mermaid-gb3":{},"anchor-navigation-ex":{"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"mode":"float","multipleH1":true,"pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"printLog":false,"showGoTop":true,"showLevel":true},"expandable-chapters-interactive":{},"html5-video":{},"url-embed":{},"include-codeblock":{"check":false,"edit":true,"fixlang":false,"lang":"","template":"ace","theme":"chrome","unindent":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"2-RokidDocument/2-EnableVoice/rokid-hardware-ux-design-guidelines.md","mtime":"2021-08-06T09:41:53.345Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-08-06T09:43:05.595Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-expandable-chapters-interactive/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-vistors-github/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-github-issue-feedback/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-ace/ace.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    <script src="../../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
+
+    </body>
+</html>
+
