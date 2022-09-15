@@ -40,7 +40,7 @@ jobs:
                 
     - name: push _book to branch gh-pages 
       env:
-        TOKEN: ${{ secrets.ROKID_GITHUB_TOKEN }}
+        TOKEN: ${{ secrets.GH_TOKEN }}
         REF: github.com/${{github.repository}}
         MYEMAIL: weigang.xu@rokid.com                  # ！！记得修改为自己github设置的邮箱
         MYNAME: ${{github.repository_owner}}          
