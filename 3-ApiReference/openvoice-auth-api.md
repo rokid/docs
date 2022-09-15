@@ -21,7 +21,7 @@
      - key 及 secret 由开发方通过[开放平台语音接入](https://developer.rokid.com/docs/5-enableVoice/rokid-vsvy-sdk-docs/rookie-guide/voiceParam.html)获取
   2. 计算 str 字符串的 md5 值
 
-2. 字段 version 有 1.0 或 2.0，分别对应 [协议地址](#%E5%8D%8F%E8%AE%AE%E5%9C%B0%E5%9D%80) 中 v1 或 v2 目录，目前支持的协议版本：
+2. 字段 version 有 1 或 2，分别对应 [协议地址](#%E5%8D%8F%E8%AE%AE%E5%9C%B0%E5%9D%80) 中 v1 或 v2 目录，目前支持的协议版本：
   - 语音识别： serivce(**speech**)， version(**2**)
   - 语音合成 ：serivce(**tts**)， version(**1**)
 
